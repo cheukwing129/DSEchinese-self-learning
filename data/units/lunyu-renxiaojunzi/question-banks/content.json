@@ -1,0 +1,408 @@
+{
+  "unit": "lunyu-renxiaojunzi",
+  "bank": "content",
+  "questions": [
+    {
+      "id": "ln-content-001",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "內容理解",
+      "knowledge_point": "富貴貧賤的態度與處理方法",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "孔子指出人們對富貴與貧賤分別持甚麼態度？（1分）又他認為正確處理富貴與貧窮的方法是甚麼？（1分）試根據《論語．論仁》的內容，填寫下表。",
+      "score": 4,
+      "table": {
+        "columns": [
+          "",
+          "富貴",
+          "貧賤"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "態度",
+              "嚮往",
+              null
+            ]
+          },
+          {
+            "cells": [
+              "處理方法",
+              null,
+              "以正當方法擺脫貧賤。"
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "貧賤的態度：厭惡（1分）",
+        "富貴的處理方法：以正當方法得到富貴（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-content-002",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "內容理解",
+      "knowledge_point": "克己復禮的意思",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "孔子提出「克己復禮」就是「仁」。試以自己的文字，說明「克己復禮」的意思。",
+      "score": 2,
+      "answer_elements": [
+        "克服一己私慾（1分）",
+        "使言行合乎禮的標準（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-content-003",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "內容理解",
+      "knowledge_point": "不可久處約長處樂的原因",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "承上題，試說明孔子認為不仁者「不可以久處約，不可以長處樂」的原因。",
+      "score": 4,
+      "scoring_elements": [
+        "「不可以久處約，不可以長處樂」是指不能夠長期居於窮困之中，也不能夠長期居於安樂之中（1分）",
+        "不仁者不能克服一己私慾，欠缺自制能力（1分）",
+        "他們如果處於長期貧窮的情況，就會為非作歹來擺脫貧困，所以他們不能「久處約」（1分）",
+        "相反，他們如果一旦處於長期安逸的情況，就會奢侈懶惰，所以他們不能「長處樂」（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-content-004",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "內容理解",
+      "knowledge_point": "安仁利仁害仁成仁的對象",
+      "question_type": "matching",
+      "is_cross_text": false,
+      "paragraph_ref": [
+        1,
+        2,
+        4
+      ],
+      "difficulty": "basic",
+      "stem": "在《論語．論仁》中，孔子提到「安仁」、「利仁」、「害仁」和「成仁」。試指出這四者分別是甚麼人的表現。",
+      "score": 4,
+      "options": [
+        {
+          "key": "A",
+          "text": "仁者"
+        },
+        {
+          "key": "B",
+          "text": "知者"
+        },
+        {
+          "key": "C",
+          "text": "勇者"
+        },
+        {
+          "key": "D",
+          "text": "志士仁人"
+        },
+        {
+          "key": "E",
+          "text": "小人"
+        }
+      ],
+      "rows": [
+        {
+          "text": "「安仁」",
+          "answer": "A"
+        },
+        {
+          "text": "「利仁」",
+          "answer": "B"
+        },
+        {
+          "text": "「害仁」",
+          "answer": "E"
+        },
+        {
+          "text": "「成仁」",
+          "answer": "D"
+        }
+      ],
+      "note": "「勇者」為distractor，文中沒有以「勇者」對應任何一項。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-content-005",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "內容理解",
+      "knowledge_point": "安仁利仁害仁成仁的意思",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": [
+        1,
+        2,
+        4
+      ],
+      "difficulty": "basic",
+      "stem": "試說明「安仁」、「利仁」、「害仁」和「成仁」的意思。",
+      "score": 4,
+      "table": {
+        "columns": [
+          "",
+          "意思"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "「安仁」",
+              null
+            ]
+          },
+          {
+            "cells": [
+              "「利仁」",
+              null
+            ]
+          },
+          {
+            "cells": [
+              "「害仁」",
+              null
+            ]
+          },
+          {
+            "cells": [
+              "「成仁」",
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "「安仁」：能長期實行仁德而心安（1分）。",
+        "「利仁」：為長遠利益而實行仁德（1分）。",
+        "「害仁」：因求生而有害仁德（1分）。",
+        "「成仁」：寧可拋棄生命來成全仁德（1分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-content-006",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "內容理解",
+      "knowledge_point": "是非判斷：仁者安仁知者利仁",
+      "question_type": "true_false_unknown",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "試根據《論語．論仁論孝論君子》一文，判斷以下陳述。",
+      "score": 4,
+      "statements": [
+        {
+          "text": "智者因具備聰明智慧，故利用仁德，使自身得利，因此智者比仁者更值得推崇。",
+          "answer": "false",
+          "explanation": "雖然智者因具備聰明，但智者以仁為利，是有目的而為。孔子推崇的是仁者能安於仁，心無私念的境界。故陳述錯誤。"
+        },
+        {
+          "text": "仁者天性喜愛仁德，在任何環境中都能心安理得地堅守「仁」。",
+          "answer": "true",
+          "explanation": "仁者因具仁德，心無私念，無所企求，故能安於仁。故陳述正確。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-content-007",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "內容理解",
+      "knowledge_point": "犬馬的用意",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "孔子在《論語．論孝》中提到犬馬，有何用意？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "強調子女必須以恭敬的態度侍奉父母。"
+        },
+        {
+          "key": "B",
+          "text": "說明子女不應只顧犬馬而不顧父母。"
+        },
+        {
+          "key": "C",
+          "text": "批評不供養父母的子女連犬馬也不如。"
+        },
+        {
+          "key": "D",
+          "text": "藉犬馬也會孝順，強調子女不可不孝順父母。"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-content-008",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "內容理解",
+      "knowledge_point": "是非判斷：生命受威脅時放下仁德",
+      "question_type": "true_false_unknown",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "試根據《論語．論仁》的內容，判斷以下陳述。",
+      "score": 2,
+      "statements": [
+        {
+          "text": "孔子認為在生命受到威脅時，暫時放下仁德是情有可原的。",
+          "answer": "unknown",
+          "explanation": "孔子只是提到「君子無終食之間違仁」，意思是君子不會在吃完一頓飯的時間離開仁德，但他沒有評論在生命受到威脅時暫時放下仁德是否情有可原。陳述與內容沒有矛盾，故陳述無從判斷。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-content-009",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "內容理解",
+      "knowledge_point": "摘錄：無違的意思",
+      "question_type": "extract_sentence",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "孔子指出「無違」就是「孝」。「無違」是甚麼意思？試摘錄有關句子作答。",
+      "score": 2,
+      "answer_text": "生，事之以禮；死，葬之以禮，祭之以禮。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-content-010",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "內容理解",
+      "knowledge_point": "今之孝者是否符合孝道",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": [
+        5,
+        6
+      ],
+      "difficulty": "basic",
+      "stem": "孔子曾提到「今之孝者」對「孝」的看法。若根據「無違」的原則，「今之孝者」對「孝」的看法是否符合孝道？試分析說明。",
+      "score": 4,
+      "scoring_elements": [
+        "不符合。如果根據「無違」的原則，子女在父母生前和死後都要依照合宜的禮節來盡孝（1分）",
+        "「今之孝者」把養活父母視為「孝」（1分）",
+        "當中沒有強調尊敬父母之意（1分）",
+        "因此不能區別他們養活了父母與飼養犬馬的分別，可見他們對「孝」的看法忽略了對父母應有的禮節，不符合孔子提倡的孝道（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-content-011",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "內容理解",
+      "knowledge_point": "知道父母之年後的感受",
+      "question_type": "multi_select",
+      "is_cross_text": false,
+      "paragraph_ref": 8,
+      "difficulty": "basic",
+      "stem": "孔子指出子女知道「父母之年」後，會有何感受？（答案可選多於一個）",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "高興"
+        },
+        {
+          "key": "B",
+          "text": "悲傷"
+        },
+        {
+          "key": "C",
+          "text": "疑惑"
+        },
+        {
+          "key": "D",
+          "text": "恐懼"
+        }
+      ],
+      "answer": [
+        "A",
+        "D"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-content-012",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "內容理解",
+      "knowledge_point": "為何有以上感受",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 8,
+      "difficulty": "basic",
+      "stem": "承上題，為甚麼子女會有以上的感受？",
+      "score": 2,
+      "answer_elements": [
+        "子女感到高興是因為父母長壽，自己就可以克盡孝道，享受天倫之樂（1分）",
+        "感到恐懼則是因為知道父母的年紀已老，自己能盡孝的日子不多（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-content-013",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "內容理解",
+      "knowledge_point": "是非判斷：君子與小人",
+      "question_type": "true_false_unknown",
+      "is_cross_text": false,
+      "paragraph_ref": [
+        10,
+        11,
+        12
+      ],
+      "difficulty": "basic",
+      "stem": "根據《論語．論君子》的內容，判斷以下陳述：",
+      "score": 2,
+      "statements": [
+        {
+          "text": "孔子認為，不害怕任何事物的人就是君子。",
+          "answer": "unknown",
+          "explanation": "雖然孔子指出君子能自問於心而沒有羞愧，因而沒有甚麼可使他憂愁和膽怯，但這說法只是解釋了君子的心境，而沒有說能否把不害怕任何事物的人便視為君子。陳述與內容沒有矛盾，故陳述無從判斷。"
+        },
+        {
+          "text": "孔子通過君子和小人的對比，反映君子有助人為善的優點。",
+          "answer": "true",
+          "explanation": "《論語．論君子》中，孔子提到「君子成人之美，不成人之惡。小人反是。」這句話運用了對比法，指出君子會助人為善，不助人為惡，但小人就相反，通過君子和小人的對比，反映出君子有助人為善的優點，故陳述正確。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-content-014",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "內容理解",
+      "knowledge_point": "仁與禮的關係及具體實踐",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "孔子在《論語．論仁論孝論君子》指出「仁」與「禮」有甚麼關係？（2分）又如何在具體行為上實踐「仁」？（3分）",
+      "score": 5,
+      "scoring_elements": [
+        "關係：仁是人格修養的最高標準，人要做到「仁」必須通過禮（1分）",
+        "關係：禮是人的言行規範，只要人能克制一己之欲，言行合乎禮，就能達到人格修養的最高標準（1分）",
+        "具體表現：仁者應做到「非禮勿視、非禮勿聽、非禮勿言、非禮勿動」（1分）",
+        "具體表現：即不合禮的事物不去看它，不合禮的語言不去聽它，不合禮的意見不去說它，不合禮的行為不去做它，令自己與「仁」更接近（2分）"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}

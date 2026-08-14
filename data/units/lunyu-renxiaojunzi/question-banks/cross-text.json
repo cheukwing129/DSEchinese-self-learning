@@ -1,0 +1,64 @@
+{
+  "unit": "lunyu-renxiaojunzi",
+  "bank": "cross-text",
+  "questions": [
+    {
+      "id": "ln-cross-001",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "跨篇比較",
+      "knowledge_point": "求諸己與博學參省的共通點",
+      "question_type": "short_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "閱讀以下引文，回答所附問題：引文甲和乙分別指出君子甚麼特點？",
+      "cross_text_target": "quanxue",
+      "score": 2,
+      "context_quotes": [
+        {
+          "label": "甲",
+          "text": "君子求諸己。（《論語．論君子》）"
+        },
+        {
+          "label": "乙",
+          "text": "君子博學而日參省乎己，則知明而行無過矣。（《荀子．勸學》）"
+        }
+      ],
+      "answer_elements": [
+        "引文甲：要求自己做好（1分）",
+        "引文乙：要求自我反省（1分）"
+      ],
+      "part2": {
+        "stem": "以上兩則引文有沒有相同的地方？試加以說明。",
+        "type": "long_answer",
+        "score": 3,
+        "scoring_elements": [
+          "兩者同樣體現出重視個人品行修養（1分）",
+          "引文甲強調君子會責求自己，意思是做好自己，使自己增進學問和提升品德修養（1分）",
+          "這一點與荀子強調君子應時刻反省自己（1分），從而修養德行的看法相通（1分）"
+        ]
+      },
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-cross-002",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "跨篇比較",
+      "knowledge_point": "君子病無能與諸葛亮隱居的相符之處",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "孔子在《論語．論君子》中提到君子「君子病無能焉，不病人之不己知也」。這個說法與《出師表》中，諸葛亮早年選擇隱居南陽的經歷有哪些相符的地方？試加以說明。",
+      "cross_text_target": "chushibiao",
+      "score": 4,
+      "scoring_elements": [
+        "「君子病無能焉，不病人之不己知也」是指君子只擔心自己沒有能力，不擔心別人不了解自己（1分）",
+        "諸葛亮是一名有才幹的能者。他早年選擇隱居南陽，而不求在諸侯中揚名、顯貴（1分）",
+        "之後由於劉備賞識他的才華，因此不惜三顧草廬，力邀諸葛亮出山協助自己（1分）",
+        "諸葛亮有才華，不用擔心自己無能和他人不知道自己有能力，可見他的經歷符合「君子病無能焉，不病人之不己知也」的說法（1分）"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}

@@ -6,6 +6,7 @@
   "written_year": "唐德宗貞元十八年",
   "genre": "說",
   "status": "available",
+  "audio_file": "assets/audio/shi_shuo.mp3",
   "modules": [
     { "id": "text", "title": "原文與誦讀", "icon": "book" },
     { "id": "words", "title": "字詞與句式", "icon": "characters" },

@@ -50,6 +50,19 @@ const ContentRenderer = (() => {
     `);
   }
 
+  function audioPlayerHTML(unit) {
+    if (!unit.audio_file) return "";
+    return `
+      <div class="card card-tight" style="margin-bottom:16px;">
+        <p style="font-size:13px; color:var(--color-ink-soft); margin:0 0 8px;">🔊 全文誦讀</p>
+        <audio controls style="width:100%;" preload="none">
+          <source src="${esc(unit.audio_file)}" type="audio/mpeg" />
+          你的瀏覽器不支援音訊播放，請直接開啟：<a href="${esc(unit.audio_file)}">${esc(unit.audio_file)}</a>
+        </audio>
+      </div>
+    `;
+  }
+
   // ---------- 1. 原文與誦讀 ----------
   function renderTextPage(bundle, unitId) {
     const { text, unit } = bundle;
@@ -88,6 +101,7 @@ const ContentRenderer = (() => {
       App.mount(`
         <h1 class="page-title">原文與誦讀</h1>
         <p class="page-subtitle">《${esc(unit.title)}》· 點擊底線字詞查看注釋</p>
+        ${audioPlayerHTML(unit)}
         <div class="card">
           ${paraNavHTML()}
           <p class="text-passage">${passageHTML(p)}</p>
@@ -95,7 +109,7 @@ const ContentRenderer = (() => {
         </div>
         <div class="card">
           <p style="color:var(--color-ink-soft); font-size:14px; margin:0;">
-            朗讀音檔與意群停頓提示尚未提供，將於日後版本補充。
+            意群停頓提示尚未提供，將於日後版本補充。
           </p>
         </div>
         ${App.footerNav(unitId, unit.title)}

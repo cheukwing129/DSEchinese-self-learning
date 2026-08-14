@@ -1,0 +1,298 @@
+{
+  "unit": "lunyu-renxiaojunzi",
+  "bank": "structure-skill",
+  "questions": [
+    {
+      "id": "ln-skill-001",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "結構與手法",
+      "knowledge_point": "摘錄：非禮四勿十六字",
+      "question_type": "extract_sentence",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "顏淵向孔子問甚麼是禮，孔子以哪十六字作回應？試摘錄有關句子。",
+      "score": 2,
+      "answer_text": "非禮勿視，非禮勿聽，非禮勿言，非禮勿動。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-skill-002",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "結構與手法",
+      "knowledge_point": "非禮四勿的句子特色",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "承上題，上述句子有何特色？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "語氣強烈"
+        },
+        {
+          "key": "B",
+          "text": "用詞華麗"
+        },
+        {
+          "key": "C",
+          "text": "比喻生動"
+        },
+        {
+          "key": "D",
+          "text": "含蓄典雅"
+        }
+      ],
+      "answer": "A",
+      "explanation": "「非禮勿視，非禮勿聽，非禮勿言，非禮勿動」以排比句式連續四次否定，語氣強烈，具規勸和訓誡意味。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-skill-003",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "結構與手法",
+      "knowledge_point": "君子特質：句子分析",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": [
+        9,
+        13
+      ],
+      "difficulty": "basic",
+      "stem": "在《論語．論君子》中，孔子提到君子「過則勿憚改」，又說「君子恥其言而過其行」。這兩句話反映出君子具備甚麼特質？",
+      "score": 2,
+      "table": {
+        "columns": [
+          "句子",
+          "君子的特質"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "「過則勿憚改」",
+              null
+            ]
+          },
+          {
+            "cells": [
+              "「君子恥其言而過其行」",
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "「過則勿憚改」：勇於改正錯誤（1分）。",
+        "「君子恥其言而過其行」：避免言過其實（1分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-skill-004",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "結構與手法",
+      "knowledge_point": "君子與小人的特質對比",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": [
+        10,
+        12,
+        16
+      ],
+      "difficulty": "basic",
+      "stem": "《論語．論仁論孝論君子》中提及君子與小人在各方面有不同的特質，試用自己文句填寫下表。",
+      "score": 10,
+      "table": {
+        "columns": [
+          "",
+          "君子的特質",
+          "小人的特質"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "心境",
+              null,
+              null
+            ]
+          },
+          {
+            "cells": [
+              "處事",
+              null,
+              null
+            ]
+          },
+          {
+            "cells": [
+              "自律",
+              null,
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "心境 君子：君子重義，不計較個人利害（1分），所以心境常常保持舒泰（1分）。",
+        "心境 小人：小人重利（0.5分），患得患失，所以心境常常憂愁（0.5分）。",
+        "處事 君子：君子以義為先，成全別人的好事，助人為善（2分）。",
+        "處事 小人：小人以利先行，存心不仁，導人向惡（2分）。",
+        "自律 君子：君子要求自己行仁道，待人寬而律己嚴（2分）。",
+        "自律 小人：小人則要求別人行仁道，疏於責己，待人嚴苛（2分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-skill-005",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "結構與手法",
+      "knowledge_point": "甲乙引文的寫作特色",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": [
+        9,
+        11
+      ],
+      "difficulty": "basic",
+      "stem": "閱讀以下《論語．論君子》的引文，回答所附問題：以下哪些選項符合能概括甲、乙兩段引文的寫作特色？",
+      "score": 2,
+      "context_quotes": [
+        {
+          "label": "甲",
+          "text": "子曰：「君子不重，則不威，學則不固。主忠信。無友不如己者。過則勿憚改。」"
+        },
+        {
+          "label": "乙",
+          "text": "司馬牛問君子。子曰：「君子不憂不懼。」曰：「不憂不懼，斯謂之君子已乎？」子曰：「內省不疚，夫何憂何懼？」"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "句子以散句為主。"
+        },
+        {
+          "key": "B",
+          "text": "用詞淺白，接近口語。"
+        },
+        {
+          "key": "C",
+          "text": "用字精煉，寓意深遠。"
+        },
+        {
+          "key": "D",
+          "text": "少用語氣詞，句子不帶個人情感。"
+        }
+      ],
+      "answer": "A",
+      "follow_up_open_answer": "延伸問題：引文乙中的「內省不疚，夫何憂何懼？」一句運用了甚麼修辭手法？答案：反問。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-skill-006",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "結構與手法",
+      "knowledge_point": "君子應有修為的意涵",
+      "question_type": "matching",
+      "is_cross_text": false,
+      "paragraph_ref": [
+        11,
+        13,
+        14,
+        15
+      ],
+      "difficulty": "basic",
+      "stem": "《論語‧論仁論孝論君子》中指君子應有的修為有四。試指出君子應有修為的意涵。",
+      "score": 4,
+      "option_labels": [
+        "行事光明磊落，能自我反省",
+        "以說得多、做得少為恥",
+        "重視學問增進",
+        "不擔心別人不了解自己",
+        "不會在吃完一頓飯的時間離開仁德",
+        "以合宜為原則、依禮節實行、說話謙遜及態度誠實"
+      ],
+      "rows": [
+        {
+          "text": "不憂不懼：",
+          "answers": [
+            "行事光明磊落，能自我反省"
+          ]
+        },
+        {
+          "text": "恥其言而過其行：",
+          "answers": [
+            "以說得多、做得少為恥"
+          ]
+        },
+        {
+          "text": "義以為質，禮以行之，孫以出之，信以成之：",
+          "answers": [
+            "以合宜為原則、依禮節實行、說話謙遜及態度誠實"
+          ]
+        },
+        {
+          "text": "不病人之不己知：",
+          "answers": [
+            "不擔心別人不了解自己"
+          ]
+        }
+      ],
+      "note": "「重視學問增進」及「不會在吃完一頓飯的時間離開仁德」為distractor選項。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-skill-007",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "結構與手法",
+      "knowledge_point": "修辭手法：對偶",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "以下引文運用了哪種修辭手法？又這種修辭手法對表達內容起甚麼作用？試以引文為例，略加說明。",
+      "score": 3,
+      "quote": "子曰：「志士仁人，無求生以害仁，有殺身以成仁。」",
+      "rhetorical_device": "對偶（答案須是兩字詞）",
+      "answer_elements": [
+        "作用：以志士仁人會捨生取義及寧可犧牲性命也要成全仁德對照，既突出志士仁人會以仁德為做人原則，又增加文字氣勢，讓讀者更容易感受作者的感情和說話者的觀點（2分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-skill-008",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "結構與手法",
+      "knowledge_point": "反問句辨析",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "以下哪一句不是反問句？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "君子去仁，惡乎成名？"
+        },
+        {
+          "key": "B",
+          "text": "為仁由己，而由人乎哉？"
+        },
+        {
+          "key": "C",
+          "text": "不憂不懼，斯謂之君子已乎？"
+        },
+        {
+          "key": "D",
+          "text": "內省不疚，夫何憂何懼？"
+        }
+      ],
+      "answer": "C",
+      "explanation": "C項「不憂不懼，斯謂之君子已乎？」是司馬牛向孔子求證的疑問句，屬一般疑問，並非反問句；A、B、D三項均以反問語氣表達肯定或強調的意思。",
+      "source": "校本試題庫"
+    }
+  ]
+}

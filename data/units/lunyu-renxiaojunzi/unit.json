@@ -1,12 +1,12 @@
 {
-  "id": "yueyanglouji",
-  "title": "岳陽樓記",
-  "author": "范仲淹",
-  "dynasty": "北宋",
-  "written_year": "慶曆六年（公元1046年）",
-  "genre": "記",
+  "id": "lunyu-renxiaojunzi",
+  "title": "論仁、論孝、論君子",
+  "author": "《論語》",
+  "dynasty": "春秋",
+  "written_year": "孔子及其弟子言行，成書於戰國初期",
+  "genre": "語錄體",
   "status": "available",
-  "audio_file": "assets/audio/yue_yang_lou_ji.mp3",
+  "audio_file": "assets/audio/lun_ren_lun_xiao_lun_jun_zi.mp3",
   "modules": [
     { "id": "text", "title": "原文與誦讀", "icon": "book" },
     { "id": "words", "title": "字詞與句式", "icon": "characters" },
@@ -18,11 +18,8 @@
     { "id": "progress", "title": "我的掌握", "icon": "chart" }
   ],
   "cross_text_targets": [
-    { "id": "lunyu-renxiaojunzi", "title": "論仁、論孝、論君子", "author": "《論語》" },
-    { "id": "yu-wo-suoyu", "title": "魚我所欲也", "author": "孟子" },
-    { "id": "shide-xishan-yanyouji", "title": "始得西山宴遊記", "author": "柳宗元" },
-    { "id": "denglou", "title": "登樓", "author": "杜甫" },
-    { "id": "shanju-qiuming", "title": "山居秋暝", "author": "王維" }
+    { "id": "quanxue", "title": "勸學（節錄）", "author": "荀子" },
+    { "id": "chushibiao", "title": "出師表", "author": "諸葛亮" }
   ],
   "question_bank_files": [
     "question-banks/words.json",

@@ -1,7 +1,7 @@
 # 中文經典自學網站（chinese-classics-self-learning）
 
 香港高中中國語文科．十二篇指定文言經典自學網站。
-已正式上線：**《岳陽樓記》**（范仲淹）、**《師說》**（韓愈）。其餘篇章於首頁顯示「準備中」。
+已正式上線：**《岳陽樓記》**（范仲淹）、**《師說》**（韓愈）、**《論仁、論孝、論君子》**（《論語》）。其餘篇章於首頁顯示「準備中」。
 
 核心學習流程：**診斷弱項 → 微型學習 → 練習回饋 → 錯題修復 → 作品／進度累積**
 
@@ -34,28 +34,54 @@ chinese-classics-self-learning/
 │   ├── curriculum.json             ← 十二篇地圖
 │   └── units/
 │       ├── yueyanglouji/         （結構同下，共 77 題）
-│       └── shishuo/
-│           ├── unit.json           ← 篇章 meta（模組清單、跨篇對象、題庫檔案清單）
-│           ├── text.json           ← 原文分段 + 26 條教育局注釋
+│       ├── shishuo/              （結構同下，共 60 題）
+│       └── lunyu-renxiaojunzi/
+│           ├── unit.json           ← 篇章 meta（模組清單、跨篇對象、題庫檔案清單、音檔路徑）
+│           ├── text.json           ← 原文 16 則 + 45 條教育局注釋
 │           ├── background.json     ← 作者簡介、寫作背景
-│           ├── appreciation.json   ← 按段落賞析重點、語言特色
-│           ├── structure.json      ← 結構圖節點、對比組、手法例句
+│           ├── appreciation.json   ← 按則賞析重點、語言特色
+│           ├── structure.json      ← 論仁／論孝／論君子三部分、對比組、手法例句
 │           ├── memorisation.json   ← 背誦句群、易錯字
 │           ├── rubrics.json        ← 長問答通用評分元素、自評清單
 │           └── question-banks/
-│               ├── words.json          （29題：字詞／虛詞，含跨篇虛詞辨析）
-│               ├── content.json        （11題：內容理解）
-│               ├── structure-skill.json（7題：結構／手法／論證方法）
-│               ├── theme.json          （6題：主旨與思考，含開放題）
-│               └── cross-text.json     （7題：跨篇比較，對象包括《六國論》《勸學》《論仁論孝論君子》）
+│               ├── words.json          （27題：字詞／虛詞，含跨篇虛詞辨析）
+│               ├── content.json        （14題：內容理解）
+│               ├── structure-skill.json（8題：結構／手法／修辭）
+│               ├── theme.json          （10題：主旨與思考，含開放題）
+│               └── cross-text.json     （2題：跨篇比較，對象包括《勸學》《出師表》）
 └── assets/
-    └── audio/                      ← 誦讀音檔（暫未提供，日後可補充）
+    └── audio/                      ← 誦讀音檔（見下方對照表）
 ```
 
 日後新增篇章（例如《出師表》）只需：
 1. 在 `data/units/` 下新增對應資料夾與 JSON 檔案（複製 `yueyanglouji/` 結構）
 2. 把 `data/curriculum.json` 中該篇的 `status` 改為 `"available"`
 3. 不需要改動任何 HTML/CSS/JS——全部頁面模板、題庫引擎、進度系統均為共用
+
+### 誦讀音檔對照表
+
+音檔放在 `assets/audio/`，檔名須與下表完全一致（大小寫、底線），`curriculum.json` 及各篇 `unit.json` 的 `audio_file` 欄位已對應好路徑：
+
+| 篇章 | 檔名 |
+|---|---|
+| 岳陽樓記 | `yue_yang_lou_ji.mp3` |
+| 師說 | `shi_shuo.mp3` |
+| 論仁、論孝、論君子 | `lun_ren_lun_xiao_lun_jun_zi.mp3` |
+| 出師表 | `chu_shi_biao.mp3` |
+| 六國論 | `liu_guo_lun.mp3` |
+| 逍遙遊 | `xiao_yao_you.mp3` |
+| 勸學 | `quan_xue.mp3` |
+| 魚我所欲也 | `yu_wo_suo_yu_ye.mp3` |
+| 廉頗藺相如列傳 | `lian_po_lin_xiang_ru_lie_zhuan.mp3` |
+| 始得西山宴遊記 | `shi_de_xi_shan_yan_you_ji.mp3` |
+| 山居秋暝 | `shan_ju_qiu_ming.mp3` |
+| 月下獨酌（其一） | `yue_xia_du_zhuo_1.mp3` |
+| 登樓 | `deng_lou.mp3` |
+| 念奴嬌．赤壁懷古 | `nian_nu_jiao_chi_bi_huai_gu.mp3` |
+| 聲聲慢．秋情 | `sheng_sheng_man_qiu_qing.mp3` |
+| 青玉案．元夕 | `qing_yu_an_yuan_xi.mp3` |
+
+「原文與誦讀」頁面會自動偵測該篇 `unit.json` 中的 `audio_file` 欄位，若存在就顯示播放器；若日後新增篇章時忘記加這個欄位，播放器不會顯示（不會報錯），記得建立新篇章時補上。
 
 ---
 
@@ -153,6 +179,7 @@ git push -u origin main
 **內容準確性**
 - [ ] 原文與教育局 PDF 一致（5 段），41 條注釋可點擊查看
 - [ ] 題庫題目、正確答案與試題庫 DOCX 一致（建議至少抽查 10 題核對）
+- [ ] 「原文與誦讀」頁面的音訊播放器可正常播放對應篇章的錄音
 
 **手機適用性**
 - [ ] 以手機瀏覽器（或開發者工具的手機模擬檢視）開啟，文字與按鈕清晰可讀，可正常操作
@@ -197,7 +224,7 @@ git push -u origin main
 
 ## 九、已知限制（第一版）
 
-- 朗讀音檔、意群停頓提示尚未提供
+- 意群停頓提示尚未提供
 - 長問答／開放題不設自動精確評分，只提供參考評分元素與自評清單（`teacher_review_placeholder` 已預留，日後可接入教師評閱或 AI 教練功能）
 - 進度只存於單一裝置瀏覽器，未有跨裝置同步或教師後台
 - 部分試題庫原文格式不清晰之處，已按最合理判斷處理，建議教師使用前再核對一次：

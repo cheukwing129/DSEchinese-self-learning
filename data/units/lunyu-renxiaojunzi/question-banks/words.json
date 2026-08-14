@@ -1,0 +1,872 @@
+{
+  "unit": "lunyu-renxiaojunzi",
+  "bank": "words",
+  "questions": [
+    {
+      "id": "ln-words-001",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "虛詞跨篇：去",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": 2,
+      "difficulty": "advanced",
+      "stem": "以下哪一句的「去」字跟《論語．論仁》中「不以其道得之，不去也」的「去」字具相同詞義？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "則有去國懷鄉，憂讒畏譏。（《岳陽樓記》）"
+        },
+        {
+          "key": "B",
+          "text": "左右或欲引相如去。（《廉頗藺相如列傳》）"
+        },
+        {
+          "key": "C",
+          "text": "大江東去，浪淘盡、千古風流人物。（《念奴嬌．赤壁懷古》）"
+        },
+        {
+          "key": "D",
+          "text": "今子之言，大而無用，眾所同去也。（《莊子．逍遙遊》）"
+        }
+      ],
+      "answer": "D",
+      "explanation": "「不去也」的「去」解「捨棄」；D項「眾所同去也」的「去」同樣解「捨棄」（眾人一同捨棄不用）。A項「去」解「離開」；B項「去」解「離開」；C項「去」解「流逝」。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-002",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "虛詞跨篇：事",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": 5,
+      "difficulty": "advanced",
+      "stem": "以下哪一句的「事」字跟《論語．論孝》中「生，事之以禮」的「事」字具相同詞義？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "回雖不敏，請事斯語矣。（《論語．論仁》）"
+        },
+        {
+          "key": "B",
+          "text": "三顧臣於草廬之中，諮臣以當世之事……（《出師表》）"
+        },
+        {
+          "key": "C",
+          "text": "以地事秦，猶抱薪救火……（《六國論》）"
+        },
+        {
+          "key": "D",
+          "text": "……世世以洴澼絖為事。（《莊子．逍遙遊》）"
+        }
+      ],
+      "answer": "C",
+      "explanation": "「事之以禮」的「事」是動詞，解「侍奉」；C項「以地事秦」的「事」同樣解「侍奉」。A項「事」解「實踐」；B、D項「事」是名詞，解「事情」「事務」。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-003",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「不仁者，不可以久處約，不可以長處樂」一句中的「處」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "處置"
+        },
+        {
+          "key": "B",
+          "text": "處所"
+        },
+        {
+          "key": "C",
+          "text": "居於"
+        },
+        {
+          "key": "D",
+          "text": "對待"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-004",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「仁者安仁，知者利仁」一句中的「知」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "聰明"
+        },
+        {
+          "key": "B",
+          "text": "知道"
+        },
+        {
+          "key": "C",
+          "text": "知識"
+        },
+        {
+          "key": "D",
+          "text": "賞識"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-005",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「富與貴，是人之所欲也」一句中的「欲」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "願望"
+        },
+        {
+          "key": "B",
+          "text": "慾望"
+        },
+        {
+          "key": "C",
+          "text": "嚮往"
+        },
+        {
+          "key": "D",
+          "text": "需要"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-006",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「不以其道得之，不處也」一句中的「處」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "停止"
+        },
+        {
+          "key": "B",
+          "text": "接受"
+        },
+        {
+          "key": "C",
+          "text": "居住"
+        },
+        {
+          "key": "D",
+          "text": "留下"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-007",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「貧與賤，是人之所惡也」一句中的「惡」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "罪惡"
+        },
+        {
+          "key": "B",
+          "text": "厭惡"
+        },
+        {
+          "key": "C",
+          "text": "中傷"
+        },
+        {
+          "key": "D",
+          "text": "凶惡"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-008",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「君子無終食之間違仁」一句中的「終食」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "吃過飯"
+        },
+        {
+          "key": "B",
+          "text": "不吃飯"
+        },
+        {
+          "key": "C",
+          "text": "一頓飯的時間"
+        },
+        {
+          "key": "D",
+          "text": "吃完飯之後的時間"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-009",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「造次必於是，顛沛必於是」一句中的「造次」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "隨便"
+        },
+        {
+          "key": "B",
+          "text": "片刻"
+        },
+        {
+          "key": "C",
+          "text": "倉卒"
+        },
+        {
+          "key": "D",
+          "text": "作反"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-010",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「克己復禮為仁」一句中的「復」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "恢復"
+        },
+        {
+          "key": "B",
+          "text": "返回"
+        },
+        {
+          "key": "C",
+          "text": "重複"
+        },
+        {
+          "key": "D",
+          "text": "又、再"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-011",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「一日克己復禮，天下歸仁焉」一句中的「歸」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "返回"
+        },
+        {
+          "key": "B",
+          "text": "稱許"
+        },
+        {
+          "key": "C",
+          "text": "依附"
+        },
+        {
+          "key": "D",
+          "text": "屬於"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-012",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「為仁由己，而由人乎哉」一句中的「由」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "聽從"
+        },
+        {
+          "key": "B",
+          "text": "途徑"
+        },
+        {
+          "key": "C",
+          "text": "因為"
+        },
+        {
+          "key": "D",
+          "text": "靠"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-013",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「請問其目」一句中的「目」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "眼睛"
+        },
+        {
+          "key": "B",
+          "text": "注視"
+        },
+        {
+          "key": "C",
+          "text": "名目"
+        },
+        {
+          "key": "D",
+          "text": "綱領"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-014",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "「樊遲御」一句中的「御」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "抵擋"
+        },
+        {
+          "key": "B",
+          "text": "駕車"
+        },
+        {
+          "key": "C",
+          "text": "侍奉"
+        },
+        {
+          "key": "D",
+          "text": "治理"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-015",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "「至於犬馬，皆能有養」一句中的「養」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "生育"
+        },
+        {
+          "key": "B",
+          "text": "供養"
+        },
+        {
+          "key": "C",
+          "text": "飼養"
+        },
+        {
+          "key": "D",
+          "text": "教育"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-016",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 7,
+      "difficulty": "basic",
+      "stem": "「事父母幾諫，見志不從，又敬不違，勞而不怨」一句中的「幾」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "輕微"
+        },
+        {
+          "key": "B",
+          "text": "幾乎"
+        },
+        {
+          "key": "C",
+          "text": "幾次"
+        },
+        {
+          "key": "D",
+          "text": "豈可"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-017",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 7,
+      "difficulty": "basic",
+      "stem": "「事父母幾諫，見志不從，又敬不違，勞而不怨」一句中的「志」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "心意"
+        },
+        {
+          "key": "B",
+          "text": "意志"
+        },
+        {
+          "key": "C",
+          "text": "志願"
+        },
+        {
+          "key": "D",
+          "text": "記述"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-018",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 7,
+      "difficulty": "basic",
+      "stem": "「見志不從，又敬不違，勞而不怨」一句中的「勞」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "疲勞"
+        },
+        {
+          "key": "B",
+          "text": "麻煩"
+        },
+        {
+          "key": "C",
+          "text": "憂愁"
+        },
+        {
+          "key": "D",
+          "text": "勞動"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-019",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 9,
+      "difficulty": "basic",
+      "stem": "「君子不重則不威，學則不固」一句中的「重」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "沉重"
+        },
+        {
+          "key": "B",
+          "text": "重視"
+        },
+        {
+          "key": "C",
+          "text": "莊重"
+        },
+        {
+          "key": "D",
+          "text": "尊貴"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-020",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 9,
+      "difficulty": "basic",
+      "stem": "「君子不重則不威，學則不固」一句中的「固」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "牢固"
+        },
+        {
+          "key": "B",
+          "text": "堅決"
+        },
+        {
+          "key": "C",
+          "text": "固執"
+        },
+        {
+          "key": "D",
+          "text": "鄙陋"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-021",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 9,
+      "difficulty": "basic",
+      "stem": "「主忠信」一句中的「主」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "主人"
+        },
+        {
+          "key": "B",
+          "text": "主持"
+        },
+        {
+          "key": "C",
+          "text": "主使"
+        },
+        {
+          "key": "D",
+          "text": "注重"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-022",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 10,
+      "difficulty": "basic",
+      "stem": "「君子坦蕩蕩，小人長戚戚」一句中的「長」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "擅於"
+        },
+        {
+          "key": "B",
+          "text": "經常"
+        },
+        {
+          "key": "C",
+          "text": "成長"
+        },
+        {
+          "key": "D",
+          "text": "長處"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-023",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 11,
+      "difficulty": "basic",
+      "stem": "「內省不疚，夫何憂何懼」一句中的「疚」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "痛苦"
+        },
+        {
+          "key": "B",
+          "text": "困惑"
+        },
+        {
+          "key": "C",
+          "text": "危害"
+        },
+        {
+          "key": "D",
+          "text": "疾病"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-024",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 13,
+      "difficulty": "basic",
+      "stem": "「君子恥其言而過其行」一句中的「過」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "經過"
+        },
+        {
+          "key": "B",
+          "text": "過失"
+        },
+        {
+          "key": "C",
+          "text": "超過"
+        },
+        {
+          "key": "D",
+          "text": "責備"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-025",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 14,
+      "difficulty": "basic",
+      "stem": "「君子義以為質」一句中的「質」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "抵押"
+        },
+        {
+          "key": "B",
+          "text": "本質"
+        },
+        {
+          "key": "C",
+          "text": "樸素"
+        },
+        {
+          "key": "D",
+          "text": "外貌"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-026",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 14,
+      "difficulty": "basic",
+      "stem": "「禮以行之，孫以出之，信以成之」一句中的「孫」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "讓出"
+        },
+        {
+          "key": "B",
+          "text": "比不上"
+        },
+        {
+          "key": "C",
+          "text": "子孫"
+        },
+        {
+          "key": "D",
+          "text": "謙遜"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ln-words-027",
+      "unit": "lunyu-renxiaojunzi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 15,
+      "difficulty": "basic",
+      "stem": "「君子求諸己，小人求諸人」一句中的「求」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "探求"
+        },
+        {
+          "key": "B",
+          "text": "委託"
+        },
+        {
+          "key": "C",
+          "text": "要求"
+        },
+        {
+          "key": "D",
+          "text": "需求"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    }
+  ]
+}
