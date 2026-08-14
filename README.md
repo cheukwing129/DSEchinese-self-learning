@@ -1,0 +1,186 @@
+# 中文經典自學網站（chinese-classics-self-learning）
+
+香港高中中國語文科．十二篇指定文言經典自學網站。
+第一篇正式上線：**《岳陽樓記》**（范仲淹）。其餘 11 篇於首頁顯示「準備中」。
+
+核心學習流程：**診斷弱項 → 微型學習 → 練習回饋 → 錯題修復 → 作品／進度累積**
+
+---
+
+## 一、技術架構
+
+- 純 **HTML + CSS + JavaScript**，無 React / Vue / Tailwind / npm / 任何框架
+- **Hash-based 路由**（`#/...`），單一 `index.html` 作為入口，避免靜態網站 deep-link 404 問題
+- 所有內容與題庫資料以 **JSON** 檔案儲存於 `data/`，由 `fetch()` 動態載入
+- 學生的作答紀錄、錯題、反思**只儲存在該裝置瀏覽器的 `localStorage`**，不會上傳到任何伺服器
+- 部署：**Cloudflare Pages**；版本管理：**GitHub**
+
+## 二、檔案結構
+
+```
+chinese-classics-self-learning/
+├── index.html                      ← 網站唯一入口
+├── README.md
+├── css/
+│   └── style.css                   ← 全站樣式（淺色 iOS 卡片風格）
+├── js/
+│   ├── app.js                      ← 入口、資料載入、路由註冊
+│   ├── router.js                   ← hash-based 路由
+│   ├── content-renderer.js         ← 內容頁面（原文/字詞/疏通/結構/主旨/跨篇/我的掌握）
+│   ├── question-engine.js          ← 題目渲染與作答互動邏輯
+│   ├── memorisation-engine.js      ← 背誦精華（遮字/重組/易錯字）
+│   └── progress.js                 ← localStorage 進度、錯題、反思
+├── data/
+│   ├── curriculum.json             ← 十二篇地圖
+│   └── units/
+│       └── yueyanglouji/
+│           ├── unit.json           ← 篇章 meta（模組清單、跨篇對象、題庫檔案清單）
+│           ├── text.json           ← 原文分段 + 41 條教育局注釋
+│           ├── background.json     ← 作者簡介、寫作背景
+│           ├── appreciation.json   ← 按段落賞析重點、語言特色
+│           ├── structure.json      ← 結構圖節點、對比組、手法例句
+│           ├── memorisation.json   ← 背誦句群、易錯字
+│           ├── rubrics.json        ← 長問答通用評分元素、自評清單
+│           └── question-banks/
+│               ├── words.json          （30題：字詞／虛詞，含跨篇虛詞辨析）
+│               ├── content.json        （13題：內容理解）
+│               ├── structure-skill.json（16題：結構／手法／修辭）
+│               ├── theme.json          （11題：主旨與思考，含開放題）
+│               └── cross-text.json     （7題：跨篇比較）
+└── assets/
+    └── audio/                      ← 誦讀音檔（暫未提供，日後可補充）
+```
+
+日後新增篇章（例如《出師表》）只需：
+1. 在 `data/units/` 下新增對應資料夾與 JSON 檔案（複製 `yueyanglouji/` 結構）
+2. 把 `data/curriculum.json` 中該篇的 `status` 改為 `"available"`
+3. 不需要改動任何 HTML/CSS/JS——全部頁面模板、題庫引擎、進度系統均為共用
+
+---
+
+## 三、⚠️ 重要：本機測試方法（必讀）
+
+本專案使用 `fetch()` 讀取 JSON 檔案。**大部分瀏覽器（尤其 Chrome）基於安全限制，不允許以「直接雙擊開啟 index.html」（`file://` 協定）的方式讀取本機的 JSON 檔案**，會在瀏覽器 Console 看到類似 `CORS` 或 `Failed to fetch` 的錯誤，畫面亦會停留在「正在載入…」。
+
+**必須透過本機伺服器開啟**，方法如下（三選一）：
+
+### 方法 A：使用 Python（大部分電腦已安裝）
+```bash
+cd chinese-classics-self-learning
+python3 -m http.server 8000
+```
+然後在瀏覽器開啟：`http://localhost:8000`
+
+### 方法 B：使用 VS Code 的 Live Server 擴充功能
+安裝 "Live Server" 擴充功能後，在 `index.html` 上按右鍵 → "Open with Live Server"。
+
+### 方法 C：使用 Node.js 的 `npx serve`
+```bash
+cd chinese-classics-self-learning
+npx serve .
+```
+
+> 提醒：這是**正式多檔案版本**的必要限制，屬正常現象，並非程式錯誤。
+
+---
+
+## 四、GitHub 上傳步驟
+
+```bash
+# 1. 在你的電腦上初始化 repository
+cd chinese-classics-self-learning
+git init
+git add .
+git commit -m "首次上線：岳陽樓記完整內容與題庫"
+
+# 2. 在 GitHub 建立新 repository（名稱建議：chinese-classics-self-learning），
+#    然後連結並推送：
+git remote add origin https://github.com/<你的帳號>/chinese-classics-self-learning.git
+git branch -M main
+git push -u origin main
+```
+
+## 五、Cloudflare Pages 部署步驟
+
+1. 登入 [Cloudflare Dashboard](https://dash.cloudflare.com/) → **Workers & Pages** → **建立應用程式** → **Pages** → **連接到 Git**
+2. 選擇你剛推送的 `chinese-classics-self-learning` repository
+3. 建置設定：
+   - **Framework preset**：`None`
+   - **Build command**：留空（不需要）
+   - **Build output directory**：`/`（專案根目錄，因為 `index.html` 在最外層）
+4. 按「儲存並部署」，完成後會得到一個 `https://<專案名>.pages.dev` 的網址
+5. 日後每次 `git push` 到 `main` 分支，Cloudflare Pages 會自動重新部署
+
+---
+
+## 六、測試網址後的完整功能檢查表
+
+**技術完整性**
+- [ ] 透過本機伺服器（非雙擊）開啟，首頁「十二篇指定文言經典．自學地圖」正常顯示 16 張卡片
+- [ ] 開啟瀏覽器開發者工具 Console，全程無紅色錯誤訊息
+- [ ] 只有《岳陽樓記》可點擊進入，其餘顯示「準備中」且不可點擊
+- [ ] 網址列的 hash（`#/...`）在切換頁面時正確變化，重新整理頁面後仍停留在同一頁
+
+**導覽**
+- [ ] 篇章首頁 8 個模組卡片全部可點擊並進入對應頁面
+- [ ] 每個內容頁與題目頁底部均有「返回《岳陽樓記》」「返回首頁」
+- [ ] 題目頁固定顯示「← 上一題」「下一題 →」，並正確地在題首/題末停用
+
+**作答互動規則**
+- [ ] 在任一客觀題選錯答案後，畫面**不會**自動跳到下一題
+- [ ] 提交後立即顯示：你的答案／正確答案／解析
+- [ ] 必須按「我已看完答案，下一題」才前進到下一題
+- [ ] 可以不作答，直接按「下一題 →」跳過
+- [ ] 返回已作答的題目時，仍顯示之前的作答與解析（重新整理頁面後也保留，因為存於 localStorage）
+- [ ] 開放題／長問答輸入框沒有字數下限，可提交極短答案
+
+**內容準確性**
+- [ ] 原文與教育局 PDF 一致（5 段），41 條注釋可點擊查看
+- [ ] 題庫題目、正確答案與試題庫 DOCX 一致（建議至少抽查 10 題核對）
+
+**手機適用性**
+- [ ] 以手機瀏覽器（或開發者工具的手機模擬檢視）開啟，文字與按鈕清晰可讀，可正常操作
+
+**核心篇章挑戰 / 我的掌握**
+- [ ] 核心篇章挑戰可選擇範圍與題數，作答後可看到結果與錯因分布
+- [ ] 「我的掌握」頁面顯示整體正確率、能力分項、錯題本，點擊錯題可跳回該題
+
+---
+
+## 七、學生測試表（建議印給學生試用時填寫）
+
+| 檢查項目 | 正常 ✓ / 有問題 ✗ | 備註 |
+|---|---|---|
+| 能順利進入《岳陽樓記》篇章首頁 | | |
+| 原文頁可點字看注釋 | | |
+| 字詞題庫作答流暢，答錯後看得懂解析 | | |
+| 疏通文意的填表題可正常填寫 | | |
+| 結構與鑒賞頁的結構圖清楚易懂 | | |
+| 主旨與思考的反思欄可儲存 | | |
+| 背誦精華的遮字／重組好玩、有幫助 | | |
+| 核心篇章挑戰完成後看得懂結果 | | |
+| 「我的掌握」清楚顯示自己的強弱項 | | |
+| 手機上使用暢順，字夠大、按鈕好按 | | |
+
+---
+
+## 八、常見錯誤排查表
+
+| 現象 | 可能原因 | 解決方法 |
+|---|---|---|
+| 畫面停留在「正在載入…」不動 | 用雙擊 `index.html` 直接開啟（`file://`），瀏覽器封鎖了本機 `fetch()` | 改用本機伺服器開啟（見「三、本機測試方法」） |
+| 畫面顯示紅色「發生錯誤」及具體檔案路徑 | 對應的 JSON 檔案不存在、路徑打錯或格式有誤 | 訊息會直接列出出錯的檔案路徑，檢查該路徑是否存在、JSON 是否符合格式 |
+| Cloudflare Pages 部署後顯示 404 | Build output directory 設定錯誤 | 確認設定為 `/`（根目錄），而非 `dist` 或其他子目錄 |
+| 部署後 JSON 讀取失敗，但本機正常 | 檔案路徑大小寫問題（Cloudflare 的檔案系統對大小寫敏感，本機 macOS/Windows 有時不敏感） | 確認 `data/units/yueyanglouji/...` 各層資料夾與檔名大小寫，與程式碼內引用完全一致 |
+| 新增第二篇章後首頁顯示不到 | 忘記把 `curriculum.json` 對應項目的 `status` 改為 `"available"` | 檢查 `data/curriculum.json` |
+| 作答紀錄在手機和電腦不同步 | 屬正常設計：進度只存在該裝置瀏覽器的 localStorage，未做帳號同步 | 如需跨裝置同步，屬日後功能，需另行設計（例如匯出/匯入） |
+| 清除瀏覽器資料後進度消失 | localStorage 被清除（如清除瀏覽紀錄、無痕模式、換瀏覽器） | 屬正常現象，目前無雲端備份機制 |
+
+---
+
+## 九、已知限制（第一版）
+
+- 朗讀音檔、意群停頓提示尚未提供
+- 長問答／開放題不設自動精確評分，只提供參考評分元素與自評清單（`teacher_review_placeholder` 已預留，日後可接入教師評閱或 AI 教練功能）
+- 進度只存於單一裝置瀏覽器，未有跨裝置同步或教師後台
+- 部分試題庫原文格式不清晰之處（見前一階段提出的 Q2／Q25／Q32／Q51 疑點），已按最合理判斷處理，建議教師使用前再核對一次

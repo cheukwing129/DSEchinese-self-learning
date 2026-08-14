@@ -1,0 +1,450 @@
+{
+  "unit": "yueyanglouji",
+  "bank": "structure-skill",
+  "questions": [
+    {
+      "id": "yyl-skill-004",
+      "unit": "yueyanglouji",
+      "ability": "結構與手法",
+      "knowledge_point": "描寫方法及效果",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "試根據引文「至若春和景明……漁歌互答，此樂何極！」回答：引文運用了甚麼描寫方法？試略加說明范仲淹使用這種描寫方法達到了怎樣的描寫效果。",
+      "score": 5,
+      "quote": "至若春和景明，波瀾不驚，上下天光，一碧萬頃；沙鷗翔集，錦鱗游泳，岸芷汀蘭，郁郁青青。而或長煙一空，皓月千里，浮光躍金，靜影沉璧；漁歌互答，此樂何極！",
+      "options": [
+        {
+          "key": "A",
+          "text": "多感官描寫"
+        },
+        {
+          "key": "B",
+          "text": "層遞法"
+        },
+        {
+          "key": "C",
+          "text": "側面描寫"
+        },
+        {
+          "key": "D",
+          "text": "襯托法"
+        }
+      ],
+      "answer": "A",
+      "follow_up_open_answer": "范仲淹描寫岳陽樓早上和晚上水色秀麗、月色一瀉千里、沙鷗和魚兒來往活動的情景（0.5分），渲染岳陽樓生機處處的氣氛（1分）。又描寫漁夫的歌聲互相唱和，從聽覺刻畫岳陽樓遊人心情愉快、彼此交流的情景（0.5分），塑造晴天的岳陽樓喜氣洋洋的氣氛（1分）。",
+      "source": "校本試題庫 Q4"
+    },
+    {
+      "id": "yyl-skill-006",
+      "unit": "yueyanglouji",
+      "ability": "結構與手法",
+      "knowledge_point": "記敍描寫抒情議論結合的好處",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "「記」是古人記敍事件或景物的文章，范仲淹《岳陽樓記》一文卻結合記敍、描寫、抒情和議論部分，試分析說明范仲淹這樣寫有甚麼好處。",
+      "score": 4,
+      "scoring_elements": [
+        "先在文中記敍寫作本文的原因（1分）",
+        "接着描繪岳陽樓所見的洞庭湖景色，並由景引申至覽物之情，抒發遷客騷人的悲喜心情（1分）",
+        "最後轉入議論，闡明自己想擁有「古仁人之心」的遠大理想和胸襟，並勉勵滕子京雖處逆境仍要堅守信念（1分）",
+        "這樣寫令全文結構嚴謹，內容豐富，剪裁得當（1分）"
+      ],
+      "source": "校本試題庫 Q6"
+    },
+    {
+      "id": "yyl-skill-007",
+      "unit": "yueyanglouji",
+      "ability": "結構與手法",
+      "knowledge_point": "反襯句摘錄",
+      "question_type": "extract_sentence",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "試摘錄《岳陽樓記》中運用「反襯」的寫作方法比較「古仁人」和「二者」的句子。",
+      "score": 1,
+      "answer_text": "予嘗求古仁人之心，或異二者之為。",
+      "source": "校本試題庫 Q7"
+    },
+    {
+      "id": "yyl-skill-008",
+      "unit": "yueyanglouji",
+      "ability": "結構與手法",
+      "knowledge_point": "對比對象及用意",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "范仲淹在《岳陽樓記》中，以甚麼人與「古仁人」作對比？他這樣寫有何用意？",
+      "score": 2,
+      "answer_elements": [
+        "對比對象：遷客騷人（1分）",
+        "用意：以「遷客騷人」會因個人遭遇、得失和四周環境而影響心情（1分），襯托出「古仁人」有「不以物喜，不以己悲」的胸襟（1分，合共2分視乎教師分配）"
+      ],
+      "source": "校本試題庫 Q8"
+    },
+    {
+      "id": "yyl-skill-009",
+      "unit": "yueyanglouji",
+      "ability": "結構與手法",
+      "knowledge_point": "描寫手法配對（動態/靜態/聽覺/嗅覺）",
+      "question_type": "matching",
+      "is_cross_text": false,
+      "paragraph_ref": [
+        3,
+        4
+      ],
+      "difficulty": "basic",
+      "stem": "范仲淹在《岳陽樓記》中用了不同描寫方法。試判斷以下引文分別使用了哪種描寫手法。（答案可選多於一個）",
+      "score": 4,
+      "rows": [
+        {
+          "text": "陰風怒號，濁浪排空。",
+          "answers": [
+            "動態描寫",
+            "聽覺描寫"
+          ]
+        },
+        {
+          "text": "薄暮冥冥，虎嘯猿啼",
+          "answers": [
+            "動態描寫",
+            "聽覺描寫"
+          ]
+        },
+        {
+          "text": "沙鷗翔集，錦鱗游泳。",
+          "answers": [
+            "動態描寫"
+          ]
+        },
+        {
+          "text": "浮光躍金，靜影沉璧。",
+          "answers": [
+            "靜態描寫"
+          ]
+        }
+      ],
+      "option_labels": [
+        "動態描寫",
+        "靜態描寫",
+        "聽覺描寫",
+        "嗅覺描寫"
+      ],
+      "source": "校本試題庫 Q9"
+    },
+    {
+      "id": "yyl-skill-010",
+      "unit": "yueyanglouji",
+      "ability": "結構與手法",
+      "knowledge_point": "多感官描寫配對",
+      "question_type": "matching",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "范仲淹在《岳陽樓記》中善用多感官描寫。下列引文運用了哪種感官描寫法？又還是沒有運用？（答案可多於一個，全對才給分）",
+      "score": 3,
+      "rows": [
+        {
+          "text": "上下天光，一碧萬頃。",
+          "answers": [
+            "視覺描寫"
+          ]
+        },
+        {
+          "text": "岸芷汀蘭，郁郁青青。",
+          "answers": [
+            "嗅覺描寫",
+            "視覺描寫"
+          ]
+        },
+        {
+          "text": "漁歌互答，此樂何極。",
+          "answers": [
+            "聽覺描寫"
+          ]
+        }
+      ],
+      "option_labels": [
+        "聽覺描寫",
+        "嗅覺描寫",
+        "視覺描寫",
+        "沒有使用"
+      ],
+      "source": "校本試題庫 Q10"
+    },
+    {
+      "id": "yyl-skill-012",
+      "unit": "yueyanglouji",
+      "ability": "結構與手法",
+      "knowledge_point": "對偶修辭及作用",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "在《岳陽樓記》中，引文「陰風怒號，濁浪排空；日星隱耀，山岳潛形；商旅不行，檣傾楫摧；薄暮冥冥，虎嘯猿啼」運用了甚麼修辭手法？試說明運用這種修辭手法對描寫當時的景象起甚麼作用。",
+      "score": 4,
+      "quote": "陰風怒號，濁浪排空；日星隱耀，山岳潛形；商旅不行，檣傾楫摧；薄暮冥冥，虎嘯猿啼。",
+      "rhetorical_device": "對偶（答案須是兩個字）",
+      "answer_elements": [
+        "以「陰風」對「濁浪」、「怒號」對「排空」，描寫狂風怒吼，突出風力之大（1分）",
+        "以「日星」對「山岳」、「隱耀」對「潛形」，描寫日星及山岳都隱沒不見，突出風雨之大（1分）",
+        "以「商旅」對「檣傾」、「不行」對「楫摧」，描寫商旅不能前進、船隻損毀，突出風力之大（1分）"
+      ],
+      "source": "校本試題庫 Q12"
+    },
+    {
+      "id": "yyl-skill-016",
+      "unit": "yueyanglouji",
+      "ability": "結構與手法",
+      "knowledge_point": "為何花筆墨描寫景物",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "「記」是一種文學體裁，內容多為記敍事情經過。但《岳陽樓記》一文中，范仲淹花了大量筆墨描繪登樓後所見的景物和他的心情。范仲淹為甚麼這樣寫？試舉一例說明。",
+      "score": 4,
+      "answer_elements": [
+        "前人對岳陽樓的記述已十分詳盡，故轉而詳寫登樓所見的景物和心情（1分）",
+        "例如分別詳細描繪天氣惡劣和陽光明媚的岳陽樓（1分）",
+        "為了將受景物影響的遷客騷人和不受外在環境影響的古仁人作對比，表述自己不會因個人得失而影響憂國憂民的心志（1分）",
+        "范仲淹寓情於景，並以此規勸好友滕子京和世人效法古人（1分）"
+      ],
+      "source": "校本試題庫 Q16"
+    },
+    {
+      "id": "yyl-skill-018",
+      "unit": "yueyanglouji",
+      "ability": "結構與手法",
+      "knowledge_point": "反問修辭及效果",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "「噫！微斯人，吾誰與歸！」一句運用了哪種修辭手法？試說明使用這種修辭手法的效果。",
+      "score": 3,
+      "quote": "噫！微斯人，吾誰與歸！",
+      "rhetorical_device": "反問（答案須是兩個字）",
+      "answer_elements": [
+        "范仲淹提出如果沒有古仁人，自己將依歸誰的疑問，實際上表現出自己會以古仁人為依歸（1分）",
+        "強調自己對古仁人的推崇，同時抒發對世上有相同抱負的人不多、同道難求的感慨（1分）"
+      ],
+      "source": "校本試題庫 Q18"
+    },
+    {
+      "id": "yyl-skill-019",
+      "unit": "yueyanglouji",
+      "ability": "結構與手法",
+      "knowledge_point": "修辭手法：借代",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "范仲淹《岳陽樓記》中「錦鱗游泳」一句運用了哪種修辭手法？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "誇張"
+        },
+        {
+          "key": "B",
+          "text": "借喻"
+        },
+        {
+          "key": "C",
+          "text": "借代"
+        },
+        {
+          "key": "D",
+          "text": "暗喻"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫 Q19"
+    },
+    {
+      "id": "yyl-skill-020",
+      "unit": "yueyanglouji",
+      "ability": "結構與手法",
+      "knowledge_point": "修辭手法：擬人",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "范仲淹《岳陽樓記》中「銜遠山，吞長江」一句運用了甚麼修辭手法？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "借代"
+        },
+        {
+          "key": "B",
+          "text": "暗喻"
+        },
+        {
+          "key": "C",
+          "text": "排比"
+        },
+        {
+          "key": "D",
+          "text": "擬人"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫 Q20"
+    },
+    {
+      "id": "yyl-skill-021",
+      "unit": "yueyanglouji",
+      "ability": "結構與手法",
+      "knowledge_point": "呼告手法的作用",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "范仲淹在《岳陽樓記》中「嗟夫！予嘗求古仁人之心，或異二者之為，何哉？」一句運用了呼告手法，作用是：",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "加強肯定語氣"
+        },
+        {
+          "key": "B",
+          "text": "表達對古仁人的欽佩"
+        },
+        {
+          "key": "C",
+          "text": "說明追隨古仁人的志向"
+        },
+        {
+          "key": "D",
+          "text": "勸勉滕子京效法古仁人"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫 Q21"
+    },
+    {
+      "id": "yyl-skill-024",
+      "unit": "yueyanglouji",
+      "ability": "結構與手法",
+      "knowledge_point": "駢散結合的句子",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "范仲淹《岳陽樓記》一文有駢散結合的特色，即在文章中交錯運用句式靈活而富變化的散句，以及對偶句、排比句等句式整齊的駢句。試指出以下哪則引文最能反映這個特色。",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "予觀夫巴陵勝狀，在洞庭一湖。銜遠山，吞長江，浩浩湯湯，橫無際涯。"
+        },
+        {
+          "key": "B",
+          "text": "至若春和景明，波瀾不驚，上下天光，一碧萬頃。"
+        },
+        {
+          "key": "C",
+          "text": "嗟夫！予嘗求古仁人之心，或異二者之為。何哉？不以物喜，不以己悲。"
+        },
+        {
+          "key": "D",
+          "text": "是進亦憂，退亦憂，然則何時而樂耶？其必曰：「先天下之憂而憂，後天下之樂而樂。」"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫 Q24"
+    },
+    {
+      "id": "yyl-skill-027",
+      "unit": "yueyanglouji",
+      "ability": "結構與手法",
+      "knowledge_point": "不詳寫重修過程的用意",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "范仲淹在《岳陽樓記》開首指出自己受滕子京所託，記述重修岳陽樓一事，但他沒有詳細記錄重修的過程。試說明他這樣寫的用意。",
+      "score": 4,
+      "answer_elements": [
+        "范仲淹的寫作目的是想通過本文申述自己憂國憂民的襟懷，而非單純記事（1分）",
+        "他通過描寫洞庭湖的佳景，帶出遷客騷人或悲或喜的覽物之情，說明古仁人「不以物喜，不以己悲」的志向（1分）",
+        "並自述「先天下之憂而憂，後天下之樂而樂」的個人抱負（1分）",
+        "又與滕子京相互勸勉，規勸好友雖身處逆境仍要堅守信念和志向，並警戒後人效法古仁人（1分）"
+      ],
+      "source": "校本試題庫 Q27"
+    },
+    {
+      "id": "yyl-skill-038",
+      "unit": "yueyanglouji",
+      "ability": "結構與手法",
+      "knowledge_point": "段落特色：駢散交錯",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "以下哪一項最能概括「予觀夫巴陵勝狀……覽物之情，得無異乎？」整段文字的特色？",
+      "score": 2,
+      "quote": "予觀夫巴陵勝狀，在洞庭一湖。銜遠山，吞長江，浩浩湯湯，橫無際涯；朝暉夕陰，氣象萬千。此則岳陽樓之大觀也，前人之述備矣。然則北通巫峽，南極瀟湘，遷客騷人，多會於此，覽物之情，得無異乎？",
+      "options": [
+        {
+          "key": "A",
+          "text": "駢散交錯"
+        },
+        {
+          "key": "B",
+          "text": "對仗工整"
+        },
+        {
+          "key": "C",
+          "text": "音韻鏗鏘"
+        },
+        {
+          "key": "D",
+          "text": "平白自然"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫 Q38"
+    },
+    {
+      "id": "yyl-skill-039",
+      "unit": "yueyanglouji",
+      "ability": "結構與手法",
+      "knowledge_point": "段落結構作用：承上啟下",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "《岳陽樓記》中「嗟夫！予嘗求古仁人之心，或異二者之為。何哉？」一句，在結構上起了甚麼作用？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "首尾呼應"
+        },
+        {
+          "key": "B",
+          "text": "轉折內容"
+        },
+        {
+          "key": "C",
+          "text": "承上啟下"
+        },
+        {
+          "key": "D",
+          "text": "深化主題"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫 Q39"
+    }
+  ]
+}

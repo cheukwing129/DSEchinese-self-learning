@@ -1,0 +1,33 @@
+{
+  "id": "yueyanglouji",
+  "title": "岳陽樓記",
+  "author": "范仲淹",
+  "dynasty": "北宋",
+  "written_year": "慶曆六年（公元1046年）",
+  "genre": "記",
+  "status": "available",
+  "modules": [
+    { "id": "text", "title": "原文與誦讀", "icon": "book" },
+    { "id": "words", "title": "字詞與句式", "icon": "characters" },
+    { "id": "comprehension", "title": "疏通文意", "icon": "translate" },
+    { "id": "analysis", "title": "結構與鑒賞", "icon": "structure" },
+    { "id": "theme", "title": "主旨與思考", "icon": "lightbulb" },
+    { "id": "memorisation", "title": "背誦精華", "icon": "memory" },
+    { "id": "challenge", "title": "核心篇章挑戰", "icon": "target" },
+    { "id": "progress", "title": "我的掌握", "icon": "chart" }
+  ],
+  "cross_text_targets": [
+    { "id": "lunyu-renxiaojunzi", "title": "論仁、論孝、論君子", "author": "《論語》" },
+    { "id": "yu-wo-suoyu", "title": "魚我所欲也", "author": "孟子" },
+    { "id": "shide-xishan-yanyouji", "title": "始得西山宴遊記", "author": "柳宗元" },
+    { "id": "denglou", "title": "登樓", "author": "杜甫" },
+    { "id": "shanju-qiuming", "title": "山居秋暝", "author": "王維" }
+  ],
+  "question_bank_files": [
+    "question-banks/words.json",
+    "question-banks/content.json",
+    "question-banks/structure-skill.json",
+    "question-banks/theme.json",
+    "question-banks/cross-text.json"
+  ]
+}

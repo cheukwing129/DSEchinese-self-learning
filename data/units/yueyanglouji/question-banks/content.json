@@ -1,0 +1,416 @@
+{
+  "unit": "yueyanglouji",
+  "bank": "content",
+  "questions": [
+    {
+      "id": "yyl-content-001",
+      "unit": "yueyanglouji",
+      "ability": "內容理解",
+      "knowledge_point": "摘錄：滕子京政績",
+      "question_type": "extract_sentence",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "范仲淹在《岳陽樓記》中提及滕子京在巴陵郡的政績。試摘錄有關句子。",
+      "score": 2,
+      "answer_text": "政通人和，百廢具興。",
+      "source": "校本試題庫 Q1"
+    },
+    {
+      "id": "yyl-content-002",
+      "unit": "yueyanglouji",
+      "ability": "內容理解",
+      "knowledge_point": "陰晴景色與感受",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": [
+        3,
+        4
+      ],
+      "difficulty": "basic",
+      "stem": "《岳陽樓記》一文描寫「遷客騷人」觀賞洞庭湖不同天氣下的景色，因而產生不同的感受。試以自己的文句完成下表。",
+      "score": 4,
+      "table": {
+        "columns": [
+          "天氣",
+          "景色",
+          "感受"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "陰天",
+              "太陽和星星都隱沒了光輝，高山都隱藏了形狀；商人和旅客不能前行，船的桅杆傾斜，船槳折斷。",
+              null
+            ]
+          },
+          {
+            "cells": [
+              "晴天",
+              null,
+              "心胸開闊，精神愉快，得寵受辱全都忘記，感到高興而自得。"
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "陰天感受：產生因離開京師或故鄉而起的懷念心情（1分），憂慮毁謗或挑撥離間的話和害怕被人用尖刻的話諷刺，因而悲傷起來（1分）。",
+        "晴天景色：春日天氣暖和，日光明亮的日子，天色和湖光相映，湖面廣闊，沙鷗時而飛翔時而停歇聚集，色彩華美的魚兒游來游去（4分中與陰天感受合計4分，每空各佔相應分數，教師可自行分配）。"
+      ],
+      "source": "校本試題庫 Q2"
+    },
+    {
+      "id": "yyl-content-003",
+      "unit": "yueyanglouji",
+      "ability": "內容理解",
+      "knowledge_point": "滕子京重修用意",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "《岳陽樓記》中，滕子京重修岳陽樓的用意是甚麼？",
+      "score": 2,
+      "answer_elements": [
+        "滕子京被貶遷巴陵郡後，使當地政通人和，百廢俱興（1分）",
+        "於是在行有餘力時重修岳陽樓（1分）"
+      ],
+      "source": "校本試題庫 Q3"
+    },
+    {
+      "id": "yyl-content-005",
+      "unit": "yueyanglouji",
+      "ability": "內容理解",
+      "knowledge_point": "摘錄：古仁人與二者不同",
+      "question_type": "extract_sentence",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "范仲淹在《岳陽樓記》中說明了古仁人與二者不同的表現。試摘錄有關句子。",
+      "score": 2,
+      "answer_text": "不以物喜，不以己悲。",
+      "source": "校本試題庫 Q5"
+    },
+    {
+      "id": "yyl-content-011",
+      "unit": "yueyanglouji",
+      "ability": "內容理解",
+      "knowledge_point": "覽物之情不同及原因",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": [
+        3,
+        4
+      ],
+      "difficulty": "basic",
+      "stem": "就范仲淹《岳陽樓記》一文所述，「遷客騷人」在不同天氣下的「覽物之情」有甚麼不同？試說明「遷客騷人」有這種情緒變化的原因。",
+      "score": 6,
+      "answer_elements": [
+        "不同：陰天登樓因離開京師或故鄉的懷念、憂讒畏譏而感極而悲（2分）；晴天登樓則心曠神怡、寵辱皆忘、感到高興自得（2分）。",
+        "原因：因個人的境遇、得失（0.5分）和四周的環境（0.5分）而有所起伏，因為他們胸襟氣度不夠廣闊，未能超越個人利害（1分）。"
+      ],
+      "source": "校本試題庫 Q11"
+    },
+    {
+      "id": "yyl-content-014",
+      "unit": "yueyanglouji",
+      "ability": "內容理解",
+      "knowledge_point": "判斷正誤：洞庭湖與岳陽樓位置",
+      "question_type": "true_false_unknown",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "就《岳陽樓記》中，范仲淹描述洞庭湖和岳陽樓位置原因，判斷以下陳述。",
+      "score": 4,
+      "statements": [
+        {
+          "text": "洞庭湖景色多變，范仲淹不能盡錄，因此只略寫「巴陵勝狀」。",
+          "answer": "false",
+          "explanation": "范仲淹指出前人已詳述岳陽樓的雄偉景觀，才是他略寫「巴陵勝狀」的原因，並非因景色多變而不能盡錄。"
+        },
+        {
+          "text": "范仲淹指出岳陽樓位處交通樞紐，目的是引入下文刻畫的遷客騷人。",
+          "answer": "true",
+          "explanation": "岳陽樓「北通巫峽，南極瀟湘」，交通樞紐的描寫引出「遷客騷人，多會於此」，帶出下文遷客騷人登樓覽物之情。"
+        }
+      ],
+      "source": "校本試題庫 Q14"
+    },
+    {
+      "id": "yyl-content-015",
+      "unit": "yueyanglouji",
+      "ability": "內容理解",
+      "knowledge_point": "遷客騷人與古仁人的表現及重視",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": [
+        3,
+        4,
+        5
+      ],
+      "difficulty": "basic",
+      "stem": "范仲淹在《岳陽樓記》提及「遷客騷人」和「古仁人」的不同表現，試指出兩者的行為有甚麼不同？這反映他們更重視甚麼？",
+      "score": 4,
+      "table": {
+        "columns": [
+          "",
+          "表現",
+          "重視的事物"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "遷客騷人",
+              "在覽物後因外界環境或個人遭遇感到悲或喜。",
+              null
+            ]
+          },
+          {
+            "cells": [
+              "古仁人",
+              null,
+              "國家和人民的整體福祉。"
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "遷客騷人重視：景物的變化（1分）和個人的際遇（1分）。",
+        "古仁人表現：心情不會因外界環境和個人遭遇而改變（1分），無論在何時何地都抱着憂國憂民的心（1分）。"
+      ],
+      "source": "校本試題庫 Q15"
+    },
+    {
+      "id": "yyl-content-022",
+      "unit": "yueyanglouji",
+      "ability": "內容理解",
+      "knowledge_point": "古仁人居廟堂/處江湖的擔憂對象",
+      "question_type": "matching",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "范仲淹提到「古仁人」在「居廟堂」和「處江湖」時所擔憂的對象各有不同。試指出古仁人在兩種處境下分別擔憂哪些對象？",
+      "score": 2,
+      "rows": [
+        {
+          "text": "「居廟堂」",
+          "answer": "A"
+        },
+        {
+          "text": "「處江湖」",
+          "answer": "C"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "百姓"
+        },
+        {
+          "key": "B",
+          "text": "自己"
+        },
+        {
+          "key": "C",
+          "text": "君主"
+        },
+        {
+          "key": "D",
+          "text": "家人"
+        },
+        {
+          "key": "E",
+          "text": "士大夫"
+        }
+      ],
+      "source": "校本試題庫 Q22"
+    },
+    {
+      "id": "yyl-content-023",
+      "unit": "yueyanglouji",
+      "ability": "內容理解",
+      "knowledge_point": "滕子京的遭遇與勉勵",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "在《岳陽樓記》中，范仲淹提及滕子京有甚麼遭遇？又范仲淹如何以「古仁人」之心，來勉勵滕子京？",
+      "score": 3,
+      "answer_elements": [
+        "滕子京被貶官至巴陵郡（1分）。",
+        "范仲淹在文中舉出自己所推崇的「古仁人」不會受外界環境或個人榮辱得失影響心情，而是心念天下百姓福祉（1分），以此勉勵滕子京效法古仁人般不以個人際遇影響心情，而是要關懷百姓，好好為官（1分）。"
+      ],
+      "source": "校本試題庫 Q23"
+    },
+    {
+      "id": "yyl-content-026",
+      "unit": "yueyanglouji",
+      "ability": "內容理解",
+      "knowledge_point": "陰晴天動物人事活動與氣氛",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": [
+        3,
+        4
+      ],
+      "difficulty": "basic",
+      "stem": "范仲淹在《岳陽樓記》中描寫了哪些岳陽樓在陰天和晴天的動物和人事活動？又營造了怎樣的氣氛？試以自己的文句完成下表。",
+      "score": 4,
+      "table": {
+        "columns": [
+          "",
+          "動物和人事活動",
+          "氣氛"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "陰天",
+              null,
+              "蕭瑟淒冷"
+            ]
+          },
+          {
+            "cells": [
+              "晴天",
+              "成羣的沙鷗時而飛翔時而停歇聚集，色彩華美的魚兒游來游去，漁夫的歌聲互相唱和。",
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "陰天動物人事活動：商人和旅客不能前行（1分），老虎怒吼，猿猴悲鳴（1分）。",
+        "晴天氣氛：喜氣洋洋／生機勃勃（2分）。"
+      ],
+      "source": "校本試題庫 Q26"
+    },
+    {
+      "id": "yyl-content-030",
+      "unit": "yueyanglouji",
+      "ability": "內容理解",
+      "knowledge_point": "遷客騷人與古仁人喜悲的原因",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": [
+        3,
+        4,
+        5
+      ],
+      "difficulty": "basic",
+      "stem": "范仲淹在《岳陽樓記》中寫到「遷客騷人」和「古仁人」因為不同的原因而有喜與悲的感受。試就有關內容完成下表。",
+      "score": 4,
+      "table": {
+        "columns": [
+          "",
+          "「遷客騷人」",
+          "「古仁人」"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "喜的原因",
+              null,
+              "因為政通人和，百姓安居樂業，天下人都享樂而感到快樂。"
+            ]
+          },
+          {
+            "cells": [
+              "悲的原因",
+              "在陰雨的日子登樓，因眼前蕭瑟的景象而想起自己被貶謫遠方的遭遇，引起對故鄉的懷念和對遭受毁謗譏笑的畏懼。",
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "遷客騷人喜的原因：在晴朗的日子登樓，看到美麗的景色（1分），忘卻一切榮辱，感到心曠神怡（1分）。",
+        "古仁人悲的原因：在朝廷做官，會為百姓擔憂（1分）；在僻遠的地方退隱，又會為君主擔憂而感到憂慮（1分）。"
+      ],
+      "source": "校本試題庫 Q30"
+    },
+    {
+      "id": "yyl-content-036",
+      "unit": "yueyanglouji",
+      "ability": "內容理解",
+      "knowledge_point": "洞庭湖景象（多選）",
+      "question_type": "multi_select",
+      "is_cross_text": false,
+      "paragraph_ref": [
+        2,
+        3,
+        4
+      ],
+      "difficulty": "basic",
+      "stem": "根據《岳陽樓記》，范仲淹描寫了洞庭湖的哪些景象？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "壯闊浩瀚"
+        },
+        {
+          "key": "B",
+          "text": "細雨綿綿"
+        },
+        {
+          "key": "C",
+          "text": "春氣和暖"
+        },
+        {
+          "key": "D",
+          "text": "寒冬飄雪"
+        }
+      ],
+      "answer": [
+        "A",
+        "C"
+      ],
+      "source": "校本試題庫 Q36"
+    },
+    {
+      "id": "yyl-content-037",
+      "unit": "yueyanglouji",
+      "ability": "內容理解",
+      "knowledge_point": "兩次登樓感受不同",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": [
+        3,
+        4
+      ],
+      "difficulty": "basic",
+      "stem": "在《岳陽樓記》中，范仲淹曾提及登樓的不同情景。試指出他兩次登樓的感受有何不同。",
+      "score": 2,
+      "context_quotes": [
+        {
+          "label": "甲",
+          "text": "登斯樓也，則有去國懷鄉，憂讒畏譏，滿目蕭然，感極而悲者矣。"
+        },
+        {
+          "label": "乙",
+          "text": "登斯樓也，則有心曠神怡，寵辱皆忘，把酒臨風，其喜洋洋者矣。"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "引文甲悲傷，引文乙曠達。"
+        },
+        {
+          "key": "B",
+          "text": "引文甲無奈，引文乙快樂。"
+        },
+        {
+          "key": "C",
+          "text": "引文甲恐懼，引文乙忘憂。"
+        },
+        {
+          "key": "D",
+          "text": "引文甲厭世，引文乙豁然。"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫 Q37"
+    }
+  ]
+}

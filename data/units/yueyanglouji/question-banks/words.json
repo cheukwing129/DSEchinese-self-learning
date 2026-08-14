@@ -1,0 +1,972 @@
+{
+  "unit": "yueyanglouji",
+  "bank": "words",
+  "questions": [
+    {
+      "id": "yyl-words-048",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "虛詞辨析：之",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "以下哪一句的「之」字跟《岳陽樓記》中「屬予作文以記之」的「之」字具相同詞性？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "「覽物之情，得無異乎？」（《岳陽樓記》）"
+        },
+        {
+          "key": "B",
+          "text": "「予嘗求古仁人之心，或異二者之為。」（《岳陽樓記》）"
+        },
+        {
+          "key": "C",
+          "text": "「如使人之所欲莫甚於生，則凡可以得生者，何不用也？」（《孟子‧魚我所欲也》）"
+        },
+        {
+          "key": "D",
+          "text": "「得之則生，弗得則死。」（《孟子‧魚我所欲也》）"
+        }
+      ],
+      "answer": "D",
+      "explanation": "「屬予作文以記之」的「之」為代詞，代指重修岳陽樓一事；D項「得之則生」的「之」同樣是代詞。A、B項的「之」為結構助詞（的）；C項的「之」為結構助詞（無實義，用於主謂之間）。",
+      "source": "校本試題庫 Q48"
+    },
+    {
+      "id": "yyl-words-049",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "虛詞辨析：以",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "以下哪句的「以」字跟《岳陽樓記》「不以物喜，不以己悲」中的「以」字具相同詞義？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "志士仁人，無求生以害仁。（《論仁論孝論君子》）"
+        },
+        {
+          "key": "B",
+          "text": "以空言求璧，償城恐不可得。（《廉頗藺相如列傳》（節錄））"
+        },
+        {
+          "key": "C",
+          "text": "使歸趙，趙王豈以一璧之故欺秦邪！（《廉頗藺相如列傳》（節錄））"
+        },
+        {
+          "key": "D",
+          "text": "客得之，以說吳王。（《逍遙遊》（節錄））"
+        }
+      ],
+      "answer": "C",
+      "explanation": "「不以物喜」的「以」解「因為」；C項「豈以一璧之故」的「以」同樣解「因為」。",
+      "source": "校本試題庫 Q49"
+    },
+    {
+      "id": "yyl-words-050",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "虛詞辨析：夫",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "以下哪句的「夫」字跟《岳陽樓記》中「嗟夫！予嘗求古仁人之心，或異二者之為」中的「夫」字具相同詞義？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "予觀夫巴陵勝狀，在洞庭一湖。（《岳陽樓記》）"
+        },
+        {
+          "key": "B",
+          "text": "悲夫！有如此之勢，而為秦人積威之所劫。（《六國論》）"
+        },
+        {
+          "key": "C",
+          "text": "吾師道也，夫庸知其年之先後生於吾乎？（《師說》）"
+        },
+        {
+          "key": "D",
+          "text": "子曰：「內省不疚，夫何憂何懼？」（《論仁論孝論君子》）"
+        }
+      ],
+      "answer": "B",
+      "explanation": "「嗟夫」的「夫」為語氣助詞，表感歎；B項「悲夫」的「夫」同樣是感歎語氣助詞。A項的「夫」為發語詞；C、D項的「夫」用於引出反問，語氣不同。",
+      "source": "校本試題庫 Q50"
+    },
+    {
+      "id": "yyl-words-051",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "解釋粗體字",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "試解釋以下文句中的粗體字。",
+      "score": 2,
+      "items": [
+        {
+          "text": "屬予作文以記之。（《岳陽樓記》）",
+          "target": "以",
+          "answer": "為了"
+        },
+        {
+          "text": "感極而悲者矣。（《岳陽樓記》）",
+          "target": "而",
+          "answer": "因而"
+        }
+      ],
+      "explanation": "兩題各1分，合共2分（原題標示8分，惟本題庫僅列出2個字詞，其餘未見，教師可自行增補）。",
+      "source": "校本試題庫 Q51"
+    },
+    {
+      "id": "yyl-words-052",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "虛詞辨析：為（跨篇）",
+      "question_type": "matching",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "試判斷以下文句中「為」字的詞義。",
+      "score": 2,
+      "rows": [
+        {
+          "text": "予嘗求古仁人之心，或異二者之為。（《岳陽樓記》）",
+          "answer": "C"
+        },
+        {
+          "text": "故不為苟得也。（《孟子‧魚我所欲也》）",
+          "answer": "A"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "做"
+        },
+        {
+          "key": "B",
+          "text": "是"
+        },
+        {
+          "key": "C",
+          "text": "表現"
+        },
+        {
+          "key": "D",
+          "text": "治理"
+        }
+      ],
+      "source": "校本試題庫 Q52"
+    },
+    {
+      "id": "yyl-words-053",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「滕子京謫守巴陵郡」一句中的「謫」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "缺點"
+        },
+        {
+          "key": "B",
+          "text": "貶官"
+        },
+        {
+          "key": "C",
+          "text": "過錯"
+        },
+        {
+          "key": "D",
+          "text": "譴責"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫 Q053"
+    },
+    {
+      "id": "yyl-words-054",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「滕子京謫守巴陵郡」一句中的「守」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "出任太守"
+        },
+        {
+          "key": "B",
+          "text": "防守"
+        },
+        {
+          "key": "C",
+          "text": "看護"
+        },
+        {
+          "key": "D",
+          "text": "監視"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫 Q054"
+    },
+    {
+      "id": "yyl-words-055",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「越明年，政通人和，百廢具興」一句中的「越」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "超過"
+        },
+        {
+          "key": "B",
+          "text": "經過"
+        },
+        {
+          "key": "C",
+          "text": "越來越"
+        },
+        {
+          "key": "D",
+          "text": "相差"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫 Q055"
+    },
+    {
+      "id": "yyl-words-056",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「乃重修岳陽樓，增其舊制，刻唐賢、今人詩賦於其上」一句中的「制」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "制度"
+        },
+        {
+          "key": "B",
+          "text": "制服"
+        },
+        {
+          "key": "C",
+          "text": "規模"
+        },
+        {
+          "key": "D",
+          "text": "製作"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫 Q056"
+    },
+    {
+      "id": "yyl-words-057",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「予觀夫巴陵勝狀，在洞庭一湖」一句中的「勝」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "勝利"
+        },
+        {
+          "key": "B",
+          "text": "能承受"
+        },
+        {
+          "key": "C",
+          "text": "超過"
+        },
+        {
+          "key": "D",
+          "text": "優美"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫 Q057"
+    },
+    {
+      "id": "yyl-words-058",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「銜遠山，吞長江」一句中的「銜」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "含着"
+        },
+        {
+          "key": "B",
+          "text": "接受"
+        },
+        {
+          "key": "C",
+          "text": "銜頭"
+        },
+        {
+          "key": "D",
+          "text": "銜接"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫 Q058"
+    },
+    {
+      "id": "yyl-words-059",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「此則岳陽樓之大觀也，前人之述備矣」一句中的「觀」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "遊覽"
+        },
+        {
+          "key": "B",
+          "text": "看法"
+        },
+        {
+          "key": "C",
+          "text": "景觀"
+        },
+        {
+          "key": "D",
+          "text": "建築"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫 Q059"
+    },
+    {
+      "id": "yyl-words-060",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「遷客騷人，多會於此」一句中的「騷人」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "騷擾別人"
+        },
+        {
+          "key": "B",
+          "text": "詩人"
+        },
+        {
+          "key": "C",
+          "text": "憂愁的人"
+        },
+        {
+          "key": "D",
+          "text": "腥臭的人"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫 Q060"
+    },
+    {
+      "id": "yyl-words-061",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「遷客騷人，多會於此」一句中的「會」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "聚集"
+        },
+        {
+          "key": "B",
+          "text": "開會"
+        },
+        {
+          "key": "C",
+          "text": "恰巧"
+        },
+        {
+          "key": "D",
+          "text": "領會"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫 Q061"
+    },
+    {
+      "id": "yyl-words-062",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「陰風怒號，濁浪排空」一句中的「排」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "分開"
+        },
+        {
+          "key": "B",
+          "text": "推開"
+        },
+        {
+          "key": "C",
+          "text": "疏通"
+        },
+        {
+          "key": "D",
+          "text": "衝向"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫 Q062"
+    },
+    {
+      "id": "yyl-words-063",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「商旅不行，檣傾楫摧」一句中的「摧」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "排擠"
+        },
+        {
+          "key": "B",
+          "text": "催促"
+        },
+        {
+          "key": "C",
+          "text": "折斷"
+        },
+        {
+          "key": "D",
+          "text": "挫折"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫 Q063"
+    },
+    {
+      "id": "yyl-words-064",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「憂讒畏譏，滿目蕭然」一句中的「讒」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "說壞話"
+        },
+        {
+          "key": "B",
+          "text": "說壞話的人"
+        },
+        {
+          "key": "C",
+          "text": "毀謗"
+        },
+        {
+          "key": "D",
+          "text": "譏諷"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫 Q064"
+    },
+    {
+      "id": "yyl-words-065",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「則有去國懷鄉，滿目蕭然，感極而悲者矣」一句中的「極」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "極點"
+        },
+        {
+          "key": "B",
+          "text": "到達"
+        },
+        {
+          "key": "C",
+          "text": "邊際"
+        },
+        {
+          "key": "D",
+          "text": "窮盡"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫 Q065"
+    },
+    {
+      "id": "yyl-words-066",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「至若春和景明，波瀾不驚」一句中的「景」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "景物"
+        },
+        {
+          "key": "B",
+          "text": "日光"
+        },
+        {
+          "key": "C",
+          "text": "光明"
+        },
+        {
+          "key": "D",
+          "text": "大"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫 Q066"
+    },
+    {
+      "id": "yyl-words-067",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「至若春和景明，波瀾不驚」一句中的「驚」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "驚慌"
+        },
+        {
+          "key": "B",
+          "text": "令人恐懼"
+        },
+        {
+          "key": "C",
+          "text": "紛亂的樣子"
+        },
+        {
+          "key": "D",
+          "text": "湧起"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫 Q067"
+    },
+    {
+      "id": "yyl-words-068",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「沙鷗翔集，錦鱗游泳」一句中的「集」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "一致"
+        },
+        {
+          "key": "B",
+          "text": "夾雜"
+        },
+        {
+          "key": "C",
+          "text": "市集"
+        },
+        {
+          "key": "D",
+          "text": "聚集"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫 Q068"
+    },
+    {
+      "id": "yyl-words-069",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「而或長煙一空，皓月千里」一句中的「一」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "剛剛"
+        },
+        {
+          "key": "B",
+          "text": "一旦"
+        },
+        {
+          "key": "C",
+          "text": "全部"
+        },
+        {
+          "key": "D",
+          "text": "偶然"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫 Q069"
+    },
+    {
+      "id": "yyl-words-070",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「浮光躍金，靜影沉璧」一句中的「躍」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "飛躍"
+        },
+        {
+          "key": "B",
+          "text": "躍動"
+        },
+        {
+          "key": "C",
+          "text": "上漲"
+        },
+        {
+          "key": "D",
+          "text": "激動"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫 Q070"
+    },
+    {
+      "id": "yyl-words-071",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「漁歌互答，此樂何極」一句中的「答」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "回答"
+        },
+        {
+          "key": "B",
+          "text": "唱和"
+        },
+        {
+          "key": "C",
+          "text": "答案"
+        },
+        {
+          "key": "D",
+          "text": "答謝"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫 Q071"
+    },
+    {
+      "id": "yyl-words-072",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「漁歌互答，此樂何極」一句中的「極」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "極點"
+        },
+        {
+          "key": "B",
+          "text": "到達"
+        },
+        {
+          "key": "C",
+          "text": "邊際"
+        },
+        {
+          "key": "D",
+          "text": "窮盡"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫 Q072"
+    },
+    {
+      "id": "yyl-words-073",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「寵辱皆忘，把酒臨風」一句中的「辱」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "辜負"
+        },
+        {
+          "key": "B",
+          "text": "玷污"
+        },
+        {
+          "key": "C",
+          "text": "委屈"
+        },
+        {
+          "key": "D",
+          "text": "受辱"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫 Q073"
+    },
+    {
+      "id": "yyl-words-074",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「寵辱皆忘，把酒臨風」一句中的「臨」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "面對"
+        },
+        {
+          "key": "B",
+          "text": "來臨"
+        },
+        {
+          "key": "C",
+          "text": "迎"
+        },
+        {
+          "key": "D",
+          "text": "靠近"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫 Q074"
+    },
+    {
+      "id": "yyl-words-075",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "「予嘗求古仁人之心，或異二者之為」一句中的「嘗」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "嘗試"
+        },
+        {
+          "key": "B",
+          "text": "經歷"
+        },
+        {
+          "key": "C",
+          "text": "曾經"
+        },
+        {
+          "key": "D",
+          "text": "試探"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫 Q075"
+    },
+    {
+      "id": "yyl-words-076",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "「居廟堂之高，則憂其民」一句中的「堂」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "課堂"
+        },
+        {
+          "key": "B",
+          "text": "殿堂"
+        },
+        {
+          "key": "C",
+          "text": "房屋"
+        },
+        {
+          "key": "D",
+          "text": "山上寬闊平坦的地方"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫 Q076"
+    },
+    {
+      "id": "yyl-words-077",
+      "unit": "yueyanglouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "「微斯人，吾誰與歸」一句中的「微」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "細小"
+        },
+        {
+          "key": "B",
+          "text": "不是"
+        },
+        {
+          "key": "C",
+          "text": "沒有"
+        },
+        {
+          "key": "D",
+          "text": "隱匿"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫 Q077"
+    }
+  ]
+}

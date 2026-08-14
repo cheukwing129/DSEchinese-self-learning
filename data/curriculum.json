@@ -1,0 +1,106 @@
+{
+  "units": [
+    {
+      "id": "lunyu-renxiaojunzi",
+      "title": "論仁、論孝、論君子",
+      "author": "《論語》",
+      "status": "coming_soon"
+    },
+    {
+      "id": "yu-wo-suoyu",
+      "title": "魚我所欲也",
+      "author": "孟子",
+      "status": "coming_soon"
+    },
+    {
+      "id": "xiaoyaoyou",
+      "title": "逍遙遊（節錄）",
+      "author": "莊子",
+      "status": "coming_soon"
+    },
+    {
+      "id": "quanxue",
+      "title": "勸學（節錄）",
+      "author": "荀子",
+      "status": "coming_soon"
+    },
+    {
+      "id": "lianpo-linxiangru",
+      "title": "廉頗藺相如列傳（節錄）",
+      "author": "司馬遷",
+      "status": "coming_soon"
+    },
+    {
+      "id": "shishuo",
+      "title": "師說",
+      "author": "韓愈",
+      "status": "coming_soon"
+    },
+    {
+      "id": "chushibiao",
+      "title": "出師表",
+      "author": "諸葛亮",
+      "status": "coming_soon"
+    },
+    {
+      "id": "shide-xishan-yanyouji",
+      "title": "始得西山宴遊記",
+      "author": "柳宗元",
+      "status": "coming_soon"
+    },
+    {
+      "id": "yueyanglouji",
+      "title": "岳陽樓記",
+      "author": "范仲淹",
+      "status": "available"
+    },
+    {
+      "id": "liuguolun",
+      "title": "六國論",
+      "author": "蘇洵",
+      "status": "coming_soon"
+    },
+    {
+      "id": "shanju-qiuming",
+      "title": "山居秋暝",
+      "author": "王維",
+      "status": "coming_soon",
+      "group": "唐詩三首"
+    },
+    {
+      "id": "yuexia-duzhuo",
+      "title": "月下獨酌（其一）",
+      "author": "李白",
+      "status": "coming_soon",
+      "group": "唐詩三首"
+    },
+    {
+      "id": "denglou",
+      "title": "登樓",
+      "author": "杜甫",
+      "status": "coming_soon",
+      "group": "唐詩三首"
+    },
+    {
+      "id": "niannujiao-chibihuaigu",
+      "title": "念奴嬌・赤壁懷古",
+      "author": "蘇軾",
+      "status": "coming_soon",
+      "group": "詞三首"
+    },
+    {
+      "id": "shengshengman-qiuqing",
+      "title": "聲聲慢・秋情",
+      "author": "李清照",
+      "status": "coming_soon",
+      "group": "詞三首"
+    },
+    {
+      "id": "qingyu'an-yuanxi",
+      "title": "青玉案・元夕",
+      "author": "辛棄疾",
+      "status": "coming_soon",
+      "group": "詞三首"
+    }
+  ]
+}

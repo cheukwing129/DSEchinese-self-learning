@@ -1,0 +1,220 @@
+{
+  "unit": "yueyanglouji",
+  "bank": "cross-text",
+  "questions": [
+    {
+      "id": "yyl-cross-041",
+      "unit": "yueyanglouji",
+      "ability": "跨篇比較",
+      "knowledge_point": "古仁人 vs 仁者（論仁）",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "根據《岳陽樓記》和《論語．論仁》回答以下問題：(1) 《岳陽樓記》中的「古仁人」具備怎樣的特質？",
+      "cross_text_target": "lunyu-renxiaojunzi",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "先人後己"
+        },
+        {
+          "key": "B",
+          "text": "捨生取義"
+        },
+        {
+          "key": "C",
+          "text": "安貧樂道"
+        },
+        {
+          "key": "D",
+          "text": "多愁善感"
+        }
+      ],
+      "answer": "A",
+      "part2": {
+        "stem": "承上題，「古仁人」與「仁者」對於「富貴」的態度各有不同。試略加說明。",
+        "type": "long_answer",
+        "score": 4,
+        "scoring_elements": [
+          "「仁者」安貧樂道，希望得到富貴、遠離貧賤，但不接受以不正當的手段去得到富貴或擺脫貧賤（1分）",
+          "「古仁人」具先人後己的精神，無論有職務與否，仍心繫社稷（1分）",
+          "「仁者」的處世以品德為重點，但心中仍希望得到富貴（1分）",
+          "「古仁人」則以天下人的福祉為己任，不貪圖名利富貴（1分）"
+        ]
+      },
+      "source": "校本試題庫 Q41"
+    },
+    {
+      "id": "yyl-cross-042",
+      "unit": "yueyanglouji",
+      "ability": "跨篇比較",
+      "knowledge_point": "中心思想比較（始得西山宴遊記）",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "范仲淹《岳陽樓記》與柳宗元《始得西山宴遊記》同樣是借記遊表述志向，兩文的中心思想有甚麼不同？試分別加以說明。",
+      "cross_text_target": "shide-xishan-yanyouji",
+      "score": 6,
+      "scoring_elements": [
+        "《岳陽樓記》：先寫洞庭湖氣勢磅礡的景觀引申至「覽物之情」（1分），然後論述「不以物喜，不以己悲」（1分）和「先天下之憂而憂，後天下之樂而樂」的抱負（1分）",
+        "《始得西山宴遊記》：柳宗元先寫自己被貶後與門徒登山玩水、遊遍永州名勝（1分），後寫受西山怪特的景色感染，體會與天地萬物融為一體的道理（1分），對人生榮辱得失的執着暫時放下（1分）"
+      ],
+      "source": "校本試題庫 Q42"
+    },
+    {
+      "id": "yyl-cross-043",
+      "unit": "yueyanglouji",
+      "ability": "跨篇比較",
+      "knowledge_point": "古仁人心態較接近君子還是小人",
+      "question_type": "short_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "根據《岳陽樓記》和《論語‧論君子》的內容：(1) 「君子」和「小人」分別會促成別人的甚麼事情？",
+      "cross_text_target": "lunyu-renxiaojunzi",
+      "score": 1,
+      "answer_elements": [
+        "君子會促成別人的好事，但小人則促成別人的壞事（1分）"
+      ],
+      "part2": {
+        "stem": "承上題，《岳陽樓記》中的「古仁人」的心態較接近「君子」還是「小人」？試加以說明。",
+        "type": "long_answer",
+        "score": 3,
+        "scoring_elements": [
+          "「古仁人」在處世態度上較接近「君子」",
+          "在朝廷做大官時會為天下百姓擔憂，使天下百姓都可享樂（1分）",
+          "又會盡力輔助君主，好好治理國家（1分）",
+          "可見這是成全別人的好事，較接近君子的心態（1分）"
+        ]
+      },
+      "source": "校本試題庫 Q43"
+    },
+    {
+      "id": "yyl-cross-044",
+      "unit": "yueyanglouji",
+      "ability": "跨篇比較",
+      "knowledge_point": "仁者特質與古仁人境界是否相符",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "根據《論語‧論仁論孝論君子》及《岳陽樓記》：(1) 孔子指出「仁者」具備甚麼特質？",
+      "cross_text_target": "lunyu-renxiaojunzi",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "可以長久地處於窮困的環境中"
+        },
+        {
+          "key": "B",
+          "text": "可以長久地處於富貴的環境中"
+        },
+        {
+          "key": "C",
+          "text": "能夠實行仁德"
+        },
+        {
+          "key": "D",
+          "text": "能夠贏得名聲"
+        }
+      ],
+      "answer": "C",
+      "part2": {
+        "stem": "范仲淹所追求的「古仁人」境界，是否符合孔子所說的「仁者」的境界？試加以說明。",
+        "type": "long_answer",
+        "score": 4,
+        "scoring_elements": [
+          "符合。孔子所說的仁者能夠長期居於窮困或安樂的環境中，並會因長期實行仁德而感到心安（1分）",
+          "「古仁人」不會因環境而高興，也不會因個人的遭遇而悲傷，並能做到「先天下之憂而憂，後天下之樂而樂」（1分）",
+          "范仲淹追求的不受外間環境影響的境界，正是能夠長期處於窮困和安樂的環境（1分）",
+          "他希望做到以國君與人民的福祉為先的想法，正是「仁者安仁」的體現（1分）"
+        ]
+      },
+      "source": "校本試題庫 Q44"
+    },
+    {
+      "id": "yyl-cross-045",
+      "unit": "yueyanglouji",
+      "ability": "跨篇比較",
+      "knowledge_point": "對比法運用比較（魚我所欲也）",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "《岳陽樓記》中，范仲淹以「遷客騷人」和「古仁人」作對比；《孟子‧魚我所欲也》中，孟子亦以「一簞食，一豆羮」和「萬鍾」作對比。試分別指出兩位作者如何運用對比法說明其論點。",
+      "cross_text_target": "yu-wo-suoyu",
+      "score": 4,
+      "scoring_elements": [
+        "《岳陽樓記》：以「遷客騷人」的心情易受外在環境的影響，與「古仁人」「不以物喜，不以己悲」的態度作對比（1分），突顯「古仁人」只會為百姓和君主而悲喜的胸襟（1分）",
+        "《孟子‧魚我所欲也》：以極言食物之少卻攸關生死的「簞豆」、「豆羹」，與極言俸祿之多但遠不及生命價值的「萬鍾」作對比（1分），突顯見利忘義之人的荒謬可笑（1分）"
+      ],
+      "source": "校本試題庫 Q45"
+    },
+    {
+      "id": "yyl-cross-046",
+      "unit": "yueyanglouji",
+      "ability": "跨篇比較",
+      "knowledge_point": "杜甫是否符合古仁人形象（登樓）",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "根據《登樓》的內容，你認為杜甫是否符合范仲淹《岳陽樓記》中「古仁人」的形象？試略加說明。",
+      "cross_text_target": "denglou",
+      "score": 4,
+      "scoring_elements": [
+        "表明立場（符合／不符合皆可，言之成理即可）（1分）",
+        "扣連《岳陽樓記》中「古仁人」不論進退皆憂國憂民、不以物喜不以己悲的定義（1分）",
+        "結合《登樓》具體詩句作證據，如杜甫因國家衰亂、邊族入侵、君主昏庸而生的憂慮，或其懷才不遇的感慨（1分）",
+        "扣連分析杜甫的表現與「古仁人」形象是否吻合（1分）"
+      ],
+      "note": "試題庫提供「符合」與「不符合」兩種參考答案方向，可作教師評閱參考，學生只需擇一立場論證清晰即可。",
+      "source": "校本試題庫 Q46"
+    },
+    {
+      "id": "yyl-cross-047",
+      "unit": "yueyanglouji",
+      "ability": "跨篇比較",
+      "knowledge_point": "多感官描寫比較（山居秋暝）",
+      "question_type": "fill_table",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "范仲淹《岳陽樓記》和王維《山居秋暝》均運用了多感官描寫渲染氣氛，試各舉一例說明描寫效果。",
+      "cross_text_target": "shanju-qiuming",
+      "score": 4,
+      "table": {
+        "columns": [
+          "",
+          "《岳陽樓記》",
+          "《山居秋暝》"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "視覺描寫",
+              null,
+              "以「明月松間照」渲染山間的環境空靈清幽。"
+            ]
+          },
+          {
+            "cells": [
+              "聽覺描寫",
+              "以「薄暮冥冥，虎嘯猿啼」渲染陰雨時分的蕭瑟氣氛。",
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "岳陽樓記視覺描寫：以「濁浪排空，日星隱耀，山岳潛形」（1分）營造陰森氣氛（1分）。",
+        "山居秋暝聽覺描寫：以「竹喧歸浣女」（1分）的喧鬧反襯山中的靜謐（1分）。"
+      ],
+      "source": "校本試題庫 Q47"
+    }
+  ]
+}

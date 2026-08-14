@@ -1,0 +1,16 @@
+{
+  "unit_id": "yueyanglouji",
+  "common_scoring_elements": [
+    { "id": "response", "label": "回應題目", "description": "有明確觀點，直接回應題目所問。" },
+    { "id": "evidence", "label": "文本證據", "description": "有正確引文或內容例子支持論點。" },
+    { "id": "analysis", "label": "分析推論", "description": "說明手法、人物、主旨之間的關係，而非只複述內容。" },
+    { "id": "coherence", "label": "表達扣題", "description": "答案連貫，最後回扣題旨。" }
+  ],
+  "self_check_prompts": [
+    "我的答案有沒有明確回答題目所問？",
+    "我有沒有引用原文具體句子或段落作證據？",
+    "我有沒有說明「為甚麼」，而不只是「是甚麼」？",
+    "我的結論有沒有呼應題目？"
+  ],
+  "note": "第一版不設 AI 自動精確評分。學生作答後可對照題目的 scoring_elements／answer_elements 自行檢視，並使用以上自評清單反思。日後可於此加入教師評閱或 AI 教練功能的介面／資料位置（teacher_review_placeholder 欄位已預留於個別題目）。"
+}

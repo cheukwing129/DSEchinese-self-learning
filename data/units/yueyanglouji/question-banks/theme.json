@@ -1,0 +1,315 @@
+{
+  "unit": "yueyanglouji",
+  "bank": "theme",
+  "questions": [
+    {
+      "id": "yyl-theme-013",
+      "unit": "yueyanglouji",
+      "ability": "主旨與思考",
+      "knowledge_point": "先憂後樂反映的抱負",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "在《岳陽樓記》一文中，范仲淹提出「先天下之憂而憂，後天下之樂而樂」。試以自己的文句，說明范仲淹借這句話反映的抱負。",
+      "score": 3,
+      "scoring_elements": [
+        "范仲淹期望自己在天下人未擔憂前，先為天下人的事而擔憂，在天下人得到快樂後，才因為他們的快樂而感到快樂（1分）",
+        "抒發一心為百姓、為天下謀福祉的情懷（1分）",
+        "期望自己像「古仁人」一樣，不為環境或一己的榮辱得失而或喜或悲（1分）"
+      ],
+      "source": "校本試題庫 Q13"
+    },
+    {
+      "id": "yyl-theme-017",
+      "unit": "yueyanglouji",
+      "ability": "主旨與思考",
+      "knowledge_point": "景物美醜與心情的關係（開放題）",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "在《岳陽樓記》，范仲淹認為景物的美醜與觀賞者的心情好壞應該有所關連嗎？你同意他的看法嗎？試結合生活事例，加以說明。",
+      "score": 4,
+      "scoring_elements": [
+        "指出范仲淹提出「不以物喜，不以己悲」，認為心情不應受外界事物和個人際遇影響（1分）",
+        "表明自己是否同意，並提出理據（1分）",
+        "結合具體生活事例說明（1分）",
+        "扣連回主旨、總結立場（1分）"
+      ],
+      "note": "開放題，同意或不同意皆可，答案言之成理即可給分。試題庫另附兩種參考答案方向（同意／不同意），可作教師評閱參考。",
+      "source": "校本試題庫 Q17"
+    },
+    {
+      "id": "yyl-theme-025",
+      "unit": "yueyanglouji",
+      "ability": "主旨與思考",
+      "knowledge_point": "刻畫遷客騷人以抒個人情懷",
+      "question_type": "cloze_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "《岳陽樓記》一文如何通過刻畫「遷客騷人」的形象，來抒發范仲淹的個人情懷？試根據文章內容加以說明。",
+      "score": 4,
+      "cloze_template": "在《岳陽樓記》中，范仲淹先描述遷客騷人在不同天氣下，觀看洞庭湖一帶的景色時，會【空格一】。之後他以此作【空格二】對象——古仁人與遷客騷人不同：他們【開放作答】。范仲淹由此抒發【開放作答】。",
+      "blanks": [
+        {
+          "id": "空格一",
+          "options": [
+            {
+              "key": "A",
+              "text": "勾起自己的回憶"
+            },
+            {
+              "key": "B",
+              "text": "聯想不同的景物"
+            },
+            {
+              "key": "C",
+              "text": "推測自己的將來"
+            },
+            {
+              "key": "D",
+              "text": "引發不同的感受"
+            }
+          ],
+          "answer": "D"
+        },
+        {
+          "id": "空格二",
+          "options": [
+            {
+              "key": "A",
+              "text": "對比"
+            },
+            {
+              "key": "B",
+              "text": "正襯"
+            },
+            {
+              "key": "C",
+              "text": "反襯"
+            },
+            {
+              "key": "D",
+              "text": "比喻"
+            }
+          ],
+          "answer": "C"
+        }
+      ],
+      "open_answer_elements": [
+        "古仁人與遷客騷人不同：他們不受外界事物和個人得失影響情緒，而是關心天下百姓的幸福（1分）",
+        "范仲淹由此抒發自己對古仁人的推崇和對同道中人不多的感慨（1分）"
+      ],
+      "source": "校本試題庫 Q25"
+    },
+    {
+      "id": "yyl-theme-028",
+      "unit": "yueyanglouji",
+      "ability": "主旨與思考",
+      "knowledge_point": "結末抒發的感情",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "根據《岳陽樓記》，范仲淹以「噫！微斯人，吾誰與歸」作結，抒發了甚麼感情？",
+      "score": 4,
+      "scoring_elements": [
+        "指沒有這些「先天下之憂而憂，後天下之樂而樂」的古仁人，范仲淹便找不到同道中人（1分）",
+        "表達自己也以古仁人的心志為志向（1分）",
+        "抒發找不到知音人的孤單寂寞（1分）",
+        "勉勵滕子京即使遭受貶謫，也要效法古仁人以天下為己任（1分）"
+      ],
+      "source": "校本試題庫 Q28"
+    },
+    {
+      "id": "yyl-theme-029",
+      "unit": "yueyanglouji",
+      "ability": "主旨與思考",
+      "knowledge_point": "最能表達個人抱負的句子",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "根據范仲淹《岳陽樓記》一文，哪一個句子最能表達范仲淹的個人抱負？試加以說明。",
+      "score": 3,
+      "answer_elements": [
+        "句子：「先天下之憂而憂，後天下之樂而樂。」（1分）",
+        "說明：表達范仲淹期望自己能做到在天下人擔憂前先擔憂，在百姓得到快樂後才感到快樂，抒發他心繫百姓、為天下人民謀福祉的抱負（2分）"
+      ],
+      "source": "校本試題庫 Q29"
+    },
+    {
+      "id": "yyl-theme-031",
+      "unit": "yueyanglouji",
+      "ability": "主旨與思考",
+      "knowledge_point": "古仁人特點與滕子京是否具備",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據《岳陽樓記》一文，「古仁人」有何特點？又滕子京是否具有「古仁人」的特點？",
+      "score": 4,
+      "answer_elements": [
+        "古仁人的特點：不受外在環境或自己的遭遇影響，在何時何地都為國家、百姓和君主擔憂（1分），並能做到在天下人擔憂之前先擔憂、在天下人享樂之後才享樂（1分）",
+        "滕子京的特點：沒有因被貶而意志消沉、影響公務（1分），到任後將巴陵郡治理得妥當，使政事通順、百姓和樂，可見他具有古仁人「不以物喜，不以己悲」的特質（1分）"
+      ],
+      "source": "校本試題庫 Q31"
+    },
+    {
+      "id": "yyl-theme-032",
+      "unit": "yueyanglouji",
+      "ability": "主旨與思考",
+      "knowledge_point": "寫作目的（多選）",
+      "question_type": "multi_select",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據《岳陽樓記》，以下哪些是范仲淹寫作《岳陽樓記》的目的？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "受好友滕子京的囑託"
+        },
+        {
+          "key": "B",
+          "text": "告誡後人效法古仁人"
+        },
+        {
+          "key": "C",
+          "text": "申述自己憂國憂民的情懷"
+        },
+        {
+          "key": "D",
+          "text": "歌頌巴陵的四時美景"
+        }
+      ],
+      "answer": [
+        "A",
+        "C"
+      ],
+      "note": "答案組合以「AB／CD」等選項呈現，本題庫原題以「A、C」為正確組合（校本標示B選項組合「A C」為對，即包含A及C兩項）。",
+      "source": "校本試題庫 Q32"
+    },
+    {
+      "id": "yyl-theme-033",
+      "unit": "yueyanglouji",
+      "ability": "主旨與思考",
+      "knowledge_point": "古仁人特質（多選）",
+      "question_type": "multi_select",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據《岳陽樓記》的內容，以下哪些屬於「古仁人」的特質？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "與天下人同時感到憂患"
+        },
+        {
+          "key": "B",
+          "text": "不會因外物變化而悲喜"
+        },
+        {
+          "key": "C",
+          "text": "在天下人快樂後才快樂"
+        },
+        {
+          "key": "D",
+          "text": "只會為天下百姓而擔憂"
+        }
+      ],
+      "answer": [
+        "B",
+        "C"
+      ],
+      "source": "校本試題庫 Q33"
+    },
+    {
+      "id": "yyl-theme-034",
+      "unit": "yueyanglouji",
+      "ability": "主旨與思考",
+      "knowledge_point": "並非寫作目的",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "以下哪項不是范仲淹寫作《岳陽樓記》的目的？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "受好友囑託記錄修樓事跡"
+        },
+        {
+          "key": "B",
+          "text": "緬懷古仁人的遠大志向"
+        },
+        {
+          "key": "C",
+          "text": "表達與民憂戚相關的情懷"
+        },
+        {
+          "key": "D",
+          "text": "諷刺遷客騷人的多愁善感"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫 Q34"
+    },
+    {
+      "id": "yyl-theme-035",
+      "unit": "yueyanglouji",
+      "ability": "主旨與思考",
+      "knowledge_point": "最符合的感情",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "以下哪一項最符合范仲淹在《岳陽樓記》所表達的感情？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "報國無門，無可奈何。"
+        },
+        {
+          "key": "B",
+          "text": "念及國事，憂心忡忡。"
+        },
+        {
+          "key": "C",
+          "text": "曲高和寡，同道難求。"
+        },
+        {
+          "key": "D",
+          "text": "廉潔自守，獨善其身。"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫 Q35"
+    },
+    {
+      "id": "yyl-theme-040",
+      "unit": "yueyanglouji",
+      "ability": "主旨與思考",
+      "knowledge_point": "「不在其位，不謀其政」開放題",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "有論者認為「不在其位，不謀其政」，不在那個職位就不考慮那個職位所要做的事。根據范仲淹在《岳陽樓記》一文的看法，你認為他會同意這觀點嗎？試加以說明。",
+      "score": 4,
+      "scoring_elements": [
+        "表明立場：范仲淹不會同意這個觀點（1分）",
+        "范仲淹推崇古仁人，認為即使不做官，亦應擔憂國事和君主的施政（1分）",
+        "古仁人有「先天下之憂而憂，後天下之樂而樂」的抱負，行事會先考慮天下百姓的福祉（1分）",
+        "若官員被貶謫便不考慮政事、不關心國家，是不關懷天下百姓的表現，與古仁人之心背道而馳（1分）"
+      ],
+      "source": "校本試題庫 Q40"
+    }
+  ]
+}
