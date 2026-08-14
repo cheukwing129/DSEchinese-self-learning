@@ -1,0 +1,44 @@
+{
+  "unit_id": "shishuo",
+  "nodes": [
+    { "id": "s1", "label": "提出中心論點", "paragraph": 1, "description": "古之學者必有師，師者所以傳道、受業、解惑也。" },
+    { "id": "s2", "label": "擇師標準", "paragraph": 2, "description": "道之所存，師之所存也——與年紀、貴賤無關。" },
+    { "id": "s3", "label": "反面批評：師道不傳", "paragraph": 3, "description": "古之聖人從師 vs 今之眾人恥師，聖益聖、愚益愚。" },
+    { "id": "s4", "label": "反面批評：為子擇師而自身恥師", "paragraph": 4, "description": "愛其子擇師而教之，於其身則恥師焉，小學而大遺。" },
+    { "id": "s5", "label": "反面批評：士大夫恥於相師", "paragraph": 5, "description": "百工之人不恥相師 vs 士大夫羣聚而笑，其智反不能及。" },
+    { "id": "s6", "label": "聖人無常師", "paragraph": 6, "description": "以孔子從師郯子等人為例，弟子不必不如師，師不必賢於弟子。" },
+    { "id": "s7", "label": "寫作緣起", "paragraph": 7, "description": "讚揚李蟠好古文、能行古道，作《師說》以贈他。" }
+  ],
+  "edges": [
+    { "from": "s1", "to": "s2" },
+    { "from": "s2", "to": "s3" },
+    { "from": "s3", "to": "s4" },
+    { "from": "s4", "to": "s5" },
+    { "from": "s5", "to": "s6" },
+    { "from": "s6", "to": "s7" }
+  ],
+  "contrast_pairs": [
+    {
+      "label": "古之聖人 vs 今之眾人",
+      "left": { "title": "古之聖人", "keywords": ["其出人也遠矣", "猶且從師而問焉"], "emotion": "聖益聖" },
+      "right": { "title": "今之眾人", "keywords": ["其下聖人也亦遠矣", "恥學於師"], "emotion": "愚益愚" }
+    },
+    {
+      "label": "為子擇師 vs 自身恥師",
+      "left": { "title": "愛其子", "trait": "擇師而教之，重視孩子學習句讀" },
+      "right": { "title": "於其身也", "trait": "則恥師焉，小學而大遺" }
+    },
+    {
+      "label": "百工之人 vs 士大夫之族",
+      "left": { "title": "巫、醫、樂師、百工之人", "trait": "不恥相師" },
+      "right": { "title": "士大夫之族", "trait": "曰師、曰弟子云者，則羣聚而笑之" }
+    }
+  ],
+  "techniques": [
+    { "name": "對比論證", "example": "全文以三層對比展開：古之聖人／今之眾人；為子擇師／自身恥師；百工之人／士大夫之族" },
+    { "name": "舉例論證", "example": "以孔子師郯子、萇弘、師襄、老聃為例，證明「聖人無常師」" },
+    { "name": "引用論證", "example": "明引孔子「三人行，則必有我師」，暗引《論語》語句以增強說服力" },
+    { "name": "反問", "example": "「夫庸知其年之先後生於吾乎？」「其可怪也歟！」" },
+    { "name": "對仗", "example": "「無貴無賤，無長無少」「位卑則足羞，官盛則近諛」" }
+  ]
+}

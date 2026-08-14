@@ -1,0 +1,31 @@
+{
+  "id": "shishuo",
+  "title": "師說",
+  "author": "韓愈",
+  "dynasty": "唐",
+  "written_year": "唐德宗貞元十八年",
+  "genre": "說",
+  "status": "available",
+  "modules": [
+    { "id": "text", "title": "原文與誦讀", "icon": "book" },
+    { "id": "words", "title": "字詞與句式", "icon": "characters" },
+    { "id": "comprehension", "title": "疏通文意", "icon": "translate" },
+    { "id": "analysis", "title": "結構與鑒賞", "icon": "structure" },
+    { "id": "theme", "title": "主旨與思考", "icon": "lightbulb" },
+    { "id": "memorisation", "title": "背誦精華", "icon": "memory" },
+    { "id": "challenge", "title": "核心篇章挑戰", "icon": "target" },
+    { "id": "progress", "title": "我的掌握", "icon": "chart" }
+  ],
+  "cross_text_targets": [
+    { "id": "liuguolun", "title": "六國論", "author": "蘇洵" },
+    { "id": "quanxue", "title": "勸學（節錄）", "author": "荀子" },
+    { "id": "lunyu-renxiaojunzi", "title": "論仁、論孝、論君子", "author": "《論語》" }
+  ],
+  "question_bank_files": [
+    "question-banks/words.json",
+    "question-banks/content.json",
+    "question-banks/structure-skill.json",
+    "question-banks/theme.json",
+    "question-banks/cross-text.json"
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "unit": "shishuo",
+  "bank": "cross-text",
+  "questions": [
+    {
+      "id": "ss-cross-001",
+      "unit": "shishuo",
+      "ability": "跨篇比較",
+      "knowledge_point": "論證方法：舉例論證",
+      "question_type": "short_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "比較蘇洵《六國論》及韓愈《師說》，然後回答所附問題：以上引文運用了甚麼議論方法？",
+      "cross_text_target": "liuguolun",
+      "score": 2,
+      "quote": "至丹以荊卿為計，始速禍焉。趙嘗五戰於秦，二敗而三勝。後秦擊趙者再，李牧連卻之。（蘇洵《六國論》）",
+      "answer_elements": [
+        "舉例論證（答案須兩字詞）"
+      ],
+      "part2": {
+        "stem": "韓愈在《師說》中運用到上文相同的議論方法，試摘錄其句子下來，並說明其論證的論點。",
+        "type": "long_answer",
+        "score": 3,
+        "scoring_elements": [
+          "句子：「孔子師郯子、萇弘、師襄、老聃。郯子之徒，其賢不及孔子。」（1分）",
+          "論點：說明跟從老師學習不需拘泥於年齡和地位（1分），論證先領會道理和學問技藝有專長的人便可以成為老師（1分）"
+        ]
+      },
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-cross-002",
+      "unit": "shishuo",
+      "ability": "跨篇比較",
+      "knowledge_point": "寫作目的與表達手法比較",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "試從寫作目的和主要表達手法兩方面，比較蘇洵《六國論》和韓愈《師說》。",
+      "cross_text_target": "liuguolun",
+      "score": 4,
+      "scoring_elements": [
+        "《六國論》的寫作目的是利用歷史教訓來警惕北宋君主，要以六國覆滅的事為鑑，不要繼續賄賂遼國和西夏（1分）",
+        "《師說》則是為了把文章贈送給李蟠以作勉勵，並倡導時人以正確態度選擇和跟從老師學習（1分）",
+        "《六國論》以借古諷今的方法，表達蘇洵對北宋君主的警惕（1分）",
+        "《師說》則通過多組對比，表達韓愈對當時士大夫以跟從老師學習為恥的學習態度的不滿（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-cross-003",
+      "unit": "shishuo",
+      "ability": "跨篇比較",
+      "knowledge_point": "對比論證及說理效果比較",
+      "question_type": "short_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "根據蘇洵《六國論》及韓愈《師說》，以下兩段引文同樣運用了甚麼議論方法？又這種議論方法對論述觀點各自起到甚麼效果？",
+      "cross_text_target": "liuguolun",
+      "score": 3,
+      "context_quotes": [
+        {
+          "label": "甲",
+          "text": "思厥先祖父，暴霜露，斬荊棘，以有尺寸之地。子孫視之不甚惜，舉以予人，如棄草芥。（蘇洵《六國論》）"
+        },
+        {
+          "label": "乙",
+          "text": "句讀之不知，惑之不解，或師焉，或不焉。（韓愈《師說》）"
+        }
+      ],
+      "answer_elements": [
+        "議論方法：對比論證（1分）",
+        "說理效果：引文甲通過先祖父「暴霜露，斬荊棘」以得到「尺寸之地」與子孫「視之不甚惜，舉以予人」作對比（0.5分），突出賂秦是對祖先不孝的行為（0.5分）",
+        "引文乙以「句讀之不知」則跟從老師學習，「惑之不解」卻不跟從老師作對比（0.5分），突顯這種做法的矛盾和荒謬（0.5分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-cross-004",
+      "unit": "shishuo",
+      "ability": "跨篇比較",
+      "knowledge_point": "與《勸學》的共通觀點",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "《荀子‧勸學》（節錄）和韓愈《師說》二文對學習一事，有何共通觀點？",
+      "cross_text_target": "quanxue",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "學習須按部就班才有成果。"
+        },
+        {
+          "key": "B",
+          "text": "借助外物來學習才有效率。"
+        },
+        {
+          "key": "C",
+          "text": "獨自思考不及學習有效。"
+        },
+        {
+          "key": "D",
+          "text": "遇到疑難就應請教他人。"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-cross-005",
+      "unit": "shishuo",
+      "ability": "跨篇比較",
+      "knowledge_point": "時弊論述之不同",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "《六國論》和《師說》都是針砭時弊的議論文章，兩者論述的時弊有甚麼不同？試分別說明。",
+      "cross_text_target": "liuguolun",
+      "score": 4,
+      "scoring_elements": [
+        "《六國論》以先秦六國亡國的史事為主題，借六國賄秦而亡的史事（1分），諷喻北宋政府要積極對抗外敵，不要向契丹和西夏屈辱求和（1分）",
+        "韓愈在《師說》中，則直接抨擊當時士大夫以跟從老師學習為羞恥的陋習（1分），論述跟從老師學習的重要和擇師的標準，並倡導跟從老師學習的風氣（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-cross-006",
+      "unit": "shishuo",
+      "ability": "跨篇比較",
+      "knowledge_point": "起筆手法比較：開門見山",
+      "question_type": "short_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "蘇洵《六國論》及韓愈《師說》運用了哪種相同的起筆手法？試加以說明。",
+      "cross_text_target": "liuguolun",
+      "score": 5,
+      "answer_elements": [
+        "起筆手法：開門見山（1分）",
+        "說明：蘇洵《六國論》起首即開宗明義論述「六國破滅，非兵不利，戰不善，弊在賂秦」的中心論點（1分），指出六國因割地賂秦而亡，與戰爭的成敗無關（1分）",
+        "而《師說》同樣開首即點明「古之學者必有師」的中心論點（1分），強調古代已有跟從老師學習的傳統，帶出從師的重要（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-cross-007",
+      "unit": "shishuo",
+      "ability": "跨篇比較",
+      "knowledge_point": "孔子如何實踐「傳道、受業、解惑」",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "根據《論仁論孝論君子》的內容，說明孔子如何做到韓愈在《師說》中所說的「師者，所以傳道、受業、解惑也」。",
+      "cross_text_target": "lunyu-renxiaojunzi",
+      "score": 4,
+      "scoring_elements": [
+        "韓愈所說的「傳道、受業、解惑」的意思是傳授儒家道理、講授儒家學問課業和解釋疑難（1分）",
+        "孔子在《論仁》中向弟子傳授儒家中心思想「仁」的涵義和表現，符合韓愈所說的「傳道」（1分）",
+        "當顏淵問及應如何實踐「仁」時，孔子教授顏淵「非禮勿視，非禮勿聽，非禮勿言，非禮勿動」的具體實行方法，符合韓愈所說的「受業」（1分）",
+        "在《論孝》中，孟懿子和子游分別問孔子何謂孝道，孔子逐一解答他們的疑問，符合韓愈所說的「解惑」（1分）"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}

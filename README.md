@@ -1,7 +1,7 @@
 # 中文經典自學網站（chinese-classics-self-learning）
 
 香港高中中國語文科．十二篇指定文言經典自學網站。
-第一篇正式上線：**《岳陽樓記》**（范仲淹）。其餘 11 篇於首頁顯示「準備中」。
+已正式上線：**《岳陽樓記》**（范仲淹）、**《師說》**（韓愈）。其餘篇章於首頁顯示「準備中」。
 
 核心學習流程：**診斷弱項 → 微型學習 → 練習回饋 → 錯題修復 → 作品／進度累積**
 
@@ -33,20 +33,21 @@ chinese-classics-self-learning/
 ├── data/
 │   ├── curriculum.json             ← 十二篇地圖
 │   └── units/
-│       └── yueyanglouji/
+│       ├── yueyanglouji/         （結構同下，共 77 題）
+│       └── shishuo/
 │           ├── unit.json           ← 篇章 meta（模組清單、跨篇對象、題庫檔案清單）
-│           ├── text.json           ← 原文分段 + 41 條教育局注釋
+│           ├── text.json           ← 原文分段 + 26 條教育局注釋
 │           ├── background.json     ← 作者簡介、寫作背景
 │           ├── appreciation.json   ← 按段落賞析重點、語言特色
 │           ├── structure.json      ← 結構圖節點、對比組、手法例句
 │           ├── memorisation.json   ← 背誦句群、易錯字
 │           ├── rubrics.json        ← 長問答通用評分元素、自評清單
 │           └── question-banks/
-│               ├── words.json          （30題：字詞／虛詞，含跨篇虛詞辨析）
-│               ├── content.json        （13題：內容理解）
-│               ├── structure-skill.json（16題：結構／手法／修辭）
-│               ├── theme.json          （11題：主旨與思考，含開放題）
-│               └── cross-text.json     （7題：跨篇比較）
+│               ├── words.json          （29題：字詞／虛詞，含跨篇虛詞辨析）
+│               ├── content.json        （11題：內容理解）
+│               ├── structure-skill.json（7題：結構／手法／論證方法）
+│               ├── theme.json          （6題：主旨與思考，含開放題）
+│               └── cross-text.json     （7題：跨篇比較，對象包括《六國論》《勸學》《論仁論孝論君子》）
 └── assets/
     └── audio/                      ← 誦讀音檔（暫未提供，日後可補充）
 ```
@@ -86,15 +87,30 @@ npx serve .
 
 ## 四、GitHub 上傳步驟
 
+### 方法一：純網頁介面上傳（不需要安裝 Git／終端機）
+
+1. 登入 [github.com](https://github.com)，右上角「+」→ **New repository**
+   - Repository name：`chinese-classics-self-learning`
+   - Public 或 Private 皆可
+   - **不要**勾選「Add a README file」等初始化選項（保持全空的 repository，避免與我們自己的 README.md 衝突）
+   - 按 **Create repository**
+2. 建立後的頁面會顯示「…or push an existing repository」等指示，往下找到 **uploading an existing file** 連結並點擊（或之後在 repository 頁面按 **Add file → Upload files**）
+3. 打開你電腦上解壓後的 `chinese-classics-self-learning` 資料夾，**全選裡面的所有項目**（`index.html`、`README.md`、`css`、`js`、`data`、`assets` 五項），直接拖曳到瀏覽器的上傳區
+   - ⚠️ 請拖曳「資料夾裡面的內容」，不要把最外層的 `chinese-classics-self-learning` 資料夾本身拖進去，否則路徑會多一層，網站會找不到檔案
+   - 建議使用 **Chrome 或 Edge** 瀏覽器操作，folder 拖放支援較完整
+4. 拖放後，GitHub 會列出所有將上傳的檔案（應該有 22 個檔案，包含子資料夾），確認 `css/`、`js/`、`data/units/yueyanglouji/question-banks/` 等子資料夾結構都有正確顯示
+5. 在底部「Commit changes」填寫說明（例如：「首次上線：岳陽樓記完整內容與題庫」），選擇 **Commit directly to the `main` branch**，按 **Commit changes**
+6. 上傳完成後，可在 repository 頁面點開 `data/units/yueyanglouji/question-banks/` 等子資料夾，確認檔案都在正確位置
+
+> 如果拖放大量檔案時瀏覽器沒有反應或漏掉子資料夾，可改用 **[GitHub Desktop](https://desktop.github.com/)**（圖形介面程式，不用打指令）：安裝後登入你的 GitHub 帳號 → File → Add Local Repository → 選擇解壓後的資料夾 → 它會自動顯示所有新檔案 → 填寫 commit 說明 → 按 **Commit to main** → 按 **Publish repository**。
+
+### 方法二：使用 Git 指令（如日後電腦有裝 Git）
+
 ```bash
-# 1. 在你的電腦上初始化 repository
 cd chinese-classics-self-learning
 git init
 git add .
 git commit -m "首次上線：岳陽樓記完整內容與題庫"
-
-# 2. 在 GitHub 建立新 repository（名稱建議：chinese-classics-self-learning），
-#    然後連結並推送：
 git remote add origin https://github.com/<你的帳號>/chinese-classics-self-learning.git
 git branch -M main
 git push -u origin main
@@ -172,6 +188,7 @@ git push -u origin main
 | 畫面顯示紅色「發生錯誤」及具體檔案路徑 | 對應的 JSON 檔案不存在、路徑打錯或格式有誤 | 訊息會直接列出出錯的檔案路徑，檢查該路徑是否存在、JSON 是否符合格式 |
 | Cloudflare Pages 部署後顯示 404 | Build output directory 設定錯誤 | 確認設定為 `/`（根目錄），而非 `dist` 或其他子目錄 |
 | 部署後 JSON 讀取失敗，但本機正常 | 檔案路徑大小寫問題（Cloudflare 的檔案系統對大小寫敏感，本機 macOS/Windows 有時不敏感） | 確認 `data/units/yueyanglouji/...` 各層資料夾與檔名大小寫，與程式碼內引用完全一致 |
+| 用網頁拖放上傳後，Cloudflare 顯示找不到某些 JSON 檔案 | 拖放時把最外層 `chinese-classics-self-learning` 資料夾本身拖進去，導致 GitHub 上多了一層資料夾（變成 `chinese-classics-self-learning/index.html` 而非 `index.html` 在根目錄） | 打開 repository 檢查 `index.html` 是否在最頂層；如果不是，刪除該次上傳，重新只拖放「資料夾裡面的檔案與子資料夾」，不要連最外層資料夾一起拖 |
 | 新增第二篇章後首頁顯示不到 | 忘記把 `curriculum.json` 對應項目的 `status` 改為 `"available"` | 檢查 `data/curriculum.json` |
 | 作答紀錄在手機和電腦不同步 | 屬正常設計：進度只存在該裝置瀏覽器的 localStorage，未做帳號同步 | 如需跨裝置同步，屬日後功能，需另行設計（例如匯出/匯入） |
 | 清除瀏覽器資料後進度消失 | localStorage 被清除（如清除瀏覽紀錄、無痕模式、換瀏覽器） | 屬正常現象，目前無雲端備份機制 |
@@ -183,4 +200,5 @@ git push -u origin main
 - 朗讀音檔、意群停頓提示尚未提供
 - 長問答／開放題不設自動精確評分，只提供參考評分元素與自評清單（`teacher_review_placeholder` 已預留，日後可接入教師評閱或 AI 教練功能）
 - 進度只存於單一裝置瀏覽器，未有跨裝置同步或教師後台
-- 部分試題庫原文格式不清晰之處（見前一階段提出的 Q2／Q25／Q32／Q51 疑點），已按最合理判斷處理，建議教師使用前再核對一次
+- 部分試題庫原文格式不清晰之處，已按最合理判斷處理，建議教師使用前再核對一次：
+  - 《岳陽樓記》：Q2／Q25／Q32／Q51（詳見對應題目的 `note` 欄位）

@@ -1,0 +1,209 @@
+{
+  "unit": "shishuo",
+  "bank": "content",
+  "questions": [
+    {
+      "id": "ss-content-001",
+      "unit": "shishuo",
+      "ability": "內容理解",
+      "knowledge_point": "摘錄：擇師標準",
+      "question_type": "extract_sentence",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "《師說》中，韓愈提及學習的先後次序後，指出擇師的標準，試摘錄有關句子。",
+      "score": 2,
+      "answer_text": "是故無貴無賤，無長無少，道之所存，師之所存也。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-content-002",
+      "unit": "shishuo",
+      "ability": "內容理解",
+      "knowledge_point": "摘錄：師道不傳的慨歎",
+      "question_type": "extract_sentence",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "韓愈在《師說》中感歎當時社會的學習風氣出現問題。當時社會的學習風氣有甚麼問題？試摘錄有關句子。",
+      "score": 2,
+      "answer_text": "師道之不傳也久矣！欲人之無惑也難矣！",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-content-003",
+      "unit": "shishuo",
+      "ability": "內容理解",
+      "knowledge_point": "古之聖人與今之眾人的現象",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "作者以「古之聖人」與「今之眾人」說明了甚麼現象？試以自己的文句說明。",
+      "score": 3,
+      "answer_elements": [
+        "韓愈舉聖人和眾人的行為為例，以學問遠超一般人的古代聖人也會向老師請教學問，對比那些較聖人愚鈍，又以跟從老師學習為羞恥的一般人（1分）",
+        "評論當時社會上的人不知道古代聖人學問很高仍要請教老師（1分）",
+        "反而自己知識水平一般卻不向老師請教，不重視師道的歪風（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-content-004",
+      "unit": "shishuo",
+      "ability": "內容理解",
+      "knowledge_point": "為子擇師卻自身恥師的論述",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "《師說》一文，韓愈如何以當時社會上的人為孩子選擇老師的事例，論述對這當時社會現象的看法？試綜合有關內容說明。",
+      "score": 4,
+      "answer_elements": [
+        "韓愈指出當時的人選擇老師來教導孩子，但是那些老師只是教授書中的斷句（1分）",
+        "當時的人自己不跟從老師學習，忽視老師傳授儒家道理、解釋疑難的職能（1分）",
+        "韓愈認為人們只學習句讀等小事，而解決疑難的大事卻放棄不學，是糊塗、不明白事理的表現（1分）",
+        "他指出「人非生而知之者」，每個人必定有疑惑，如果有疑惑卻不跟從老師學習，只會無法解決疑惑，最後變得愚昧無知（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-content-005",
+      "unit": "shishuo",
+      "ability": "內容理解",
+      "knowledge_point": "摘錄：士大夫恥學於師的原因",
+      "question_type": "extract_sentence",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "韓愈在《師說》中引述士大夫之族解說「恥學於師」的原因是甚麼？試從文中摘錄有關句子。",
+      "score": 2,
+      "answer_text": "位卑則足羞，官盛則近諛。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-content-006",
+      "unit": "shishuo",
+      "ability": "內容理解",
+      "knowledge_point": "「古道」的意思",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 7,
+      "difficulty": "basic",
+      "stem": "韓愈稱譽李蟠「能行古道」，「古道」指的是甚麼？",
+      "score": 1,
+      "answer_elements": [
+        "古人跟從老師學習的道理（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-content-007",
+      "unit": "shishuo",
+      "ability": "內容理解",
+      "knowledge_point": "誰能行古道",
+      "question_type": "true_false_unknown",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據《師說》一文，下列何者「能行古道」，何者不能？又或是無從判斷？",
+      "score": 4,
+      "statements": [
+        {
+          "text": "百工之人",
+          "answer": "true",
+          "explanation": "巫、醫、樂師、百工之人不恥相師，正符合韓愈所讚許的「行古道」精神。"
+        },
+        {
+          "text": "士大夫之族",
+          "answer": "false",
+          "explanation": "士大夫之族恥於相師、羣聚而笑之，與「行古道」的精神相反。"
+        }
+      ],
+      "note": "此題原題選項為「能行古道／不能行古道／無從判斷」三選一。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-content-008",
+      "unit": "shishuo",
+      "ability": "內容理解",
+      "knowledge_point": "摘錄：無貴無賤的擇師觀",
+      "question_type": "extract_sentence",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "作者認為選擇老師時有甚麼標準？試摘錄有關句子作答。",
+      "score": 1,
+      "answer_text": "是故無貴無賤，無長無少，道之所存，師之所存也。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-content-009",
+      "unit": "shishuo",
+      "ability": "內容理解",
+      "knowledge_point": "是非判斷（一）",
+      "question_type": "true_false_unknown",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據韓愈《師說》內容，判斷以下陳述，選出正確答案；每題限選一個答案，多選者0分。",
+      "score": 4,
+      "statements": [
+        {
+          "text": "韓愈引用孔子的言行，目的在說明「師」與「道」的關係。",
+          "answer": "false",
+          "explanation": "韓愈以孔子向郯子、萇弘、師襄、老聃等人學習的例子和孔子「三人行，則必有我師」的言論，帶出選擇老師的標準，可見韓愈引用孔子的言行，目的並不是說明「師」與「道」的關係，故陳述錯誤。"
+        },
+        {
+          "text": "韓愈認為德行是擇師的首要原則。",
+          "answer": "unknown",
+          "explanation": "韓愈認為擇師的標準是不論地位高貴卑賤和年紀的長幼，只要是道理存在的地方，就是老師存在的地方，但他沒有指出德行是否擇師的首要原則。陳述與篇章內容沒有矛盾，故屬無從判斷。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-content-010",
+      "unit": "shishuo",
+      "ability": "內容理解",
+      "knowledge_point": "是非判斷（二）",
+      "question_type": "true_false_unknown",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據韓愈《師說》一文，判斷以下陳述。",
+      "score": 4,
+      "statements": [
+        {
+          "text": "韓愈認為時人不懂擇師的標準，所以他們的智慧比不上聖人。",
+          "answer": "false",
+          "explanation": "雖然韓愈認為時人的智慧「下聖人也亦遠矣」，即低於聖人很遠，但他指出造成這種情況的原因是時人對跟從老師學習感到羞恥，導致「愚益愚」，而非由於時人不懂擇師的標準，故陳述錯誤。"
+        },
+        {
+          "text": "韓愈以「巫、醫、樂師、百工之人」和「士大夫」從師求學的態度作對比，論證從師問學不分年齡長幼。",
+          "answer": "false",
+          "explanation": "韓愈指出「巫、醫、樂師、百工之人」的地位比不上「士大夫」，但前者「不恥相師」，後者卻取笑他人從師學習。這組對比論證的是從師學習應「無貴無賤」，而非「不分年齡長幼」，故陳述錯誤。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-content-011",
+      "unit": "shishuo",
+      "ability": "內容理解",
+      "knowledge_point": "批評的社會風氣",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "作者批評了甚麼社會風氣？他又怎樣論述這個觀點？試綜合全文分析說明。",
+      "score": 4,
+      "scoring_elements": [
+        "作者批評了時人以跟從老師學習為恥的不良風氣（1分）",
+        "作者運用對比論證論述這個觀點（1分）",
+        "如古之聖人尚且要跟從老師學習，而今之眾人卻對跟從老師學習感到羞恥，導致後者變得更加愚昧（1分）／時人只讓孩子跟從老師學習句讀，卻不學習道理，結果不能解決疑難（1分）／士大夫地位雖高卻恥於從師，而巫、醫、樂師、百工之人雖地位卑賤卻明白跟從老師學習的重要，所以前者的智慧比不上後者（1分）（以上例子任選其二）"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}

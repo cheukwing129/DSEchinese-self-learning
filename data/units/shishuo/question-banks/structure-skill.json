@@ -1,0 +1,235 @@
+{
+  "unit": "shishuo",
+  "bank": "structure-skill",
+  "questions": [
+    {
+      "id": "ss-skill-001",
+      "unit": "shishuo",
+      "ability": "結構與手法",
+      "knowledge_point": "引用的寫作目的",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "《師說》一文，韓愈指出「人非生而知之者，孰能無惑」，有何目的？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "慨歎一般人天生缺乏聖人的知識。"
+        },
+        {
+          "key": "B",
+          "text": "質疑老師為學生解釋疑難的能力。"
+        },
+        {
+          "key": "C",
+          "text": "批評時下的人不能主動解決個人的疑惑。"
+        },
+        {
+          "key": "D",
+          "text": "論證人應以正確的態度和原則選擇老師。"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-skill-002",
+      "unit": "shishuo",
+      "ability": "結構與手法",
+      "knowledge_point": "論證方法：對比論證",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "試根據以下《師說》引文，回答所附問題：引文運用了甚麼論證方法？",
+      "score": 2,
+      "quote": "古之聖人，其出人也遠矣，猶且從師而問焉；今之眾人，其下聖人也亦遠矣，而恥學於師；是故聖益聖，愚益愚，聖人之所以為聖，愚人之所以為愚，其皆出於此乎！",
+      "options": [
+        {
+          "key": "A",
+          "text": "比喻論證"
+        },
+        {
+          "key": "B",
+          "text": "對比論證"
+        },
+        {
+          "key": "C",
+          "text": "引用論證"
+        },
+        {
+          "key": "D",
+          "text": "舉例論證"
+        }
+      ],
+      "answer": "B",
+      "follow_up_open_answer": "作者以「古之聖人」與「今之眾人」說明了甚麼現象：韓愈舉聖人和眾人的行為為例，以學問遠超一般人的古代聖人也會向老師請教學問，對比那些較聖人愚鈍，又以跟從老師學習為羞恥的一般人，評論當時社會上的人不知道古代聖人學問很高仍要請教老師，反而自己知識水平一般卻不向老師請教，不重視師道的歪風。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-skill-003",
+      "unit": "shishuo",
+      "ability": "結構與手法",
+      "knowledge_point": "舉例論證：分類例子",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "韓愈《師說》一文使用不同例子論述觀點。試以自己的文句完成下表。",
+      "score": 4,
+      "table": {
+        "columns": [
+          "例子",
+          "例子內容",
+          "論述的觀點"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "巫、醫、樂師、百工之人",
+              "神巫、醫生、樂師和各種工匠，都不把互相學習當作羞恥的事。",
+              null
+            ]
+          },
+          {
+            "cells": [
+              "孔子",
+              null,
+              "學生不一定比不上老師，老師不必勝過學生。"
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "巫醫樂師百工之人 論述觀點：無論地位高貴卑賤、無論年長年幼（1分），道理存在的地方，就是老師所處的地方（1分）。",
+        "孔子 例子內容：雖然郯子、萇弘、師襄、老聃都不及孔子賢能（1分），但孔子曾向他們學習（1分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-skill-004",
+      "unit": "shishuo",
+      "ability": "結構與手法",
+      "knowledge_point": "論證方法：引用論證",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "《師說》一文，韓愈引用孔子的話論證甚麼觀點？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "老師必定比學生更賢能。"
+        },
+        {
+          "key": "B",
+          "text": "聖人擅於從他人身上學習。"
+        },
+        {
+          "key": "C",
+          "text": "各人領會道理需要的時間不同。"
+        },
+        {
+          "key": "D",
+          "text": "人們應跟從本領比自己強的人學習。"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-skill-005",
+      "unit": "shishuo",
+      "ability": "結構與手法",
+      "knowledge_point": "論證方法與說理效果",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "在《師說》中，韓愈用甚麼方法論證當時士大夫從師態度的錯誤？試從文中找出一例，並說明這種議論方法對主題表達的效果。",
+      "score": 5,
+      "rhetorical_device": "對比論證（答案須兩個字：對比）",
+      "answer_elements": [
+        "例子：「古之聖人」認同要從師學習與「今之眾人」恥於從師學習（1分）／選擇老師教導孩子句讀與不願從師學習大事（1分）／「巫、醫、樂師、百工之人」不恥相師與「士大夫之族」恥於向年紀相若、學問相當的人學習（1分）",
+        "作用：以對比突出是非和主題，使韓愈批判現今士大夫不肯從師的荒謬現象的觀點明晰透徹（1分），加強文章說服力（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-skill-006",
+      "unit": "shishuo",
+      "ability": "結構與手法",
+      "knowledge_point": "全文修辭手法",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "綜合《師說》全文，作者運用了甚麼修辭手法說理？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "對比"
+        },
+        {
+          "key": "B",
+          "text": "反問"
+        },
+        {
+          "key": "C",
+          "text": "比喻"
+        },
+        {
+          "key": "D",
+          "text": "借代"
+        }
+      ],
+      "answer": "A",
+      "note": "此題原為8列選擇題格式（含比喻/對比/引用/舉例四個選項，本題另以「A對比/B反問/C比喻/D借代」四個修辭手法選項呈現，教師可對照原題調整措辭）。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-skill-007",
+      "unit": "shishuo",
+      "ability": "結構與手法",
+      "knowledge_point": "對比：身份地位與從師態度",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "在《師說》中，韓愈如何以「巫、醫、樂師、百工之人」和「士大夫之族」對從師的態度作對比，論證從師求學的重要？試完成下表。",
+      "score": 3,
+      "table": {
+        "columns": [
+          "",
+          "巫、醫、樂師、百工之人",
+          "士大夫之族"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "身份地位",
+              "從事卑賤的職業，身份低下。（1分）",
+              null
+            ]
+          },
+          {
+            "cells": [
+              "從師態度",
+              "不以互相拜師學習為恥。",
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "士大夫之族 身份地位：一般有官職，社會地位較高。",
+        "士大夫之族 從師態度：以向年紀和學問（0.5分）差不多的人和向地位（0.5分）卑微的人學習為羞恥，但又怕向官職較高（0.5分）的人學習近乎諂媚（0.5分）。"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}

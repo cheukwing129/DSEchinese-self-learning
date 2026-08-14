@@ -1,0 +1,922 @@
+{
+  "unit": "shishuo",
+  "bank": "words",
+  "questions": [
+    {
+      "id": "ss-words-001",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "虛詞辨析：其",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "「其」是常見的文言虛詞，以下哪一句中的「其」字，與《師說》中「惑而不從師，其為惑也終不解矣。」的「其」字用法不同？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "「諸侯之所亡，與戰敗而亡者，其實亦百倍。」（《六國論》）"
+        },
+        {
+          "key": "B",
+          "text": "「夫六國與秦皆諸侯，其勢弱於秦。」（《六國論》）"
+        },
+        {
+          "key": "C",
+          "text": "「吾師道也，夫庸知其年之先後生於吾乎？」（《師說》）"
+        },
+        {
+          "key": "D",
+          "text": "「聖人之所以為聖，愚人之所以為愚，其皆出於此乎！」（《師說》）"
+        }
+      ],
+      "answer": "D",
+      "explanation": "「其為惑也終不解矣」的「其」為指示代詞，指代前面的「惑」；A、B、C三項的「其」同樣是指示代詞（其實／其勢／其年）。D項「其皆出於此乎」的「其」是語氣助詞，表推測（大概），用法不同。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-002",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "虛詞辨析：者",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "以下哪句句子中的粗體字與「古之學者必有師」（《師說》）中的「者」字詞義相同？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "為國者無使為積威之所劫哉！（《六國論》）"
+        },
+        {
+          "key": "B",
+          "text": "何者？嚴大國之威以修敬也。（《廉頗藺相如列傳》（節錄））"
+        },
+        {
+          "key": "C",
+          "text": "廉頗者，趙之良將也。（《廉頗藺相如列傳》（節錄））"
+        },
+        {
+          "key": "D",
+          "text": "臣所以去親戚而事君者，徒慕君之高義也。（《廉頗藺相如列傳》（節錄））"
+        }
+      ],
+      "answer": "A",
+      "explanation": "「學者」的「者」是指人的代詞，指「求學的人」；A項「為國者」的「者」同樣指「治理國家的人」，用法相同。B項「者」用於設問句；C項「者」用於判斷句主語後表停頓；D項「者」與「也」呼應構成判斷句式，均非指人代詞。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-003",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "解釋粗體字",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "試解釋以下文句中的粗體字。",
+      "score": 1,
+      "items": [
+        {
+          "text": "今其智乃反不能及，其可怪也歟！（韓愈《師說》）",
+          "target": "乃",
+          "answer": "竟然"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-004",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "解釋粗體字",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "試解釋以下文句中的粗體字。",
+      "score": 2,
+      "items": [
+        {
+          "text": "生乎吾前，其聞道也，固先乎吾。（韓愈《師說》）",
+          "target": "其",
+          "answer": "他"
+        },
+        {
+          "text": "生乎吾前，其聞道也，固先乎吾，吾從而師之。（《師說》）",
+          "target": "固",
+          "answer": "本來"
+        },
+        {
+          "text": "夫庸知其年之先後生於吾乎？",
+          "target": "於",
+          "answer": "比"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-005",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「古之學者必有師。」一句中的「師」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "老師"
+        },
+        {
+          "key": "B",
+          "text": "仿效"
+        },
+        {
+          "key": "C",
+          "text": "軍隊"
+        },
+        {
+          "key": "D",
+          "text": "學習"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-006",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「師者，所以傳道、受業、解惑也。」一句中的「傳」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "留傳"
+        },
+        {
+          "key": "B",
+          "text": "著作"
+        },
+        {
+          "key": "C",
+          "text": "教授"
+        },
+        {
+          "key": "D",
+          "text": "傳達"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-007",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「惑而不從師，其為惑也終不解矣。」一句中的「惑」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "迷惑"
+        },
+        {
+          "key": "B",
+          "text": "疑惑"
+        },
+        {
+          "key": "C",
+          "text": "煩惱"
+        },
+        {
+          "key": "D",
+          "text": "欺騙"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-008",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「生乎吾前，其聞道也，固先乎吾。」一句中的「固」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "本來"
+        },
+        {
+          "key": "B",
+          "text": "堅定"
+        },
+        {
+          "key": "C",
+          "text": "安定"
+        },
+        {
+          "key": "D",
+          "text": "姑且"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-009",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「今之眾人，其下聖人也亦遠矣，而恥學於師。」一句中的「下」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "下面"
+        },
+        {
+          "key": "B",
+          "text": "降落"
+        },
+        {
+          "key": "C",
+          "text": "低於"
+        },
+        {
+          "key": "D",
+          "text": "攻下"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-010",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「是故聖益聖，愚益愚。」一句中的「聖」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "聖人"
+        },
+        {
+          "key": "B",
+          "text": "智慧"
+        },
+        {
+          "key": "C",
+          "text": "道德"
+        },
+        {
+          "key": "D",
+          "text": "通達事理"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-011",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「是故聖益聖，愚益愚。」一句中的「愚」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "愚人"
+        },
+        {
+          "key": "B",
+          "text": "愚昧"
+        },
+        {
+          "key": "C",
+          "text": "欺騙"
+        },
+        {
+          "key": "D",
+          "text": "自賺"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-012",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「愛其子，擇師而教之；於其身也則恥師焉。」一句中的「恥」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "恥辱"
+        },
+        {
+          "key": "B",
+          "text": "侮辱"
+        },
+        {
+          "key": "C",
+          "text": "羞辱的事"
+        },
+        {
+          "key": "D",
+          "text": "羞恥"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-013",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「彼童子之師，授之書而習其句讀者。」一句中的「書」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "文字"
+        },
+        {
+          "key": "B",
+          "text": "記載"
+        },
+        {
+          "key": "C",
+          "text": "書寫"
+        },
+        {
+          "key": "D",
+          "text": "經書"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-014",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「句讀之不知，惑之不解，或師焉，或不焉。」一句中的「不」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "不能"
+        },
+        {
+          "key": "B",
+          "text": "不可"
+        },
+        {
+          "key": "C",
+          "text": "否"
+        },
+        {
+          "key": "D",
+          "text": "花萼上的蒂"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-015",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「小學而大遺，吾未見其明也。」一句中的「小」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "稍微"
+        },
+        {
+          "key": "B",
+          "text": "小事"
+        },
+        {
+          "key": "C",
+          "text": "細小"
+        },
+        {
+          "key": "D",
+          "text": "輕視"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-016",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「小學而大遺，吾未見其明也。」一句中的「大」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "巨大"
+        },
+        {
+          "key": "B",
+          "text": "非常"
+        },
+        {
+          "key": "C",
+          "text": "大事"
+        },
+        {
+          "key": "D",
+          "text": "誇耀"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-017",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "「彼與彼年相若也，道相似也。」一句中的「道」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "道路"
+        },
+        {
+          "key": "B",
+          "text": "學問"
+        },
+        {
+          "key": "C",
+          "text": "方法"
+        },
+        {
+          "key": "D",
+          "text": "技術"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-018",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "「位卑則足羞，官盛則近諛。」一句中的「卑」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "卑微"
+        },
+        {
+          "key": "B",
+          "text": "品格低劣"
+        },
+        {
+          "key": "C",
+          "text": "不道德"
+        },
+        {
+          "key": "D",
+          "text": "卑微鄙陋"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-019",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "「位卑則足羞，官盛則近諛。」一句中的「近」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "接近"
+        },
+        {
+          "key": "B",
+          "text": "相似"
+        },
+        {
+          "key": "C",
+          "text": "合乎"
+        },
+        {
+          "key": "D",
+          "text": "近乎"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-020",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "「師道之不復，可知矣。」一句中的「復」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "重復"
+        },
+        {
+          "key": "B",
+          "text": "回答"
+        },
+        {
+          "key": "C",
+          "text": "恢復"
+        },
+        {
+          "key": "D",
+          "text": "返回"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-021",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "「巫、醫、樂師、百工之人，君子不齒。」一句中的「齒」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "牙齒"
+        },
+        {
+          "key": "B",
+          "text": "並列"
+        },
+        {
+          "key": "C",
+          "text": "年齡"
+        },
+        {
+          "key": "D",
+          "text": "提起"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-022",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "「今其智乃反不能及，其可怪也歟。」一句中的「反」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "反而"
+        },
+        {
+          "key": "B",
+          "text": "顛倒"
+        },
+        {
+          "key": "C",
+          "text": "類推"
+        },
+        {
+          "key": "D",
+          "text": "背叛"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-023",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "「聖人無常師。」一句中的「常」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "固定"
+        },
+        {
+          "key": "B",
+          "text": "平常"
+        },
+        {
+          "key": "C",
+          "text": "時常"
+        },
+        {
+          "key": "D",
+          "text": "倫常"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-024",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "「郯子之徒，其賢不及孔子。」一句中的「賢」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "才德出眾"
+        },
+        {
+          "key": "B",
+          "text": "賢能"
+        },
+        {
+          "key": "C",
+          "text": "勝過"
+        },
+        {
+          "key": "D",
+          "text": "通達"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-025",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "「是故弟子不必不如師，師不必賢於弟子。」一句中的「賢」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "才德出眾"
+        },
+        {
+          "key": "B",
+          "text": "賢能"
+        },
+        {
+          "key": "C",
+          "text": "勝過"
+        },
+        {
+          "key": "D",
+          "text": "才德出眾的人"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-026",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "「聞道有先後，術業有專攻，如是而已。」一句中的「聞」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "聽見"
+        },
+        {
+          "key": "B",
+          "text": "領會"
+        },
+        {
+          "key": "C",
+          "text": "名聲"
+        },
+        {
+          "key": "D",
+          "text": "相傳的事情"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-027",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 7,
+      "difficulty": "basic",
+      "stem": "「李氏子蟠，年十七，好古文。」一句中的「好」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "喜愛"
+        },
+        {
+          "key": "B",
+          "text": "優點"
+        },
+        {
+          "key": "C",
+          "text": "合宜"
+        },
+        {
+          "key": "D",
+          "text": "讚許"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-028",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 7,
+      "difficulty": "basic",
+      "stem": "「六藝經傳，皆通習之。」一句中的「習」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "練習"
+        },
+        {
+          "key": "B",
+          "text": "習慣"
+        },
+        {
+          "key": "C",
+          "text": "學習"
+        },
+        {
+          "key": "D",
+          "text": "熟習"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "ss-words-029",
+      "unit": "shishuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 7,
+      "difficulty": "basic",
+      "stem": "「余嘉其能行古道，作《師說》以貽之。」一句中的「貽」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "貽害"
+        },
+        {
+          "key": "B",
+          "text": "笑話"
+        },
+        {
+          "key": "C",
+          "text": "遺留"
+        },
+        {
+          "key": "D",
+          "text": "贈送"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    }
+  ]
+}
