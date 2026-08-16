@@ -69,43 +69,99 @@ const ContentRenderer = (() => {
     const annoMap = {};
     text.annotations.forEach((a) => (annoMap[a.id] = a));
 
+    // 若段落有 section 欄位（如論仁/論孝/論君子），按 section 分組導覽；
+    // 否則沿用逐段導覽（岳陽樓記／師說）。
+    const hasSections = text.paragraphs.some((p) => p.section);
+    let groups;
+    if (hasSections) {
+      const order = [];
+      const map = {};
+      text.paragraphs.forEach((p) => {
+        if (!map[p.section]) {
+          map[p.section] = [];
+          order.push(p.section);
+        }
+        map[p.section].push(p);
+      });
+      groups = order.map((label) => ({ label, paragraphs: map[label] }));
+    } else {
+      groups = text.paragraphs.map((p) => ({ label: `第${p.id}段`, paragraphs: [p] }));
+    }
+
     let activeIndex = 0;
 
-    function paraNavHTML() {
+    function navHTML() {
       return `
         <div class="para-nav">
-          ${text.paragraphs
-            .map((p, i) => `<button data-idx="${i}" class="${i === activeIndex ? "is-active" : ""}">第${p.id}段</button>`)
+          ${groups
+            .map((g, i) => `<button data-idx="${i}" class="${i === activeIndex ? "is-active" : ""}">${esc(g.label)}</button>`)
             .join("")}
         </div>
       `;
     }
 
-    function passageHTML(p) {
-      let html = p.text;
-      // 依 annotation term 在文中出現位置，包上可點擊 span（term 較長者優先，避免子字串誤包）
-      const terms = p.annotation_ids
-        .map((id) => annoMap[id])
-        .filter(Boolean)
-        .sort((a, b) => b.term.length - a.term.length);
+    // 依 annotation term 在原文中「第 occurrence 次」出現的位置，包上可點擊 span。
+    // 用位置區間而非逐次字串取代，避免重複字詞（如兩個「不以其道得之」）互相干擾，
+    // 也避免長詞被短詞截斷。
+    function paragraphHTML(p) {
+      const terms = p.annotation_ids.map((id) => annoMap[id]).filter(Boolean);
+      const matches = [];
       terms.forEach((a) => {
-        const termEsc = esc(a.term);
-        if (!html.includes(a.term)) return;
-        html = html.split(a.term).join(`<span class="term" data-anno="${a.id}">${termEsc}</span>`);
+        const occurrence = a.occurrence || 1;
+        let idx = -1, count = 0, searchFrom = 0;
+        while (count < occurrence) {
+          idx = p.text.indexOf(a.term, searchFrom);
+          if (idx === -1) break;
+          count++;
+          searchFrom = idx + a.term.length;
+        }
+        if (idx !== -1 && count === occurrence) {
+          matches.push({ start: idx, end: idx + a.term.length, anno: a });
+        }
       });
+      // 較長詞語優先佔用區間，避免短詞語切開長詞語
+      const claimed = [];
+      matches
+        .slice()
+        .sort((x, y) => (y.end - y.start) - (x.end - x.start))
+        .forEach((m) => {
+          const overlap = claimed.some((c) => !(m.end <= c.start || m.start >= c.end));
+          if (!overlap) claimed.push(m);
+        });
+      claimed.sort((x, y) => x.start - y.start);
+
+      let html = "";
+      let cursor = 0;
+      claimed.forEach((m) => {
+        html += esc(p.text.slice(cursor, m.start));
+        html += `<span class="term" data-anno="${m.anno.id}">${esc(p.text.slice(m.start, m.end))}</span>`;
+        cursor = m.end;
+      });
+      html += esc(p.text.slice(cursor));
       return html;
     }
 
-    function renderBody() {
-      const p = text.paragraphs[activeIndex];
+    function passageHTML(paragraphs) {
+      return paragraphs
+        .map(
+          (p) => `
+        <p class="text-passage">${paragraphHTML(p)}</p>
+        <div class="para-summary"><strong>${paragraphs.length > 1 ? "" : "段意："}</strong>${esc(p.summary)}</div>
+      `
+        )
+        .join(paragraphs.length > 1 ? '<div style="height:16px;"></div>' : "");
+    }
+
+    // 只 mount 一次（含音訊播放器），切換段落／分組時只更新導覽與正文區塊，
+    // 不重新渲染 <audio> 元素，確保播放不會被中斷。
+    function renderShell() {
       App.mount(`
         <h1 class="page-title">原文與誦讀</h1>
         <p class="page-subtitle">《${esc(unit.title)}》· 點擊底線字詞查看注釋</p>
         ${audioPlayerHTML(unit)}
         <div class="card">
-          ${paraNavHTML()}
-          <p class="text-passage">${passageHTML(p)}</p>
-          <div class="para-summary"><strong>段意：</strong>${esc(p.summary)}</div>
+          <div id="text-nav-slot"></div>
+          <div id="text-passage-slot"></div>
         </div>
         <div class="card">
           <p style="color:var(--color-ink-soft); font-size:14px; margin:0;">
@@ -114,14 +170,16 @@ const ContentRenderer = (() => {
         </div>
         ${App.footerNav(unitId, unit.title)}
       `);
-      bindEvents();
+      updateContent();
     }
 
-    function bindEvents() {
+    function updateContent() {
+      document.getElementById("text-nav-slot").innerHTML = navHTML();
+      document.getElementById("text-passage-slot").innerHTML = passageHTML(groups[activeIndex].paragraphs);
       document.querySelectorAll(".para-nav button").forEach((btn) => {
         btn.addEventListener("click", () => {
           activeIndex = parseInt(btn.dataset.idx, 10);
-          renderBody();
+          updateContent();
         });
       });
       document.querySelectorAll(".term").forEach((span) => {
@@ -129,7 +187,7 @@ const ContentRenderer = (() => {
       });
     }
 
-    renderBody();
+    renderShell();
   }
 
   function showAnnotationPopover(evt, anno) {

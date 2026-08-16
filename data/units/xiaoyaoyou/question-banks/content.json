@@ -1,0 +1,555 @@
+{
+  "unit": "xiaoyaoyou",
+  "bank": "content",
+  "questions": [
+    {
+      "id": "xy-content-001",
+      "unit": "xiaoyaoyou",
+      "ability": "內容理解",
+      "knowledge_point": "惠子認為大瓠無用的原因",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "根據《莊子．逍遙遊》（節錄），為甚麼惠子會認為「大瓠」無用？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "「大瓠」不能防止皮膚凍壞。"
+        },
+        {
+          "key": "B",
+          "text": "「大瓠」需要花很多時間種植栽培。"
+        },
+        {
+          "key": "C",
+          "text": "「大瓠」的外殼過於堅硬，難以剖開。"
+        },
+        {
+          "key": "D",
+          "text": "「大瓠」難以盛水或容納物件。"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-content-002",
+      "unit": "xiaoyaoyou",
+      "ability": "內容理解",
+      "knowledge_point": "摘錄：莊子評價惠子擊碎大瓠",
+      "question_type": "extract_sentence",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "《莊子．逍遙遊》（節錄）中，莊子怎樣評價惠子擊破大瓠的做法？試摘錄有關原文。（答案不多於四個字）",
+      "score": 2,
+      "answer_text": "拙於用大",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-content-003",
+      "unit": "xiaoyaoyou",
+      "ability": "內容理解",
+      "knowledge_point": "惠子與莊子對大瓠不同看法",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "《莊子．逍遙遊》（節錄）中，惠子和莊子對大瓠有甚麼不同的看法。試就有關內容，以自己的文字填寫下表。",
+      "score": 4,
+      "table": {
+        "columns": [
+          "",
+          "惠子",
+          "莊子"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "用途一",
+              "盛水",
+              null
+            ]
+          },
+          {
+            "cells": [
+              "用途二",
+              "剖開它用來做瓢",
+              null
+            ]
+          },
+          {
+            "cells": [
+              "評價",
+              "大瓠無用",
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "莊子的用途（一、二皆可填）：用作腰舟（1分）。",
+        "莊子的評價：大瓠有用（1分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-content-004",
+      "unit": "xiaoyaoyou",
+      "ability": "內容理解",
+      "knowledge_point": "莊子如何回應惠子擊碎大瓠",
+      "question_type": "cloze_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "在《莊子．逍遙遊》（節錄）中，莊子怎樣回應惠子擊碎大瓠的做法？試分析說明。",
+      "score": 4,
+      "cloze_template": "莊子首先批評惠子擊碎大瓠的做法是不善於使用大的物件。然後莊子通過宋人與客人同樣運用不龜手之藥而得到不同結果的寓言，說明使用物件不應該囿於成見的道理。最後，莊子提出大瓠可作【用途】之用的建議，並以「有蓬之心」的比喻，批評惠子心靈茅塞不通。",
+      "blanks": [
+        {
+          "id": "用途",
+          "options": [
+            {
+              "key": "A",
+              "text": "酒樽"
+            },
+            {
+              "key": "B",
+              "text": "水壺"
+            },
+            {
+              "key": "C",
+              "text": "腰舟"
+            },
+            {
+              "key": "D",
+              "text": "小舟"
+            }
+          ],
+          "answer": "C"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-content-005",
+      "unit": "xiaoyaoyou",
+      "ability": "內容理解",
+      "knowledge_point": "不龜手之藥的藥效、用法與報酬",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "在《莊子．逍遙遊》（節錄）一文中，「不龜手之藥」有甚麼藥效？宋人和客人分別怎樣使用「不龜手之藥」？又他們分別得到甚麼報酬？",
+      "score": 4,
+      "table": {
+        "columns": [
+          "",
+          "宋人",
+          "客人"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "藥效",
+              "防止皮膚凍壞。",
+              "防止皮膚凍壞。"
+            ]
+          },
+          {
+            "cells": [
+              "用藥方法",
+              "世世代代以藥作漂洗絲絮之用。",
+              null
+            ]
+          },
+          {
+            "cells": [
+              "報酬",
+              null,
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "客人用藥方法：把藥方獻給吳王，並用它在冬天和越人打水戰（1分）。",
+        "宋人報酬：數代只得到數金（1分）。",
+        "客人報酬：獲封地獎賞（1分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-content-006",
+      "unit": "xiaoyaoyou",
+      "ability": "內容理解",
+      "knowledge_point": "大樗與莊子之言被鄙棄的原因",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "根據《莊子．逍遙遊》（節錄），惠子認為「大樗」和「莊子之言」被人鄙棄的原因分別是甚麼？",
+      "score": 4,
+      "table": {
+        "columns": [
+          "對象",
+          "被鄙棄的原因"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "「大樗」",
+              null
+            ]
+          },
+          {
+            "cells": [
+              "「莊子之言」",
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "「大樗」：不符合繩墨取直的要求和圓規角尺的標準（1分），難以用來製作器具，對木匠無用（1分）。",
+        "「莊子之言」：莊子的言論內容誇誕（1分），不適用於世（1分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-content-007",
+      "unit": "xiaoyaoyou",
+      "ability": "內容理解",
+      "knowledge_point": "有用未必是好事的原因",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "根據《莊子．逍遙遊》（節錄）的內容，莊子認為「有用」未必是好事，原因是：",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "「有用」的定義會隨時間而改變。"
+        },
+        {
+          "key": "B",
+          "text": "「有用」的事物跟別的事物難以共存。"
+        },
+        {
+          "key": "C",
+          "text": "「有用」反而會危害事物的性命。"
+        },
+        {
+          "key": "D",
+          "text": "追求「有用」的人不能理解「無用之用」。"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-content-008",
+      "unit": "xiaoyaoyou",
+      "ability": "內容理解",
+      "knowledge_point": "狸狌的例子說明有用未必是好事",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "莊子用甚麼例子說明「有用」未必是好事這個觀點？試略加說明。",
+      "score": 3,
+      "answer_elements": [
+        "例子：狸狌（1分）",
+        "說明：狸狌雖然能夠捕鼠，但不免被獵人捕獵，死於機關陷阱或獵網中（1分）。莊子以此論證「有用」反而會危害事物性命，說明「有用」未必是好事（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-content-009",
+      "unit": "xiaoyaoyou",
+      "ability": "內容理解",
+      "knowledge_point": "斄牛與樗樹的無用之處與大用的原因",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "《逍遙遊》（節錄）中，莊子以斄牛和樗樹為例，說明事物的「無用」之處能對保養生命起「大用」。試就有關內容，以自己的文句把答案填寫在下表之內。",
+      "score": 3,
+      "table": {
+        "columns": [
+          "事物",
+          "「無用」之處",
+          "能對保養生命「起大用」的原因"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "斄牛",
+              "不能捉老鼠。",
+              "因不善跳躍，自己不會被獵人所設的陷阱捕捉、殺害，得以安享天年。"
+            ]
+          },
+          {
+            "cells": [
+              "樗樹",
+              "樹幹長了很多木瘤，不符合繩墨取直的要求；樹枝彎彎曲曲，不符合圓規和角尺的標準。",
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "樗樹能對保養生命起大用的原因：木匠對它看不上眼（1分），因此它不會遭到砍伐（1分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-content-010",
+      "unit": "xiaoyaoyou",
+      "ability": "內容理解",
+      "knowledge_point": "是非判斷：不龜手之藥與事物價值",
+      "question_type": "true_false_unknown",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "試根據《莊子．逍遙遊》（節錄）一文，判斷以下陳述：",
+      "score": 4,
+      "statements": [
+        {
+          "text": "莊子舉「不龜手之藥」為例，說明事物屬於有用或無用，須視乎人的見識。",
+          "answer": "true",
+          "explanation": "《莊子．逍遙遊》一文中，當惠子指出魏王送給自己的大瓠大而無用，並把它擊碎後，莊子就舉「不龜手之藥」為例，指出一直用「不龜手之藥」來漂洗絲絮的宋人家族，幾代人都只能賺得數金；但當客人購買他們的藥方並獻給吳王，讓吳軍在冬天與越人水戰時使用而大勝後，客人卻獲得封地為獎賞。之後，莊子以此說明同一事物，當使用的方法不同，結果也不一樣，故陳述正確。"
+        },
+        {
+          "text": "莊子認為，事物的價值會隨時勢改變。",
+          "answer": "unknown",
+          "explanation": "綜合全文，莊子只是提及如何評價事物的價值，未曾提及時勢會不會影響事物的價值。陳述與內容沒有矛盾，故屬無從判斷。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-content-011",
+      "unit": "xiaoyaoyou",
+      "ability": "內容理解",
+      "knowledge_point": "樗樹的用途",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "試根據《莊子．逍遙遊》（節錄）一文中有關樗樹的內容，回答以下題目：莊子認為樗樹有甚麼用途？",
+      "score": 2,
+      "answer_elements": [
+        "可把樗樹種在遼闊的曠野上，供人逍遙休憩（1分），這樣就可免遭砍伐傷害（1分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-content-012",
+      "unit": "xiaoyaoyou",
+      "ability": "內容理解",
+      "knowledge_point": "達致逍遙的方法",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "承上題，從樗樹的用途可見，莊子認為達致「逍遙」的方法是甚麼？",
+      "score": 3,
+      "scoring_elements": [
+        "莊子認為樗樹不符合木匠對木材的要求，但如果把樗樹種在曠野裏，人就可以無所事事地在樹旁徘徊，優遊自在地躺在樹下（1分）",
+        "可見人只要不拘囿於世俗的價值觀，破除自我的成見與偏執（1分）",
+        "取消自身與外物的界限而回歸自然（1分），便可達至「逍遙」的境界"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-content-013",
+      "unit": "xiaoyaoyou",
+      "ability": "內容理解",
+      "knowledge_point": "全文說理方法",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "綜合《莊子．逍遙遊》（節錄）全文，莊子運用了甚麼說理方法？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "寓言"
+        },
+        {
+          "key": "B",
+          "text": "引用"
+        },
+        {
+          "key": "C",
+          "text": "比喻"
+        },
+        {
+          "key": "D",
+          "text": "對比"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-content-014",
+      "unit": "xiaoyaoyou",
+      "ability": "內容理解",
+      "knowledge_point": "達致逍遙的方法",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據《莊子．逍遙遊》（節錄），莊子認為怎樣才可以達致「逍遙」？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "擺脫世俗的價值觀"
+        },
+        {
+          "key": "B",
+          "text": "找出事物的不同用處"
+        },
+        {
+          "key": "C",
+          "text": "破除自我的成見與偏執"
+        },
+        {
+          "key": "D",
+          "text": "取消自身與外物的界限"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-content-015",
+      "unit": "xiaoyaoyou",
+      "ability": "內容理解",
+      "knowledge_point": "莊子的特點",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據《莊子．逍遙遊》（節錄）一文，莊子具備以下哪一項特點？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "才思敏捷"
+        },
+        {
+          "key": "B",
+          "text": "虛心向學"
+        },
+        {
+          "key": "C",
+          "text": "品德高尚"
+        },
+        {
+          "key": "D",
+          "text": "通達脫俗"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-content-016",
+      "unit": "xiaoyaoyou",
+      "ability": "內容理解",
+      "knowledge_point": "狸狌與斄牛所比喻的人及其特點",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "《莊子．逍遙遊》（節錄）中，「狸狌」和「斄牛」可以比喻作哪兩類人？又他們分別有甚麼下場？",
+      "score": 4,
+      "table": {
+        "columns": [
+          "",
+          "所比喻的人",
+          "特點"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "「狸狌」",
+              "機靈、有能力的人",
+              null
+            ]
+          },
+          {
+            "cells": [
+              "「斄牛」",
+              null,
+              "因無用而被人忽視，反而能夠遠離禍害。"
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "「狸狌」特點：常展現自身能力而鋒芒畢露，招致禍患（2分）。",
+        "「斄牛」所比喻的人：笨重、沒能力的人（1分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-content-017",
+      "unit": "xiaoyaoyou",
+      "ability": "內容理解",
+      "knowledge_point": "三個例子分別說明的觀點",
+      "question_type": "matching",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "在《莊子．逍遙遊》（節錄）中，莊子借以下例子說明甚麼觀點？",
+      "score": 6,
+      "options": [
+        {
+          "key": "A",
+          "text": "世俗人眼中的「有用」會為自己帶來禍害。"
+        },
+        {
+          "key": "B",
+          "text": "世俗人眼中的「無用」能有助保養生命。"
+        },
+        {
+          "key": "C",
+          "text": "人要做到超脫外物的局限，才可以保全自然的本性。"
+        },
+        {
+          "key": "D",
+          "text": "事物的價值高低取決於使用者的主觀想法。"
+        },
+        {
+          "key": "E",
+          "text": "使用者的想法、用法不同，事物的功效會有極大分別。"
+        }
+      ],
+      "rows": [
+        {
+          "text": "不龜手之藥：",
+          "answer": "E"
+        },
+        {
+          "text": "狸狌：",
+          "answer": "A"
+        },
+        {
+          "text": "斄牛：",
+          "answer": "B"
+        }
+      ],
+      "note": "選項C、D為distractor，全文並無以此三例直接論證。",
+      "source": "校本試題庫"
+    }
+  ]
+}

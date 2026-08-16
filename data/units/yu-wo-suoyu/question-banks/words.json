@@ -1,0 +1,908 @@
+{
+  "unit": "yu-wo-suoyu",
+  "bank": "words",
+  "questions": [
+    {
+      "id": "yw-words-001",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "解釋粗體字",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "根據《孟子．魚我所欲也》一文，解釋以下文句中粗體字的意思。",
+      "score": 4,
+      "items": [
+        {
+          "text": "所欲有甚於生者，故不為苟得也。",
+          "target": "苟",
+          "answer": "隨便"
+        },
+        {
+          "text": "使人之所惡莫甚於死者，則凡可以辟患者，何不為也？",
+          "target": "惡",
+          "answer": "憎厭"
+        },
+        {
+          "text": "嘑爾而與之，行道之人弗受。",
+          "target": "道",
+          "answer": "道路"
+        },
+        {
+          "text": "為宮室之美、妻妾之奉、所識窮乏者得我與？",
+          "target": "識",
+          "answer": "認識"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-002",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "虛詞辨析：患（跨篇）",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": 1,
+      "difficulty": "advanced",
+      "stem": "以下哪些句子的「患」字跟《孟子．魚我所欲也》中「死亦我所惡，所惡有甚於死者，故患有所不辟也」的「患」字具不同詞義？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "使人之所惡莫甚於死者，則凡可以辟患者，何不為也？（《魚我所欲也》）"
+        },
+        {
+          "key": "B",
+          "text": "欲勿予，即患秦兵之來。（《廉頗藺相如列傳》）"
+        },
+        {
+          "key": "C",
+          "text": "則秦之所大欲，諸侯之所大患，固不在戰矣。（《六國論》）"
+        },
+        {
+          "key": "D",
+          "text": "今子有大樹，患其無用。（《逍遙遊》）"
+        }
+      ],
+      "answer": "D",
+      "explanation": "原文「患有所不辟也」的「患」是名詞，解「禍患」；A、B、C三項的「患」同樣是名詞或作「擔心」解，用法相近。D項「患其無用」的「患」是動詞，解「擔心、憂慮」，詞性與原文不同。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-003",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "虛詞辨析：與（跨篇）",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": 2,
+      "difficulty": "advanced",
+      "stem": "以下哪句的「與」字跟《孟子．魚我所欲也》「嘑爾而與之」中的「與」字具相同詞義？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "為宮室之美、妻妾之奉、所識窮乏者得我與？（《魚我所欲也》）"
+        },
+        {
+          "key": "B",
+          "text": "微斯人，吾誰與歸？（《岳陽樓記》）"
+        },
+        {
+          "key": "C",
+          "text": "今一朝而鬻技百金，請與之。（《莊子．逍遙遊》）"
+        },
+        {
+          "key": "D",
+          "text": "縈青繚白，外與天際。（《始得西山宴遊記》）"
+        }
+      ],
+      "answer": "C",
+      "explanation": "「嘑爾而與之」的「與」是動詞，解「給予」；C項「請與之」的「與」同樣解「給予」。A項「與」通「歟」，是語氣助詞；B項「與」解「跟從」；D項「與」解「連接」。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-004",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "虛詞辨析：為（跨篇）",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": 1,
+      "difficulty": "advanced",
+      "stem": "以下哪句的「為」字跟《孟子．魚我所欲也》「使人之所惡莫甚於死者，則凡可以辟患者，何不為也？」中的「為」字具相同詞性？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "鄉為身死而不受，今為宮室之美為之。（《魚我所欲也》）"
+        },
+        {
+          "key": "B",
+          "text": "予嘗求古仁人之心，或異二者之為。（《岳陽樓記》）"
+        },
+        {
+          "key": "C",
+          "text": "克己復禮為仁。（《論語．論仁論孝論君子》）"
+        },
+        {
+          "key": "D",
+          "text": "為仁由己，而由人乎哉？（《論語．論仁論孝論君子》）"
+        }
+      ],
+      "answer": "D",
+      "explanation": "「何不為也」的「為」是動詞，解「做」；D項「為仁由己」的「為」同樣是動詞，解「實踐」，詞性相同。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-005",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「二者不可得兼」一句中的「兼」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "全部"
+        },
+        {
+          "key": "B",
+          "text": "同時"
+        },
+        {
+          "key": "C",
+          "text": "重複"
+        },
+        {
+          "key": "D",
+          "text": "加倍"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-006",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「舍魚而取熊掌者也」一句中的「舍」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "施捨"
+        },
+        {
+          "key": "B",
+          "text": "保留"
+        },
+        {
+          "key": "C",
+          "text": "捨棄"
+        },
+        {
+          "key": "D",
+          "text": "離開"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-007",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「所惡有甚於死者，故患有所不辟也」一句中的「患」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "疾病"
+        },
+        {
+          "key": "B",
+          "text": "憂慮"
+        },
+        {
+          "key": "C",
+          "text": "弊病"
+        },
+        {
+          "key": "D",
+          "text": "禍患"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-008",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「所惡有甚於死者，故患有所不辟也」一句中的「辟」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "治理"
+        },
+        {
+          "key": "B",
+          "text": "驅除"
+        },
+        {
+          "key": "C",
+          "text": "躲避"
+        },
+        {
+          "key": "D",
+          "text": "乖僻"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-009",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「如使人之所欲莫甚於生，則凡可以辟患者，何不為也」一句中的「甚」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "超過"
+        },
+        {
+          "key": "B",
+          "text": "非常"
+        },
+        {
+          "key": "C",
+          "text": "過分"
+        },
+        {
+          "key": "D",
+          "text": "甚麼"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-010",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「使人之所惡莫甚於死者，則凡可以辟患者，何不為也」一句中的「使」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "使用"
+        },
+        {
+          "key": "B",
+          "text": "如果"
+        },
+        {
+          "key": "C",
+          "text": "派遣"
+        },
+        {
+          "key": "D",
+          "text": "讓"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-011",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「使人之所惡莫甚於死者，則凡可以辟患者，何不為也」一句中的「為」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "向"
+        },
+        {
+          "key": "B",
+          "text": "行為"
+        },
+        {
+          "key": "C",
+          "text": "幫助"
+        },
+        {
+          "key": "D",
+          "text": "做"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-012",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「非獨賢者有是心也」一句中的「心」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "心臟"
+        },
+        {
+          "key": "B",
+          "text": "中心"
+        },
+        {
+          "key": "C",
+          "text": "本性"
+        },
+        {
+          "key": "D",
+          "text": "思想"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-013",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「一簞食，一豆羹」一句中的「簞」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "桌子"
+        },
+        {
+          "key": "B",
+          "text": "竹筐"
+        },
+        {
+          "key": "C",
+          "text": "瓦碗"
+        },
+        {
+          "key": "D",
+          "text": "粗糙"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-014",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「一簞食，一豆羹」一句中的「食」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "食物"
+        },
+        {
+          "key": "B",
+          "text": "糧食"
+        },
+        {
+          "key": "C",
+          "text": "進食"
+        },
+        {
+          "key": "D",
+          "text": "俸祿"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-015",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「嘑爾而與之，行道之人弗受」一句中「嘑爾」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "將氣體排出體外"
+        },
+        {
+          "key": "B",
+          "text": "沒禮貌的樣子"
+        },
+        {
+          "key": "C",
+          "text": "大聲地呼喝着"
+        },
+        {
+          "key": "D",
+          "text": "叫人來"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-016",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「嘑爾而與之，行道之人弗受」一句中的「與」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "獎賞"
+        },
+        {
+          "key": "B",
+          "text": "償還"
+        },
+        {
+          "key": "C",
+          "text": "給予"
+        },
+        {
+          "key": "D",
+          "text": "幫助"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-017",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「蹴爾而與之，乞人不屑也」一句中的「蹴」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "踐踏"
+        },
+        {
+          "key": "B",
+          "text": "踢腳"
+        },
+        {
+          "key": "C",
+          "text": "驚悚"
+        },
+        {
+          "key": "D",
+          "text": "蹲坐"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-018",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「萬鍾則不辯禮義而受之」一句中「萬鍾」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "一萬個樂鐘"
+        },
+        {
+          "key": "B",
+          "text": "優厚的俸祿"
+        },
+        {
+          "key": "C",
+          "text": "眾多的器皿"
+        },
+        {
+          "key": "D",
+          "text": "不同的器皿"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-019",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「萬鍾則不辯禮義而受之」一句中的「辯」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "治理"
+        },
+        {
+          "key": "B",
+          "text": "爭辯"
+        },
+        {
+          "key": "C",
+          "text": "糾正"
+        },
+        {
+          "key": "D",
+          "text": "辨別"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-020",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「萬鍾於我何加焉？」一句中的「加」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "褒獎"
+        },
+        {
+          "key": "B",
+          "text": "增益"
+        },
+        {
+          "key": "C",
+          "text": "加添"
+        },
+        {
+          "key": "D",
+          "text": "更加"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-021",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「為宮室之美、妻妾之奉、所識窮乏者得我與？」一句中「宮室」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "居室"
+        },
+        {
+          "key": "B",
+          "text": "宮殿"
+        },
+        {
+          "key": "C",
+          "text": "家人"
+        },
+        {
+          "key": "D",
+          "text": "妻子"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-022",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「為宮室之美、妻妾之奉、所識窮乏者得我與？」一句中的「奉」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "捧着"
+        },
+        {
+          "key": "B",
+          "text": "推崇"
+        },
+        {
+          "key": "C",
+          "text": "侍奉"
+        },
+        {
+          "key": "D",
+          "text": "供養"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-023",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「為宮室之美、妻妾之奉、所識窮乏者得我與？」一句中的「得」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "感激"
+        },
+        {
+          "key": "B",
+          "text": "獲取"
+        },
+        {
+          "key": "C",
+          "text": "契合"
+        },
+        {
+          "key": "D",
+          "text": "滿足"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-024",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「鄉為身死而不受，今為宮室之美為之」一句中的「鄉」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "故鄉"
+        },
+        {
+          "key": "B",
+          "text": "地方"
+        },
+        {
+          "key": "C",
+          "text": "嚮往"
+        },
+        {
+          "key": "D",
+          "text": "昔日"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-025",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「鄉為身死而不受，今為所識窮乏者得我而為之」一句中的「受」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "接受"
+        },
+        {
+          "key": "B",
+          "text": "授與"
+        },
+        {
+          "key": "C",
+          "text": "忍受"
+        },
+        {
+          "key": "D",
+          "text": "容納"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-026",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「鄉為身死而不受，今為所識窮乏者得我而為之」一句中的「為」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "擔任"
+        },
+        {
+          "key": "B",
+          "text": "變成"
+        },
+        {
+          "key": "C",
+          "text": "接受"
+        },
+        {
+          "key": "D",
+          "text": "建立"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-027",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「是亦不可以已乎？」一句中的「已」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "後來"
+        },
+        {
+          "key": "B",
+          "text": "過來"
+        },
+        {
+          "key": "C",
+          "text": "太過"
+        },
+        {
+          "key": "D",
+          "text": "停止"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-words-028",
+      "unit": "yu-wo-suoyu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「此之謂失其本心」一句中的「失」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "違背"
+        },
+        {
+          "key": "B",
+          "text": "喪失"
+        },
+        {
+          "key": "C",
+          "text": "錯誤"
+        },
+        {
+          "key": "D",
+          "text": "改變"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    }
+  ]
+}

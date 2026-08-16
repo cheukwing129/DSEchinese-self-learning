@@ -1,0 +1,177 @@
+{
+  "unit": "yu-wo-suoyu",
+  "bank": "structure-skill",
+  "questions": [
+    {
+      "id": "yw-skill-001",
+      "unit": "yu-wo-suoyu",
+      "ability": "結構與手法",
+      "knowledge_point": "反問修辭及其作用",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "以下兩句《孟子．魚我所欲也》的引文均運用了甚麼修辭手法？（1分）又這種手法對論說觀點有甚麼作用？試以引文為例，略加說明。（2分）",
+      "score": 3,
+      "context_quotes": [
+        {
+          "label": "甲",
+          "text": "萬鍾於我何加焉？"
+        },
+        {
+          "label": "乙",
+          "text": "鄉為身死而不受，今為妻妾之奉為之；鄉為身死而不受，今為所識窮乏者得我而為之，是亦不可以已乎？"
+        }
+      ],
+      "rhetorical_device": "反問（答案須是兩個字）",
+      "answer_elements": [
+        "作用：通過「是亦不可以已乎」一句反問，指出人不應為了「妻妾之奉」和「所識窮乏者得我」而接受優厚俸祿（1分）",
+        "使文章具有不容反駁的雄辯氣勢，突出「為之」即接受萬鍾俸祿的不應該（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-skill-002",
+      "unit": "yu-wo-suoyu",
+      "ability": "結構與手法",
+      "knowledge_point": "段落文字特色",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "根據以下《孟子．魚我所欲也》的引文，回答所附問題：以下哪一項最能概括以上一段文字的特色？",
+      "score": 2,
+      "quote": "鄉為身死而不受，今為宮室之美為之；鄉為身死而不受，今為妻妾之奉為之；鄉為身死而不受，今為所識窮乏者得我而為之，是亦不可以已乎？",
+      "options": [
+        {
+          "key": "A",
+          "text": "氣勢磅礡"
+        },
+        {
+          "key": "B",
+          "text": "用字精煉"
+        },
+        {
+          "key": "C",
+          "text": "音韻鏗鏘"
+        },
+        {
+          "key": "D",
+          "text": "語氣舒緩"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-skill-003",
+      "unit": "yu-wo-suoyu",
+      "ability": "結構與手法",
+      "knowledge_point": "排比修辭及其效果",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "承上題，除了反問外，引文還運用了甚麼修辭手法？（1分）又運用這種修辭手法怎樣使引文表現出「氣勢磅礡」的文字特色？試略加說明。（2分）",
+      "score": 3,
+      "rhetorical_device": "排比（答案須是兩個字）",
+      "answer_elements": [
+        "引文中連續排列三句結構相似、語氣一致的句子（1分）",
+        "顯得一氣呵成，能加強文字的氣勢（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-skill-004",
+      "unit": "yu-wo-suoyu",
+      "ability": "結構與手法",
+      "knowledge_point": "全文寫作方法（多選）",
+      "question_type": "multi_select",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "綜合《孟子．魚我所欲也》全文，作者運用了哪些寫作方法？（答案可選多於一個）",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "比喻"
+        },
+        {
+          "key": "B",
+          "text": "引用"
+        },
+        {
+          "key": "C",
+          "text": "反問"
+        },
+        {
+          "key": "D",
+          "text": "對偶"
+        }
+      ],
+      "answer": [
+        "A",
+        "C",
+        "D"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-skill-005",
+      "unit": "yu-wo-suoyu",
+      "ability": "結構與手法",
+      "knowledge_point": "全文論證手法（多選）",
+      "question_type": "multi_select",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "綜合《孟子．魚我所欲也》全文，作者運用了哪些論證手法？（答案可選多於一個）",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "正反論證"
+        },
+        {
+          "key": "B",
+          "text": "比喻論證"
+        },
+        {
+          "key": "C",
+          "text": "舉例論證"
+        },
+        {
+          "key": "D",
+          "text": "類比論證"
+        }
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-skill-006",
+      "unit": "yu-wo-suoyu",
+      "ability": "結構與手法",
+      "knowledge_point": "孟子善用比喻說理",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "東漢經學家趙岐在《孟子章句．題辭》中，指出「孟子長於譬喻，辭不迫切，而意已獨至」，意思是讚賞孟子擅長用比喻來說明事物。試以《孟子．魚我所欲也》為例，加以析述以上觀點。",
+      "score": 5,
+      "scoring_elements": [
+        "《孟子．魚我所欲也》一文連用比喻說理，孟子先以魚與熊掌比喻生與義（1分）",
+        "說明當兩者不可兼得，應捨生取義（1分）",
+        "再以人不接受「簞豆」的「嗟來之食」及「萬鍾」不合禮義的俸祿（1分）",
+        "比喻義與不義是所欲及所惡有甚於生死（1分）",
+        "孟子運用這些比喻能形象化地說明，所有人都有捨生取義本性的抽象道理，帶出全文的論點（1分）"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}

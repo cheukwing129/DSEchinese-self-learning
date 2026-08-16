@@ -1,0 +1,79 @@
+{
+  "unit": "yu-wo-suoyu",
+  "bank": "theme",
+  "questions": [
+    {
+      "id": "yw-theme-001",
+      "unit": "yu-wo-suoyu",
+      "ability": "主旨與思考",
+      "knowledge_point": "本心相符看法（多選）",
+      "question_type": "multi_select",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "綜合《孟子．魚我所欲也》全文，以下哪些選項與孟子對「本心」的看法相符？（答案可選多於一個）",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "只有賢人才會擁有本心。"
+        },
+        {
+          "key": "B",
+          "text": "利益可能會使人放棄本心。"
+        },
+        {
+          "key": "C",
+          "text": "本心指願意舍生取義的志向。"
+        },
+        {
+          "key": "D",
+          "text": "擁有本心的人不會追求財富。"
+        }
+      ],
+      "answer": [
+        "B",
+        "C"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-theme-002",
+      "unit": "yu-wo-suoyu",
+      "ability": "主旨與思考",
+      "knowledge_point": "假設自己是乞人（開放題）",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "advanced",
+      "stem": "假設你是《孟子．魚我所欲也》中的「乞人」，你會同樣不接受「嗟來之食」嗎？試加以說明。",
+      "score": 3,
+      "scoring_elements": [
+        "表明立場（會／不會皆可，言之成理即可）（1分）",
+        "結合原文論點加以說明（1分）",
+        "扣連生命與道義的取捨、總結立場（1分）"
+      ],
+      "note": "原題提供兩種參考答案方向：不接受——生命的價值不及人的尊嚴重要，「義」的價值高於一切；接受——有生命才可以談得上「義」，「留得青山在，哪怕無柴燒」。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-theme-003",
+      "unit": "yu-wo-suoyu",
+      "ability": "主旨與思考",
+      "knowledge_point": "重義輕利在現今社會的適用性（開放題）",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "孟子在《魚我所欲也》提倡「重義輕利」。你認為這個價值觀還適用於現今社會嗎？試加以說明。",
+      "score": 3,
+      "scoring_elements": [
+        "表明立場（適用／不適用皆可，言之成理即可）（1分）",
+        "結合現今社會的具體情境說明（1分）",
+        "扣連孟子的觀點、總結立場（1分）"
+      ],
+      "note": "原題提供兩種參考答案方向：適用——商家須遵守商業操守，重義輕利反能建立商譽；不適用——商業社會競爭激烈，應義利並重以維持企業營運。",
+      "source": "校本試題庫"
+    }
+  ]
+}

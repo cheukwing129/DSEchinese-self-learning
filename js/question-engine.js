@@ -693,8 +693,14 @@ const QuestionEngine = (() => {
     if (q.part2) {
       html += `<div class="reveal-row" style="margin-top:14px; padding-top:10px; border-top:1px dashed var(--color-border);"><span class="reveal-label">延伸問題：${esc(q.part2.stem)}</span>`;
       html += `<div class="reveal-explanation">你的答案：${esc((state.selected && state.selected.part2) || "（未作答）")}</div>`;
+      if (q.part2.answer_text) {
+        html += `<div class="reveal-explanation">參考答案：${esc(q.part2.answer_text)}</div>`;
+      }
       if (q.part2.scoring_elements) {
         html += `<ul class="scoring-elements">${q.part2.scoring_elements.map((e) => `<li>${esc(e)}</li>`).join("")}</ul>`;
+      }
+      if (q.part2.answer_elements) {
+        html += `<ul class="scoring-elements">${q.part2.answer_elements.map((e) => `<li>${esc(e)}</li>`).join("")}</ul>`;
       }
       html += `</div>`;
     }

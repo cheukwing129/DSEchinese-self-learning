@@ -1,0 +1,364 @@
+{
+  "unit": "yu-wo-suoyu",
+  "bank": "content",
+  "questions": [
+    {
+      "id": "yw-content-001",
+      "unit": "yu-wo-suoyu",
+      "ability": "內容理解",
+      "knowledge_point": "中心論點",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "試寫出《孟子．魚我所欲也》一文的中心論點。",
+      "score": 2,
+      "answer_elements": [
+        "道義的價值高於生命（1分）",
+        "當面對兩難抉擇時，應捨棄生命，選擇道義（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-content-002",
+      "unit": "yu-wo-suoyu",
+      "ability": "內容理解",
+      "knowledge_point": "摘錄：生死與義的抉擇",
+      "question_type": "extract_sentence",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "《孟子．魚我所欲也》中，作者提出當人面對生命與道義不可並存的兩難時，人會作出怎樣的抉擇？試摘錄原文。（這反映出作者的價值觀：他認為道義的價值高於生命。）",
+      "score": 2,
+      "answer_text": "舍生而取義者也。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-content-003",
+      "unit": "yu-wo-suoyu",
+      "ability": "內容理解",
+      "knowledge_point": "魚與熊掌的比喻論證甚麼觀點",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "《孟子．魚我所欲也》用魚與熊掌的比喻，論證甚麼觀點？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "義與生命不能同時得到"
+        },
+        {
+          "key": "B",
+          "text": "人應捨生取義"
+        },
+        {
+          "key": "C",
+          "text": "人人皆可捨生取義"
+        },
+        {
+          "key": "D",
+          "text": "人要保持捨生取義的本心"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-content-004",
+      "unit": "yu-wo-suoyu",
+      "ability": "內容理解",
+      "knowledge_point": "人在甚麼情況下會捨棄生命",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "根據《魚我所欲也》，孟子認為人在甚麼情況下會捨棄生命？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "渴望成為賢人"
+        },
+        {
+          "key": "B",
+          "text": "幫助窮困的人"
+        },
+        {
+          "key": "C",
+          "text": "躲避禍患"
+        },
+        {
+          "key": "D",
+          "text": "渴望得到比生命更重要的事物"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-content-005",
+      "unit": "yu-wo-suoyu",
+      "ability": "內容理解",
+      "knowledge_point": "所欲莫甚於生的假設情況",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "孟子認為如果人們「所欲莫甚於生」、「所惡莫甚於死」，會出現甚麼情況？試以自己的文句說明。",
+      "score": 1,
+      "answer_elements": [
+        "人們為了生存和躲避禍害，任何手段都會使用（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-content-006",
+      "unit": "yu-wo-suoyu",
+      "ability": "內容理解",
+      "knowledge_point": "承上題所說明的觀點",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "承上題，孟子認為有些人不會出現上述情況，他由此說明甚麼觀點？",
+      "score": 2,
+      "answer_elements": [
+        "人們有比生命更想要的東西，即義；和比死亡更厭惡的事情，即不義（1分）",
+        "由此可見每個人都有捨生取義的本性（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-content-007",
+      "unit": "yu-wo-suoyu",
+      "ability": "內容理解",
+      "knowledge_point": "是非判斷：賢者與普通人",
+      "question_type": "true_false_unknown",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據《孟子．魚我所欲也》一文，判斷以下陳述。",
+      "score": 4,
+      "statements": [
+        {
+          "text": "賢者與普通人均能捨生取義。",
+          "answer": "true",
+          "explanation": "孟子認為人人都有羞惡之心，可以捨生取義，所以只要人人保持本心，就能捨生取義，故陳述正確。"
+        },
+        {
+          "text": "賢者與普通人均會喪失本心。",
+          "answer": "false",
+          "explanation": "孟子認為普通人與賢者的分別在於，賢者能保持不喪失本心，而普通人會喪失本心，故陳述錯誤。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-content-008",
+      "unit": "yu-wo-suoyu",
+      "ability": "內容理解",
+      "knowledge_point": "非獨賢者有是心也的道理與論證",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": [
+        1,
+        2
+      ],
+      "difficulty": "basic",
+      "stem": "《魚我所欲也》中「非獨賢者有是心也，人皆有之」一句帶出甚麼道理？（1分）孟子用了哪兩個人物的例子論證這個道理？又他怎樣論證這個道理？試加以說明。（3分）",
+      "score": 4,
+      "scoring_elements": [
+        "道理：每個人都有羞惡之心，能做到捨生取義（1分）",
+        "孟子以路人和乞丐為例論證這個道理（1分）",
+        "孟子指路人和乞丐寧願餓死也不吃不合禮義的「嗟來之食」（1分）",
+        "普通如路人、乞丐都有羞恥之心，不讓自己陷於不義，可見每人都有捨生取義的本心（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-content-009",
+      "unit": "yu-wo-suoyu",
+      "ability": "內容理解",
+      "knowledge_point": "所欲有甚於生者的推論過程",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "《孟子．魚我所欲也》「是故所欲有甚於生者，所惡有甚於死者」一句，孟子是怎樣推論出來的？（4分）他想說明甚麼道理？（2分）",
+      "score": 6,
+      "scoring_elements": [
+        "推論過程：孟子假設如果沒有東西比生命更寶貴，沒有東西比死亡更令人厭惡，那麼怎樣的生存方法、避過死亡的手段都會有人使用（2分）",
+        "推論過程：可是事實並非如此，孟子以此推斷，人之所欲及所惡有甚於生死，就是義與不義，因此生與死應以義為取捨標準（2分）",
+        "道理：人都有捨生取義的本性（2分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-content-010",
+      "unit": "yu-wo-suoyu",
+      "ability": "內容理解",
+      "knowledge_point": "行道之人與乞人的遭遇和反應",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "孟子在《魚我所欲也》提到「行道之人」和「乞人」的行為。試根據相關內容，比較兩者的遭遇和他們作出的反應。",
+      "score": 4,
+      "table": {
+        "columns": [
+          "",
+          "行道之人",
+          "乞人"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "遭遇",
+              null,
+              null
+            ]
+          },
+          {
+            "cells": [
+              "反應",
+              null,
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "行道之人遭遇：施予者大聲呼喝地給他食物（1分）。",
+        "乞人遭遇：施予者用腳踐踏着給他食物（1分）。",
+        "行道之人反應：不接受施捨（1分）。",
+        "乞人反應：不接受施捨（1分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-content-011",
+      "unit": "yu-wo-suoyu",
+      "ability": "內容理解",
+      "knowledge_point": "不辯禮義接受萬鍾的原因與評價",
+      "question_type": "extract_sentence",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "在《魚我所欲也》中，孟子提到某些人「不辯禮義」就接受「萬鍾」俸祿，原因可能是為了甚麼？試摘錄原文作答。",
+      "score": 1,
+      "answer_text": "為宮室之美、妻妾之奉、所識窮乏者得我與？",
+      "part2": {
+        "stem": "孟子對這些人有甚麼評價？試從原文中摘錄四個字作答。",
+        "type": "extract_sentence",
+        "score": 1,
+        "answer_text": "失其本心"
+      },
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-content-012",
+      "unit": "yu-wo-suoyu",
+      "ability": "內容理解",
+      "knowledge_point": "簞食豆羹與萬鍾對比說明生與義的關係",
+      "question_type": "cloze_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "孟子在《魚我所欲也》中怎樣運用「簞食豆羹」和「萬鍾」的對比說明生與義的關係？試分析說明。",
+      "score": 5,
+      "cloze_template": "「簞食豆羹」形容食物極少，但攸關生死；而「萬鍾」形容俸祿極多，卻比不上生命的價值。昔日有的人在生與義之間選擇了義，後來卻為了宮室、侍奉和別人的感激，而不問禮義地接受俸祿，可見人會【選擇】。",
+      "blanks": [
+        {
+          "id": "選擇",
+          "options": [
+            {
+              "key": "A",
+              "text": "因道義而維持本心"
+            },
+            {
+              "key": "B",
+              "text": "因物慾而失去本心"
+            },
+            {
+              "key": "C",
+              "text": "為道義而捨棄生命"
+            },
+            {
+              "key": "D",
+              "text": "為物慾而捨棄生命"
+            }
+          ],
+          "answer": "B"
+        }
+      ],
+      "note": "原題另有填充部分（各1分），已於題幹中列出參考答案文字，此處著重考核選擇題部分。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-content-013",
+      "unit": "yu-wo-suoyu",
+      "ability": "內容理解",
+      "knowledge_point": "是非判斷：物質誘惑與本心",
+      "question_type": "true_false_unknown",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "根據《孟子．魚我所欲也》一文，判斷以下陳述。",
+      "score": 2,
+      "statements": [
+        {
+          "text": "被物質誘惑而忘卻禮義，是某些人失去本心的原因。",
+          "answer": "true",
+          "explanation": "孟子提到某些人不分辨是否合於禮義便接受萬鍾俸祿，可能是為了華美的宮室、妻妾的侍奉或讓認識的窮困者感激自己，可見某些人會因個人物慾而捨棄本心，故陳述正確。"
+        },
+        {
+          "text": "只有少數人能保持本心。",
+          "answer": "unknown",
+          "explanation": "孟子認為人人皆有本心，只有賢者能保持本心不喪失，然而孟子沒有說明賢者只是小部分人，陳述與內容沒有矛盾，故屬無從判斷。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-content-014",
+      "unit": "yu-wo-suoyu",
+      "ability": "內容理解",
+      "knowledge_point": "人人都能實踐義的例子說明",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "在《孟子．魚我所欲也》，孟子指出人人都能實踐「義」，並以「一簞食，一豆羹，得之則生，弗得則死。嘑爾而與之，行道之人弗受；蹴爾而與之，乞人不屑也」為例作說明。試根據以上引文的內容作說明。",
+      "score": 4,
+      "quote": "一簞食，一豆羹，得之則生，弗得則死。嘑爾而與之，行道之人弗受；蹴爾而與之，乞人不屑也。",
+      "scoring_elements": [
+        "作者以以上引文，論證人們天生擁有羞惡之心（1分）",
+        "會阻止自己接受不合禮義的「嗟來之食」（1分）",
+        "即使普通如路人、卑微如乞丐也有這高尚的情操（1分）",
+        "可見只要順着本心，人人都能實踐「義」（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-content-015",
+      "unit": "yu-wo-suoyu",
+      "ability": "內容理解",
+      "knowledge_point": "情境應用：消防員事跡",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "細閱以下資料：在一次的救火行動中，消防員霍明軒為救出一名被困青年，把身上的氧氣樽讓給他使用，結果霍明軒自己因吸入大量濃煙而昏迷，經搶救後不治。事後有不少市民到現場獻花致哀，而被霍明軒救出的青年指，他將來會以霍明軒為榜樣，做一個對社會有用的人。你認為霍明軒的事跡跟《魚我所欲也》中哪種人的表現相近？（1分）試加以說明。（3分）",
+      "score": 4,
+      "scoring_elements": [
+        "霍明軒的事跡與賢人的表現相近（1分）",
+        "孟子認為人人都有捨生取義的本性，而賢人則能保持不喪失這本性（1分）",
+        "霍明軒為了拯救被困青年，把氧氣樽讓給青年使用，使自己吸入大量濃煙，最終不治，可見他為了救助別人而選擇犧牲自己的生命（1分）",
+        "他作出了義行，卻付出了性命，正如賢人一樣沒有喪失「捨生取義」的本性（1分）"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "unit": "xiaoyaoyou",
+  "bank": "structure-skill",
+  "questions": [
+    {
+      "id": "xy-skill-001",
+      "unit": "xiaoyaoyou",
+      "ability": "結構與手法",
+      "knowledge_point": "誇張修辭及反映的寫作特色",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據以下《莊子．逍遙遊》（節錄）的引文，回答所附問題：以上引文使用了哪一種相同的修辭手法？（答案須是兩個字）",
+      "score": 1,
+      "context_quotes": [
+        {
+          "label": "甲",
+          "text": "魏王貽我大瓠之種，我樹之成而實五石。"
+        },
+        {
+          "label": "乙",
+          "text": "今夫斄牛，其大若垂天之雲。"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "誇張"
+        },
+        {
+          "key": "B",
+          "text": "排比"
+        },
+        {
+          "key": "C",
+          "text": "借代"
+        },
+        {
+          "key": "D",
+          "text": "疊字"
+        }
+      ],
+      "answer": "A",
+      "follow_up_open_answer": "運用以上修辭手法反映莊子散文的哪一種寫作特色：充滿奇想（莊子善用誇張的比喻和奇特的想像說理，如以「實五石」的大瓠、「大若垂天之雲」的斄牛等超乎現實的形象入文，增強文章的感染力和說服力）。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-skill-002",
+      "unit": "xiaoyaoyou",
+      "ability": "結構與手法",
+      "knowledge_point": "不龜手之藥帶出的道理及生活例子",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "莊子在《逍遙遊》（節錄）一文中借「不龜手之藥」帶出甚麼道理？又這個道理並不局限於《逍遙遊》（節錄）中。試舉出一個生活例子，說明上述的道理。",
+      "score": 5,
+      "scoring_elements": [
+        "道理：即使面對同一樣事物，只要用法不同（1分），結果便大有分別（1分）",
+        "例子：有些長者會撿拾廢紙賣給回收商人再造紙，他們這樣做可得到的金錢並不多（1分）；近年另外有些人想到把廢紙製作成硬卡板，再加工就可製造成紙品家具，不但可賣得更多錢（1分），更可以節省其他製造家具材料，例如木材、金屬，為環保出力，對個人和社會均帶來巨大的價值（1分）"
+      ],
+      "note": "生活例子答案言之成理即可，不限於題庫所舉例子。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-skill-003",
+      "unit": "xiaoyaoyou",
+      "ability": "結構與手法",
+      "knowledge_point": "甲乙引文的修辭手法",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "以下《逍遙遊》（節錄）引文分別運用了哪種修辭手法？",
+      "score": 1,
+      "context_quotes": [
+        {
+          "label": "甲",
+          "text": "其大本擁腫而不中繩墨，其小枝卷曲而不中規矩。"
+        },
+        {
+          "label": "乙",
+          "text": "子獨不見狸狌乎？"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "甲句運用了比喻；乙句運用了設問"
+        },
+        {
+          "key": "B",
+          "text": "甲句運用了借代；乙句運用了反問"
+        },
+        {
+          "key": "C",
+          "text": "甲句運用了對比；乙句運用了設問"
+        },
+        {
+          "key": "D",
+          "text": "甲句運用了對偶；乙句運用了反問"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-skill-004",
+      "unit": "xiaoyaoyou",
+      "ability": "結構與手法",
+      "knowledge_point": "與反問句運用相同修辭手法的句子",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "以下哪一句與「子獨不見狸狌乎？」（《逍遙遊》（節錄））運用了相同的修辭手法？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "然則何時而樂耶？其必曰：「先天下之憂而憂，後天下之樂而樂」歟！（《岳陽樓記》）"
+        },
+        {
+          "key": "B",
+          "text": "或曰：「六國互喪，率賂秦耶？」曰：「不賂者以賂者喪，蓋失強援，不能獨完，故曰弊在賂秦也。」（《六國論》）"
+        },
+        {
+          "key": "C",
+          "text": "夫以秦王之威，而相如廷叱之，辱其羣臣，相如雖駑，獨畏廉將軍哉？（《廉頗藺相如列傳》（節錄））"
+        },
+        {
+          "key": "D",
+          "text": "無所可用，安所困苦哉？（《逍遙遊》（節錄））"
+        }
+      ],
+      "answer": "D",
+      "explanation": "「子獨不見狸狌乎？」是反問句，以疑問形式表達肯定意思；D項「無所可用，安所困苦哉？」同樣是反問句，出自同一篇《逍遙遊》，以反問強調「無用」不會帶來困苦。A項是感歎兼引用；B項是設問（自問自答）；C項雖也是反問句，但本題原始答案標示D項。",
+      "source": "校本試題庫"
+    }
+  ]
+}

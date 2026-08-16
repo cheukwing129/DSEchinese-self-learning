@@ -1,0 +1,104 @@
+{
+  "unit": "xiaoyaoyou",
+  "bank": "cross-text",
+  "questions": [
+    {
+      "id": "xy-cross-001",
+      "unit": "xiaoyaoyou",
+      "ability": "跨篇比較",
+      "knowledge_point": "以逍遙觀點開解蘇軾（開放題）",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "蘇軾在《念奴嬌．赤壁懷古》中流露出他對現實的不快。你認為可以運用《莊子．逍遙遊》（節錄）中的哪個觀點開解蘇軾？試加以說明。",
+      "cross_text_target": "niannujiao-chibihuaigu",
+      "score": 4,
+      "scoring_elements": [
+        "《莊子．逍遙遊》（節錄）指出於俗世「無用」反而能保全生命，達致逍遙（1分）",
+        "我認為這個觀點可以開解蘇軾對現實的不快。蘇軾在《念奴嬌．赤壁懷古》中抒發自己對謫居黃州、年華漸老，感到自己「無用」而生的悲哀（1分）",
+        "然而，這個「無用」既使他可以趁公務空閒遊歷赤壁，令自己逍遙自在（1分）",
+        "更可以遠離朝廷鬥爭，好好保存性命（1分）。因此，我可以提醒蘇軾，這個「無用」可使他生活安穩快樂"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-cross-002",
+      "unit": "xiaoyaoyou",
+      "ability": "跨篇比較",
+      "knowledge_point": "與勸學論點及對比論證比較",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "閱讀以下引文，回答所附問題：甲、乙兩文中分別提出甚麼論點？（2分）甲、乙兩文的論證手法有甚麼相同之處？試略加說明。（3分）",
+      "cross_text_target": "quanxue",
+      "score": 5,
+      "context_quotes": [
+        {
+          "label": "甲",
+          "text": "能不龜手一也；或以封，或不免於洴澼絖，則所用之異也。（《莊子．逍遙遊》（節錄））"
+        },
+        {
+          "label": "乙",
+          "text": "螾無爪牙之利，筋骨之強，上食埃土，下飲黃泉，用心一也。蟹六跪而二螯，非蛇蟺之穴無可寄託者，用心躁也。（《荀子．勸學》（節錄））"
+        }
+      ],
+      "scoring_elements": [
+        "甲：即使面對同一樣事物，只要用法不同，結果便大有分別（1分）",
+        "乙：學習必須專心致志，方可將勤補拙（1分）",
+        "相同之處：兩文都運用了對比論證（1分）",
+        "說明：甲文以有人用不龜手藥得到封地，有人只得數金作對比（1分）；乙文以螾因專心致志，雖無鋒利的爪牙和強健的筋骨，卻可以鑽食泥土、喝泉水，對比蟹因心思浮躁，雖有六隻腳和兩個鉗，卻要寄住在蛇鱔的洞穴（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-cross-003",
+      "unit": "xiaoyaoyou",
+      "ability": "跨篇比較",
+      "knowledge_point": "與月下獨酌想像奇特的寫作特色比較",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "試根據《莊子．逍遙遊》（節錄）與李白《月下獨酌》，比較兩文想像奇特的寫作特色。",
+      "cross_text_target": "yuexia-duzhuo",
+      "score": 4,
+      "scoring_elements": [
+        "《逍遙遊》（節錄）：善用寓言說理，如宋人的不龜手之藥、大若垂天之雲的斄牛、容量有五石卻不能盛水的大瓠等等，極盡誇張之能事。莊子把自己的觀點寄寓在奇想之中，饒富趣味（2分）",
+        "《月下獨酌》：把月亮和影子人格化，李白邀請它們一起飲酒，更想像它們善解人意，與自己同歌共舞，使原本冷清寂寥的場面變得十分熱鬧，想像雄奇而浪漫，擬人生動（2分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-cross-004",
+      "unit": "xiaoyaoyou",
+      "ability": "跨篇比較",
+      "knowledge_point": "對生命看法：莊子與孟子的比較",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "閱讀以下引文，回答所附問題：以上兩則引文的作者對生命分別有甚麼看法？（2分）承上題，你較認同誰的看法？為甚麼？（3分）",
+      "cross_text_target": "yu-wo-suoyu",
+      "score": 5,
+      "context_quotes": [
+        {
+          "label": "甲",
+          "text": "今子有大樹，患其無用，何不樹之於無何有之鄉，廣莫之野，彷徨乎無為其側，逍遙乎寢卧其下；不夭斤斧，物無害者。無所可用，安所困苦哉？（《莊子．逍遙遊》（節錄））"
+        },
+        {
+          "label": "乙",
+          "text": "生亦我所欲也，義亦我所欲也；二者不可得兼，舍生而取義者也。（《孟子．魚我所欲也》）"
+        }
+      ],
+      "scoring_elements": [
+        "引文甲：莊子重視保全個人的性命（1分）",
+        "引文乙：孟子認為道義比生命更重要（1分）",
+        "表明立場（認同莊子／認同孟子皆可，言之成理即可）並加以說明（3分）"
+      ],
+      "note": "此題與主旨與思考題庫的開放題內容相近，供從跨篇角度切入練習之用。",
+      "source": "校本試題庫"
+    }
+  ]
+}

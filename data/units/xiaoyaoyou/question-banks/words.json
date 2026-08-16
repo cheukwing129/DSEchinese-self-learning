@@ -1,0 +1,872 @@
+{
+  "unit": "xiaoyaoyou",
+  "bank": "words",
+  "questions": [
+    {
+      "id": "xy-words-001",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "虛詞辨析：而",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": 1,
+      "difficulty": "advanced",
+      "stem": "以下哪項與「吾為其無用而掊之」（《莊子．逍遙遊》（節錄））中的虛詞「而」字的詞義相同？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "其大本擁腫而不中繩墨。（《莊子．逍遙遊》（節錄））"
+        },
+        {
+          "key": "B",
+          "text": "今子之言，大而無用，眾所同去也。（《莊子．逍遙遊》（節錄））"
+        },
+        {
+          "key": "C",
+          "text": "醉則更相枕以卧，卧而夢，意有所極，夢亦同趣。（柳宗元《始得西山宴遊記》）"
+        },
+        {
+          "key": "D",
+          "text": "洋洋乎與造物者遊，而不知其所窮。（柳宗元《始得西山宴遊記》）"
+        }
+      ],
+      "answer": "C",
+      "explanation": "「吾為其無用而掊之」的「而」是承接連詞，解「就」，連接「無用」的原因與「掊之」的結果；C項「卧而夢」的「而」同樣是承接連詞。A、B項的「而」是轉折連詞，解「但、卻」；D項的「而」也是轉折連詞。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-002",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "虛詞辨析：以",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": 1,
+      "difficulty": "advanced",
+      "stem": "以下哪一句中的「以」字與「以盛水漿，其堅不能自舉也」（《逍遙遊》（節錄））中的「以」字具相同詞義？（介詞，解「用」）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "不宜妄自菲薄，引喻失義，以塞忠諫之路也。（《出師表》）"
+        },
+        {
+          "key": "B",
+          "text": "先帝不以臣卑鄙，猥自枉屈。（《出師表》）"
+        },
+        {
+          "key": "C",
+          "text": "願陛下託臣以討賊興復之效。（《出師表》）"
+        },
+        {
+          "key": "D",
+          "text": "秦貪，負其彊，以空言求璧。（《廉頗藺相如列傳》（節錄））"
+        }
+      ],
+      "answer": "D",
+      "explanation": "「以盛水漿」的「以」是介詞，解「用」；D項「以空言求璧」的「以」同樣解「用」。A項「以」解「以致」；B項「以」解「因為」；C項「以」解「把」。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-003",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「魏王貽我大瓠之種，我樹之成而實五石」一句中的「種」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "栽種"
+        },
+        {
+          "key": "B",
+          "text": "種子"
+        },
+        {
+          "key": "C",
+          "text": "種類"
+        },
+        {
+          "key": "D",
+          "text": "腫脹"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-004",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「魏王貽我大瓠之種，我樹之成而實五石」一句中的「實」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "果實"
+        },
+        {
+          "key": "B",
+          "text": "堅實"
+        },
+        {
+          "key": "C",
+          "text": "實在"
+        },
+        {
+          "key": "D",
+          "text": "事實"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-005",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「以盛水漿，其堅不能自舉也」一句中的「堅」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "堅持"
+        },
+        {
+          "key": "B",
+          "text": "剛強"
+        },
+        {
+          "key": "C",
+          "text": "堅決"
+        },
+        {
+          "key": "D",
+          "text": "硬度"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-006",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「吾為其無用而掊之」一句中的「掊」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "擊破"
+        },
+        {
+          "key": "B",
+          "text": "放倒"
+        },
+        {
+          "key": "C",
+          "text": "用手扒土"
+        },
+        {
+          "key": "D",
+          "text": "以手捧物"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-007",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「宋人有善為不龜手之藥者，世世以洴澼絖為事」一句中的「善」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "美好"
+        },
+        {
+          "key": "B",
+          "text": "優點"
+        },
+        {
+          "key": "C",
+          "text": "擅長"
+        },
+        {
+          "key": "D",
+          "text": "讚美"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-008",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「宋人有善為不龜手之藥者，世世以洴澼絖為事」一句中的「事」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "事情"
+        },
+        {
+          "key": "B",
+          "text": "事故"
+        },
+        {
+          "key": "C",
+          "text": "事業"
+        },
+        {
+          "key": "D",
+          "text": "侍奉"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-009",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「聚族而謀」一句中的「族」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "品類"
+        },
+        {
+          "key": "B",
+          "text": "全家族"
+        },
+        {
+          "key": "C",
+          "text": "聚結"
+        },
+        {
+          "key": "D",
+          "text": "種族"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-010",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「今一朝而鬻技百金，請與之」一句中的「鬻」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "購買"
+        },
+        {
+          "key": "B",
+          "text": "賣出"
+        },
+        {
+          "key": "C",
+          "text": "賣弄"
+        },
+        {
+          "key": "D",
+          "text": "養育"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-011",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「客得之，以說吳王」一句中的「說」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "遊說"
+        },
+        {
+          "key": "B",
+          "text": "解說"
+        },
+        {
+          "key": "C",
+          "text": "告訴"
+        },
+        {
+          "key": "D",
+          "text": "取悅"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-012",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「吳王使之將，冬與越人水戰」一句中的「使」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "致使"
+        },
+        {
+          "key": "B",
+          "text": "出使"
+        },
+        {
+          "key": "C",
+          "text": "運用"
+        },
+        {
+          "key": "D",
+          "text": "派遣"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-013",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「大敗越人，裂地而封之」一句中的「裂」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "割出"
+        },
+        {
+          "key": "B",
+          "text": "破碎"
+        },
+        {
+          "key": "C",
+          "text": "撕破"
+        },
+        {
+          "key": "D",
+          "text": "殘餘"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-014",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「能不龜手一也」一句中的「一」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "統一"
+        },
+        {
+          "key": "B",
+          "text": "一樣"
+        },
+        {
+          "key": "C",
+          "text": "全部"
+        },
+        {
+          "key": "D",
+          "text": "一部分"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-015",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「或以封，或不免於洴澼絖」一句中的「封」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "封賞"
+        },
+        {
+          "key": "B",
+          "text": "土地"
+        },
+        {
+          "key": "C",
+          "text": "封閉"
+        },
+        {
+          "key": "D",
+          "text": "埋葬"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-016",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「何不慮以為大樽而浮乎江湖，而憂其瓠落無所容」一句中的「慮」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "憂慮"
+        },
+        {
+          "key": "B",
+          "text": "思考"
+        },
+        {
+          "key": "C",
+          "text": "結綴"
+        },
+        {
+          "key": "D",
+          "text": "謀畫"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-017",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「何不慮以為大樽而浮乎江湖，而憂其瓠落無所容」一句中「瓠落」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "太大"
+        },
+        {
+          "key": "B",
+          "text": "沉重"
+        },
+        {
+          "key": "C",
+          "text": "潦倒"
+        },
+        {
+          "key": "D",
+          "text": "豁達"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-018",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「其大本擁腫而不中繩墨」一句中的「本」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "根本"
+        },
+        {
+          "key": "B",
+          "text": "樹根"
+        },
+        {
+          "key": "C",
+          "text": "樹幹"
+        },
+        {
+          "key": "D",
+          "text": "起始"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-019",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「其小枝卷曲而不中規矩」一句中的「中」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "到達"
+        },
+        {
+          "key": "B",
+          "text": "遭受"
+        },
+        {
+          "key": "C",
+          "text": "射中"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-020",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「立之塗，匠者不顧」一句中的「塗」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "粉飾"
+        },
+        {
+          "key": "B",
+          "text": "路邊"
+        },
+        {
+          "key": "C",
+          "text": "泥"
+        },
+        {
+          "key": "D",
+          "text": "染污"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-021",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「立之塗，匠者不顧」一句中的「顧」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "訪問"
+        },
+        {
+          "key": "B",
+          "text": "關心"
+        },
+        {
+          "key": "C",
+          "text": "回頭看"
+        },
+        {
+          "key": "D",
+          "text": "返回"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-022",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「卑身而伏，以候敖者」一句中的「卑」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "卑微"
+        },
+        {
+          "key": "B",
+          "text": "縮下"
+        },
+        {
+          "key": "C",
+          "text": "輕視"
+        },
+        {
+          "key": "D",
+          "text": "謙恭"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-023",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「卑身而伏，以候敖者」一句中的「敖」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "煎熬"
+        },
+        {
+          "key": "B",
+          "text": "傲慢"
+        },
+        {
+          "key": "C",
+          "text": "戲弄"
+        },
+        {
+          "key": "D",
+          "text": "擄掠"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-024",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「東西跳梁，不辟高下」一句中的「梁」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "跳躍"
+        },
+        {
+          "key": "B",
+          "text": "橋梁"
+        },
+        {
+          "key": "C",
+          "text": "房樑"
+        },
+        {
+          "key": "D",
+          "text": "擄掠"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-025",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「中於機辟，死於罔罟」一句中的「辟」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "躲避"
+        },
+        {
+          "key": "B",
+          "text": "刑法"
+        },
+        {
+          "key": "C",
+          "text": "陷阱"
+        },
+        {
+          "key": "D",
+          "text": "打開"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-026",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「中於機辟，死於罔罟」一句中的「罔」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "捕捉"
+        },
+        {
+          "key": "B",
+          "text": "迷惑"
+        },
+        {
+          "key": "C",
+          "text": "編結"
+        },
+        {
+          "key": "D",
+          "text": "獵網"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "xy-words-027",
+      "unit": "xiaoyaoyou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「何不樹之於無何有之鄉，廣莫之野」一句中的「莫」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "傍晚"
+        },
+        {
+          "key": "B",
+          "text": "廣大"
+        },
+        {
+          "key": "C",
+          "text": "沒有"
+        },
+        {
+          "key": "D",
+          "text": "不能"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    }
+  ]
+}

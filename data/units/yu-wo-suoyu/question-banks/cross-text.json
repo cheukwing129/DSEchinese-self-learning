@@ -1,0 +1,139 @@
+{
+  "unit": "yu-wo-suoyu",
+  "bank": "cross-text",
+  "questions": [
+    {
+      "id": "yw-cross-001",
+      "unit": "yu-wo-suoyu",
+      "ability": "跨篇比較",
+      "knowledge_point": "孔子對富貴貧賤的看法",
+      "question_type": "short_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "根據《論語．論仁》和《孟子．魚我所欲也》的內容，回答以下問題：《論語．論仁》中，孔子怎樣看待富貴和貧賤？試以自己的文字說明。",
+      "cross_text_target": "lunyu-renxiaojunzi",
+      "score": 2,
+      "answer_elements": [
+        "孔子認為富貴是人希望得到的事物，但必須要以合乎道義的方法得到富貴（1分）",
+        "而貧賤是人所嫌棄、厭惡的事物，但必須要以合乎道義的方法擺脫貧賤（1分）"
+      ],
+      "part2": {
+        "stem": "承上題，孔子對富貴貧賤的看法跟孟子在《孟子．魚我所欲也》中對「義」與「利」的看法一致嗎？試加以說明。",
+        "type": "long_answer",
+        "score": 4,
+        "scoring_elements": [
+          "一致。兩人均主張重義輕利，以義為先（1分）",
+          "孟子在《魚我所欲也》提到即使面對優厚的俸祿，人們亦要分辨是否合於禮義才能接受，否則就是陷自身於不義（1分）",
+          "孔子在《論語．論仁》中清楚指出人人都嚮往財富、嫌棄貧賤，但人必須以正當的手段求取富貴或擺脫貧賤，否則就是有違道義（1分）",
+          "可見兩人都強調面對利時必須先要顧全道義，強調義是最重要（1分）"
+        ]
+      },
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-cross-002",
+      "unit": "yu-wo-suoyu",
+      "ability": "跨篇比較",
+      "knowledge_point": "志士仁人與賢者處世態度的相同之處",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "閱讀以下兩則引文，比較引文中的「志士仁人」（引文甲）和「賢者」（引文乙）的處世態度有甚麼相同之處。",
+      "cross_text_target": "lunyu-renxiaojunzi",
+      "score": 3,
+      "context_quotes": [
+        {
+          "label": "甲",
+          "text": "志士仁人，無求生以害仁，有殺身以成仁。（《論語．論仁》）"
+        },
+        {
+          "label": "乙",
+          "text": "生亦我所欲，所欲有甚於生者，故不為苟得也；死亦我所惡，所惡有甚於死者，故患有所不辟也……非獨賢者有是心也，人皆有之，賢者能勿喪耳。（《孟子．魚我所欲也》）"
+        }
+      ],
+      "scoring_elements": [
+        "志士仁人和賢者同樣能堅守仁義，甚至甘於為仁義而犧牲（1分）",
+        "孔子認為仁人不會為了求生而損害仁德，寧可拋棄生命也要成全仁德（1分）",
+        "正如孟子認為賢者視道義比生命重要，即使遇上會失去生命的危機，也不會喪失捨生取義的本心（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "yw-cross-003",
+      "unit": "yu-wo-suoyu",
+      "ability": "跨篇比較",
+      "knowledge_point": "本心與用心的意思及論證的觀點",
+      "question_type": "cloze_choice",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "閱讀以下引文，並根據《孟子．魚我所欲也》和《荀子．勸學》的內容，回答以下問題：以上引文中的「本心」（引文甲）和「用心」（引文乙）分別是甚麼意思？",
+      "cross_text_target": "quanxue",
+      "score": 2,
+      "context_quotes": [
+        {
+          "label": "甲",
+          "text": "鄉為身死而不受，今為宮室之美為之；鄉為身死而不受，今為妻妾之奉為之；鄉為身死而不受，今為所識窮乏者得我而為之，是亦不可以已乎？此之謂失其本心。（《孟子．魚我所欲也》）"
+        },
+        {
+          "label": "乙",
+          "text": "螾無爪牙之利，筋骨之強，上食埃土，下飲黃泉，用心一也。（《荀子．勸學》）"
+        }
+      ],
+      "cloze_template": "「本心」（引文甲）：【本心】；「用心」（引文乙）：【用心】。",
+      "blanks": [
+        {
+          "id": "本心",
+          "options": [
+            {
+              "key": "A",
+              "text": "耐性"
+            },
+            {
+              "key": "B",
+              "text": "愛心"
+            },
+            {
+              "key": "C",
+              "text": "心思"
+            },
+            {
+              "key": "D",
+              "text": "羞恥之心"
+            }
+          ],
+          "answer": "D"
+        },
+        {
+          "id": "用心",
+          "options": [
+            {
+              "key": "A",
+              "text": "耐性"
+            },
+            {
+              "key": "B",
+              "text": "愛心"
+            },
+            {
+              "key": "C",
+              "text": "心思"
+            },
+            {
+              "key": "D",
+              "text": "羞恥之心"
+            }
+          ],
+          "answer": "C"
+        }
+      ],
+      "open_answer_elements": [
+        "《魚我所欲也》中，指出「本心」是每人都有的羞惡之心，孟子認為人人皆有羞恥之心，只要不喪失本心，便誰都能做到捨生取義。",
+        "《荀子．勸學》的「用心」是指心思，他認為人要專心求學，通過學習才能改善人的劣根性，增長知識，最終做到按智慧聰明做事，減少犯錯，達至聖人的道德境界。"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}
