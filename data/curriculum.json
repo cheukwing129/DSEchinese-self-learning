@@ -25,14 +25,14 @@
       "id": "quanxue",
       "title": "勸學（節錄）",
       "author": "荀子",
-      "status": "coming_soon",
+      "status": "available",
       "audio_file": "assets/audio/quan_xue.mp3"
     },
     {
       "id": "lianpo-linxiangru",
       "title": "廉頗藺相如列傳（節錄）",
       "author": "司馬遷",
-      "status": "coming_soon",
+      "status": "available",
       "audio_file": "assets/audio/lian_po_lin_xiang_ru_lie_zhuan.mp3"
     },
     {
@@ -46,7 +46,7 @@
       "id": "chushibiao",
       "title": "出師表",
       "author": "諸葛亮",
-      "status": "coming_soon",
+      "status": "available",
       "audio_file": "assets/audio/chu_shi_biao.mp3"
     },
     {
@@ -67,7 +67,7 @@
       "id": "liuguolun",
       "title": "六國論",
       "author": "蘇洵",
-      "status": "coming_soon",
+      "status": "available",
       "audio_file": "assets/audio/liu_guo_lun.mp3"
     },
     {
