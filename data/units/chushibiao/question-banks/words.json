@@ -1,0 +1,1050 @@
+{
+  "unit": "chushibiao",
+  "bank": "words",
+  "questions": [
+    {
+      "id": "cb-words-001",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "虛詞辨析：以",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": 6,
+      "difficulty": "advanced",
+      "stem": "以下哪一句中的「以」字與「先帝不以臣卑鄙，猥自枉屈」（第6段）一句中的「以」字具相同詞義？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "是以先帝簡拔以遺陛下。（《出師表》）"
+        },
+        {
+          "key": "B",
+          "text": "以是人多以書假余，余因得遍觀羣書。（宋濂《送東陽馬生序》）"
+        },
+        {
+          "key": "C",
+          "text": "不以物喜，不以己悲。（《岳陽樓記》）"
+        },
+        {
+          "key": "D",
+          "text": "忠之屬也，可以一戰。（《左傳．曹劌論戰》）"
+        }
+      ],
+      "answer": "C",
+      "explanation": "「不以臣卑鄙」的「以」是介詞，解「因為」；C項「不以物喜」的「以」同樣解「因為」。A項「以」解「來」；B項「以」解「因為」但語境不同（此為另一常見用法，供辨析參考）；D項「以」解「用來」。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-002",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "虛詞辨析：於",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": 1,
+      "difficulty": "advanced",
+      "stem": "以下哪一句中的「於」字與「今天下三分，益州疲弊，此誠危急存亡之秋也」（第1段）「忘身於外者」一句中的「於」字具相同詞義？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "苟全性命於亂世，不求聞達於諸侯。（《出師表》）"
+        },
+        {
+          "key": "B",
+          "text": "每與臣論此事，未嘗不歎息痛恨於桓、靈也。（《出師表》）"
+        },
+        {
+          "key": "C",
+          "text": "青，取之於藍，而青於藍。（《荀子．勸學》）"
+        },
+        {
+          "key": "D",
+          "text": "冰，水為之，而寒於水。（《荀子．勸學》）"
+        }
+      ],
+      "answer": "A",
+      "explanation": "「忘身於外」的「於」是介詞，解「在」；A項「性命於亂世」「聞達於諸侯」的「於」同樣解「在」。B項「於」表對象；C、D項「於」表比較，解「比」。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-003",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "解釋粗體字",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據諸葛亮《出師表》一文，解釋以下文句中粗體字的意思。",
+      "score": 2,
+      "items": [
+        {
+          "text": "若有作姦犯科，及為忠善者，宜付有司，論其刑賞。",
+          "target": "論",
+          "answer": "評定"
+        },
+        {
+          "text": "先帝知臣謹慎，故臨崩寄臣以大事也。",
+          "target": "謹慎",
+          "answer": "做事小心周密"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-004",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "解釋粗體字",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據諸葛亮《出師表》一文，解釋以下文句中粗體字的意思。",
+      "score": 2,
+      "items": [
+        {
+          "text": "由是感激，遂許先帝以驅馳。",
+          "target": "由是",
+          "answer": "因此"
+        },
+        {
+          "text": "深追先帝遺詔。",
+          "target": "追",
+          "answer": "追念"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-005",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「先帝創業未半，而中道崩殂」一句中的「創」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "初次"
+        },
+        {
+          "key": "B",
+          "text": "建立"
+        },
+        {
+          "key": "C",
+          "text": "損傷"
+        },
+        {
+          "key": "D",
+          "text": "開闢"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-006",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「今天下三分，益州疲弊」一句中的「疲」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "疲勞"
+        },
+        {
+          "key": "B",
+          "text": "懶散"
+        },
+        {
+          "key": "C",
+          "text": "困乏"
+        },
+        {
+          "key": "D",
+          "text": "衰弱"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-007",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「此誠危急存亡之秋也」一句中的「秋」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "秋季"
+        },
+        {
+          "key": "B",
+          "text": "收成"
+        },
+        {
+          "key": "C",
+          "text": "年歲"
+        },
+        {
+          "key": "D",
+          "text": "時刻"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-008",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「然侍衞之臣，不懈於內」一句中的「懈」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "鬆懈"
+        },
+        {
+          "key": "B",
+          "text": "懈怠"
+        },
+        {
+          "key": "C",
+          "text": "放鬆"
+        },
+        {
+          "key": "D",
+          "text": "疲倦"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-009",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「蓋追先帝之殊遇，欲報之於陛下也」一句中的「追」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "追趕"
+        },
+        {
+          "key": "B",
+          "text": "追究"
+        },
+        {
+          "key": "C",
+          "text": "追念"
+        },
+        {
+          "key": "D",
+          "text": "追隨"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-010",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「誠宜開張聖聽，以光先帝遺德」一句中的「光」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "光榮"
+        },
+        {
+          "key": "B",
+          "text": "發揚光大"
+        },
+        {
+          "key": "C",
+          "text": "光明"
+        },
+        {
+          "key": "D",
+          "text": "光陰"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-011",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「不宜妄自菲薄，引喻失義」一句中的「妄」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "荒謬"
+        },
+        {
+          "key": "B",
+          "text": "虛妄"
+        },
+        {
+          "key": "C",
+          "text": "胡亂"
+        },
+        {
+          "key": "D",
+          "text": "狂妄"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-012",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「不宜妄自菲薄，引喻失義」一句中的「義」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "義氣"
+        },
+        {
+          "key": "B",
+          "text": "道理"
+        },
+        {
+          "key": "C",
+          "text": "意義"
+        },
+        {
+          "key": "D",
+          "text": "正義"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-013",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「不宜妄自菲薄，引喻失義，以塞忠諫之路也」一句中的「塞」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "堵塞"
+        },
+        {
+          "key": "B",
+          "text": "邊塞"
+        },
+        {
+          "key": "C",
+          "text": "搪塞"
+        },
+        {
+          "key": "D",
+          "text": "閉塞"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-014",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「若有作姦犯科，及為忠善者，宜付有司」一句中的「科」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "科目"
+        },
+        {
+          "key": "B",
+          "text": "品類"
+        },
+        {
+          "key": "C",
+          "text": "法律"
+        },
+        {
+          "key": "D",
+          "text": "分支"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-015",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「以昭陛下平明之治」一句中的「昭」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "昭示"
+        },
+        {
+          "key": "B",
+          "text": "明亮"
+        },
+        {
+          "key": "C",
+          "text": "彰顯"
+        },
+        {
+          "key": "D",
+          "text": "顯赫"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-016",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「不宜偏私，使內外異法也」一句中的「偏」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "偏頗"
+        },
+        {
+          "key": "B",
+          "text": "偏袒"
+        },
+        {
+          "key": "C",
+          "text": "不正"
+        },
+        {
+          "key": "D",
+          "text": "側重"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-017",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「此皆良實，志慮忠純」一句中的「純」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "單純"
+        },
+        {
+          "key": "B",
+          "text": "純潔"
+        },
+        {
+          "key": "C",
+          "text": "純粹"
+        },
+        {
+          "key": "D",
+          "text": "專一"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-018",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「是以先帝簡拔以遺陛下」一句中的「簡」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "簡單"
+        },
+        {
+          "key": "B",
+          "text": "簡略"
+        },
+        {
+          "key": "C",
+          "text": "選拔"
+        },
+        {
+          "key": "D",
+          "text": "書簡"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-019",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「愚以為宮中之事，事無大小，悉以咨之」一句中的「愚」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "愚昧"
+        },
+        {
+          "key": "B",
+          "text": "我"
+        },
+        {
+          "key": "C",
+          "text": "愚弄"
+        },
+        {
+          "key": "D",
+          "text": "笨拙"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-020",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「必能裨補闕漏，有所廣益」一句中的「廣」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "廣泛"
+        },
+        {
+          "key": "B",
+          "text": "擴大"
+        },
+        {
+          "key": "C",
+          "text": "寬廣"
+        },
+        {
+          "key": "D",
+          "text": "增加"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-021",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「性行淑均，曉暢軍事」一句中的「淑」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "善良"
+        },
+        {
+          "key": "B",
+          "text": "溫柔"
+        },
+        {
+          "key": "C",
+          "text": "賢淑"
+        },
+        {
+          "key": "D",
+          "text": "美好"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-022",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「試用於昔日，先帝稱之曰能，是以眾議舉寵為督」一句中的「舉」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "舉薦"
+        },
+        {
+          "key": "B",
+          "text": "推舉"
+        },
+        {
+          "key": "C",
+          "text": "抬起"
+        },
+        {
+          "key": "D",
+          "text": "發動"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-023",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "「親賢臣，遠小人，此先漢所以興隆也」一句中的「興隆」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "興旺"
+        },
+        {
+          "key": "B",
+          "text": "發達"
+        },
+        {
+          "key": "C",
+          "text": "昌盛"
+        },
+        {
+          "key": "D",
+          "text": "繁榮"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-024",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "「親小人，遠賢臣，此後漢所以傾頹也」一句中的「頹」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "頹廢"
+        },
+        {
+          "key": "B",
+          "text": "衰落"
+        },
+        {
+          "key": "C",
+          "text": "倒下"
+        },
+        {
+          "key": "D",
+          "text": "消沉"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-025",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "「則漢室之隆，可計日而待也」一句中的「計」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "計算"
+        },
+        {
+          "key": "B",
+          "text": "估計"
+        },
+        {
+          "key": "C",
+          "text": "計謀"
+        },
+        {
+          "key": "D",
+          "text": "考慮"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-026",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "「不求聞達於諸侯」一句中的「達」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "抵達"
+        },
+        {
+          "key": "B",
+          "text": "通達"
+        },
+        {
+          "key": "C",
+          "text": "顯達"
+        },
+        {
+          "key": "D",
+          "text": "豁達"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-027",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "「後值傾覆，受任於敗軍之際」一句中的「值」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "價值"
+        },
+        {
+          "key": "B",
+          "text": "值得"
+        },
+        {
+          "key": "C",
+          "text": "正值"
+        },
+        {
+          "key": "D",
+          "text": "遇上"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-028",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "「奉命於危難之間，爾來二十有一年矣」一句中的「奉」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "供奉"
+        },
+        {
+          "key": "B",
+          "text": "奉承"
+        },
+        {
+          "key": "C",
+          "text": "接受"
+        },
+        {
+          "key": "D",
+          "text": "侍奉"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-029",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "「先帝知臣謹慎，故臨崩寄臣以大事也」一句中的「臨」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "面臨"
+        },
+        {
+          "key": "B",
+          "text": "靠近"
+        },
+        {
+          "key": "C",
+          "text": "對着"
+        },
+        {
+          "key": "D",
+          "text": "將要"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-030",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "「今南方已定，兵甲已足」一句中的「甲」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "盔甲"
+        },
+        {
+          "key": "B",
+          "text": "第一"
+        },
+        {
+          "key": "C",
+          "text": "甲蟲"
+        },
+        {
+          "key": "D",
+          "text": "指甲"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-031",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "「至於斟酌損益，進盡忠言，則攸之、禕、允之任也」一句中的「任」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "任務"
+        },
+        {
+          "key": "B",
+          "text": "責任"
+        },
+        {
+          "key": "C",
+          "text": "任職"
+        },
+        {
+          "key": "D",
+          "text": "擔任"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-032",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 7,
+      "difficulty": "basic",
+      "stem": "「不效，則治臣之罪，以告先帝之靈」一句中的「治」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "治理"
+        },
+        {
+          "key": "B",
+          "text": "醫治"
+        },
+        {
+          "key": "C",
+          "text": "懲治"
+        },
+        {
+          "key": "D",
+          "text": "整治"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-033",
+      "unit": "chushibiao",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 7,
+      "difficulty": "basic",
+      "stem": "「陛下亦宜自謀，以諮諏善道，察納雅言」一句中的「察」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "觀察"
+        },
+        {
+          "key": "B",
+          "text": "考察"
+        },
+        {
+          "key": "C",
+          "text": "明察"
+        },
+        {
+          "key": "D",
+          "text": "省察"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    }
+  ]
+}

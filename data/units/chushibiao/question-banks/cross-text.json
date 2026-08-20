@@ -1,0 +1,97 @@
+{
+  "unit": "chushibiao",
+  "bank": "cross-text",
+  "questions": [
+    {
+      "id": "cb-cross-001",
+      "unit": "chushibiao",
+      "ability": "跨篇比較",
+      "knowledge_point": "與廉頗藺相如列傳運用相同修辭手法的句子",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "以下哪一句與「臣本布衣，躬耕於南陽，苟全性命於亂世，不求聞達於諸侯」（《出師表》）運用了相同的修辭手法？",
+      "cross_text_target": "lianpo-linxiangru",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "臣知欺大王之罪當誅，臣請就湯鑊。（《廉頗藺相如列傳》（節錄））"
+        },
+        {
+          "key": "B",
+          "text": "卒廷見相如，畢禮而歸之。（《廉頗藺相如列傳》（節錄））"
+        },
+        {
+          "key": "C",
+          "text": "廉頗聞之，肉袒負荊，因賓客至藺相如門謝罪。（《廉頗藺相如列傳》（節錄））"
+        },
+        {
+          "key": "D",
+          "text": "秦王與羣臣相視而嘻。（《廉頗藺相如列傳》（節錄））"
+        }
+      ],
+      "answer": "A",
+      "explanation": "「臣本布衣……不求聞達於諸侯」以自謙的口吻自陳身世與心志，句式對稱、語氣懇切；A項「臣知欺大王之罪當誅，臣請就湯鑊」同樣以「臣」自稱，語氣懇切地自陳心跡，兩者風格相近。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-cross-002",
+      "unit": "chushibiao",
+      "ability": "跨篇比較",
+      "knowledge_point": "諸葛亮與藺相如的忠君愛國之心",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "《出師表》中的諸葛亮，與《史記．廉頗藺相如列傳》（節錄）中的藺相如，同樣展現出忠君愛國之心。試比較兩人表現忠誠的方式有何不同。",
+      "cross_text_target": "lianpo-linxiangru",
+      "score": 6,
+      "scoring_elements": [
+        "諸葛亮的忠誠表現於竭誠輔佐幼主、鞠躬盡瘁：他自陳「受命以來，夙夜憂歎」的忠勤，並表明「北定中原」「興復漢室」的決心，以出師表志（2分）",
+        "他又反覆勸勉後主親賢臣、遠小人，藉治國建議展現對國家長遠發展的關懷（1分）",
+        "藺相如的忠誠則表現於外交場合上的智勇雙全：他在「完璧歸趙」中冒死智取和氏璧，在「澠池之會」中以死相脅維護趙王尊嚴，直接以行動捍衛國家利益（2分）",
+        "他又以「先國家之急而後私讎」的胸襟，處處忍讓廉頗，避免將相不和危害國家（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-cross-003",
+      "unit": "chushibiao",
+      "ability": "跨篇比較",
+      "knowledge_point": "諸葛亮的君子特質與論語君子形象的對照",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "《論語．論君子》中提到「君子求諸己」「君子成人之美」等品格。試從《出師表》中舉出具體例子，說明諸葛亮的言行如何體現《論語》中的君子形象。",
+      "cross_text_target": "lunyu-renxiaojunzi",
+      "score": 4,
+      "scoring_elements": [
+        "諸葛亮自述「受命以來，夙夜憂歎，恐託付不效，以傷先帝之明」，可見他嚴格要求自己完成使命，不諉過於人，體現「君子求諸己」的精神（2分）",
+        "他又推薦郭攸之、費禕、董允、向寵等賢能之士予後主重用，成就他人建功立業的機會，體現「君子成人之美」的胸襟（2分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-cross-004",
+      "unit": "chushibiao",
+      "ability": "跨篇比較",
+      "knowledge_point": "出師表與六國論的借鑑手法比較",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "諸葛亮在《出師表》以先漢、後漢的興衰為鑑勸勉後主；蘇洵在《六國論》則以六國破滅的歷史警惕北宋君主。試比較兩篇文章運用歷史借鑑的手法有何異同。",
+      "cross_text_target": "liuguolun",
+      "score": 6,
+      "scoring_elements": [
+        "同：兩篇文章都借古鑑今，以歷史教訓勸諫在位者施政應有的取向（2分）",
+        "異：《出師表》以「親賢臣，遠小人」的先漢後漢對比，作為勸諫後主用人施政的直接建議，語氣懇切委婉，屬於君臣之間的直接進言（2分）",
+        "《六國論》則以六國破滅「弊在賂秦」的歷史，借古諷今，暗諷北宋對外賂遼夏以求苟安的政策，屬於借題發揮的史論，語氣較為含蓄婉轉，未有直接點明現實所指（2分）"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}

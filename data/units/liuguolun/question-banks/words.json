@@ -1,0 +1,839 @@
+{
+  "unit": "liuguolun",
+  "bank": "words",
+  "questions": [
+    {
+      "id": "lg-words-001",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "虛詞辨析：與",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "「與」是常見的文言字詞，以下哪一句中的「與」字，與「夫六國與秦皆諸侯」（《六國論》）一句中，「與」字的用法最接近？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "富與貴，是人之所欲也。（《論仁論孝論君子》）"
+        },
+        {
+          "key": "B",
+          "text": "嘑爾而與之，行道之人弗受。（《魚我所欲也》）"
+        },
+        {
+          "key": "C",
+          "text": "為宮室之美、妻妾之奉、所識窮乏者得我與？（《魚我所欲也》）"
+        },
+        {
+          "key": "D",
+          "text": "微斯人，吾誰與歸？（《岳陽樓記》）"
+        }
+      ],
+      "answer": "A",
+      "explanation": "「夫六國與秦皆諸侯」的「與」是連詞，解「和、跟」；A項「富與貴」的「與」同樣是連詞，解「和」。B項「與」是動詞，解「給予」；C項「與」通「歟」，是語氣助詞；D項「與」解「跟從」。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-002",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「六國破滅，非兵不利，戰不善」一句中的「兵」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "兵器"
+        },
+        {
+          "key": "B",
+          "text": "戰士"
+        },
+        {
+          "key": "C",
+          "text": "軍隊"
+        },
+        {
+          "key": "D",
+          "text": "軍事"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-003",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「弊在賂秦」一句中的「弊」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "罪行"
+        },
+        {
+          "key": "B",
+          "text": "害處"
+        },
+        {
+          "key": "C",
+          "text": "弊病"
+        },
+        {
+          "key": "D",
+          "text": "敗壞"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-004",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「賂秦而力虧，破滅之道也」一句中的「道」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "道路"
+        },
+        {
+          "key": "B",
+          "text": "道理"
+        },
+        {
+          "key": "C",
+          "text": "方法"
+        },
+        {
+          "key": "D",
+          "text": "技巧"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-005",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「六國互喪，率賂秦耶」一句中的「喪」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "失去"
+        },
+        {
+          "key": "B",
+          "text": "死亡"
+        },
+        {
+          "key": "C",
+          "text": "消耗"
+        },
+        {
+          "key": "D",
+          "text": "滅亡"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-006",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「六國互喪，率賂秦耶」一句中的「率」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "大概"
+        },
+        {
+          "key": "B",
+          "text": "將帥"
+        },
+        {
+          "key": "C",
+          "text": "全部"
+        },
+        {
+          "key": "D",
+          "text": "坦白"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-007",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「蓋失強援，不能獨完」一句中的「完」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "保全"
+        },
+        {
+          "key": "B",
+          "text": "完善"
+        },
+        {
+          "key": "C",
+          "text": "完結"
+        },
+        {
+          "key": "D",
+          "text": "整理"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-008",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「較秦之所得，與戰勝而得者，其實百倍」一句中的「實」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "財物"
+        },
+        {
+          "key": "B",
+          "text": "實際情況"
+        },
+        {
+          "key": "C",
+          "text": "堅實"
+        },
+        {
+          "key": "D",
+          "text": "確實"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-009",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「諸侯之所亡，與戰敗而亡者，其實亦百倍」一句中的「亡」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "逃亡"
+        },
+        {
+          "key": "B",
+          "text": "沒有"
+        },
+        {
+          "key": "C",
+          "text": "滅亡"
+        },
+        {
+          "key": "D",
+          "text": "喪失"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-010",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「則秦之所大欲，諸侯之所大患」一句中的「欲」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "需要"
+        },
+        {
+          "key": "B",
+          "text": "期望"
+        },
+        {
+          "key": "C",
+          "text": "慾望"
+        },
+        {
+          "key": "D",
+          "text": "愛好"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-011",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「思厥先祖父，暴霜露，斬荊棘」一句中的「暴」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "猛烈"
+        },
+        {
+          "key": "B",
+          "text": "暴露"
+        },
+        {
+          "key": "C",
+          "text": "抵抗"
+        },
+        {
+          "key": "D",
+          "text": "突然"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-012",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「子孫視之不甚惜，舉以予人」一句中的「舉」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "雙手捧着"
+        },
+        {
+          "key": "B",
+          "text": "提出"
+        },
+        {
+          "key": "C",
+          "text": "推選"
+        },
+        {
+          "key": "D",
+          "text": "攻克"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-013",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「起視四境，而秦兵又至矣」一句中的「境」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "處所"
+        },
+        {
+          "key": "B",
+          "text": "邊境"
+        },
+        {
+          "key": "C",
+          "text": "環境"
+        },
+        {
+          "key": "D",
+          "text": "境況"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-014",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「然則諸侯之地有限，暴秦之欲無厭」一句中的「暴」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "急躁的"
+        },
+        {
+          "key": "B",
+          "text": "強暴的"
+        },
+        {
+          "key": "C",
+          "text": "厲害的"
+        },
+        {
+          "key": "D",
+          "text": "傲慢的"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-015",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「奉之彌繁，侵之愈急」一句中的「彌」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "充滿"
+        },
+        {
+          "key": "B",
+          "text": "長久"
+        },
+        {
+          "key": "C",
+          "text": "遍佈"
+        },
+        {
+          "key": "D",
+          "text": "更加"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-016",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「故不戰而強弱勝負已判矣」一句中的「判」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "判決"
+        },
+        {
+          "key": "B",
+          "text": "分辨"
+        },
+        {
+          "key": "C",
+          "text": "一分為二"
+        },
+        {
+          "key": "D",
+          "text": "明顯"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-017",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「至於顛覆，理固宜然」一句中的「固」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "鞏固"
+        },
+        {
+          "key": "B",
+          "text": "堅定"
+        },
+        {
+          "key": "C",
+          "text": "本來"
+        },
+        {
+          "key": "D",
+          "text": "當然"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-018",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「以地事秦，猶抱薪救火」一句中的「事」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "侍奉"
+        },
+        {
+          "key": "B",
+          "text": "任用"
+        },
+        {
+          "key": "C",
+          "text": "從事"
+        },
+        {
+          "key": "D",
+          "text": "治理"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-019",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「五國既喪，齊亦不免矣」一句中的「免」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "避開"
+        },
+        {
+          "key": "B",
+          "text": "脫去"
+        },
+        {
+          "key": "C",
+          "text": "倖免"
+        },
+        {
+          "key": "D",
+          "text": "罷黜"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-020",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「至丹以荊卿為計，始速禍焉」一句中的「速」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "邀請"
+        },
+        {
+          "key": "B",
+          "text": "速度"
+        },
+        {
+          "key": "C",
+          "text": "迅速"
+        },
+        {
+          "key": "D",
+          "text": "招致"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-021",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「後秦擊趙者再，李牧連卻之」一句中的「卻」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "擊退"
+        },
+        {
+          "key": "B",
+          "text": "推辭"
+        },
+        {
+          "key": "C",
+          "text": "停止"
+        },
+        {
+          "key": "D",
+          "text": "後退"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-022",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「則勝負之數，存亡之理，當與秦相較，或未易量」一句中的「理」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "治理"
+        },
+        {
+          "key": "B",
+          "text": "區分"
+        },
+        {
+          "key": "C",
+          "text": "因數"
+        },
+        {
+          "key": "D",
+          "text": "法理"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-023",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「以事秦之心，禮天下之奇才」一句中的「禮」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "禮遇"
+        },
+        {
+          "key": "B",
+          "text": "禮貌"
+        },
+        {
+          "key": "C",
+          "text": "法度"
+        },
+        {
+          "key": "D",
+          "text": "祭神"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-024",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「日削月割，以趨於亡」一句中的「趨」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "趨勢"
+        },
+        {
+          "key": "B",
+          "text": "跑"
+        },
+        {
+          "key": "C",
+          "text": "催促"
+        },
+        {
+          "key": "D",
+          "text": "走向"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-025",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「為國者無使為積威之所劫哉」一句中的「劫」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "搶奪"
+        },
+        {
+          "key": "B",
+          "text": "劫難"
+        },
+        {
+          "key": "C",
+          "text": "脅迫"
+        },
+        {
+          "key": "D",
+          "text": "破壞"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-words-026",
+      "unit": "liuguolun",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "「其勢弱於秦，而猶有可以不賂而勝之之勢」一句中的「勢」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "氣勢"
+        },
+        {
+          "key": "B",
+          "text": "形勢"
+        },
+        {
+          "key": "C",
+          "text": "力量"
+        },
+        {
+          "key": "D",
+          "text": "權勢"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    }
+  ]
+}

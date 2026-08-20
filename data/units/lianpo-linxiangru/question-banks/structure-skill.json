@@ -1,0 +1,43 @@
+{
+  "unit": "lianpo-linxiangru",
+  "bank": "structure-skill",
+  "questions": [
+    {
+      "id": "lp-skill-001",
+      "unit": "lianpo-linxiangru",
+      "ability": "結構與手法",
+      "knowledge_point": "對比手法塑造相如形象",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "《史記‧廉頗藺相如列傳》（節錄）多處運用對比手法塑造人物形象。試以藺相如面對秦王和面對廉頗的不同表現為例，加以說明。",
+      "score": 5,
+      "scoring_elements": [
+        "藺相如面對秦王時，展現出勇武無畏的一面（1分）",
+        "如在「完璧歸趙」中，他怒斥秦王貪婪失信，甚至以「頭今與璧俱碎於柱矣」相脅（1分）",
+        "在「澠池之會」中，他更以「五步之內，相如請得以頸血濺大王矣」逼使秦王擊缻（1分）",
+        "然而面對廉頗的挑釁，相如卻處處忍讓，稱病不朝，望見廉頗即引車避匿（1分）",
+        "兩種截然不同的態度形成強烈對比，更能突顯相如以國家利益為重、公而忘私的胸襟，而非懼怕廉頗（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-skill-002",
+      "unit": "lianpo-linxiangru",
+      "ability": "結構與手法",
+      "knowledge_point": "煉字之妙：視與度",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "《史記‧廉頗藺相如列傳》（節錄）中，司馬遷善於煉字，如「相如視秦王無意償趙城」的「視」字，與「相如度秦王特以詐佯為予趙城」、「相如度秦王雖齋，決負約不償城」的兩個「度」字。試比較這兩個字的作用有何不同。",
+      "score": 4,
+      "answer_elements": [
+        "「視」字：表達相如對秦王神態、舉止的敏銳觀察和即時判斷（1分），見其反應機敏（1分）",
+        "「度」字：表達相如對秦王往後行為的深思熟慮和推測（1分），見其考慮周詳、料事如神（1分）"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}

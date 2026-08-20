@@ -1,0 +1,1063 @@
+{
+  "unit": "lianpo-linxiangru",
+  "bank": "words",
+  "questions": [
+    {
+      "id": "lp-words-001",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "虛詞辨析：不忍",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": 7,
+      "difficulty": "advanced",
+      "stem": "以下哪句的「不忍」跟「且相如素賤人，吾羞，不忍為之下」（第7段）一句中的「不忍」一詞的語意相近？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "先王有不忍人之心，斯有不忍人之政。"
+        },
+        {
+          "key": "B",
+          "text": "吾騎此馬五歲，所當無敵，嘗一日行千里，不忍殺之。"
+        },
+        {
+          "key": "C",
+          "text": "予初閱時，不忍釋卷。"
+        },
+        {
+          "key": "D",
+          "text": "小不忍則亂大謀。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "「不忍為之下」的「不忍」解「不能忍受、不甘心」；D項「小不忍」的「不忍」同樣解「不能忍受」的心理狀態。A項「不忍人之心」解「憐憫、不忍傷害他人之心」；B、C項「不忍」解「捨不得」。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-002",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "虛詞辨析：亡",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": 3,
+      "difficulty": "advanced",
+      "stem": "以下哪句的「亡」字跟「懷其璧，從徑道亡」（第3段）一句中的「亡」字的語意相同？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "臧與穀二人相與牧羊，而俱亡其羊。"
+        },
+        {
+          "key": "B",
+          "text": "今君乃亡趙走燕，燕畏趙，其勢必不敢留君。"
+        },
+        {
+          "key": "C",
+          "text": "國家將亡，必有妖孽。"
+        },
+        {
+          "key": "D",
+          "text": "儉節則昌，淫佚則亡。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "「從徑道亡」的「亡」解「逃離、出走」；B項「亡趙走燕」的「亡」同樣解「逃離」。A項「亡」解「丟失」；C、D項「亡」解「滅亡」。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-003",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "解釋粗體字",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據《史記‧廉頗藺相如列傳》（節錄）一文，解釋以下文句中粗體字的意思。",
+      "score": 2,
+      "items": [
+        {
+          "text": "臣嘗從大王與燕王會境上。",
+          "target": "從",
+          "answer": "跟從"
+        },
+        {
+          "text": "均之二策，寧許以負秦曲。",
+          "target": "曲",
+          "answer": "理虧"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-004",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "解釋粗體字",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據《史記‧廉頗藺相如列傳》（節錄）一文，解釋以下文句中粗體字的意思。",
+      "score": 2,
+      "items": [
+        {
+          "text": "計未定，求人可使報秦者，未得。",
+          "target": "使",
+          "answer": "出使"
+        },
+        {
+          "text": "相如度秦王特以詐佯為予趙城，實不可得。",
+          "target": "度",
+          "answer": "估計、揣度"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-005",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "解釋粗體字",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據《史記‧廉頗藺相如列傳》（節錄）一文，解釋以下文句中粗體字的意思。",
+      "score": 2,
+      "items": [
+        {
+          "text": "唯大王與羣臣孰計議之！",
+          "target": "孰",
+          "answer": "仔細、詳細"
+        },
+        {
+          "text": "於是秦王不懌，為一擊缻。",
+          "target": "懌",
+          "answer": "高興、喜悅"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-006",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "解釋粗體字",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據《史記‧廉頗藺相如列傳》（節錄）一文，解釋以下文句中粗體字的意思。",
+      "score": 2,
+      "items": [
+        {
+          "text": "卒廷見相如，畢禮而歸之。",
+          "target": "卒",
+          "answer": "終於"
+        },
+        {
+          "text": "今兩虎共鬥，其勢不俱生。",
+          "target": "今",
+          "answer": "假設、如果"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-007",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "解釋粗體字",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據《史記‧廉頗藺相如列傳》（節錄）一文，解釋以下文句中粗體字的意思。",
+      "score": 5,
+      "items": [
+        {
+          "text": "秦自繆公以來二十餘君，未嘗有堅明約束者也。",
+          "target": "約束",
+          "answer": "盟約"
+        },
+        {
+          "text": "已而相如出，望見廉頗，相如引車避匿。",
+          "target": "已而",
+          "answer": "不久"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-008",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「趙將，伐齊，大破之」一句中的「破」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "打敗"
+        },
+        {
+          "key": "B",
+          "text": "毀滅"
+        },
+        {
+          "key": "C",
+          "text": "破除"
+        },
+        {
+          "key": "D",
+          "text": "突破"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-009",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「取陽晉，拜為上卿，以勇氣聞於諸侯」一句中的「拜」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "再見"
+        },
+        {
+          "key": "B",
+          "text": "拜訪"
+        },
+        {
+          "key": "C",
+          "text": "授予官職"
+        },
+        {
+          "key": "D",
+          "text": "祝賀"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-010",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「秦昭王聞之，使人遺趙王書」一句中的「遺」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "送給"
+        },
+        {
+          "key": "B",
+          "text": "拋棄"
+        },
+        {
+          "key": "C",
+          "text": "忘記"
+        },
+        {
+          "key": "D",
+          "text": "遺留"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-011",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「願以十五城請易璧」一句中的「易」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "容易"
+        },
+        {
+          "key": "B",
+          "text": "交換"
+        },
+        {
+          "key": "C",
+          "text": "平和"
+        },
+        {
+          "key": "D",
+          "text": "蔓延"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-012",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「趙王與大將軍廉頗諸大臣謀」一句中的「謀」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "主意"
+        },
+        {
+          "key": "B",
+          "text": "圖謀"
+        },
+        {
+          "key": "C",
+          "text": "策略"
+        },
+        {
+          "key": "D",
+          "text": "商議"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-013",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「欲予秦，秦城恐不可得」一句中的「予」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "我"
+        },
+        {
+          "key": "B",
+          "text": "送給"
+        },
+        {
+          "key": "C",
+          "text": "讚許"
+        },
+        {
+          "key": "D",
+          "text": "售賣"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-014",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「秦城恐不可得，徒見欺」一句中的「見」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "看法"
+        },
+        {
+          "key": "B",
+          "text": "遇見"
+        },
+        {
+          "key": "C",
+          "text": "被"
+        },
+        {
+          "key": "D",
+          "text": "發現"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-015",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「欲勿予，即患秦兵之來」一句中的「患」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "憂患"
+        },
+        {
+          "key": "B",
+          "text": "生病"
+        },
+        {
+          "key": "C",
+          "text": "禍害"
+        },
+        {
+          "key": "D",
+          "text": "擔心"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-016",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「計未定，求人可使報秦者，未得」一句中的「計」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "計算"
+        },
+        {
+          "key": "B",
+          "text": "生計"
+        },
+        {
+          "key": "C",
+          "text": "計策"
+        },
+        {
+          "key": "D",
+          "text": "考核"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-017",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「臣舍人藺相如可使」一句中的「使」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "使用"
+        },
+        {
+          "key": "B",
+          "text": "出使"
+        },
+        {
+          "key": "C",
+          "text": "聽從"
+        },
+        {
+          "key": "D",
+          "text": "派遣"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-018",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「臣嘗有罪，竊計欲亡走燕」一句中的「計」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "算賬"
+        },
+        {
+          "key": "B",
+          "text": "計算"
+        },
+        {
+          "key": "C",
+          "text": "計策"
+        },
+        {
+          "key": "D",
+          "text": "打算"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-019",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「臣舍人相如止臣」一句中的「止」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "阻止"
+        },
+        {
+          "key": "B",
+          "text": "停止"
+        },
+        {
+          "key": "C",
+          "text": "留住"
+        },
+        {
+          "key": "D",
+          "text": "僅"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-020",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「君不如肉袒伏斧質請罪，則幸得脫矣」一句中的「脫」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "脫離"
+        },
+        {
+          "key": "B",
+          "text": "除掉"
+        },
+        {
+          "key": "C",
+          "text": "赦免"
+        },
+        {
+          "key": "D",
+          "text": "逃走"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-021",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「均之二策，寧許以負秦曲」一句中的「負」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "倚仗"
+        },
+        {
+          "key": "B",
+          "text": "承擔"
+        },
+        {
+          "key": "C",
+          "text": "享有"
+        },
+        {
+          "key": "D",
+          "text": "拖欠"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-022",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「相如曰：『王必無人，臣願奉璧往使。』」一句中的「必」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "果真"
+        },
+        {
+          "key": "B",
+          "text": "保證"
+        },
+        {
+          "key": "C",
+          "text": "必須"
+        },
+        {
+          "key": "D",
+          "text": "肯定"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-023",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「秦王坐章台見相如，相如奉璧奏秦王」一句中的「奏」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "演奏"
+        },
+        {
+          "key": "B",
+          "text": "取得"
+        },
+        {
+          "key": "C",
+          "text": "進獻"
+        },
+        {
+          "key": "D",
+          "text": "走進"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-024",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「秦貪，負其彊，以空言求璧」一句中的「負」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "享有"
+        },
+        {
+          "key": "B",
+          "text": "憑藉"
+        },
+        {
+          "key": "C",
+          "text": "辜負"
+        },
+        {
+          "key": "D",
+          "text": "承擔"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-025",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「嚴大國之威以修敬也」一句中的「嚴」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "嚴密"
+        },
+        {
+          "key": "B",
+          "text": "厲害"
+        },
+        {
+          "key": "C",
+          "text": "尊重"
+        },
+        {
+          "key": "D",
+          "text": "整飭"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-026",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「秦王恐其破璧，乃辭謝固請，召有司案圖」一句中的「案」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "考查"
+        },
+        {
+          "key": "B",
+          "text": "案卷"
+        },
+        {
+          "key": "C",
+          "text": "案件"
+        },
+        {
+          "key": "D",
+          "text": "憑依"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-027",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「相如度秦王特以詐佯為予趙城，實不可得」一句中的「度」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "量度"
+        },
+        {
+          "key": "B",
+          "text": "計較"
+        },
+        {
+          "key": "C",
+          "text": "打算"
+        },
+        {
+          "key": "D",
+          "text": "估計"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-028",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「相如度秦王特以詐佯為予趙城，實不可得」一句中的「佯」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "詳細"
+        },
+        {
+          "key": "B",
+          "text": "假裝"
+        },
+        {
+          "key": "C",
+          "text": "說明"
+        },
+        {
+          "key": "D",
+          "text": "審慎"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-029",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "「三十日不還，則請立太子為王，以絕秦望」一句中的「立」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "站立"
+        },
+        {
+          "key": "B",
+          "text": "立刻"
+        },
+        {
+          "key": "C",
+          "text": "冊立"
+        },
+        {
+          "key": "D",
+          "text": "存在"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-030",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "「寡人竊聞趙王好音，請奏瑟」一句中的「竊」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "相近"
+        },
+        {
+          "key": "B",
+          "text": "抄襲"
+        },
+        {
+          "key": "C",
+          "text": "私下"
+        },
+        {
+          "key": "D",
+          "text": "危害"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-031",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "「左右欲刃相如，相如張目叱之，左右皆靡」一句中的「靡」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "倒退"
+        },
+        {
+          "key": "B",
+          "text": "順服"
+        },
+        {
+          "key": "C",
+          "text": "衰弱"
+        },
+        {
+          "key": "D",
+          "text": "分散"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-032",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 7,
+      "difficulty": "basic",
+      "stem": "「且庸人尚羞之，況於將相乎」一句中的「羞」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "怕"
+        },
+        {
+          "key": "B",
+          "text": "害羞"
+        },
+        {
+          "key": "C",
+          "text": "不願"
+        },
+        {
+          "key": "D",
+          "text": "羞恥"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-033",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "虛詞辨析：見",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": 2,
+      "difficulty": "advanced",
+      "stem": "以下哪句的「見」字跟「秦城恐不可得，徒見欺」（第2段）一句中的「見」字的語意相同？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "見賢思齊焉，見不賢而內自省。"
+        },
+        {
+          "key": "B",
+          "text": "百姓之不見保，為不用恩焉。"
+        },
+        {
+          "key": "C",
+          "text": "已而相如出，望見廉頗，相如引車避匿。"
+        },
+        {
+          "key": "D",
+          "text": "生孩六月，慈父見背。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "「徒見欺」的「見」是表示被動的助詞，解「被」；B項「不見保」的「見」同樣是被動助詞，解「不被保護」。A、C項「見」解「看見」；D項「見」用作偏指性副詞，指代「我」。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-words-034",
+      "unit": "lianpo-linxiangru",
+      "ability": "字詞",
+      "knowledge_point": "虛詞辨析：患",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": 2,
+      "difficulty": "advanced",
+      "stem": "以下哪句的「患」字跟「欲勿予，即患秦兵之來」（第2段）一句中的「患」字的語意不同？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "不患貧而患不均。"
+        },
+        {
+          "key": "B",
+          "text": "今子有大樹，患其無用。"
+        },
+        {
+          "key": "C",
+          "text": "漢王患之，乃用陳平計間項王。"
+        },
+        {
+          "key": "D",
+          "text": "則秦之所大欲，諸侯之所大患，固不在戰矣。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "「患秦兵之來」的「患」是動詞，解「擔心」；A、B、C三項的「患」同樣是動詞，解「擔心、憂慮」。D項「大患」的「患」是名詞，解「禍患」，詞性與原句不同。",
+      "source": "校本試題庫"
+    }
+  ]
+}

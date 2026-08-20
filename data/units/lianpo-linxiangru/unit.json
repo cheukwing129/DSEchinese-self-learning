@@ -1,0 +1,30 @@
+{
+  "id": "lianpo-linxiangru",
+  "title": "廉頗藺相如列傳（節錄）",
+  "author": "司馬遷",
+  "dynasty": "西漢",
+  "written_year": "節錄自《史記》列傳",
+  "genre": "史傳／紀傳體",
+  "status": "available",
+  "audio_file": "assets/audio/lian_po_lin_xiang_ru_lie_zhuan.mp3",
+  "modules": [
+    { "id": "text", "title": "原文與誦讀", "icon": "book" },
+    { "id": "words", "title": "字詞與句式", "icon": "characters" },
+    { "id": "comprehension", "title": "疏通文意", "icon": "translate" },
+    { "id": "analysis", "title": "結構與鑒賞", "icon": "structure" },
+    { "id": "theme", "title": "主旨與思考", "icon": "lightbulb" },
+    { "id": "memorisation", "title": "背誦精華", "icon": "memory" },
+    { "id": "challenge", "title": "核心篇章挑戰", "icon": "target" },
+    { "id": "progress", "title": "我的掌握", "icon": "chart" }
+  ],
+  "cross_text_targets": [
+    { "id": "chushibiao", "title": "出師表", "author": "諸葛亮" }
+  ],
+  "question_bank_files": [
+    "question-banks/words.json",
+    "question-banks/content.json",
+    "question-banks/structure-skill.json",
+    "question-banks/theme.json",
+    "question-banks/cross-text.json"
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "unit": "liuguolun",
+  "bank": "structure-skill",
+  "questions": [
+    {
+      "id": "lg-skill-001",
+      "unit": "liuguolun",
+      "ability": "結構與手法",
+      "knowledge_point": "以地事秦一句的修辭手法（多選）",
+      "question_type": "multi_select",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「以地事秦，猶抱薪救火，薪不盡，火不滅。」一句運用了以下哪些修辭手法？（答案可選多於一個）",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "設問"
+        },
+        {
+          "key": "B",
+          "text": "反問"
+        },
+        {
+          "key": "C",
+          "text": "引用"
+        },
+        {
+          "key": "D",
+          "text": "明喻"
+        },
+        {
+          "key": "E",
+          "text": "借喻"
+        }
+      ],
+      "answer": [
+        "C",
+        "D"
+      ],
+      "explanation": "這句話引自古人之言（引用），並以「猶」帶出「以地事秦」與「抱薪救火」的比較，屬明喻。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-skill-002",
+      "unit": "liuguolun",
+      "ability": "結構與手法",
+      "knowledge_point": "修辭手法配對",
+      "question_type": "matching",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "以下引文分別運用了哪種修辭手法？",
+      "score": 3,
+      "options": [
+        {
+          "key": "A",
+          "text": "借代"
+        },
+        {
+          "key": "B",
+          "text": "借喻"
+        },
+        {
+          "key": "C",
+          "text": "對偶"
+        },
+        {
+          "key": "D",
+          "text": "誇張"
+        },
+        {
+          "key": "E",
+          "text": "排比"
+        }
+      ],
+      "rows": [
+        {
+          "text": "暴霜露，斬荊棘。",
+          "answer": "C"
+        },
+        {
+          "text": "今日割五城，明日割十城，然後得一夕安寢。",
+          "answer": "D"
+        },
+        {
+          "text": "與嬴而不助五國也。",
+          "answer": "A"
+        }
+      ],
+      "note": "「嬴」借代秦國（借代）；「暴霜露，斬荊棘」句式對稱（對偶）；「今日割五城，明日割十城」誇大割地的頻密與急速（誇張）。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-skill-003",
+      "unit": "liuguolun",
+      "ability": "結構與手法",
+      "knowledge_point": "抗秦方法（多選）",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據《六國論》和《史記．廉頗藺相如列傳》（節錄）的內容，回答以下問題：蘇洵在《六國論》中提出哪些抗秦的方法？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "派出刺客"
+        },
+        {
+          "key": "B",
+          "text": "禮賢下士"
+        },
+        {
+          "key": "C",
+          "text": "拒絕賄賂"
+        },
+        {
+          "key": "D",
+          "text": "改良武器"
+        }
+      ],
+      "answer": "C",
+      "note": "原題另附延伸跨篇問題，比較《六國論》的抗秦策略與《廉頗藺相如列傳》中廉藺二人守護趙國的方式，見跨篇比較題庫。",
+      "source": "校本試題庫"
+    }
+  ]
+}

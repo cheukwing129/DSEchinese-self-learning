@@ -1,0 +1,407 @@
+{
+  "unit": "chushibiao",
+  "bank": "content",
+  "questions": [
+    {
+      "id": "cb-content-001",
+      "unit": "chushibiao",
+      "ability": "內容理解",
+      "knowledge_point": "蜀國危急存亡的原因",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "諸葛亮在《出師表》開首指出蜀國正處於「危急存亡之秋」。試根據首段內容，以自己的文句完成下表，說明蜀國面對的內憂外患。",
+      "score": 4,
+      "table": {
+        "columns": [
+          "",
+          "內容"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "先帝方面",
+              null
+            ]
+          },
+          {
+            "cells": [
+              "國家形勢方面",
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "先帝方面：先帝未完成統一天下的大業就中途去世（2分）。",
+        "國家形勢方面：如今天下形成魏、蜀、吳三國鼎立的局面，而蜀漢國力疲弱（2分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-002",
+      "unit": "chushibiao",
+      "ability": "內容理解",
+      "knowledge_point": "蜀漢朝臣忠心的原因",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "諸葛亮指出「侍衞之臣，不懈於內；忠志之士，忘身於外者」，這是因為甚麼原因？",
+      "score": 2,
+      "answer_elements": [
+        "這些臣子將士感念先帝生前給予他們特別優厚的待遇（1分）",
+        "希望能夠報答先帝的恩德，因此對後主忠心耿耿、盡忠職守（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-003",
+      "unit": "chushibiao",
+      "ability": "內容理解",
+      "knowledge_point": "作者提出開張聖聽建議的目的",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "諸葛亮在《出師表》中建議後主「開張聖聽」，這樣做的目的是甚麼？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "勉勵後主發憤圖強"
+        },
+        {
+          "key": "B",
+          "text": "希望後主有所警惕"
+        },
+        {
+          "key": "C",
+          "text": "促使後主明智從政"
+        },
+        {
+          "key": "D",
+          "text": "強調自己忠於後主"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-004",
+      "unit": "chushibiao",
+      "ability": "內容理解",
+      "knowledge_point": "陟罰臧否不宜異同的原因與具體做法",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "諸葛亮認為「陟罰臧否，不宜異同」，試說明他提出這個建議的原因，並指出他建議後主怎樣具體落實這個做法。",
+      "score": 4,
+      "answer_elements": [
+        "原因：宮中和相府同屬一個整體，如果宮中和相府的賞罰準則不一致，會令人覺得後主偏私，難以令人信服（2分）",
+        "具體做法：若有人為非作歹、觸犯法紀，或盡忠行善，應交由主管官吏判定應得的刑罰或獎賞，以此彰顯後主治理國家公正嚴明（2分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-005",
+      "unit": "chushibiao",
+      "ability": "內容理解",
+      "knowledge_point": "推薦郭攸之等人的原因",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "諸葛亮向後主推薦郭攸之、費禕、董允等人，原因是甚麼？他建議後主怎樣任用這些人？",
+      "score": 4,
+      "answer_elements": [
+        "原因：這些人善良誠實，志向和心思都忠誠純正，是先帝經過選拔後留給後主任用的人才（2分）",
+        "任用方式：建議後主宮中大小事務都要諮詢他們，然後才推行，這樣必定能夠彌補疏失、有更多的益處（2分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-006",
+      "unit": "chushibiao",
+      "ability": "內容理解",
+      "knowledge_point": "推薦向寵的原因",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "諸葛亮向後主推薦將軍向寵，以下哪一項不是他推薦向寵的原因？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "性格和善，為人公正"
+        },
+        {
+          "key": "B",
+          "text": "熟悉軍事，曾獲先帝稱許"
+        },
+        {
+          "key": "C",
+          "text": "眾人商議後推舉他擔任要職"
+        },
+        {
+          "key": "D",
+          "text": "與諸葛亮相交深厚，互相信任"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-007",
+      "unit": "chushibiao",
+      "ability": "內容理解",
+      "knowledge_point": "先漢後漢興衰的原因對比",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "諸葛亮以先漢、後漢的興衰為鑑，勸勉後主親賢遠佞。試根據內容，以自己的文句完成下表。",
+      "score": 4,
+      "table": {
+        "columns": [
+          "",
+          "為政取向",
+          "結果"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "先漢",
+              "親近賢臣，疏遠小人。",
+              null
+            ]
+          },
+          {
+            "cells": [
+              "後漢",
+              null,
+              "國勢傾頹衰亡。"
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "先漢結果：國家興盛昌隆（2分）。",
+        "後漢為政取向：親近小人，疏遠賢臣（2分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-008",
+      "unit": "chushibiao",
+      "ability": "內容理解",
+      "knowledge_point": "諸葛亮出仕輔佐先帝的原因",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "諸葛亮在《出師表》中自述本來的志向和出仕輔佐先帝的原因。以下哪一項最能概括他答應「許先帝以驅馳」的原因？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "有感國難當前，挺身而出"
+        },
+        {
+          "key": "B",
+          "text": "報答劉備對自己的信任"
+        },
+        {
+          "key": "C",
+          "text": "認為劉備是可以效命的仁主"
+        },
+        {
+          "key": "D",
+          "text": "感激劉備屈尊拜訪的誠意"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-009",
+      "unit": "chushibiao",
+      "ability": "內容理解",
+      "knowledge_point": "受命以來的心情與具體行動",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "諸葛亮自「先帝知臣謹慎，故臨崩寄臣以大事也」起，回顧自己受命以來的心情和作為。試分別說明。",
+      "score": 4,
+      "answer_elements": [
+        "心情：他自受命以來，日夜憂慮歎息，擔心自己不能完成先帝的託付，以致辜負先帝的知人之明（2分）",
+        "作為：因此他於五月渡過瀘水，深入不長草木的荒僻之地平定南方叛亂，如今南方已經平定，兵員武器已經充足（2分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-010",
+      "unit": "chushibiao",
+      "ability": "內容理解",
+      "knowledge_point": "北伐的目的",
+      "question_type": "extract_sentence",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "諸葛亮北伐的目的是甚麼？試摘錄有關原文。",
+      "score": 2,
+      "answer_text": "興復漢室，還於舊都。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-011",
+      "unit": "chushibiao",
+      "ability": "內容理解",
+      "knowledge_point": "三個責任的分工",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": 7,
+      "difficulty": "basic",
+      "stem": "諸葛亮在文末總結了君臣三方各自的責任。試根據第七段的內容，以自己的文句完成下表。",
+      "score": 6,
+      "table": {
+        "columns": [
+          "人物",
+          "責任"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "諸葛亮",
+              "討伐奸賊、興復漢室。"
+            ]
+          },
+          {
+            "cells": [
+              "郭攸之、費禕、董允等",
+              null
+            ]
+          },
+          {
+            "cells": [
+              "後主",
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "郭攸之、費禕、董允等的責任：向後主提出興盛道德的忠言（2分）。",
+        "後主的責任：自行謀劃國事，詢問治國的良策，明察和採納正確的言論，並深切追念先帝的遺詔（2分，答對其中兩項即可）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-012",
+      "unit": "chushibiao",
+      "ability": "內容理解",
+      "knowledge_point": "後主的缺失",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據諸葛亮在《出師表》中對後主作出的勸諫，反映出後主可能有以下哪項缺失？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "少不更事"
+        },
+        {
+          "key": "B",
+          "text": "過於自信"
+        },
+        {
+          "key": "C",
+          "text": "易受蒙蔽"
+        },
+        {
+          "key": "D",
+          "text": "胸無大志"
+        }
+      ],
+      "answer": "C",
+      "note": "原始試題庫此題標記不夠清晰，經與教師確認後，按單選題處理，答案定為「易受蒙蔽」。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-013",
+      "unit": "chushibiao",
+      "ability": "內容理解",
+      "knowledge_point": "是非判斷（一）",
+      "question_type": "true_false_unknown",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據諸葛亮《出師表》一文，判斷以下陳述：",
+      "score": 4,
+      "statements": [
+        {
+          "text": "諸葛亮認為蜀漢面對的危機，主要源於朝臣不夠忠心。",
+          "answer": "false",
+          "explanation": "諸葛亮指出蜀漢的危機在於先帝未竟大業而崩、天下三分、益州疲弊，而非朝臣不忠心；相反他認為朝臣將士都感激先帝、忠心耿耿，故陳述錯誤。"
+        },
+        {
+          "text": "諸葛亮認為賞罰公正是治國的重要原則之一。",
+          "answer": "true",
+          "explanation": "諸葛亮建議宮中、府中賞罰應一致，若有人作姦犯科或盡忠行善，應交由官吏依法論處，以彰顯公正嚴明的管治，可見他重視賞罰公正，故陳述正確。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-014",
+      "unit": "chushibiao",
+      "ability": "內容理解",
+      "knowledge_point": "是非判斷（二）",
+      "question_type": "true_false_unknown",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "根據諸葛亮《出師表》一文，判斷以下陳述：",
+      "score": 4,
+      "statements": [
+        {
+          "text": "諸葛亮認為自己能夠得到先帝的信任，是因為自己出身名門。",
+          "answer": "false",
+          "explanation": "諸葛亮自述「臣本布衣，躬耕於南陽」，出身平民，並非名門望族；他得到先帝信任是因為先帝不嫌棄他地位低微，屈尊三次拜訪，故陳述錯誤。"
+        },
+        {
+          "text": "諸葛亮認為北伐的時機已經成熟。",
+          "answer": "true",
+          "explanation": "諸葛亮指出「今南方已定，兵甲已足，當獎率三軍，北定中原」，可見他認為南方叛亂已平、軍備充足，北伐的時機已經成熟，故陳述正確。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-015",
+      "unit": "chushibiao",
+      "ability": "主旨與思考",
+      "knowledge_point": "三顧草廬的知遇之恩對現代求職的啟示（開放題）",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "advanced",
+      "stem": "諸葛亮因先帝「三顧草廬」的誠意而甘願為蜀漢效力。這種「知遇之恩」對現今職場中僱主與僱員的關係有何啟示？試舉一個例子加以說明。",
+      "score": 4,
+      "scoring_elements": [
+        "先帝不因諸葛亮地位低微而輕視他，反而屈尊三次拜訪，展現對人才的誠意和尊重（1分）",
+        "這啟示現今僱主若能真誠賞識、尊重員工的才能，往往更能換取員工的忠誠和全力付出（1分）",
+        "舉例說明：如上司願意給予新人發揮機會、耐心栽培，員工往往會更願意長期留任、盡心盡力（1分，例子可有不同）",
+        "可見以誠相待、賞識人才是建立互信、互惠關係的重要基礎（1分）"
+      ],
+      "note": "答案言之成理即可。",
+      "source": "校本試題庫"
+    }
+  ]
+}

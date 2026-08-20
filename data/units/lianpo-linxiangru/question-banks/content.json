@@ -1,0 +1,517 @@
+{
+  "unit": "lianpo-linxiangru",
+  "bank": "content",
+  "questions": [
+    {
+      "id": "lp-content-001",
+      "unit": "lianpo-linxiangru",
+      "ability": "內容理解",
+      "knowledge_point": "是非判斷：廉藺出身",
+      "question_type": "true_false_unknown",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "根據以下引文，判斷以下陳述：「廉頗者，趙之良將也。趙惠文王十六年，廉頗為趙將，伐齊，大破之，取陽晉，拜為上卿，以勇氣聞於諸侯。藺相如者，趙人也，為趙宦者令繆賢舍人。」",
+      "score": 2,
+      "statements": [
+        {
+          "text": "廉頗與藺相如同出身於趙國的官宦之家。",
+          "answer": "false",
+          "explanation": "廉頗地位尊貴，是趙國的良將，藺相如出身低微，只是宦官頭目的門客。他們兩人都不是出身於趙國的官宦之家，故陳述錯誤。"
+        },
+        {
+          "text": "藺相如因不想寂寂無名而投靠繆賢。",
+          "answer": "unknown",
+          "explanation": "藺相如是否因不想寂寂無名而投靠繆賢，引文沒有提及，描述與內容沒有矛盾，故陳述無從判斷。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-content-002",
+      "unit": "lianpo-linxiangru",
+      "ability": "結構與手法",
+      "knowledge_point": "首段的結構作用",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "引文（首段介紹廉頗、藺相如的文字）在篇章的結構上起了甚麼作用？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "設置懸念"
+        },
+        {
+          "key": "B",
+          "text": "承上啟下"
+        },
+        {
+          "key": "C",
+          "text": "總結全文"
+        },
+        {
+          "key": "D",
+          "text": "埋下伏筆"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-content-003",
+      "unit": "lianpo-linxiangru",
+      "ability": "內容理解",
+      "knowledge_point": "繆賢口中的「其人」",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "在《史記‧廉頗藺相如列傳》（節錄）一文中，繆賢說：「臣竊以為其人勇士，有智謀，宜可使。」繆賢口中的「其人」是指以下哪人？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "廉頗"
+        },
+        {
+          "key": "B",
+          "text": "藺相如"
+        },
+        {
+          "key": "C",
+          "text": "秦王"
+        },
+        {
+          "key": "D",
+          "text": "趙王"
+        }
+      ],
+      "answer": "B",
+      "part2": {
+        "stem": "試判斷：繆賢認為「其人」「宜可使」，是因為「其人」曾協助繆賢獲得赦免。",
+        "type": "true_false_unknown",
+        "score": 2,
+        "answer_text": "正確——繆賢清楚指出自己曾犯罪，打算逃到燕國。藺相如卻勸阻他，指出燕王當初因為繆賢得到趙王寵幸而巴結他，但一旦燕王知道繆賢為逃避刑罰而逃到燕國，為免得罪趙國，必定不敢收留，反而會把繆賢遣返趙國。然後，藺相如建議繆賢坦誠向趙王請罪。繆賢聽從藺相如的建議，最後得到赦免。可見繆賢因聽從了藺相如的建議，最終獲得趙王赦免，因此認為藺相如「勇士，有智謀」，向趙王推薦藺相如。"
+      },
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-content-004",
+      "unit": "lianpo-linxiangru",
+      "ability": "結構與手法",
+      "knowledge_point": "繆賢舉薦情節是否可刪去（開放題）",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "有人認為，在《史記‧廉頗藺相如列傳》（節錄）一文中，繆賢向趙王舉薦「其人」的情節跟文章主要內容的關係不大，即使刪去也不影響全文組織。你同意嗎？試加以說明。",
+      "score": 4,
+      "scoring_elements": [
+        "不同意。繆賢憶述自己曾經得到藺相如獻計，並獲得趙王赦罪的事件，能側面刻畫出藺相如的機智和勇敢（1分）",
+        "同時，也為藺相如接下來在「完璧歸趙」和「澠池之會」中，能保全趙國國體，又不讓秦國得到好處的出色表現作鋪墊（1分）",
+        "可見有關情節能使全文的結構更完整（1分）",
+        "人物刻畫更全面（1分），故不宜刪去"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-content-005",
+      "unit": "lianpo-linxiangru",
+      "ability": "內容理解",
+      "knowledge_point": "趙王猶疑不決的原因",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "在《史記‧廉頗藺相如列傳》（節錄）「完璧歸趙」的故事中，藺相如和趙王討論應否答應秦國以城池交換和氏璧。趙王為甚麼對是否答應秦王要求猶疑不決？",
+      "score": 2,
+      "answer_elements": [
+        "趙王擔心假如答應秦王，秦王得到和氏璧後食言，不肯交出城池，使自己白白被騙（1分）",
+        "如果不答應秦王，秦王會派兵攻打趙國，危害趙國的安全（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-content-006",
+      "unit": "lianpo-linxiangru",
+      "ability": "內容理解",
+      "knowledge_point": "寧許以負秦曲反映的意見",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "藺相如說「寧許以負秦曲」。這反映出藺相如對秦王的要求持甚麼意見？",
+      "score": 2,
+      "answer_elements": [
+        "他認為趙王應答應秦國以城池交換和氏璧的要求（1分）",
+        "使秦國承擔理虧的責任（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-content-007",
+      "unit": "lianpo-linxiangru",
+      "ability": "內容理解",
+      "knowledge_point": "相如自薦出使及反映的性格",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "當趙王說不知該派誰出使秦國時，藺相如怎樣回應？這反映出他的性格是怎樣的？",
+      "score": 4,
+      "answer_elements": [
+        "建議：他自薦出使秦國（1分），並向趙王保證必定能以和氏璧換取城池，如得不到城池，便會把和氏璧帶回趙國（1分）",
+        "性格：自信／愛國／勇敢（答案不多於四個字）（2分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-content-008",
+      "unit": "lianpo-linxiangru",
+      "ability": "內容理解",
+      "knowledge_point": "相如察覺秦國無意償城的情況",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "在《史記‧廉頗藺相如列傳》（節錄）一文中，藺相如從以下哪個情況察覺秦國無意以城池交換和氏璧？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "秦王得到和氏璧後，沒有提及交換城池一事"
+        },
+        {
+          "key": "B",
+          "text": "秦王接見藺相如的地點"
+        },
+        {
+          "key": "C",
+          "text": "秦王不相信和氏璧上有瑕疵"
+        },
+        {
+          "key": "D",
+          "text": "秦王以假地圖顯示送出的城市"
+        }
+      ],
+      "answer": "A",
+      "note": "原題另列「秦王接見藺相如的地點」（章臺而非正殿）亦可作為相如察覺秦王無意償城的線索之一，答案可能不止一個，教師可視乎教學需要補充。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-content-009",
+      "unit": "lianpo-linxiangru",
+      "ability": "內容理解",
+      "knowledge_point": "勇氣與智謀的表現",
+      "question_type": "true_false_unknown",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "在《史記‧廉頗藺相如列傳》（節錄）「完璧歸趙」一事中，以下引文顯示出藺相如的勇氣、智謀，還是兩者皆非？",
+      "score": 4,
+      "statements": [
+        {
+          "text": "「相如持其璧睨柱，欲以擊柱。」——顯示藺相如的勇氣。",
+          "answer": "true"
+        },
+        {
+          "text": "「相如度秦王雖齋，決負約不償城，乃使其從者衣褐，懷其璧，從徑道亡，歸璧於趙。」——顯示藺相如的勇氣。",
+          "answer": "false",
+          "explanation": "這句寫相如洞悉秦王不會守約，於是暗中派人把璧玉送回趙國，展現的是相如的智謀，而非勇氣。"
+        }
+      ],
+      "note": "此題原為三選一（勇氣／智謀／兩者皆非），第二項正確答案為「智謀」。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-content-010",
+      "unit": "lianpo-linxiangru",
+      "ability": "內容理解",
+      "knowledge_point": "相如兩次欺騙秦王的原因與反應",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "在《史記‧廉頗藺相如列傳》（節錄）「完璧歸趙」一事中，藺相如先後兩次欺騙秦王。試根據有關內容，填寫下表。",
+      "score": 4,
+      "table": {
+        "columns": [
+          "片段",
+          "藺相如欺騙秦王的原因",
+          "秦王的反應"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "「（藺相如）乃前曰：「璧有瑕，請指示王。」王授璧，相如因持璧，卻立，倚柱，怒髮上衝冠。」",
+              null,
+              "害怕藺相如真的會與璧玉俱碎，急忙拿出地圖指示劃歸給趙國的城池的位置，然後依照藺相如的要求齋戒，並安排最隆重的迎賓儀式。"
+            ]
+          },
+          {
+            "cells": [
+              "「（藺相如）謂秦王曰：『秦自繆公以來二十餘君，未嘗有堅明約束者也。臣誠恐見欺於王而負趙，故令人持璧歸，間至趙矣……臣知欺大王之罪當誅，臣請就湯鑊。惟大王與羣臣孰計議之！』」",
+              "藺相如指出秦國自穆公以來的君主從來不堅守盟約，因此藺相如認為秦王不會守信。",
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "第一片段原因：藺相如發覺秦王在只供遊憩的地方接見自己，反映他不尊重趙國；秦王得到璧玉後，隨即把它傳給美人和侍從玩賞而沒有提及以城償璧的事，顯示秦王不重視對趙國的承諾（2分）。",
+        "第二片段秦王反應：雖然秦王既驚怕又憤怒，但他深知縱使處死藺相如也得不到和氏璧，反而斷絕了秦趙兩國的友好關係，所以只能禮待藺相如，讓藺相如回趙國（2分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-content-011",
+      "unit": "lianpo-linxiangru",
+      "ability": "內容理解",
+      "knowledge_point": "澠池之會中各人物的舉動與性格",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "在《史記‧廉頗藺相如列傳》（節錄）「澠池之會」一事中，秦王有甚麼舉動？又趙王和藺相如在會上作出的舉動反映他們甚麼性格特點？試填寫下表。",
+      "score": 6,
+      "table": {
+        "columns": [
+          "人物",
+          "舉動",
+          "性格特徵"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "趙王",
+              "表示自己畏懼秦國，不想去赴會。",
+              "膽小怕事（2分）"
+            ]
+          },
+          {
+            "cells": [
+              "秦王",
+              null,
+              "仗勢凌人"
+            ]
+          },
+          {
+            "cells": [
+              "藺相如",
+              "以死相脅，要求秦王擊缻。",
+              "剛正不屈／勇猛果敢（2分）"
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "秦王舉動：要求趙王鼓瑟，讓御史記下「秦王命令趙王鼓瑟」（答案不得多於20字，標點符號計算在內）（2分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-content-012",
+      "unit": "lianpo-linxiangru",
+      "ability": "結構與手法",
+      "knowledge_point": "相如擊退侍衛所用的襯托法",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "以下是《史記‧廉頗藺相如列傳》（節錄）的引文，當中如何使用襯托法，刻畫藺相如的形象？試加以說明。",
+      "score": 3,
+      "quote": "相如曰：「五步之內，相如請得以頸血濺大王矣！」左右欲刃相如，相如張目叱之，左右皆靡。",
+      "answer_elements": [
+        "引文記述秦王的左右侍臣上前想殺害藺相如，卻反被藺相如的瞪眼和喝斥一下子嚇得倒退回去（1分）",
+        "這裏藉秦王左右侍臣給藺相如的眼神和喝斥嚇退的膽小內弱表現（1分），反襯出藺相如的勇敢剛強（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-content-013",
+      "unit": "lianpo-linxiangru",
+      "ability": "主旨與思考",
+      "knowledge_point": "以死相脅是否太冒險（開放題）",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "advanced",
+      "stem": "《史記‧廉頗藺相如列傳》（節錄）記述藺相如曾在「澠池之會」中以死相脅，迫使秦王妥協擊缻。你認為藺相如的這個做法是否太冒險？試談談你的看法。",
+      "score": 4,
+      "scoring_elements": [
+        "表明立場（冒險／不冒險皆可，言之成理即可）（1分）",
+        "結合原文具體情節說明（1分）",
+        "分析相如當時的處境與判斷（1分）",
+        "扣連立場、總結看法（1分）"
+      ],
+      "note": "原題提供兩種參考答案方向：冒險——藺相如對秦王不敬，若秦王沒有克制，其實可以將藺相如治罪，甚至有藉口出兵攻打趙國，招致大禍；不冒險——藺相如深知秦國不願與趙國交惡，是在合理估算下制定出來的計策。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-content-014",
+      "unit": "lianpo-linxiangru",
+      "ability": "內容理解",
+      "knowledge_point": "摘錄：不與廉頗相鬥的理由",
+      "question_type": "extract_sentence",
+      "is_cross_text": false,
+      "paragraph_ref": 7,
+      "difficulty": "basic",
+      "stem": "《史記‧廉頗藺相如列傳》（節錄）的「負荊請罪」中，藺相如向舍人說明了自己寧可處處避開廉頗，也不願意跟廉頗衝突的理由。試摘錄有關原文。",
+      "score": 1,
+      "answer_text": "以先國家之急而後私讎也",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-content-015",
+      "unit": "lianpo-linxiangru",
+      "ability": "內容理解",
+      "knowledge_point": "廉頗說話的原因與心情",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": 7,
+      "difficulty": "basic",
+      "stem": "試指出廉頗說出以下引文的話語的原因和說話時的心情，並填寫下表。",
+      "score": 4,
+      "context_quotes": [
+        {
+          "label": "甲",
+          "text": "（廉頗）宣言曰：「我見相如，必辱之。」"
+        },
+        {
+          "label": "乙",
+          "text": "（廉頗）肉袒負荊，因賓客至藺相如門謝罪。曰：「鄙賤之人，不知將軍寬之至此也。」"
+        }
+      ],
+      "table": {
+        "columns": [
+          "",
+          "原因",
+          "心情"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "引文甲",
+              "認為自己立下不少戰功，藺相如只有言辭之勞兼出身低微，地位卻居於自己之上。",
+              "憤憤不平／深感不憤（2分）"
+            ]
+          },
+          {
+            "cells": [
+              "引文乙",
+              null,
+              "羞愧"
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "引文乙原因：得知藺相如避開自己是為了避免與自己相鬥，造成兩敗俱傷的情況，讓秦國可乘機攻打趙國（1分），危害趙國安全。由此醒悟到自己的胸襟不及藺相如（1分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-content-016",
+      "unit": "lianpo-linxiangru",
+      "ability": "內容理解",
+      "knowledge_point": "司馬遷強調廉頗因賓客謝罪的用意",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 7,
+      "difficulty": "basic",
+      "stem": "引文乙中，廉頗「因賓客至藺相如門謝罪」，表示廉頗是在門客面前向藺相如謝罪。為甚麼司馬遷強調他這樣做？",
+      "score": 2,
+      "answer_elements": [
+        "司馬遷這樣記述的目的是希望突出廉頗想讓別人都知道他做過這樣的事，令大家明白自己是有悔意（1分）",
+        "並表明自己純粹真心的向藺相如坦白認錯，不帶其他意圖（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-content-017",
+      "unit": "lianpo-linxiangru",
+      "ability": "內容理解",
+      "knowledge_point": "摘錄：謝罪的結果",
+      "question_type": "extract_sentence",
+      "is_cross_text": false,
+      "paragraph_ref": 7,
+      "difficulty": "basic",
+      "stem": "廉頗向藺相如「謝罪」的結果是怎樣？試摘錄有關原文。",
+      "score": 2,
+      "answer_text": "卒相與驩，為刎頸之交。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-content-018",
+      "unit": "lianpo-linxiangru",
+      "ability": "結構與手法",
+      "knowledge_point": "三種人物描寫手法辨析",
+      "question_type": "true_false_unknown",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "《史記‧廉頗藺相如列傳》（節錄）中，運用了不同的人物描寫方法刻畫藺相如的形象。試分析以下引文是否運用了心理描寫。",
+      "score": 6,
+      "statements": [
+        {
+          "text": "「相如度秦王雖齋，決負約不償城。」——運用了心理描寫。",
+          "answer": "true"
+        },
+        {
+          "text": "「秦之羣臣曰：『請以趙十五城為秦王壽。』藺相如亦曰：『請以秦之咸陽為趙王壽。』」——運用了心理描寫。",
+          "answer": "false",
+          "explanation": "這是人物之間的對答，屬於語言描寫，並非心理描寫。"
+        },
+        {
+          "text": "「已而相如出，望見廉頗，相如引車避匿。」——運用了心理描寫。",
+          "answer": "false",
+          "explanation": "「引車避匿」是具體行動，屬於行動描寫，並非心理描寫。"
+        }
+      ],
+      "note": "此題原為四選一（肖像描寫／行動描寫／心理描寫／三者皆非），三句答案依次為：心理描寫、三者皆非（語言描寫）、行動描寫。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-content-019",
+      "unit": "lianpo-linxiangru",
+      "ability": "主旨與思考",
+      "knowledge_point": "相如面對廉頗挑釁是否軟弱（開放題）",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "有論者認為，《史記‧廉頗藺相如列傳》（節錄）中，藺相如在面對廉頗挑釁時的做法軟弱，不值得現今的人效法，試談談你的看法。",
+      "score": 4,
+      "scoring_elements": [
+        "表明立場（同意／不同意皆可，言之成理即可）（1分）",
+        "結合原文相如的表現說明（1分）",
+        "聯繫現今社會情況分析（1分）",
+        "總結立場（1分）"
+      ],
+      "note": "原題提供兩種參考答案方向：不同意——相如以國家利益為重，不計較個人私怨，值得嘉許；同意——處處忍讓可能被誤會懦弱無能，甚至助長惡人變本加厲。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-content-020",
+      "unit": "lianpo-linxiangru",
+      "ability": "結構與手法",
+      "knowledge_point": "三事件如何構成嚴謹結構",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "《史記》一書情節豐富，結構嚴謹，而《史記‧廉頗藺相如列傳》（節錄）以三個故事組成，看似鬆散，實則結構嚴謹。試綜合全文分析說明。",
+      "score": 6,
+      "scoring_elements": [
+        "文章中三個歷史事件是依時間順序記述（1分）",
+        "本文先記述「完璧歸趙」一事，寫到秦王因藺相如暗中把和氏璧送回趙國而得不到璧玉，所以他懷恨在心，想報復趙國（1分），導致發生後來的「澠池之會」",
+        "在澠池之會上，秦王借故羞辱趙王，藺相如即以死脅迫秦王擊缻，保全趙王聲譽（1分）",
+        "事後藺相如因立下大功而拜為上卿（1分），這件事引發廉頗的不滿，宣言要侮辱藺相如，後來卻得知對方為了國家安危才處處忍讓自己，因此感到羞愧（1分）",
+        "遂發生「負荊請罪」一事。由此可見，三個故事雖然看似獨立，但其實互為因果，結構緊密，層次分明（1分）"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}

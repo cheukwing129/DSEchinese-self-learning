@@ -1,0 +1,178 @@
+{
+  "unit": "chushibiao",
+  "bank": "structure-skill",
+  "questions": [
+    {
+      "id": "cb-skill-001",
+      "unit": "chushibiao",
+      "ability": "結構與手法",
+      "knowledge_point": "第四段推薦賢臣的結構作用",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "諸葛亮在《出師表》第四段分別推薦郭攸之、費禕、董允處理內政，以及推薦向寵掌管軍事。這種安排在結構上起了甚麼作用？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "承接上文論述"
+        },
+        {
+          "key": "B",
+          "text": "說明個別臣下的責任"
+        },
+        {
+          "key": "C",
+          "text": "總括全段觀點"
+        },
+        {
+          "key": "D",
+          "text": "呼應篇末總結"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-skill-002",
+      "unit": "chushibiao",
+      "ability": "結構與手法",
+      "knowledge_point": "篇末總結的用意",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 7,
+      "difficulty": "basic",
+      "stem": "諸葛亮在《出師表》末段總結君臣三方的責任，並抒發臨別之情。這樣寫有甚麼用意？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "強調自己深受皇恩"
+        },
+        {
+          "key": "B",
+          "text": "顯示自己文武雙全"
+        },
+        {
+          "key": "C",
+          "text": "想像後主聽從自己的諫言"
+        },
+        {
+          "key": "D",
+          "text": "表明自己不畏艱難"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-skill-003",
+      "unit": "chushibiao",
+      "ability": "結構與手法",
+      "knowledge_point": "危急存亡之秋所指的情況",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "諸葛亮在首段形容當時是「危急存亡之秋」，這主要是指以下哪種情況？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "朝臣不和，內部分裂"
+        },
+        {
+          "key": "B",
+          "text": "敵軍逼近國境，隨時來犯"
+        },
+        {
+          "key": "C",
+          "text": "先帝去世，國力疲弱，天下三分"
+        },
+        {
+          "key": "D",
+          "text": "後主年幼，未能親政"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-skill-004",
+      "unit": "chushibiao",
+      "ability": "結構與手法",
+      "knowledge_point": "抱薪救火式的借喻手法",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "《出師表》中「先帝知臣謹慎，故臨崩寄臣以大事也」一句，運用了以下哪種修辭手法帶出諸葛亮的心理狀態？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "對偶"
+        },
+        {
+          "key": "B",
+          "text": "排比"
+        },
+        {
+          "key": "C",
+          "text": "借喻"
+        },
+        {
+          "key": "D",
+          "text": "反問"
+        }
+      ],
+      "answer": "C",
+      "note": "此題原題涉及以具體事物比喻抽象心理狀態的手法，教師可視乎教學設計調整例句與解說。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-skill-005",
+      "unit": "chushibiao",
+      "ability": "結構與手法",
+      "knowledge_point": "甲乙引文語氣比較",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "試比較以下兩則引文的語氣：",
+      "score": 2,
+      "context_quotes": [
+        {
+          "label": "甲",
+          "text": "誠宜開張聖聽，以光先帝遺德，恢弘志士之氣﹔不宜妄自菲薄，引喻失義，以塞忠諫之路也。"
+        },
+        {
+          "label": "乙",
+          "text": "陛下亦宜自謀，以諮諏善道，察納雅言，深追先帝遺詔。臣不勝受恩感激。今當遠離，臨表涕零，不知所言。"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "引文甲直接強硬；引文乙婉轉客氣"
+        },
+        {
+          "key": "B",
+          "text": "引文甲平淡冷靜；引文乙激動慷慨"
+        },
+        {
+          "key": "C",
+          "text": "引文甲語重心長；引文乙不卑不亢"
+        },
+        {
+          "key": "D",
+          "text": "引文甲婉轉恭敬；引文乙誠懇親切"
+        }
+      ],
+      "answer": "D",
+      "explanation": "兩則引文均以「宜」「亦宜」等委婉字眼進言，語氣恭敬；乙則另加「臣不勝受恩感激」「臨表涕零」等語，更顯依依不捨的誠懇親切之情。",
+      "source": "校本試題庫"
+    }
+  ]
+}

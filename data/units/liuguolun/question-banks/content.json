@@ -1,0 +1,278 @@
+{
+  "unit": "liuguolun",
+  "bank": "content",
+  "questions": [
+    {
+      "id": "lg-content-001",
+      "unit": "liuguolun",
+      "ability": "內容理解",
+      "knowledge_point": "支持中心論點的兩個史例",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "《六國論》的首句提出「六國破滅，非兵不利，戰不善」的觀點。試綜合全文，指出作者蘇洵使用哪兩個史例來支持這個觀點。",
+      "score": 4,
+      "table": {
+        "columns": [
+          "",
+          "內容"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "史例一",
+              null
+            ]
+          },
+          {
+            "cells": [
+              "史例二",
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "史例一：燕國雖小但敢於對秦用兵（1分），直到後期才亡國（1分）。",
+        "史例二：趙國五次與秦軍打仗，兩敗而三勝（1分），趙國將領李牧又多次擊敗秦軍（1分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-content-002",
+      "unit": "liuguolun",
+      "ability": "內容理解",
+      "knowledge_point": "賂秦國家的三個錯誤",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "在《六國論》中，蘇洵批評賂秦國家犯了哪三個錯誤？他如何闡述這些錯誤與以地賂秦的關係？試根據文章內容加以解釋。",
+      "score": 6,
+      "answer_elements": [
+        "第一，賂秦國家因害怕與秦國戰爭（1分）而失去土地，故選擇以土地賄賂秦國，但作者指出諸侯因賄賂秦國而失去的土地遠比打敗仗失去的土地為多／秦國因受賄所得的土地遠比打勝仗得到的為多（1分），從而推論出諸侯被滅的真正原因是賄賂秦國，而非與秦戰爭。",
+        "第二，作者指出諸侯不孝：他以對比、誇張（1分，可選多於一個答案，全對才給分）手法，刻畫六國諸侯的祖先千辛萬苦才得到少許土地（1分），但諸侯隨意把土地割讓給秦國，以換取片刻安寧（1分），結果使秦國不斷侵略。",
+        "最後，作者以戰國時期蘇代的話，來形容賄賂秦國的行為只會助長秦國的貪念（1分），根本不能阻止秦國的侵略。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-content-003",
+      "unit": "liuguolun",
+      "ability": "內容理解",
+      "knowledge_point": "趙燕齊三國滅亡的個別因素",
+      "question_type": "matching",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "蘇洵在《六國論》分析不賂秦國家滅亡的理由，試指出以下諸侯國被滅的個別因素。",
+      "score": 3,
+      "options": [
+        {
+          "key": "A",
+          "text": "失去援手"
+        },
+        {
+          "key": "B",
+          "text": "得罪同盟"
+        },
+        {
+          "key": "C",
+          "text": "天災不斷"
+        },
+        {
+          "key": "D",
+          "text": "錯用刺客"
+        },
+        {
+          "key": "E",
+          "text": "自毀忠良"
+        }
+      ],
+      "rows": [
+        {
+          "text": "趙國：",
+          "answer": "E"
+        },
+        {
+          "text": "燕國：",
+          "answer": "D"
+        },
+        {
+          "text": "齊國：",
+          "answer": "A"
+        }
+      ],
+      "note": "選項B、C為distractor。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-content-004",
+      "unit": "liuguolun",
+      "ability": "內容理解",
+      "knowledge_point": "六國該做與不該做的事",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "作者在《六國論》中提議六國對抗秦國的方法。他指出六國該做甚麼？不該做甚麼？試根據文章的內容填寫下表。",
+      "score": 3,
+      "table": {
+        "columns": [
+          "",
+          "內容"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "六國該做的事",
+              "以土地封賞謀臣；禮遇天下才智出眾的人才（1分）；六國合力抵禦秦國（1分）。"
+            ]
+          },
+          {
+            "cells": [
+              "六國不該做的事",
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "六國不該做的事：被秦國的國力威嚇而割地賂秦（1分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-content-005",
+      "unit": "liuguolun",
+      "ability": "內容理解",
+      "knowledge_point": "是非判斷",
+      "question_type": "true_false_unknown",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據《六國論》的內容，判斷以下陳述：",
+      "score": 4,
+      "statements": [
+        {
+          "text": "作者認為若六國能夠合作而不賄賂秦國，便能消滅秦國。",
+          "answer": "unknown",
+          "explanation": "《六國論》第4段，作者只是提到「並力西嚮，則吾恐秦人食之不得下嚥也」，認為六國合力向西抵禦秦國，有機會令秦國的人連飯也吃不下，這並不代表六國合作就一定能消滅秦國。陳述與篇章內容並無矛盾，故屬無從判斷。"
+        },
+        {
+          "text": "作者為奮力抗秦卻不成功的諸侯國感到惋惜。",
+          "answer": "true",
+          "explanation": "《六國論》第3段，作者指出「燕、趙處秦革滅殆盡之際，可謂智力孤危，戰敗而亡，誠不得已」，代表他認為燕國和趙國在被秦國所滅時，處於智謀和軍力都很單薄的弱勢，所以被打敗而亡國，確實是不得已、無可奈何的事，暗示燕、趙的滅亡不全是它們的過錯，可見作者對燕、趙兩國抱有同情、惋惜的態度，故陳述正確。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-content-006",
+      "unit": "liuguolun",
+      "ability": "內容理解",
+      "knowledge_point": "能使六國不至滅亡的假設",
+      "question_type": "multi_select",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "蘇洵在《六國論》中提出了哪些能使六國不至滅亡的假設？（答案可選多於一個）",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "堅守土地"
+        },
+        {
+          "key": "B",
+          "text": "與秦國商談和約"
+        },
+        {
+          "key": "C",
+          "text": "名將李牧沒有被誅殺"
+        },
+        {
+          "key": "D",
+          "text": "刺客死亡"
+        }
+      ],
+      "answer": [
+        "A",
+        "C"
+      ],
+      "note": "原文明確提到「向使三國各愛其地」（對應A）、「良將猶在」（對應C）；B、D並非原文內容。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-content-007",
+      "unit": "liuguolun",
+      "ability": "結構與手法",
+      "knowledge_point": "苟以天下之大句的用意與寫作方法",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "試根據《六國論》的內容，說明「苟以天下之大，而從六國破亡之故事，是又在六國下矣！」這句話的用意。又這是甚麼寫作方法？",
+      "score": 5,
+      "answer_elements": [
+        "用意：作者通過六國賂秦而亡的歷史教訓，警戒北宋統治者切勿重蹈覆轍，不應對外族採取議和、妥協的策略（1分）",
+        "作者先強調六國即使不賄賂秦國也有能力抗秦，然後強調北宋擁有「天下之大」的領土，形勢理應遠勝六國（1分）",
+        "再指出若北宋跟六國一樣因賄賂敵人而削損國力，導致亡國，就更連六國也比不上（1分），藉此勸誡北宋統治者不要再對外族卑躬屈膝、不應繼續以歲幣換取和平（1分）",
+        "寫作方法：借古諷今（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-content-008",
+      "unit": "liuguolun",
+      "ability": "內容理解",
+      "knowledge_point": "蘇洵分析六國滅亡的原因",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "綜合蘇洵《六國論》的內容，以下哪一項符合蘇洵分析六國滅亡的原因？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "苟且偷安"
+        },
+        {
+          "key": "B",
+          "text": "諸侯計策失敗"
+        },
+        {
+          "key": "C",
+          "text": "諸侯聽信讒言"
+        },
+        {
+          "key": "D",
+          "text": "諸侯用人不當"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lg-content-009",
+      "unit": "liuguolun",
+      "ability": "情境應用",
+      "knowledge_point": "小民族結盟抗敵的策略",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "細閱以下故事，並根據蘇洵《六國論》，回答所附問題：從前，某平原上有若干民族定居。當中有一個實力較為強大的民族甲，常常以武力威嚇較為弱小的民族，並強迫這些小民族年年進貢。小民族不甘被欺負，於是結盟，議定大家不再向民族甲進貢，而且每當民族甲侵犯任何一個小民族時，盟友立即援助，抵抗侵犯。結果民族甲不敢再欺負各小民族。上述故事中小民族的行為符合蘇洵在《六國論》中提出的哪個抗秦策略？試引用相關觀點，分析小民族做出以上行為的原因。",
+      "score": 4,
+      "scoring_elements": [
+        "上述故事中的小民族結盟，不向民族甲進貢和合力抵抗民族甲的做法，符合蘇洵提出的「並力西嚮」的抗秦策略（1分）",
+        "蘇洵指出六國如果不再賄賂秦國，並合力向西用兵抵禦秦國，就可以避免被秦滅國（1分）",
+        "故事中的小民族結盟，集體不向民族甲進貢，是因為他們知道繼續進貢不會減少民族甲的慾望，反而助長對方的貪婪，搶奪自己的財產（1分）",
+        "他們又在民族甲侵犯某一個小民族時立即援助對方，抵抗民族甲的進犯，是因為它們深知民族甲實力強大，自己無法獨立抵抗，所以必須與其他小民族團結，合力對抗敵人（1分）"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}

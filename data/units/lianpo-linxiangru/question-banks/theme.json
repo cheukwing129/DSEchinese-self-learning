@@ -1,0 +1,46 @@
+{
+  "unit": "lianpo-linxiangru",
+  "bank": "theme",
+  "questions": [
+    {
+      "id": "lp-theme-001",
+      "unit": "lianpo-linxiangru",
+      "ability": "主旨與思考",
+      "knowledge_point": "以先國家之急而後私讎的現代啟示（開放題）",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 7,
+      "difficulty": "advanced",
+      "stem": "藺相如提出「先國家之急而後私讎」的處世態度。你認為這種態度對現今職場中的人際相處有何啟示？試舉一個例子加以說明。",
+      "score": 4,
+      "scoring_elements": [
+        "藺相如以國家大局為重，不計較與廉頗之間的個人恩怨（1分）",
+        "這啟示現代職場中，同事之間也應以團隊或公司整體利益為先，而非只顧個人得失或意氣之爭（1分）",
+        "舉例說明：如同事之間因職位晉升而生嫌隙，若各自堅持己見、互不相讓，只會影響團隊合作，拖累整體表現（1分，例子可有不同）",
+        "若能以大局為重、以誠溝通，反而更能建立互信，達致雙贏（1分）"
+      ],
+      "note": "答案言之成理即可。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "lp-theme-002",
+      "unit": "lianpo-linxiangru",
+      "ability": "主旨與思考",
+      "knowledge_point": "知錯能改的價值（開放題）",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 7,
+      "difficulty": "advanced",
+      "stem": "廉頗得知藺相如處處忍讓的原因後，隨即負荊請罪。你認為「知錯能改」這種品格在人際相處中有多重要？試結合生活經驗加以說明。",
+      "score": 4,
+      "scoring_elements": [
+        "廉頗雖然一時因意氣之爭而口出惡言，但得知真相後能立即放下身段、坦誠認錯（1分）",
+        "這種知錯能改的品格能修補關係裂痕，甚至讓雙方關係更緊密（如廉藺二人終成刎頸之交）（1分）",
+        "結合生活經驗說明：如朋友之間因誤會而發生爭執，若其中一方願意主動承認錯誤、真誠道歉，往往更能挽回友誼（1分，例子可有不同）",
+        "可見知錯能改是維繫良好人際關係的重要品格（1分）"
+      ],
+      "note": "答案言之成理即可。",
+      "source": "校本試題庫"
+    }
+  ]
+}
