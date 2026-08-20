@@ -1,0 +1,914 @@
+{
+  "unit": "quanxue",
+  "bank": "words",
+  "questions": [
+    {
+      "id": "qx-words-001",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "虛詞辨析：而（篇內）",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "以下哪一句中的「而」字與「青，取之於藍，而青於藍」（《勸學》（節錄））中的「而」字具相同用法？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "君子博學而日參省乎己。"
+        },
+        {
+          "key": "B",
+          "text": "假舟楫者，非能水也，而絕江河。"
+        },
+        {
+          "key": "C",
+          "text": "鍥而舍之，朽木不折。"
+        },
+        {
+          "key": "D",
+          "text": "蟹六跪而二螯，非蛇蟺之穴無可寄託者。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "「青，取之於藍，而青於藍」的「而」是轉折連詞，解「卻」；C項「鍥而舍之」的「而」同樣是承接／轉折連詞用法，語意上與原句最接近。A項「而」是承接連詞，解「並且」；B項「而」是轉折連詞但語境不同；D項「而」是並列連詞。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-002",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "解釋粗體字",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "試解釋以下文句中的粗體字。",
+      "score": 3,
+      "items": [
+        {
+          "text": "冰，水為之，而寒於水。（《勸學》（節錄））",
+          "target": "為",
+          "answer": "凝結"
+        },
+        {
+          "text": "蟹六跪而二螯，非蛇蟺之穴無可寄託者，用心躁也。（《勸學》（節錄））",
+          "target": "者",
+          "answer": "的地方"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-003",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "解釋粗體字",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "試解釋以下文句中的粗體字。",
+      "score": 3,
+      "items": [
+        {
+          "text": "假輿馬者，非利足也，而致千里。（《勸學》（節錄））",
+          "target": "而",
+          "answer": "卻"
+        },
+        {
+          "text": "鍥而舍之，朽木不折。（《勸學》（節錄））",
+          "target": "而",
+          "answer": "就"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-004",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "解釋粗體字",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "試解釋以下文句中的粗體字。",
+      "score": 2,
+      "items": [
+        {
+          "text": "積土成山，風雨興焉。（《勸學》（節錄））",
+          "target": "焉",
+          "answer": "在那裏"
+        },
+        {
+          "text": "假輿馬者，非利足也，而致千里。（《勸學》（節錄））",
+          "target": "利",
+          "answer": "快速"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-005",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「青，取之於藍，而青於藍」一句中的「取」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "捕取"
+        },
+        {
+          "key": "B",
+          "text": "提取"
+        },
+        {
+          "key": "C",
+          "text": "拿到手"
+        },
+        {
+          "key": "D",
+          "text": "娶"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-006",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「木直中繩，輮以為輪」一句中的「中」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "一半"
+        },
+        {
+          "key": "B",
+          "text": "中間"
+        },
+        {
+          "key": "C",
+          "text": "符合"
+        },
+        {
+          "key": "D",
+          "text": "命中"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-007",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「木直中繩，輮以為輪」一句中的「為」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "做"
+        },
+        {
+          "key": "B",
+          "text": "成為"
+        },
+        {
+          "key": "C",
+          "text": "認為"
+        },
+        {
+          "key": "D",
+          "text": "被"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-008",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「輮以為輪，其曲中規」一句中的「曲」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "彎度"
+        },
+        {
+          "key": "B",
+          "text": "局部"
+        },
+        {
+          "key": "C",
+          "text": "偏僻地方"
+        },
+        {
+          "key": "D",
+          "text": "過錯"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-009",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「雖有槁暴、不復挺者」一句中的「槁」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "枯草"
+        },
+        {
+          "key": "B",
+          "text": "枯乾"
+        },
+        {
+          "key": "C",
+          "text": "犒勞"
+        },
+        {
+          "key": "D",
+          "text": "敲打"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-010",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「雖有槁暴、不復挺者」一句中的「挺」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "動搖"
+        },
+        {
+          "key": "B",
+          "text": "生長"
+        },
+        {
+          "key": "C",
+          "text": "拔出"
+        },
+        {
+          "key": "D",
+          "text": "挺直"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-011",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「故木受繩則直，金就礪則利」一句中的「受」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "得到"
+        },
+        {
+          "key": "B",
+          "text": "接受"
+        },
+        {
+          "key": "C",
+          "text": "經受"
+        },
+        {
+          "key": "D",
+          "text": "適合"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-012",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「故木受繩則直，金就礪則利」一句中的「利」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "鋒利"
+        },
+        {
+          "key": "B",
+          "text": "迅猛"
+        },
+        {
+          "key": "C",
+          "text": "便利"
+        },
+        {
+          "key": "D",
+          "text": "謀利"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-013",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「君子博學而日參省乎己」一句中的「省」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "記得"
+        },
+        {
+          "key": "B",
+          "text": "精簡"
+        },
+        {
+          "key": "C",
+          "text": "了解"
+        },
+        {
+          "key": "D",
+          "text": "反省"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-014",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「君子博學而日參省乎己，則知明而行無過矣」一句中的「明」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "光明"
+        },
+        {
+          "key": "B",
+          "text": "顯明"
+        },
+        {
+          "key": "C",
+          "text": "高明"
+        },
+        {
+          "key": "D",
+          "text": "明白"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-015",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「吾嘗跂而望矣，不如登高之博見也」一句中的「跂」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "踮起腳後跟"
+        },
+        {
+          "key": "B",
+          "text": "分岔"
+        },
+        {
+          "key": "C",
+          "text": "慢慢地走"
+        },
+        {
+          "key": "D",
+          "text": "爬行"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-016",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「登高而招，臂非加長也」一句中的「招」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "招搖"
+        },
+        {
+          "key": "B",
+          "text": "尋求"
+        },
+        {
+          "key": "C",
+          "text": "招手"
+        },
+        {
+          "key": "D",
+          "text": "招供"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-017",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「順風而呼，聲非加疾也」一句中的「呼」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "呼吸"
+        },
+        {
+          "key": "B",
+          "text": "稱讚"
+        },
+        {
+          "key": "C",
+          "text": "呼喚"
+        },
+        {
+          "key": "D",
+          "text": "呼喊"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-018",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「順風而呼，聲非加疾也」一句中的「疾」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "宏亮"
+        },
+        {
+          "key": "B",
+          "text": "奮力"
+        },
+        {
+          "key": "C",
+          "text": "損害"
+        },
+        {
+          "key": "D",
+          "text": "急速"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-019",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「假輿馬者，非利足也」一句中的「足」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "腳"
+        },
+        {
+          "key": "B",
+          "text": "足夠"
+        },
+        {
+          "key": "C",
+          "text": "行走"
+        },
+        {
+          "key": "D",
+          "text": "值得"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-020",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「非利足也，而致千里」一句中的「致」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "給予"
+        },
+        {
+          "key": "B",
+          "text": "傳達"
+        },
+        {
+          "key": "C",
+          "text": "達到"
+        },
+        {
+          "key": "D",
+          "text": "招致"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-021",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「非能水也，而絕江河」一句中的「絕」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "經過"
+        },
+        {
+          "key": "B",
+          "text": "斷絕"
+        },
+        {
+          "key": "C",
+          "text": "不再延續"
+        },
+        {
+          "key": "D",
+          "text": "橫渡"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-022",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「君子生非異也，善假於物也」一句中的「假」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "借助"
+        },
+        {
+          "key": "B",
+          "text": "假冒"
+        },
+        {
+          "key": "C",
+          "text": "寬容"
+        },
+        {
+          "key": "D",
+          "text": "租賃"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-023",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「積土成山，風雨興焉」一句中的「成」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "成為"
+        },
+        {
+          "key": "B",
+          "text": "固定"
+        },
+        {
+          "key": "C",
+          "text": "完成"
+        },
+        {
+          "key": "D",
+          "text": "和解"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-024",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「積水成淵，蛟龍生焉」一句中的「生」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "發生"
+        },
+        {
+          "key": "B",
+          "text": "活着"
+        },
+        {
+          "key": "C",
+          "text": "生長"
+        },
+        {
+          "key": "D",
+          "text": "本性"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-025",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「而神明自得，聖心備焉」一句中的「得」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "駕馭"
+        },
+        {
+          "key": "B",
+          "text": "獲得"
+        },
+        {
+          "key": "C",
+          "text": "契合"
+        },
+        {
+          "key": "D",
+          "text": "滿足"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-026",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「駑馬十駕，功在不舍」一句中的「舍」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "離開"
+        },
+        {
+          "key": "B",
+          "text": "放棄"
+        },
+        {
+          "key": "C",
+          "text": "保留"
+        },
+        {
+          "key": "D",
+          "text": "施予"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-027",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「鍥而舍之，朽木不折」一句中的「朽」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "腐爛"
+        },
+        {
+          "key": "B",
+          "text": "衰老"
+        },
+        {
+          "key": "C",
+          "text": "臭"
+        },
+        {
+          "key": "D",
+          "text": "消散"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-028",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「鍥而舍之，朽木不折」一句中的「折」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "折斷"
+        },
+        {
+          "key": "B",
+          "text": "彎曲"
+        },
+        {
+          "key": "C",
+          "text": "虧損"
+        },
+        {
+          "key": "D",
+          "text": "死亡"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-words-029",
+      "unit": "quanxue",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「非蛇蟺之穴無可寄託者，用心躁也」一句中的「躁」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "急速"
+        },
+        {
+          "key": "B",
+          "text": "浮躁"
+        },
+        {
+          "key": "C",
+          "text": "擾動"
+        },
+        {
+          "key": "D",
+          "text": "狡猾"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    }
+  ]
+}

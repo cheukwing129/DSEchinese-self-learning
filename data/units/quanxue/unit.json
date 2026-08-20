@@ -1,0 +1,34 @@
+{
+  "id": "quanxue",
+  "title": "勸學（節錄）",
+  "author": "荀子",
+  "dynasty": "戰國",
+  "written_year": "節錄自《荀子．勸學》",
+  "genre": "哲理散文",
+  "status": "available",
+  "audio_file": "assets/audio/quan_xue.mp3",
+  "modules": [
+    { "id": "text", "title": "原文與誦讀", "icon": "book" },
+    { "id": "words", "title": "字詞與句式", "icon": "characters" },
+    { "id": "comprehension", "title": "疏通文意", "icon": "translate" },
+    { "id": "analysis", "title": "結構與鑒賞", "icon": "structure" },
+    { "id": "theme", "title": "主旨與思考", "icon": "lightbulb" },
+    { "id": "memorisation", "title": "背誦精華", "icon": "memory" },
+    { "id": "challenge", "title": "核心篇章挑戰", "icon": "target" },
+    { "id": "progress", "title": "我的掌握", "icon": "chart" }
+  ],
+  "cross_text_targets": [
+    { "id": "lunyu-renxiaojunzi", "title": "論仁、論孝、論君子", "author": "《論語》" },
+    { "id": "shishuo", "title": "師說", "author": "韓愈" },
+    { "id": "xiaoyaoyou", "title": "逍遙遊（節錄）", "author": "莊子" },
+    { "id": "yu-wo-suoyu", "title": "魚我所欲也", "author": "孟子" },
+    { "id": "liuguolun", "title": "六國論", "author": "蘇洵" }
+  ],
+  "question_bank_files": [
+    "question-banks/words.json",
+    "question-banks/content.json",
+    "question-banks/structure-skill.json",
+    "question-banks/theme.json",
+    "question-banks/cross-text.json"
+  ]
+}

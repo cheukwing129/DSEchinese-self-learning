@@ -1,0 +1,706 @@
+{
+  "unit": "quanxue",
+  "bank": "content",
+  "questions": [
+    {
+      "id": "qx-content-001",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "鍥而舍之修辭手法及道理",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "根據以下引文，回答所附問題：以上引文運用了甚麼修辭手法？",
+      "score": 1,
+      "quote": "鍥而舍之，朽木不折；鍥而不舍，金石可鏤。（《荀子‧勸學》）",
+      "options": [
+        {
+          "key": "A",
+          "text": "對偶"
+        },
+        {
+          "key": "B",
+          "text": "對比"
+        },
+        {
+          "key": "C",
+          "text": "排比"
+        },
+        {
+          "key": "D",
+          "text": "比喻"
+        }
+      ],
+      "answer": "B",
+      "follow_up_open_answer": "承上題，荀子運用上述手法說明的道理：學習必須持之以恆。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-002",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "比喻說明學習能使人去惡為善",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "《勸學》一文，荀子以比喻說明學習能使人去惡為善。試加以說明。",
+      "score": 3,
+      "scoring_elements": [
+        "荀子指當木材被火烘烤彎曲成為車輪後，即使再次枯乾和日曬，木材也不會回復挺直（1分）",
+        "他以此比喻人只要接受學習，惡性就會像木材彎曲成車輪一樣改變成善性（1分）",
+        "而一旦善惡改變，又會如同木材無法回復挺直一樣，日後再怎樣做也不會變回惡性（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-003",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "以蟹為喻說明的道理",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "《荀子‧勸學》（節錄）一文，荀子以蟹為喻說明甚麼道理？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "學習要持之以恆"
+        },
+        {
+          "key": "B",
+          "text": "學習要保持專一的態度"
+        },
+        {
+          "key": "C",
+          "text": "君子要懂得自我反省"
+        },
+        {
+          "key": "D",
+          "text": "君子因善於借助外物而與眾不同"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-004",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "以駑馬十駕為喻說明的道理",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "《荀子‧勸學》（節錄）一文，荀子以駑馬十駕為喻說明甚麼道理？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "學習要持之以恆"
+        },
+        {
+          "key": "B",
+          "text": "學習的目的是養成品德"
+        },
+        {
+          "key": "C",
+          "text": "君子不會騎乘劣馬"
+        },
+        {
+          "key": "D",
+          "text": "君子懂得自我反省"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-005",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "以金就礪則利為喻說明的道理",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "《荀子‧勸學》（節錄）一文，荀子以金就礪則利為喻說明甚麼道理？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "學習時使用的工具很重要"
+        },
+        {
+          "key": "B",
+          "text": "學習方式必須符合標準"
+        },
+        {
+          "key": "C",
+          "text": "君子要懂得自我反省"
+        },
+        {
+          "key": "D",
+          "text": "君子必須時刻認真學習"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-006",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "螾與蟹的議論方法與道理",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "試根據以下《荀子．勸學》（節錄）引文，回答所附問題：引文以「螾」比較「蟹」，當中運用了甚麼議論方法？",
+      "score": 1,
+      "quote": "螾無爪牙之利，筋骨之強，上食埃土，下飲黃泉，用心一也。蟹六跪而二螯，非蛇蟺之穴無可寄託者，用心躁也。（《荀子‧勸學》（節錄））",
+      "answer_elements": [
+        "對比論證"
+      ],
+      "part2": {
+        "stem": "作者以「螾」和「蟹」說明甚麼道理？試以自己的文句說明。",
+        "type": "long_answer",
+        "score": 3,
+        "scoring_elements": [
+          "作者以螾的先天條件差，但因為用心專一而能夠自食其力，對比蟹的先天條件優越，但用心浮躁而只能寄住在其他動物生活的地方（1分）",
+          "鮮明而深刻地證明專心一致的重要（1分）",
+          "帶出學習須專心致志才有所成就的論點（1分）"
+        ]
+      },
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-007",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "摘錄：全文中心思想",
+      "question_type": "extract_sentence",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "作者在全文的開端，以一句話帶出全文的中心思想。試摘錄有關詞句。",
+      "score": 2,
+      "answer_text": "君子曰：學不可以已。",
+      "part2": {
+        "stem": "承上題，上述句子採用了甚麼起筆方法？（A 設問／B 反問／C 比喻／D 開門見山）",
+        "type": "single_choice",
+        "score": 2,
+        "answer_text": "D 開門見山"
+      },
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-008",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "學習的最終目的與達成方法",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "荀子認為學習的最終目的是甚麼？怎樣做才能達到這個目的？試加以說明。",
+      "score": 4,
+      "scoring_elements": [
+        "學習的最終目的是使人變得智慧高明（1分），行為沒有過失／具備聖人心志（1分）",
+        "他認為人們只有不斷廣泛地學習（1分）",
+        "並且每天檢驗反省自己，才能達到這個目的（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-009",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "摘錄：雕刻不同物質",
+      "question_type": "extract_sentence",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "作者在文中以雕刻不同物質說明道理。試摘錄有關詞句。",
+      "score": 2,
+      "answer_text": "鍥而舍之，朽木不折；鍥而不舍，金石可鏤。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-010",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "雕刻說明的修辭手法與道理",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "承上題，上述句子採用了甚麼修辭手法？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "反語"
+        },
+        {
+          "key": "B",
+          "text": "反復"
+        },
+        {
+          "key": "C",
+          "text": "對比"
+        },
+        {
+          "key": "D",
+          "text": "比擬"
+        }
+      ],
+      "answer": "C",
+      "follow_up_open_answer": "荀子以雕刻說明的道理：荀子以雕刻幾下就停下來，連腐爛的木頭也不能折斷，和不停地雕刻使堅硬的金石亦能雕刻作對比，強調「功在不舍」的論點，突顯學習時必須堅持不放棄，才能積累出成果。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-011",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "不同比喻論證學習觀點",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "荀子在《荀子‧勸學》（節錄）一文中提出不同的比喻來論證自己對學習的觀點。試以自己的文句完成下表。",
+      "score": 5,
+      "table": {
+        "columns": [
+          "比喻",
+          "比喻內容",
+          "對學習的觀點"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "跂而望",
+              "踮起腳後跟腳尖着地遠望，不及上登上高處看得廣闊。",
+              "學習遠比獨自思考更能提升知識水平。"
+            ]
+          },
+          {
+            "cells": [
+              "假舟楫",
+              null,
+              "借助後天學習，就能幫助自己修身向善。"
+            ]
+          },
+          {
+            "cells": [
+              "不積小流",
+              null,
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "假舟楫比喻內容：不善於游泳的人，借助船隻卻可以橫渡江河（1分）。",
+        "不積小流比喻內容：不匯聚細小水流，沒有方法形成江海（1分）。",
+        "不積小流對學習的觀點：學習的方法在於不斷積累，否則無法有所成就（1分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-012",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "事物類比論述積累對學習的重要",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "《荀子‧勸學》（節錄）一文，荀子以不同事物的類比論述積累對學習的重要？試加以說明。",
+      "score": 4,
+      "scoring_elements": [
+        "荀子以土石積累成高山後能使風雨興起，水流積累成深潭後能使蛟龍生長兩個例子（1分）",
+        "指出積累小的事物才能形成大的事物（1分）",
+        "論證只有持續不懈地學習，才能取得成果（1分）",
+        "因此人必須不斷積累學習，最後才能達到心智澄明的精神境界，具備聖人的思想和修養（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-013",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "現今社會不重視學習的現象（開放題）",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "現今社會部分人不重視學習，荀子在《勸學》（節錄）中，提出學習的意義和作用，對現今社會有何提醒？試舉一個人們不重視學習的現象為例說明。",
+      "score": 4,
+      "scoring_elements": [
+        "現今社會部分人過分重視享樂，甚至為了玩樂而休學或輟學（1分，舉例可有不同）",
+        "這使他們缺乏知識和修養，難以成為有品德和智慧的人（1分）",
+        "荀子提倡君子應廣泛地學習並且每天檢驗反省自己，才能變得智慧高明和行為沒有過失（1分）",
+        "這啟發現代人不斷學習才能增長知識，改善本性，並成為人才（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-014",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "荀子心目中的君子",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據《荀子‧勸學》（節錄），荀子心目中的「君子」是怎樣的？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "喜歡博覽羣書"
+        },
+        {
+          "key": "B",
+          "text": "懂得躬身自省"
+        },
+        {
+          "key": "C",
+          "text": "善於借助外力"
+        },
+        {
+          "key": "D",
+          "text": "學習專心致志"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-015",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "「青」「金」「騏驥」比喻論證的觀點",
+      "question_type": "matching",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "在《荀子‧勸學》一文中，荀子先後以「青」、「金」和「騏驥」為喻論證甚麼觀點？試分別指出以下哪一個選項最能夠說明該比喻所論證的觀點。",
+      "score": 3,
+      "options": [
+        {
+          "key": "A",
+          "text": "學習可以改變人的本性"
+        },
+        {
+          "key": "B",
+          "text": "學習可以擴闊個人視野"
+        },
+        {
+          "key": "C",
+          "text": "天資優異的人也必須堅持學習才可以成功"
+        },
+        {
+          "key": "D",
+          "text": "博學和自省有助增長智慧"
+        },
+        {
+          "key": "E",
+          "text": "學習可以鼓勵自己努力向上"
+        }
+      ],
+      "rows": [
+        {
+          "text": "青：",
+          "answer": "A"
+        },
+        {
+          "text": "金：",
+          "answer": "D"
+        },
+        {
+          "text": "騏驥：",
+          "answer": "C"
+        }
+      ],
+      "note": "選項B、E為distractor。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-016",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "螾與蟹的特點比較與觀點",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "《荀子‧勸學》（節錄）一文提及「螾」和「蟹」兩種動物，試根據文章內容，比較牠們的特點，並指出荀子以這兩種動物的對比所論證的觀點。",
+      "score": 4,
+      "table": {
+        "columns": [
+          "特點",
+          "螾",
+          "蟹"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "先天條件",
+              "沒有銳利的爪、牙和強健的筋骨。",
+              null
+            ]
+          },
+          {
+            "cells": [
+              "能力",
+              null,
+              "只能寄居在蛇鱔的洞穴裏。"
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "蟹先天條件：擁有六隻腳和兩隻鉗（1分）。",
+        "螾能力：能向上鑽食土壤，向下喝到泉水（2分）。",
+        "作者觀點：學習必須專心致志（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-017",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "全文論述手法",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "綜合《荀子‧勸學》（節錄）全文，荀子運用了甚麼手法論述觀點？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "比喻論證"
+        },
+        {
+          "key": "B",
+          "text": "對比論證"
+        },
+        {
+          "key": "C",
+          "text": "正反論證"
+        },
+        {
+          "key": "D",
+          "text": "類比論證"
+        }
+      ],
+      "answer": "D",
+      "note": "本題原題另有比喻論證、對比論證、正反論證等元素貫穿全文（見結構與手法題庫），此題原始標記答案為「類比論證」，作綜合手法的代表選項。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-018",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "是非判斷（一）",
+      "question_type": "true_false_unknown",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "綜合《荀子‧勸學》（節錄）一文內容，判斷以下陳述：",
+      "score": 4,
+      "statements": [
+        {
+          "text": "荀子認為獨自思考無助於增進學問。",
+          "answer": "unknown",
+          "explanation": "荀子說「吾嘗終日而思矣，不如須臾之所學也」，指出學習比獨自思考更能有效地增進學問，但他並沒有說明獨自思考是否無助於增進學問。陳述與文本內容沒有矛盾，故屬無從判斷。"
+        },
+        {
+          "text": "荀子以「積土成山」為例，說明學習能讓人增進知識。",
+          "answer": "false",
+          "explanation": "荀子提到「積土成山」，以積累土石才能形成高山為喻，說明知識必須通過積累才能有所成就，而不是指學習能讓人增進知識，故陳述錯誤。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-019",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "是非判斷（二）",
+      "question_type": "true_false_unknown",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據《荀子‧勸學》（節錄）一文，判斷以下陳述︰",
+      "score": 4,
+      "statements": [
+        {
+          "text": "荀子認為學習能使人達致聖人的境界。",
+          "answer": "true",
+          "explanation": "荀子在第3段論述學習時能不斷積累，就能養成崇高的品德，使神智澄明，具備聖人的思想和修養，可見他認為學習能使人達致聖人的境界，故陳述正確。"
+        },
+        {
+          "text": "荀子以「輮以為輪」的比喻駁斥「君子生非異也」的觀點。",
+          "answer": "false",
+          "explanation": "荀子在第2段先後以「登高而招」、「順風而呼」、「假輿馬者」和「假舟楫者」作比喻，說明借助外物可提高學習的效能，藉以駁斥一般人認為君子的本性與眾不同的觀點，可見荀子並非以「輮以為輪」作駁論的論據，故陳述錯誤。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-020",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "是非判斷（三）",
+      "question_type": "true_false_unknown",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據《勸學》（節錄）內容，判斷以下陳述。",
+      "score": 2,
+      "statements": [
+        {
+          "text": "荀子以「騏驥」和「駑馬」作對比，印證天資愚鈍的人也可以變得聰穎。",
+          "answer": "false",
+          "explanation": "荀子論述「騏驥一躍，不能十步；駑馬十駕，功在不舍」，指騏驥雖然先天條件較駑馬好，但駑馬因為後天努力不懈，所以可以奔走十天的路程，達到千里遠，由此論證知識的積累在於持之以恆。可見荀子並非以這一組對比論證天資愚鈍的人也可以變得聰穎，故陳述錯誤。"
+        },
+        {
+          "text": "荀子認為人為了修德養性，故要努力學習。",
+          "answer": "true",
+          "explanation": "荀子先以「青」、「冰」、「輪」等比喻，說明學習能改善人的本性，強調學習的重要。其後，他又提出「積善成德，而神明自得，聖心備焉」，說明學習是為了積累善行養成品德，成為具備聖人的思想和修養的人，可見荀子認為學習的目的是為了修德養性，故陳述正確。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-021",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "先天資質還是後天努力對學習影響較大",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "根據《荀子‧勸學》（節錄）一文，荀子認為先天資質還是後天努力對學習的影響較大？試從文中舉出一例並略加說明。",
+      "score": 4,
+      "scoring_elements": [
+        "荀子認為後天努力對學習的影響較大（1分）",
+        "文中以良馬和劣馬比喻為天資優良和低劣的人（1分）",
+        "指出天資優良的良馬一跳也不能超過十步的距離，但天資欠佳的劣馬不放棄地奔走十天也能達至千里遠（1分）",
+        "從而突出知識的積累在於後天的努力不懈，而不是先天條件的優劣（1分）"
+      ],
+      "note": "原題另有「螾與蟹」的例子可作替代答案：文中以蚯蚓沒有鋒利爪牙和強健筋骨，比喻先天條件沒有優勢的人，以有六隻腳和兩隻鉗的蟹比喻先天條件有優勢的人；指出先天條件沒有優勢的蚯蚓，因專心一志，可以向上吃到土壤、向下喝到地底的泉水，但擁有先天優勢的蟹用心不專，結果只能寄住在蛇鱔的洞穴裏，突出知識的積累在於後天學習用心專一，而不是先天條件的優劣。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-022",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "螾與蟹先後天優劣及論證道理",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "根據《荀子‧勸學》（節錄）一文，「螾」和「蟹」在先天和後天上何者較優勝？試加以說明。又作者以「螾」和「蟹」的對比論證甚麼道理？",
+      "score": 4,
+      "scoring_elements": [
+        "先天上：「螾」沒有銳利的爪牙和強健的筋骨，而螃蟹有六隻腳和兩隻鉗，先天上「蟹」較優勝（1分）",
+        "後天上：「螾」能挖土作穴，不用像「蟹」寄住在別的動物的地方，後天上「螾」較優勝（1分）",
+        "論證的道理：作者以「螾」先天條件不及「蟹」卻能後來居上（1分），論證學習只要專心致志便可以將勤補拙（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-023",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "與始得西山宴遊記運用相同修辭手法的句子",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": 3,
+      "difficulty": "advanced",
+      "stem": "以下哪一句與「不積跬步，無以至千里；不積小流，無以成江海。」（《勸學》（節錄））運用了相同的修辭手法？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "薄暮冥冥，秦王齋五日後，乃設九賓禮於廷，引趙使者藺相如。相如至。（《廉頗藺相如列傳》（節錄））"
+        },
+        {
+          "key": "B",
+          "text": "庶竭駑鈍，攘除姦凶。（《出師表》）"
+        },
+        {
+          "key": "C",
+          "text": "攀援而登，箕踞而遨。（《始得西山宴遊記》）"
+        },
+        {
+          "key": "D",
+          "text": "積土成山，風雨興焉；積水成淵，蛟龍生焉。（《勸學》（節錄））"
+        }
+      ],
+      "answer": "C",
+      "explanation": "「不積跬步，無以至千里；不積小流，無以成江海」運用了對偶（排比）手法，句式結構相似、字數相等；C項「攀援而登，箕踞而遨」同樣是結構相似的對偶句。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-024",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "與各篇運用不同修辭手法的句子",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": 3,
+      "difficulty": "advanced",
+      "stem": "以下哪一句與「螾無爪牙之利，筋骨之強，上食埃土，下飲黃泉，用心一也。蟹六跪而二螯，非蛇蟺之穴無可寄託者，用心躁也。」（《勸學》（節錄））運用了不同的修辭手法？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "誠宜開張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲薄，引喻失義，以塞忠諫之路也。（《出師表》）"
+        },
+        {
+          "key": "B",
+          "text": "過湘江，緣染溪，斫榛莽，焚茅茷。（《始得西山宴遊記》）"
+        },
+        {
+          "key": "C",
+          "text": "或以封，或不免於洴澼絖，則所用之異也。（《逍遙遊》（節錄））"
+        },
+        {
+          "key": "D",
+          "text": "齊人未嘗賂秦，終繼五國遷滅，何哉？與嬴而不助五國也。（《六國論》）"
+        }
+      ],
+      "answer": "B",
+      "explanation": "原句以「螾」與「蟹」的先天條件和用心態度作對比。B項「過湘江，緣染溪，斫榛莽，焚茅茷」是連續動作的鋪陳（排比／連動），並非對比，與原句手法不同；A、C、D三項均含對比意味。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-content-025",
+      "unit": "quanxue",
+      "ability": "內容理解",
+      "knowledge_point": "情境應用：規勸陳修端（開放題）",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "細閱以下資料：陳修端的家族經營塑料工廠，他中學畢業後便到工廠實習。可是，陳修端在每個部門做不了一個月就抱怨工作太辛苦，要求轉到其他部門。當部門主管指導他的時候，他又終日漫不經心，經常做白日夢。結果他在工廠實習了三年，仍然一無所成。《勸學》（節錄）中，荀子提出不少學習建議。你會參考哪些建議，幫助陳修端解決兩個工作問題？試加說明。",
+      "score": 4,
+      "scoring_elements": [
+        "荀子指出「鍥而舍之」即使朽木也不會折斷，「鍥而不舍」則連金石都能雕鏤，以兩種學習方法的對比，指出學習必須持之以恆才能有所成就（1分）",
+        "我可以借這個觀點，勸導陳修端不要因工作辛苦就輕言放棄，而應該努力堅持實習工作，才能做出成績（1分）",
+        "荀子又借蟹「用心躁也」，所以即使有六跪二螯，也只能寄住在蛇蟺之穴，與螾「用心一也」，所以雖然沒有鋒利的爪牙和強健的筋骨，但仍能上吃泥土下飲泉水的對比，提出學習需要專心一致（1分）",
+        "我會以這個觀點，規勸陳修端接受部門主管的指導時，應聚精會神，專心地學習，提升工作能力，這樣工作才能獲得成功（1分）"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}

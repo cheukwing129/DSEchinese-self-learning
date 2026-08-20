@@ -1,0 +1,237 @@
+{
+  "unit": "quanxue",
+  "bank": "cross-text",
+  "questions": [
+    {
+      "id": "qx-cross-001",
+      "unit": "quanxue",
+      "ability": "跨篇比較",
+      "knowledge_point": "君子特質對照論仁論孝論君子的啟發",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "《荀子‧勸學》（節錄）中提及的「君子」特質，對你理解《論語．論仁論孝論君子》中的「君子」形象有何啟發？試加以說明。",
+      "cross_text_target": "lunyu-renxiaojunzi",
+      "score": 4,
+      "scoring_elements": [
+        "《勸學》中的「君子」善於借助學習來提升自己，做到「知明而行無過」（1分）",
+        "這啟發我理解《論語》中的「君子」同樣重視後天的修養工夫，例如「君子博學於文，約之以禮」（1分，舉例可有不同）",
+        "兩者都不將「君子」視為天生的身份，而是通過持續學習、自我反省而達致的人格境界（1分）",
+        "可見儒家傳統一貫重視後天修為對成為君子的重要性（1分）"
+      ],
+      "note": "答案言之成理即可。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-cross-002",
+      "unit": "quanxue",
+      "ability": "跨篇比較",
+      "knowledge_point": "與孔子學而不思則罔是否矛盾",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "有論者認為，荀子「吾嘗終日而思矣，不如須臾之所學也」的說法，與孔子「學而不思則罔」的觀點互相矛盾。試評論這個說法。",
+      "cross_text_target": "lunyu-renxiaojunzi",
+      "score": 4,
+      "scoring_elements": [
+        "沒有矛盾（1分）",
+        "荀子指出「終日而思矣，不如須臾之所學」是說明學習比獨自思考更有效吸取知識（1分）",
+        "而孔子提出「學而不思則罔」則是指一個人如果只會學習而不去思考，就會迷惑（1分）",
+        "前者強調人們不能只依賴思考來提高知識和修養，應着重學習；而後者則指出學習和思考要並重，不能偏重某一面，可見荀子和孔子都認同學習的重要，故沒有矛盾（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-cross-003",
+      "unit": "quanxue",
+      "ability": "跨篇比較",
+      "knowledge_point": "與師說求學方法和目的的相同之處",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "荀子《荀子‧勸學》（節錄）和韓愈《師說》均提出求學方法和學習目的，兩者有甚麼相同之處？試加以說明。",
+      "cross_text_target": "shishuo",
+      "score": 6,
+      "scoring_elements": [
+        "求學方法：兩者都強調借助外物學習的重要（1分）",
+        "荀子指出整天思索比不上片刻學習到的知識，強調人們應靠客觀條件學習去修身（1分）；而韓愈認為人生來必有疑惑，而且古代求學的人必定有老師，強調跟從老師學習的重要（1分）",
+        "學習目的：兩者都強調學習的目的是提升自己，使人具備聖人的思想和修養（1分）",
+        "荀子強調學習的最終目的是改變本性，提升自己，積善成德，使人具備聖人的心志（1分）；而韓愈認為學習的目的是掌握儒家道統和解答疑惑，跟從老師學習才能解除疑惑，令自己變得聰明（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-cross-004",
+      "unit": "quanxue",
+      "ability": "跨篇比較",
+      "knowledge_point": "與師說對學習一事的共通觀點",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "《荀子‧勸學》（節錄）和韓愈《師說》二文對學習一事，有何共通觀點？",
+      "cross_text_target": "shishuo",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "學習須按部就班才有成果。"
+        },
+        {
+          "key": "B",
+          "text": "借助外物來學習才有效率。"
+        },
+        {
+          "key": "C",
+          "text": "獨自思考不及學習有效。"
+        },
+        {
+          "key": "D",
+          "text": "遇到疑難就應請教他人。"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-cross-005",
+      "unit": "quanxue",
+      "ability": "跨篇比較",
+      "knowledge_point": "君子（勸學）與賢者（魚我所欲也）的異同",
+      "question_type": "fill_table",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "《荀子‧勸學》（節錄）中的「君子」與《孟子‧魚我所欲也》中的「賢者」有何異同？",
+      "cross_text_target": "yu-wo-suoyu",
+      "score": 4,
+      "table": {
+        "columns": [
+          "",
+          "「君子」",
+          "「賢者」"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "同",
+              "他們的本性與一般人無異。",
+              "他們的本性與一般人無異。"
+            ]
+          },
+          {
+            "cells": [
+              "異",
+              null,
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "「君子」之異：善於利用後天的學習提高效能（0.5分），並以此將惡的本性改為善，使行為沒有過失（1分）。",
+        "「賢者」之異：能夠保持自己捨生取義的本性（0.5分），不喪失羞惡之心（1分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-cross-006",
+      "unit": "quanxue",
+      "ability": "跨篇比較",
+      "knowledge_point": "人性本善還是本惡（開放題）",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "根據《魚我所欲也》與《勸學》（節錄）的內容，孟子和荀子認為人是性本善還是性本惡？試引用文章內容，抒述己見。",
+      "cross_text_target": "yu-wo-suoyu",
+      "score": 4,
+      "scoring_elements": [
+        "孟子以魚比喻生命，熊掌比喻義，指出當兩者不可以兼得時，會「舍生而取義者」，往往會選擇義而放棄生命（1分）",
+        "從他提出人會捨生取義來看，他認為人性本善（1分）",
+        "荀子則以藍、水和輪比喻本性，青、冰和輮比喻學習，又言「君子博學而日參省乎己，則知明而行無過矣」，說明人能通過後天的學習，使本性改變，減少犯錯（1分）",
+        "從此可見他認為人性本惡（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-cross-007",
+      "unit": "quanxue",
+      "ability": "跨篇比較",
+      "knowledge_point": "與逍遙遊相同論證手法及觀點",
+      "question_type": "short_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "以下引文運用了甚麼相同的論證手法？又引文如何運用該論證手法帶出觀點？試略加說明。",
+      "cross_text_target": "xiaoyaoyou",
+      "score": 6,
+      "context_quotes": [
+        {
+          "label": "甲",
+          "text": "宋人有善為不龜手之藥者，世世以洴澼絖為事。客聞之，請買其方百金。聚族而謀曰：「我世世為洴澼絖，不過數金；今一朝而鬻技百金，請與之。」客得之，以說吳王。越有難，吳王使之將，冬與越人水戰，大敗越人，裂地而封之。能不龜手一也；或以封，或不免於洴澼絖，則所用之異也。（《逍遙遊》（節錄））"
+        },
+        {
+          "label": "乙",
+          "text": "騏驥一躍，不能十步；駑馬十駕，功在不舍。（《勸學》（節錄））"
+        }
+      ],
+      "answer_elements": [
+        "論證手法：對比論證（1分）"
+      ],
+      "part2": {
+        "stem": "引文甲、乙分別如何運用對比論證帶出觀點？試略加說明。",
+        "type": "long_answer",
+        "score": 5,
+        "scoring_elements": [
+          "引文甲：以宋人只懂得用不龜手之藥來漂洗絲絮，結果世代只得「數金」，與客人懂得用不龜手之藥來打仗，使吳軍在冬天的水戰中大敗越軍，結果獲封地酬賞作對比（1分），論證使用者的智慧和眼光決定事物之用途和功效（1分）",
+          "引文乙：以「騏驥」縱然天資優良，但一跳也不能超過十步的距離，與「駑馬」雖然天資鈍拙，但能持續地奔行十天的路程作對比（1分），論證知識的積累不在於先天條件的優劣，而在於後天能努力不懈，「功在不舍」（2分）"
+        ]
+      },
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-cross-008",
+      "unit": "quanxue",
+      "ability": "跨篇比較",
+      "knowledge_point": "莊子會否認同善假於物的觀點",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "《荀子‧勸學》（節錄）認為人應「善假於物」，根據《莊子‧逍遙遊》（節錄）的內容，你認為莊子會否認同荀子的觀點？",
+      "cross_text_target": "xiaoyaoyou",
+      "score": 5,
+      "scoring_elements": [
+        "不會（1分）",
+        "莊子主張逍遙無為，他認為人應不受外物影響，不拘囿於世俗的價值觀，才能做到「無己」，達到「逍遙」的境界（2分）",
+        "荀子卻認為人應「假於物」，借助後天的學習來達到君子的境界，可見荀子仍拘囿於世俗的價值觀，期望自身有用於世（1分）",
+        "這並不符合莊子的「逍遙」理念（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "qx-cross-009",
+      "unit": "quanxue",
+      "ability": "結構與手法",
+      "knowledge_point": "與六國論運用相同的駁論寫作方法",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "蘇洵《六國論》和《荀子‧勸學》（節錄）都用了駁論的寫作方法，試分別說明。",
+      "cross_text_target": "liuguolun",
+      "score": 4,
+      "scoring_elements": [
+        "《六國論》：蘇洵先點出六國破敗滅亡的原因在於賄賂秦國的論點，然後指出一般人質疑六國相繼滅亡並不是因為賄賂秦國（1分）",
+        "接着自問自答，引出「不賂者以賂者喪」的論點，以齊、燕、趙不賂秦卻滅亡來駁斥一般人的觀點（1分）",
+        "《勸學》：荀子以「登高遠望」、「登高而招」、「順風而呼」、「假輿馬者」和「假舟楫者」五個比喻，說明借助外物就能提高效能，論證只要善於利用外物學習就能事半功倍（1分）",
+        "以此駁斥一般人認為君子的本性與眾不同的誤解（1分）"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}
