@@ -74,7 +74,7 @@
       "id": "shanju-qiuming",
       "title": "山居秋暝",
       "author": "王維",
-      "status": "coming_soon",
+      "status": "available",
       "group": "唐詩三首",
       "audio_file": "assets/audio/shan_ju_qiu_ming.mp3"
     },
@@ -82,7 +82,7 @@
       "id": "yuexia-duzhuo",
       "title": "月下獨酌（其一）",
       "author": "李白",
-      "status": "coming_soon",
+      "status": "available",
       "group": "唐詩三首",
       "audio_file": "assets/audio/yue_xia_du_zhuo_1.mp3"
     },
@@ -98,7 +98,7 @@
       "id": "niannujiao-chibihuaigu",
       "title": "念奴嬌・赤壁懷古",
       "author": "蘇軾",
-      "status": "coming_soon",
+      "status": "available",
       "group": "詞三首",
       "audio_file": "assets/audio/nian_nu_jiao_chi_bi_huai_gu.mp3"
     },
@@ -106,7 +106,7 @@
       "id": "shengshengman-qiuqing",
       "title": "聲聲慢・秋情",
       "author": "李清照",
-      "status": "coming_soon",
+      "status": "available",
       "group": "詞三首",
       "audio_file": "assets/audio/sheng_sheng_man_qiu_qing.mp3"
     },
@@ -114,7 +114,7 @@
       "id": "qingyu'an-yuanxi",
       "title": "青玉案・元夕",
       "author": "辛棄疾",
-      "status": "coming_soon",
+      "status": "available",
       "group": "詞三首",
       "audio_file": "assets/audio/qing_yu_an_yuan_xi.mp3"
     }
