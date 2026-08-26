@@ -1,0 +1,326 @@
+{
+  "unit": "niannujiao-chibihuaigu",
+  "bank": "words",
+  "questions": [
+    {
+      "id": "cb-words-001",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：去",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「大江東去，浪淘盡、千古風流人物」一句中的「去」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "拋棄"
+        },
+        {
+          "key": "B",
+          "text": "除掉"
+        },
+        {
+          "key": "C",
+          "text": "流去"
+        },
+        {
+          "key": "D",
+          "text": "距離"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-002",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：淘",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「大江東去，浪淘盡、千古風流人物」一句中的「淘」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "洗淨"
+        },
+        {
+          "key": "B",
+          "text": "疏浚"
+        },
+        {
+          "key": "C",
+          "text": "淘氣"
+        },
+        {
+          "key": "D",
+          "text": "大水奔流"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-003",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：風流",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「大江東去，浪淘盡、千古風流人物」一句中「風流」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "流傳"
+        },
+        {
+          "key": "B",
+          "text": "風度"
+        },
+        {
+          "key": "C",
+          "text": "輕浮"
+        },
+        {
+          "key": "D",
+          "text": "傑出"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-004",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：故",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「故壘西邊，人道是、三國周郎赤壁」一句中的「故」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "原來"
+        },
+        {
+          "key": "B",
+          "text": "古時"
+        },
+        {
+          "key": "C",
+          "text": "原故"
+        },
+        {
+          "key": "D",
+          "text": "故意"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-005",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：壘",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「故壘西邊，人道是、三國周郎赤壁」一句中的「壘」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "堆砌"
+        },
+        {
+          "key": "B",
+          "text": "土堆"
+        },
+        {
+          "key": "C",
+          "text": "重疊"
+        },
+        {
+          "key": "D",
+          "text": "營壘"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-006",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：穿",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「亂石穿空，驚濤拍岸，捲起千堆雪」一句中的「穿」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "孔洞"
+        },
+        {
+          "key": "B",
+          "text": "高插"
+        },
+        {
+          "key": "C",
+          "text": "穿戴"
+        },
+        {
+          "key": "D",
+          "text": "開鑿"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-007",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：時",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「江山如畫，一時多少豪傑」一句中的「時」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "時辰"
+        },
+        {
+          "key": "B",
+          "text": "季節"
+        },
+        {
+          "key": "C",
+          "text": "時代"
+        },
+        {
+          "key": "D",
+          "text": "按時"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-008",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：當年",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「遙想公瑾當年，小喬初嫁了」一句中「當年」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "壯年"
+        },
+        {
+          "key": "B",
+          "text": "往年"
+        },
+        {
+          "key": "C",
+          "text": "那一年"
+        },
+        {
+          "key": "D",
+          "text": "同一年"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-009",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：故國",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "「故國神遊，多情應笑我，早生華髮」一句中「故國」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "祖國"
+        },
+        {
+          "key": "B",
+          "text": "前朝"
+        },
+        {
+          "key": "C",
+          "text": "故鄉"
+        },
+        {
+          "key": "D",
+          "text": "古城"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-010",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：華",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "「多情應笑我，早生華髮」一句中的「華」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "花朵"
+        },
+        {
+          "key": "B",
+          "text": "華麗"
+        },
+        {
+          "key": "C",
+          "text": "精華"
+        },
+        {
+          "key": "D",
+          "text": "花白"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    }
+  ]
+}

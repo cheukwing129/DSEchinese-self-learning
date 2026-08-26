@@ -1,0 +1,47 @@
+{
+  "unit": "niannujiao-chibihuaigu",
+  "bank": "cross-text",
+  "questions": [
+    {
+      "id": "cb-cross-001",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "跨篇閱讀",
+      "knowledge_point": "與《始得西山宴遊記》比較借景抒情的情懷",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "cross_text_target": "shide-xishan-yanyouji",
+      "paragraph_ref": 6,
+      "difficulty": "advanced",
+      "stem": "蘇軾《念奴嬌‧赤壁懷古》與柳宗元《始得西山宴遊記》同是借景抒情之作，兩者所抒的情懷是否相同？試比較之。",
+      "score": 5,
+      "scoring_elements": [
+        "兩者都借描述景物，抒發擺脫個人得失榮辱的逍遙感受（1分）",
+        "蘇軾通過緬懷古人周瑜的事跡，抒發自己功業未成，年華漸老的愁緒（1分）",
+        "及後領悟人生短促虛幻，應忘卻得失，借酒遣懷，寄情自然的曠達心境（1分）",
+        "柳宗元飽覽西山奇特的景色後，產生「與萬化冥合」之感（1分）",
+        "因而心境拓闊，精神解脫，擺脫了被貶官永州的惶恐不安的心情（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-cross-002",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "跨篇閱讀",
+      "knowledge_point": "與《岳陽樓記》比較多感官描寫",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "cross_text_target": "yueyanglouji",
+      "paragraph_ref": 3,
+      "difficulty": "advanced",
+      "stem": "以下兩段引文如何均運用多感官描寫刻畫景色？試加以說明。甲「陰風怒號，濁浪排空；日星隱耀，山岳潛形；商旅不行，檣傾楫摧；薄霧冥冥，虎嘯猿啼。」（范仲淹《岳陽樓記》）乙「亂石穿空，驚濤拍岸，捲起千堆雪。」（蘇軾《念奴嬌‧赤壁懷古》）",
+      "score": 4,
+      "scoring_elements": [
+        "引文甲句先從視覺描寫濁浪衝空，日星的光輝和山岳都被隱沒，商船的桅杆和船槳都傾斜折斷，突顯天氣的惡劣（1分）",
+        "再從聽覺描寫老虎怒吼，猿猴悲啼，渲染蕭瑟的氣氛（1分），生動具體地表現出岳陽樓陰雨天時的惡劣天氣",
+        "乙句從視覺描寫石壁刺穿天空，江水擊石及浪花濺起時的動態，又從聽覺描寫江水擊打岸邊時的聲浪（1分）",
+        "強調了長江流水的澎湃氣勢（1分）"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}

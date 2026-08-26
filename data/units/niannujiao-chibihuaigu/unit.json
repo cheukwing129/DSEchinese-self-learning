@@ -1,0 +1,77 @@
+{
+  "id": "niannujiao-chibihuaigu",
+  "title": "念奴嬌‧赤壁懷古",
+  "author": "蘇軾",
+  "dynasty": "北宋",
+  "written_year": "宋神宗元豐五年（公元1082年），蘇軾謫居黃州期間",
+  "genre": "詞（長調）",
+  "status": "available",
+  "audio_file": "assets/audio/nian_nu_jiao_chi_bi_huai_gu.mp3",
+  "group": "詞三首",
+  "modules": [
+    {
+      "id": "text",
+      "title": "原文與誦讀",
+      "icon": "book"
+    },
+    {
+      "id": "words",
+      "title": "字詞與句式",
+      "icon": "characters"
+    },
+    {
+      "id": "comprehension",
+      "title": "疏通文意",
+      "icon": "translate"
+    },
+    {
+      "id": "analysis",
+      "title": "結構與鑒賞",
+      "icon": "structure"
+    },
+    {
+      "id": "theme",
+      "title": "主旨與思考",
+      "icon": "lightbulb"
+    },
+    {
+      "id": "memorisation",
+      "title": "背誦精華",
+      "icon": "memory"
+    },
+    {
+      "id": "challenge",
+      "title": "核心篇章挑戰",
+      "icon": "target"
+    },
+    {
+      "id": "progress",
+      "title": "我的掌握",
+      "icon": "chart"
+    }
+  ],
+  "cross_text_targets": [
+    {
+      "id": "shide-xishan-yanyouji",
+      "title": "始得西山宴遊記",
+      "author": "柳宗元"
+    },
+    {
+      "id": "yueyanglouji",
+      "title": "岳陽樓記",
+      "author": "范仲淹"
+    },
+    {
+      "id": "yuexia-duzhuo",
+      "title": "月下獨酌（其一）",
+      "author": "李白"
+    }
+  ],
+  "question_bank_files": [
+    "question-banks/words.json",
+    "question-banks/content.json",
+    "question-banks/structure-skill.json",
+    "question-banks/theme.json",
+    "question-banks/cross-text.json"
+  ]
+}

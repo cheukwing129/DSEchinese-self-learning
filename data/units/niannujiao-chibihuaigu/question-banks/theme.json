@@ -1,0 +1,27 @@
+{
+  "unit": "niannujiao-chibihuaigu",
+  "bank": "theme",
+  "questions": [
+    {
+      "id": "cb-theme-001",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "主旨與思考",
+      "knowledge_point": "與李白思想曠達程度的比較（開放題）",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "cross_text_target": "yuexia-duzhuo",
+      "paragraph_ref": 6,
+      "difficulty": "advanced",
+      "stem": "根據李白《月下獨酌》與蘇軾《念奴嬌‧赤壁懷古》的內容和寫作背景，你認為二人中誰的思想較曠達？試談談你的看法。",
+      "score": 4,
+      "scoring_elements": [
+        "我認為蘇軾較曠達。蘇軾借懷想周瑜年少成就功業，抒發自己年老卻功業無憑之慨。他最後體悟人間如夢，不再執着於建立功業，反寄情自然（1分）",
+        "可見蘇軾能自我開解、隨緣自適（1分）",
+        "相反，李白雖說「行樂須及春」，看似灑脫，但他只能借酒銷愁、逃避現實（1分）",
+        "詩末與月、影的忘情之約表面逍遙自由，實是以樂襯悲，更顯內心孤寂愁苦，可見詩人只是強作曠達（1分）"
+      ],
+      "note": "答案言之成理即可，此為其中一種論證方向，學生亦可持相反立場論證李白較曠達。",
+      "source": "校本試題庫"
+    }
+  ]
+}

@@ -1,0 +1,361 @@
+{
+  "unit": "niannujiao-chibihuaigu",
+  "bank": "content",
+  "questions": [
+    {
+      "id": "cb-content-001",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "內容理解",
+      "knowledge_point": "文學體裁",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "蘇軾《念奴嬌‧赤壁懷古》屬於以下哪種文學體裁？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "小令"
+        },
+        {
+          "key": "B",
+          "text": "中調"
+        },
+        {
+          "key": "C",
+          "text": "長調"
+        },
+        {
+          "key": "D",
+          "text": "套數"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-002",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "內容理解",
+      "knowledge_point": "虛實結合手法判斷",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "蘇軾在《念奴嬌‧赤壁懷古》運用了虛實結合的手法來描寫景物。試指出以下詞中的景物分別屬於虛寫（作者憑想像所寫的景象），還是實寫（作者眼前所見的景象）。",
+      "score": 4,
+      "items": [
+        {
+          "text": "長江滾滾向東流去。",
+          "target": "(1)",
+          "answer": "實寫"
+        },
+        {
+          "text": "陡峭不平的石壁高插雲霄。",
+          "target": "(2)",
+          "answer": "實寫"
+        },
+        {
+          "text": "周瑜手搖羽扇，頭戴青絲頭巾。",
+          "target": "(3)",
+          "answer": "虛寫"
+        },
+        {
+          "text": "在周瑜談笑之間，曹軍的戰船燒成灰燼。",
+          "target": "(4)",
+          "answer": "虛寫"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-003",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "內容理解",
+      "knowledge_point": "詞句與詞題的關係",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "intermediate",
+      "stem": "蘇軾《念奴嬌‧赤壁懷古》的「故壘西邊，人道是、三國周郎赤壁」與詞題有甚麼關係？試略加說明。",
+      "score": 2,
+      "items": [
+        {
+          "text": "與「懷古」的關係",
+          "target": "①",
+          "answer": "「故壘」呼應「懷古」，點出古跡。"
+        },
+        {
+          "text": "與「赤壁」的關係",
+          "target": "②",
+          "answer": "「三國周郎赤壁」呼應「赤壁」，點出所遊之地是相傳三國周瑜破曹的地方。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-004",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "內容理解",
+      "knowledge_point": "赤壁景象引發的感想",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "intermediate",
+      "stem": "在《念奴嬌‧赤壁懷古》一詞中，赤壁的景象引發了蘇軾的甚麼感想？試以自己的文字說明。",
+      "score": 2,
+      "items": [
+        {
+          "text": "感想",
+          "target": "感想",
+          "answer": "蘇軾因赤壁的景象想到古戰場，又從古戰場想到當年參與赤壁之戰的英雄豪傑（1分），繼而感慨無論英雄豪傑多偉大，最終都敵不過時間的洗禮而一一消逝（1分）。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-005a",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "內容理解",
+      "knowledge_point": "下片手法陳述判斷",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "intermediate",
+      "stem": "《念奴嬌‧赤壁懷古》的下片提及周瑜與小喬。判斷以下陳述：「作者運用示現手法來呈現周瑜的少年得志。」這陳述是：",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "正確"
+        },
+        {
+          "key": "B",
+          "text": "錯誤"
+        },
+        {
+          "key": "C",
+          "text": "無從判斷"
+        }
+      ],
+      "answer": "A",
+      "explanation": "「遙想」二字表明下文是詞人的懷想，通過聯想把古代名將周瑜娶小喬為妻、姿勢雄偉、英華煥發的神態呈現出來，產生如見其人、如歷其境的效果，故陳述正確。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-005b",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "內容理解",
+      "knowledge_point": "下片手法陳述判斷",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "intermediate",
+      "stem": "《念奴嬌‧赤壁懷古》的下片提及周瑜與小喬。判斷以下陳述：「作者運用反襯來烘托周瑜的年少英雄形象。」這陳述是：",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "正確"
+        },
+        {
+          "key": "B",
+          "text": "錯誤"
+        },
+        {
+          "key": "C",
+          "text": "無從判斷"
+        }
+      ],
+      "answer": "B",
+      "explanation": "詞人寫周瑜娶當時以美貌著稱的小喬為妻，是以正襯而非反襯來烘托周瑜的年少英雄形象，故陳述錯誤。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-006",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "內容理解",
+      "knowledge_point": "周瑜形象的事件與形象對應",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "intermediate",
+      "stem": "蘇軾在《念奴嬌‧赤壁懷古》的下片敍述了兩件可以反映周瑜形象的事件。試根據有關內容把答案填寫在下表。",
+      "score": 4,
+      "table": {
+        "columns": [
+          "事件",
+          "形象"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "在自己壯年的時候，迎娶美人小喬。",
+              null
+            ]
+          },
+          {
+            "cells": [
+              null,
+              "功業不朽"
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "①形象：年少得志／英氣勃勃（2分）。",
+        "②事件：在赤壁之戰中，談笑之間就輕鬆地打敗曹軍（2分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-007",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "內容理解",
+      "knowledge_point": "自嘲「多情」的原因",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "intermediate",
+      "stem": "在《念奴嬌‧赤壁懷古》中，作者感慨「多情應笑我」。為甚麼作者自嘲自己「多情」？試以自己的文句略加說明。",
+      "score": 2,
+      "items": [
+        {
+          "text": "說明",
+          "target": "說明",
+          "answer": "作者遊赤壁時先想到周瑜年少有為，曾於此處大破曹軍，建功立業（1分）。然後聯想到自己跟周瑜相比之下，只見年華漸老，一事無成，可見作者多愁善感（1分）。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-008",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "內容理解",
+      "knowledge_point": "「人間如夢」感慨的原因",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "intermediate",
+      "stem": "蘇軾在《念奴嬌‧赤壁懷古》詞末有「人間如夢」的感慨，是因為他想到：\n①英雄也敵不過時間\n②戰爭帶來不少傷亡\n③自己功業未成\n④自己年華老去",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "①③"
+        },
+        {
+          "key": "B",
+          "text": "②④"
+        },
+        {
+          "key": "C",
+          "text": "①②④"
+        },
+        {
+          "key": "D",
+          "text": "①③④"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-009",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "內容理解",
+      "knowledge_point": "全詞描寫景物的手法",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "綜合《念奴嬌‧赤壁懷古》一詞，蘇軾運用以下哪些手法描寫景物？\n①對偶\n②襯托\n③借喻\n④示現",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "①③"
+        },
+        {
+          "key": "B",
+          "text": "①④"
+        },
+        {
+          "key": "C",
+          "text": "②③"
+        },
+        {
+          "key": "D",
+          "text": "②④"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-010",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "內容理解",
+      "knowledge_point": "上片結構分析（綜合填充）",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "蘇軾《念奴嬌‧赤壁懷古》上片即地寫景，描寫赤壁磯風高浪急的壯麗景色，帶出對歷史人物的憑弔。詞人先以①（　　）與②（　　）點明時間、以「大江」與「故壘」交代③（　　），又以「東去」與④（　　）塑造空間與時間的交錯，為下文作鋪墊。接着，「亂石穿空，驚濤拍岸，捲起千堆雪」三句運用了⑤（　　）和⑥（　　）的修辭手法來描寫江浪澎湃的情態，其用意為⑦（　　）（可選：A強調江水的壯麗　B營造歷史的舞台　C呼應詞牌的曲調　D帶出詞人的渺小）。",
+      "score": 4,
+      "items": [
+        {
+          "text": "①",
+          "target": "①",
+          "answer": "千古"
+        },
+        {
+          "text": "②",
+          "target": "②",
+          "answer": "三國"
+        },
+        {
+          "text": "③",
+          "target": "③",
+          "answer": "地點"
+        },
+        {
+          "text": "④",
+          "target": "④",
+          "answer": "西邊"
+        },
+        {
+          "text": "⑤⑥",
+          "target": "⑤⑥",
+          "answer": "比喻、誇張"
+        },
+        {
+          "text": "⑦",
+          "target": "⑦",
+          "answer": "B（營造歷史的舞台）"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-011",
+      "unit": "niannujiao-chibihuaigu",
+      "ability": "內容理解",
+      "knowledge_point": "開首句抒發個人情懷",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "advanced",
+      "stem": "《念奴嬌‧赤壁懷古》一詞以「大江東去，浪淘盡、千古風流人物」為開首。作者蘇軾如何藉這一句描寫景物來抒發個人的情懷？試略加說明。",
+      "score": 4,
+      "scoring_elements": [
+        "作者以「大江東去」描寫滾滾東流的長江水比喻時間（1分）",
+        "指時間就如江水般流逝而不復返（1分）",
+        "而「千古風流人物」的成就功名，在時間洪流的沖刷下亦會消逝（1分）",
+        "藉此抒發江山不變但英雄不能長久的感慨（1分）"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}
