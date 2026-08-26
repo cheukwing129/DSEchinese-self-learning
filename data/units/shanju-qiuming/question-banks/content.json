@@ -1,0 +1,280 @@
+{
+  "unit": "shanju-qiuming",
+  "bank": "content",
+  "questions": [
+    {
+      "id": "cb-content-001",
+      "unit": "shanju-qiuming",
+      "ability": "內容理解",
+      "knowledge_point": "文學體裁及體制特色",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "《山居秋暝》屬於哪種文學體裁？試就全詩句數與每句字數、對仗和用韻，說明其體制特色。",
+      "score": 4,
+      "items": [
+        {
+          "text": "文學體裁",
+          "target": "①",
+          "answer": "五言律詩"
+        },
+        {
+          "text": "體制說明",
+          "target": "②",
+          "answer": "全詩共有八句，每句五個字。全詩分為四聯，即首聯、頷聯、頸聯及尾聯，而頷聯及頸聯都是對仗句。詩歌在平仄和用韻都依循規則，非常嚴整，而第二、四、六和八句押平聲韻。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-002",
+      "unit": "shanju-qiuming",
+      "ability": "內容理解",
+      "knowledge_point": "頸聯運用的修辭手法",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "intermediate",
+      "stem": "《山居秋暝》中，「竹喧歸浣女，蓮動下漁舟」兩句，運用以下哪些修辭手法？\n①對比\n②對偶\n③正襯\n④反襯",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "①③"
+        },
+        {
+          "key": "B",
+          "text": "①④"
+        },
+        {
+          "key": "C",
+          "text": "②③"
+        },
+        {
+          "key": "D",
+          "text": "②④"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-003",
+      "unit": "shanju-qiuming",
+      "ability": "內容理解",
+      "knowledge_point": "全詩抒發的感情",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "王維在《山居秋暝》中抒發了以下哪些感情？\n①熱愛恬靜自然\n②厭惡官場生活\n③決心歸隱山中\n④感慨懷才不遇",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "①②③"
+        },
+        {
+          "key": "B",
+          "text": "①②④"
+        },
+        {
+          "key": "C",
+          "text": "①③④"
+        },
+        {
+          "key": "D",
+          "text": "②③④"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-004",
+      "unit": "shanju-qiuming",
+      "ability": "內容理解",
+      "knowledge_point": "環境與感受",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "王維在《山居秋暝》中描寫山林中秋天傍晚的景象，這些景象營造了一個怎樣的環境（答案須是四字詞）？又詩人對這樣的環境表達甚麼感受？試略加說明。",
+      "score": 5,
+      "items": [
+        {
+          "text": "環境（四字詞）",
+          "target": "①",
+          "answer": "清幽明淨"
+        },
+        {
+          "text": "感受",
+          "target": "②",
+          "answer": "詩人抒發了對山林的熱愛。詩人描寫幽靜的山林和居民樸素的生活，又在末句運用典故，指山中的秋景使人留戀，反映詩人對山中生活的嚮往。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-005",
+      "unit": "shanju-qiuming",
+      "ability": "內容理解",
+      "knowledge_point": "「王孫」所指",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "王維《山居秋暝》末句「王孫自可留」中的「王孫」，指的是甚麼人？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "詩人的友人"
+        },
+        {
+          "key": "B",
+          "text": "山林中的居民"
+        },
+        {
+          "key": "C",
+          "text": "貴族子孫"
+        },
+        {
+          "key": "D",
+          "text": "詩人自己"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-006",
+      "unit": "shanju-qiuming",
+      "ability": "內容理解",
+      "knowledge_point": "尾聯反用典故",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "intermediate",
+      "stem": "《山居秋暝》中的尾聯反用典故。試摘錄有關詩句，並說明作者反用典故有何用意。",
+      "score": 5,
+      "items": [
+        {
+          "text": "摘錄詩句",
+          "target": "①",
+          "answer": "隨意春芳歇，王孫自可留。"
+        },
+        {
+          "text": "用意",
+          "target": "②",
+          "answer": "《楚辭‧招隱士》的典故，原意是希望王孫歸來，不要在山中久留。王維反用這典故，指出縱使春天的芳草凋零，但山上的秋色仍然很美，令人留戀，突顯他對山林的熱愛，與對隱居生活的嚮往。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-007a",
+      "unit": "shanju-qiuming",
+      "ability": "內容理解",
+      "knowledge_point": "陳述判斷",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "intermediate",
+      "stem": "綜合《山居秋暝》一詩的內容，判斷以下陳述：「王維運用反襯法，突顯自己熱愛山林生活。」這陳述是：",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "正確"
+        },
+        {
+          "key": "B",
+          "text": "錯誤"
+        },
+        {
+          "key": "C",
+          "text": "無從判斷"
+        }
+      ],
+      "answer": "B",
+      "explanation": "王維在詩中以「清泉石上流」的動感，反襯「明月松間照」的幽靜，同時以「竹喧歸浣女」藉洗衣女子回歸的說話聲音，反襯山林的幽靜。可見王維運用反襯的目的是描述山林的景色，而非突顯自己熱愛山林，故陳述錯誤。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-007b",
+      "unit": "shanju-qiuming",
+      "ability": "內容理解",
+      "knowledge_point": "陳述判斷",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "intermediate",
+      "stem": "綜合《山居秋暝》一詩的內容，判斷以下陳述：「王維反對世人追逐名利。」這陳述是：",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "正確"
+        },
+        {
+          "key": "B",
+          "text": "錯誤"
+        },
+        {
+          "key": "C",
+          "text": "無從判斷"
+        }
+      ],
+      "answer": "C",
+      "explanation": "王維在詩中以「隨意春芳歇，王孫自可留」，表達自己熱愛山林而厭惡官場的感受，不過他並沒有反對世人追逐名利。陳述與內容沒有矛盾，故陳述無從判斷。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-008",
+      "unit": "shanju-qiuming",
+      "ability": "內容理解",
+      "knowledge_point": "全詩手法與情懷分析（綜合填充）",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "以下是一則有關王維《山居秋暝》一詩運用不同手法描寫景象和抒發情懷的分析文字，試填寫正確答案：全詩主要描寫山村生活中一片①（　　）的景象。詩人在首聯寫「新雨」和「晚來秋」，交代雨後山村美景。頷聯寫山雨初停的景象，以「照」、「流」兩個動詞反襯青松巖石的靜態景物，突顯②（　　）。頸聯寫人事活動，詩人描寫洗衣女的嬉笑聲和漁舟順流而下的動態，運用了③（　　）的描寫手法，突顯山林的恬靜。詩人以「明月」、「清泉」、「松」、「竹」、「蓮」這些景物象徵自己④（　　），又把山中居民純樸自然的生活對比⑤（　　），所以在末句寫出「隨意春芳歇，王孫自可留」一句，流露出詩人⑥（　　）的志向。",
+      "score": 6,
+      "items": [
+        {
+          "text": "①",
+          "target": "①",
+          "answer": "清幽明淨"
+        },
+        {
+          "text": "②",
+          "target": "②",
+          "answer": "空山的寧靜"
+        },
+        {
+          "text": "③",
+          "target": "③",
+          "answer": "以動襯靜"
+        },
+        {
+          "text": "④",
+          "target": "④",
+          "answer": "高潔的品格和情操"
+        },
+        {
+          "text": "⑤",
+          "target": "⑤",
+          "answer": "複雜奸詐的官場生活"
+        },
+        {
+          "text": "⑥",
+          "target": "⑥",
+          "answer": "歸隱"
+        }
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}

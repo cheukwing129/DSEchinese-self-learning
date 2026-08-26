@@ -1,0 +1,294 @@
+{
+  "unit": "shanju-qiuming",
+  "bank": "words",
+  "questions": [
+    {
+      "id": "cb-words-001",
+      "unit": "shanju-qiuming",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：空",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「空山新雨後」一句中的「空」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "空虛"
+        },
+        {
+          "key": "B",
+          "text": "不切實際的"
+        },
+        {
+          "key": "C",
+          "text": "天空"
+        },
+        {
+          "key": "D",
+          "text": "廣闊的"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-002",
+      "unit": "shanju-qiuming",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：晚",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「天氣晚來秋」一句中的「晚」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "晚上"
+        },
+        {
+          "key": "B",
+          "text": "黃昏"
+        },
+        {
+          "key": "C",
+          "text": "後來"
+        },
+        {
+          "key": "D",
+          "text": "晚年"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-003",
+      "unit": "shanju-qiuming",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：照",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「明月松間照」一句中的「照」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "照耀"
+        },
+        {
+          "key": "B",
+          "text": "水中之影"
+        },
+        {
+          "key": "C",
+          "text": "察看"
+        },
+        {
+          "key": "D",
+          "text": "照料"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-004",
+      "unit": "shanju-qiuming",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：清",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「清泉石上流」一句中的「清」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "清除"
+        },
+        {
+          "key": "B",
+          "text": "清澈"
+        },
+        {
+          "key": "C",
+          "text": "清靜"
+        },
+        {
+          "key": "D",
+          "text": "清廉"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-005",
+      "unit": "shanju-qiuming",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：歸",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「竹喧歸浣女」一句中的「歸」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "出嫁"
+        },
+        {
+          "key": "B",
+          "text": "歸還"
+        },
+        {
+          "key": "C",
+          "text": "依從"
+        },
+        {
+          "key": "D",
+          "text": "歸來"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-006",
+      "unit": "shanju-qiuming",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：下",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「蓮動下漁舟」一句中的「下」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "下面"
+        },
+        {
+          "key": "B",
+          "text": "順流下行"
+        },
+        {
+          "key": "C",
+          "text": "攻下"
+        },
+        {
+          "key": "D",
+          "text": "離開"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-007",
+      "unit": "shanju-qiuming",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：芳",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「隨意春芳歇」一句中的「芳」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "花卉"
+        },
+        {
+          "key": "B",
+          "text": "青春年華"
+        },
+        {
+          "key": "C",
+          "text": "美好的名聲"
+        },
+        {
+          "key": "D",
+          "text": "賢德人才"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-008",
+      "unit": "shanju-qiuming",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：歇",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「隨意春芳歇」一句中的「歇」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "竭盡"
+        },
+        {
+          "key": "B",
+          "text": "休息"
+        },
+        {
+          "key": "C",
+          "text": "凋謝"
+        },
+        {
+          "key": "D",
+          "text": "散發"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-009",
+      "unit": "shanju-qiuming",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：自",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「王孫自可留」一句中的「自」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "自己"
+        },
+        {
+          "key": "B",
+          "text": "開始"
+        },
+        {
+          "key": "C",
+          "text": "假如"
+        },
+        {
+          "key": "D",
+          "text": "仍然"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    }
+  ]
+}

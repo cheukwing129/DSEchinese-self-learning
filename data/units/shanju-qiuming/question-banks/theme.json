@@ -1,0 +1,27 @@
+{
+  "unit": "shanju-qiuming",
+  "bank": "theme",
+  "questions": [
+    {
+      "id": "cb-theme-001",
+      "unit": "shanju-qiuming",
+      "ability": "主旨與思考",
+      "knowledge_point": "與《逍遙遊》「無用」涵義的比較（開放題）",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "cross_text_target": "xiaoyaoyou",
+      "paragraph_ref": 4,
+      "difficulty": "advanced",
+      "stem": "你認為王維《山居秋暝》的「隨意春芳歇，王孫自可留」所表達的意境，符合《莊子‧逍遙遊》中的「無用」涵義嗎？試略加說明。",
+      "score": 4,
+      "scoring_elements": [
+        "符合：《莊子‧逍遙遊》中的「無用」是指某些東西於其他人無用的，正是其大用所在（1分）",
+        "王維追求的不是名利、不是於朝廷為官的生活，而是隱居山間的恬靜生活（1分）",
+        "對朝廷來說，如王維隱居山林，他是「無用」（1分）",
+        "但對王維自己來說，他能隱居山林，安寧地享受空山恬靜閒逸的生活，正符合《莊子‧逍遙遊》中「無用之用」的涵義，可以達至逍遙的境界（1分）"
+      ],
+      "note": "答案言之成理即可，此為其中一種論證方向。",
+      "source": "校本試題庫"
+    }
+  ]
+}

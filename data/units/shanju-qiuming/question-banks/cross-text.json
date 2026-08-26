@@ -1,0 +1,33 @@
+{
+  "unit": "shanju-qiuming",
+  "bank": "cross-text",
+  "questions": [
+    {
+      "id": "cb-cross-001",
+      "unit": "shanju-qiuming",
+      "ability": "跨篇閱讀",
+      "knowledge_point": "與《登樓》對官場體會的比較",
+      "question_type": "short_answer",
+      "is_cross_text": true,
+      "cross_text_target": "denglou",
+      "paragraph_ref": 4,
+      "difficulty": "intermediate",
+      "stem": "《山居秋暝》和《登樓》的作者同樣流露出對官場的體會。下列何者厭棄官場？何者報國無門？又或是無從判斷？",
+      "score": 4,
+      "items": [
+        {
+          "text": "《山居秋暝》",
+          "target": "(1)",
+          "answer": "厭棄官場、報國無門"
+        },
+        {
+          "text": "《登樓》",
+          "target": "(2)",
+          "answer": "無從判斷"
+        }
+      ],
+      "explanation": "王維在《山居秋暝》尾聯反用典故，明確表達對山林生活的嚮往及對官場的厭棄，並流露懷才不遇、報國無門的感慨；杜甫在《登樓》中則主要抒發對國家命運的關切與憂國憂時之情，詩中未見明確流露厭棄官場或報國無門的表述，故屬無從判斷。",
+      "source": "校本試題庫"
+    }
+  ]
+}
