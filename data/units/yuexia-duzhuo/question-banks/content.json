@@ -217,38 +217,103 @@
       "source": "校本試題庫"
     },
     {
-      "id": "cb-content-007",
+      "id": "cb-content-007a",
       "unit": "yuexia-duzhuo",
       "ability": "內容理解",
-      "knowledge_point": "詩句情緒高漲或低落判斷",
-      "question_type": "true_false_unknown",
+      "knowledge_point": "詩句情緒判斷",
+      "question_type": "single_choice",
       "is_cross_text": false,
-      "paragraph_ref": null,
+      "paragraph_ref": 1,
       "difficulty": "intermediate",
-      "stem": "《月下獨酌》一詩的情感跌宕起伏，試判斷以下詩句中，李白的情緒是「高漲」或「低落」（此處以 true 代表高漲，false 代表低落）。",
-      "score": 4,
-      "statements": [
+      "stem": "《月下獨酌》一詩的情感跌宕起伏，試判斷「花間一壺酒，獨酌無相親」一句中，李白的情緒是：",
+      "score": 1,
+      "options": [
         {
-          "text": "花間一壺酒，獨酌無相親。",
-          "answer": "false",
-          "explanation": "詩人獨自飲酒，無人相伴，情緒低落。"
+          "key": "A",
+          "text": "高漲"
         },
         {
-          "text": "舉杯邀明月，對影成三人。",
-          "answer": "true",
-          "explanation": "詩人忽發奇想邀月對影，情緒轉為高漲。"
-        },
-        {
-          "text": "我歌月徘徊，我舞影零亂。",
-          "answer": "true",
-          "explanation": "詩人與月、影同歌共舞，情緒高漲歡愉。"
-        },
-        {
-          "text": "醒時同交歡，醉後各分散。",
-          "answer": "false",
-          "explanation": "醉後與月、影分離，復歸孤獨，情緒低落。"
+          "key": "B",
+          "text": "低落"
         }
       ],
+      "answer": "B",
+      "explanation": "詩人獨自飲酒，無人相伴，情緒低落。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-007b",
+      "unit": "yuexia-duzhuo",
+      "ability": "內容理解",
+      "knowledge_point": "詩句情緒判斷",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "intermediate",
+      "stem": "《月下獨酌》一詩的情感跌宕起伏，試判斷「舉杯邀明月，對影成三人」一句中，李白的情緒是：",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "高漲"
+        },
+        {
+          "key": "B",
+          "text": "低落"
+        }
+      ],
+      "answer": "A",
+      "explanation": "詩人忽發奇想邀月對影，情緒轉為高漲。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-007c",
+      "unit": "yuexia-duzhuo",
+      "ability": "內容理解",
+      "knowledge_point": "詩句情緒判斷",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "intermediate",
+      "stem": "《月下獨酌》一詩的情感跌宕起伏，試判斷「我歌月徘徊，我舞影零亂」一句中，李白的情緒是：",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "高漲"
+        },
+        {
+          "key": "B",
+          "text": "低落"
+        }
+      ],
+      "answer": "A",
+      "explanation": "詩人與月、影同歌共舞，情緒高漲歡愉。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-007d",
+      "unit": "yuexia-duzhuo",
+      "ability": "內容理解",
+      "knowledge_point": "詩句情緒判斷",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "intermediate",
+      "stem": "《月下獨酌》一詩的情感跌宕起伏，試判斷「醒時同交歡，醉後各分散」一句中，李白的情緒是：",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "高漲"
+        },
+        {
+          "key": "B",
+          "text": "低落"
+        }
+      ],
+      "answer": "B",
+      "explanation": "醉後與月、影分離，復歸孤獨，情緒低落。",
       "source": "校本試題庫"
     },
     {
@@ -258,7 +323,7 @@
       "knowledge_point": "行樂與無情的觀點闡述",
       "question_type": "short_answer",
       "is_cross_text": false,
-      "paragraph_ref": 4,
+      "paragraph_ref": 5,
       "difficulty": "advanced",
       "stem": "有論者認為《月下獨酌》中，李白與月亮和影子共舞的行為是屬於「行樂」。但也有論者認為以上的行為屬於「無情」。試根據詩歌的內容，略加闡述以上兩位論者的觀點。",
       "score": 4,
