@@ -1,0 +1,976 @@
+{
+  "unit": "shide-xishan-yanyouji",
+  "bank": "words",
+  "questions": [
+    {
+      "id": "cb-words-001",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "解釋粗體字",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "根據柳宗元《始得西山宴遊記》一文，解釋以下文句中粗體字的意思。",
+      "score": 5,
+      "items": [
+        {
+          "text": "日與其徒上高山，入深林。",
+          "target": "徒",
+          "answer": "朋友"
+        },
+        {
+          "text": "到則披草而坐，傾壺而醉。",
+          "target": "披",
+          "answer": "用手撥開"
+        },
+        {
+          "text": "覺而起，起而歸。",
+          "target": "覺",
+          "answer": "睡醒"
+        },
+        {
+          "text": "然後知吾嚮之未始遊。",
+          "target": "嚮",
+          "answer": "從前、過往（通「向」）"
+        },
+        {
+          "text": "遊於是乎始，故為之文以志。",
+          "target": "志",
+          "answer": "記述其事（通「誌」）"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-002",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "詞性與詞義",
+      "question_type": "pos_meaning",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "intermediate",
+      "stem": "根據柳宗元《始得西山宴遊記》一文，試指出以下句子中粗體字的詞性及詞義。",
+      "score": 5,
+      "items": [
+        {
+          "text": "日與其徒上高山，入深林。",
+          "target": "日",
+          "pos": "名詞作副詞",
+          "meaning": "每天"
+        },
+        {
+          "text": "其隙也，則施施而行，漫漫而遊。",
+          "target": "隙",
+          "pos": "名詞",
+          "meaning": "空隙，指閒暇的時間"
+        },
+        {
+          "text": "醉則更相枕以卧，卧而夢。",
+          "target": "枕",
+          "pos": "動詞",
+          "meaning": "以頭枕物"
+        },
+        {
+          "text": "窮山之高而止。",
+          "target": "窮",
+          "pos": "動詞",
+          "meaning": "走到盡頭"
+        },
+        {
+          "text": "縈青繚白，外與天際，四望如一。",
+          "target": "際",
+          "pos": "動詞",
+          "meaning": "相連、匯合"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-003",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "「始」字多義辨析",
+      "question_type": "matching",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "《始得西山宴遊記》中，「始」一字多次出現。試指出以下句子中「始」字的意義。",
+      "score": 3,
+      "options": [
+        {
+          "key": "A",
+          "text": "開始"
+        },
+        {
+          "key": "B",
+          "text": "算不上"
+        },
+        {
+          "key": "C",
+          "text": "曾經"
+        },
+        {
+          "key": "D",
+          "text": "根本"
+        },
+        {
+          "key": "E",
+          "text": "才"
+        }
+      ],
+      "items": [
+        {
+          "text": "而未始知西山之怪特",
+          "answer": "C",
+          "explanation": "「未始」即「未嘗」，「始」解「曾經」"
+        },
+        {
+          "text": "始指異之",
+          "answer": "E",
+          "explanation": "「始」解「才」，表示終於發現"
+        },
+        {
+          "text": "遊於是乎始",
+          "answer": "A",
+          "explanation": "「始」解「開始」，指真正的遊歷由此開始"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-004",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "虛詞辨析：之",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": 1,
+      "difficulty": "advanced",
+      "stem": "「之」是常見的文言虛詞，以下哪一句中的「之」字，與「而未始知西山之怪特」（《始得西山宴遊記》）一句中「之」字的用法不同？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "雖有槁暴，不復挺者，輮使之然也。（《荀子‧勸學》（節錄））"
+        },
+        {
+          "key": "B",
+          "text": "則夫子猶有蓬之心也夫！（《逍遙遊》節錄）"
+        },
+        {
+          "key": "C",
+          "text": "欲勿與，即患秦兵之來。（《史記‧廉頗藺相如列傳》（節錄））"
+        },
+        {
+          "key": "D",
+          "text": "此誠危急存亡之秋也。（《出師表》）"
+        }
+      ],
+      "answer": "A",
+      "explanation": "「西山之怪特」的「之」是結構助詞，用於定語與中心語之間，相當於「的」；B、D項「之」同樣是結構助詞「的」；C項「秦兵之來」的「之」用於主謂之間，取消句子獨立性，仍屬結構助詞用法範疇；A項「使之然也」的「之」是代詞，代指「木」，用法不同。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-005",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：僇",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「自余為僇人，居是州，恆惴慄」一句中的「僇」字是甚麼意思？（第1段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "合力"
+        },
+        {
+          "key": "B",
+          "text": "殺戮"
+        },
+        {
+          "key": "C",
+          "text": "刑辱"
+        },
+        {
+          "key": "D",
+          "text": "侮辱"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-006",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：恆",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「自余為僇人，居是州，恆惴慄」一句中的「恆」字是甚麼意思？（第1段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "以前"
+        },
+        {
+          "key": "B",
+          "text": "經常"
+        },
+        {
+          "key": "C",
+          "text": "平常"
+        },
+        {
+          "key": "D",
+          "text": "永遠"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-007",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：窮",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「日與其徒上高山，入深林，窮迴溪」一句中的「窮」字是甚麼意思？（第1段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "窮盡"
+        },
+        {
+          "key": "B",
+          "text": "貧窮"
+        },
+        {
+          "key": "C",
+          "text": "終極"
+        },
+        {
+          "key": "D",
+          "text": "查究"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-008",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：迴",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「日與其徒上高山，入深林，窮迴溪」一句中的「迴」字是甚麼意思？（第1段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "循環"
+        },
+        {
+          "key": "B",
+          "text": "旋轉"
+        },
+        {
+          "key": "C",
+          "text": "圍繞"
+        },
+        {
+          "key": "D",
+          "text": "曲折"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-009",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：傾",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「到則披草而坐，傾壺而醉」一句中的「傾」字是甚麼意思？（第1段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "傾斜"
+        },
+        {
+          "key": "B",
+          "text": "壓倒"
+        },
+        {
+          "key": "C",
+          "text": "盡"
+        },
+        {
+          "key": "D",
+          "text": "瀉下"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-010",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：意",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「意有所極，夢亦同趣」一句中的「意」字是甚麼意思？（第1段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "志向"
+        },
+        {
+          "key": "B",
+          "text": "意料"
+        },
+        {
+          "key": "C",
+          "text": "情趣"
+        },
+        {
+          "key": "D",
+          "text": "心意"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-011",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：極",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「意有所極，夢亦同趣」一句中的「極」字是甚麼意思？（第1段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "非常"
+        },
+        {
+          "key": "B",
+          "text": "到達"
+        },
+        {
+          "key": "C",
+          "text": "終極"
+        },
+        {
+          "key": "D",
+          "text": "頂點"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-012",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：趣",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「意有所極，夢亦同趣」一句中的「趣」字是甚麼意思？（第1段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "意思"
+        },
+        {
+          "key": "B",
+          "text": "疾行"
+        },
+        {
+          "key": "C",
+          "text": "往"
+        },
+        {
+          "key": "D",
+          "text": "趣味"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-013",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：歸",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「覺而起，起而歸」一句中的「歸」字是甚麼意思？（第1段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "歸還"
+        },
+        {
+          "key": "B",
+          "text": "歸附"
+        },
+        {
+          "key": "C",
+          "text": "餽贈"
+        },
+        {
+          "key": "D",
+          "text": "回去"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-014",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：始（未始）",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「而未始知西山之怪特」一句中的「始」字是甚麼意思？（第1段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "曾"
+        },
+        {
+          "key": "B",
+          "text": "開始"
+        },
+        {
+          "key": "C",
+          "text": "最初"
+        },
+        {
+          "key": "D",
+          "text": "才"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-015",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：始（指異）",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「因坐法華西亭，望西山，始指異之」一句中的「始」字是甚麼意思？（第2段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "開始"
+        },
+        {
+          "key": "B",
+          "text": "才"
+        },
+        {
+          "key": "C",
+          "text": "最初"
+        },
+        {
+          "key": "D",
+          "text": "曾"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-016",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：異",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「因坐法華西亭，望西山，始指異之」一句中的「異」字是甚麼意思？（第2段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "區別"
+        },
+        {
+          "key": "B",
+          "text": "稱奇"
+        },
+        {
+          "key": "C",
+          "text": "不相同"
+        },
+        {
+          "key": "D",
+          "text": "不平常"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-017",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：過",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「遂命僕人，過湘江，緣染溪，斫榛莽，焚茅茷」一句中的「過」字是甚麼意思？（第2段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "渡過"
+        },
+        {
+          "key": "B",
+          "text": "超過"
+        },
+        {
+          "key": "C",
+          "text": "經過"
+        },
+        {
+          "key": "D",
+          "text": "探訪"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-018",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：莽",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「遂命僕人，過湘江，緣染溪，斫榛莽，焚茅茷」一句中的「莽」字是甚麼意思？（第2段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "荒草"
+        },
+        {
+          "key": "B",
+          "text": "茅塞"
+        },
+        {
+          "key": "C",
+          "text": "茅屋"
+        },
+        {
+          "key": "D",
+          "text": "茂盛"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-019",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：止",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「窮山之高而止」一句中的「止」字是甚麼意思？（第2段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "居住"
+        },
+        {
+          "key": "B",
+          "text": "停下"
+        },
+        {
+          "key": "C",
+          "text": "到達"
+        },
+        {
+          "key": "D",
+          "text": "盡頭"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-020",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：遨",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「攀援而登，箕踞而遨」一句中的「遨」字是甚麼意思？（第2段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "嬉戲"
+        },
+        {
+          "key": "B",
+          "text": "飛翔"
+        },
+        {
+          "key": "C",
+          "text": "隨意遠望"
+        },
+        {
+          "key": "D",
+          "text": "遊歷"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-021",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：席",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「則凡數州之土壤，皆在衽席之下」一句中的「席」字是甚麼意思？（第2段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "筵席"
+        },
+        {
+          "key": "B",
+          "text": "卧蓆"
+        },
+        {
+          "key": "C",
+          "text": "職位"
+        },
+        {
+          "key": "D",
+          "text": "座位"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-022",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：洼",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「其高下之勢，岈然洼然」一句中的「洼」字是甚麼意思？（第2段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "深池"
+        },
+        {
+          "key": "B",
+          "text": "深厚"
+        },
+        {
+          "key": "C",
+          "text": "水坑"
+        },
+        {
+          "key": "D",
+          "text": "低陷"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-023",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：累",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「攢蹙累積，莫得遯隱」一句中的「累」字是甚麼意思？（第2段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "連續"
+        },
+        {
+          "key": "B",
+          "text": "堆疊"
+        },
+        {
+          "key": "C",
+          "text": "牽連"
+        },
+        {
+          "key": "D",
+          "text": "勞累"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-024",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：遯",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「攢蹙累積，莫得遯隱」一句中的「遯」字是甚麼意思？（第2段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "逃"
+        },
+        {
+          "key": "B",
+          "text": "遷移"
+        },
+        {
+          "key": "C",
+          "text": "放縱"
+        },
+        {
+          "key": "D",
+          "text": "失去"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-025",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：縈",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「縈青繚白，外與天際」一句中的「縈」字是甚麼意思？（第2段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "盤旋"
+        },
+        {
+          "key": "B",
+          "text": "纏繞"
+        },
+        {
+          "key": "C",
+          "text": "牽掛"
+        },
+        {
+          "key": "D",
+          "text": "彎曲"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-026",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：類",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「然後知是山之特立，不與培塿為類」一句中的「類」字是甚麼意思？（第2段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "一類"
+        },
+        {
+          "key": "B",
+          "text": "相似"
+        },
+        {
+          "key": "C",
+          "text": "榜樣"
+        },
+        {
+          "key": "D",
+          "text": "事理"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-027",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：俱",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「悠悠乎與顥氣俱，而莫得其涯」一句中的「俱」字是甚麼意思？（第2段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "同"
+        },
+        {
+          "key": "B",
+          "text": "全部"
+        },
+        {
+          "key": "C",
+          "text": "具備"
+        },
+        {
+          "key": "D",
+          "text": "用具"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-028",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：頹然",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「頹然就醉，不知日之入」一句中的「頹然」一詞是甚麼意思？（第2段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "崩塌"
+        },
+        {
+          "key": "B",
+          "text": "醉倒"
+        },
+        {
+          "key": "C",
+          "text": "衰老的樣子"
+        },
+        {
+          "key": "D",
+          "text": "糊塗無知的樣子"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-029",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：釋",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「心凝形釋，與萬化冥合」一句中的「釋」字是甚麼意思？（第2段）",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "解開"
+        },
+        {
+          "key": "B",
+          "text": "解釋"
+        },
+        {
+          "key": "C",
+          "text": "放棄"
+        },
+        {
+          "key": "D",
+          "text": "消散"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    }
+  ]
+}

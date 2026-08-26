@@ -1,0 +1,174 @@
+{
+  "unit": "shide-xishan-yanyouji",
+  "bank": "structure-skill",
+  "questions": [
+    {
+      "id": "cb-skill-001",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "結構與手法",
+      "knowledge_point": "排比手法辨析",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "intermediate",
+      "stem": "在柳宗元《始得西山宴遊記》中，以下哪組句子與「日與其徒上高山，入深林，窮迴溪，幽泉怪石，無遠不到」運用相同的修辭手法？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "到則披草而坐，傾壺而醉。醉則更相枕以卧，卧而夢，意有所極，夢亦同趣。"
+        },
+        {
+          "key": "B",
+          "text": "遂命僕人，過湘江，緣染溪，斫榛莽，焚茅茷，窮山之高而止。"
+        },
+        {
+          "key": "C",
+          "text": "悠悠乎與顥氣俱，而莫得其涯；洋洋乎與造物者遊，而不知其所窮。"
+        },
+        {
+          "key": "D",
+          "text": "蒼然暮色，自遠而至，至無所見，而猶不欲歸。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "原句「上高山，入深林，窮迴溪」以短促句式連續排列動作，屬排比；B項「過湘江，緣染溪，斫榛莽，焚茅茷」同樣以短句連續排列動作，運用排比手法。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-skill-002",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "結構與手法",
+      "knowledge_point": "頂真手法辨析",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "intermediate",
+      "stem": "《始得西山宴遊記》中，「然後知吾嚮之未始遊，遊於是乎始。」一句運用了哪種修辭手法？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "比喻"
+        },
+        {
+          "key": "B",
+          "text": "誇張"
+        },
+        {
+          "key": "C",
+          "text": "頂真"
+        },
+        {
+          "key": "D",
+          "text": "對比"
+        }
+      ],
+      "answer": "C",
+      "explanation": "「未始遊，遊於是乎始」以前句結尾的「遊」字作後句開頭，句意環環相扣，屬頂真手法。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-skill-003",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "結構與手法",
+      "knowledge_point": "對偶手法辨析",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "intermediate",
+      "stem": "在柳宗元《始得西山宴遊記》中，以下哪組句子與「則凡數州之土壤，皆在衽席之下。」運用相同的修辭手法？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "幽泉怪石，無遠不到。"
+        },
+        {
+          "key": "B",
+          "text": "以為凡是州之山有異態者，皆我有也。"
+        },
+        {
+          "key": "C",
+          "text": "尺寸千里，攢蹙累積。"
+        },
+        {
+          "key": "D",
+          "text": "引觴滿酌，頹然就醉，不知日之入。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "「則凡數州之土壤，皆在衽席之下」以誇張手法形容登高俯視時空間錯覺的巨大落差；C項「尺寸千里，攢蹙累積」同樣運用誇張手法形容視覺上的空間壓縮。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-skill-004",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "結構與手法",
+      "knowledge_point": "抒情手法辨析",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "intermediate",
+      "stem": "閱讀引文：「蒼然暮色，自遠而至，至無所見，而猶不欲歸。」以上引文運用了哪一種抒情手法？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "直接抒情"
+        },
+        {
+          "key": "B",
+          "text": "借物抒情"
+        },
+        {
+          "key": "C",
+          "text": "緣情寫景"
+        },
+        {
+          "key": "D",
+          "text": "觸景生情"
+        }
+      ],
+      "answer": "D",
+      "explanation": "作者因見暮色漸濃、四周景物漸不可見，觸發對西山的留戀不捨之情，屬觸景生情。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-skill-005",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "結構與手法",
+      "knowledge_point": "觸景生情的具體說明",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "advanced",
+      "stem": "承上題，試說明引文如何運用觸景生情的手法抒發情感。",
+      "score": 2,
+      "scoring_elements": [
+        "「蒼然暮色，自遠而至，至無所見」描寫西山上的暮色由遠至近，四周愈來愈黑的景色（1分）",
+        "作者借眼前的景色，抒發自己對西山的留戀，即使甚麼也看不見時，依然「猶不欲歸」，捨不得離開西山（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-skill-006",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "結構與手法",
+      "knowledge_point": "多寫得西山前遊歷的作用",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "advanced",
+      "stem": "遊西山是《始得西山宴遊記》一文的重點，但柳宗元卻花不少筆墨記述「得西山」前的遊歷。他為甚麼這樣寫？試加以說明。",
+      "score": 4,
+      "scoring_elements": [
+        "柳宗元在得西山前的遊歷只是借出遊消閒，到達目的地後便喝酒，酒醒便離開，反映出他並未得到山水之樂（1分）",
+        "直到柳宗元遊西山後，感到自己和萬物融為一體，形體得以解脫（1分）",
+        "樂而忘返，才真正領略到山水之樂（1分）",
+        "記敍得西山前的遊歷，能反襯出得西山後的山水之樂，呼應文章主題「始得西山」（1分）"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}

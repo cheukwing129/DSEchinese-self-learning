@@ -1,0 +1,46 @@
+{
+  "unit": "shide-xishan-yanyouji",
+  "bank": "theme",
+  "questions": [
+    {
+      "id": "cb-theme-001",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "主旨與思考",
+      "knowledge_point": "對柳宗元寄情山水做法的個人見解（開放題）",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "柳宗元面對仕途失意、被貶永州的逆境，選擇以寄情山水來排解鬱悶。你認為他的做法可取嗎？為甚麼？",
+      "score": 3,
+      "scoring_elements": [
+        "清晰表達個人立場（可取／不可取／部分可取）",
+        "扣連柳宗元藉山水體悟「心凝形釋，與萬化冥合」的正面轉化作為論據",
+        "可進一步討論此法是否適用於現代人面對逆境時的參考價值",
+        "言之成理即可，不設單一標準答案"
+      ],
+      "note": "開放題，答案言之成理即可。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-theme-002",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "主旨與思考",
+      "knowledge_point": "「始得西山」的人生啟示（開放題）",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "柳宗元在文末說「然後知吾嚮之未始遊，遊於是乎始」，意謂真正的「遊」始於發現西山之後。你認為這種「發現」對人生有何啟示？試結合本文內容及個人經驗加以說明。",
+      "score": 4,
+      "scoring_elements": [
+        "指出柳宗元透過發現西山、領悟物我合一的哲理而得到心靈解脫（1分）",
+        "說明「發現」往往需要突破既有的框限或困局才能達到（1分）",
+        "結合個人經驗或見解說明類似的「發現」如何帶來啟示或轉變（1分）",
+        "總結：真正有價值的體會往往在跳出慣常的視角或處境後才能得到（1分）"
+      ],
+      "note": "開放題，答案言之成理即可，重點在於能否結合文本與個人經驗深入思考。",
+      "source": "校本試題庫"
+    }
+  ]
+}

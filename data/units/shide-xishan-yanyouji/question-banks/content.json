@@ -1,0 +1,443 @@
+{
+  "unit": "shide-xishan-yanyouji",
+  "bank": "content",
+  "questions": [
+    {
+      "id": "cb-content-001",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "內容理解",
+      "knowledge_point": "僇人的自稱原因",
+      "question_type": "fill_in_blank",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "在柳宗元《始得西山宴遊記》中，作者為甚麼自稱為「僇人」？",
+      "score": 2,
+      "items": [
+        {
+          "text": "作者參加了「永貞革新」，＿＿＿＿＿，因而自稱「僇人」，意思是＿＿＿＿＿。",
+          "blanks": [
+            "失敗後受朝廷處罰，貶謫到永州",
+            "接受刑辱的人"
+          ]
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-002",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "內容理解",
+      "knowledge_point": "遊山玩水的目的",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "在《始得西山宴遊記》中，柳宗元成為「僇人」後四處遊山玩水，目的是：①體察民情　②打發時間　③紓緩恐慌　④增廣見聞",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "①③"
+        },
+        {
+          "key": "B",
+          "text": "①④"
+        },
+        {
+          "key": "C",
+          "text": "②③"
+        },
+        {
+          "key": "D",
+          "text": "②④"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-003",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "內容理解",
+      "knowledge_point": "得西山前遊歷的判斷",
+      "question_type": "true_false_unknown",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "根據《始得西山宴遊記》一文中作者在「得西山」前的遊歷經過，判斷以下陳述。",
+      "score": 4,
+      "statements": [
+        {
+          "text": "指出自己和友人會選擇一些有特色的山水來遊歷。",
+          "answer": "true",
+          "explanation": "作者記敍自己和朋友「幽泉怪石，無遠不到」，可見會選擇遊覽有特色的山水，故陳述正確。"
+        },
+        {
+          "text": "反映他領略到遊山玩水的樂趣。",
+          "answer": "false",
+          "explanation": "作者只是記述自己以為已賞遍永州有特色的山水，而非反映真正得到樂趣，故陳述錯誤。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-004",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "內容理解",
+      "knowledge_point": "結構作用（承上啟下）",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "intermediate",
+      "stem": "《始得西山宴遊記》中，柳宗元在「得西山」前提到「以為凡是州之山有異態者，皆我有也，而未始知西山之怪特」。這句話對文章的結構起了甚麼作用？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "承上"
+        },
+        {
+          "key": "B",
+          "text": "啟下"
+        },
+        {
+          "key": "C",
+          "text": "承上啟下"
+        },
+        {
+          "key": "D",
+          "text": "總結全文"
+        }
+      ],
+      "answer": "C",
+      "explanation": "「異態」承接上文對永州山水的描寫，「而未始知西山之怪特」則引出下文對西山的發現與描寫，故起承上啟下的作用。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-005",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "內容理解",
+      "knowledge_point": "西山特點與柳宗元處境的比喻",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "intermediate",
+      "stem": "柳宗元在《始得西山宴遊記》中，通過描寫發現和登上西山的經過與在西山上所見四周景色，表現出西山甚麼特點？又柳宗元以西山的特點比喻自己的甚麼情況？",
+      "score": 4,
+      "table": {
+        "columns": [
+          "描寫內容",
+          "西山的特點",
+          "柳宗元的情況"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "發現和登上西山的經過",
+              null,
+              "自己受罰被貶至偏遠的永州，空有一身才華但鮮有人欣賞。"
+            ]
+          },
+          {
+            "cells": [
+              "在西山賞所見的四周景色",
+              "西山山勢高聳，跟附近一帶高低起伏，宛如小土丘的羣山不是同類。",
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "①西山特點：西山位處偏僻（1分），且人跡罕至（1分）。",
+        "②柳宗元情況：自己品格高潔（1分），不與世俗同流合污（1分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-006",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "內容理解",
+      "knowledge_point": "寫景手法辨析",
+      "question_type": "matching",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "advanced",
+      "stem": "柳宗元在《始得西山宴遊記》一文運用了不同的手法描寫景物。試指出以下引文運用甚麼手法描寫景物（可選多於一個答案，全對才給分）。",
+      "score": 3,
+      "options": [
+        {
+          "key": "A",
+          "text": "步移法"
+        },
+        {
+          "key": "B",
+          "text": "多角度描寫"
+        },
+        {
+          "key": "C",
+          "text": "多感官描寫"
+        },
+        {
+          "key": "D",
+          "text": "側面描寫"
+        }
+      ],
+      "items": [
+        {
+          "text": "①過湘江，緣染溪，斫榛莽，焚茅茷，窮山之高而止。",
+          "answer": [
+            "A",
+            "D"
+          ]
+        },
+        {
+          "text": "②其高下之勢，岈然洼然，若垤若穴，尺寸千里，攢蹙累積，莫得遯隱。",
+          "answer": [
+            "B"
+          ]
+        },
+        {
+          "text": "③縈青繚白，外與天際，四望如一。",
+          "answer": [
+            "B"
+          ]
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-007",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "內容理解",
+      "knowledge_point": "西山特點的排除項",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "以下哪項不符合《始得西山宴遊記》一文中西山的特點？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "高聳入雲"
+        },
+        {
+          "key": "B",
+          "text": "與羣山並列"
+        },
+        {
+          "key": "C",
+          "text": "景觀壯闊"
+        },
+        {
+          "key": "D",
+          "text": "人跡罕至"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-008",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "內容理解",
+      "knowledge_point": "登山後的感受",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "根據《始得西山宴遊記》，柳宗元登上西山後，產生以下哪些感受？①不忿自身際遇坎坷　②感歎西山卓越不凡　③感覺自己和自然融為一體　④不願意離開西山",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "①②③"
+        },
+        {
+          "key": "B",
+          "text": "①②④"
+        },
+        {
+          "key": "C",
+          "text": "①③④"
+        },
+        {
+          "key": "D",
+          "text": "②③④"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-009",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "內容理解",
+      "knowledge_point": "「山」與「培塿」的比喻",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "intermediate",
+      "stem": "閱讀以下引文：「然後知是山之特立，不與培塿為類。」以上引文中的「山」和「培塿」分別比喻為甚麼？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "「山」比喻作者；「培塿」比喻作者的同伴。"
+        },
+        {
+          "key": "B",
+          "text": "「山」比喻作者的同伴；「培塿」比喻作者。"
+        },
+        {
+          "key": "C",
+          "text": "「山」比喻世俗；「培塿」比喻作者。"
+        },
+        {
+          "key": "D",
+          "text": "「山」比喻作者；「培塿」比喻世俗。"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-010",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "內容理解",
+      "knowledge_point": "比喻寓意說明",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "intermediate",
+      "stem": "承上題，「山」比喻作者、「培塿」比喻世俗的比喻有何寓意？試略加說明。",
+      "score": 2,
+      "scoring_elements": [
+        "西山高聳特立，非周圍的小山丘可比（1分）",
+        "作者以此比喻帶出自己品格高尚，不與世俗小人同流合污的寓意（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-011",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "內容理解",
+      "knowledge_point": "得西山前後遊歷比較",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "試比較柳宗元在「得西山」前和「得西山」的遊歷所見景色，與宴遊情況有甚麼分別，並試填寫下表。",
+      "score": 5,
+      "table": {
+        "columns": [
+          "",
+          "「得西山」前的遊歷",
+          "「得西山」的遊歷"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "所見景色",
+              "有「幽泉」、「怪石」等奇特的景色，但及不上西山的奇異卓絕。",
+              "從高處遠望，鄰近各州的土地好像全在坐席之下。俯視所見，周圍的山勢高低起伏，千里之地在眼前縮成尺寸，遠處的山聚攏堆積在一起。環視四周，青山白水纏繞，與天際相接。"
+            ]
+          },
+          {
+            "cells": [
+              "宴遊情況",
+              "柳宗元和朋友喝酒直至醉倒入睡，醒後踏上歸途。",
+              "他和朋友舉杯喝酒，頹然倒地而醉，但與此前之遊不同的是：即使他醒來發覺太陽已經下山，卻還不想歸去。"
+            ]
+          }
+        ]
+      },
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-012",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "內容理解",
+      "knowledge_point": "得西山前後對遊歷的看法",
+      "question_type": "extract_sentence",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "根據《始得西山宴遊記》，柳宗元在「得西山」前後，對自己在永州遊覽山水的經歷有甚麼不同的看法？試摘錄有關句子（答案不得多於20字，標點符號計算在內）。",
+      "score": 2,
+      "items": [
+        {
+          "time": "得西山前",
+          "answer_text": "以為凡是州之山有異態者，皆我有也。"
+        },
+        {
+          "time": "得西山後",
+          "answer_text": "然後知吾嚮之未始遊，遊於是乎始。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-013",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "內容理解",
+      "knowledge_point": "西山山頂所見所感",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "advanced",
+      "stem": "《始得西山宴遊記》中，柳宗元因觀看到西山一帶的景色，使自己「恆惴慄」的心情得以釋放。試就他在西山山頂所見所感加以說明。",
+      "score": 4,
+      "scoring_elements": [
+        "柳宗元在西山看到天空與地上景物融合「如一」的浩瀚景象時（1分）",
+        "感悟到萬事萬物本為一體（1分）",
+        "物與我、得與失、榮與辱的界線也不再涇渭分明（1分）",
+        "柳宗元於是放下對榮辱得失的掛慮，從先前「恆惴慄」的心情中釋放出來（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-014",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "內容理解",
+      "knowledge_point": "兩次「醉」的原因比較",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "《始得西山宴遊記》中，柳宗元在「得西山」前和「得西山」的遊歷中，均出現「醉」的情況。兩次「醉」的原因相同嗎？試加以說明。",
+      "score": 4,
+      "scoring_elements": [
+        "不同：作者在得西山前喝醉，是因為他被貶後心情鬱悶（1分）",
+        "於是寄情山水之餘更借酒消愁，以喝醉來逃避現實（1分）",
+        "而得西山的喝醉，是因為作者陶醉於西山的山水，心胸豁然開朗（1分）",
+        "在物我兩忘、感到精神與萬物合一的情況下，舉杯飲至醉倒（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-015",
+      "unit": "shide-xishan-yanyouji",
+      "ability": "主旨與思考",
+      "knowledge_point": "逆境與應對方法",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "根據《始得西山宴遊記》的內容：柳宗元正面對甚麼逆境？他以甚麼方法來面對他的逆境？",
+      "score": 2,
+      "items": [
+        {
+          "text": "①逆境：",
+          "answer": "仕途失意，被貶永州。"
+        },
+        {
+          "text": "②方法：",
+          "answer": "以寄情山水來排解鬱悶。"
+        }
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}
