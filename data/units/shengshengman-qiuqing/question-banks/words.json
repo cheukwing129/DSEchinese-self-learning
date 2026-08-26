@@ -1,0 +1,230 @@
+{
+  "unit": "shengshengman-qiuqing",
+  "bank": "words",
+  "questions": [
+    {
+      "id": "cb-words-001",
+      "unit": "shengshengman-qiuqing",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：乍",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「乍煖還寒時候，最難將息」一句中的「乍」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "短暫"
+        },
+        {
+          "key": "B",
+          "text": "突然"
+        },
+        {
+          "key": "C",
+          "text": "剛剛"
+        },
+        {
+          "key": "D",
+          "text": "只"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-002",
+      "unit": "shengshengman-qiuqing",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：將息",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「乍煖還寒時候，最難將息」一句中「將息」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "保重"
+        },
+        {
+          "key": "B",
+          "text": "氣息"
+        },
+        {
+          "key": "C",
+          "text": "休養"
+        },
+        {
+          "key": "D",
+          "text": "利息"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-003",
+      "unit": "shengshengman-qiuqing",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：敵",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「三杯兩盞淡酒，怎敵他晚來風急」一句中的「敵」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "抵擋"
+        },
+        {
+          "key": "B",
+          "text": "對等"
+        },
+        {
+          "key": "C",
+          "text": "仇敵"
+        },
+        {
+          "key": "D",
+          "text": "敵對的"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-004",
+      "unit": "shengshengman-qiuqing",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：過",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「雁過也，正傷心，卻是舊時相識」一句中的「過」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "拜訪"
+        },
+        {
+          "key": "B",
+          "text": "犯錯"
+        },
+        {
+          "key": "C",
+          "text": "飛過"
+        },
+        {
+          "key": "D",
+          "text": "過身"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-005",
+      "unit": "shengshengman-qiuqing",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：損",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「滿地黃花堆積，憔悴損，如今有誰堪摘」一句中的「損」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "極"
+        },
+        {
+          "key": "B",
+          "text": "謙抑"
+        },
+        {
+          "key": "C",
+          "text": "減少"
+        },
+        {
+          "key": "D",
+          "text": "損害"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-006",
+      "unit": "shengshengman-qiuqing",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：兼",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "「梧桐更兼細雨，到黃昏、點點滴滴」一句中的「兼」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "竭盡"
+        },
+        {
+          "key": "B",
+          "text": "兩倍"
+        },
+        {
+          "key": "C",
+          "text": "兼併"
+        },
+        {
+          "key": "D",
+          "text": "加上"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-007",
+      "unit": "shengshengman-qiuqing",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：了得",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "basic",
+      "stem": "「這次第，怎一箇愁字了得」一句中「了得」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "領悟"
+        },
+        {
+          "key": "B",
+          "text": "概括得了"
+        },
+        {
+          "key": "C",
+          "text": "本領高強"
+        },
+        {
+          "key": "D",
+          "text": "辦理妥當"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    }
+  ]
+}

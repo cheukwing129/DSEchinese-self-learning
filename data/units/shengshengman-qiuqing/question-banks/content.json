@@ -1,0 +1,303 @@
+{
+  "unit": "shengshengman-qiuqing",
+  "bank": "content",
+  "questions": [
+    {
+      "id": "cb-content-001",
+      "unit": "shengshengman-qiuqing",
+      "ability": "內容理解",
+      "knowledge_point": "文學體裁",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "李清照《聲聲慢‧秋情》屬於以下哪種文學體裁？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "小令"
+        },
+        {
+          "key": "B",
+          "text": "中調"
+        },
+        {
+          "key": "C",
+          "text": "長調"
+        },
+        {
+          "key": "D",
+          "text": "套數"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-002",
+      "unit": "shengshengman-qiuqing",
+      "ability": "內容理解",
+      "knowledge_point": "「尋覓」的事物",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "intermediate",
+      "stem": "《聲聲慢‧秋情》首句提到詞人「尋尋覓覓」。根據詞的寫作背景和內容，詞人「尋覓」甚麼事物？",
+      "score": 2,
+      "items": [
+        {
+          "text": "答案",
+          "target": "答案",
+          "answer": "昔日的幸福生活。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-003",
+      "unit": "shengshengman-qiuqing",
+      "ability": "內容理解",
+      "knowledge_point": "七組疊字的摘錄、特點及原因",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "intermediate",
+      "stem": "李清照在詞的開首連續運用七組疊字描述心境。試摘錄有關詞句，並指出這些詞句擁有以下哪項特點（A句式對仗工整　B聲律婉轉柔美　C文字婉約含蓄　D情感層層遞進），又為甚麼李清照有上述詞句所描述的心境（可選：①遠離故鄉　②年華老去　③失去丈夫　④家境貧困）？",
+      "score": 6,
+      "items": [
+        {
+          "text": "摘錄詞句",
+          "target": "(1)",
+          "answer": "尋尋覓覓，冷冷清清，悽悽慘慘戚戚。"
+        },
+        {
+          "text": "特點",
+          "target": "(2)",
+          "answer": "D（情感層層遞進）"
+        },
+        {
+          "text": "心境原因",
+          "target": "(3)",
+          "answer": "D（①②③：遠離故鄉、年華老去、失去丈夫）"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-004",
+      "unit": "shengshengman-qiuqing",
+      "ability": "內容理解",
+      "knowledge_point": "雁的行動與作者經歷的相似之處",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "intermediate",
+      "stem": "在《聲聲慢‧秋情》的上片，李清照描寫了「雁」的意象。雁的行動和作者的經歷有何相似之處？又作者借雁這個意象來抒發甚麼感慨？",
+      "score": 4,
+      "items": [
+        {
+          "text": "雁的行動與作者經歷的相似之處",
+          "target": "(1)",
+          "answer": "雁的行動：從北方飛到南方過冬（1分）。作者的經歷：從北方逃避戰亂至南方（1分）。"
+        },
+        {
+          "text": "感慨",
+          "target": "(2)",
+          "answer": "作者借雁從北方來，想到自己生於北方，如今卻流落南方，無法重返故土的身世遭遇（1分），抒發自己對故國的懷念和國破家亡的悲痛（1分）。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-005",
+      "unit": "shengshengman-qiuqing",
+      "ability": "內容理解",
+      "knowledge_point": "末句修辭手法及抒情效果",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "intermediate",
+      "stem": "「這次第，怎一箇愁字了得」一句運用了甚麼修辭手法（答案須是兩個字）？又這種修辭手法如何加強抒情效果？試略加說明。",
+      "score": 3,
+      "items": [
+        {
+          "text": "修辭手法",
+          "target": "①",
+          "answer": "反問"
+        },
+        {
+          "text": "抒情效果",
+          "target": "②",
+          "answer": "引文通過提出「一個愁字怎能概括這個情況」這疑問，把答案隱藏於問句的反面中（1分），突出作者的哀愁多得說不盡，一個「愁」字根本不足以形容的感慨（1分）。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-006",
+      "unit": "shengshengman-qiuqing",
+      "ability": "內容理解",
+      "knowledge_point": "末句結構作用",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 6,
+      "difficulty": "intermediate",
+      "stem": "《聲聲慢‧秋情》一詞中，「這次第，怎一箇愁字了得」一句在結構上起了甚麼作用？\n①提綱挈領\n②承上啟下\n③總結全文\n④首尾呼應",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "①③"
+        },
+        {
+          "key": "B",
+          "text": "①④"
+        },
+        {
+          "key": "C",
+          "text": "②④"
+        },
+        {
+          "key": "D",
+          "text": "③④"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-007",
+      "unit": "shengshengman-qiuqing",
+      "ability": "內容理解",
+      "knowledge_point": "黃花與細雨的情態及抒情（綜合填充）",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "advanced",
+      "stem": "李清照在《聲聲慢‧秋情》中，如何通過刻畫景物的情態來抒發個人的情懷？試以「黃花」和「細雨」為例，略加說明：作者通過刻畫黃花和細雨的情態來抒發個人情懷。首先，作者以黃花①（　　）的情態象徵自己②（可選：A飽經離亂，身心憔悴　B年華老去，功業未成　C羈旅遠方，回鄉無期　D夫妻不和，慘遭拋棄）的處境，藉此抒發自憐身世的感歎。然後作者通過描述細雨③（　　）的情態，營造淒冷氣氛，從而抒發④（　　）。",
+      "score": 4,
+      "items": [
+        {
+          "text": "①",
+          "target": "①",
+          "answer": "凋零／堆積滿地"
+        },
+        {
+          "text": "②",
+          "target": "②",
+          "answer": "A（飽經離亂，身心憔悴）"
+        },
+        {
+          "text": "③",
+          "target": "③",
+          "answer": "落在梧桐葉上發出點滴聲響"
+        },
+        {
+          "text": "④",
+          "target": "④",
+          "answer": "作者孀居的孤寂和對亡夫的思念"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-008",
+      "unit": "shengshengman-qiuqing",
+      "ability": "內容理解",
+      "knowledge_point": "觸景生情與緣情寫景手法",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "intermediate",
+      "stem": "《聲聲慢‧秋情》一詞同時運用了觸景生情和緣情寫景的寫作方法來抒發情懷。試就有關內容填寫下表。",
+      "score": 3,
+      "table": {
+        "columns": [
+          "寫作方法",
+          "詞句",
+          "如何抒發情懷"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "觸景生情",
+              null,
+              "藉看見相關事物，勾起對北方家國的思念。"
+            ]
+          },
+          {
+            "cells": [
+              "緣情寫景",
+              "「滿地黃花堆積，憔悴損，如今有誰堪摘？」",
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "觸景生情詞句：「雁過也，正傷心，卻是舊時相識。」（1分）",
+        "緣情寫景如何抒發情懷：藉看見地上散落的黃花（1分），把自己有關年華老去和孤苦零丁的慨歎投射於散落的黃花身上（1分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-009",
+      "unit": "shengshengman-qiuqing",
+      "ability": "內容理解",
+      "knowledge_point": "疊字修辭手法辨析（可多選）",
+      "question_type": "short_answer",
+      "is_cross_text": true,
+      "paragraph_ref": 1,
+      "difficulty": "advanced",
+      "stem": "試判斷以下詞句分別運用了哪種修辭手法（可選：A對偶　B疊字　C對比　D雙聲　E疊韻，答案可多於一個，全對才給分）。",
+      "score": 4,
+      "items": [
+        {
+          "text": "尋尋覓覓，冷冷清清，悽悽慘慘戚戚。（《聲聲慢‧秋情》）",
+          "target": "①",
+          "answer": "B、D（疊字、雙聲）"
+        },
+        {
+          "text": "鳳簫聲動，玉壺光轉。（《青玉案‧元夕》）",
+          "target": "②",
+          "answer": "A（對偶）"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-010",
+      "unit": "shengshengman-qiuqing",
+      "ability": "內容理解",
+      "knowledge_point": "跨篇修辭手法比較",
+      "question_type": "single_choice",
+      "is_cross_text": true,
+      "paragraph_ref": 4,
+      "difficulty": "advanced",
+      "stem": "以下哪些句子與「滿地黃花堆積，憔悴損，如今有誰堪摘？」（《聲聲慢‧秋情》）運用了相同的修辭手法？\n①覽物之情，得無異乎？（《岳陽樓記》）\n②夫以秦王之威，而相如廷叱之，辱其羣臣，相如雖駑，獨畏廉將軍哉？（《廉頗藺相如列傳》（節錄））\n③禮以行之，孫以出之，信以成之。或曰：「六國互喪，率賂秦耶？」曰：「不賂者以賂者喪，蓋失強援，不能獨完，故曰弊在賂秦也。」（《六國論》）\n④無所可用，安所困苦哉？（《逍遙遊》（節錄））",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "①③"
+        },
+        {
+          "key": "B",
+          "text": "②④"
+        },
+        {
+          "key": "C",
+          "text": "①②④"
+        },
+        {
+          "key": "D",
+          "text": "②③④"
+        }
+      ],
+      "answer": "C",
+      "explanation": "「如今有誰堪摘？」是反問句，①②④同樣運用反問手法，③則是設問（自問自答），故答案為C。",
+      "source": "校本試題庫"
+    }
+  ]
+}

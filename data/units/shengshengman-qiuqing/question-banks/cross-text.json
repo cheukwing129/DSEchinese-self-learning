@@ -1,0 +1,59 @@
+{
+  "unit": "shengshengman-qiuqing",
+  "bank": "cross-text",
+  "questions": [
+    {
+      "id": "cb-cross-001",
+      "unit": "shengshengman-qiuqing",
+      "ability": "跨篇閱讀",
+      "knowledge_point": "與《青玉案‧元夕》比較尋覓的經過與結果",
+      "question_type": "true_false_unknown",
+      "is_cross_text": true,
+      "cross_text_target": "qingyu'an-yuanxi",
+      "paragraph_ref": 1,
+      "difficulty": "advanced",
+      "stem": "根據李清照《聲聲慢‧秋情》和辛棄疾《青玉案‧元夕》，判斷以下陳述。",
+      "score": 4,
+      "statements": [
+        {
+          "text": "兩首詞同樣借記述作者尋覓的經過，表達作者的抱負。",
+          "answer": "false",
+          "explanation": "《青玉案‧元夕》的作者辛棄疾藉着記述尋覓意中人的經過，寄託自己自甘寂寞、不與世俗同流的抱負，但《聲聲慢‧秋情》的作者李清照卻是借尋找能夠支持自己面對國破家亡、失去丈夫的心靈安慰和精神寄託，她在詞中並無像辛棄疾那樣的抱負，故陳述錯誤。"
+        },
+        {
+          "text": "兩首詞雖然同樣寫到作者尋覓的過程，但只有辛棄疾能找到他所尋覓的對象。",
+          "answer": "true",
+          "explanation": "《青玉案‧元夕》中，作者辛棄疾在尋覓意中人千百次後，終於在燈火疏落的地方，找到意中人。相反，李清照在《聲聲慢‧秋情》中，經過一番尋覓後，最終結果只有「淒淒慘慘戚戚」，可見她的尋覓並不成功，故陳述正確。"
+        }
+      ],
+      "note": "《青玉案‧元夕》原文暫未上線，此題答案元素供教師參考；待該篇上線後可補充具體引文比對。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-cross-002",
+      "unit": "shengshengman-qiuqing",
+      "ability": "跨篇閱讀",
+      "knowledge_point": "與《山居秋暝》比較秋景描寫手法及主題差異",
+      "question_type": "short_answer",
+      "is_cross_text": true,
+      "cross_text_target": "shanju-qiuming",
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "《聲聲慢‧秋情》與《山居秋暝》運用了哪種相同的手法描寫秋景（答案須是兩字詞）？兩者在主題表達上有甚麼分別？",
+      "score": 5,
+      "items": [
+        {
+          "text": "描寫手法",
+          "target": "①",
+          "answer": "白描"
+        },
+        {
+          "text": "效果／主題分別",
+          "target": "②",
+          "answer": "《聲聲慢‧秋情》直接描寫秋日晚風的凜冽，北雁南飛，黃花凋謝，秋雨滴落在梧桐葉上（1分），營造出孤寂清冷的環境氣氛，襯托詞人的愁苦（1分）。《山居秋暝》以白描法描繪秋日黃昏時分，山野裏剛停雨，皎潔的月色灑落在松木間，清澈的泉水流過溪石，以及竹林裏傳出洗衣女的笑語聲和漁船在蓮花叢中行過（1分），營造出恬靜的環境氣氛，表達詩人對閒適隱居生活的嚮往（1分）。"
+        }
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}

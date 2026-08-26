@@ -1,0 +1,26 @@
+{
+  "unit": "shengshengman-qiuqing",
+  "bank": "theme",
+  "questions": [
+    {
+      "id": "cb-theme-001",
+      "unit": "shengshengman-qiuqing",
+      "ability": "主旨與思考",
+      "knowledge_point": "與《念奴嬌‧赤壁懷古》比較借酒消愁的效果（開放題）",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "cross_text_target": "niannujiao-chibihuaigu",
+      "paragraph_ref": 2,
+      "difficulty": "advanced",
+      "stem": "《聲聲慢‧秋情》和《念奴嬌‧赤壁懷古》的詞人均借酒遣懷消愁，你認為誰能真正解愁？試加以說明。",
+      "score": 4,
+      "scoring_elements": [
+        "我認為蘇軾能真正借酒解愁。蘇軾在《念奴嬌‧赤壁懷古》中感慨自己年華漸老卻功業未成，但他最後感悟「人間如夢」，於是「一尊還酹江月」（1分）",
+        "借邀江河、明月共飲來排解對人生短促虛幻的感歎（1分），可見他能真正以酒消愁",
+        "《聲聲慢‧秋情》寫李清照「三杯兩盞淡酒，怎敵他晚來風急」（1分），詞人企圖喝淡酒來抵禦寒風，但始終不敵寒風和內心的愁緒（1分），可見她的深沉愁思難以用「酒」排解"
+      ],
+      "note": "答案言之成理即可，此為其中一種論證方向，學生亦可持相反立場論證李清照較能借酒解愁。",
+      "source": "校本試題庫"
+    }
+  ]
+}
