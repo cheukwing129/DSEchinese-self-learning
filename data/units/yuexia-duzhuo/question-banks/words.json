@@ -1,0 +1,294 @@
+{
+  "unit": "yuexia-duzhuo",
+  "bank": "words",
+  "questions": [
+    {
+      "id": "cb-words-001",
+      "unit": "yuexia-duzhuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：獨",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「花間一壺酒，獨酌無相親」一句中的「獨」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "偏偏"
+        },
+        {
+          "key": "B",
+          "text": "獨自"
+        },
+        {
+          "key": "C",
+          "text": "獨特"
+        },
+        {
+          "key": "D",
+          "text": "難道"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-002",
+      "unit": "yuexia-duzhuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：舉",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「舉杯邀明月，對影成三人」一句中的「舉」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "往上托起"
+        },
+        {
+          "key": "B",
+          "text": "興起"
+        },
+        {
+          "key": "C",
+          "text": "選拔"
+        },
+        {
+          "key": "D",
+          "text": "揭發"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-003",
+      "unit": "yuexia-duzhuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：解",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「月既不解飲」一句中的「解」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "消解"
+        },
+        {
+          "key": "B",
+          "text": "解釋"
+        },
+        {
+          "key": "C",
+          "text": "懂得"
+        },
+        {
+          "key": "D",
+          "text": "解開"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-004",
+      "unit": "yuexia-duzhuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：徒",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「影徒隨我身」一句中的「徒」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "步行"
+        },
+        {
+          "key": "B",
+          "text": "同類"
+        },
+        {
+          "key": "C",
+          "text": "白白地"
+        },
+        {
+          "key": "D",
+          "text": "只"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-005",
+      "unit": "yuexia-duzhuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：將",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「暫伴月將影」一句中的「將」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "順從"
+        },
+        {
+          "key": "B",
+          "text": "與"
+        },
+        {
+          "key": "C",
+          "text": "將要"
+        },
+        {
+          "key": "D",
+          "text": "應該"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-006",
+      "unit": "yuexia-duzhuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：暫",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「暫伴月將影」一句中的「暫」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "忽然"
+        },
+        {
+          "key": "B",
+          "text": "暫時"
+        },
+        {
+          "key": "C",
+          "text": "剛剛"
+        },
+        {
+          "key": "D",
+          "text": "姑且"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-007",
+      "unit": "yuexia-duzhuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：無情",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "「永結無情遊」一句中「無情」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "不實"
+        },
+        {
+          "key": "B",
+          "text": "沒有感情"
+        },
+        {
+          "key": "C",
+          "text": "不留情面"
+        },
+        {
+          "key": "D",
+          "text": "忘情"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-008",
+      "unit": "yuexia-duzhuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：期",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "「相期邈雲漢」一句中的「期」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "預期"
+        },
+        {
+          "key": "B",
+          "text": "期望"
+        },
+        {
+          "key": "C",
+          "text": "約定"
+        },
+        {
+          "key": "D",
+          "text": "期限"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-009",
+      "unit": "yuexia-duzhuo",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：邈",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "「相期邈雲漢」一句中的「邈」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "遙遠"
+        },
+        {
+          "key": "B",
+          "text": "渺茫"
+        },
+        {
+          "key": "C",
+          "text": "輕視"
+        },
+        {
+          "key": "D",
+          "text": "描繪"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    }
+  ]
+}

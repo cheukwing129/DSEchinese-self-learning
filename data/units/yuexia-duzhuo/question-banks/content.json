@@ -1,0 +1,299 @@
+{
+  "unit": "yuexia-duzhuo",
+  "bank": "content",
+  "questions": [
+    {
+      "id": "cb-content-001",
+      "unit": "yuexia-duzhuo",
+      "ability": "內容理解",
+      "knowledge_point": "文學體裁",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "《月下獨酌》屬於哪種文學體裁？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "五言古詩"
+        },
+        {
+          "key": "B",
+          "text": "樂府"
+        },
+        {
+          "key": "C",
+          "text": "五言絕句"
+        },
+        {
+          "key": "D",
+          "text": "五言律詩"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-002",
+      "unit": "yuexia-duzhuo",
+      "ability": "內容理解",
+      "knowledge_point": "首句表達的情懷",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "李白《月下獨酌》中「花間一壺酒，獨酌無相親」一句，表達他怎樣的情懷？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "自在閒適"
+        },
+        {
+          "key": "B",
+          "text": "歡欣快樂"
+        },
+        {
+          "key": "C",
+          "text": "孤獨寂寞"
+        },
+        {
+          "key": "D",
+          "text": "惆悵傷感"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-003",
+      "unit": "yuexia-duzhuo",
+      "ability": "內容理解",
+      "knowledge_point": "甲乙引文情懷及抒情手法",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "閱讀以下引文：甲「花間一壺酒，獨酌無相親。」乙「我歌月徘徊，我舞影零亂。」兩句引文分別抒發了甚麼情懷？試略加說明。並指出兩句引文運用了哪種抒情手法。",
+      "score": 5,
+      "items": [
+        {
+          "text": "引文甲情懷",
+          "target": "①",
+          "answer": "抒發詩人抑鬱孤獨的情懷（1分）。詩人身處花間美景，身邊卻沒有親近的人，只能獨自飲酒，因而感到寂寞（1分）。"
+        },
+        {
+          "text": "引文乙情懷",
+          "target": "②",
+          "answer": "抒發詩人開懷欣喜的情懷（1分）。詩人想像月亮傾聽他的歌聲，影子跟隨他起舞，感到歡喜快樂（1分）。"
+        },
+        {
+          "text": "抒情手法",
+          "target": "手法",
+          "answer": "借事抒情（1分）。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-004",
+      "unit": "yuexia-duzhuo",
+      "ability": "內容理解",
+      "knowledge_point": "虛實交錯內容概括",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "李白《月下獨酌》全詩把虛幻的聯想和現實的狀況交互抒寫，表達他內心的孤單。試以自己的文句填寫下表（每道分題的答案不得多於20字，標點符號包括在內）。",
+      "score": 6,
+      "table": {
+        "columns": [
+          "詩句範圍",
+          "實／虛",
+          "內容"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "「花間一壺酒」至「對影成三人」",
+              "實",
+              "詩人在花間獨自飲酒，沒有同伴。"
+            ]
+          },
+          {
+            "cells": [
+              "「花間一壺酒」至「對影成三人」",
+              "虛",
+              null
+            ]
+          },
+          {
+            "cells": [
+              "「月既不解飲」至「我舞影零亂」",
+              "實",
+              null
+            ]
+          },
+          {
+            "cells": [
+              "「月既不解飲」至「我舞影零亂」",
+              "虛",
+              "詩人姑且與月、影作伴，盡情歌唱跳舞。"
+            ]
+          },
+          {
+            "cells": [
+              "「醒時同交歡」至「相期邈雲漢」",
+              "實",
+              "詩人擔心月和影子終究會離他而去。"
+            ]
+          },
+          {
+            "cells": [
+              "「醒時同交歡」至「相期邈雲漢」",
+              "虛",
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "①：詩人幻想邀請月亮和影子對飲，排解寂寞（2分）。",
+        "②：詩人知道月和影子都不了解自己真正心情（2分）。",
+        "③：詩人幻想與月和影子相約在銀河再會（2分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-005",
+      "unit": "yuexia-duzhuo",
+      "ability": "內容理解",
+      "knowledge_point": "感悟詩句與人生觀開放題",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "advanced",
+      "stem": "李白對於自己只能與月和影子陪伴喝酒，有甚麼感悟？試從文中摘錄有關詩句。又有人認為李白表現的感悟體現了消極的人生觀，你同意嗎？試談談你的看法。",
+      "score": 5,
+      "scoring_elements": [
+        "詩句：暫伴月將影，行樂須及春。（1分）",
+        "看法（不同意）：李白懷才不遇，鬱鬱不得志，所以感到孤獨寂寞（1分）；不過當他看到尚且有明月和影子陪伴自己（1分），便認為不應辜負良辰美景，因而從沉重的心情中振作起來，主張及時行樂，可見他曠達的積極人生觀（1分）",
+        "看法（同意）：李白借酒消愁，表示應及時行樂看似積極，但這只是自我安慰，幻想月和影子與自己對飲，欺騙自己並不孤單寂寞，可見只是逃避現實（1分）",
+        "答案言之成理即可，立場不設限"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-006",
+      "unit": "yuexia-duzhuo",
+      "ability": "內容理解",
+      "knowledge_point": "全詩表現的人生態度",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "李白在《月下獨酌》一詩表現了怎樣的人生態度？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "隨遇而安，靜待時機。"
+        },
+        {
+          "key": "B",
+          "text": "自傷自憐，逃避現實。"
+        },
+        {
+          "key": "C",
+          "text": "冷嘲熱諷，針砭時弊。"
+        },
+        {
+          "key": "D",
+          "text": "及時行樂，自我開解。"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-007",
+      "unit": "yuexia-duzhuo",
+      "ability": "內容理解",
+      "knowledge_point": "詩句情緒高漲或低落判斷",
+      "question_type": "true_false_unknown",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "《月下獨酌》一詩的情感跌宕起伏，試判斷以下詩句中，李白的情緒是「高漲」或「低落」（此處以 true 代表高漲，false 代表低落）。",
+      "score": 4,
+      "statements": [
+        {
+          "text": "花間一壺酒，獨酌無相親。",
+          "answer": "false",
+          "explanation": "詩人獨自飲酒，無人相伴，情緒低落。"
+        },
+        {
+          "text": "舉杯邀明月，對影成三人。",
+          "answer": "true",
+          "explanation": "詩人忽發奇想邀月對影，情緒轉為高漲。"
+        },
+        {
+          "text": "我歌月徘徊，我舞影零亂。",
+          "answer": "true",
+          "explanation": "詩人與月、影同歌共舞，情緒高漲歡愉。"
+        },
+        {
+          "text": "醒時同交歡，醉後各分散。",
+          "answer": "false",
+          "explanation": "醉後與月、影分離，復歸孤獨，情緒低落。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-008",
+      "unit": "yuexia-duzhuo",
+      "ability": "內容理解",
+      "knowledge_point": "行樂與無情的觀點闡述",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "advanced",
+      "stem": "有論者認為《月下獨酌》中，李白與月亮和影子共舞的行為是屬於「行樂」。但也有論者認為以上的行為屬於「無情」。試根據詩歌的內容，略加闡述以上兩位論者的觀點。",
+      "score": 4,
+      "items": [
+        {
+          "text": "「行樂」的闡述",
+          "target": "①",
+          "answer": "李白幻想自己請月亮一同飲酒，加上影子相伴，如同三人共聚（1分）；而當自己載歌載舞時，月亮和影子也相伴，一起行樂（1分）。"
+        },
+        {
+          "text": "「無情」的闡述",
+          "target": "②",
+          "answer": "李白清楚知道在現實中，月亮不懂得飲酒，不可能陪自己喝酒（1分），而影子也不過跟隨身體而移動，並非真的有意陪伴（1分）。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-009",
+      "unit": "yuexia-duzhuo",
+      "ability": "內容理解",
+      "knowledge_point": "是否享受獨酌（開放題）",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "根據李白《月下獨酌》一詩，你認為詩人享受「獨酌」嗎？試加以說明。",
+      "score": 4,
+      "scoring_elements": [
+        "李白上邀明月，下對影子飲酒，心裏雖然明白這些同伴都是無情之物（1分）",
+        "但他本着「及時行樂」的心態和超凡的想像，把月和影變成同歌共舞的對象，以排解寂寞（1分）",
+        "可是一旦醉倒，所有同伴都復歸於無，他只好跟月和影結為「無情遊」，只能期待在天上相遇，顯示人間寂寞（1分）",
+        "由此可見，李白雖享受「獨酌」，終究是孤獨淒涼的（1分）"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "unit": "yuexia-duzhuo",
+  "bank": "cross-text",
+  "questions": [
+    {
+      "id": "cb-cross-001",
+      "unit": "yuexia-duzhuo",
+      "ability": "跨篇閱讀",
+      "knowledge_point": "與《聲聲慢‧秋情》比較孤獨的原因及手法",
+      "question_type": "fill_table",
+      "is_cross_text": true,
+      "cross_text_target": "shengshengman-qiuqing",
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "李白《月下獨酌》與李清照《聲聲慢‧秋情》都抒寫作者的孤獨。試比較兩者孤獨的原因和表達孤獨的手法。",
+      "score": 4,
+      "table": {
+        "columns": [
+          "",
+          "李白《月下獨酌》",
+          "李清照《聲聲慢‧秋情》"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "原因",
+              null,
+              "先後經歷丈夫離世，國破家亡而流落南方，孤苦飄零。"
+            ]
+          },
+          {
+            "cells": [
+              "表達手法",
+              "反襯",
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "李白孤獨的原因：遭小人譭謗，導致仕途失意（1分），抱負無法伸展，覺得懷才不遇（1分）。",
+        "李清照表達手法：借景抒情／直接抒情（2分）。"
+      ],
+      "note": "《聲聲慢‧秋情》原文暫未上線，此題答案元素供教師參考；待該篇上線後可補充具體引文比對。",
+      "source": "校本試題庫"
+    }
+  ]
+}

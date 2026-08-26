@@ -1,0 +1,24 @@
+{
+  "unit": "yuexia-duzhuo",
+  "bank": "theme",
+  "questions": [
+    {
+      "id": "cb-theme-001",
+      "unit": "yuexia-duzhuo",
+      "ability": "主旨與思考",
+      "knowledge_point": "李白與杜甫的襟懷比較",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "cross_text_target": "denglou",
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "根據杜甫《登樓》與李白《月下獨酌》，試比較杜甫與李白所展現的襟懷。",
+      "score": 4,
+      "scoring_elements": [
+        "《登樓》：杜甫登樓望見春來大地的景象，生起對國家命運的關切，帶出因國事艱危、外族入侵而生的感慨，並藉劉後主、諸葛亮的典故，諷諭唐代宗治國無方，自己空有濟世之心，報國無路（2分）",
+        "《月下獨酌》：李白在月下獨酌，借酒消愁，與月、影共飲共舞，藉以抒發個人懷才不遇、抑鬱孤獨的情懷，但又不為愁思所縛，追求逍遙自由的境界（2分）"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}

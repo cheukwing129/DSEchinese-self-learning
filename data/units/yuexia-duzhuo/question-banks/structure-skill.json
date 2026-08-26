@@ -1,0 +1,25 @@
+{
+  "unit": "yuexia-duzhuo",
+  "bank": "structure-skill",
+  "questions": [
+    {
+      "id": "cb-skill-001",
+      "unit": "yuexia-duzhuo",
+      "ability": "結構與手法",
+      "knowledge_point": "跨篇對偶修辭比較",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "cross_text_target": "denglou",
+      "paragraph_ref": 4,
+      "difficulty": "advanced",
+      "stem": "試比較以下兩個詩句運用哪種相同的修辭手法，並指出其表達情感的效果。甲「錦江春色來天地，玉壘浮雲變古今。」（杜甫《登樓》）乙「我歌月徘徊，我舞影零亂。」（李白《月下獨酌》）",
+      "score": 5,
+      "scoring_elements": [
+        "修辭手法：對偶（1分）",
+        "甲句效果：「錦江」對「玉壘」，「春色」對「浮雲」，「來」對「變」，「天地」對「古今」，詞性、句式一致，讀起來鏗鏘有致，加強作者認為唐代國運不變的堅定語氣（2分）",
+        "乙句效果：「我歌」對「我舞」，「月徘徊」對「影零亂」，字數及詞性相對，讀起來鏗鏘有致，表面反映作者能與月和影隨歌起舞而喜悅，其實強化了作者內心的孤寂（2分）"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}
