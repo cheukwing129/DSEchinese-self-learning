@@ -1,0 +1,90 @@
+{
+  "unit": "qingyu'an-yuanxi",
+  "bank": "cross-text",
+  "questions": [
+    {
+      "id": "cb-cross-001",
+      "unit": "qingyu'an-yuanxi",
+      "ability": "跨篇閱讀",
+      "knowledge_point": "與《念奴嬌‧赤壁懷古》結構比較",
+      "question_type": "fill_table",
+      "is_cross_text": true,
+      "cross_text_target": "niannujiao-chibihuaigu",
+      "paragraph_ref": 1,
+      "difficulty": "advanced",
+      "stem": "《念奴嬌‧赤壁懷古》和《青玉案‧元夕》的結構接近，兩者的上片同樣以寫景為主，下片則以抒情為主。試根據兩首詞的內容，以自己的文句把答案填寫在下表之內。",
+      "score": 5,
+      "table": {
+        "columns": [
+          "",
+          "上片描寫的景物",
+          "下片抒發的感慨"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "《念奴嬌‧赤壁懷古》",
+              "赤壁一帶雄奇壯麗的景色",
+              null
+            ]
+          },
+          {
+            "cells": [
+              "《青玉案‧元夕》",
+              null,
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "《念奴嬌‧赤壁懷古》下片感慨：自己年事已高仍一事無成（1分），慨歎人生如夢（1分）。",
+        "《青玉案‧元夕》上片景物：元宵燈會繁華熱鬧的場面（1分）。",
+        "《青玉案‧元夕》下片感慨：自己孤高、淡泊（1分），不願同流合污的品格（1分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-cross-002",
+      "unit": "qingyu'an-yuanxi",
+      "ability": "跨篇閱讀",
+      "knowledge_point": "與《聲聲慢‧秋情》比較象徵手法",
+      "question_type": "fill_table",
+      "is_cross_text": true,
+      "cross_text_target": "shengshengman-qiuqing",
+      "paragraph_ref": 5,
+      "difficulty": "advanced",
+      "stem": "《聲聲慢‧秋情》和《青玉案‧元夕》均運用象徵手法表達情感，試各舉一例說明。",
+      "score": 3,
+      "table": {
+        "columns": [
+          "",
+          "《聲聲慢‧秋情》",
+          "《青玉案‧元夕》"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "象徵",
+              null,
+              "以「那人」象徵志士、君子。"
+            ]
+          },
+          {
+            "cells": [
+              "所抒之情",
+              null,
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "《聲聲慢‧秋情》象徵：以「梧桐／秋雨」象徵孤寂（1分）。",
+        "《聲聲慢‧秋情》所抒之情：作者借雨打梧桐的意象，表達夫君逝世，寂寞孤單的愁情（1分）。",
+        "《青玉案‧元夕》所抒之情：作者借追尋「那人」過程，表達自己孤高不羣的高潔志向（1分）。"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}

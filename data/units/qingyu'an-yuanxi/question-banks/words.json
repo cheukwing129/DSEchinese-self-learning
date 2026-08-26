@@ -1,0 +1,262 @@
+{
+  "unit": "qingyu'an-yuanxi",
+  "bank": "words",
+  "questions": [
+    {
+      "id": "cb-words-001",
+      "unit": "qingyu'an-yuanxi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：放",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「東風夜放花千樹，更吹落、星如雨」一句中的「放」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "放縱"
+        },
+        {
+          "key": "B",
+          "text": "吹綻"
+        },
+        {
+          "key": "C",
+          "text": "放逐"
+        },
+        {
+          "key": "D",
+          "text": "放下"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-002",
+      "unit": "qingyu'an-yuanxi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：雕",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「寶馬雕車香滿路」一句中的「雕」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "雕刻"
+        },
+        {
+          "key": "B",
+          "text": "鏤刻精美"
+        },
+        {
+          "key": "C",
+          "text": "道路"
+        },
+        {
+          "key": "D",
+          "text": "浮誇"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-003",
+      "unit": "qingyu'an-yuanxi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：轉",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「鳳簫聲動，玉壺光轉」一句中的「轉」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "流轉"
+        },
+        {
+          "key": "B",
+          "text": "遷徙"
+        },
+        {
+          "key": "C",
+          "text": "轉達"
+        },
+        {
+          "key": "D",
+          "text": "婉轉"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-004",
+      "unit": "qingyu'an-yuanxi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：去",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「笑語盈盈暗香去」一句中的「去」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "除去"
+        },
+        {
+          "key": "B",
+          "text": "失去"
+        },
+        {
+          "key": "C",
+          "text": "經過"
+        },
+        {
+          "key": "D",
+          "text": "距離"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-005",
+      "unit": "qingyu'an-yuanxi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：眾",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「眾裏尋他千百度」一句中的「眾」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "眾多"
+        },
+        {
+          "key": "B",
+          "text": "增多"
+        },
+        {
+          "key": "C",
+          "text": "普遍"
+        },
+        {
+          "key": "D",
+          "text": "人羣"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-006",
+      "unit": "qingyu'an-yuanxi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：度",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「眾裏尋他千百度」一句中的「度」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "次"
+        },
+        {
+          "key": "B",
+          "text": "器量"
+        },
+        {
+          "key": "C",
+          "text": "量度"
+        },
+        {
+          "key": "D",
+          "text": "渡過"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-007",
+      "unit": "qingyu'an-yuanxi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：首",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "「驀然迴首，那人卻在、燈火闌珊處」一句中的「首」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "起初"
+        },
+        {
+          "key": "B",
+          "text": "頭"
+        },
+        {
+          "key": "C",
+          "text": "首領"
+        },
+        {
+          "key": "D",
+          "text": "要領"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-008",
+      "unit": "qingyu'an-yuanxi",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：闌珊",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "basic",
+      "stem": "「驀然迴首，那人卻在、燈火闌珊處」一句中「闌珊」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "衰減"
+        },
+        {
+          "key": "B",
+          "text": "將盡"
+        },
+        {
+          "key": "C",
+          "text": "稀疏"
+        },
+        {
+          "key": "D",
+          "text": "凌亂"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    }
+  ]
+}

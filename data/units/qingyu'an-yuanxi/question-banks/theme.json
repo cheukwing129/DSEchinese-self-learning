@@ -1,0 +1,26 @@
+{
+  "unit": "qingyu'an-yuanxi",
+  "bank": "theme",
+  "questions": [
+    {
+      "id": "cb-theme-001",
+      "unit": "qingyu'an-yuanxi",
+      "ability": "主旨與思考",
+      "knowledge_point": "與《始得西山宴遊記》比較襯托法寄懷",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "cross_text_target": "shide-xishan-yanyouji",
+      "paragraph_ref": 5,
+      "difficulty": "advanced",
+      "stem": "《青玉案‧元夕》和《始得西山宴遊記》均運用了襯托法來寄懷。試從兩篇篇章中各舉一例作說明。",
+      "score": 4,
+      "scoring_elements": [
+        "《青玉案‧元夕》中，作者以盛裝打扮、出遊賞燈的一般仕女，反托獨自站在燈火疏落處的「那人」（1分）",
+        "突出「那人」孤高不羣，寄寓自己脫俗不羣的品格（1分）",
+        "《始得西山宴遊記》中，作者以西山附近低矮和渺小的山丘，反襯西山的高聳（1分）",
+        "突出西山的卓絕獨立，以此寄寓自己孤高傲世、不與世俗同流的情操（1分）"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}

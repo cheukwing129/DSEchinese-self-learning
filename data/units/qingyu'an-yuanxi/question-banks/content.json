@@ -1,0 +1,263 @@
+{
+  "unit": "qingyu'an-yuanxi",
+  "bank": "content",
+  "questions": [
+    {
+      "id": "cb-content-001",
+      "unit": "qingyu'an-yuanxi",
+      "ability": "內容理解",
+      "knowledge_point": "描寫手法辨析（可多選）",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "advanced",
+      "stem": "辛棄疾在《青玉案‧元夕》中，運用了不同的修辭手法來刻畫元夕燈會的場面。試指出以下引文運用了甚麼描寫手法（可選：明喻／暗喻／借喻／借代／誇張，答案可多於一個，分題全對才給分）。",
+      "score": 6,
+      "items": [
+        {
+          "text": "①東風夜放花千樹，更吹落、星如雨。",
+          "target": "①",
+          "answer": "明喻、借喻、誇張"
+        },
+        {
+          "text": "②寶馬雕車香滿路。",
+          "target": "②",
+          "answer": "借代、誇張"
+        },
+        {
+          "text": "③蛾兒雪柳黃金縷，笑語盈盈暗香去。",
+          "target": "③",
+          "answer": "借代"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-002",
+      "unit": "qingyu'an-yuanxi",
+      "ability": "內容理解",
+      "knowledge_point": "借代對象及氣氛刻畫",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "intermediate",
+      "stem": "閱讀以下引文：甲「寶馬雕車香滿路。」乙「蛾兒雪柳黃金縷，笑語盈盈暗香去。」引文甲的「寶馬雕車」和引文乙的「蛾兒雪柳黃金縷」分別借代哪些人物（可選：A平民百姓　B富貴人家　C仕女　D作者的意中人　E作者本人）？辛棄疾怎樣通過上述人物的活動來刻畫元宵燈會的氣氛？試分別說明。",
+      "score": 8,
+      "items": [
+        {
+          "text": "「寶馬雕車」借代",
+          "target": "①",
+          "answer": "B（富貴人家）"
+        },
+        {
+          "text": "「蛾兒雪柳黃金縷」借代",
+          "target": "②",
+          "answer": "C（仕女）"
+        },
+        {
+          "text": "引文甲氣氛",
+          "target": "甲",
+          "answer": "作者通過描寫富貴人家的馬車擠滿道路（1分）的場面，刻畫元宵燈會人山人海（1分）的盛況。"
+        },
+        {
+          "text": "引文乙氣氛",
+          "target": "乙",
+          "answer": "作者通過描寫仕女穿戴漂亮，有說有笑地遊覽燈會（1分），突出燈會歡樂熱鬧的氣氛（1分）。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-003",
+      "unit": "qingyu'an-yuanxi",
+      "ability": "內容理解",
+      "knowledge_point": "反映的社會問題",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "辛棄疾《青玉案‧元夕》一詞反映當時南宋社會出現了甚麼問題？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "皇帝寵信宦官"
+        },
+        {
+          "key": "B",
+          "text": "君臣無心北伐"
+        },
+        {
+          "key": "C",
+          "text": "士人不思進取"
+        },
+        {
+          "key": "D",
+          "text": "商人窮奢極侈"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-004",
+      "unit": "qingyu'an-yuanxi",
+      "ability": "內容理解",
+      "knowledge_point": "末句反映的心情轉變及原因",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "intermediate",
+      "stem": "《青玉案‧元夕》中，「眾裏尋他千百度；驀然迴首，那人卻在、燈火闌珊處」這詞句反映作者的心情有甚麼轉變？為甚麼？",
+      "score": 3,
+      "items": [
+        {
+          "text": "轉變",
+          "target": "①",
+          "answer": "變得高興／愉快。"
+        },
+        {
+          "text": "原因",
+          "target": "②",
+          "answer": "作者在眾人之中尋覓「那人」良久，可惜遍尋不獲，心情失望惆悵，但當作者不經意地回頭一看，竟然發現要尋覓的「那人」就在燈火稀疏冷落的地方，因此變得高興。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-005",
+      "unit": "qingyu'an-yuanxi",
+      "ability": "內容理解",
+      "knowledge_point": "沒有運用的感官描寫",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "綜合《青玉案‧元夕》一詞，作者沒有運用了下列哪些感官描寫方法？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "視覺描寫"
+        },
+        {
+          "key": "B",
+          "text": "嗅覺描寫"
+        },
+        {
+          "key": "C",
+          "text": "聽覺描寫"
+        },
+        {
+          "key": "D",
+          "text": "觸覺描寫"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-006",
+      "unit": "qingyu'an-yuanxi",
+      "ability": "內容理解",
+      "knowledge_point": "全詞的特點",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "以下哪些選項與《青玉案‧元夕》一詞的特點相符？\n①詞風激烈豪放\n②寄託深遠心志\n③人物形象鮮明\n④用字精練貼切",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "①②③"
+        },
+        {
+          "key": "B",
+          "text": "①②④"
+        },
+        {
+          "key": "C",
+          "text": "①③④"
+        },
+        {
+          "key": "D",
+          "text": "②③④"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-007",
+      "unit": "qingyu'an-yuanxi",
+      "ability": "內容理解",
+      "knowledge_point": "作者的個性",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "綜合《青玉案‧元夕》一詞，作者的個性是怎樣的？\n①甘於淡泊\n②隨波逐流\n③特立獨行\n④安於無為",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "①③"
+        },
+        {
+          "key": "B",
+          "text": "①④"
+        },
+        {
+          "key": "C",
+          "text": "②③"
+        },
+        {
+          "key": "D",
+          "text": "②④"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-008",
+      "unit": "qingyu'an-yuanxi",
+      "ability": "內容理解",
+      "knowledge_point": "擇善固執的人生態度（開放題）",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "advanced",
+      "stem": "有論者認為辛棄疾在《青玉案‧元夕》流露的情懷，體現了「擇善固執」的人生態度，你同意嗎？試說明你的看法。",
+      "score": 4,
+      "scoring_elements": [
+        "擇善固執指選擇好的、正確的事去做，而且堅持不變（1分）",
+        "辛棄疾在詞中不斷尋覓「那人」，「那人」願意留在燈火零落、暗淡的角落，有不慕榮華、孤高脫俗的形象（1分）",
+        "作者以此寄寓自己雖懷報國之心，卻不獲重用（1分）",
+        "但仍堅持理想，就如「那人」一樣，寧願孤芳自賞，也不與世俗同流合污，這種情懷正是擇善固執的表現（1分）"
+      ],
+      "note": "答案言之成理即可，此為同意方向的論證，學生亦可持不同意的立場。",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-009",
+      "unit": "qingyu'an-yuanxi",
+      "ability": "主旨與思考",
+      "knowledge_point": "結合現實情境勉勵他人（開放題）",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 5,
+      "difficulty": "advanced",
+      "stem": "細閱以下資料：王一心是一個用功讀書而且品學兼優的學生。可是，王一心在班裏沒有志趣相投的好友。她每逢小息或午飯後的空餘時間，都喜歡到校內的圖書館獨自閱讀課外書，充實自己。但她的同班同學卻總是把時間用於討論偶像藝人的動向、時下流行的玩物、遊戲或衣着化妝等等。他們即使走進校內的圖書館，也只是在使用館內的電腦偷玩網上遊戲罷了。王一心對此感到很困惑。在《青玉案‧元夕》中，辛棄疾所追尋的「那人」有甚麼不同於一般女子的地方？試參考辛棄疾在詞中借追尋「那人」所寄託的懷抱，對王一心加以勉勵。",
+      "score": 4,
+      "scoring_elements": [
+        "「那人」獨自站在燈火疏落處，是一個不慕榮華、甘於寂寞的人（1分）",
+        "辛棄疾在詞中借追尋「那人」寄託自己自甘寂寞、不與世俗同流的情懷（1分）",
+        "可用這一點勉勵王一心，一方面要肯定她把空餘時間用在充實自己的做法（1分）",
+        "另一方面提醒她不要受那些只顧把時間用在玩樂上的同班同學影響，而是要認清自己的目標，繼續用心學業，期望以此讓她釋懷（1分）"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}
