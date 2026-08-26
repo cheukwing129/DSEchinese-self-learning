@@ -1,0 +1,69 @@
+{
+  "unit": "denglou",
+  "bank": "cross-text",
+  "questions": [
+    {
+      "id": "cb-cross-001",
+      "unit": "denglou",
+      "ability": "跨篇閱讀",
+      "knowledge_point": "與《始得西山宴遊記》比較登臨心情",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "cross_text_target": "shide-xishan-yanyouji",
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "柳宗元《始得西山宴遊記》與杜甫《登樓》同樣寫登臨的所見所感，兩者「登」的心情是否相同？試比較說明。",
+      "score": 4,
+      "scoring_elements": [
+        "指出柳宗元登西山後心境豁然開朗、物我兩忘、心凝形釋（1分）",
+        "指出杜甫登樓所見雖壯闊，但心情仍憂國憂時、感懷身世飄零，未能真正釋懷（1分）",
+        "比較：柳宗元藉登臨山水達到精神超脫，杜甫則藉登臨觸發家國之憂，兩者「登」的心情並不相同（1分）",
+        "扣連兩人不同的處境與寄託作結（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-cross-002",
+      "unit": "denglou",
+      "ability": "跨篇閱讀",
+      "knowledge_point": "與《山居秋暝》比較典故心志",
+      "question_type": "fill_table",
+      "is_cross_text": true,
+      "cross_text_target": "shanju-qiuming",
+      "paragraph_ref": 4,
+      "difficulty": "advanced",
+      "stem": "《登樓》與《山居秋暝》的作者引用了典故表明心志。就有關內容填寫下表。",
+      "score": 5,
+      "table": {
+        "columns": [
+          "詩歌",
+          "引用典故的詩句",
+          "心志"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "《登樓》",
+              null,
+              null
+            ]
+          },
+          {
+            "cells": [
+              "《山居秋暝》",
+              "「王孫自可留」",
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "《登樓》引用典故的詩句：可憐後主還祠廟，日暮聊為梁甫吟。（1分）",
+        "《登樓》心志：作者引用蜀漢後主的典故，指出對唐代朝政治腐敗的擔憂（1分），並以諸葛亮吟誦《梁父吟》自況，抒發自己願為朝廷效力但報國無門的感慨（1分）。",
+        "《山居秋暝》心志：作者反用《楚辭‧招隱士》的典故，表示清幽的山居適合久住（1分），藉以表明歸隱的心志（1分）。"
+      ],
+      "note": "《山居秋暝》原文暫未上線，此題答案元素供教師參考；待該篇上線後可補充具體引文比對。",
+      "source": "校本試題庫"
+    }
+  ]
+}

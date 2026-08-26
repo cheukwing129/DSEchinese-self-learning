@@ -1,0 +1,224 @@
+{
+  "unit": "denglou",
+  "bank": "content",
+  "questions": [
+    {
+      "id": "cb-content-001",
+      "unit": "denglou",
+      "ability": "內容理解",
+      "knowledge_point": "首聯表達的情懷",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "《登樓》中「花近高樓傷客心，萬方多難此登臨」一句表達了作者甚麼情懷？①憂國憂民　②身世飄零　③懷才不遇　④不滿憤慨",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "①②"
+        },
+        {
+          "key": "B",
+          "text": "①③"
+        },
+        {
+          "key": "C",
+          "text": "②④"
+        },
+        {
+          "key": "D",
+          "text": "③④"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-002",
+      "unit": "denglou",
+      "ability": "內容理解",
+      "knowledge_point": "景色與象徵意義",
+      "question_type": "fill_table",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "intermediate",
+      "stem": "杜甫《登樓》「錦江春色來天地，玉壘浮雲變古今」一句描寫了哪兩個景色？又這兩個景色分別象徵甚麼？試填寫以下表格。",
+      "score": 3,
+      "table": {
+        "columns": [
+          "詩句",
+          "描寫的景色",
+          "象徵意義"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "「錦江春色來天地」",
+              null,
+              "唐室收復長安"
+            ]
+          },
+          {
+            "cells": [
+              "「玉壘浮雲變古今」",
+              "玉壘山上的浮雲",
+              null
+            ]
+          }
+        ]
+      },
+      "answer_elements": [
+        "①描寫的景色：錦江流水的春色（1分）。",
+        "②象徵意義：時勢無常（2分）。"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-003",
+      "unit": "denglou",
+      "ability": "內容理解",
+      "knowledge_point": "北極與西山所指及感慨",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "intermediate",
+      "stem": "在《登樓》一詩中，「北極」和「西山」分別指甚麼？又杜甫以「北極和西山」抒發甚麼感受？",
+      "score": 4,
+      "items": [
+        {
+          "text": "「北極」所指",
+          "target": "北極",
+          "answer": "朝廷"
+        },
+        {
+          "text": "「西山」所指",
+          "target": "西山",
+          "answer": "外族（吐蕃）"
+        },
+        {
+          "text": "感慨",
+          "target": "感慨",
+          "answer": "作者對唐室平定亂事和收復京城表示喜悅（1分），也以「莫相侵」警告吐蕃打消入侵中原的念頭（1分）。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-004",
+      "unit": "denglou",
+      "ability": "內容理解",
+      "knowledge_point": "是非判斷",
+      "question_type": "true_false_unknown",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "intermediate",
+      "stem": "試根據杜甫《登樓》一詩，判斷以下陳述。",
+      "score": 4,
+      "statements": [
+        {
+          "text": "杜甫在詩中表達對今後國家前途充滿信心。",
+          "answer": "true",
+          "explanation": "杜甫指「北極朝廷終不改」，意思是皇朝像北極星一樣位置固定，國運不會改變；又指「西山寇盜莫相侵」，告誡寇盜不要再侵犯國境，表達對國家未來充滿信心，故陳述正確。"
+        },
+        {
+          "text": "杜甫在尾句感慨當今世上沒有諸葛亮般的人才。",
+          "answer": "false",
+          "explanation": "杜甫在尾句以諸葛亮自比，感慨自己只能像諸葛亮一樣誦讀《梁甫吟》，既抒發自己空有濟世之心的憂憤，也表達希望朝廷起用賢才的意思，可見他認為當今世上仍有人才，只是不被朝廷所用而已，故陳述錯誤。"
+        }
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-005",
+      "unit": "denglou",
+      "ability": "內容理解",
+      "knowledge_point": "全詩表達的感情（排除項）",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "basic",
+      "stem": "以下哪一項不是杜甫在《登樓》中所表達的感情？",
+      "score": 2,
+      "options": [
+        {
+          "key": "A",
+          "text": "感慨君主昏庸"
+        },
+        {
+          "key": "B",
+          "text": "關懷國事"
+        },
+        {
+          "key": "C",
+          "text": "哀歎報國無門"
+        },
+        {
+          "key": "D",
+          "text": "思念故鄉"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-006",
+      "unit": "denglou",
+      "ability": "內容理解",
+      "knowledge_point": "借古諷今的情懷",
+      "question_type": "long_answer",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "advanced",
+      "stem": "「可憐後主還祠廟，日暮聊為梁甫吟。」杜甫在此二句運用「借古諷今」的手法抒發甚麼情懷？試加以說明。",
+      "score": 4,
+      "scoring_elements": [
+        "杜甫先寫劉後主因寵信宦官，最終招致亡國，卻仍然有人為他設廟供奉他（1分）",
+        "杜甫以劉後主的歷史諷刺唐代宗信任宦官，治國無方，以致國家被外族入侵（1分）",
+        "然後杜甫寫自己只能在傍晚時分效法諸葛亮吟誦《梁甫吟》（1分）",
+        "借緬懷獲劉備重用的諸葛亮，寄寓自己空有報國抱負，但懷才不遇的感慨（1分）"
+      ],
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-content-007",
+      "unit": "denglou",
+      "ability": "內容理解",
+      "knowledge_point": "結構前後照應與對比",
+      "question_type": "short_answer",
+      "is_cross_text": false,
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "試分析杜甫《登樓》內容前後照應及對比的結構特色：天地春來與哪一句照應？古今浮雲與哪一句呼應？又詩中以哪兩者作對比，表達詩人對國運及朝廷的甚麼感情，又隱含對甚麼的擔憂？",
+      "score": 3,
+      "items": [
+        {
+          "text": "天地春來照應的詩句",
+          "target": "①",
+          "answer": "花近高樓"
+        },
+        {
+          "text": "古今浮雲呼應的詩句",
+          "target": "②",
+          "answer": "萬方多難"
+        },
+        {
+          "text": "對比的兩者",
+          "target": "③⑤",
+          "answer": "北極朝廷 與 西山寇盜"
+        },
+        {
+          "text": "表達的感情",
+          "target": "④",
+          "answer": "堅定信心"
+        },
+        {
+          "text": "隱含的擔憂",
+          "target": "⑥",
+          "answer": "寇亂侵擾、興亡難料"
+        }
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}

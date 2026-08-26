@@ -1,0 +1,230 @@
+{
+  "unit": "denglou",
+  "bank": "words",
+  "questions": [
+    {
+      "id": "cb-words-001",
+      "unit": "denglou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：傷",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「花近高樓傷客心」一句中的「傷」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "創傷"
+        },
+        {
+          "key": "B",
+          "text": "損害"
+        },
+        {
+          "key": "C",
+          "text": "傷心"
+        },
+        {
+          "key": "D",
+          "text": "妨礙"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-002",
+      "unit": "denglou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：難",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 1,
+      "difficulty": "basic",
+      "stem": "「萬方多難此登臨」一句中的「難」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "困難"
+        },
+        {
+          "key": "B",
+          "text": "災難"
+        },
+        {
+          "key": "C",
+          "text": "責難"
+        },
+        {
+          "key": "D",
+          "text": "畏懼"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-003",
+      "unit": "denglou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：變",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 2,
+      "difficulty": "basic",
+      "stem": "「玉壘浮雲變古今」一句中的「變」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "變化"
+        },
+        {
+          "key": "B",
+          "text": "移動"
+        },
+        {
+          "key": "C",
+          "text": "災禍"
+        },
+        {
+          "key": "D",
+          "text": "奇異"
+        }
+      ],
+      "answer": "A",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-004",
+      "unit": "denglou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：改",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 3,
+      "difficulty": "basic",
+      "stem": "「北極朝廷終不改」一句中的「改」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "糾正"
+        },
+        {
+          "key": "B",
+          "text": "變更"
+        },
+        {
+          "key": "C",
+          "text": "重新"
+        },
+        {
+          "key": "D",
+          "text": "修改"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-005",
+      "unit": "denglou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：還",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「可憐後主還祠廟」一句中的「還」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "返回"
+        },
+        {
+          "key": "B",
+          "text": "交還"
+        },
+        {
+          "key": "C",
+          "text": "還有"
+        },
+        {
+          "key": "D",
+          "text": "回報"
+        }
+      ],
+      "answer": "C",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-006",
+      "unit": "denglou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：可憐",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「可憐後主還祠廟」一句中「可憐」一詞是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "值得憐憫"
+        },
+        {
+          "key": "B",
+          "text": "令人詫異"
+        },
+        {
+          "key": "C",
+          "text": "可惜"
+        },
+        {
+          "key": "D",
+          "text": "可悲"
+        }
+      ],
+      "answer": "D",
+      "source": "校本試題庫"
+    },
+    {
+      "id": "cb-words-007",
+      "unit": "denglou",
+      "ability": "字詞",
+      "knowledge_point": "實詞解釋：聊",
+      "question_type": "single_choice",
+      "is_cross_text": false,
+      "paragraph_ref": 4,
+      "difficulty": "basic",
+      "stem": "「日暮聊為梁甫吟」一句中的「聊」字是甚麼意思？",
+      "score": 1,
+      "options": [
+        {
+          "key": "A",
+          "text": "依憑"
+        },
+        {
+          "key": "B",
+          "text": "姑且"
+        },
+        {
+          "key": "C",
+          "text": "慰藉"
+        },
+        {
+          "key": "D",
+          "text": "閒談"
+        }
+      ],
+      "answer": "B",
+      "source": "校本試題庫"
+    }
+  ]
+}

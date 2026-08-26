@@ -1,0 +1,26 @@
+{
+  "unit": "denglou",
+  "bank": "theme",
+  "questions": [
+    {
+      "id": "cb-theme-001",
+      "unit": "denglou",
+      "ability": "主旨與思考",
+      "knowledge_point": "與范仲淹心志的比較",
+      "question_type": "long_answer",
+      "is_cross_text": true,
+      "cross_text_target": "yueyanglouji",
+      "paragraph_ref": null,
+      "difficulty": "advanced",
+      "stem": "范仲淹在《岳陽樓記》中表示追求「先天下之憂而憂，後天下之樂而樂」的心志。你認為杜甫在《登樓》中所表現的個人情懷，與范仲淹追求的心志相似嗎？試加以說明。",
+      "score": 4,
+      "scoring_elements": [
+        "相似：范仲淹在《岳陽樓記》表示自己希望能在天下人擔憂之前先擔憂，在天下人享樂之後才享樂，可見他關懷國事，關心天下人的福祉（1分）",
+        "《登樓》中的杜甫登樓後望見春來大地的景象，生起對國家命運的關切，帶出國事艱危、外族入侵的感慨（1分）",
+        "並藉劉後主、諸葛亮的典故，諷諭唐代宗治國無方，自己卻空有濟世之心，報國無路（1分）",
+        "可見杜甫與范仲淹同樣入世，希望為國家作出貢獻（1分）"
+      ],
+      "source": "校本試題庫"
+    }
+  ]
+}
