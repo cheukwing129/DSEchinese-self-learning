@@ -7,20 +7,15 @@
       "unit": "shide-xishan-yanyouji",
       "ability": "內容理解",
       "knowledge_point": "僇人的自稱原因",
-      "question_type": "fill_in_blank",
+      "question_type": "short_answer",
       "is_cross_text": false,
       "paragraph_ref": 1,
       "difficulty": "basic",
       "stem": "在柳宗元《始得西山宴遊記》中，作者為甚麼自稱為「僇人」？",
       "score": 2,
-      "items": [
-        {
-          "text": "作者參加了「永貞革新」，＿＿＿＿＿，因而自稱「僇人」，意思是＿＿＿＿＿。",
-          "blanks": [
-            "失敗後受朝廷處罰，貶謫到永州",
-            "接受刑辱的人"
-          ]
-        }
+      "answer_elements": [
+        "作者參加了「永貞革新」，失敗後受朝廷處罰，貶謫到永州（1分）",
+        "因而自稱「僇人」，意思是接受刑辱的人（1分）"
       ],
       "source": "校本試題庫"
     },
@@ -149,8 +144,8 @@
         ]
       },
       "answer_elements": [
-        "①西山特點：西山位處偏僻（1分），且人跡罕至（1分）。",
-        "②柳宗元情況：自己品格高潔（1分），不與世俗同流合污（1分）。"
+        "西山特點：西山位處偏僻（1分），且人跡罕至（1分）。",
+        "柳宗元情況：自己品格高潔（1分），不與世俗同流合污（1分）。"
       ],
       "source": "校本試題庫"
     },
@@ -159,49 +154,27 @@
       "unit": "shide-xishan-yanyouji",
       "ability": "內容理解",
       "knowledge_point": "寫景手法辨析",
-      "question_type": "matching",
+      "question_type": "short_answer",
       "is_cross_text": false,
       "paragraph_ref": 2,
       "difficulty": "advanced",
-      "stem": "柳宗元在《始得西山宴遊記》一文運用了不同的手法描寫景物。試指出以下引文運用甚麼手法描寫景物（可選多於一個答案，全對才給分）。",
+      "stem": "柳宗元在《始得西山宴遊記》一文運用了不同的手法描寫景物。試指出以下引文運用甚麼手法描寫景物（可選：步移法／多角度描寫／多感官描寫／側面描寫，可選多於一個答案，全對才給分）。",
       "score": 3,
-      "options": [
-        {
-          "key": "A",
-          "text": "步移法"
-        },
-        {
-          "key": "B",
-          "text": "多角度描寫"
-        },
-        {
-          "key": "C",
-          "text": "多感官描寫"
-        },
-        {
-          "key": "D",
-          "text": "側面描寫"
-        }
-      ],
       "items": [
         {
-          "text": "①過湘江，緣染溪，斫榛莽，焚茅茷，窮山之高而止。",
-          "answer": [
-            "A",
-            "D"
-          ]
+          "text": "過湘江，緣染溪，斫榛莽，焚茅茷，窮山之高而止。",
+          "target": "手法",
+          "answer": "步移法、側面描寫"
         },
         {
-          "text": "②其高下之勢，岈然洼然，若垤若穴，尺寸千里，攢蹙累積，莫得遯隱。",
-          "answer": [
-            "B"
-          ]
+          "text": "其高下之勢，岈然洼然，若垤若穴，尺寸千里，攢蹙累積，莫得遯隱。",
+          "target": "手法",
+          "answer": "多角度描寫"
         },
         {
-          "text": "③縈青繚白，外與天際，四望如一。",
-          "answer": [
-            "B"
-          ]
+          "text": "縈青繚白，外與天際，四望如一。",
+          "target": "手法",
+          "answer": "多角度描寫"
         }
       ],
       "source": "校本試題庫"
@@ -360,7 +333,7 @@
       "unit": "shide-xishan-yanyouji",
       "ability": "內容理解",
       "knowledge_point": "得西山前後對遊歷的看法",
-      "question_type": "extract_sentence",
+      "question_type": "short_answer",
       "is_cross_text": false,
       "paragraph_ref": null,
       "difficulty": "intermediate",
@@ -368,12 +341,14 @@
       "score": 2,
       "items": [
         {
-          "time": "得西山前",
-          "answer_text": "以為凡是州之山有異態者，皆我有也。"
+          "text": "「得西山」前",
+          "target": "摘句",
+          "answer": "以為凡是州之山有異態者，皆我有也。"
         },
         {
-          "time": "得西山後",
-          "answer_text": "然後知吾嚮之未始遊，遊於是乎始。"
+          "text": "「得西山」後",
+          "target": "摘句",
+          "answer": "然後知吾嚮之未始遊，遊於是乎始。"
         }
       ],
       "source": "校本試題庫"
@@ -429,11 +404,13 @@
       "score": 2,
       "items": [
         {
-          "text": "①逆境：",
+          "text": "逆境",
+          "target": "逆境",
           "answer": "仕途失意，被貶永州。"
         },
         {
-          "text": "②方法：",
+          "text": "方法",
+          "target": "方法",
           "answer": "以寄情山水來排解鬱悶。"
         }
       ],
