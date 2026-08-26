@@ -11,7 +11,7 @@
       "is_cross_text": false,
       "paragraph_ref": 1,
       "difficulty": "basic",
-      "stem": "《登樓》中「花近高樓傷客心，萬方多難此登臨」一句表達了作者甚麼情懷？①憂國憂民　②身世飄零　③懷才不遇　④不滿憤慨",
+      "stem": "《登樓》中「花近高樓傷客心，萬方多難此登臨」一句表達了作者甚麼情懷？\n①憂國憂民\n②身世飄零\n③懷才不遇\n④不滿憤慨",
       "score": 2,
       "options": [
         {
@@ -41,7 +41,7 @@
       "knowledge_point": "景色與象徵意義",
       "question_type": "fill_table",
       "is_cross_text": false,
-      "paragraph_ref": 2,
+      "paragraph_ref": 1,
       "difficulty": "intermediate",
       "stem": "杜甫《登樓》「錦江春色來天地，玉壘浮雲變古今」一句描寫了哪兩個景色？又這兩個景色分別象徵甚麼？試填寫以下表格。",
       "score": 3,
@@ -81,7 +81,7 @@
       "knowledge_point": "北極與西山所指及感慨",
       "question_type": "short_answer",
       "is_cross_text": false,
-      "paragraph_ref": 3,
+      "paragraph_ref": 1,
       "difficulty": "intermediate",
       "stem": "在《登樓》一詩中，「北極」和「西山」分別指甚麼？又杜甫以「北極和西山」抒發甚麼感受？",
       "score": 4,
@@ -124,7 +124,7 @@
         {
           "text": "杜甫在尾句感慨當今世上沒有諸葛亮般的人才。",
           "answer": "false",
-          "explanation": "杜甫在尾句以諸葛亮自比，感慨自己只能像諸葛亮一樣誦讀《梁甫吟》，既抒發自己空有濟世之心的憂憤，也表達希望朝廷起用賢才的意思，可見他認為當今世上仍有人才，只是不被朝廷所用而已，故陳述錯誤。"
+          "explanation": "杜甫在尾句以諸葛亮自比，抒發自己空有濟世之心的憂憤，也表達希望朝廷起用賢才的意思，可見他認為當今世上仍有人才，只是不被朝廷所用而已，故陳述錯誤。"
         }
       ],
       "source": "校本試題庫"
@@ -168,7 +168,7 @@
       "knowledge_point": "借古諷今的情懷",
       "question_type": "long_answer",
       "is_cross_text": false,
-      "paragraph_ref": 4,
+      "paragraph_ref": 1,
       "difficulty": "advanced",
       "stem": "「可憐後主還祠廟，日暮聊為梁甫吟。」杜甫在此二句運用「借古諷今」的手法抒發甚麼情懷？試加以說明。",
       "score": 4,

@@ -11,7 +11,7 @@
       "is_cross_text": false,
       "paragraph_ref": null,
       "difficulty": "intermediate",
-      "stem": "綜觀《登樓》全詩，作者運用了以下哪些修辭手法？①擬人　②對偶　③比喻　④反問",
+      "stem": "綜觀《登樓》全詩，作者運用了以下哪些修辭手法？\n①擬人\n②對偶\n③比喻\n④反問",
       "score": 2,
       "options": [
         {
@@ -38,12 +38,12 @@
       "id": "cb-skill-002",
       "unit": "denglou",
       "ability": "結構與手法",
-      "knowledge_point": "對偶手法辨析",
+      "knowledge_point": "借喻手法辨析",
       "question_type": "single_choice",
       "is_cross_text": true,
-      "paragraph_ref": 3,
+      "paragraph_ref": 1,
       "difficulty": "intermediate",
-      "stem": "以下哪些句子與「北極朝廷終不改。」（杜甫《登樓》）運用了相同的修辭手法？①居廟堂之高、處江湖之遠。（《岳陽樓記》）②君子無終食之間違仁。（《論仁論孝論君子》）③以地事秦，猶抱薪救火。（《六國論》）④今兩虎共鬥，其勢不俱生。（《廉頗藺相如列傳》（節錄））",
+      "stem": "以下哪些句子與「北極朝廷終不改。」（杜甫《登樓》）運用了相同的修辭手法？\n①居廟堂之高、處江湖之遠。（《岳陽樓記》）\n②君子無終食之間違仁。（《論仁論孝論君子》）\n③以地事秦，猶抱薪救火。（《六國論》）\n④今兩虎共鬥，其勢不俱生。（《廉頗藺相如列傳》（節錄））",
       "score": 1,
       "options": [
         {
@@ -74,9 +74,9 @@
       "knowledge_point": "頷聯修辭手法",
       "question_type": "single_choice",
       "is_cross_text": false,
-      "paragraph_ref": 2,
+      "paragraph_ref": 1,
       "difficulty": "intermediate",
-      "stem": "「錦江春色來天地，玉壘浮雲變古今。」（杜甫《登樓》）一句運用了哪些修辭手法？①借代　②誇張　③借喻　④對偶",
+      "stem": "「錦江春色來天地，玉壘浮雲變古今。」（杜甫《登樓》）一句運用了哪些修辭手法？\n①借代\n②象徵\n③借喻\n④對偶",
       "score": 1,
       "options": [
         {
@@ -97,6 +97,7 @@
         }
       ],
       "answer": "D",
+      "explanation": "「錦江春色來天地，玉壘浮雲變古今」以「錦江」對「玉壘」、「春色」對「浮雲」等詞性、句式相對，屬對偶；「浮雲」飄游不定，象徵捉摸不定的時局變化，屬象徵手法，故答案為②④。",
       "source": "校本試題庫"
     },
     {
@@ -107,7 +108,7 @@
       "question_type": "long_answer",
       "is_cross_text": true,
       "cross_text_target": "yuexia-duzhuo",
-      "paragraph_ref": 2,
+      "paragraph_ref": 1,
       "difficulty": "advanced",
       "stem": "試比較以下兩個詩句運用哪種相同的修辭手法，並指出其表達情感的效果。甲「錦江春色來天地，玉壘浮雲變古今。」（杜甫《登樓》）乙「我歌月徘徊，我舞影零亂。」（李白《月下獨酌》）",
       "score": 5,
