@@ -114,7 +114,7 @@ const ContentRenderer = (() => {
       `;
     }
 
-    // 依 annotation term 在原文中「第 occurrence 次」出現的位置，包上可點擊 span。
+    // 依 annotation term 在原文中「第 occurrence 次」出現的位置，包上可鍵盤操作的 button。
     // 用位置區間而非逐次字串取代，避免重複字詞互相干擾，亦避免長詞被短詞截斷。
     function paragraphHTML(p) {
       const terms = p.annotation_ids.map((id) => annoMap[id]).filter(Boolean);
@@ -146,7 +146,7 @@ const ContentRenderer = (() => {
       let cursor = 0;
       claimed.forEach((m) => {
         html += esc(p.text.slice(cursor, m.start));
-        html += `<span class="term" data-anno="${m.anno.id}">${esc(p.text.slice(m.start, m.end))}</span>`;
+        html += `<button type="button" class="term" data-anno="${m.anno.id}" aria-haspopup="dialog" aria-label="查看「${esc(m.anno.term)}」注釋">${esc(p.text.slice(m.start, m.end))}</button>`;
         cursor = m.end;
       });
       html += esc(p.text.slice(cursor));
@@ -192,8 +192,8 @@ const ContentRenderer = (() => {
           updateContent();
         });
       });
-      document.querySelectorAll(".term").forEach((span) => {
-        span.addEventListener("click", (e) => showAnnotationPopover(e, annoMap[span.dataset.anno]));
+      document.querySelectorAll(".term").forEach((button) => {
+        button.addEventListener("click", (e) => showAnnotationPopover(e, annoMap[button.dataset.anno]));
       });
     }
 
@@ -207,9 +207,13 @@ const ContentRenderer = (() => {
     backdrop.className = "annotation-backdrop";
     const pop = document.createElement("div");
     pop.className = "annotation-popover";
+    pop.setAttribute("role", "dialog");
+    pop.setAttribute("aria-label", `「${anno.term}」注釋`);
+    pop.tabIndex = -1;
     const reading = [anno.jyutping ? `粵：${anno.jyutping}` : "", anno.putonghua ? `普：${anno.putonghua}` : ""]
       .filter(Boolean).join("　");
     pop.innerHTML = `
+      <button type="button" class="annotation-close" aria-label="關閉注釋">×</button>
       <div class="term-name">${App.escapeHTML(anno.term)}</div>
       ${reading ? `<div class="reading">${App.escapeHTML(reading)}</div>` : ""}
       <div>${App.escapeHTML(anno.explanation)}</div>
@@ -222,10 +226,17 @@ const ContentRenderer = (() => {
     if (left + 300 > window.innerWidth) left = window.innerWidth - 310;
     pop.style.top = `${top}px`;
     pop.style.left = `${Math.max(10, left)}px`;
-    backdrop.addEventListener("click", () => {
+    const closePopover = () => {
       pop.remove();
       backdrop.remove();
+      if (evt.target && typeof evt.target.focus === "function") evt.target.focus();
+    };
+    backdrop.addEventListener("click", closePopover);
+    pop.querySelector(".annotation-close").addEventListener("click", closePopover);
+    pop.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closePopover();
     });
+    pop.focus();
   }
 
   // ---------- 2. 字詞與句式 ----------
