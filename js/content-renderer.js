@@ -150,43 +150,84 @@ const ContentRenderer = (() => {
       challenge: "整合各分類抽題，標示需補強範疇與補救",
       progress: "能力分項、錯題、背誦重溫、反思"
     };
-    const cards = u.modules
-      .map((m) => `
-        <a class="card module-card card-tappable" href="${moduleHref(unitId, m.id)}">
-          <div class="module-icon">${App.moduleIconGlyph(m.icon)}</div>
-          <div>
-            <p class="module-name">${esc(m.title)}</p>
-            <p class="module-desc">${esc(moduleDescs[m.id] || "")}</p>
-          </div>
-        </a>
-      `)
-      .join("");
+    const coreIds = new Set(["text", "words", "comprehension", "analysis", "theme"]);
+    const moduleCard = (m, index) => `
+      <a class="module-card card-tappable" href="${moduleHref(unitId, m.id)}">
+        <span class="module-order">${String(index + 1).padStart(2, "0")}</span>
+        <div class="module-icon" aria-hidden="true">${App.moduleIconGlyph(m.icon)}</div>
+        <div class="module-copy">
+          <p class="module-name">${esc(m.title)}</p>
+          <p class="module-desc">${esc(moduleDescs[m.id] || "")}</p>
+        </div>
+        <span class="module-arrow" aria-hidden="true">→</span>
+      </a>`;
+    const coreModules = u.modules.filter((m) => coreIds.has(m.id));
+    const practiceModules = u.modules.filter((m) => !coreIds.has(m.id));
+    const coreCards = coreModules.map((m, index) => moduleCard(m, index)).join("");
+    const practiceCards = practiceModules.map((m, index) => moduleCard(m, coreModules.length + index)).join("");
 
     App.mount(`
-      <h1 class="page-title">《${esc(u.title)}》</h1>
-      <p class="page-subtitle">${esc(u.author)} · ${esc(u.dynasty)} · ${esc(u.genre)}</p>
-      <div class="card" style="margin-bottom:24px;">
-        <div class="section-title"><span class="seal">步</span>建議下一步</div>
-        <p style="margin:0 0 8px; font-weight:700;">${esc(nextStep.label)}</p>
-        <p style="margin:0 0 8px; color:var(--color-ink-soft); line-height:1.7;">${esc(nextStep.reason)}</p>
-        <p style="margin:0 0 14px; color:var(--color-ink-faint); font-size:12px;">建議只根據這部裝置的作答、背誦、自評與反思紀錄，不等同系統判定你已掌握前一階段。</p>
-        <a class="btn btn-primary" href="#${esc(nextStep.path)}">${esc(nextStep.label)} →</a>
-      </div>
-      ${backgroundCards ? `
-        <div class="section-title"><span class="seal">知</span>作者與背景</div>
-        <div class="module-grid" style="margin-bottom:24px;">${backgroundCards}</div>
+      <header class="unit-hero">
+        <p class="unit-kicker">${esc(u.dynasty)} · ${esc(u.genre)}</p>
+        <h1 class="page-title unit-title">《${esc(u.title)}》</h1>
+        <p class="unit-author">${esc(u.author)}</p>
+      </header>
+
+      <section class="next-step-panel" aria-labelledby="next-step-title">
+        <div class="next-step-copy">
+          <p class="section-kicker">建議下一步</p>
+          <h2 id="next-step-title">${esc(nextStep.label)}</h2>
+          <p class="next-step-reason">${esc(nextStep.reason)}</p>
+          <p class="next-step-note">建議只根據這部裝置的作答、背誦、自評與反思紀錄，不等同系統判定你已掌握前一階段。</p>
+        </div>
+        <a class="btn btn-primary next-step-button" href="#${esc(nextStep.path)}">${esc(nextStep.label)} <span aria-hidden="true">→</span></a>
+      </section>
+
+      <section class="unit-section" aria-labelledby="core-learning-title">
+        <div class="unit-section-heading">
+          <div>
+            <p class="section-kicker">核心學習</p>
+            <h2 id="core-learning-title">先讀懂，再看深一層</h2>
+          </div>
+          <p>原文、字詞、文意、結構與主旨依次展開；不必一次完成所有模組。</p>
+        </div>
+        <div class="module-grid module-grid-core">${coreCards}</div>
+      </section>
+
+      ${practiceCards ? `
+        <section class="unit-section" aria-labelledby="practice-title">
+          <div class="unit-section-heading compact">
+            <div>
+              <p class="section-kicker">鞏固與挑戰</p>
+              <h2 id="practice-title">把理解變成可用的能力</h2>
+            </div>
+          </div>
+          <div class="module-grid module-grid-practice">${practiceCards}</div>
+        </section>
       ` : ""}
-      <div class="module-grid">${cards}</div>
 
-      <div class="section-title" style="margin-top:32px;">
-        <span class="seal">跨</span>跨篇比較與進階題
-      </div>
-      <div class="cross-text-banner">
-        選做：如尚未學習相關篇章，可先略過；學習後再回來挑戰。
-      </div>
-      <a class="btn btn-secondary" href="#/unit/${unitId}/cross-text">前往跨篇比較與進階題 →</a>
+      ${backgroundCards ? `
+        <section class="unit-section unit-background-section" aria-labelledby="background-title">
+          <div class="unit-section-heading compact">
+            <div>
+              <p class="section-kicker">延伸閱讀</p>
+              <h2 id="background-title">作者與背景</h2>
+            </div>
+          </div>
+          <div class="background-grid">${backgroundCards}</div>
+        </section>
+      ` : ""}
 
-      ${App.footerNav(null, null).replace('<div class="footer-nav">', '<div class="footer-nav" style="margin-top:40px;">')}
+      <section class="cross-text-panel" aria-labelledby="cross-text-title">
+        <div>
+          <p class="section-kicker">選做 · 進階</p>
+          <h2 id="cross-text-title">跨篇比較與進階題</h2>
+          <p>如尚未學習相關篇章，可先略過；完成更多篇章後再回來比較會更有價值。</p>
+        </div>
+        <a class="home-text-link" href="#/unit/${unitId}/cross-text">前往跨篇比較 <span aria-hidden="true">→</span></a>
+      </section>
+
+      ${App.footerNav(null, null).replace('<div class="footer-nav">', '<div class="footer-nav unit-footer-nav">')}
     `);
   }
 
