@@ -1,0 +1,40 @@
+name: Apply cross-unit targeted retry patch
+
+on:
+  push:
+    branches:
+      - feat/cross-unit-targeted-retry
+    paths:
+      - scripts/patch-cross-unit-targeted-retry.py
+      - .github/workflows/apply-cross-unit-targeted-retry.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/cross-unit-targeted-retry
+      - name: Apply patch
+        run: python scripts/patch-cross-unit-targeted-retry.py
+      - name: Check JavaScript syntax
+        run: |
+          for file in js/*.js scripts/*.mjs; do node --check "$file"; done
+      - name: Guard targeted retry integration
+        run: |
+          grep -q 'function crossUnitWrongItems' js/progress.js
+          grep -q 'function renderCrossUnitWrongRetry' js/question-engine.js
+          grep -q 'Router.register("/overview/retry/:ability", pageCrossUnitRetry)' js/app.js
+          grep -q '重練全部待修正' js/content-renderer.js
+          grep -q '重練此能力' js/content-renderer.js
+      - name: Commit patched files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/progress.js js/question-engine.js js/app.js js/content-renderer.js scripts/validate-loading.mjs
+          git commit -m "Add cross-unit targeted wrong-answer retry"
+          git push
