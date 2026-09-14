@@ -1,3 +1,4 @@
+// Final visual review after word-bank polish.
 import fs from "node:fs";
 import http from "node:http";
 import path from "node:path";
