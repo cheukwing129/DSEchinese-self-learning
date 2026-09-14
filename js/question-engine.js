@@ -213,6 +213,71 @@ const QuestionEngine = (() => {
     renderAt(idx);
   }
 
+  // ---------- 待修正錯題重練 ----------
+  function renderWrongRetry(bundle, unitId) {
+    const retryIds = Progress.wrongQuestionIds(unitId, bundle.allQuestions);
+    const questions = bundle.allQuestions.filter((q) => retryIds.includes(q.id) && OBJECTIVE_TYPES.includes(q.question_type));
+
+    if (!questions.length) {
+      App.mount(`
+        <h1 class="page-title">錯題重練</h1>
+        <div class="card">
+          <div class="section-title"><span class="seal">清</span>目前沒有待修正錯題</div>
+          <p style="margin:0; color:var(--color-ink-soft);">曾經答錯的歷史仍會保留；這裡只重練「最後一次仍答錯」的客觀題。</p>
+        </div>
+        <a class="btn btn-primary" href="#/unit/${unitId}/progress">返回我的掌握 →</a>
+        ${App.footerNav(unitId, bundle.unit.title)}
+      `);
+      return;
+    }
+
+    let idx = 0;
+    const initialCount = questions.length;
+
+    function renderCompletion() {
+      const remainingIds = Progress.wrongQuestionIds(unitId, bundle.allQuestions);
+      const remainingFromRound = retryIds.filter((id) => remainingIds.includes(id)).length;
+      const resolved = initialCount - remainingFromRound;
+      App.mount(`
+        <h1 class="page-title">本輪錯題重練完成</h1>
+        <div class="card">
+          <div class="stat-grid">
+            <div class="stat-card"><div class="stat-value">${initialCount}</div><div class="stat-label">本輪題數</div></div>
+            <div class="stat-card"><div class="stat-value">${resolved}</div><div class="stat-label">本輪已修正</div></div>
+            <div class="stat-card"><div class="stat-value">${remainingIds.length}</div><div class="stat-label">目前仍待修正</div></div>
+          </div>
+          <p style="font-size:13px; color:var(--color-ink-soft); margin:12px 0 0;">答對只會把題目移出「待修正」清單；曾答錯次數與歷史仍保留。</p>
+        </div>
+        <div class="btn-row">
+          ${remainingIds.length ? `<a class="btn btn-primary" href="#/unit/${unitId}/progress/retry-wrong">再練仍錯題 →</a>` : ""}
+          <a class="btn btn-secondary" href="#/unit/${unitId}/progress">返回我的掌握</a>
+        </div>
+        ${App.footerNav(unitId, bundle.unit.title)}
+      `);
+    }
+
+    function renderAt(i) {
+      idx = i;
+      const q = questions[idx];
+      renderQuestionShell({
+        unitId, bundle, question: q, title: "錯題重練",
+        indexLabel: `第 ${idx + 1} 題，共 ${questions.length} 題`,
+        onPrev: idx > 0 ? () => renderAt(idx - 1) : null,
+        onNext: idx < questions.length - 1 ? () => renderAt(idx + 1) : null,
+        backHref: `#/unit/${unitId}/progress`,
+        showRemediation: true,
+        loadRecord: () => null,
+        saveRecord: (questionId, record) => Progress.recordAnswer(unitId, questionId, record),
+        onAfterConfirm: () => {
+          if (idx < questions.length - 1) renderAt(idx + 1);
+          else renderCompletion();
+        }
+      });
+    }
+
+    renderAt(0);
+  }
+
   // ---------- 核心篇章挑戰 attempt ----------
   function challengeKey(unitId) {
     return `ccsl_challenge_${unitId}`;
@@ -1041,5 +1106,5 @@ const QuestionEngine = (() => {
     return found ? found.text : "";
   }
 
-  return { renderQuizSequence, renderChallengeSetup, renderChallengeRun, renderChallengeResult };
+  return { renderQuizSequence, renderWrongRetry, renderChallengeSetup, renderChallengeRun, renderChallengeResult };
 })();

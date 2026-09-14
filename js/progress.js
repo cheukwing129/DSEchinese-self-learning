@@ -58,10 +58,26 @@ const Progress = (() => {
   function recordAnswer(unitId, questionId, record) {
     const all = unitStore(unitId);
     const now = Date.now();
+    const previous = all[unitId].answers[questionId] || {};
+    const previousAttempts = Number(previous.attemptCount) || (previous.answered ? 1 : 0);
+    const previousWrongAttempts = Number(previous.wrongAttempts) || (previous.isCorrect === false ? 1 : 0);
+    const previousCorrectAttempts = Number(previous.correctAttempts) || (previous.isCorrect === true ? 1 : 0);
+    const isWrong = record && record.answered && record.isCorrect === false;
+    const isCorrect = record && record.answered && record.isCorrect === true;
+    const previousWrongAt = previous.lastWrongAt || (previous.isCorrect === false ? previous.timestamp : null) || null;
+    const previousCorrectAt = previous.lastCorrectAt || (previous.isCorrect === true ? previous.timestamp : null) || null;
+
     all[unitId].answers[questionId] = {
-      ...(all[unitId].answers[questionId] || {}),
+      ...previous,
       ...record,
-      timestamp: now
+      timestamp: now,
+      attemptCount: previousAttempts + (record && record.answered ? 1 : 0),
+      wrongAttempts: previousWrongAttempts + (isWrong ? 1 : 0),
+      correctAttempts: previousCorrectAttempts + (isCorrect ? 1 : 0),
+      everWrong: previous.everWrong === true || previousWrongAttempts > 0 || previous.isCorrect === false || isWrong,
+      firstWrongAt: previous.firstWrongAt || previousWrongAt || (isWrong ? now : null),
+      lastWrongAt: isWrong ? now : previousWrongAt,
+      lastCorrectAt: isCorrect ? now : previousCorrectAt
     };
     all[unitId].lastActivityAt = now;
     saveAll(all);
@@ -321,9 +337,29 @@ const Progress = (() => {
     const answers = getAllAnswers(unitId);
     return allQuestions
       .filter((q) => {
+        if (!isObjectiveQuestion(q)) return false;
         const rec = answers[q.id];
         return rec && rec.answered && rec.isCorrect === false;
       })
+      .map((q) => q.id);
+  }
+
+  function everWrongQuestionIds(unitId, allQuestions) {
+    const answers = getAllAnswers(unitId);
+    return allQuestions
+      .filter((q) => {
+        if (!isObjectiveQuestion(q)) return false;
+        const rec = answers[q.id];
+        return !!(rec && (rec.everWrong === true || Number(rec.wrongAttempts) > 0 || rec.isCorrect === false));
+      })
+      .map((q) => q.id);
+  }
+
+  function resolvedWrongQuestionIds(unitId, allQuestions) {
+    const answers = getAllAnswers(unitId);
+    const everWrong = new Set(everWrongQuestionIds(unitId, allQuestions));
+    return allQuestions
+      .filter((q) => everWrong.has(q.id) && answers[q.id] && answers[q.id].isCorrect === true)
       .map((q) => q.id);
   }
 
@@ -347,6 +383,6 @@ const Progress = (() => {
     recordMemorisationAttempt, markMemorisationCharactersViewed, memorisationStats,
     setSelfReviewItem, getSelfReview,
     recordLearningVisit, latestLearning, recommendNextStep,
-    clearUnit, abilityStats, wrongQuestionIds, overallAccuracy
+    clearUnit, abilityStats, wrongQuestionIds, everWrongQuestionIds, resolvedWrongQuestionIds, overallAccuracy
   };
 })();
