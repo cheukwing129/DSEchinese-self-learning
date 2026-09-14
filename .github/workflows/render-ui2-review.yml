@@ -1,0 +1,36 @@
+name: Render UI 2.0 review
+
+on:
+  push:
+    branches: [feat/ui-2-modern]
+    paths:
+      - .github/workflows/render-ui2-review.yml
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v7
+        with:
+          ref: feat/ui-2-modern
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Install pinned Playwright runtime
+        run: |
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Capture compact review frames
+        run: node scripts/ui2-preview.mjs
+      - name: Commit review frames
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tmp-ui-review
+          git commit -m "Capture compact UI 2.0 review frames"
+          git push origin HEAD:feat/ui-2-modern
