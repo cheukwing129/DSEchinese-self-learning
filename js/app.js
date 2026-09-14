@@ -250,7 +250,7 @@ const App = (() => {
       </article>`;
 
     const cards = curriculum.units
-      .map((u) => {
+      .map((u, unitIndex) => {
         const isAvailable = u.status === "available";
         const badge = isAvailable
           ? `<span class="badge badge-available">可學習</span>`
@@ -260,7 +260,10 @@ const App = (() => {
         return `
           <${tag} class="card map-card card-tappable ${isAvailable ? "" : "is-disabled"}" ${href}>
             <div class="map-card-top">
-              ${u.group ? `<p class="map-group">${escapeHTML(u.group)}</p>` : `<span></span>`}
+              <div class="map-card-meta">
+                <span class="map-sequence">${String(unitIndex + 1).padStart(2, "0")}</span>
+                ${u.group ? `<p class="map-group">${escapeHTML(u.group)}</p>` : ""}
+              </div>
               ${badge}
             </div>
             <p class="map-title">${escapeHTML(u.title)}</p>
@@ -273,9 +276,33 @@ const App = (() => {
 
     mount(`
       <section class="home-hero" aria-labelledby="home-title">
-        <p class="home-kicker">DSE 中文 · 指定文言經典</p>
-        <h1 id="home-title" class="page-title home-title">讀懂經典，<span>一步一步變成自己的能力。</span></h1>
-        <p class="home-lead">從原文、字詞與文意出發，再進入賞析、背誦、作答與錯題修復。每次只做眼前最值得做的一步。</p>
+        <div class="home-hero-copy">
+          <div class="home-kicker-row">
+            <p class="home-kicker">DSE 中文 · 指定文言經典</p>
+            <span class="home-edition-pill">SELF · STUDY</span>
+          </div>
+          <h1 id="home-title" class="page-title home-title">讀懂經典，<span>把每一步都變成自己的能力。</span></h1>
+          <p class="home-lead">從原文、字詞與文意出發，再進入賞析、背誦、作答與錯題修復。介面替你整理路徑，判斷仍然交給真實學習紀錄。</p>
+          <div class="home-hero-chips" aria-label="學習內容">
+            <span>原文</span><span>字詞</span><span>賞析</span><span>背誦</span><span>作答</span>
+          </div>
+        </div>
+        <aside class="home-hero-visual" aria-label="自學路徑示意；不代表完成度或掌握程度">
+          <div class="hero-visual-head">
+            <div>
+              <span class="hero-visual-label">LEARNING FLOW</span>
+              <strong>一條清楚的自學路徑</strong>
+            </div>
+            <span class="hero-unit-count">${curriculum.units.length} 篇</span>
+          </div>
+          <div class="hero-path-grid">
+            <div class="hero-path-step"><span>01</span><strong>讀</strong><small>原文與語境</small></div>
+            <div class="hero-path-step"><span>02</span><strong>解</strong><small>字詞與文意</small></div>
+            <div class="hero-path-step"><span>03</span><strong>析</strong><small>結構與主旨</small></div>
+            <div class="hero-path-step"><span>04</span><strong>練</strong><small>作答與修正</small></div>
+          </div>
+          <p class="hero-visual-note">路徑只協助導航，不以瀏覽頁面推斷掌握程度。</p>
+        </aside>
       </section>
 
       <section class="home-action-grid" aria-label="學習捷徑">
