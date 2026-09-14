@@ -1,5 +1,5 @@
 /* ============================================================
-   progress.js — 學生進度、作答紀錄、錯題本（localStorage）
+   progress.js — 學生進度、作答紀錄、錯題本、背誦練習（localStorage）
    全部資料只存在使用者自己的瀏覽器，不會上傳到任何伺服器。
    ============================================================ */
 
@@ -28,15 +28,23 @@ const Progress = (() => {
     }
   }
 
+  function ensureUnitShape(unit) {
+    if (!unit.answers || typeof unit.answers !== "object") unit.answers = {};
+    if (!unit.reflections || typeof unit.reflections !== "object") unit.reflections = {};
+    if (!unit.memorisation || typeof unit.memorisation !== "object") {
+      unit.memorisation = { groups: {}, charsViewedAt: null };
+    }
+    if (!unit.memorisation.groups || typeof unit.memorisation.groups !== "object") {
+      unit.memorisation.groups = {};
+    }
+    if (!("charsViewedAt" in unit.memorisation)) unit.memorisation.charsViewedAt = null;
+    return unit;
+  }
+
   function unitStore(unitId) {
     const all = loadAll();
-    if (!all[unitId]) {
-      all[unitId] = {
-        answers: {},       // questionId -> { answered, isCorrect, selected, part2IsCorrect, timestamp }
-        reflections: {},   // moduleId -> text
-        memorisationSeen: {}
-      };
-    }
+    if (!all[unitId] || typeof all[unitId] !== "object") all[unitId] = {};
+    ensureUnitShape(all[unitId]);
     return all;
   }
 
@@ -69,6 +77,79 @@ const Progress = (() => {
   function getReflection(unitId, moduleId) {
     const all = unitStore(unitId);
     return all[unitId].reflections[moduleId] || "";
+  }
+
+  function recordMemorisationAttempt(unitId, groupId, mode, result = {}) {
+    if (!groupId || !["cloze", "reorder"].includes(mode)) return;
+    const all = unitStore(unitId);
+    const groups = all[unitId].memorisation.groups;
+    if (!groups[groupId] || typeof groups[groupId] !== "object") groups[groupId] = {};
+    const group = groups[groupId];
+    const now = Date.now();
+
+    if (mode === "cloze") {
+      const previous = group.cloze || {};
+      const total = Math.max(0, Number(result.total) || 0);
+      const correct = Math.min(total, Math.max(0, Number(result.correct) || 0));
+      const rate = total ? Math.round((correct / total) * 100) : null;
+      group.cloze = {
+        attempts: (previous.attempts || 0) + 1,
+        lastCorrect: correct,
+        lastTotal: total,
+        lastRate: rate,
+        bestRate: rate == null ? (previous.bestRate ?? null) : Math.max(previous.bestRate ?? 0, rate),
+        lastAt: now
+      };
+    } else {
+      const previous = group.reorder || {};
+      const isCorrect = result.isCorrect === true;
+      group.reorder = {
+        attempts: (previous.attempts || 0) + 1,
+        successes: (previous.successes || 0) + (isCorrect ? 1 : 0),
+        lastCorrect: isCorrect,
+        passed: previous.passed === true || isCorrect,
+        lastAt: now
+      };
+    }
+
+    saveAll(all);
+  }
+
+  function markMemorisationCharactersViewed(unitId) {
+    const all = unitStore(unitId);
+    all[unitId].memorisation.charsViewedAt = Date.now();
+    saveAll(all);
+  }
+
+  function memorisationStats(unitId, sentenceGroups = []) {
+    const all = unitStore(unitId);
+    const memo = all[unitId].memorisation;
+    const groups = sentenceGroups.map((g) => {
+      const saved = memo.groups[g.id] || {};
+      const cloze = saved.cloze || null;
+      const reorder = saved.reorder || null;
+      return {
+        id: g.id,
+        title: g.title || g.id,
+        paragraph: g.paragraph,
+        cloze,
+        reorder,
+        practised: !!((cloze && cloze.attempts) || (reorder && reorder.attempts)),
+        bothPractised: !!(cloze && cloze.attempts && reorder && reorder.attempts)
+      };
+    });
+
+    return {
+      totalGroups: groups.length,
+      practisedGroups: groups.filter((g) => g.practised).length,
+      bothPractisedGroups: groups.filter((g) => g.bothPractised).length,
+      clozePractisedGroups: groups.filter((g) => g.cloze && g.cloze.attempts).length,
+      reorderPractisedGroups: groups.filter((g) => g.reorder && g.reorder.attempts).length,
+      reorderPassedGroups: groups.filter((g) => g.reorder && g.reorder.passed).length,
+      charsViewed: !!memo.charsViewedAt,
+      charsViewedAt: memo.charsViewedAt || null,
+      groups
+    };
   }
 
   function clearUnit(unitId) {
@@ -126,6 +207,7 @@ const Progress = (() => {
   return {
     recordAnswer, getAnswer, getAllAnswers,
     saveReflection, getReflection,
+    recordMemorisationAttempt, markMemorisationCharactersViewed, memorisationStats,
     clearUnit, abilityStats, wrongQuestionIds, overallAccuracy
   };
 })();
