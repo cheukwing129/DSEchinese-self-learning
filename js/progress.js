@@ -5,6 +5,7 @@
 
 const Progress = (() => {
   const STORAGE_KEY = "ccsl_progress_v1"; // Chinese Classics Self Learning
+  const OBJECTIVE_TYPES = ["single_choice", "multi_select", "true_false_unknown", "matching", "extract_sentence", "cloze_choice"];
 
   function loadAll() {
     try {
@@ -31,7 +32,7 @@ const Progress = (() => {
     const all = loadAll();
     if (!all[unitId]) {
       all[unitId] = {
-        answers: {},       // questionId -> { answered, isCorrect, selected, textAnswer, timestamp }
+        answers: {},       // questionId -> { answered, isCorrect, selected, part2IsCorrect, timestamp }
         reflections: {},   // moduleId -> text
         memorisationSeen: {}
       };
@@ -76,13 +77,16 @@ const Progress = (() => {
     saveAll(all);
   }
 
-  // 統計：依 ability 分項正確率（只計算客觀題，且只計已作答）
+  function isObjectiveQuestion(q) {
+    return OBJECTIVE_TYPES.includes(q.question_type);
+  }
+
+  // 統計：依 ability 分項正確率（只計算可自動批改的客觀題，且只計已作答）
   function abilityStats(unitId, allQuestions) {
     const answers = getAllAnswers(unitId);
     const stats = {};
     allQuestions.forEach((q) => {
-      const isObjective = ["single_choice", "multi_select", "true_false_unknown", "matching", "extract_sentence"].includes(q.question_type);
-      if (!isObjective) return;
+      if (!isObjectiveQuestion(q)) return;
       const ability = q.ability || "其他";
       if (!stats[ability]) stats[ability] = { answered: 0, correct: 0, total: 0 };
       stats[ability].total += 1;
@@ -109,8 +113,7 @@ const Progress = (() => {
     const answers = getAllAnswers(unitId);
     let answered = 0, correct = 0;
     allQuestions.forEach((q) => {
-      const isObjective = ["single_choice", "multi_select", "true_false_unknown", "matching", "extract_sentence"].includes(q.question_type);
-      if (!isObjective) return;
+      if (!isObjectiveQuestion(q)) return;
       const rec = answers[q.id];
       if (rec && rec.answered) {
         answered += 1;
