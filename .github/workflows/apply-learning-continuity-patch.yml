@@ -1,0 +1,40 @@
+name: Apply learning continuity patch
+
+on:
+  push:
+    branches:
+      - feat/learning-continuity
+    paths:
+      - scripts/patch-learning-continuity.py
+      - .github/workflows/apply-learning-continuity-patch.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/learning-continuity
+      - name: Apply patch
+        run: python scripts/patch-learning-continuity.py
+      - name: Check JavaScript syntax
+        run: |
+          for file in js/*.js; do node --check "$file"; done
+      - name: Guard learning continuity integration
+        run: |
+          grep -q 'function latestLearning' js/progress.js
+          grep -q 'function recommendNextStep' js/progress.js
+          grep -q '繼續上次學習' js/app.js
+          grep -q '建議下一步' js/content-renderer.js
+          grep -q '不等同系統判定你已掌握前一階段' js/content-renderer.js
+      - name: Commit patched files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/app.js js/content-renderer.js js/progress.js
+          git commit -m "Add learning continuity guidance"
+          git push
