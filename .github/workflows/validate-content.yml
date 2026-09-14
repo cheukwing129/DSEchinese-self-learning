@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   validate:
-    name: JavaScript, content, accessibility, loading and learning support
+    name: JavaScript, content, accessibility, loading, learning support and continuity
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
@@ -41,3 +41,6 @@ jobs:
 
       - name: Validate background and rubric integration
         run: node scripts/validate-learning-support.mjs
+
+      - name: Validate learning continuity guidance
+        run: node scripts/validate-learning-continuity.mjs
