@@ -5,6 +5,7 @@
 
 const Router = (() => {
   const routes = []; // { pattern: RegExp, keys: [string], handler: fn }
+  let navigationId = 0;
 
   function compile(pattern) {
     // pattern e.g. "/unit/:unitId/challenge/question/:qid"
@@ -53,6 +54,7 @@ const Router = (() => {
 
   function resolve() {
     const path = currentPath();
+    navigationId += 1;
     for (const route of routes) {
       const match = path.match(route.regex);
       if (match) {
@@ -72,11 +74,19 @@ const Router = (() => {
     App.renderNotFound(path);
   }
 
+  function currentNavigationId() {
+    return navigationId;
+  }
+
+  function isCurrentNavigation(id) {
+    return id === navigationId;
+  }
+
   function start() {
     window.addEventListener("hashchange", resolve);
     if (!window.location.hash) window.location.hash = "#/";
     resolve();
   }
 
-  return { register, navigate, start, currentPath, currentQuery };
+  return { register, navigate, start, currentPath, currentQuery, currentNavigationId, isCurrentNavigation };
 })();

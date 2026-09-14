@@ -174,12 +174,15 @@ const App = (() => {
 
   // ---------- 路由頁面 ----------
   async function pageHome() {
+    const navigationId = Router.currentNavigationId();
     setCrumb("");
     renderLoading("課程地圖");
     let curriculum;
     try {
       curriculum = await loadCurriculum();
+      if (!Router.isCurrentNavigation(navigationId)) return;
     } catch (e) {
+      if (!Router.isCurrentNavigation(navigationId)) return;
       renderFatalError(e.message);
       return;
     }
@@ -238,29 +241,36 @@ const App = (() => {
   }
 
   async function pageOverview() {
+    const navigationId = Router.currentNavigationId();
     setCrumb("跨篇章學習總覽");
     renderLoading("跨篇章學習總覽");
     try {
       const { curriculum, unitBundles } = await loadCrossUnitBundles();
+      if (!Router.isCurrentNavigation(navigationId)) return;
       ContentRenderer.renderCrossUnitOverview(curriculum, unitBundles);
     } catch (e) {
+      if (!Router.isCurrentNavigation(navigationId)) return;
       renderFatalError(e.message);
     }
   }
 
   async function pageCrossUnitRetry(params) {
+    const navigationId = Router.currentNavigationId();
     const ability = params.ability === "all" ? null : params.ability;
     setCrumb(ability ? `${ability} · 跨篇章重練` : "跨篇章錯題重練");
     renderLoading("跨篇章錯題重練");
     try {
       const { unitBundles } = await loadCrossUnitBundles();
+      if (!Router.isCurrentNavigation(navigationId)) return;
       QuestionEngine.renderCrossUnitWrongRetry(unitBundles, ability);
     } catch (e) {
+      if (!Router.isCurrentNavigation(navigationId)) return;
       renderFatalError(e.message);
     }
   }
 
   async function withUnitBundle(unitId, options, onReady) {
+    const navigationId = Router.currentNavigationId();
     if (typeof options === "function") {
       onReady = options;
       options = {};
@@ -269,7 +279,9 @@ const App = (() => {
     let bundle;
     try {
       bundle = await loadUnitBundle(unitId, options || {});
+      if (!Router.isCurrentNavigation(navigationId)) return;
     } catch (e) {
+      if (!Router.isCurrentNavigation(navigationId)) return;
       renderFatalError(e.message);
       return;
     }
