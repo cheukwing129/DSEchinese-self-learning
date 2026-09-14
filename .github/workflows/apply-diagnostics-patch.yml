@@ -1,0 +1,55 @@
+name: Apply diagnostics patch
+
+on:
+  push:
+    branches:
+      - feat/challenge-remediation
+    paths:
+      - .github/workflows/apply-diagnostics-patch.yml
+      - scripts/patch-diagnostics.mjs
+      - js/question-engine.js
+      - js/content-renderer.js
+      - README.md
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out patch branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/challenge-remediation
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Check patch script syntax
+        run: node --check scripts/patch-diagnostics.mjs
+
+      - name: Apply diagnostics patch
+        run: node scripts/patch-diagnostics.mjs
+
+      - name: Check patched JavaScript syntax
+        run: |
+          node --check js/question-engine.js
+          node --check js/content-renderer.js
+
+      - name: Commit patched files
+        run: |
+          if git diff --quiet; then
+            echo "No diagnostics changes required."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/question-engine.js js/content-renderer.js README.md
+          git commit -m "Add fallback challenge remediation"
+          git push origin HEAD:feat/challenge-remediation
