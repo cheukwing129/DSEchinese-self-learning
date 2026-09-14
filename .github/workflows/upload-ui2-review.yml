@@ -1,0 +1,21 @@
+name: Upload UI 2.0 review artifact
+
+on:
+  push:
+    branches: [feat/ui-2-modern]
+    paths:
+      - .github/workflows/upload-ui2-review.yml
+
+jobs:
+  upload:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: feat/ui-2-modern
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ui2-review-frames
+          path: tmp-ui-review/*.jpg
+          if-no-files-found: error
+          retention-days: 1
