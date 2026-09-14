@@ -152,7 +152,7 @@ const ContentRenderer = (() => {
     };
     const coreIds = new Set(["text", "words", "comprehension", "analysis", "theme"]);
     const moduleCard = (m, index) => `
-      <a class="module-card card-tappable" href="${moduleHref(unitId, m.id)}">
+      <a class="module-card module-card-${m.id} ${m.id === "text" ? "module-card-featured" : ""} card-tappable" href="${moduleHref(unitId, m.id)}">
         <span class="module-order">${String(index + 1).padStart(2, "0")}</span>
         <div class="module-icon" aria-hidden="true">${App.moduleIconGlyph(m.icon)}</div>
         <div class="module-copy">
@@ -168,9 +168,23 @@ const ContentRenderer = (() => {
 
     App.mount(`
       <header class="unit-hero">
-        <p class="unit-kicker">${esc(u.dynasty)} · ${esc(u.genre)}</p>
-        <h1 class="page-title unit-title">《${esc(u.title)}》</h1>
-        <p class="unit-author">${esc(u.author)}</p>
+        <div class="unit-hero-copy">
+          <div class="unit-meta-row">
+            <p class="unit-kicker">${esc(u.dynasty)} · ${esc(u.genre)}</p>
+            <span class="unit-mode-pill">篇章學習</span>
+          </div>
+          <h1 class="page-title unit-title">《${esc(u.title)}》</h1>
+          <p class="unit-author">${esc(u.author)}</p>
+          <div class="unit-flow-mini" aria-label="建議學習方向">
+            <span>讀原文</span><i aria-hidden="true">→</i><span>疏文意</span><i aria-hidden="true">→</i><span>看賞析</span><i aria-hidden="true">→</i><span>做練習</span>
+          </div>
+        </div>
+        <div class="unit-hero-art" aria-hidden="true">
+          <span class="unit-art-orbit orbit-one"></span>
+          <span class="unit-art-orbit orbit-two"></span>
+          <div class="unit-monogram">${esc((u.title || "篇").slice(0, 1))}</div>
+          <span class="unit-art-caption">讀 · 解 · 析 · 練</span>
+        </div>
       </header>
 
       <section class="next-step-panel" aria-labelledby="next-step-title">
