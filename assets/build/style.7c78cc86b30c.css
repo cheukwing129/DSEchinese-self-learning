@@ -2647,6 +2647,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   line-height: 1;
 }
 .annotation-close:hover { background: rgba(255,255,255,.13); color: #fff; }
+.annotation-popover:focus { outline: none; }
 
 @media (max-width: 780px) {
   .reader-hero { grid-template-columns: 1fr; gap: 22px; padding-top: 16px; }
