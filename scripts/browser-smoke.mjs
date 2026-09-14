@@ -171,6 +171,15 @@ try {
 
   await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/text"; });
   await waitForTitle(page, "原文與誦讀");
+  check(await page.locator(".reader-shell").count() === 1, "text route should render the dedicated reader workspace");
+  check(await page.locator(".reader-paper").count() === 1, "reader should expose a focused reading paper surface");
+  const readerTabs = page.locator(".reader-nav [role=\"tab\"]");
+  check(await readerTabs.count() === 5, "Yueyang reader should expose five paragraph navigation tabs");
+  const firstReaderLabel = await page.locator("#reader-section-title").textContent();
+  await page.locator("#reader-next-btn").click();
+  const secondReaderLabel = await page.locator("#reader-section-title").textContent();
+  check(firstReaderLabel !== secondReaderLabel, "reader next control should advance the visible section");
+  await readerTabs.first().click();
   const term = page.locator("button.term").first();
   await term.waitFor({ state: "visible", timeout: 4000 });
   await term.click();
@@ -209,6 +218,10 @@ try {
   await waitForTitle(page, "讀懂經典");
   const homeOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
   check(homeOverflow <= 1, `mobile home has horizontal overflow of ${homeOverflow}px`);
+  await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/text"; });
+  await page.locator(".reader-shell").waitFor({ state: "visible", timeout: 5000 });
+  const readerOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+  check(readerOverflow <= 1, `mobile reader has horizontal overflow of ${readerOverflow}px`);
   await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/words/quiz"; });
   await page.locator(".q-stem").first().waitFor({ state: "visible", timeout: 5000 });
   const quizOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);

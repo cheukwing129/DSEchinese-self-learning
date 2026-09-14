@@ -315,13 +315,16 @@ const ContentRenderer = (() => {
     }
 
     let activeIndex = 0;
+    const totalAnnotations = text.annotations.length;
 
     function navHTML() {
       return `
-        <div class="para-nav">
-          ${groups
-            .map((g, i) => `<button data-idx="${i}" class="${i === activeIndex ? "is-active" : ""}">${esc(g.label)}</button>`)
-            .join("")}
+        <div class="reader-nav" role="tablist" aria-label="原文段落導航">
+          ${groups.map((g, i) => `
+            <button type="button" role="tab" id="reader-tab-${i}" aria-controls="reader-passage" aria-selected="${i === activeIndex ? "true" : "false"}" data-idx="${i}" class="${i === activeIndex ? "is-active" : ""}">
+              <span class="reader-nav-index">${String(i + 1).padStart(2, "0")}</span>
+              <span class="reader-nav-label">${esc(g.label)}</span>
+            </button>`).join("")}
         </div>
       `;
     }
@@ -366,43 +369,115 @@ const ContentRenderer = (() => {
     }
 
     function passageHTML(paragraphs) {
-      return paragraphs
-        .map(
-          (p) => `
-        <p class="text-passage">${paragraphHTML(p)}</p>
-        <div class="para-summary"><strong>${paragraphs.length > 1 ? "" : "段意："}</strong>${esc(p.summary)}</div>
-      `
-        )
-        .join(paragraphs.length > 1 ? '<div style="height:16px;"></div>' : "");
+      return paragraphs.map((p, index) => {
+        const annotationCount = (p.annotation_ids || []).filter((id) => annoMap[id]).length;
+        const label = paragraphLabel(p);
+        return `
+          <article class="reader-paragraph-block" data-paragraph-id="${esc(p.id)}">
+            <div class="reader-paragraph-meta">
+              <span>${esc(label)}</span>
+              ${annotationCount ? `<span>${annotationCount} 個注釋字詞</span>` : `<span>純讀原文</span>`}
+            </div>
+            <p class="text-passage">${paragraphHTML(p)}</p>
+            <div class="para-summary">
+              <span class="para-summary-label">${paragraphs.length > 1 ? `${esc(label)} · 段意` : "段意"}</span>
+              <p>${esc(p.summary)}</p>
+            </div>
+          </article>
+        `;
+      }).join("");
     }
 
     function renderShell() {
+      const dynastyGenre = [unit.dynasty, unit.genre].filter(Boolean).map(esc).join(" · ");
       App.mount(`
-        <h1 class="page-title">原文與誦讀</h1>
-        <p class="page-subtitle">《${esc(unit.title)}》· 點擊字詞或用鍵盤選取以查看注釋</p>
-        ${audioPlayerHTML(unit)}
-        <div class="card">
-          <div id="text-nav-slot"></div>
-          <div id="text-passage-slot"></div>
-        </div>
-        <div class="card">
-          <p style="color:var(--color-ink-soft); font-size:14px; margin:0;">
-            意群停頓提示尚未提供，將於日後版本補充。
-          </p>
+        <div class="reader-shell">
+          <header class="reader-hero">
+            <div class="reader-hero-copy">
+              <p class="section-kicker">原文閱讀${dynastyGenre ? ` · ${dynastyGenre}` : ""}</p>
+              <h1 class="page-title reader-page-title">原文與誦讀</h1>
+              <p class="reader-work-title">《${esc(unit.title)}》</p>
+              <p class="reader-work-author">${esc(unit.author || "")}</p>
+              <p class="reader-intro">先把注意力留給原文。需要時再點開注釋，讀完一節後才看段意，讓理解建立在自己的閱讀上。</p>
+            </div>
+            <div class="reader-hero-stats" aria-label="閱讀資料摘要">
+              <div><strong>${groups.length}</strong><span>閱讀節點</span></div>
+              <div><strong>${text.paragraphs.length}</strong><span>原文段落</span></div>
+              <div><strong>${totalAnnotations}</strong><span>注釋條目</span></div>
+            </div>
+          </header>
+
+          <div class="reader-layout">
+            <aside class="reader-sidebar" aria-label="閱讀工具">
+              <div class="reader-sidebar-sticky">
+                <div class="reader-sidebar-heading">
+                  <p class="section-kicker">Reading map</p>
+                  <strong>段落導航</strong>
+                </div>
+                <div id="text-nav-slot"></div>
+                <div class="reader-legend"><span aria-hidden="true">文</span><p>有細底線的字詞可點擊或用鍵盤選取，查看注釋。</p></div>
+                ${unit.audio_file ? `<div class="reader-audio-wrap">${audioPlayerHTML(unit)}</div>` : ""}
+              </div>
+            </aside>
+
+            <main class="reader-paper" aria-label="《${esc(unit.title)}》原文閱讀區">
+              <div class="reader-paper-head">
+                <div>
+                  <p class="reader-step" id="reader-step"></p>
+                  <h2 class="reader-section-title" id="reader-section-title" tabindex="-1"></h2>
+                </div>
+                <span class="reader-paper-mark" aria-hidden="true">讀</span>
+              </div>
+              <div id="reader-passage" class="reader-passage" role="tabpanel" aria-live="polite"></div>
+              <nav class="reader-section-nav" aria-label="前後段落">
+                <button type="button" class="reader-step-button" id="reader-prev-btn"><span aria-hidden="true">←</span> 上一節</button>
+                <span id="reader-section-count" aria-hidden="true"></span>
+                <button type="button" class="reader-step-button is-next" id="reader-next-btn">下一節 <span aria-hidden="true">→</span></button>
+              </nav>
+            </main>
+          </div>
+
+          <aside class="reader-study-note">
+            <span class="reader-note-mark" aria-hidden="true">讀</span>
+            <div><strong>閱讀順序</strong><p>原文 → 必要時看注釋 → 完成一節 → 再核對段意。段意是理解輔助，不代表唯一可接受的概括方式。</p></div>
+          </aside>
         </div>
         ${App.footerNav(unitId, unit.title)}
       `);
       updateContent();
     }
 
+    function setActive(nextIndex, { focusHeading = false } = {}) {
+      const bounded = Math.max(0, Math.min(groups.length - 1, nextIndex));
+      if (bounded === activeIndex && !focusHeading) return;
+      activeIndex = bounded;
+      updateContent();
+      if (focusHeading) {
+        const heading = document.getElementById("reader-section-title");
+        if (heading) heading.focus({ preventScroll: true });
+      }
+    }
+
     function updateContent() {
-      document.getElementById("text-nav-slot").innerHTML = navHTML();
-      document.getElementById("text-passage-slot").innerHTML = passageHTML(groups[activeIndex].paragraphs);
-      document.querySelectorAll(".para-nav button").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          activeIndex = parseInt(btn.dataset.idx, 10);
-          updateContent();
-        });
+      const group = groups[activeIndex];
+      const navSlot = document.getElementById("text-nav-slot");
+      const passage = document.getElementById("reader-passage");
+      navSlot.innerHTML = navHTML();
+      passage.innerHTML = passageHTML(group.paragraphs);
+      passage.setAttribute("aria-labelledby", `reader-tab-${activeIndex}`);
+      document.getElementById("reader-step").textContent = `READING ${String(activeIndex + 1).padStart(2, "0")} / ${String(groups.length).padStart(2, "0")}`;
+      document.getElementById("reader-section-title").textContent = group.label;
+      document.getElementById("reader-section-count").textContent = `${activeIndex + 1} / ${groups.length}`;
+
+      const prev = document.getElementById("reader-prev-btn");
+      const next = document.getElementById("reader-next-btn");
+      prev.disabled = activeIndex === 0;
+      next.disabled = activeIndex === groups.length - 1;
+      prev.onclick = () => setActive(activeIndex - 1, { focusHeading: true });
+      next.onclick = () => setActive(activeIndex + 1, { focusHeading: true });
+
+      document.querySelectorAll(".reader-nav button").forEach((btn) => {
+        btn.addEventListener("click", () => setActive(parseInt(btn.dataset.idx, 10)));
       });
       document.querySelectorAll(".term").forEach((button) => {
         button.addEventListener("click", (e) => showAnnotationPopover(e, annoMap[button.dataset.anno]));
@@ -422,22 +497,37 @@ const ContentRenderer = (() => {
     pop.setAttribute("role", "dialog");
     pop.setAttribute("aria-label", `「${anno.term}」注釋`);
     pop.tabIndex = -1;
-    const reading = [anno.jyutping ? `粵：${anno.jyutping}` : "", anno.putonghua ? `普：${anno.putonghua}` : ""]
-      .filter(Boolean).join("　");
+    const readings = [
+      anno.jyutping ? `<span>粵 ${App.escapeHTML(anno.jyutping)}</span>` : "",
+      anno.putonghua ? `<span>普 ${App.escapeHTML(anno.putonghua)}</span>` : ""
+    ].filter(Boolean).join("");
     pop.innerHTML = `
       <button type="button" class="annotation-close" aria-label="關閉注釋">×</button>
+      <div class="annotation-kicker">字詞注釋</div>
       <div class="term-name">${App.escapeHTML(anno.term)}</div>
-      ${reading ? `<div class="reading">${App.escapeHTML(reading)}</div>` : ""}
-      <div>${App.escapeHTML(anno.explanation)}</div>
+      ${readings ? `<div class="reading">${readings}</div>` : ""}
+      <div class="annotation-explanation">${App.escapeHTML(anno.explanation)}</div>
     `;
     document.body.appendChild(backdrop);
     document.body.appendChild(pop);
+
     const rect = evt.target.getBoundingClientRect();
-    const top = Math.min(rect.bottom + 8, window.innerHeight - 120);
-    let left = rect.left;
-    if (left + 300 > window.innerWidth) left = window.innerWidth - 310;
-    pop.style.top = `${top}px`;
-    pop.style.left = `${Math.max(10, left)}px`;
+    const isMobile = window.matchMedia("(max-width: 600px)").matches;
+    if (isMobile) {
+      pop.style.left = "12px";
+      pop.style.right = "12px";
+      pop.style.bottom = "12px";
+      pop.style.top = "auto";
+    } else {
+      const popRect = pop.getBoundingClientRect();
+      let top = rect.bottom + 10;
+      if (top + popRect.height > window.innerHeight - 12) top = Math.max(12, rect.top - popRect.height - 10);
+      let left = rect.left;
+      if (left + popRect.width > window.innerWidth - 12) left = window.innerWidth - popRect.width - 12;
+      pop.style.top = `${Math.max(12, top)}px`;
+      pop.style.left = `${Math.max(12, left)}px`;
+    }
+
     const closePopover = () => {
       pop.remove();
       backdrop.remove();

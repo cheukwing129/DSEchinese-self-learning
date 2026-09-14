@@ -112,6 +112,9 @@ try {
 
   await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/text"; });
   await page.locator(".page-title", { hasText: "原文與誦讀" }).waitFor({ state: "visible", timeout: 10000 });
+  await page.locator(".reader-shell").waitFor({ state: "visible", timeout: 4000 });
+  const readerOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+  check(readerOverflow <= 1, `production mobile reader has horizontal overflow of ${readerOverflow}px`);
   await page.locator("button.term").first().click();
   await page.locator('.annotation-popover[role="dialog"]').waitFor({ state: "visible", timeout: 4000 });
   await page.keyboard.press("Escape");
