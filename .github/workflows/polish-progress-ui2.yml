@@ -1,0 +1,43 @@
+name: Polish progress UI 2.0
+
+on:
+  push:
+    branches: [feat/progress-ui-2]
+    paths:
+      - scripts/polish-progress-ui2.py
+      - .github/workflows/polish-progress-ui2.yml
+
+permissions:
+  contents: write
+
+jobs:
+  polish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: feat/progress-ui-2
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Apply visual density polish
+        run: python scripts/polish-progress-ui2.py
+      - name: Rebuild fingerprinted assets
+        run: node scripts/build-assets.mjs --write
+      - name: Validate affected contracts
+        run: |
+          node --check js/content-renderer.js
+          node scripts/validate-accessibility.mjs
+          node scripts/validate-wrong-answer-retry.mjs
+          node scripts/validate-cross-unit-overview.mjs
+          node scripts/validate-cross-unit-targeted-retry.mjs
+          node scripts/validate-performance.mjs
+          node scripts/build-assets.mjs --check
+      - name: Commit polish
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/content-renderer.js css/style.css assets/build index.html _headers
+          git diff --cached --quiet && exit 0
+          git commit -m "Tighten progress detail density"
+          git push origin HEAD:feat/progress-ui-2
