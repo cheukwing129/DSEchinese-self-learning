@@ -2,43 +2,68 @@ import fs from "node:fs";
 
 const errors = [];
 const index = fs.readFileSync("index.html", "utf8");
-const app = fs.readFileSync("js/app.js", "utf8");
+const sourceApp = fs.readFileSync("js/app.js", "utf8");
 const css = fs.readFileSync("css/style.css", "utf8");
 const headers = fs.readFileSync("_headers", "utf8");
+const manifest = JSON.parse(fs.readFileSync("assets/build/asset-manifest.json", "utf8"));
 
 function check(condition, message) {
   if (!condition) errors.push(message);
 }
 
+function asset(key) {
+  return manifest.assets?.[key];
+}
+
+function fileFromAsset(key) {
+  const item = asset(key);
+  return item?.path?.startsWith("/") ? item.path.slice(1) : item?.path;
+}
+
 check(!index.includes("fonts.googleapis.com") && !index.includes("fonts.gstatic.com"), "initial HTML must not depend on Google Fonts");
 check(!css.includes('"Mulish"') && !css.includes('"Source Serif Pro"'), "CSS must use local/system font stacks");
 
-const scriptTags = [...index.matchAll(/<script\s+([^>]*?)src="([^"]+)"([^>]*)><\/script>/g)].map((m) => ({ attrs: `${m[1]} ${m[3]}`, src: m[2] }));
-const startupScripts = scriptTags.map((s) => s.src);
-const expectedStartup = ["js/progress.js", "js/router.js", "js/app.js"];
-check(JSON.stringify(startupScripts) === JSON.stringify(expectedStartup), `startup scripts must be exactly ${expectedStartup.join(", ")}`);
-check(scriptTags.every((s) => /\bdefer\b/.test(s.attrs)), "all startup scripts must use defer");
-for (const heavy of ["js/content-renderer.js", "js/question-engine.js", "js/memorisation-engine.js"]) {
-  check(!startupScripts.includes(heavy), `${heavy} must remain route-lazy`);
+for (const key of ["style", "progress", "router", "app", "content", "questions", "memorisation"]) {
+  check(!!asset(key), `asset manifest is missing ${key}`);
+  check(/^\/assets\/build\/[a-z0-9-]+\.[0-9a-f]{12}\.(?:js|css)$/.test(asset(key)?.path || ""), `${key} must use a content-hashed runtime URL`);
 }
 
-check(app.includes("function loadScriptCached(src)"), "App must cache route-only script requests");
-check(app.includes("function loadUIModules(names = [])"), "App must expose route UI module loading");
-check(app.includes('content: "js/content-renderer.js"'), "content renderer must be dynamically mapped");
-check(app.includes('questions: "js/question-engine.js"'), "question engine must be dynamically mapped");
-check(app.includes('memorisation: "js/memorisation-engine.js"'), "memorisation engine must be dynamically mapped");
-check(app.includes('loadUIModules(["content"])'), "cross-unit overview must load content UI on demand");
-check(app.includes('loadUIModules(["questions"])'), "cross-unit retry must load question UI on demand");
-check(app.includes('uiModules: ["memorisation"]'), "memorisation route must load its engine on demand");
-check(app.includes('uiModules: ["questions"]'), "quiz routes must load question engine on demand");
-check(app.includes('uiModules: ["content"]'), "content routes must load content renderer on demand");
+const scriptTags = [...index.matchAll(/<script\s+([^>]*?)src="([^"]+)"([^>]*)><\/script>/g)].map((m) => ({ attrs: `${m[1]} ${m[3]}`, src: m[2] }));
+const startupScripts = scriptTags.map((s) => s.src);
+const expectedStartup = [asset("progress")?.path, asset("router")?.path, asset("app")?.path];
+check(JSON.stringify(startupScripts) === JSON.stringify(expectedStartup), "startup scripts must be exactly the fingerprinted progress, router and app assets");
+check(scriptTags.every((s) => /\bdefer\b/.test(s.attrs)), "all startup scripts must use defer");
+check(index.includes(`href="${asset("style")?.path}"`), "index must use the fingerprinted stylesheet");
+for (const heavyKey of ["content", "questions", "memorisation"]) {
+  check(!startupScripts.includes(asset(heavyKey)?.path), `${heavyKey} engine must remain route-lazy`);
+}
 
-check(headers.includes("rel=preload; as=style"), "Cloudflare Early Hints must preload the stylesheet");
-for (const src of expectedStartup) check(headers.includes(`<\/${src}>`) || headers.includes(`<${src.startsWith('/') ? src : '/' + src}>`), `_headers must hint ${src}`);
-check(!/Cache-Control:\s*[^\n]*max-age=(?:[1-9]\d{4,}|31536000)/i.test(headers), "do not apply aggressive browser caching to unversioned CSS/JS/data assets");
+check(sourceApp.includes("function loadScriptCached(src)"), "App must cache route-only script requests");
+check(sourceApp.includes("function loadUIModules(names = [])"), "App must expose route UI module loading");
+check(sourceApp.includes('uiModules: ["memorisation"]'), "memorisation route must load its engine on demand");
+check(sourceApp.includes('uiModules: ["questions"]'), "quiz routes must load question engine on demand");
+check(sourceApp.includes('uiModules: ["content"]'), "content routes must load content renderer on demand");
 
-const eagerBytes = expectedStartup.reduce((sum, file) => sum + fs.statSync(file).size, 0);
-const deferredFiles = ["js/content-renderer.js", "js/question-engine.js", "js/memorisation-engine.js"];
+const builtAppPath = fileFromAsset("app");
+if (builtAppPath && fs.existsSync(builtAppPath)) {
+  const builtApp = fs.readFileSync(builtAppPath, "utf8");
+  check(builtApp.includes(`content: "${asset("content")?.path}"`), "built app must point to fingerprinted content renderer");
+  check(builtApp.includes(`questions: "${asset("questions")?.path}"`), "built app must point to fingerprinted question engine");
+  check(builtApp.includes(`memorisation: "${asset("memorisation")?.path}"`), "built app must point to fingerprinted memorisation engine");
+}
+
+check(headers.includes("/assets/build/*"), "Cloudflare headers must target fingerprinted build assets");
+check(headers.includes("Cache-Control: public, max-age=31536000, immutable"), "fingerprinted assets must receive a one-year immutable browser cache");
+check(headers.includes("/\n  Cache-Control: no-cache"), "HTML root must remain revalidatable");
+check(headers.includes("/index.html\n  Cache-Control: no-cache"), "index.html must remain revalidatable");
+check(headers.includes("rel=preload; as=style"), "Cloudflare Early Hints must preload the fingerprinted stylesheet");
+for (const key of ["style", "progress", "router", "app"]) {
+  check(headers.includes(`<${asset(key)?.path}>`), `_headers must hint fingerprinted ${key}`);
+}
+
+const eagerFiles = ["progress", "router", "app"].map(fileFromAsset).filter(Boolean);
+const deferredFiles = ["content", "questions", "memorisation"].map(fileFromAsset).filter(Boolean);
+const eagerBytes = eagerFiles.reduce((sum, file) => sum + fs.statSync(file).size, 0);
 const deferredBytes = deferredFiles.reduce((sum, file) => sum + fs.statSync(file).size, 0);
 const previousBytes = eagerBytes + deferredBytes;
 const reduction = Math.round((1 - eagerBytes / previousBytes) * 1000) / 10;
@@ -49,4 +74,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Initial-load contract validated: ${eagerBytes} raw JS bytes eager, ${deferredBytes} bytes route-lazy (${reduction}% less eager JS than the previous six-script bootstrap), with zero third-party font origins.`);
+console.log(`Initial-load contract validated on fingerprinted assets: ${eagerBytes} raw JS bytes eager, ${deferredBytes} bytes route-lazy (${reduction}% less eager JS than the former six-script bootstrap), with one-year immutable caching for versioned assets.`);
