@@ -1,0 +1,40 @@
+name: Apply route race guard patch
+
+on:
+  push:
+    branches:
+      - fix/route-race-guard
+    paths:
+      - scripts/patch-route-race-guard.py
+      - .github/workflows/apply-route-race-guard.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: fix/route-race-guard
+      - name: Apply patch
+        run: python scripts/patch-route-race-guard.py
+      - name: Check JavaScript syntax
+        run: |
+          for file in js/*.js scripts/*.mjs; do node --check "$file"; done
+      - name: Guard route race integration
+        run: |
+          grep -q 'let navigationId = 0' js/router.js
+          grep -q 'navigationId += 1' js/router.js
+          grep -q 'function isCurrentNavigation' js/router.js
+          grep -q 'Router.currentNavigationId()' js/app.js
+          grep -q 'Router.isCurrentNavigation(navigationId)' js/app.js
+      - name: Commit patched files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/router.js js/app.js scripts/validate-loading.mjs
+          git commit -m "Guard async routes against stale renders"
+          git push
