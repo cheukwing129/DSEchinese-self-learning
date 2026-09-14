@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   validate:
-    name: JavaScript, content and accessibility
+    name: JavaScript, content, accessibility and loading
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
@@ -35,3 +35,6 @@ jobs:
 
       - name: Validate accessibility interactions
         run: node scripts/validate-accessibility.mjs
+
+      - name: Validate lazy-loading contract
+        run: node scripts/validate-loading.mjs
