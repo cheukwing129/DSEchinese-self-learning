@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   validate:
-    name: JavaScript, content, accessibility, loading, learning support, continuity, retry and overview
+    name: JavaScript, content, accessibility, loading, learning support, continuity, retry, overview and targeted retry
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
@@ -50,3 +50,6 @@ jobs:
 
       - name: Validate cross-unit learning overview
         run: node scripts/validate-cross-unit-overview.mjs
+
+      - name: Validate cross-unit targeted retry
+        run: node scripts/validate-cross-unit-targeted-retry.mjs
