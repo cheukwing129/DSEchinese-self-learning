@@ -1,0 +1,54 @@
+name: Production smoke
+
+on:
+  workflow_run:
+    workflows:
+      - Validate content
+    types:
+      - completed
+  workflow_dispatch:
+    inputs:
+      production_url:
+        description: Optional production URL override, e.g. https://example.pages.dev
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production-smoke
+  cancel-in-progress: true
+
+jobs:
+  production-smoke:
+    name: Cloudflare production deployment smoke
+    if: >-
+      (github.event_name == 'workflow_run' &&
+       github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.head_branch == 'main' &&
+       vars.PRODUCTION_URL != '') ||
+      (github.event_name == 'workflow_dispatch' && inputs.production_url != '')
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      PRODUCTION_URL: ${{ github.event_name == 'workflow_dispatch' && inputs.production_url || vars.PRODUCTION_URL }}
+
+    steps:
+      - name: Check out tested main commit
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Install pinned Playwright runtime
+        run: |
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Verify current Cloudflare deployment
+        run: node scripts/production-smoke.mjs
