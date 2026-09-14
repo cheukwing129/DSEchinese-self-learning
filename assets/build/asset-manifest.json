@@ -4,9 +4,9 @@
   "assets": {
     "style": {
       "source": "css/style.css",
-      "path": "/assets/build/style.631b612b42c3.css",
-      "hash": "631b612b42c3",
-      "sha256": "631b612b42c392e25b93d18809de5bf1b9d9e4c9bdeff062f640f1f2f0c8d012"
+      "path": "/assets/build/style.d2b924cadb5a.css",
+      "hash": "d2b924cadb5a",
+      "sha256": "d2b924cadb5af6bb900a0b67951acc4d7a0720462498daeec35c6303afdf434a"
     },
     "progress": {
       "source": "js/progress.js",
@@ -22,9 +22,9 @@
     },
     "app": {
       "source": "js/app.js",
-      "path": "/assets/build/app.acacd4fa935a.js",
-      "hash": "acacd4fa935a",
-      "sha256": "acacd4fa935a77b0e46c88577e80afc5abeef50aea0753d9adf1c138d8880dfd"
+      "path": "/assets/build/app.b1a69e4343b9.js",
+      "hash": "b1a69e4343b9",
+      "sha256": "b1a69e4343b9b04886e99873d7e9e96ae00319f54b0b170b1b5a658c0cf644c3"
     },
     "content": {
       "source": "js/content-renderer.js",

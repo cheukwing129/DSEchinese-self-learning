@@ -281,7 +281,7 @@ const App = (() => {
             <p class="home-kicker">DSE 中文 · 指定文言經典</p>
             <span class="home-edition-pill">SELF · STUDY</span>
           </div>
-          <h1 id="home-title" class="page-title home-title">讀懂經典，<span>把每一步都變成自己的能力。</span></h1>
+          <h1 id="home-title" class="page-title home-title">讀懂經典，<span>把每一步，<br />變成自己的能力。</span></h1>
           <p class="home-lead">從原文、字詞與文意出發，再進入賞析、背誦、作答與錯題修復。介面替你整理路徑，判斷仍然交給真實學習紀錄。</p>
           <div class="home-hero-chips" aria-label="學習內容">
             <span>原文</span><span>字詞</span><span>賞析</span><span>背誦</span><span>作答</span>
