@@ -13,6 +13,10 @@ const QuestionEngine = (() => {
   const esc = App.escapeHTML;
   const OBJECTIVE_TYPES = ["single_choice", "multi_select", "true_false_unknown", "matching", "extract_sentence", "cloze_choice"];
   const difficultyLabel = { basic: "基礎", intermediate: "進階", advanced: "挑戰" };
+  const questionTypeLabel = {
+    single_choice: "單選", multi_select: "多選", true_false_unknown: "判斷", matching: "配對",
+    extract_sentence: "摘錄", cloze_choice: "選詞填充", short_answer: "短答", long_answer: "長答", fill_table: "填表"
+  };
 
   // ---------- 補強診斷 ----------
   // 沒有人工標註 error_tags/remediation 時，只根據題目已知的能力分類、
@@ -607,33 +611,57 @@ const QuestionEngine = (() => {
     };
 
     function paint() {
+      const isObjective = OBJECTIVE_TYPES.includes(question.question_type);
+      const outcomeClass = state.submitted && isObjective
+        ? (state.isCorrect === true ? "is-correct" : state.isCorrect === false ? "is-incorrect" : "")
+        : "";
+      const outcomeBadge = state.submitted && isObjective
+        ? `<span class="quiz-result-badge ${state.isCorrect ? "is-correct" : "is-incorrect"}">${state.isCorrect ? "✓ 答對" : "× 待修正"}</span>`
+        : `<span class="question-type-pill">${esc(questionTypeLabel[question.question_type] || question.question_type)}</span>`;
+
       App.mount(`
-        <p class="quiz-progress-label">${esc(title)} · ${esc(indexLabel)}</p>
-        <div class="card">
-          <div class="q-meta-row">
-            <span class="tag">${esc(question.ability)}</span>
-            ${question.knowledge_point ? `<span class="tag">${esc(question.knowledge_point)}</span>` : ""}
-            <span class="tag">${esc(difficultyLabel[question.difficulty] || question.difficulty)}</span>
-            ${question.score ? `<span class="tag tag-score">${question.score} 分</span>` : ""}
-            ${question.is_cross_text ? `<span class="tag">跨篇</span>` : ""}
-          </div>
-          ${renderQuestionBody(question, state)}
-          <div id="reveal-slot" tabindex="-1" aria-live="polite" aria-atomic="true"></div>
-          <div class="btn-row" id="action-row"></div>
-        </div>
-        <div class="quiz-nav-bar">
-          <div class="quiz-nav-inner">
-            <div class="quiz-nav-group">
-              <button class="btn btn-secondary" id="prev-btn" ${onPrev ? "" : "disabled"}>← 上一題</button>
-              <button class="btn btn-secondary" id="next-btn" ${onNext ? "" : "disabled"}>下一題 →</button>
+        <section class="quiz-shell ${state.submitted ? "is-submitted" : ""}" aria-label="${esc(title)}">
+          <header class="quiz-context-bar">
+            <div class="quiz-context-copy">
+              <span class="quiz-context-title">${esc(title)}</span>
+              <span class="quiz-progress-label">${esc(indexLabel)}</span>
             </div>
-            <div class="quiz-nav-group">
-              ${extraNav || ""}
-              <a class="btn btn-ghost" href="${backHref}">${backLabel ? esc(backLabel) : `返回《${esc(bundle.unit.title)}》`}</a>
-              <a class="btn btn-ghost" href="#/">返回首頁</a>
+            <a class="quiz-context-back" href="${backHref}">${backLabel ? esc(backLabel) : `返回《${esc(bundle.unit.title)}》`}</a>
+          </header>
+
+          <article class="question-surface ${outcomeClass}">
+            <div class="question-surface-head">
+              <div class="q-meta-row">
+                <span class="tag">${esc(question.ability)}</span>
+                ${question.knowledge_point ? `<span class="tag">${esc(question.knowledge_point)}</span>` : ""}
+                <span class="tag">${esc(difficultyLabel[question.difficulty] || question.difficulty)}</span>
+                ${question.score ? `<span class="tag tag-score">${question.score} 分</span>` : ""}
+                ${question.is_cross_text ? `<span class="tag">跨篇</span>` : ""}
+              </div>
+              ${outcomeBadge}
+            </div>
+            <div class="question-body">${renderQuestionBody(question, state)}</div>
+            <div id="reveal-slot" tabindex="-1" aria-live="polite" aria-atomic="true"></div>
+            <div class="question-action-zone">
+              <p class="question-action-hint">${state.submitted ? "先對照答案與解析，再前往下一題。" : "完成作答後提交；提交後會保留答案與解析。"}</p>
+              <div class="btn-row" id="action-row"></div>
+            </div>
+          </article>
+
+          <div class="quiz-nav-bar">
+            <div class="quiz-nav-inner">
+              <div class="quiz-nav-group quiz-nav-paging">
+                <button class="btn btn-secondary" id="prev-btn" ${onPrev ? "" : "disabled"}>← 上一題</button>
+                <button class="btn btn-secondary" id="next-btn" ${onNext ? "" : "disabled"}>下一題 →</button>
+              </div>
+              <div class="quiz-nav-group quiz-nav-exits">
+                ${extraNav || ""}
+                <a class="btn btn-ghost" href="${backHref}">${backLabel ? esc(backLabel) : `返回《${esc(bundle.unit.title)}》`}</a>
+                <a class="btn btn-ghost" href="#/">首頁</a>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       `);
 
       bindBodyEvents(question, state, paint);
@@ -722,18 +750,33 @@ const QuestionEngine = (() => {
   }
 
   function renderSingleChoice(q, state, prefix) {
-    return `<div class="option-list" role="radiogroup" aria-label="單選題選項">${(q.options || []).map((o) => `
-      <button type="button" role="radio" aria-checked="${state.selected === o.key}" class="option-item ${state.selected === o.key ? "is-selected" : ""}" data-key="${esc(o.key)}" data-role="option-${prefix}" ${state.submitted ? "disabled" : ""}>
-        <span class="option-key" aria-hidden="true">${esc(o.key)}</span><span>${esc(o.text)}</span>
-      </button>`).join("")}</div>`;
+    return `<div class="option-list" role="radiogroup" aria-label="單選題選項">${(q.options || []).map((o) => {
+      const selected = state.selected === o.key;
+      const resultClass = state.submitted
+        ? (o.key === q.answer ? "is-correct" : selected ? "is-wrong" : "is-locked")
+        : selected ? "is-selected" : "";
+      return `
+      <button type="button" role="radio" aria-checked="${selected}" class="option-item ${resultClass}" data-key="${esc(o.key)}" data-role="option-${prefix}" ${state.submitted ? "disabled" : ""}>
+        <span class="option-key" aria-hidden="true">${esc(o.key)}</span><span class="option-copy">${esc(o.text)}</span>
+        ${state.submitted && o.key === q.answer ? `<span class="option-result-mark" aria-hidden="true">✓</span>` : state.submitted && selected ? `<span class="option-result-mark" aria-hidden="true">×</span>` : ""}
+      </button>`;
+    }).join("")}</div>`;
   }
 
   function renderMultiSelect(q, state, prefix) {
     const sel = Array.isArray(state.selected) ? state.selected : [];
-    return `<div class="option-list" aria-label="多選題選項">${(q.options || []).map((o) => `
-      <button type="button" aria-pressed="${sel.includes(o.key)}" class="option-item ${sel.includes(o.key) ? "is-selected" : ""}" data-key="${esc(o.key)}" data-role="option-${prefix}-multi" ${state.submitted ? "disabled" : ""}>
-        <span class="option-key" aria-hidden="true">${sel.includes(o.key) ? "✓" : esc(o.key)}</span><span>${esc(o.text)}</span>
-      </button>`).join("")}</div>`;
+    const answers = new Set(q.answer || []);
+    return `<div class="option-list" aria-label="多選題選項">${(q.options || []).map((o) => {
+      const selected = sel.includes(o.key);
+      const resultClass = state.submitted
+        ? (answers.has(o.key) ? "is-correct" : selected ? "is-wrong" : "is-locked")
+        : selected ? "is-selected" : "";
+      return `
+      <button type="button" aria-pressed="${selected}" class="option-item ${resultClass}" data-key="${esc(o.key)}" data-role="option-${prefix}-multi" ${state.submitted ? "disabled" : ""}>
+        <span class="option-key" aria-hidden="true">${selected && !state.submitted ? "✓" : esc(o.key)}</span><span class="option-copy">${esc(o.text)}</span>
+        ${state.submitted && answers.has(o.key) ? `<span class="option-result-mark" aria-hidden="true">✓</span>` : state.submitted && selected ? `<span class="option-result-mark" aria-hidden="true">×</span>` : ""}
+      </button>`;
+    }).join("")}</div>`;
   }
 
   function renderTrueFalse(q, state, prefix) {
@@ -1051,12 +1094,16 @@ const QuestionEngine = (() => {
     let panelClass = "reveal-panel";
     if (isObjective && state.isCorrect === false) panelClass += " is-incorrect";
 
-    let html = `<div class="${panelClass}">`;
-    if (isObjective) {
-      html += `<div class="reveal-row"><b>${state.isCorrect ? "✓ 答對了" : state.isCorrect === false ? "✗ 答錯了" : "已提交"}</b></div>`;
-    } else {
-      html += `<div class="reveal-row"><b>已提交，以下為參考答案／評分元素（不設精確自動評分）</b></div>`;
-    }
+    const revealTitle = isObjective
+      ? (state.isCorrect ? "答對了，確認你的判斷" : "這題需要再看一次")
+      : "參考答案與自評要點";
+    const revealNote = isObjective
+      ? (state.isCorrect ? "保留文本證據，再看看解析是否與你的理由一致。" : "先對照正確答案與解析，再決定需要補強哪一部分。")
+      : "開放題不作精確自動評分；請按參考答案與評分元素自行核對。";
+    let html = `<section class="${panelClass}"><div class="reveal-summary">
+      <span class="reveal-status-icon" aria-hidden="true">${isObjective ? (state.isCorrect ? "✓" : "×") : "閱"}</span>
+      <div><span class="reveal-summary-kicker">ANSWER REVIEW</span><strong>${revealTitle}</strong><p>${revealNote}</p></div>
+    </div><div class="reveal-content">`;
 
     html += renderCoreReveal(q, main);
 
@@ -1105,7 +1152,7 @@ const QuestionEngine = (() => {
     }
 
     if (q.source) html += `<div class="reveal-row" style="margin-top:10px; font-size:12px; color:var(--color-ink-faint);">來源：${esc(q.source)}</div>`;
-    html += `</div>`;
+    html += `</div></section>`;
     return html;
   }
 
