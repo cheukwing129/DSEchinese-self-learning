@@ -28,6 +28,8 @@ requireText('bundle: await loadUnitBundle(entry.id, { allQuestionBanks: true })'
 requireText('Router.register("/overview", pageOverview)', "dedicated cross-unit overview route");
 requireText('Router.register("/overview/retry/:ability", pageCrossUnitRetry)', "dedicated cross-unit targeted retry route");
 requireText("async function loadCrossUnitBundles()", "shared on-demand aggregate loader");
+requireText("Router.currentNavigationId()", "navigation generation capture for async routes");
+requireText("Router.isCurrentNavigation(navigationId)", "stale async route guard");
 forbidText('fetchJSON(`${base}/background.json`)', "eager resource preload has returned");
 forbidText('fetchJSON(`${base}/rubrics.json`)', "eager resource preload has returned");
 forbidText("const [text, background, appreciation, structure, memorisation, rubrics]", "eager full bundle destructuring has returned");
