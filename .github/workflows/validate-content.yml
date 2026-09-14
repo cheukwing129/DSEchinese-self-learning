@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   validate:
-    name: JavaScript, content, accessibility, loading, learning support, continuity and retry
+    name: JavaScript, content, accessibility, loading, learning support, continuity, retry and overview
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
@@ -47,3 +47,6 @@ jobs:
 
       - name: Validate wrong-answer retry loop
         run: node scripts/validate-wrong-answer-retry.mjs
+
+      - name: Validate cross-unit learning overview
+        run: node scripts/validate-cross-unit-overview.mjs

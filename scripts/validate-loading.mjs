@@ -24,6 +24,8 @@ requireText('{ resources: ["rubrics"], banks: [bankName] }', "single-bank quiz l
 requireText('{ resources: ["rubrics"], banks: ["cross-text"] }', "cross-text bank loading with rubric support");
 requireText('{ resources: ["memorisation", "rubrics"], allQuestionBanks: true }', "aggregate progress loading with memorisation and rubrics");
 requireText("allQuestionBanks: true", "full question-bank loading for aggregate views");
+requireText('bundle: await loadUnitBundle(entry.id, { allQuestionBanks: true })', "on-demand cross-unit overview loading");
+requireText('Router.register("/overview", pageOverview)', "dedicated cross-unit overview route");
 forbidText('fetchJSON(`${base}/background.json`)', "eager resource preload has returned");
 forbidText('fetchJSON(`${base}/rubrics.json`)', "eager resource preload has returned");
 forbidText("const [text, background, appreciation, structure, memorisation, rubrics]", "eager full bundle destructuring has returned");
