@@ -26,32 +26,32 @@ await new Promise((resolve, reject) => { server.once("error", reject); server.li
 const browser = await chromium.launch({ headless: true });
 try {
   fs.mkdirSync("tmp-launch-polish-review", { recursive: true });
-  const context = await browser.newContext({ viewport: { width: 1440, height: 1000 }, deviceScaleFactor: 1 });
-  const page = await context.newPage();
-  page.on('pageerror', (err) => console.error('PAGE ERROR:', err.message));
-  page.on('console', (msg) => { if (msg.type() === 'error') console.error('CONSOLE ERROR:', msg.text()); });
 
-  await page.goto(`${base}/#/`, { waitUntil: "networkidle", timeout: 15000 });
-  try {
-    await page.locator('.home-hero').waitFor({ state: 'visible', timeout: 7000 });
-  } catch (err) {
-    console.error('MAIN TEXT:', (await page.locator('#app-main').innerText()).slice(0, 1200));
-    throw err;
-  }
-  await page.screenshot({ path: 'tmp-launch-polish-review/home-desktop.jpg', type: 'jpeg', quality: 88, fullPage: false });
-  await page.evaluate(() => App.renderFatalError('示範：暫時未能載入這一頁的資料。'));
-  await page.screenshot({ path: 'tmp-launch-polish-review/error-desktop.jpg', type: 'jpeg', quality: 88, fullPage: false });
+  const desktop = await browser.newContext({ viewport: { width: 1440, height: 1000 }, deviceScaleFactor: 1 });
+  const desktopPage = await desktop.newPage();
+  desktopPage.on('pageerror', (err) => console.error('DESKTOP PAGE ERROR:', err.message));
+  desktopPage.on('console', (msg) => { if (msg.type() === 'error') console.error('DESKTOP CONSOLE ERROR:', msg.text()); });
+  await desktopPage.goto(`${base}/#/`, { waitUntil: "networkidle", timeout: 15000 });
+  await desktopPage.locator('.home-hero').waitFor({ state: 'visible', timeout: 7000 });
+  await desktopPage.screenshot({ path: 'tmp-launch-polish-review/home-desktop.jpg', type: 'jpeg', quality: 88, fullPage: false });
+  await desktopPage.evaluate(() => App.renderFatalError('示範：暫時未能載入這一頁的資料。'));
+  await desktopPage.locator('.launch-state.is-error').waitFor({ state: 'visible', timeout: 3000 });
+  await desktopPage.screenshot({ path: 'tmp-launch-polish-review/error-desktop.jpg', type: 'jpeg', quality: 88, fullPage: false });
+  await desktop.close();
 
-  await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto(`${base}/#/`, { waitUntil: 'networkidle', timeout: 15000 });
-  await page.locator('.home-hero').waitFor({ state: 'visible', timeout: 7000 });
-  const headerOverflow = await page.evaluate(() => document.querySelector('.header-inner').scrollWidth - document.querySelector('.header-inner').clientWidth);
+  const mobile = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 1 });
+  const mobilePage = await mobile.newPage();
+  mobilePage.on('pageerror', (err) => console.error('MOBILE PAGE ERROR:', err.message));
+  mobilePage.on('console', (msg) => { if (msg.type() === 'error') console.error('MOBILE CONSOLE ERROR:', msg.text()); });
+  await mobilePage.goto(`${base}/#/`, { waitUntil: 'networkidle', timeout: 15000 });
+  await mobilePage.locator('.home-hero').waitFor({ state: 'visible', timeout: 7000 });
+  const headerOverflow = await mobilePage.evaluate(() => document.querySelector('.header-inner').scrollWidth - document.querySelector('.header-inner').clientWidth);
   if (headerOverflow > 1) throw new Error(`mobile header overflow ${headerOverflow}px`);
-  await page.screenshot({ path: 'tmp-launch-polish-review/home-mobile.jpg', type: 'jpeg', quality: 88, fullPage: false });
-  await page.evaluate(() => { window.location.hash = '#/not-a-real-route'; });
-  await page.locator('.launch-state.is-not-found').waitFor({ state: 'visible', timeout: 3000 });
-  await page.screenshot({ path: 'tmp-launch-polish-review/not-found-mobile.jpg', type: 'jpeg', quality: 88, fullPage: false });
-  await context.close();
+  await mobilePage.screenshot({ path: 'tmp-launch-polish-review/home-mobile.jpg', type: 'jpeg', quality: 88, fullPage: false });
+  await mobilePage.evaluate(() => { window.location.hash = '#/not-a-real-route'; });
+  await mobilePage.locator('.launch-state.is-not-found').waitFor({ state: 'visible', timeout: 3000 });
+  await mobilePage.screenshot({ path: 'tmp-launch-polish-review/not-found-mobile.jpg', type: 'jpeg', quality: 88, fullPage: false });
+  await mobile.close();
 } finally {
   await browser.close();
   await new Promise((resolve) => server.close(resolve));
