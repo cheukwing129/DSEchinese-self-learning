@@ -258,7 +258,7 @@ const ContentRenderer = (() => {
       .map(
         (p) => `
         <div class="card">
-          <div class="section-title"><span class="seal">${esc(p.label || p.id)}</span>${esc(paragraphLabel(p))}</div>
+          <div class="section-title"><span class="seal">${esc(p.id)}</span>${esc(paragraphLabel(p))}</div>
           <p class="text-passage" style="font-size:16px;">${esc(p.text)}</p>
           <div class="para-summary"><strong>段意：</strong>${esc(p.summary)}</div>
         </div>`
