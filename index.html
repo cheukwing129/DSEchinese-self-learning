@@ -4,30 +4,58 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>文脈 · DSE 經典自學</title>
-  <meta name="description" content="文脈是為 DSE 中文十二篇指定文言經典而設的自學平台，從原文、字詞與文意，逐步進入賞析、背誦、作答與錯題修復。" />
-  <link rel="stylesheet" href="/assets/build/style.e118f004b706.css" />
+  <meta name="description" content="文脈是為 DSE 中文指定文言經典而設的自學平台，從原文、字詞與文意，逐步進入賞析、背誦、作答與錯題修復。" />
+  <meta name="application-name" content="文脈" />
+  <meta name="theme-color" content="#174940" />
+  <meta name="color-scheme" content="light" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://dsechinese-self-learning.pages.dev/" />
+  <link rel="icon" type="image/svg+xml" href="/assets/brand/wenmai-mark.svg" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="文脈" />
+  <meta property="og:title" content="文脈 · DSE 經典自學" />
+  <meta property="og:description" content="從原文、字詞與文意，逐步進入賞析、背誦、作答與錯題修復。" />
+  <meta property="og:url" content="https://dsechinese-self-learning.pages.dev/" />
+  <meta property="og:image" content="https://dsechinese-self-learning.pages.dev/assets/brand/wenmai-share.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="文脈 · DSE 經典自學" />
+  <meta name="twitter:description" content="讀懂經典，把每一步變成自己的能力。" />
+  <meta name="twitter:image" content="https://dsechinese-self-learning.pages.dev/assets/brand/wenmai-share.png" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"文脈","url":"https://dsechinese-self-learning.pages.dev/","description":"DSE 中文指定文言經典自學平台","applicationCategory":"EducationalApplication","inLanguage":"zh-Hant-HK","isAccessibleForFree":true}</script>
+  <link rel="stylesheet" href="/assets/build/style.52ad65fe0d7d.css" />
   <script defer src="/assets/build/progress.5c69413fd6a5.js"></script>
   <script defer src="/assets/build/router.9119a4cb77c2.js"></script>
-  <script defer src="/assets/build/app.c4340619d044.js"></script>
+  <script defer src="/assets/build/app.f58baa3a9c75.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#app-main">跳到主要內容</a>
   <header id="app-header">
     <div class="header-inner">
       <a class="brand" id="brand-home-link" href="#/" aria-label="返回文脈首頁">
-        <span class="brand-mark" aria-hidden="true">典</span>
-        <span class="brand-copy">文脈</span>
+        <img class="brand-mark-image" src="/assets/brand/wenmai-mark.svg" alt="" width="36" height="36" />
+        <span class="brand-copy-group">
+          <span class="brand-word">文脈</span>
+          <span class="brand-tagline">DSE CLASSICS</span>
+        </span>
       </a>
       <nav class="header-nav" aria-label="主要導覽">
-        <a class="header-nav-link" href="#/">篇章</a>
-        <a class="header-nav-link" href="#/overview">學習總覽</a>
+        <a class="header-nav-link" data-nav="chapters" href="#/">篇章</a>
+        <a class="header-nav-link" data-nav="overview" href="#/overview">總覽</a>
       </nav>
       <div class="header-crumb" id="header-crumb" aria-live="polite"></div>
     </div>
   </header>
 
-  <main id="app-main">
-    <div class="loading-state">正在載入…</div>
+  <main id="app-main" tabindex="-1">
+    <div class="loading-state launch-loading" role="status" aria-live="polite">
+      <span class="loading-mark" aria-hidden="true"><span>文</span></span>
+      <div><strong>正在整理學習內容</strong><small>文脈會在需要時才載入這一頁的資料。</small></div>
+    </div>
   </main>
+  <noscript><div class="noscript-state">文脈需要 JavaScript 才能載入篇章、練習與本機學習紀錄。</div></noscript>
 
   <!-- ContentRenderer / QuestionEngine / MemorisationEngine 會按目前路由需要才載入。 -->
 </body>

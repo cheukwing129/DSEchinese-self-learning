@@ -109,6 +109,17 @@ try {
   check(await page.locator(".map-card").count() === 16, "production home should render 16 curriculum cards");
   const homeOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
   check(homeOverflow <= 1, `production mobile home has horizontal overflow of ${homeOverflow}px`);
+  const brandAssets = await page.evaluate(async () => {
+    const [mark, share] = await Promise.all([fetch('/assets/brand/wenmai-mark.svg'), fetch('/assets/brand/wenmai-share.png')]);
+    return { mark: mark.ok, share: share.ok, og: document.querySelector('meta[property="og:image"]')?.content || "" };
+  });
+  check(brandAssets.mark, "production Wenmai favicon/mark should be available");
+  check(brandAssets.share, "production Wenmai social share card should be available");
+  check(brandAssets.og.endsWith('/assets/brand/wenmai-share.png'), "production Open Graph image metadata should be current");
+  await page.evaluate(() => { window.location.hash = "#/not-a-real-route"; });
+  await page.locator(".launch-state.is-not-found").waitFor({ state: "visible", timeout: 4000 });
+  await page.evaluate(() => { window.location.hash = "#/"; });
+  await page.locator(".home-hero").waitFor({ state: "visible", timeout: 5000 });
 
   await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/text"; });
   await page.locator(".page-title", { hasText: "原文與誦讀" }).waitFor({ state: "visible", timeout: 10000 });

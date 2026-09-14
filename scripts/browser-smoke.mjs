@@ -160,6 +160,22 @@ try {
 
   await page.reload({ waitUntil: "networkidle", timeout: 10000 });
   await waitForTitle(page, "讀懂經典");
+  check(await page.locator('link[rel="icon"][href="/assets/brand/wenmai-mark.svg"]').count() === 1, "launch shell should expose the Wenmai favicon");
+  const launchMeta = await page.evaluate(() => ({
+    canonical: document.querySelector('link[rel="canonical"]')?.href || "",
+    ogTitle: document.querySelector('meta[property="og:title"]')?.content || "",
+    ogImage: document.querySelector('meta[property="og:image"]')?.content || "",
+    theme: document.querySelector('meta[name="theme-color"]')?.content || "",
+    chapterCurrent: document.querySelector('[data-nav="chapters"]')?.getAttribute('aria-current') || ""
+  }));
+  check(launchMeta.canonical.endsWith('/'), "launch shell should expose a canonical URL");
+  check(launchMeta.ogTitle.includes("文脈"), "Open Graph title should carry the Wenmai brand");
+  check(launchMeta.ogImage.endsWith('/assets/brand/wenmai-share.png'), "Open Graph image should point at the Wenmai share card");
+  check(launchMeta.theme.toLowerCase() === '#174940', "theme-color should match the Wenmai ink green");
+  check(launchMeta.chapterCurrent === 'page', "home route should mark the chapter navigation as current");
+  check(await page.locator('.brand-mark-image').count() === 1, "header should render the Wenmai brand mark");
+  check(await page.evaluate(() => fetch('/assets/brand/wenmai-mark.svg').then((r) => r.ok).catch(() => false)), "Wenmai brand mark asset should be fetchable");
+  check(await page.evaluate(() => fetch('/assets/brand/wenmai-share.png').then((r) => r.ok).catch(() => false)), "Wenmai share image should be fetchable");
   const warm = await navigationMetrics(page);
   const warmVersioned = warm.resources.filter((r) => pathname(r.name).startsWith("/assets/build/"));
   const warmTransferred = warmVersioned.reduce((sum, r) => sum + r.transferSize, 0);
@@ -233,6 +249,15 @@ try {
   await page.evaluate(() => { window.location.hash = "#/overview"; });
   await page.locator(".overview-hero").waitFor({ state: "visible", timeout: 5000 });
   check(await page.locator(".priority-stack").count() === 1, "cross-unit overview should render priority learning actions");
+  check(await page.locator('[data-nav="overview"][aria-current="page"]').count() === 1, "overview route should expose an active header navigation state");
+
+  await page.evaluate(() => { window.location.hash = "#/not-a-real-route"; });
+  await page.locator(".launch-state.is-not-found").waitFor({ state: "visible", timeout: 3000 });
+  check(await page.locator(".launch-state-code", { hasText: "404" }).count() === 1, "unknown routes should render the branded 404 state");
+  await page.evaluate(() => App.renderLoading("測試內容"));
+  check(await page.locator(".launch-loading .loading-mark").count() === 1, "loading state should render the branded loading treatment");
+  await page.evaluate(() => App.renderFatalError("測試錯誤"));
+  check(await page.locator(".launch-state.is-error").count() === 1, "fatal errors should render the branded recovery state");
 
   await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/memorisation"; });
   await waitForTitle(page, "背誦精華");
@@ -245,6 +270,9 @@ try {
   await waitForTitle(page, "讀懂經典");
   const homeOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
   check(homeOverflow <= 1, `mobile home has horizontal overflow of ${homeOverflow}px`);
+  check(await page.locator('.header-nav').count() === 1, "mobile shell should retain compact primary navigation");
+  const headerOverflow = await page.evaluate(() => document.querySelector('.header-inner').scrollWidth - document.querySelector('.header-inner').clientWidth);
+  check(headerOverflow <= 1, `mobile header has horizontal overflow of ${headerOverflow}px`);
   await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/text"; });
   await page.locator(".reader-shell").waitFor({ state: "visible", timeout: 5000 });
   const readerOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
