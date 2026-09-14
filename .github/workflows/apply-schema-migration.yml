@@ -1,0 +1,50 @@
+name: Apply schema migration
+
+on:
+  push:
+    branches:
+      - chore/content-validation-ci
+    paths:
+      - .github/workflows/apply-schema-migration.yml
+      - scripts/fix-known-schema.mjs
+      - data/units/quanxue/question-banks/content.json
+      - data/units/lianpo-linxiangru/question-banks/content.json
+      - data/units/liuguolun/question-banks/content.json
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out migration branch
+        uses: actions/checkout@v4
+        with:
+          ref: chore/content-validation-ci
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Apply known schema fixes
+        run: node scripts/fix-known-schema.mjs
+
+      - name: Commit migrated data
+        run: |
+          if git diff --quiet; then
+            echo "No schema changes required."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            data/units/quanxue/question-banks/content.json \
+            data/units/lianpo-linxiangru/question-banks/content.json \
+            data/units/liuguolun/question-banks/content.json
+          git commit -m "Normalize legacy question schemas"
+          git push origin HEAD:chore/content-validation-ci
