@@ -1,0 +1,46 @@
+name: Apply initial-load performance patch
+
+on:
+  push:
+    branches:
+      - perf/initial-load
+    paths:
+      - scripts/patch-initial-load.py
+      - .github/workflows/apply-initial-load.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: perf/initial-load
+      - name: Apply patch
+        run: python scripts/patch-initial-load.py
+      - name: Check JavaScript syntax
+        run: |
+          for file in js/*.js scripts/*.mjs; do node --check "$file"; done
+      - name: Validate initial-load contract
+        run: node scripts/validate-performance.mjs
+      - name: Validate lazy-loading contract
+        run: node scripts/validate-loading.mjs
+      - name: Guard route-only UI loading
+        run: |
+          ! grep -q 'fonts.googleapis.com' index.html
+          ! grep -q 'js/question-engine.js' index.html
+          ! grep -q 'js/content-renderer.js' index.html
+          ! grep -q 'js/memorisation-engine.js' index.html
+          grep -q 'function loadScriptCached' js/app.js
+          grep -q 'uiModules: \["questions"\]' js/app.js
+          grep -q 'uiModules: \["content"\]' js/app.js
+      - name: Commit patched files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html css/style.css js/app.js _headers scripts/validate-performance.mjs .github/workflows/validate-content.yml
+          git commit -m "Reduce initial load and lazy-load route UI engines"
+          git push
