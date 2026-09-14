@@ -28,14 +28,23 @@ try {
   fs.mkdirSync("tmp-launch-polish-review", { recursive: true });
   const context = await browser.newContext({ viewport: { width: 1440, height: 1000 }, deviceScaleFactor: 1 });
   const page = await context.newPage();
-  await page.goto(base, { waitUntil: "networkidle", timeout: 15000 });
-  await page.locator('.home-hero').waitFor({ state: 'visible', timeout: 5000 });
+  page.on('pageerror', (err) => console.error('PAGE ERROR:', err.message));
+  page.on('console', (msg) => { if (msg.type() === 'error') console.error('CONSOLE ERROR:', msg.text()); });
+
+  await page.goto(`${base}/#/`, { waitUntil: "networkidle", timeout: 15000 });
+  try {
+    await page.locator('.home-hero').waitFor({ state: 'visible', timeout: 7000 });
+  } catch (err) {
+    console.error('MAIN TEXT:', (await page.locator('#app-main').innerText()).slice(0, 1200));
+    throw err;
+  }
   await page.screenshot({ path: 'tmp-launch-polish-review/home-desktop.jpg', type: 'jpeg', quality: 88, fullPage: false });
   await page.evaluate(() => App.renderFatalError('示範：暫時未能載入這一頁的資料。'));
   await page.screenshot({ path: 'tmp-launch-polish-review/error-desktop.jpg', type: 'jpeg', quality: 88, fullPage: false });
+
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.evaluate(() => { window.location.hash = '#/'; });
-  await page.locator('.home-hero').waitFor({ state: 'visible', timeout: 5000 });
+  await page.goto(`${base}/#/`, { waitUntil: 'networkidle', timeout: 15000 });
+  await page.locator('.home-hero').waitFor({ state: 'visible', timeout: 7000 });
   const headerOverflow = await page.evaluate(() => document.querySelector('.header-inner').scrollWidth - document.querySelector('.header-inner').clientWidth);
   if (headerOverflow > 1) throw new Error(`mobile header overflow ${headerOverflow}px`);
   await page.screenshot({ path: 'tmp-launch-polish-review/home-mobile.jpg', type: 'jpeg', quality: 88, fullPage: false });
