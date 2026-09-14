@@ -1,0 +1,48 @@
+name: Polish content study UI 2.0
+
+on:
+  push:
+    branches:
+      - feat/content-study-ui-2
+    paths:
+      - scripts/polish-content-study-ui2.py
+      - .github/workflows/polish-content-study-ui2.yml
+
+permissions:
+  contents: write
+
+jobs:
+  polish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: feat/content-study-ui-2
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+      - name: Apply content study polish
+        run: python3 scripts/polish-content-study-ui2.py
+      - name: Rebuild fingerprinted assets
+        run: node scripts/build-assets.mjs --write
+      - name: Validate affected contracts
+        run: |
+          node --check js/content-renderer.js
+          node --check scripts/browser-smoke.mjs
+          node scripts/build-assets.mjs --check
+          node scripts/validate-accessibility.mjs
+          node scripts/validate-loading.mjs
+          node scripts/validate-learning-support.mjs
+          node scripts/validate-performance.mjs
+      - name: Commit polish
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/content-renderer.js css/style.css scripts/browser-smoke.mjs assets/build index.html _headers
+          if git diff --cached --quiet; then
+            echo "No product changes to commit"
+          else
+            git commit -m "Polish large word-bank browsing"
+            git push origin HEAD:feat/content-study-ui-2
+          fi
