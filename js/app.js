@@ -152,6 +152,25 @@ const App = (() => {
     return map[icon] || "頁";
   }
 
+  function learningPathLabel(path) {
+    if (!path) return "篇章學習";
+    if (path.includes("/words/quiz")) return "字詞與虛詞題庫";
+    if (path.includes("/comprehension/quiz")) return "內容理解題庫";
+    if (path.includes("/analysis/quiz")) return "結構與手法題庫";
+    if (path.includes("/theme/quiz")) return "主旨與思考題庫";
+    if (path.includes("/cross-text/quiz")) return "跨篇比較題";
+    if (path.endsWith("/text")) return "原文與誦讀";
+    if (path.endsWith("/words")) return "字詞與句式";
+    if (path.endsWith("/comprehension")) return "疏通文意";
+    if (path.endsWith("/analysis")) return "結構與鑒賞";
+    if (path.endsWith("/theme")) return "主旨與思考";
+    if (path.endsWith("/memorisation")) return "背誦精華";
+    if (path.endsWith("/challenge")) return "核心篇章挑戰";
+    if (path.endsWith("/progress")) return "我的掌握";
+    if (path.endsWith("/cross-text")) return "跨篇比較與進階題";
+    return "篇章學習";
+  }
+
   // ---------- 路由頁面 ----------
   async function pageHome() {
     setCrumb("");
@@ -163,6 +182,16 @@ const App = (() => {
       renderFatalError(e.message);
       return;
     }
+    const recent = Progress.latestLearning(curriculum.units);
+    const recentUnit = recent ? curriculum.units.find((u) => u.id === recent.unitId) : null;
+    const continueCard = recent && recentUnit ? `
+      <div class="card" style="margin-bottom:24px;">
+        <div class="section-title"><span class="seal">續</span>繼續上次學習</div>
+        <p style="margin:0 0 6px; font-weight:700;">《${escapeHTML(recentUnit.title)}》 · ${escapeHTML(learningPathLabel(recent.path))}</p>
+        <p style="margin:0 0 14px; color:var(--color-ink-soft); font-size:13px;">根據這部裝置最近的學習位置或活動紀錄。</p>
+        <a class="btn btn-primary" href="#${escapeHTML(recent.path)}">繼續學習 →</a>
+      </div>` : "";
+
     const cards = curriculum.units
       .map((u) => {
         const isAvailable = u.status === "available";
@@ -184,6 +213,7 @@ const App = (() => {
     mount(`
       <h1 class="page-title">十二篇指定文言經典 · 自學地圖</h1>
       <p class="page-subtitle">診斷弱項 → 微型學習 → 練習回饋 → 錯題修復 → 作品／進度累積</p>
+      ${continueCard}
       <div class="map-grid">${cards}</div>
     `);
   }
@@ -202,6 +232,8 @@ const App = (() => {
       return;
     }
     setCrumb(`《${bundle.unit.title}》`);
+    const currentPath = Router.currentPath();
+    if (currentPath !== `/unit/${unitId}`) Progress.recordLearningVisit(unitId, currentPath);
     onReady(bundle);
   }
 

@@ -44,6 +44,7 @@ const ContentRenderer = (() => {
   function renderUnitHome(bundle, unitId) {
     const u = bundle.unit;
     const background = bundle.background || {};
+    const nextStep = Progress.recommendNextStep(unitId);
     const backgroundCards = [
       backgroundCardHTML(background.author_intro, "作者簡介"),
       backgroundCardHTML(background.writing_background, "寫作背景")
@@ -73,6 +74,13 @@ const ContentRenderer = (() => {
     App.mount(`
       <h1 class="page-title">《${esc(u.title)}》</h1>
       <p class="page-subtitle">${esc(u.author)} · ${esc(u.dynasty)} · ${esc(u.genre)}</p>
+      <div class="card" style="margin-bottom:24px;">
+        <div class="section-title"><span class="seal">步</span>建議下一步</div>
+        <p style="margin:0 0 8px; font-weight:700;">${esc(nextStep.label)}</p>
+        <p style="margin:0 0 8px; color:var(--color-ink-soft); line-height:1.7;">${esc(nextStep.reason)}</p>
+        <p style="margin:0 0 14px; color:var(--color-ink-faint); font-size:12px;">建議只根據這部裝置的作答、背誦、自評與反思紀錄，不等同系統判定你已掌握前一階段。</p>
+        <a class="btn btn-primary" href="#${esc(nextStep.path)}">${esc(nextStep.label)} →</a>
+      </div>
       ${backgroundCards ? `
         <div class="section-title"><span class="seal">知</span>作者與背景</div>
         <div class="module-grid" style="margin-bottom:24px;">${backgroundCards}</div>
