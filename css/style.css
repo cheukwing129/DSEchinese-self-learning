@@ -27,10 +27,10 @@
 --color-reader-orange: #FB9100; /* Reader Orange：極少量的徽章色 */
 --color-true-black: #000000;
 
-/* 字體：Charter 襯線體處理標題／顯示文字，Mulish 人文無襯線體處理其餘一切 */
---font-display: "Charter", "Source Serif Pro", "Noto Serif TC", "Songti TC", serif;
---font-body: "Mulish", "Inter", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
---font-data: "Mulish", "Noto Sans TC", monospace;
+/* 字體：優先使用系統內建中西文字體，避免首屏依賴第三方字體網絡請求。 */
+--font-display: "Charter", "Iowan Old Style", "Palatino Linotype", "Songti TC", "Noto Serif TC", "PMingLiU", serif;
+--font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+--font-data: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
 
 /* 圓角 / 陰影：印刷卡片感，幾乎無陰影，改用 hairline 邊框分層 */
 --radius-lg: 16px;
