@@ -143,6 +143,10 @@ for (const entry of entries) {
         }
       }
 
+      if (q.question_type === "single_choice" && typeof q.note === "string" && /(答案|正確答案).{0,12}(可能|可以|可).{0,8}(不止|多於|超過)一個|答案可能不止一個/.test(q.note)) {
+        fail(`${location}: single_choice note admits that more than one answer may be valid; rewrite the item or use multi_select`);
+      }
+
       if (q.question_type === "multi_select") {
         if (!Array.isArray(q.answer) || q.answer.length === 0) fail(`${location}: multi_select must have at least one correct answer`);
         if (Array.isArray(q.answer) && new Set(q.answer).size !== q.answer.length) fail(`${location}: multi_select answer contains duplicate keys`);
