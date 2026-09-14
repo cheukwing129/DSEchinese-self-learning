@@ -30,6 +30,7 @@ jobs:
       - name: Capture launch polish frames
         run: node scripts/launch-polish-preview.mjs
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: launch-polish-review
           path: |
