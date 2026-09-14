@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   validate:
-    name: JavaScript, content, accessibility, loading, learning flows, route safety and performance
+    name: JavaScript, content, accessibility, loading, learning flows, route safety, fingerprints and performance
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
@@ -26,7 +26,7 @@ jobs:
 
       - name: Check JavaScript syntax
         run: |
-          for file in js/*.js scripts/*.mjs; do
+          for file in js/*.js assets/build/*.js scripts/*.mjs; do
             node --check "$file"
           done
 
@@ -56,6 +56,9 @@ jobs:
 
       - name: Validate route race protection
         run: node scripts/validate-route-race.mjs
+
+      - name: Validate fingerprinted asset build
+        run: node scripts/build-assets.mjs --check
 
       - name: Validate initial-load performance contract
         run: node scripts/validate-performance.mjs

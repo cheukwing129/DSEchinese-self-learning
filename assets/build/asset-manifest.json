@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "hashAlgorithm": "sha256-12",
+  "assets": {
+    "style": {
+      "source": "css/style.css",
+      "path": "/assets/build/style.2ea9b73a1950.css",
+      "hash": "2ea9b73a1950",
+      "sha256": "2ea9b73a19503b8b424b05fd5229e184d13d198e82784648e492e0b917a63498"
+    },
+    "progress": {
+      "source": "js/progress.js",
+      "path": "/assets/build/progress.5c69413fd6a5.js",
+      "hash": "5c69413fd6a5",
+      "sha256": "5c69413fd6a5bd5b4cad906d1bd9ccebec2ed82a6aca19be7a35003fc20b7732"
+    },
+    "router": {
+      "source": "js/router.js",
+      "path": "/assets/build/router.9119a4cb77c2.js",
+      "hash": "9119a4cb77c2",
+      "sha256": "9119a4cb77c259af95ad18261f2cde3ea7a5c980c560f27c883a36c6233b1e20"
+    },
+    "app": {
+      "source": "js/app.js",
+      "path": "/assets/build/app.6a5a750ebce9.js",
+      "hash": "6a5a750ebce9",
+      "sha256": "6a5a750ebce952a4ca520083498d54c810d6f4ac3b84aa7a6934cd1105feaca6"
+    },
+    "content": {
+      "source": "js/content-renderer.js",
+      "path": "/assets/build/content-renderer.811d66baa700.js",
+      "hash": "811d66baa700",
+      "sha256": "811d66baa70043b372bb80cef9334b9cc997870d3195b0397ce86d898e3bede8"
+    },
+    "questions": {
+      "source": "js/question-engine.js",
+      "path": "/assets/build/question-engine.f3f31972f3de.js",
+      "hash": "f3f31972f3de",
+      "sha256": "f3f31972f3de106c7266685d58b60cadc0b3c8b4eb0add350b30662617759e73"
+    },
+    "memorisation": {
+      "source": "js/memorisation-engine.js",
+      "path": "/assets/build/memorisation-engine.dab19bb23e8e.js",
+      "hash": "dab19bb23e8e",
+      "sha256": "dab19bb23e8e916c804a99d315b14278ba29538790be58754715d5e6f75d4a9d"
+    }
+  }
+}
