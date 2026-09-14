@@ -1,0 +1,40 @@
+name: Apply cross-unit overview patch
+
+on:
+  push:
+    branches:
+      - feat/cross-unit-overview
+    paths:
+      - scripts/patch-cross-unit-overview.py
+      - .github/workflows/apply-cross-unit-overview.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/cross-unit-overview
+      - name: Apply patch
+        run: python scripts/patch-cross-unit-overview.py
+      - name: Check JavaScript syntax
+        run: |
+          for file in js/*.js scripts/*.mjs; do node --check "$file"; done
+      - name: Guard cross-unit overview integration
+        run: |
+          grep -q 'function crossUnitOverview' js/progress.js
+          grep -q '跨篇章學習總覽' js/app.js
+          grep -q 'function renderCrossUnitOverview' js/content-renderer.js
+          grep -q 'Router.register("/overview", pageOverview)' js/app.js
+          grep -q '不產生虛假的總掌握百分比' js/content-renderer.js
+      - name: Commit patched files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/progress.js js/app.js js/content-renderer.js scripts/validate-loading.mjs
+          git commit -m "Add cross-unit learning overview"
+          git push
