@@ -32,7 +32,7 @@ const ContentRenderer = (() => {
       analysis: "結構圖、景情配對、手法賞析",
       theme: "主旨解說、生活反思、開放題",
       memorisation: "句群背誦、遮字、重組",
-      challenge: "整合各分類抽題，附錯因與補救",
+      challenge: "整合各分類抽題，標示需補強範疇與補救",
       progress: "能力分項、錯題、背誦重溫、反思"
     };
     const cards = u.modules
