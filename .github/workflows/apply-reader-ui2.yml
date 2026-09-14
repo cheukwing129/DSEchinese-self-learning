@@ -1,0 +1,46 @@
+name: Apply reader UI 2.0
+
+on:
+  push:
+    branches: [feat/reader-ui-2]
+    paths:
+      - scripts/patch-reader-ui2.py
+      - .github/workflows/apply-reader-ui2.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: feat/reader-ui-2
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Apply reader UI patch
+        run: python scripts/patch-reader-ui2.py
+      - name: Rebuild fingerprinted assets
+        run: node scripts/build-assets.mjs --write
+      - name: Validate reader and core contracts
+        run: |
+          node --check js/content-renderer.js
+          node scripts/validate-accessibility.mjs
+          node scripts/validate-loading.mjs
+          node scripts/validate-learning-support.mjs
+          node scripts/validate-learning-continuity.mjs
+          node scripts/validate-wrong-answer-retry.mjs
+          node scripts/validate-cross-unit-overview.mjs
+          node scripts/validate-cross-unit-targeted-retry.mjs
+          node scripts/validate-performance.mjs
+          node scripts/build-assets.mjs --check
+      - name: Commit product changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/content-renderer.js css/style.css scripts/browser-smoke.mjs scripts/production-smoke.mjs assets/build index.html _headers
+          git diff --cached --quiet && exit 0
+          git commit -m "Redesign original-text reading workspace"
+          git push origin HEAD:feat/reader-ui-2
