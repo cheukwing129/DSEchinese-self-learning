@@ -4,9 +4,9 @@
   "assets": {
     "style": {
       "source": "css/style.css",
-      "path": "/assets/build/style.d52bd6484e1c.css",
-      "hash": "d52bd6484e1c",
-      "sha256": "d52bd6484e1cb462e2f3d2104aa1b52c5da6060afb8dd9894c94fed1d3e24054"
+      "path": "/assets/build/style.b0a8b0c7b918.css",
+      "hash": "b0a8b0c7b918",
+      "sha256": "b0a8b0c7b9187b3def675272a033526c681f9a4b2a3ec908a547a9acef69f868"
     },
     "progress": {
       "source": "js/progress.js",
