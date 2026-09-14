@@ -317,7 +317,6 @@ const App = (() => {
 
   function init() {
     registerRoutes();
-    document.getElementById("brand-home-link").addEventListener("click", () => Router.navigate("/"));
     Router.start();
   }
 

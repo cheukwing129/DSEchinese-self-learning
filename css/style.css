@@ -442,3 +442,68 @@ details.card summary::-webkit-details-marker { display: none; }
 @media (prefers-reduced-motion: reduce) {
 * { transition: none !important; animation: none !important; }
 }
+
+
+/* ---------- Accessibility / keyboard interaction ---------- */
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+button.option-item {
+  width: 100%;
+  min-height: 44px;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+}
+
+button.option-item:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+.text-passage button.term {
+  appearance: none;
+  display: inline;
+  margin: 0;
+  border: 0;
+  font: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+.annotation-popover { position: fixed; }
+.annotation-close {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 1;
+}
+.annotation-close:hover { background: rgba(255,255,255,0.12); }
+
+.reorder-chip[data-chip] {
+  min-height: 44px;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.para-nav button,
+.tf-btn,
+.tf-btn-single,
+.match-multi-btn {
+  min-height: 44px;
+}
+
+@media (pointer: coarse) {
+  .btn { min-height: 44px; }
+}

@@ -134,11 +134,11 @@ const MemorisationEngine = (() => {
         .map((ch, i) => {
           if (!st.blanks.includes(i)) return esc(ch);
           if (st.revealed) return `<span style="color:var(--color-accent); font-weight:700;">${esc(ch)}</span>`;
-          return `<input type="text" maxlength="1" data-blank-idx="${i}" class="blank-token" style="width:1.4em; border:none; border-bottom:2px solid var(--color-accent); text-align:center; font-family:var(--font-display); font-size:19px;" value="${esc(st.inputs[i] || "")}" />`;
+          return `<input type="text" maxlength="1" data-blank-idx="${i}" aria-label="第 ${st.blanks.indexOf(i) + 1} 個被遮蓋的字" class="blank-token" style="width:1.4em; border:none; border-bottom:2px solid var(--color-accent); text-align:center; font-family:var(--font-display); font-size:19px;" value="${esc(st.inputs[i] || "")}" />`;
         })
         .join("");
       const resultHTML = st.result
-        ? `<div class="reveal-panel ${st.result.correct === st.result.total ? "" : "is-incorrect"}" style="margin-top:14px;">
+        ? `<div id="cloze-result" class="reveal-panel ${st.result.correct === st.result.total ? "" : "is-incorrect"}" role="status" aria-live="polite" tabindex="-1" style="margin-top:14px;">
             <div class="reveal-row"><b>${st.result.correct === st.result.total ? "✓ 全部填對" : `本次填對 ${st.result.correct}/${st.result.total} 字`}</b></div>
             <div class="reveal-explanation">本次紀錄已儲存；「我的掌握」會保留此句群的遮字最高正確率。</div>
           </div>`
@@ -170,6 +170,8 @@ const MemorisationEngine = (() => {
           st.revealed = true;
           Progress.recordMemorisationAttempt(unitId, group.id, "cloze", st.result);
           paint();
+          const result = document.getElementById("cloze-result");
+          if (result) result.focus();
         });
       }
       document.getElementById("cloze-retry-btn").addEventListener("click", () => {
@@ -206,7 +208,7 @@ const MemorisationEngine = (() => {
       const remaining = st.chips.filter((c) => !st.placed.includes(c.id));
       const resultHTML = st.result === null
         ? ""
-        : `<div class="reveal-panel ${st.result ? "" : "is-incorrect"}" style="margin-top:14px;">
+        : `<div id="reorder-result" class="reveal-panel ${st.result ? "" : "is-incorrect"}" role="status" aria-live="polite" tabindex="-1" style="margin-top:14px;">
             <div class="reveal-row"><b>${st.result ? "✓ 排序正確！" : "✗ 排序與原文不符"}</b></div>
             ${!st.result ? `<div class="reveal-explanation">原文：${esc(group.text)}</div>` : ""}
             <div class="reveal-explanation">本次紀錄已儲存；答錯可按「重新排列」再試。</div>
@@ -215,12 +217,12 @@ const MemorisationEngine = (() => {
       el.innerHTML = `
         ${groupSelector()}
         <div class="card">
-          <p style="font-size:12px; color:var(--color-ink-soft); margin:0 0 10px;">第${group.paragraph}段 · ${esc(group.title)}（依次點擊句子片段，排出正確次序）</p>
+          <p style="font-size:12px; color:var(--color-ink-soft); margin:0 0 10px;">第${group.paragraph}段 · ${esc(group.title)}（依次選取句子片段，排出正確次序）</p>
           <div class="reorder-slots" id="reorder-slots">
             ${st.placed.map((id) => `<span class="reorder-chip is-placed">${esc(st.chips.find((c) => c.id === id).text)}</span>`).join("")}
           </div>
           <div class="reorder-list" id="reorder-pool">
-            ${remaining.map((c) => `<span class="reorder-chip" data-chip="${c.id}">${esc(c.text)}</span>`).join("")}
+            ${remaining.map((c) => `<button type="button" class="reorder-chip" data-chip="${c.id}" aria-label="加入排序：${esc(c.text)}">${esc(c.text)}</button>`).join("")}
           </div>
           <div class="btn-row">
             <button class="btn btn-secondary" id="reorder-reset-btn">重新排列</button>
@@ -237,9 +239,13 @@ const MemorisationEngine = (() => {
             st.result = orderedText === group.text;
             Progress.recordMemorisationAttempt(unitId, group.id, "reorder", { isCorrect: st.result });
             paint();
+            const result = document.getElementById("reorder-result");
+            if (result) result.focus();
             return;
           }
           renderReorder(el);
+          const nextChip = document.querySelector("[data-chip]");
+          if (nextChip) nextChip.focus();
         });
       });
       document.getElementById("reorder-reset-btn").addEventListener("click", () => {
