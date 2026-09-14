@@ -1,0 +1,55 @@
+name: Finalize UI refinement
+
+on:
+  push:
+    branches:
+      - feat/ui-refinement
+    paths:
+      - scripts/finalize-ui-refinement.py
+      - .github/workflows/finalize-ui-refinement.yml
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: feat/ui-refinement
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Apply compatibility patch
+        run: python3 scripts/finalize-ui-refinement.py
+      - name: Rebuild fingerprinted assets
+        run: node scripts/build-assets.mjs --write
+      - name: Validate application contracts
+        run: |
+          node --check js/app.js
+          node --check js/content-renderer.js
+          node --check scripts/browser-smoke.mjs
+          for f in assets/build/*.js; do node --check "$f"; done
+          node scripts/validate-data.mjs
+          node scripts/validate-accessibility.mjs
+          node scripts/validate-loading.mjs
+          node scripts/validate-learning-support.mjs
+          node scripts/validate-learning-continuity.mjs
+          node scripts/validate-wrong-answer-retry.mjs
+          node scripts/validate-cross-unit-overview.mjs
+          node scripts/validate-cross-unit-targeted-retry.mjs
+          node scripts/validate-route-race.mjs
+          node scripts/build-assets.mjs --check
+          node scripts/validate-performance.mjs
+      - name: Commit final UI changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/app.js js/content-renderer.js scripts/browser-smoke.mjs index.html _headers assets/build
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Keep browser smoke aligned with refined UI"
+            git push origin HEAD:feat/ui-refinement
+          fi
