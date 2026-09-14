@@ -138,7 +138,7 @@ try {
 
   const coldStart = Date.now();
   await page.goto(`${baseURL}/#/`, { waitUntil: "networkidle", timeout: 10000 });
-  await waitForTitle(page, "十二篇指定文言經典");
+  await waitForTitle(page, "讀懂經典");
   const homeReadyMs = Date.now() - coldStart;
   const mapCount = await page.locator(".map-card").count();
   check(mapCount === 16, `home should render 16 curriculum cards, got ${mapCount}`);
@@ -159,7 +159,7 @@ try {
   check(homeReadyMs <= 4000, `home did not become visibly ready within 4000ms (took ${homeReadyMs}ms)`);
 
   await page.reload({ waitUntil: "networkidle", timeout: 10000 });
-  await waitForTitle(page, "十二篇指定文言經典");
+  await waitForTitle(page, "讀懂經典");
   const warm = await navigationMetrics(page);
   const warmVersioned = warm.resources.filter((r) => pathname(r.name).startsWith("/assets/build/"));
   const warmTransferred = warmVersioned.reduce((sum, r) => sum + r.transferSize, 0);
@@ -197,7 +197,7 @@ try {
 
   await page.setViewportSize({ width: 390, height: 844 });
   await page.evaluate(() => { window.location.hash = "#/"; });
-  await waitForTitle(page, "十二篇指定文言經典");
+  await waitForTitle(page, "讀懂經典");
   const homeOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
   check(homeOverflow <= 1, `mobile home has horizontal overflow of ${homeOverflow}px`);
   await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/words/quiz"; });

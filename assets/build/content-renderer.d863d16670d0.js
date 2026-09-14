@@ -169,7 +169,7 @@ const ContentRenderer = (() => {
     App.mount(`
       <header class="unit-hero">
         <p class="unit-kicker">${esc(u.dynasty)} · ${esc(u.genre)}</p>
-        <h1 class="unit-title">《${esc(u.title)}》</h1>
+        <h1 class="page-title unit-title">《${esc(u.title)}》</h1>
         <p class="unit-author">${esc(u.author)}</p>
       </header>
 

@@ -8,7 +8,7 @@ const App = (() => {
 
   const cache = { curriculum: null, json: {}, scripts: {} };
   const UI_MODULES = Object.freeze({
-    content: "/assets/build/content-renderer.7ee22dd089b3.js",
+    content: "/assets/build/content-renderer.d863d16670d0.js",
     questions: "/assets/build/question-engine.f3f31972f3de.js",
     memorisation: "/assets/build/memorisation-engine.dab19bb23e8e.js"
   });
@@ -274,7 +274,7 @@ const App = (() => {
     mount(`
       <section class="home-hero" aria-labelledby="home-title">
         <p class="home-kicker">DSE 中文 · 指定文言經典</p>
-        <h1 id="home-title" class="home-title">讀懂經典，<span>一步一步變成自己的能力。</span></h1>
+        <h1 id="home-title" class="page-title home-title">讀懂經典，<span>一步一步變成自己的能力。</span></h1>
         <p class="home-lead">從原文、字詞與文意出發，再進入賞析、背誦、作答與錯題修復。每次只做眼前最值得做的一步。</p>
       </section>
 
