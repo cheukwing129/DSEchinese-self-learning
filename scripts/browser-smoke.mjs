@@ -188,6 +188,33 @@ try {
   check(await term.evaluate((el) => document.activeElement === el), "closing an annotation with Escape should restore focus to the triggering term");
   check(requestPaths.filter((p) => /\/content-renderer\.[0-9a-f]{12}\.js$/.test(p)).length === 1, "content renderer should stay single-loaded across content routes");
 
+  await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/words"; });
+  await waitForTitle(page, "字詞與句式");
+  check(await page.locator(".study-page-shell.words-study").count() === 1, "words route should render the shared study workspace");
+  check(await page.locator("[data-word-card]").count() > 10, "words route should render the annotation bank as study cards");
+  check(await page.locator("[data-word-card]:visible").count() === 12, "large word banks should initially show a focused set of twelve cards");
+  await page.locator("#word-expand-btn").click();
+  check(await page.locator("[data-word-card]:visible").count() > 12, "word bank expand control should reveal the remaining cards");
+  await page.locator("#word-expand-btn").click();
+  await page.locator("#word-filter").fill("謫守");
+  check(await page.locator("[data-word-card]:visible").count() >= 1, "word search should filter the visible annotation cards");
+  await page.locator("#word-filter").fill("");
+
+  await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/comprehension"; });
+  await waitForTitle(page, "疏通文意");
+  check(await page.locator(".comprehension-sequence").count() === 1, "comprehension route should render the sequence workspace");
+  check(await page.locator(".comprehension-step").count() === 5, "Yueyang comprehension should render five understanding steps");
+
+  await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/analysis"; });
+  await waitForTitle(page, "結構與鑒賞");
+  check(await page.locator(".analysis-flow-node").count() >= 5, "analysis route should render the structural flow");
+  check(await page.locator(".analysis-compare-card").count() >= 1, "analysis route should render comparison evidence when available");
+
+  await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/theme"; });
+  await waitForTitle(page, "主旨與思考");
+  check(await page.locator(".theme-core-panel").count() === 1, "theme route should render the core-idea panel");
+  check(await page.locator("#theme-reflection").count() === 1, "theme route should preserve the personal reflection editor");
+
   await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/words/quiz"; });
   await page.locator(".q-stem").first().waitFor({ state: "visible", timeout: 5000 });
   check(requestPaths.filter((p) => /\/question-engine\.[0-9a-f]{12}\.js$/.test(p)).length === 1, "question engine should load exactly once when first entering a quiz route");
@@ -222,6 +249,18 @@ try {
   await page.locator(".reader-shell").waitFor({ state: "visible", timeout: 5000 });
   const readerOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
   check(readerOverflow <= 1, `mobile reader has horizontal overflow of ${readerOverflow}px`);
+  const contentStudyRoutes = [
+    ["#/unit/yueyanglouji/words", ".words-study", "words"],
+    ["#/unit/yueyanglouji/comprehension", ".comprehension-study", "comprehension"],
+    ["#/unit/yueyanglouji/analysis", ".analysis-study", "analysis"],
+    ["#/unit/yueyanglouji/theme", ".theme-study", "theme"]
+  ];
+  for (const [route, selector, label] of contentStudyRoutes) {
+    await page.evaluate((hash) => { window.location.hash = hash; }, route);
+    await page.locator(selector).waitFor({ state: "visible", timeout: 5000 });
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+    check(overflow <= 1, `mobile ${label} study page has horizontal overflow of ${overflow}px`);
+  }
   await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/words/quiz"; });
   await page.locator(".q-stem").first().waitFor({ state: "visible", timeout: 5000 });
   const quizOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
@@ -236,7 +275,7 @@ try {
   check(overviewOverflow <= 1, `mobile cross-unit overview has horizontal overflow of ${overviewOverflow}px`);
 
   console.log(`Browser smoke metrics: home ready ${homeReadyMs}ms; DOMContentLoaded ${Math.round(cold.domContentLoaded || 0)}ms; load ${Math.round(cold.load || 0)}ms; eager JS ${eagerJsEncoded} encoded bytes; warm fingerprinted transfer ${warmTransferred} bytes.`);
-  console.log(`Browser smoke routes passed: home → unit → text annotation → quiz submit → memorisation cloze; mobile overflow checks passed.`);
+  console.log(`Browser smoke routes passed: home → unit → reader → four content-study pages → quiz submit → progress → memorisation; mobile overflow checks passed.`);
 
   await context.close();
 } finally {

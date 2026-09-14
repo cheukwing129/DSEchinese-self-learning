@@ -544,46 +544,181 @@ const ContentRenderer = (() => {
   // ---------- 2. 字詞與句式 ----------
   function renderWordsPage(bundle, unitId) {
     const { text, unit } = bundle;
-    const cards = text.annotations
-      .map(
-        (a) => `
-        <div class="card card-tight">
-          <p style="font-family:var(--font-display); font-weight:700; font-size:16px; margin:0 0 4px;">${esc(a.term)}</p>
-          <p style="margin:0; font-size:14px; color:var(--color-ink-soft);">${esc(a.explanation)}</p>
-        </div>`
-      )
+    const annotations = Array.isArray(text.annotations) ? text.annotations : [];
+    const pronunciationCount = annotations.filter((a) => a.jyutping || a.putonghua).length;
+    const cards = annotations
+      .map((a, index) => {
+        const readings = [
+          a.jyutping ? `<span>粵 ${esc(a.jyutping)}</span>` : "",
+          a.putonghua ? `<span>普 ${esc(a.putonghua)}</span>` : ""
+        ].filter(Boolean).join("");
+        const searchText = [a.term, a.explanation, a.jyutping, a.putonghua].filter(Boolean).join(" ").toLowerCase();
+        return `
+          <article class="word-study-card" data-word-card data-word-index="${index}" data-search="${esc(searchText)}">
+            <div class="word-card-topline">
+              <span class="word-card-index">${String(index + 1).padStart(2, "0")}</span>
+              ${readings ? `<div class="word-reading-chips">${readings}</div>` : ""}
+            </div>
+            <h2>${esc(a.term)}</h2>
+            <p>${esc(a.explanation)}</p>
+          </article>`;
+      })
       .join("");
 
     App.mount(`
-      <h1 class="page-title">字詞與句式</h1>
-      <p class="page-subtitle">教育局核心注釋整理（實詞／虛詞／通假／古今義）</p>
-      <a class="btn btn-primary" href="#/unit/${unitId}/words/quiz">開始字詞與虛詞題庫 →</a>
-      <div style="height:20px;"></div>
-      <div class="module-grid">${cards}</div>
+      <div class="study-page-shell words-study">
+        <section class="study-hero" aria-labelledby="study-page-title">
+          <div class="study-hero-copy">
+            <p class="study-kicker">VOCABULARY · 字詞庫</p>
+            <h1 class="page-title study-title" id="study-page-title">字詞與句式</h1>
+            <p class="study-lead">把注釋整理成可快速掃讀、搜尋的字詞庫。先理解詞義與語境，再用題目檢查是否真的能辨認和運用。</p>
+            <div class="study-meta-row">
+              <span>《${esc(unit.title)}》</span>
+              ${unit.author ? `<span>${esc(unit.author)}</span>` : ""}
+              ${unit.dynasty ? `<span>${esc(unit.dynasty)}</span>` : ""}
+            </div>
+            <a class="btn btn-primary study-hero-action" href="#/unit/${unitId}/words/quiz">開始字詞與虛詞題庫 <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="study-hero-side" aria-hidden="true">
+            <span class="study-hero-mark">字</span>
+            <div class="study-hero-stats">
+              <strong>${annotations.length}</strong><small>個核心注釋</small>
+              <i></i>
+              <strong>${pronunciationCount}</strong><small>項附讀音</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="study-section" aria-labelledby="word-bank-title">
+          <div class="study-section-heading">
+            <div>
+              <p class="section-kicker">快速查閱</p>
+              <h2 id="word-bank-title">核心字詞</h2>
+              <p>輸入字詞、解釋或讀音即可即時篩選；搜尋只影響目前畫面，不會改動學習紀錄。</p>
+            </div>
+            <label class="word-search-shell" for="word-filter">
+              <span aria-hidden="true">⌕</span>
+              <input id="word-filter" type="search" autocomplete="off" placeholder="搜尋字詞或解釋…" />
+            </label>
+          </div>
+          <p class="word-filter-status" id="word-filter-status" aria-live="polite"></p>
+          <div class="word-study-grid" id="word-study-grid">
+            ${cards || `<div class="progress-empty-card"><span aria-hidden="true">字</span><div><strong>本篇暫未提供字詞資料</strong><p>可先閱讀原文或進入其他學習模組。</p></div></div>`}
+          </div>
+          ${annotations.length > 12 ? `<div class="word-grid-footer"><button type="button" class="btn btn-secondary" id="word-expand-btn">查看全部 ${annotations.length} 個字詞</button><small>搜尋時會自動涵蓋全部字詞。</small></div>` : ""}
+        </section>
+
+        <aside class="study-next-panel">
+          <div><p class="section-kicker">下一步</p><h2>看懂不等於記得住</h2><p>完成查閱後，用客觀題檢查字義、虛詞與語境辨識；作答紀錄才會進入「我的掌握」。</p></div>
+          <a class="btn btn-primary" href="#/unit/${unitId}/words/quiz">開始練習 →</a>
+        </aside>
+      </div>
       ${App.footerNav(unitId, unit.title)}
     `);
+
+    const filter = document.getElementById("word-filter");
+    const status = document.getElementById("word-filter-status");
+    const expandButton = document.getElementById("word-expand-btn");
+    let expanded = annotations.length <= 12;
+    const applyWordFilter = () => {
+      if (!filter || !status) return;
+      const query = filter.value.trim().toLowerCase();
+      const searching = Boolean(query);
+      let visible = 0;
+      document.querySelectorAll("[data-word-card]").forEach((card, index) => {
+        const match = !query || String(card.dataset.search || "").includes(query);
+        const show = match && (searching || expanded || index < 12);
+        card.hidden = !show;
+        if (show) visible += 1;
+      });
+      status.textContent = searching
+        ? `找到 ${visible} 個符合項目（搜尋範圍：全部 ${annotations.length} 個字詞）`
+        : expanded
+          ? `顯示全部 ${annotations.length} 個字詞`
+          : `先顯示 12 / ${annotations.length} 個字詞`;
+      if (expandButton) {
+        expandButton.hidden = searching;
+        expandButton.textContent = expanded ? "收起至首 12 個" : `查看全部 ${annotations.length} 個字詞`;
+      }
+    };
+    if (filter && status) {
+      filter.addEventListener("input", applyWordFilter);
+      if (expandButton) {
+        expandButton.addEventListener("click", () => {
+          expanded = !expanded;
+          applyWordFilter();
+          if (!expanded) document.getElementById("word-bank-title")?.scrollIntoView({ block: "start" });
+        });
+      }
+      applyWordFilter();
+    }
   }
 
   // ---------- 3. 疏通文意 ----------
   function renderComprehensionPage(bundle, unitId) {
     const { text, unit } = bundle;
-    const cards = text.paragraphs
-      .map(
-        (p) => `
-        <div class="card">
-          <div class="section-title"><span class="seal">${esc(p.id)}</span>${esc(paragraphLabel(p))}</div>
-          <p class="text-passage" style="font-size:16px;">${esc(p.text)}</p>
-          <div class="para-summary"><strong>段意：</strong>${esc(p.summary)}</div>
-        </div>`
-      )
+    const paragraphs = Array.isArray(text.paragraphs) ? text.paragraphs : [];
+    const sequence = paragraphs
+      .map((p, index) => `
+        <article class="comprehension-step">
+          <div class="comprehension-rail" aria-hidden="true">
+            <span>${String(index + 1).padStart(2, "0")}</span>
+            ${index < paragraphs.length - 1 ? `<i></i>` : ""}
+          </div>
+          <div class="comprehension-card">
+            <header>
+              <span class="study-chip">${esc(paragraphLabel(p))}</span>
+              <small>原文 → 概括 → 再核對細節</small>
+            </header>
+            <p class="comprehension-text">${esc(p.text)}</p>
+            <div class="comprehension-summary">
+              <span>理解重點</span>
+              <p>${esc(p.summary)}</p>
+            </div>
+          </div>
+        </article>`)
       .join("");
 
     App.mount(`
-      <h1 class="page-title">疏通文意</h1>
-      <p class="page-subtitle">逐段原文、段意與內容理解</p>
-      <a class="btn btn-primary" href="#/unit/${unitId}/comprehension/quiz">開始內容理解題庫 →</a>
-      <div style="height:20px;"></div>
-      ${cards}
+      <div class="study-page-shell comprehension-study">
+        <section class="study-hero" aria-labelledby="study-page-title">
+          <div class="study-hero-copy">
+            <p class="study-kicker">COMPREHENSION · 文意脈絡</p>
+            <h1 class="page-title study-title" id="study-page-title">疏通文意</h1>
+            <p class="study-lead">逐段拆開原文，先看每段在「說甚麼」，再把段落重新連成完整脈絡。段意是理解支架，不是唯一標準答案。</p>
+            <div class="study-meta-row">
+              <span>《${esc(unit.title)}》</span>
+              ${unit.author ? `<span>${esc(unit.author)}</span>` : ""}
+              <span>${paragraphs.length} 個理解節點</span>
+            </div>
+            <a class="btn btn-primary study-hero-action" href="#/unit/${unitId}/comprehension/quiz">開始內容理解題庫 <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="study-hero-side" aria-hidden="true">
+            <span class="study-hero-mark">解</span>
+            <div class="study-hero-stats single">
+              <strong>${paragraphs.length}</strong><small>段／聯／片</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="study-section" aria-labelledby="comprehension-sequence-title">
+          <div class="study-section-heading compact">
+            <div>
+              <p class="section-kicker">逐段理解</p>
+              <h2 id="comprehension-sequence-title">把全文拆成可理解的節點</h2>
+              <p>先閱讀原文，再看下方概括；若你能用自己的話重新說一次，才算真正疏通。</p>
+            </div>
+          </div>
+          <div class="comprehension-sequence">
+            ${sequence || `<div class="progress-empty-card"><span aria-hidden="true">解</span><div><strong>本篇暫未提供逐段資料</strong><p>可先回到原文閱讀頁。</p></div></div>`}
+          </div>
+        </section>
+
+        <aside class="study-next-panel">
+          <div><p class="section-kicker">檢查理解</p><h2>不要只認得段意</h2><p>題目會重新換一種問法，檢查你能否從原文提取、判斷和整合內容，而不是只記住這些概括。</p></div>
+          <a class="btn btn-primary" href="#/unit/${unitId}/comprehension/quiz">開始理解題 →</a>
+        </aside>
+      </div>
       ${App.footerNav(unitId, unit.title)}
     `);
   }
@@ -594,54 +729,98 @@ const ContentRenderer = (() => {
     const nodes = structure.nodes || [];
     const contrasts = structure.contrast_pairs || [];
     const techniques = structure.techniques || [];
+
     const flow = nodes
-      .map(
-        (n, i) => `
-        <div class="card card-tight" style="display:flex; gap:12px; align-items:flex-start;">
-          <div class="module-icon">${i + 1}</div>
-          <div>
-            <p style="font-weight:700; margin:0 0 4px;">${esc(n.label)}${n.paragraph != null ? `<span style="font-weight:400; color:var(--color-ink-faint); font-size:12px;"> ・第${esc(n.paragraph)}段</span>` : ""}</p>
-            <p style="margin:0; font-size:14px; color:var(--color-ink-soft);">${esc(n.description)}</p>
+      .map((n, index) => `
+        <article class="analysis-flow-node">
+          <div class="analysis-flow-number" aria-hidden="true">${String(index + 1).padStart(2, "0")}</div>
+          <div class="analysis-flow-copy">
+            <p>${n.paragraph != null ? `第 ${esc(n.paragraph)} 段` : "結構節點"}</p>
+            <h3>${esc(n.label)}</h3>
+            <span>${esc(n.description)}</span>
           </div>
-        </div>`
-      )
-      .join(`<div style="text-align:center; color:var(--color-ink-faint); margin: -4px 0;">↓</div>`);
+        </article>`)
+      .join("");
 
     const contrastCards = contrasts
-      .map(
-        (c) => `
-        <div class="card">
-          <p class="section-title" style="font-size:16px;">${esc(c.label)}</p>
-          <div style="display:flex; gap:16px; flex-wrap:wrap;">
-            <div style="flex:1; min-width:180px; background:var(--color-dusk-soft); border-radius:12px; padding:12px;">
-              <strong>${esc(c.left.title)}</strong>
-              <p style="font-size:13px; margin:6px 0 0;">${esc(c.left.keywords ? c.left.keywords.join("、") : c.left.trait)}</p>
-              ${c.left.emotion ? `<p style="font-size:13px; margin:4px 0 0; color:var(--color-accent);">→ ${esc(c.left.emotion)}</p>` : ""}
+      .map((c, index) => {
+        const leftText = c.left.keywords ? c.left.keywords.join(" · ") : c.left.trait;
+        const rightText = c.right.keywords ? c.right.keywords.join(" · ") : c.right.trait;
+        return `
+          <article class="analysis-compare-card">
+            <header><span>${String(index + 1).padStart(2, "0")}</span><h3>${esc(c.label)}</h3></header>
+            <div class="analysis-compare-grid">
+              <div class="analysis-side is-left">
+                <small>A</small><strong>${esc(c.left.title)}</strong><p>${esc(leftText || "")}</p>
+                ${c.left.emotion ? `<em>${esc(c.left.emotion)}</em>` : ""}
+              </div>
+              <div class="analysis-versus" aria-hidden="true">×</div>
+              <div class="analysis-side is-right">
+                <small>B</small><strong>${esc(c.right.title)}</strong><p>${esc(rightText || "")}</p>
+                ${c.right.emotion ? `<em>${esc(c.right.emotion)}</em>` : ""}
+              </div>
             </div>
-            <div style="flex:1; min-width:180px; background:var(--color-jade-soft); border-radius:12px; padding:12px;">
-              <strong>${esc(c.right.title)}</strong>
-              <p style="font-size:13px; margin:6px 0 0;">${esc(c.right.keywords ? c.right.keywords.join("、") : c.right.trait)}</p>
-              ${c.right.emotion ? `<p style="font-size:13px; margin:4px 0 0; color:var(--color-jade);">→ ${esc(c.right.emotion)}</p>` : ""}
-            </div>
-          </div>
-        </div>`
-      )
+          </article>`;
+      })
       .join("");
 
     const techniqueCards = techniques
-      .map((t) => `<div class="card card-tight"><strong>${esc(t.name)}</strong><p style="margin:6px 0 0; font-size:13px; color:var(--color-ink-soft);">${esc(t.example)}</p></div>`)
+      .map((t, index) => `
+        <article class="technique-card">
+          <span>${String(index + 1).padStart(2, "0")}</span>
+          <h3>${esc(t.name)}</h3>
+          <p>${esc(t.example)}</p>
+        </article>`)
       .join("");
 
     App.mount(`
-      <h1 class="page-title">結構與鑒賞</h1>
-      <p class="page-subtitle">《${esc(unit.title)}》篇章結構、對比與寫作手法</p>
-      <div style="margin-bottom:24px;">${flow || `<p class="empty-state">本篇暫未提供結構圖。</p>`}</div>
+      <div class="study-page-shell analysis-study">
+        <section class="study-hero" aria-labelledby="study-page-title">
+          <div class="study-hero-copy">
+            <p class="study-kicker">ANALYSIS · 結構與手法</p>
+            <h1 class="page-title study-title" id="study-page-title">結構與鑒賞</h1>
+            <p class="study-lead">先看文章怎樣推進，再看哪些對比、照應和寫作手法令意思成立。鑒賞不是背術語，而是說清楚「手法如何產生效果」。</p>
+            <div class="study-meta-row">
+              <span>《${esc(unit.title)}》</span>
+              <span>${nodes.length} 個結構節點</span>
+              <span>${techniques.length} 種手法</span>
+            </div>
+            <a class="btn btn-primary study-hero-action" href="#/unit/${unitId}/analysis/quiz">開始結構與手法題庫 <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="study-hero-side" aria-hidden="true">
+            <span class="study-hero-mark">構</span>
+            <div class="study-hero-stats">
+              <strong>${contrasts.length}</strong><small>組對比／照應</small>
+              <i></i>
+              <strong>${techniques.length}</strong><small>項寫作手法</small>
+            </div>
+          </div>
+        </section>
 
-      ${contrastCards ? `<div class="section-title"><span class="seal">對</span>對比與照應</div>${contrastCards}` : ""}
+        <section class="study-section" aria-labelledby="analysis-flow-title">
+          <div class="study-section-heading compact">
+            <div><p class="section-kicker">篇章骨架</p><h2 id="analysis-flow-title">文章如何一步一步推進</h2><p>先掌握順序和轉折，再回頭理解每一段的功能。</p></div>
+          </div>
+          <div class="analysis-flow">${flow || `<div class="progress-empty-card"><span aria-hidden="true">構</span><div><strong>本篇暫未提供結構圖</strong><p>可先從原文與疏通文意開始。</p></div></div>`}</div>
+        </section>
 
-      ${techniqueCards ? `<div class="section-title" style="margin-top:24px;"><span class="seal">法</span>寫作手法與語言特色</div><div class="module-grid">${techniqueCards}</div>` : ""}
+        ${contrastCards ? `
+          <section class="study-section" aria-labelledby="analysis-contrast-title">
+            <div class="study-section-heading compact"><div><p class="section-kicker">關係閱讀</p><h2 id="analysis-contrast-title">對比與照應</h2><p>把兩端放在一起看，會更清楚作者如何製造差異、呼應與轉折。</p></div></div>
+            <div class="analysis-compare-stack">${contrastCards}</div>
+          </section>` : ""}
 
-      <a class="btn btn-primary" style="margin-top:20px;" href="#/unit/${unitId}/analysis/quiz">開始結構與手法題庫 →</a>
+        ${techniqueCards ? `
+          <section class="study-section" aria-labelledby="analysis-technique-title">
+            <div class="study-section-heading compact"><div><p class="section-kicker">表達效果</p><h2 id="analysis-technique-title">寫作手法與語言特色</h2><p>回答手法題時，要把「名稱、文本例子、作用」連起來。</p></div></div>
+            <div class="technique-grid">${techniqueCards}</div>
+          </section>` : ""}
+
+        <aside class="study-next-panel">
+          <div><p class="section-kicker">由看懂到說明</p><h2>下一步：用題目重組你的分析</h2><p>練習會要求你辨認結構、比較兩端，以及解釋手法效果，而不是照抄這一頁的說法。</p></div>
+          <a class="btn btn-primary" href="#/unit/${unitId}/analysis/quiz">開始分析題 →</a>
+        </aside>
+      </div>
       ${App.footerNav(unitId, unit.title)}
     `);
   }
@@ -650,36 +829,107 @@ const ContentRenderer = (() => {
   function renderThemePage(bundle, unitId) {
     const { appreciation, unit } = bundle;
     const savedReflection = Progress.getReflection(unitId, "theme");
+    const summary = appreciation.theme_summary || appreciation.overview || "";
+    const keyThemes = appreciation.key_themes || [];
+    const evidenceSections = appreciation.by_paragraph || appreciation.paragraph_appreciation || [];
+
+    const themeCards = keyThemes.map((theme, index) => {
+      const text = String(theme || "");
+      const divider = text.indexOf("：");
+      const title = divider > 0 && divider < 28 ? text.slice(0, divider) : `主題 ${String(index + 1).padStart(2, "0")}`;
+      const body = divider > 0 && divider < 28 ? text.slice(divider + 1) : text;
+      return `
+        <article class="theme-insight-card">
+          <span>${String(index + 1).padStart(2, "0")}</span>
+          <h3>${esc(title)}</h3>
+          <p>${esc(body)}</p>
+        </article>`;
+    }).join("");
+
+    const evidenceHTML = evidenceSections.map((item, index) => {
+      const paragraphNo = item.paragraph != null ? item.paragraph : item.paragraph_id;
+      const label = item.focus || (paragraphNo != null ? `第${paragraphNo}段` : `文本證據 ${index + 1}`);
+      const points = Array.isArray(item.points) ? item.points : [];
+      return `
+        <article class="theme-evidence-card">
+          <header><span>${String(index + 1).padStart(2, "0")}</span><h3>${esc(label)}</h3></header>
+          ${points.length ? `<ul>${points.map((point) => `<li>${esc(point)}</li>`).join("")}</ul>` : `<p>本節暫未提供細項分析。</p>`}
+        </article>`;
+    }).join("");
 
     App.mount(`
-      <h1 class="page-title">主旨與思考</h1>
-      <p class="page-subtitle">《${esc(unit.title)}》主旨、情感與價值思考</p>
-      <div class="card">
-        ${themeSummaryHTML(appreciation)}
-      </div>
+      <div class="study-page-shell theme-study">
+        <section class="study-hero" aria-labelledby="study-page-title">
+          <div class="study-hero-copy">
+            <p class="study-kicker">THEME · 主旨與價值</p>
+            <h1 class="page-title study-title" id="study-page-title">主旨與思考</h1>
+            <p class="study-lead">主旨不是一句要背下來的標準答案，而是把人物、情感、選擇與全文證據連成一個可解釋的觀點。</p>
+            <div class="study-meta-row">
+              <span>《${esc(unit.title)}》</span>
+              ${unit.author ? `<span>${esc(unit.author)}</span>` : ""}
+              <span>${Math.max(keyThemes.length, 1)} 個核心觀點</span>
+            </div>
+            <a class="btn btn-primary study-hero-action" href="#/unit/${unitId}/theme/quiz">開始主旨與思考題庫 <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="study-hero-side" aria-hidden="true">
+            <span class="study-hero-mark">旨</span>
+            <div class="study-hero-stats single"><strong>${evidenceSections.length}</strong><small>組文本證據</small></div>
+          </div>
+        </section>
 
-      <div class="card">
-        <div class="section-title"><span class="seal">思</span>生活情境與個人反思</div>
-        <p style="font-size:14px; color:var(--color-ink-soft);">閱讀以上主旨後，哪一個觀點、情感或人物選擇最令你有感？試結合《${esc(unit.title)}》的內容，聯繫自己的生活或學習經驗寫下反思。（此欄只儲存在你自己的裝置上）</p>
-        <textarea id="theme-reflection" class="answer-input" placeholder="在此輸入你的想法…">${esc(savedReflection)}</textarea>
-        <div class="btn-row">
-          <button class="btn btn-primary" id="save-reflection-btn">儲存反思</button>
-          <span id="reflection-saved-hint" style="font-size:13px; color:var(--color-jade); align-self:center; display:none;">已儲存 ✓</span>
-        </div>
-      </div>
+        <section class="theme-core-grid" aria-labelledby="theme-core-title">
+          <article class="theme-core-panel">
+            <p class="section-kicker">CORE IDEA</p>
+            <h2 id="theme-core-title">核心主旨</h2>
+            <p>${summary ? esc(summary) : "本篇主旨資料尚待補充。"}</p>
+            <span class="theme-core-mark" aria-hidden="true">旨</span>
+          </article>
+          <div class="theme-insight-stack">
+            ${themeCards || `<article class="theme-insight-card"><span>01</span><h3>先從全文建立觀點</h3><p>閱讀核心主旨後，回到原文尋找支持它的語句、人物選擇或情感轉折。</p></article>`}
+          </div>
+        </section>
 
-      <a class="btn btn-primary" href="#/unit/${unitId}/theme/quiz">開始主旨與思考題庫（含開放題）→</a>
-      <div style="height:16px;"></div>
+        ${evidenceHTML ? `
+          <section class="study-section" aria-labelledby="theme-evidence-title">
+            <div class="study-section-heading compact"><div><p class="section-kicker">回到文本</p><h2 id="theme-evidence-title">主旨如何由原文一步一步建立</h2><p>以下整理用來協助你找證據；真正作答時仍要按題目要求選取、組織與解釋。</p></div></div>
+            <div class="theme-evidence-grid">${evidenceHTML}</div>
+          </section>` : ""}
+
+        <section class="reflection-panel" aria-labelledby="reflection-title">
+          <div class="reflection-intro">
+            <p class="section-kicker">PERSONAL RESPONSE</p>
+            <h2 id="reflection-title">把主旨帶回自己的經驗</h2>
+            <p>哪一個觀點、情感或人物選擇最令你有感？結合《${esc(unit.title)}》內容，再連繫自己的生活或學習經驗。這是個人反思，<strong>不會被當作客觀題正確率或掌握度。</strong></p>
+            <small>內容只儲存在這部裝置。</small>
+          </div>
+          <div class="reflection-editor">
+            <label for="theme-reflection">我的反思</label>
+            <textarea id="theme-reflection" class="answer-input" placeholder="在此寫下你的想法…">${esc(savedReflection)}</textarea>
+            <div class="reflection-actions">
+              <button class="btn btn-primary" id="save-reflection-btn">儲存反思</button>
+              <span id="reflection-saved-hint" role="status" aria-live="polite">已儲存 ✓</span>
+            </div>
+          </div>
+        </section>
+
+        <aside class="study-next-panel">
+          <div><p class="section-kicker">檢查觀點</p><h2>用題目測試：你能否以文本支持主旨？</h2><p>題庫包含客觀題與開放題；開放題會提供評分參考，不會假裝自動判定唯一答案。</p></div>
+          <a class="btn btn-primary" href="#/unit/${unitId}/theme/quiz">開始主旨題 →</a>
+        </aside>
+      </div>
       ${App.footerNav(unitId, unit.title)}
     `);
 
-    document.getElementById("save-reflection-btn").addEventListener("click", () => {
-      const val = document.getElementById("theme-reflection").value;
-      Progress.saveReflection(unitId, "theme", val);
-      const hint = document.getElementById("reflection-saved-hint");
-      hint.style.display = "inline";
-      setTimeout(() => (hint.style.display = "none"), 2000);
-    });
+    const saveButton = document.getElementById("save-reflection-btn");
+    if (saveButton) {
+      saveButton.addEventListener("click", () => {
+        const val = document.getElementById("theme-reflection").value;
+        Progress.saveReflection(unitId, "theme", val);
+        const hint = document.getElementById("reflection-saved-hint");
+        hint.classList.add("is-visible");
+        setTimeout(() => hint.classList.remove("is-visible"), 2000);
+      });
+    }
   }
 
   // ---------- 跨篇比較與進階題 ----------

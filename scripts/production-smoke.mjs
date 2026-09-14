@@ -119,6 +119,11 @@ try {
   await page.locator('.annotation-popover[role="dialog"]').waitFor({ state: "visible", timeout: 4000 });
   await page.keyboard.press("Escape");
 
+  await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/words"; });
+  await page.locator(".study-page-shell.words-study").waitFor({ state: "visible", timeout: 10000 });
+  const wordsOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+  check(wordsOverflow <= 1, `production mobile words study page has horizontal overflow of ${wordsOverflow}px`);
+
   await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/words/quiz"; });
   await page.locator(".q-stem").first().waitFor({ state: "visible", timeout: 10000 });
   const quizOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
