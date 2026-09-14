@@ -278,6 +278,94 @@ const QuestionEngine = (() => {
     renderAt(0);
   }
 
+  // ---------- 跨篇章針對性錯題重練 ----------
+  function renderCrossUnitWrongRetry(unitBundles, ability = null) {
+    const inputs = (unitBundles || []).map(({ entry, bundle }) => ({
+      unitId: entry.id,
+      title: entry.title,
+      author: entry.author,
+      questions: bundle.allQuestions || []
+    }));
+    const retryItems = Progress.crossUnitWrongItems(inputs, ability);
+    const targetLabel = ability || "全部能力";
+
+    if (!retryItems.length) {
+      App.mount(`
+        <h1 class="page-title">跨篇章錯題重練</h1>
+        <div class="card">
+          <div class="section-title"><span class="seal">清</span>${esc(targetLabel)}目前沒有待修正錯題</div>
+          <p style="margin:0; color:var(--color-ink-soft);">這裡只納入最後一次仍答錯、且可自動批改的客觀題；歷史錯題仍保留在各篇「我的掌握」。</p>
+        </div>
+        <a class="btn btn-primary" href="#/overview">返回跨篇章總覽 →</a>
+        ${App.footerNav(null, null)}
+      `);
+      return;
+    }
+
+    let idx = 0;
+    const initialKeys = new Set(retryItems.map((item) => `${item.unitId}::${item.question.id}`));
+    const initialCount = retryItems.length;
+
+    function currentRemaining() {
+      return Progress.crossUnitWrongItems(inputs, ability);
+    }
+
+    function renderCompletion() {
+      const remaining = currentRemaining();
+      const remainingFromRound = remaining.filter((item) => initialKeys.has(`${item.unitId}::${item.question.id}`)).length;
+      const resolved = initialCount - remainingFromRound;
+      App.mount(`
+        <h1 class="page-title">跨篇章重練完成</h1>
+        <p class="page-subtitle">${esc(targetLabel)} · 本輪結果</p>
+        <div class="card">
+          <div class="stat-grid">
+            <div class="stat-card"><div class="stat-value">${initialCount}</div><div class="stat-label">本輪題數</div></div>
+            <div class="stat-card"><div class="stat-value">${resolved}</div><div class="stat-label">本輪已修正</div></div>
+            <div class="stat-card"><div class="stat-value">${remaining.length}</div><div class="stat-label">此範圍仍待修正</div></div>
+          </div>
+          <p style="font-size:13px; color:var(--color-ink-soft); margin:12px 0 0;">答對只會移出目前待修正清單；曾答錯次數及歷史仍保留在原篇章紀錄。</p>
+        </div>
+        <div class="btn-row">
+          ${remaining.length ? `<a class="btn btn-primary" href="#/overview/retry/${encodeURIComponent(ability || "all")}">再練仍錯題 →</a>` : ""}
+          <a class="btn btn-secondary" href="#/overview">返回跨篇章總覽</a>
+        </div>
+        ${App.footerNav(null, null)}
+      `);
+    }
+
+    function renderAt(i) {
+      idx = i;
+      const item = retryItems[idx];
+      const source = (unitBundles || []).find(({ entry }) => entry.id === item.unitId);
+      if (!source) {
+        if (idx < retryItems.length - 1) renderAt(idx + 1);
+        else renderCompletion();
+        return;
+      }
+      const q = item.question;
+      renderQuestionShell({
+        unitId: item.unitId,
+        bundle: source.bundle,
+        question: q,
+        title: `跨篇章錯題重練 · ${targetLabel}`,
+        indexLabel: `《${source.entry.title}》 · 第 ${idx + 1} 題，共 ${retryItems.length} 題`,
+        onPrev: idx > 0 ? () => renderAt(idx - 1) : null,
+        onNext: idx < retryItems.length - 1 ? () => renderAt(idx + 1) : null,
+        backHref: "#/overview",
+        backLabel: "返回跨篇章總覽",
+        showRemediation: true,
+        loadRecord: () => null,
+        saveRecord: (questionId, record) => Progress.recordAnswer(item.unitId, questionId, record),
+        onAfterConfirm: () => {
+          if (idx < retryItems.length - 1) renderAt(idx + 1);
+          else renderCompletion();
+        }
+      });
+    }
+
+    renderAt(0);
+  }
+
   // ---------- 核心篇章挑戰 attempt ----------
   function challengeKey(unitId) {
     return `ccsl_challenge_${unitId}`;
@@ -507,7 +595,7 @@ const QuestionEngine = (() => {
   }
 
   // ---------- 通用題目外殼 ----------
-  function renderQuestionShell({ unitId, bundle, question, title, indexLabel, onPrev, onNext, backHref, onAfterConfirm, showRemediation, extraNav, loadRecord, saveRecord }) {
+  function renderQuestionShell({ unitId, bundle, question, title, indexLabel, onPrev, onNext, backHref, backLabel, onAfterConfirm, showRemediation, extraNav, loadRecord, saveRecord }) {
     const recordLoader = loadRecord || ((questionId) => Progress.getAnswer(unitId, questionId));
     const recordWriter = saveRecord || ((questionId, record) => Progress.recordAnswer(unitId, questionId, record));
     const savedRecord = recordLoader(question.id);
@@ -541,7 +629,7 @@ const QuestionEngine = (() => {
             </div>
             <div class="quiz-nav-group">
               ${extraNav || ""}
-              <a class="btn btn-ghost" href="${backHref}">返回《${esc(bundle.unit.title)}》</a>
+              <a class="btn btn-ghost" href="${backHref}">${backLabel ? esc(backLabel) : `返回《${esc(bundle.unit.title)}》`}</a>
               <a class="btn btn-ghost" href="#/">返回首頁</a>
             </div>
           </div>
@@ -1106,5 +1194,5 @@ const QuestionEngine = (() => {
     return found ? found.text : "";
   }
 
-  return { renderQuizSequence, renderWrongRetry, renderChallengeSetup, renderChallengeRun, renderChallengeResult };
+  return { renderQuizSequence, renderWrongRetry, renderCrossUnitWrongRetry, renderChallengeSetup, renderChallengeRun, renderChallengeResult };
 })();

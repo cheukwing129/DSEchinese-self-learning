@@ -363,6 +363,42 @@ const Progress = (() => {
       .map((q) => q.id);
   }
 
+  function crossUnitWrongItems(unitInputs = [], ability = null) {
+    const all = loadAll();
+    const targetAbility = ability && ability !== "all" ? ability : null;
+    const items = [];
+
+    (unitInputs || []).forEach((input, unitIndex) => {
+      const unitId = input.unitId;
+      const raw = all[unitId] && typeof all[unitId] === "object" ? all[unitId] : {};
+      const unit = ensureUnitShape(raw);
+      const answers = unit.answers || {};
+      (input.questions || []).forEach((q, questionIndex) => {
+        if (!isObjectiveQuestion(q)) return;
+        if (targetAbility && q.ability !== targetAbility) return;
+        const rec = answers[q.id];
+        if (!rec || !rec.answered || rec.isCorrect !== false) return;
+        items.push({
+          unitId,
+          title: input.title || unitId,
+          author: input.author || "",
+          question: q,
+          wrongAttempts: Number(rec.wrongAttempts) || 1,
+          lastWrongAt: Number(rec.lastWrongAt || rec.timestamp) || 0,
+          unitIndex,
+          questionIndex
+        });
+      });
+    });
+
+    return items.sort((a, b) =>
+      b.wrongAttempts - a.wrongAttempts ||
+      b.lastWrongAt - a.lastWrongAt ||
+      a.unitIndex - b.unitIndex ||
+      a.questionIndex - b.questionIndex
+    );
+  }
+
   function overallAccuracy(unitId, allQuestions) {
     const answers = getAllAnswers(unitId);
     let answered = 0, correct = 0;
@@ -507,6 +543,6 @@ const Progress = (() => {
     setSelfReviewItem, getSelfReview,
     recordLearningVisit, latestLearning, recommendNextStep,
     clearUnit, abilityStats, wrongQuestionIds, everWrongQuestionIds, resolvedWrongQuestionIds, overallAccuracy,
-    crossUnitOverview
+    crossUnitOverview, crossUnitWrongItems
   };
 })();

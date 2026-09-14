@@ -227,17 +227,34 @@ const App = (() => {
     `);
   }
 
+  async function loadCrossUnitBundles() {
+    const curriculum = await loadCurriculum();
+    const available = (curriculum.units || []).filter((u) => u.status === "available");
+    const unitBundles = await Promise.all(available.map(async (entry) => ({
+      entry,
+      bundle: await loadUnitBundle(entry.id, { allQuestionBanks: true })
+    })));
+    return { curriculum, unitBundles };
+  }
+
   async function pageOverview() {
     setCrumb("跨篇章學習總覽");
     renderLoading("跨篇章學習總覽");
     try {
-      const curriculum = await loadCurriculum();
-      const available = (curriculum.units || []).filter((u) => u.status === "available");
-      const unitBundles = await Promise.all(available.map(async (entry) => ({
-        entry,
-        bundle: await loadUnitBundle(entry.id, { allQuestionBanks: true })
-      })));
+      const { curriculum, unitBundles } = await loadCrossUnitBundles();
       ContentRenderer.renderCrossUnitOverview(curriculum, unitBundles);
+    } catch (e) {
+      renderFatalError(e.message);
+    }
+  }
+
+  async function pageCrossUnitRetry(params) {
+    const ability = params.ability === "all" ? null : params.ability;
+    setCrumb(ability ? `${ability} · 跨篇章重練` : "跨篇章錯題重練");
+    renderLoading("跨篇章錯題重練");
+    try {
+      const { unitBundles } = await loadCrossUnitBundles();
+      QuestionEngine.renderCrossUnitWrongRetry(unitBundles, ability);
     } catch (e) {
       renderFatalError(e.message);
     }
@@ -398,6 +415,7 @@ const App = (() => {
   function registerRoutes() {
     Router.register("/", pageHome);
     Router.register("/overview", pageOverview);
+    Router.register("/overview/retry/:ability", pageCrossUnitRetry);
     Router.register("/unit/:unitId", pageUnitHome);
     Router.register("/unit/:unitId/text", pageText);
     Router.register("/unit/:unitId/words", pageWords);
