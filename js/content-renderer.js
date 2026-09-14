@@ -9,6 +9,20 @@ const ContentRenderer = (() => {
     return `#/unit/${unitId}/${moduleId === "progress" ? "progress" : moduleId}`;
   }
 
+  function paragraphLabel(p) {
+    return p.label || `第${p.id}段`;
+  }
+
+  function themeSummaryHTML(appreciation) {
+    const summary = appreciation.theme_summary || appreciation.overview || "";
+    const keyThemes = appreciation.key_themes || [];
+    let html = summary ? `<p style="margin:0; line-height:1.9;">${esc(summary)}</p>` : "";
+    if (keyThemes.length) {
+      html += `<ul class="scoring-elements" style="margin-top:${summary ? "12px" : "0"};">${keyThemes.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>`;
+    }
+    return html || `<p style="margin:0; color:var(--color-ink-soft);">本篇主旨資料尚待補充。</p>`;
+  }
+
   function renderUnitHome(bundle, unitId) {
     const u = bundle.unit;
     const moduleDescs = {
@@ -70,7 +84,7 @@ const ContentRenderer = (() => {
     text.annotations.forEach((a) => (annoMap[a.id] = a));
 
     // 若段落有 section 欄位（如論仁/論孝/論君子），按 section 分組導覽；
-    // 否則沿用逐段導覽（岳陽樓記／師說）。
+    // 否則逐段／逐聯／逐片導覽，優先使用資料中的 label。
     const hasSections = text.paragraphs.some((p) => p.section);
     let groups;
     if (hasSections) {
@@ -85,7 +99,7 @@ const ContentRenderer = (() => {
       });
       groups = order.map((label) => ({ label, paragraphs: map[label] }));
     } else {
-      groups = text.paragraphs.map((p) => ({ label: `第${p.id}段`, paragraphs: [p] }));
+      groups = text.paragraphs.map((p) => ({ label: paragraphLabel(p), paragraphs: [p] }));
     }
 
     let activeIndex = 0;
@@ -101,8 +115,7 @@ const ContentRenderer = (() => {
     }
 
     // 依 annotation term 在原文中「第 occurrence 次」出現的位置，包上可點擊 span。
-    // 用位置區間而非逐次字串取代，避免重複字詞（如兩個「不以其道得之」）互相干擾，
-    // 也避免長詞被短詞截斷。
+    // 用位置區間而非逐次字串取代，避免重複字詞互相干擾，亦避免長詞被短詞截斷。
     function paragraphHTML(p) {
       const terms = p.annotation_ids.map((id) => annoMap[id]).filter(Boolean);
       const matches = [];
@@ -119,7 +132,6 @@ const ContentRenderer = (() => {
           matches.push({ start: idx, end: idx + a.term.length, anno: a });
         }
       });
-      // 較長詞語優先佔用區間，避免短詞語切開長詞語
       const claimed = [];
       matches
         .slice()
@@ -152,8 +164,6 @@ const ContentRenderer = (() => {
         .join(paragraphs.length > 1 ? '<div style="height:16px;"></div>' : "");
     }
 
-    // 只 mount 一次（含音訊播放器），切換段落／分組時只更新導覽與正文區塊，
-    // 不重新渲染 <audio> 元素，確保播放不會被中斷。
     function renderShell() {
       App.mount(`
         <h1 class="page-title">原文與誦讀</h1>
@@ -248,7 +258,7 @@ const ContentRenderer = (() => {
       .map(
         (p) => `
         <div class="card">
-          <div class="section-title"><span class="seal">${p.id}</span>第${p.id}段</div>
+          <div class="section-title"><span class="seal">${esc(p.id)}</span>${esc(paragraphLabel(p))}</div>
           <p class="text-passage" style="font-size:16px;">${esc(p.text)}</p>
           <div class="para-summary"><strong>段意：</strong>${esc(p.summary)}</div>
         </div>`
@@ -268,20 +278,23 @@ const ContentRenderer = (() => {
   // ---------- 4. 結構與鑒賞 ----------
   function renderAnalysisPage(bundle, unitId) {
     const { structure, unit } = bundle;
-    const flow = structure.nodes
+    const nodes = structure.nodes || [];
+    const contrasts = structure.contrast_pairs || [];
+    const techniques = structure.techniques || [];
+    const flow = nodes
       .map(
         (n, i) => `
         <div class="card card-tight" style="display:flex; gap:12px; align-items:flex-start;">
           <div class="module-icon">${i + 1}</div>
           <div>
-            <p style="font-weight:700; margin:0 0 4px;">${esc(n.label)}<span style="font-weight:400; color:var(--color-ink-faint); font-size:12px;"> ・第${n.paragraph}段</span></p>
+            <p style="font-weight:700; margin:0 0 4px;">${esc(n.label)}${n.paragraph != null ? `<span style="font-weight:400; color:var(--color-ink-faint); font-size:12px;"> ・第${esc(n.paragraph)}段</span>` : ""}</p>
             <p style="margin:0; font-size:14px; color:var(--color-ink-soft);">${esc(n.description)}</p>
           </div>
         </div>`
       )
       .join(`<div style="text-align:center; color:var(--color-ink-faint); margin: -4px 0;">↓</div>`);
 
-    const contrastCards = structure.contrast_pairs
+    const contrastCards = contrasts
       .map(
         (c) => `
         <div class="card">
@@ -302,20 +315,18 @@ const ContentRenderer = (() => {
       )
       .join("");
 
-    const techniqueCards = structure.techniques
+    const techniqueCards = techniques
       .map((t) => `<div class="card card-tight"><strong>${esc(t.name)}</strong><p style="margin:6px 0 0; font-size:13px; color:var(--color-ink-soft);">${esc(t.example)}</p></div>`)
       .join("");
 
     App.mount(`
       <h1 class="page-title">結構與鑒賞</h1>
-      <p class="page-subtitle">修樓 → 景 → 情 → 理 結構圖</p>
-      <div style="margin-bottom:24px;">${flow}</div>
+      <p class="page-subtitle">《${esc(unit.title)}》篇章結構、對比與寫作手法</p>
+      <div style="margin-bottom:24px;">${flow || `<p class="empty-state">本篇暫未提供結構圖。</p>`}</div>
 
-      <div class="section-title"><span class="seal">對</span>對比配對</div>
-      ${contrastCards}
+      ${contrastCards ? `<div class="section-title"><span class="seal">對</span>對比與照應</div>${contrastCards}` : ""}
 
-      <div class="section-title" style="margin-top:24px;"><span class="seal">法</span>動靜、感官、對偶、駢散、煉字</div>
-      <div class="module-grid">${techniqueCards}</div>
+      ${techniqueCards ? `<div class="section-title" style="margin-top:24px;"><span class="seal">法</span>寫作手法與語言特色</div><div class="module-grid">${techniqueCards}</div>` : ""}
 
       <a class="btn btn-primary" style="margin-top:20px;" href="#/unit/${unitId}/analysis/quiz">開始結構與手法題庫 →</a>
       ${App.footerNav(unitId, unit.title)}
@@ -329,14 +340,14 @@ const ContentRenderer = (() => {
 
     App.mount(`
       <h1 class="page-title">主旨與思考</h1>
-      <p class="page-subtitle">不以物喜，不以己悲 · 先天下之憂而憂，後天下之樂而樂</p>
+      <p class="page-subtitle">《${esc(unit.title)}》主旨、情感與價值思考</p>
       <div class="card">
-        <p style="margin:0; line-height:1.9;">${esc(appreciation.theme_summary)}</p>
+        ${themeSummaryHTML(appreciation)}
       </div>
 
       <div class="card">
         <div class="section-title"><span class="seal">思</span>生活情境與個人反思</div>
-        <p style="font-size:14px; color:var(--color-ink-soft);">試想想：在你的生活或學習中，有沒有試過因外在環境或一時得失而影響心情？范仲淹「不以物喜，不以己悲」的態度，對你有甚麼啟發？（此欄只儲存在你自己的裝置上）</p>
+        <p style="font-size:14px; color:var(--color-ink-soft);">閱讀以上主旨後，哪一個觀點、情感或人物選擇最令你有感？試結合《${esc(unit.title)}》的內容，聯繫自己的生活或學習經驗寫下反思。（此欄只儲存在你自己的裝置上）</p>
         <textarea id="theme-reflection" class="answer-input" placeholder="在此輸入你的想法…">${esc(savedReflection)}</textarea>
         <div class="btn-row">
           <button class="btn btn-primary" id="save-reflection-btn">儲存反思</button>
@@ -386,7 +397,7 @@ const ContentRenderer = (() => {
 
   // ---------- 我的掌握 ----------
   function renderProgressPage(bundle, unitId) {
-    const { unit, allQuestions, rubrics } = bundle;
+    const { unit, allQuestions } = bundle;
     const overall = Progress.overallAccuracy(unitId, allQuestions);
     const abilities = Progress.abilityStats(unitId, allQuestions);
     const wrongIds = Progress.wrongQuestionIds(unitId, allQuestions);
@@ -479,7 +490,7 @@ const ContentRenderer = (() => {
 
   function quizLinkFor(unitId, bankName, idx, q) {
     if (bankName === "cross-text") {
-      return `#/unit/${unitId}/cross-text/quiz/${q.cross_text_target || "all"}?qi=${idx}`;
+      return `#/unit/${unitId}/cross-text/quiz/${q.cross_text_target || "all"}?qid=${encodeURIComponent(q.id)}`;
     }
     const map = { words: "words", content: "comprehension", "structure-skill": "analysis", theme: "theme" };
     const seg = map[bankName] || bankName;
