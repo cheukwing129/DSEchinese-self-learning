@@ -1,0 +1,37 @@
+name: Review launch polish
+
+on:
+  push:
+    branches:
+      - feat/launch-polish
+    paths:
+      - scripts/launch-polish-preview.mjs
+      - .github/workflows/review-launch-polish.yml
+
+permissions:
+  contents: read
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: feat/launch-polish
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+      - name: Validate fingerprinted build
+        run: node scripts/build-assets.mjs --check
+      - name: Install pinned Playwright runtime
+        run: |
+          npm exec --yes --package=playwright@1.55.0 playwright install chromium --with-deps
+      - name: Capture launch polish frames
+        run: npm exec --yes --package=playwright@1.55.0 -- node scripts/launch-polish-preview.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: launch-polish-review
+          path: |
+            tmp-launch-polish-review
+            assets/brand/wenmai-share.png
+          retention-days: 1
