@@ -166,6 +166,7 @@ const App = (() => {
     if (path.endsWith("/theme")) return "主旨與思考";
     if (path.endsWith("/memorisation")) return "背誦精華";
     if (path.endsWith("/challenge")) return "核心篇章挑戰";
+    if (path.endsWith("/progress/retry-wrong")) return "錯題重練";
     if (path.endsWith("/progress")) return "我的掌握";
     if (path.endsWith("/cross-text")) return "跨篇比較與進階題";
     return "篇章學習";
@@ -291,6 +292,12 @@ const App = (() => {
     });
   }
 
+  async function pageWrongRetry(params) {
+    await withUnitBundle(params.unitId, { resources: ["rubrics"], allQuestionBanks: true }, (bundle) => {
+      QuestionEngine.renderWrongRetry(bundle, params.unitId);
+    });
+  }
+
   // quiz pages: bankName 對應 data/units/x/question-banks/<bankName>.json 的 "bank" 值
   async function pageQuiz(params, bankName, title) {
     await withUnitBundle(params.unitId, { resources: ["rubrics"], banks: [bankName] }, (bundle) => {
@@ -383,6 +390,7 @@ const App = (() => {
     Router.register("/unit/:unitId/cross-text", pageCrossText);
     Router.register("/unit/:unitId/cross-text/quiz/:target", pageCrossTextQuiz);
     Router.register("/unit/:unitId/progress", pageProgress);
+    Router.register("/unit/:unitId/progress/retry-wrong", pageWrongRetry);
   }
 
   function init() {

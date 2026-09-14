@@ -447,6 +447,8 @@ const ContentRenderer = (() => {
     const overall = Progress.overallAccuracy(unitId, allQuestions);
     const abilities = Progress.abilityStats(unitId, allQuestions);
     const wrongIds = Progress.wrongQuestionIds(unitId, allQuestions);
+    const everWrongIds = Progress.everWrongQuestionIds(unitId, allQuestions);
+    const resolvedWrongIds = Progress.resolvedWrongQuestionIds(unitId, allQuestions);
     const wrongQuestions = allQuestions.filter((q) => wrongIds.includes(q.id));
     const reflection = Progress.getReflection(unitId, "theme");
     const memoStats = Progress.memorisationStats(unitId, (bundle.memorisation && bundle.memorisation.sentence_groups) || []);
@@ -526,7 +528,7 @@ const ContentRenderer = (() => {
           </div>
           <div class="stat-card">
             <div class="stat-value">${wrongQuestions.length}</div>
-            <div class="stat-label">錯題數</div>
+            <div class="stat-label">待修正錯題</div>
           </div>
         </div>
       </div>
@@ -564,7 +566,16 @@ const ContentRenderer = (() => {
         <a class="btn btn-secondary" style="margin-top:12px;" href="#/unit/${unitId}/memorisation">前往背誦精華 →</a>
       </div>
 
-      <div class="section-title"><span class="seal">錯</span>錯題本</div>
+      <div class="section-title"><span class="seal">錯</span>待修正錯題</div>
+      <div class="card card-tight" style="margin-bottom:12px;">
+        <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:center;">
+          <div>
+            <strong>曾答錯 ${everWrongIds.length} 題 · 已修正 ${resolvedWrongIds.length} 題</strong>
+            <p style="margin:5px 0 0; font-size:13px; color:var(--color-ink-soft);">待修正只看最後一次客觀題答案；答對後會移出清單，但錯誤歷史不會刪除。</p>
+          </div>
+          ${wrongQuestions.length ? `<a class="btn btn-primary" href="#/unit/${unitId}/progress/retry-wrong">一鍵重練 ${wrongQuestions.length} 題 →</a>` : ""}
+        </div>
+      </div>
       <div class="module-grid">${wrongList}</div>
 
       ${reflection ? `
