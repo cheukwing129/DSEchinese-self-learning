@@ -17,12 +17,13 @@ try {
     const page = await context.newPage();
     await page.goto(`http://127.0.0.1:4173/${hash}`, { waitUntil: "networkidle", timeout: 15000 });
     if (selector) {
-      await page.locator(selector).scrollIntoViewIfNeeded();
-      await sleep(150);
+      await page.locator(selector).evaluate((el) => el.scrollIntoView({ block: "start" }));
+      await page.evaluate(() => window.scrollBy(0, -105));
+      await sleep(180);
     }
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
     if (overflow > 1) throw new Error(`${name} horizontal overflow: ${overflow}px`);
-    await page.screenshot({ path: `${outDir}/${name}.jpg`, type: "jpeg", quality: 58, fullPage: false });
+    await page.screenshot({ path: `${outDir}/${name}.jpg`, type: "jpeg", quality: 62, fullPage: false });
     await context.close();
   }
 
@@ -36,4 +37,4 @@ try {
   server.kill("SIGTERM");
 }
 
-console.log("Compact UI 2.0 review frames captured.");
+console.log("Final UI 2.0 review frames captured without horizontal overflow.");
