@@ -21,7 +21,15 @@ jobs:
         with:
           node-version: 22
       - name: Apply progress UI patch
-        run: python scripts/patch-progress-ui2.py
+        run: |
+          python scripts/patch-progress-ui2.py
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('js/content-renderer.js')
+          s = p.read_text(encoding='utf-8')
+          s = s.replace('錯誤歷史不會因答對而刪除', '錯誤歷史不會刪除；即使之後答對，歷史仍保留')
+          p.write_text(s, encoding='utf-8')
+          PY
       - name: Rebuild fingerprinted assets
         run: node scripts/build-assets.mjs --write
       - name: Validate core contracts
