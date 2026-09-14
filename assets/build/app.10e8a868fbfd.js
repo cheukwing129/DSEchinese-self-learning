@@ -9,7 +9,7 @@ const App = (() => {
   const cache = { curriculum: null, json: {}, scripts: {} };
   const UI_MODULES = Object.freeze({
     content: "/assets/build/content-renderer.dcfcb554a158.js",
-    questions: "/assets/build/question-engine.f3f31972f3de.js",
+    questions: "/assets/build/question-engine.ab36f2066af2.js",
     memorisation: "/assets/build/memorisation-engine.dab19bb23e8e.js"
   });
 
