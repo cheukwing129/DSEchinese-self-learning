@@ -69,11 +69,14 @@ const ContentRenderer = (() => {
     const abilityHTML = overview.abilities.length
       ? overview.abilities.slice(0, 10).map((a) => `
         <div style="padding:10px 0; border-bottom:1px solid var(--color-border);">
-          <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; font-size:14px;">
-            <strong>${esc(a.ability)}</strong>
-            <span style="color:var(--color-ink-soft);">待修正 ${a.currentWrongQuestions} 題 · 曾答錯 ${a.everWrongQuestions} 題 · 累積答錯 ${a.wrongAttempts} 次</span>
+          <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:flex-start;">
+            <div>
+              <strong>${esc(a.ability)}</strong>
+              <p style="margin:5px 0 0; color:var(--color-ink-soft); font-size:13px;">待修正 ${a.currentWrongQuestions} 題 · 曾答錯 ${a.everWrongQuestions} 題 · 累積答錯 ${a.wrongAttempts} 次</p>
+              <p style="margin:5px 0 0; color:var(--color-ink-faint); font-size:12px;">涉及 ${a.everWrongUnits} 篇${a.currentWrongUnits ? `；其中 ${a.currentWrongUnits} 篇仍有待修正題目` : ""}${a.repeatedWrongQuestions ? `；${a.repeatedWrongQuestions} 題曾重複答錯` : ""}</p>
+            </div>
+            ${a.currentWrongQuestions ? `<a class="btn btn-secondary" href="#/overview/retry/${encodeURIComponent(a.ability)}">重練此能力 →</a>` : ""}
           </div>
-          <p style="margin:5px 0 0; color:var(--color-ink-faint); font-size:12px;">涉及 ${a.everWrongUnits} 篇${a.currentWrongUnits ? `；其中 ${a.currentWrongUnits} 篇仍有待修正題目` : ""}${a.repeatedWrongQuestions ? `；${a.repeatedWrongQuestions} 題曾重複答錯` : ""}</p>
         </div>`).join("")
       : `<p class="empty-state" style="padding:20px;">尚未有可用的客觀題錯題紀錄。</p>`;
 
@@ -110,6 +113,7 @@ const ContentRenderer = (() => {
           <div class="stat-card"><div class="stat-value">${overview.totalResolvedWrong}</div><div class="stat-label">曾錯後已修正</div></div>
         </div>
         <p style="font-size:12px; color:var(--color-ink-soft); margin:12px 0 0;">「有學習活動」只表示這部裝置曾留下作答、背誦、自評或反思紀錄，不代表完成或掌握該篇。</p>
+        ${overview.totalCurrentWrong ? `<a class="btn btn-primary" style="margin-top:14px;" href="#/overview/retry/all">重練全部待修正 →</a>` : ""}
       </div>
 
       <div class="section-title"><span class="seal">先</span>建議優先重溫</div>
