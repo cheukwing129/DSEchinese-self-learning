@@ -193,6 +193,13 @@ const App = (() => {
         <a class="btn btn-primary" href="#${escapeHTML(recent.path)}">繼續學習 →</a>
       </div>` : "";
 
+    const overviewCard = `
+      <div class="card" style="margin-bottom:24px;">
+        <div class="section-title"><span class="seal">總</span>跨篇章學習總覽</div>
+        <p style="margin:0 0 14px; color:var(--color-ink-soft); font-size:13px; line-height:1.7;">集中查看各篇待修正錯題、曾答錯後已修正的題目，以及錯題較集中的能力範疇。總覽只在你開啟時才載入各篇題庫。</p>
+        <a class="btn btn-secondary" href="#/overview">查看跨篇章總覽 →</a>
+      </div>`;
+
     const cards = curriculum.units
       .map((u) => {
         const isAvailable = u.status === "available";
@@ -215,8 +222,25 @@ const App = (() => {
       <h1 class="page-title">十二篇指定文言經典 · 自學地圖</h1>
       <p class="page-subtitle">診斷弱項 → 微型學習 → 練習回饋 → 錯題修復 → 作品／進度累積</p>
       ${continueCard}
+      ${overviewCard}
       <div class="map-grid">${cards}</div>
     `);
+  }
+
+  async function pageOverview() {
+    setCrumb("跨篇章學習總覽");
+    renderLoading("跨篇章學習總覽");
+    try {
+      const curriculum = await loadCurriculum();
+      const available = (curriculum.units || []).filter((u) => u.status === "available");
+      const unitBundles = await Promise.all(available.map(async (entry) => ({
+        entry,
+        bundle: await loadUnitBundle(entry.id, { allQuestionBanks: true })
+      })));
+      ContentRenderer.renderCrossUnitOverview(curriculum, unitBundles);
+    } catch (e) {
+      renderFatalError(e.message);
+    }
   }
 
   async function withUnitBundle(unitId, options, onReady) {
@@ -373,6 +397,7 @@ const App = (() => {
   // ---------- 初始化 ----------
   function registerRoutes() {
     Router.register("/", pageHome);
+    Router.register("/overview", pageOverview);
     Router.register("/unit/:unitId", pageUnitHome);
     Router.register("/unit/:unitId/text", pageText);
     Router.register("/unit/:unitId/words", pageWords);
