@@ -192,6 +192,10 @@ try {
   await waitForTitle(page, "字詞與句式");
   check(await page.locator(".study-page-shell.words-study").count() === 1, "words route should render the shared study workspace");
   check(await page.locator("[data-word-card]").count() > 10, "words route should render the annotation bank as study cards");
+  check(await page.locator("[data-word-card]:visible").count() === 12, "large word banks should initially show a focused set of twelve cards");
+  await page.locator("#word-expand-btn").click();
+  check(await page.locator("[data-word-card]:visible").count() > 12, "word bank expand control should reveal the remaining cards");
+  await page.locator("#word-expand-btn").click();
   await page.locator("#word-filter").fill("謫守");
   check(await page.locator("[data-word-card]:visible").count() >= 1, "word search should filter the visible annotation cards");
   await page.locator("#word-filter").fill("");

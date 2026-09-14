@@ -8,7 +8,7 @@ const App = (() => {
 
   const cache = { curriculum: null, json: {}, scripts: {} };
   const UI_MODULES = Object.freeze({
-    content: "/assets/build/content-renderer.dd86b3f1f028.js",
+    content: "/assets/build/content-renderer.20678a614fb2.js",
     questions: "/assets/build/question-engine.ab36f2066af2.js",
     memorisation: "/assets/build/memorisation-engine.dab19bb23e8e.js"
   });

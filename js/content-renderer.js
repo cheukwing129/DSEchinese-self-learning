@@ -554,7 +554,7 @@ const ContentRenderer = (() => {
         ].filter(Boolean).join("");
         const searchText = [a.term, a.explanation, a.jyutping, a.putonghua].filter(Boolean).join(" ").toLowerCase();
         return `
-          <article class="word-study-card" data-word-card data-search="${esc(searchText)}">
+          <article class="word-study-card" data-word-card data-word-index="${index}" data-search="${esc(searchText)}">
             <div class="word-card-topline">
               <span class="word-card-index">${String(index + 1).padStart(2, "0")}</span>
               ${readings ? `<div class="word-reading-chips">${readings}</div>` : ""}
@@ -601,10 +601,11 @@ const ContentRenderer = (() => {
               <input id="word-filter" type="search" autocomplete="off" placeholder="搜尋字詞或解釋…" />
             </label>
           </div>
-          <p class="word-filter-status" id="word-filter-status" aria-live="polite">顯示全部 ${annotations.length} 個字詞</p>
+          <p class="word-filter-status" id="word-filter-status" aria-live="polite"></p>
           <div class="word-study-grid" id="word-study-grid">
             ${cards || `<div class="progress-empty-card"><span aria-hidden="true">字</span><div><strong>本篇暫未提供字詞資料</strong><p>可先閱讀原文或進入其他學習模組。</p></div></div>`}
           </div>
+          ${annotations.length > 12 ? `<div class="word-grid-footer"><button type="button" class="btn btn-secondary" id="word-expand-btn">查看全部 ${annotations.length} 個字詞</button><small>搜尋時會自動涵蓋全部字詞。</small></div>` : ""}
         </section>
 
         <aside class="study-next-panel">
@@ -617,17 +618,39 @@ const ContentRenderer = (() => {
 
     const filter = document.getElementById("word-filter");
     const status = document.getElementById("word-filter-status");
-    if (filter && status) {
-      filter.addEventListener("input", () => {
-        const query = filter.value.trim().toLowerCase();
-        let visible = 0;
-        document.querySelectorAll("[data-word-card]").forEach((card) => {
-          const match = !query || String(card.dataset.search || "").includes(query);
-          card.hidden = !match;
-          if (match) visible += 1;
-        });
-        status.textContent = query ? `找到 ${visible} 個符合項目` : `顯示全部 ${annotations.length} 個字詞`;
+    const expandButton = document.getElementById("word-expand-btn");
+    let expanded = annotations.length <= 12;
+    const applyWordFilter = () => {
+      if (!filter || !status) return;
+      const query = filter.value.trim().toLowerCase();
+      const searching = Boolean(query);
+      let visible = 0;
+      document.querySelectorAll("[data-word-card]").forEach((card, index) => {
+        const match = !query || String(card.dataset.search || "").includes(query);
+        const show = match && (searching || expanded || index < 12);
+        card.hidden = !show;
+        if (show) visible += 1;
       });
+      status.textContent = searching
+        ? `找到 ${visible} 個符合項目（搜尋範圍：全部 ${annotations.length} 個字詞）`
+        : expanded
+          ? `顯示全部 ${annotations.length} 個字詞`
+          : `先顯示 12 / ${annotations.length} 個字詞`;
+      if (expandButton) {
+        expandButton.hidden = searching;
+        expandButton.textContent = expanded ? "收起至首 12 個" : `查看全部 ${annotations.length} 個字詞`;
+      }
+    };
+    if (filter && status) {
+      filter.addEventListener("input", applyWordFilter);
+      if (expandButton) {
+        expandButton.addEventListener("click", () => {
+          expanded = !expanded;
+          applyWordFilter();
+          if (!expanded) document.getElementById("word-bank-title")?.scrollIntoView({ block: "start" });
+        });
+      }
+      applyWordFilter();
     }
   }
 

@@ -2938,6 +2938,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .word-reading-chips span { padding: 4px 7px; border-radius: 999px; background: var(--study-soft); color: var(--study-accent); font-size: 9px; font-weight: 800; }
 .word-study-card h2 { margin: 15px 0 8px; color: var(--color-ink); font-family: var(--font-display); font-size: 25px; font-weight: 620; }
 .word-study-card p { margin: 0; color: var(--color-ink-soft); font-size: 13px; line-height: 1.78; }
+.word-grid-footer { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 20px; }
+.word-grid-footer small { color: var(--color-ink-faint); font-size: 10px; }
+.word-grid-footer .btn[hidden] { display: none; }
 
 /* Comprehension */
 .comprehension-sequence { width: min(100%, 900px); margin: 0 auto; }
@@ -3113,6 +3116,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   .word-study-grid { grid-template-columns: 1fr; }
   .word-study-card { min-height: 0; padding: 19px; }
   .word-study-card h2 { font-size: 23px; }
+  .word-grid-footer { align-items: stretch; flex-direction: column; text-align: center; }
   .comprehension-step { grid-template-columns: 38px minmax(0, 1fr); }
   .comprehension-rail span { width: 30px; height: 30px; }
   .comprehension-rail i { min-height: 28px; }
