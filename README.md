@@ -87,10 +87,11 @@ data/_staging/dse-12-vocab-table.json  ← 十二篇字詞表原始資料（暫�
 
 1. 在 `data/units/` 下新增對應資料夾與 12 個 JSON 檔案（複製任一已完成篇章的結構）
 2. 把 `data/curriculum.json` 中該篇的 `status` 改為 `"available"`
-3. 題目物件的 `question_type` **必須**使用以下 6 種已驗證支援的類型，不可自創新類型：
-   `single_choice`、`short_answer`、`fill_table`、`extract_sentence`、`true_false_unknown`、`long_answer`
-   （多選題或需逐項作答的題目，統一用 `short_answer` 搭配 `items` 陣列呈現，不要自創 `matching`／`fill_in_blank`／`pos_meaning` 等類型，否則題目引擎會報「未支援的題型」錯誤。）
-4. 不需要改動任何 HTML/CSS/JS——全部頁面模板、題庫引擎、進度系統均為共用
+3. 題目物件的 `question_type` **必須**使用以下 9 種已驗證支援的類型，不可自創新類型：
+   `single_choice`、`multi_select`、`true_false_unknown`、`matching`、`extract_sentence`、`cloze_choice`、`short_answer`、`long_answer`、`fill_table`。
+   複合題可在主題目加 `items`，或以 `part2` 加入延伸題；`part2.type`／`part2.question_type` 亦必須使用以上支援類型。
+4. 修改 `data/` 或題目引擎後，GitHub Actions 的 **Validate content** 必須通過；它會檢查 JSON、題目 ID、題型結構、引用與必要檔案。
+5. 一般新增／修改篇章不需要改動 HTML/CSS/JS——全部頁面模板、題庫引擎、進度系統均為共用
 
 ### 誦讀音檔對照表
 
@@ -230,7 +231,7 @@ git push -u origin main
 - [ ] 以手機瀏覽器（或開發者工具的手機模擬檢視）開啟，文字與按鈕清晰可讀，可正常操作
 
 **核心篇章挑戰 / 我的掌握**
-- [ ] 核心篇章挑戰可選擇範圍與題數，作答後可看到結果與錯因分布
+- [ ] 核心篇章挑戰可選擇範圍與題數，作答後可看到結果與需補強範疇分布
 - [ ] `structure-skill.json` 為空陣列的篇章（部分詩詞），核心篇章挑戰仍能正常運作，只是該分類題數為 0
 - [ ] 「我的掌握」頁面顯示整體正確率、能力分項、錯題本，點擊錯題可跳回該題
 

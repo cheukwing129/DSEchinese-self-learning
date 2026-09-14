@@ -14,6 +14,50 @@ const QuestionEngine = (() => {
   const OBJECTIVE_TYPES = ["single_choice", "multi_select", "true_false_unknown", "matching", "extract_sentence", "cloze_choice"];
   const difficultyLabel = { basic: "基礎", intermediate: "進階", advanced: "挑戰" };
 
+  // ---------- 補強診斷 ----------
+  // 沒有人工標註 error_tags/remediation 時，只根據題目已知的能力分類、
+  // knowledge point 與段落位置提供補強方向，不推斷學生的心理／認知錯因。
+  function diagnosticTags(q, aggregate = false) {
+    if (Array.isArray(q.error_tags) && q.error_tags.length) return q.error_tags;
+    const ability = q.ability || "其他";
+    if (aggregate || !q.knowledge_point || q.knowledge_point === ability) return [ability];
+    return [ability, q.knowledge_point];
+  }
+
+  function paragraphHint(q) {
+    if (Array.isArray(q.paragraph_ref) && q.paragraph_ref.length) {
+      return "重讀第" + q.paragraph_ref.join("、") + "段，";
+    }
+    if (q.paragraph_ref !== null && q.paragraph_ref !== undefined && q.paragraph_ref !== "") {
+      return "重讀第" + q.paragraph_ref + "段，";
+    }
+    return "重讀題目相關原文，";
+  }
+
+  function defaultRemediation(q) {
+    if (q.remediation) return q.remediation;
+    const ability = q.ability || "";
+    if (ability.includes("字詞")) {
+      return "先回到「字詞與句式」，確認題目中的詞義、虛詞用法及語境，再重做同類題。";
+    }
+    if (ability.includes("內容理解")) {
+      return "先回到「疏通文意」，" + paragraphHint(q) + "用自己的話概括內容，再回來作答。";
+    }
+    if (ability.includes("結構") || ability.includes("手法") || ability.includes("鑒賞")) {
+      return "先回到「結構與鑒賞」，找出文本證據，再按「手法／結構 → 內容 → 作用」三步重答。";
+    }
+    if (ability.includes("主旨") || ability.includes("思考")) {
+      return "先回到「主旨與思考」，用一句話寫出篇章中心思想，再把題目引文與主旨連結。";
+    }
+    if (ability.includes("跨篇")) {
+      return "先分別列出兩篇的核心觀點／手法和文本證據，再比較相同與不同之處。";
+    }
+    if (ability.includes("情境")) {
+      return "先抽取原文可遷移的原則，再逐項對照情境條件，避免只憑直覺作答。";
+    }
+    return "重讀解析與題目相關內容，先指出自己需要補強的知識點，再重做同類題。";
+  }
+
   // ---------- selection helpers ----------
   function isCompositeQuestion(q) {
     return !!((q.items && q.items.length) || q.part2);
@@ -201,7 +245,7 @@ const QuestionEngine = (() => {
 
     App.mount(`
       <h1 class="page-title">核心篇章挑戰</h1>
-      <p class="page-subtitle">整合各分類題目，隨機抽題，並附錯因標籤與補救建議</p>
+      <p class="page-subtitle">整合各分類題目，隨機抽題，並提供需補強範疇與補救建議</p>
       <div class="card">
         <div class="section-title"><span class="seal">範</span>選擇範圍</div>
         <div class="option-list">${abilityCheckboxes}</div>
@@ -333,8 +377,8 @@ const QuestionEngine = (() => {
         if (isObjective) {
           answeredObjectiveCount += 1;
           if (rec.isCorrect) correctCount += 1;
-          if (rec.isCorrect === false && q.error_tags) {
-            q.error_tags.forEach((tag) => (errorTagCounts[tag] = (errorTagCounts[tag] || 0) + 1));
+          if (rec.isCorrect === false) {
+            diagnosticTags(q, true).forEach((tag) => (errorTagCounts[tag] = (errorTagCounts[tag] || 0) + 1));
           }
         }
       }
@@ -343,7 +387,7 @@ const QuestionEngine = (() => {
 
     const tagList = Object.keys(errorTagCounts).length
       ? `<ul class="scoring-elements">${Object.entries(errorTagCounts).map(([tag, n]) => `<li>${esc(tag)}（${n} 次）</li>`).join("")}</ul>`
-      : `<p style="color:var(--color-ink-soft); font-size:14px;">本次挑戰沒有可統計的錯因標籤。</p>`;
+      : `<p style="color:var(--color-ink-soft); font-size:14px;">本次已作答的客觀題沒有需要補強的範疇。</p>`;
 
     App.mount(`
       <h1 class="page-title">挑戰結果</h1>
@@ -356,7 +400,8 @@ const QuestionEngine = (() => {
         ${objectiveCount && answeredObjectiveCount < objectiveCount ? `<p style="font-size:12px; color:var(--color-ink-soft); margin:10px 0 0;">已作答客觀題 ${answeredObjectiveCount}/${objectiveCount}</p>` : ""}
       </div>
       <div class="card">
-        <div class="section-title"><span class="seal">因</span>錯因分布與補救建議</div>
+        <div class="section-title"><span class="seal">補</span>需補強範疇與補救建議</div>
+        <p style="font-size:12px; color:var(--color-ink-soft); margin:0 0 10px;">以下按錯題所屬能力分類統計，不推斷你的心理或認知錯因。</p>
         ${tagList}
       </div>
       <div class="btn-row">
@@ -838,9 +883,12 @@ const QuestionEngine = (() => {
     if (q.note) html += `<div class="reveal-row" style="margin-top:10px; color:var(--color-ink-soft); font-size:13px;">${esc(q.note)}</div>`;
 
     if (showRemediation && isObjective && state.isCorrect === false) {
+      const tags = diagnosticTags(q);
+      const remediation = defaultRemediation(q);
       html += `<div class="reveal-row" style="margin-top:12px;">
-        ${q.error_tags ? `<span class="reveal-label">可能錯因</span><div>${q.error_tags.map((t) => `<span class="tag" style="margin-right:4px;">${esc(t)}</span>`).join("")}</div>` : ""}
-        ${q.remediation ? `<div class="reveal-explanation" style="margin-top:6px;">💡 ${esc(q.remediation)}</div>` : ""}
+        <span class="reveal-label">需補強範疇</span>
+        <div>${tags.map((t) => `<span class="tag" style="margin-right:4px;">${esc(t)}</span>`).join("")}</div>
+        <div class="reveal-explanation" style="margin-top:6px;">💡 ${esc(remediation)}</div>
       </div>`;
     }
 
