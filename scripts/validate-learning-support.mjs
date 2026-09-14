@@ -47,7 +47,7 @@ const engine = fs.readFileSync(path.join(root, "js/question-engine.js"), "utf8")
 const progress = fs.readFileSync(path.join(root, "js/progress.js"), "utf8");
 
 const guards = [
-  [app.includes('{ resources: ["background"] }'), "unit home must request background.json"],
+  [app.includes('{ resources: ["background"], uiModules: ["content"] }'), "unit home must request background.json with lazy content UI"],
   [app.includes('resources: ["rubrics"]'), "question routes must request rubrics.json"],
   [renderer.includes("backgroundCardHTML"), "background renderer is missing"],
   [renderer.includes("不計入正確率，也不會被系統當成已掌握"), "self-review honesty label is missing"],
