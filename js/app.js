@@ -168,57 +168,39 @@ const App = (() => {
   }
 
   async function pageUnitHome(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
-      ContentRenderer.renderUnitHome(bundle, params.unitId);
-    });
+    await withUnitBundle(params.unitId, (bundle) => ContentRenderer.renderUnitHome(bundle, params.unitId));
   }
 
   async function pageText(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
-      ContentRenderer.renderTextPage(bundle, params.unitId);
-    });
+    await withUnitBundle(params.unitId, (bundle) => ContentRenderer.renderTextPage(bundle, params.unitId));
   }
 
   async function pageWords(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
-      ContentRenderer.renderWordsPage(bundle, params.unitId);
-    });
+    await withUnitBundle(params.unitId, (bundle) => ContentRenderer.renderWordsPage(bundle, params.unitId));
   }
 
   async function pageComprehension(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
-      ContentRenderer.renderComprehensionPage(bundle, params.unitId);
-    });
+    await withUnitBundle(params.unitId, (bundle) => ContentRenderer.renderComprehensionPage(bundle, params.unitId));
   }
 
   async function pageAnalysis(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
-      ContentRenderer.renderAnalysisPage(bundle, params.unitId);
-    });
+    await withUnitBundle(params.unitId, (bundle) => ContentRenderer.renderAnalysisPage(bundle, params.unitId));
   }
 
   async function pageTheme(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
-      ContentRenderer.renderThemePage(bundle, params.unitId);
-    });
+    await withUnitBundle(params.unitId, (bundle) => ContentRenderer.renderThemePage(bundle, params.unitId));
   }
 
   async function pageMemorisation(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
-      MemorisationEngine.render(bundle, params.unitId);
-    });
+    await withUnitBundle(params.unitId, (bundle) => MemorisationEngine.render(bundle, params.unitId));
   }
 
   async function pageCrossText(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
-      ContentRenderer.renderCrossTextPage(bundle, params.unitId);
-    });
+    await withUnitBundle(params.unitId, (bundle) => ContentRenderer.renderCrossTextPage(bundle, params.unitId));
   }
 
   async function pageProgress(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
-      ContentRenderer.renderProgressPage(bundle, params.unitId);
-    });
+    await withUnitBundle(params.unitId, (bundle) => ContentRenderer.renderProgressPage(bundle, params.unitId));
   }
 
   // quiz pages: bankName 對應 data/units/x/question-banks/<bankName>.json 的 "bank" 值
@@ -246,31 +228,45 @@ const App = (() => {
         mount(`<div class="empty-state">找不到對應的跨篇題目。</div>${footerNav(params.unitId, bundle.unit.title)}`);
         return;
       }
+
+      // 錯題本舊連結使用 qi=「完整 cross-text 題庫的 index」。
+      // 當頁面再按 target 篩選時，需要把該 index 轉回本頁的 index，否則會跳錯題。
+      let startIndex = 0;
+      if (params.__query.qid) {
+        const byId = questions.findIndex((q) => q.id === params.__query.qid);
+        if (byId >= 0) startIndex = byId;
+      } else if (params.__query.qi) {
+        const rawIndex = parseInt(params.__query.qi, 10);
+        if (!Number.isNaN(rawIndex)) {
+          if (params.target === "all") {
+            startIndex = rawIndex;
+          } else {
+            const original = all[rawIndex];
+            const filteredIndex = original ? questions.findIndex((q) => q.id === original.id) : -1;
+            if (filteredIndex >= 0) startIndex = filteredIndex;
+          }
+        }
+      }
+
       QuestionEngine.renderQuizSequence({
         bundle, unitId: params.unitId, questions,
         title: "跨篇比較與進階題",
         basePath: `#/unit/${params.unitId}`,
-        startIndex: 0, listKind: "cross-text"
+        startIndex, listKind: "cross-text"
       });
     });
   }
 
   async function pageChallengeSetup(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
-      QuestionEngine.renderChallengeSetup(bundle, params.unitId);
-    });
+    await withUnitBundle(params.unitId, (bundle) => QuestionEngine.renderChallengeSetup(bundle, params.unitId));
   }
 
   async function pageChallengeRun(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
-      QuestionEngine.renderChallengeRun(bundle, params.unitId);
-    });
+    await withUnitBundle(params.unitId, (bundle) => QuestionEngine.renderChallengeRun(bundle, params.unitId));
   }
 
   async function pageChallengeResult(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
-      QuestionEngine.renderChallengeResult(bundle, params.unitId);
-    });
+    await withUnitBundle(params.unitId, (bundle) => QuestionEngine.renderChallengeResult(bundle, params.unitId));
   }
 
   // ---------- 初始化 ----------
