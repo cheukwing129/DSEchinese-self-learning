@@ -15,12 +15,14 @@ function forbidText(text, label) {
 
 requireText("function loadJSONCached(path)", "shared JSON request cache");
 requireText("async function loadUnitBundle(unitId, options = {})", "option-based unit bundle loader");
+requireText('{ resources: ["background"] }', "background-only unit-home loading");
 requireText('{ resources: ["text"] }', "text-only route loading");
 requireText('{ resources: ["structure"] }', "structure-only route loading");
 requireText('{ resources: ["appreciation"] }', "appreciation-only route loading");
 requireText('{ resources: ["memorisation"] }', "memorisation-only route loading");
-requireText('{ banks: [bankName] }', "single-bank quiz loading");
-requireText('{ banks: ["cross-text"] }', "cross-text-only bank loading");
+requireText('{ resources: ["rubrics"], banks: [bankName] }', "single-bank quiz loading with rubric support");
+requireText('{ resources: ["rubrics"], banks: ["cross-text"] }', "cross-text bank loading with rubric support");
+requireText('{ resources: ["memorisation", "rubrics"], allQuestionBanks: true }', "aggregate progress loading with memorisation and rubrics");
 requireText("allQuestionBanks: true", "full question-bank loading for aggregate views");
 forbidText('fetchJSON(`${base}/background.json`)', "eager resource preload has returned");
 forbidText('fetchJSON(`${base}/rubrics.json`)', "eager resource preload has returned");
