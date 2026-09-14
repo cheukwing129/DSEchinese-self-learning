@@ -41,6 +41,10 @@ function normalizeText(value) {
     .trim();
 }
 
+function stripTrailingSourceCitation(value) {
+  return String(value ?? "").replace(/\s*[（(]《[^》]+》(?:[（(][^）)]*[）)])?[）)]\s*$/, "");
+}
+
 function duplicateValues(values) {
   const seen = new Set();
   const duplicates = new Set();
@@ -208,7 +212,7 @@ for (const entry of entries) {
         const scopedText = paragraphRefs.length
           ? paragraphRefs.map((paragraphRef) => paragraphMap.get(String(paragraphRef)) || "").join("\n")
           : wholeText;
-        if (!normalizeText(scopedText).includes(normalizeText(q.quote))) {
+        if (!normalizeText(scopedText).includes(normalizeText(stripTrailingSourceCitation(q.quote)))) {
           fail(`${location}: quote is not found in the referenced source text`);
         }
       }
