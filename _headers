@@ -1,10 +1,10 @@
 /
   Cache-Control: no-cache
-  Link: </assets/build/style.6bed4f389071.css>; rel=preload; as=style, </assets/build/progress.5c69413fd6a5.js>; rel=preload; as=script, </assets/build/router.9119a4cb77c2.js>; rel=preload; as=script, </assets/build/app.10e8a868fbfd.js>; rel=preload; as=script
+  Link: </assets/build/style.b3aa88701939.css>; rel=preload; as=style, </assets/build/progress.5c69413fd6a5.js>; rel=preload; as=script, </assets/build/router.9119a4cb77c2.js>; rel=preload; as=script, </assets/build/app.b237857b9d28.js>; rel=preload; as=script
 
 /index.html
   Cache-Control: no-cache
-  Link: </assets/build/style.6bed4f389071.css>; rel=preload; as=style, </assets/build/progress.5c69413fd6a5.js>; rel=preload; as=script, </assets/build/router.9119a4cb77c2.js>; rel=preload; as=script, </assets/build/app.10e8a868fbfd.js>; rel=preload; as=script
+  Link: </assets/build/style.b3aa88701939.css>; rel=preload; as=style, </assets/build/progress.5c69413fd6a5.js>; rel=preload; as=script, </assets/build/router.9119a4cb77c2.js>; rel=preload; as=script, </assets/build/app.b237857b9d28.js>; rel=preload; as=script
 
 /assets/build/*
   Cache-Control: public, max-age=31536000, immutable

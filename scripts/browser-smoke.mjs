@@ -189,6 +189,15 @@ try {
   const savedProgress = await page.evaluate(() => localStorage.getItem("ccsl_progress_v1"));
   check(!!savedProgress, "submitting a real browser quiz answer should persist local progress");
 
+  await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/progress"; });
+  await waitForTitle(page, "待修正");
+  check(await page.locator(".unit-progress-hero").count() === 1, "unit progress should render the learning-decision hero");
+  check(await page.locator(".evidence-strip").count() === 1, "unit progress should render an evidence summary strip");
+
+  await page.evaluate(() => { window.location.hash = "#/overview"; });
+  await page.locator(".overview-hero").waitFor({ state: "visible", timeout: 5000 });
+  check(await page.locator(".priority-stack").count() === 1, "cross-unit overview should render priority learning actions");
+
   await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/memorisation"; });
   await waitForTitle(page, "背誦精華");
   check(requestPaths.filter((p) => /\/memorisation-engine\.[0-9a-f]{12}\.js$/.test(p)).length === 1, "memorisation engine should load exactly once when first entering memorisation");
@@ -204,6 +213,14 @@ try {
   await page.locator(".q-stem").first().waitFor({ state: "visible", timeout: 5000 });
   const quizOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
   check(quizOverflow <= 1, `mobile quiz has horizontal overflow of ${quizOverflow}px`);
+  await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/progress"; });
+  await page.locator(".unit-progress-hero").waitFor({ state: "visible", timeout: 5000 });
+  const progressOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+  check(progressOverflow <= 1, `mobile unit progress has horizontal overflow of ${progressOverflow}px`);
+  await page.evaluate(() => { window.location.hash = "#/overview"; });
+  await page.locator(".overview-hero").waitFor({ state: "visible", timeout: 5000 });
+  const overviewOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+  check(overviewOverflow <= 1, `mobile cross-unit overview has horizontal overflow of ${overviewOverflow}px`);
 
   console.log(`Browser smoke metrics: home ready ${homeReadyMs}ms; DOMContentLoaded ${Math.round(cold.domContentLoaded || 0)}ms; load ${Math.round(cold.load || 0)}ms; eager JS ${eagerJsEncoded} encoded bytes; warm fingerprinted transfer ${warmTransferred} bytes.`);
   console.log(`Browser smoke routes passed: home → unit → text annotation → quiz submit → memorisation cloze; mobile overflow checks passed.`);
