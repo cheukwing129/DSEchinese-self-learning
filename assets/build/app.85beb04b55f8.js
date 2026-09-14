@@ -8,7 +8,7 @@ const App = (() => {
 
   const cache = { curriculum: null, json: {}, scripts: {} };
   const UI_MODULES = Object.freeze({
-    content: "/assets/build/content-renderer.811d66baa700.js",
+    content: "/assets/build/content-renderer.7ee22dd089b3.js",
     questions: "/assets/build/question-engine.f3f31972f3de.js",
     memorisation: "/assets/build/memorisation-engine.dab19bb23e8e.js"
   });
@@ -218,22 +218,36 @@ const App = (() => {
       renderFatalError(e.message);
       return;
     }
+
     const recent = Progress.latestLearning(curriculum.units);
     const recentUnit = recent ? curriculum.units.find((u) => u.id === recent.unitId) : null;
-    const continueCard = recent && recentUnit ? `
-      <div class="card" style="margin-bottom:24px;">
-        <div class="section-title"><span class="seal">續</span>繼續上次學習</div>
-        <p style="margin:0 0 6px; font-weight:700;">《${escapeHTML(recentUnit.title)}》 · ${escapeHTML(learningPathLabel(recent.path))}</p>
-        <p style="margin:0 0 14px; color:var(--color-ink-soft); font-size:13px;">根據這部裝置最近的學習位置或活動紀錄。</p>
-        <a class="btn btn-primary" href="#${escapeHTML(recent.path)}">繼續學習 →</a>
-      </div>` : "";
+    const firstAvailable = curriculum.units.find((u) => u.status === "available");
+    const primaryCard = recent && recentUnit ? `
+      <article class="home-action-card home-action-primary">
+        <p class="home-action-eyebrow">繼續上次學習</p>
+        <h2 class="home-action-title">《${escapeHTML(recentUnit.title)}》</h2>
+        <p class="home-action-meta">${escapeHTML(learningPathLabel(recent.path))}</p>
+        <p class="home-action-copy">從你在這部裝置留下的最近學習位置接續，不必重新尋找進度。</p>
+        <a class="btn home-action-button" href="#${escapeHTML(recent.path)}">繼續學習 <span aria-hidden="true">→</span></a>
+      </article>` : firstAvailable ? `
+      <article class="home-action-card home-action-primary">
+        <p class="home-action-eyebrow">第一次來到這裡？</p>
+        <h2 class="home-action-title">從《${escapeHTML(firstAvailable.title)}》開始</h2>
+        <p class="home-action-meta">${escapeHTML(firstAvailable.author || "")}</p>
+        <p class="home-action-copy">先讀原文，再按自己的節奏進入字詞、理解、賞析與練習。</p>
+        <a class="btn home-action-button" href="#/unit/${firstAvailable.id}">開始學習 <span aria-hidden="true">→</span></a>
+      </article>` : "";
 
     const overviewCard = `
-      <div class="card" style="margin-bottom:24px;">
-        <div class="section-title"><span class="seal">總</span>跨篇章學習總覽</div>
-        <p style="margin:0 0 14px; color:var(--color-ink-soft); font-size:13px; line-height:1.7;">集中查看各篇待修正錯題、曾答錯後已修正的題目，以及錯題較集中的能力範疇。總覽只在你開啟時才載入各篇題庫。</p>
-        <a class="btn btn-secondary" href="#/overview">查看跨篇章總覽 →</a>
-      </div>`;
+      <article class="home-action-card home-action-secondary">
+        <div class="home-action-symbol" aria-hidden="true">總</div>
+        <div>
+          <p class="home-action-eyebrow">學習整理</p>
+          <h2 class="home-action-title">跨篇章學習總覽</h2>
+          <p class="home-action-copy">集中查看待修正錯題、已修正紀錄與錯題較集中的能力範疇；只在開啟時載入完整題庫。</p>
+          <a class="home-text-link" href="#/overview">查看總覽 <span aria-hidden="true">→</span></a>
+        </div>
+      </article>`;
 
     const cards = curriculum.units
       .map((u) => {
@@ -245,20 +259,40 @@ const App = (() => {
         const href = isAvailable ? `href="#/unit/${u.id}"` : "";
         return `
           <${tag} class="card map-card card-tappable ${isAvailable ? "" : "is-disabled"}" ${href}>
-            ${badge}
-            ${u.group ? `<p class="map-group">${escapeHTML(u.group)}</p>` : ""}
+            <div class="map-card-top">
+              ${u.group ? `<p class="map-group">${escapeHTML(u.group)}</p>` : `<span></span>`}
+              ${badge}
+            </div>
             <p class="map-title">${escapeHTML(u.title)}</p>
             <p class="map-author">${escapeHTML(u.author)}</p>
+            ${isAvailable ? `<span class="map-arrow" aria-hidden="true">→</span>` : ""}
           </${tag}>
         `;
       })
       .join("");
+
     mount(`
-      <h1 class="page-title">十二篇指定文言經典 · 自學地圖</h1>
-      <p class="page-subtitle">診斷弱項 → 微型學習 → 練習回饋 → 錯題修復 → 作品／進度累積</p>
-      ${continueCard}
-      ${overviewCard}
-      <div class="map-grid">${cards}</div>
+      <section class="home-hero" aria-labelledby="home-title">
+        <p class="home-kicker">DSE 中文 · 指定文言經典</p>
+        <h1 id="home-title" class="home-title">讀懂經典，<span>一步一步變成自己的能力。</span></h1>
+        <p class="home-lead">從原文、字詞與文意出發，再進入賞析、背誦、作答與錯題修復。每次只做眼前最值得做的一步。</p>
+      </section>
+
+      <section class="home-action-grid" aria-label="學習捷徑">
+        ${primaryCard}
+        ${overviewCard}
+      </section>
+
+      <section class="home-curriculum" aria-labelledby="curriculum-title">
+        <div class="home-section-heading">
+          <div>
+            <p class="section-kicker">課程地圖</p>
+            <h2 id="curriculum-title">選一篇，開始今天的學習</h2>
+          </div>
+          <p>不設虛假的總掌握百分比；進度只反映這部裝置留下的真實學習紀錄。</p>
+        </div>
+        <div class="map-grid">${cards}</div>
+      </section>
     `);
   }
 
