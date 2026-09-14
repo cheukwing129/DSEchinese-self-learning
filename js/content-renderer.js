@@ -736,8 +736,11 @@ const ContentRenderer = (() => {
         <div class="progress-panel">
           <div class="progress-panel-heading"><div><p class="section-kicker">背誦證據</p><h2>背誦練習</h2></div><a class="text-link" href="#/unit/${unitId}/memorisation">前往背誦精華 →</a></div>
           <div class="mini-evidence-strip"><span><strong>${memoStats.clozePractisedGroups}</strong>做過遮字</span><span><strong>${memoStats.reorderPassedGroups}</strong>重組曾排對</span></div>
-          <div class="memorisation-evidence-list">${memorisationRows || `<div class="progress-empty-card compact"><span>○</span><div><strong>本篇尚未提供背誦句群</strong></div></div>`}</div>
-          <p class="progress-method-note">易錯字重溫：${memoStats.charsViewed ? "已開啟重溫" : "尚未重溫"}</p>
+          ${memorisationRows ? `<details class="evidence-details">
+            <summary><span>查看 ${memoStats.totalGroups} 個句群練習明細</span><small>${memoStats.practisedGroups}/${memoStats.totalGroups} 已練習</small></summary>
+            <div class="memorisation-evidence-list">${memorisationRows}</div>
+          </details>` : `<div class="progress-empty-card compact"><span>○</span><div><strong>本篇尚未提供背誦句群</strong></div></div>`}
+          <p class="progress-method-note" style="margin-top:12px;">易錯字重溫：${memoStats.charsViewed ? "已開啟重溫" : "尚未重溫"}</p>
         </div>
       </section>
 

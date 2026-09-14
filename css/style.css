@@ -2127,3 +2127,45 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .priority-card, .wrong-evidence-card { transition: none !important; }
 }
+
+
+/* Progress UI 2.0 detail disclosure */
+.evidence-details {
+  overflow: hidden;
+  margin-top: 10px;
+  border: 1px solid rgba(23,73,64,.09);
+  border-radius: 14px;
+  background: rgba(255,255,255,.48);
+}
+.evidence-details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 13px;
+  cursor: pointer;
+  list-style: none;
+  color: var(--color-ink);
+  font-size: 10px;
+  font-weight: 800;
+}
+.evidence-details summary::-webkit-details-marker { display: none; }
+.evidence-details summary::after {
+  content: "+";
+  flex: none;
+  color: var(--color-accent);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+}
+.evidence-details[open] summary::after { content: "−"; }
+.evidence-details summary small {
+  margin-left: auto;
+  color: var(--color-ink-faint);
+  font-size: 9px;
+  font-weight: 650;
+}
+.evidence-details .memorisation-evidence-list {
+  padding: 0 13px 4px;
+  border-top: 1px solid rgba(23,73,64,.07);
+}
