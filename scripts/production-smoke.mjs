@@ -105,7 +105,7 @@ try {
   });
 
   await page.goto(`${productionURL}/#/`, { waitUntil: "networkidle", timeout: 20000 });
-  await page.locator(".page-title", { hasText: "十二篇指定文言經典" }).waitFor({ state: "visible", timeout: 8000 });
+  await page.locator(".page-title", { hasText: "讀懂經典" }).waitFor({ state: "visible", timeout: 8000 });
   check(await page.locator(".map-card").count() === 16, "production home should render 16 curriculum cards");
   const homeOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
   check(homeOverflow <= 1, `production mobile home has horizontal overflow of ${homeOverflow}px`);
