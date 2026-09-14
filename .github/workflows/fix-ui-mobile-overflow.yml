@@ -1,0 +1,45 @@
+name: Fix UI mobile overflow
+
+on:
+  push:
+    branches:
+      - feat/ui-refinement
+    paths:
+      - scripts/fix-ui-mobile-overflow.py
+      - .github/workflows/fix-ui-mobile-overflow.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: feat/ui-refinement
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Apply mobile overflow fix
+        run: python3 scripts/fix-ui-mobile-overflow.py
+      - name: Rebuild fingerprinted assets
+        run: node scripts/build-assets.mjs --write
+      - name: Validate static contracts
+        run: |
+          node --check js/app.js
+          node --check js/content-renderer.js
+          for f in assets/build/*.js; do node --check "$f"; done
+          node scripts/build-assets.mjs --check
+          node scripts/validate-performance.mjs
+      - name: Commit fix
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add css/style.css index.html _headers assets/build
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Fix mobile quiz overflow in refined UI"
+            git push origin HEAD:feat/ui-refinement
+          fi
