@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   validate:
-    name: JavaScript and content data
+    name: JavaScript, content and accessibility
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
@@ -32,3 +32,6 @@ jobs:
 
       - name: Validate curriculum and question data
         run: node scripts/validate-data.mjs
+
+      - name: Validate accessibility interactions
+        run: node scripts/validate-accessibility.mjs
