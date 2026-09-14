@@ -38,6 +38,7 @@ const Progress = (() => {
       unit.memorisation.groups = {};
     }
     if (!("charsViewedAt" in unit.memorisation)) unit.memorisation.charsViewedAt = null;
+    if (!unit.selfReview || typeof unit.selfReview !== "object") unit.selfReview = {};
     return unit;
   }
 
@@ -152,6 +153,19 @@ const Progress = (() => {
     };
   }
 
+  function setSelfReviewItem(unitId, item, checked) {
+    if (!item) return;
+    const all = unitStore(unitId);
+    if (checked) all[unitId].selfReview[item] = true;
+    else delete all[unitId].selfReview[item];
+    saveAll(all);
+  }
+
+  function getSelfReview(unitId) {
+    const all = unitStore(unitId);
+    return { ...all[unitId].selfReview };
+  }
+
   function clearUnit(unitId) {
     const all = loadAll();
     delete all[unitId];
@@ -208,6 +222,7 @@ const Progress = (() => {
     recordAnswer, getAnswer, getAllAnswers,
     saveReflection, getReflection,
     recordMemorisationAttempt, markMemorisationCharactersViewed, memorisationStats,
+    setSelfReviewItem, getSelfReview,
     clearUnit, abilityStats, wrongQuestionIds, overallAccuracy
   };
 })();

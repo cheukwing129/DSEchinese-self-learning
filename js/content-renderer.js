@@ -23,8 +23,31 @@ const ContentRenderer = (() => {
     return html || `<p style="margin:0; color:var(--color-ink-soft);">本篇主旨資料尚待補充。</p>`;
   }
 
+  function backgroundCardHTML(value, fallbackTitle) {
+    if (!value) return "";
+    const title = typeof value === "object" ? (value.title || fallbackTitle) : fallbackTitle;
+    const content = typeof value === "object" ? value.content : value;
+    if (!content) return "";
+    return `<details class="card card-tight">
+      <summary style="cursor:pointer; font-weight:700;">${esc(title)}</summary>
+      <p style="margin:12px 0 0; line-height:1.9; color:var(--color-ink-soft);">${esc(content)}</p>
+    </details>`;
+  }
+
+  function rubricChecklist(rubrics) {
+    if (!rubrics || typeof rubrics !== "object") return [];
+    if (Array.isArray(rubrics.self_review_checklist)) return rubrics.self_review_checklist;
+    if (Array.isArray(rubrics.self_check_prompts)) return rubrics.self_check_prompts;
+    return [];
+  }
+
   function renderUnitHome(bundle, unitId) {
     const u = bundle.unit;
+    const background = bundle.background || {};
+    const backgroundCards = [
+      backgroundCardHTML(background.author_intro, "作者簡介"),
+      backgroundCardHTML(background.writing_background, "寫作背景")
+    ].filter(Boolean).join("");
     const moduleDescs = {
       text: "全文分段、點字看注釋、朗讀提示",
       words: "實詞／虛詞／通假／古今義",
@@ -50,6 +73,10 @@ const ContentRenderer = (() => {
     App.mount(`
       <h1 class="page-title">《${esc(u.title)}》</h1>
       <p class="page-subtitle">${esc(u.author)} · ${esc(u.dynasty)} · ${esc(u.genre)}</p>
+      ${backgroundCards ? `
+        <div class="section-title"><span class="seal">知</span>作者與背景</div>
+        <div class="module-grid" style="margin-bottom:24px;">${backgroundCards}</div>
+      ` : ""}
       <div class="module-grid">${cards}</div>
 
       <div class="section-title" style="margin-top:32px;">
@@ -415,6 +442,8 @@ const ContentRenderer = (() => {
     const wrongQuestions = allQuestions.filter((q) => wrongIds.includes(q.id));
     const reflection = Progress.getReflection(unitId, "theme");
     const memoStats = Progress.memorisationStats(unitId, (bundle.memorisation && bundle.memorisation.sentence_groups) || []);
+    const selfReviewItems = rubricChecklist(bundle.rubrics);
+    const savedSelfReview = Progress.getSelfReview(unitId);
 
     const abilityRows = Object.keys(abilities)
       .map((ab) => {
@@ -448,6 +477,14 @@ const ContentRenderer = (() => {
             <div class="bar-track" style="margin-top:7px;"><div class="bar-fill" style="width:${g.cloze && g.cloze.bestRate != null ? g.cloze.bestRate : 0}%;"></div></div>
           </div>`;
       })
+      .join("");
+
+    const selfReviewList = selfReviewItems
+      .map((item) => `
+        <label class="option-item" style="cursor:pointer; align-items:flex-start;">
+          <input type="checkbox" class="self-review-check" data-review-key="${esc(item)}" ${savedSelfReview[item] ? "checked" : ""} style="width:18px; height:18px; margin-top:2px; flex-shrink:0;" />
+          <span>${esc(item)}</span>
+        </label>`)
       .join("");
 
     const wrongList = wrongQuestions.length
@@ -491,6 +528,13 @@ const ContentRenderer = (() => {
         ${abilityRows || `<p class="empty-state">尚未有作答紀錄。</p>`}
       </div>
 
+      ${selfReviewList ? `
+      <div class="card">
+        <div class="section-title"><span class="seal">檢</span>自我檢核</div>
+        <p style="font-size:13px; color:var(--color-ink-soft); margin:0 0 12px;">這是你自己的學習檢核紀錄，只表示「我認為自己能做到」，不計入正確率，也不會被系統當成已掌握。</p>
+        <div class="option-list">${selfReviewList}</div>
+      </div>` : ""}
+
       <div class="card">
         <div class="section-title"><span class="seal">背</span>背誦練習</div>
         <div class="stat-grid" style="margin-bottom:14px;">
@@ -528,8 +572,14 @@ const ContentRenderer = (() => {
       ${App.footerNav(unitId, unit.title)}
     `);
 
+    document.querySelectorAll(".self-review-check").forEach((box) => {
+      box.addEventListener("change", () => {
+        Progress.setSelfReviewItem(unitId, box.dataset.reviewKey, box.checked);
+      });
+    });
+
     document.getElementById("clear-progress-btn").addEventListener("click", () => {
-      if (confirm("確定要清除《" + unit.title + "》的所有作答、背誦練習與反思紀錄嗎？此動作無法復原。")) {
+      if (confirm("確定要清除《" + unit.title + "》的所有作答、背誦練習、自評檢核與反思紀錄嗎？此動作無法復原。")) {
         Progress.clearUnit(unitId);
         renderProgressPage(bundle, unitId);
       }

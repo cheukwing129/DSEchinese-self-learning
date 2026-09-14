@@ -206,7 +206,7 @@ const App = (() => {
   }
 
   async function pageUnitHome(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["background"] }, (bundle) => {
       ContentRenderer.renderUnitHome(bundle, params.unitId);
     });
   }
@@ -254,14 +254,14 @@ const App = (() => {
   }
 
   async function pageProgress(params) {
-    await withUnitBundle(params.unitId, { resources: ["memorisation"], allQuestionBanks: true }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["memorisation", "rubrics"], allQuestionBanks: true }, (bundle) => {
       ContentRenderer.renderProgressPage(bundle, params.unitId);
     });
   }
 
   // quiz pages: bankName 對應 data/units/x/question-banks/<bankName>.json 的 "bank" 值
   async function pageQuiz(params, bankName, title) {
-    await withUnitBundle(params.unitId, { banks: [bankName] }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["rubrics"], banks: [bankName] }, (bundle) => {
       const questions = bundle.banks[bankName] || [];
       if (!questions.length) {
         mount(`<div class="empty-state">此題庫（${escapeHTML(bankName)}）暫無題目。</div>${footerNav(params.unitId, bundle.unit.title)}`);
@@ -277,7 +277,7 @@ const App = (() => {
   }
 
   async function pageCrossTextQuiz(params) {
-    await withUnitBundle(params.unitId, { banks: ["cross-text"] }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["rubrics"], banks: ["cross-text"] }, (bundle) => {
       const all = bundle.banks["cross-text"] || [];
       const questions = params.target === "all" ? all : all.filter((q) => q.cross_text_target === params.target);
       if (!questions.length) {
@@ -314,19 +314,19 @@ const App = (() => {
   }
 
   async function pageChallengeSetup(params) {
-    await withUnitBundle(params.unitId, { allQuestionBanks: true }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["rubrics"], allQuestionBanks: true }, (bundle) => {
       QuestionEngine.renderChallengeSetup(bundle, params.unitId);
     });
   }
 
   async function pageChallengeRun(params) {
-    await withUnitBundle(params.unitId, { allQuestionBanks: true }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["rubrics"], allQuestionBanks: true }, (bundle) => {
       QuestionEngine.renderChallengeRun(bundle, params.unitId);
     });
   }
 
   async function pageChallengeResult(params) {
-    await withUnitBundle(params.unitId, { allQuestionBanks: true }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["rubrics"], allQuestionBanks: true }, (bundle) => {
       QuestionEngine.renderChallengeResult(bundle, params.unitId);
     });
   }
