@@ -34,3 +34,4 @@ jobs:
           name: progress-ui2-review
           path: progress-ui2-review/
           retention-days: 1
+# rerun after compacting memorisation detail
