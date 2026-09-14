@@ -6,7 +6,7 @@ const App = (() => {
   const mainEl = () => document.getElementById("app-main");
   const crumbEl = () => document.getElementById("header-crumb");
 
-  const cache = { curriculum: null, units: {} }; // units[unitId] = bundle
+  const cache = { curriculum: null, json: {} };
 
   // ---------- 資料載入 ----------
   async function fetchJSON(path) {
@@ -26,37 +26,71 @@ const App = (() => {
     }
   }
 
+  function loadJSONCached(path) {
+    if (!cache.json[path]) {
+      cache.json[path] = fetchJSON(path).catch((err) => {
+        delete cache.json[path];
+        throw err;
+      });
+    }
+    return cache.json[path];
+  }
+
   async function loadCurriculum() {
     if (cache.curriculum) return cache.curriculum;
-    cache.curriculum = await fetchJSON("data/curriculum.json");
+    cache.curriculum = await loadJSONCached("data/curriculum.json");
     return cache.curriculum;
   }
 
-  async function loadUnitBundle(unitId) {
-    if (cache.units[unitId]) return cache.units[unitId];
-    const base = `data/units/${unitId}`;
-    const unit = await fetchJSON(`${base}/unit.json`);
+  function unitBase(unitId) {
+    return `data/units/${unitId}`;
+  }
 
-    const [text, background, appreciation, structure, memorisation, rubrics] = await Promise.all([
-      fetchJSON(`${base}/text.json`),
-      fetchJSON(`${base}/background.json`),
-      fetchJSON(`${base}/appreciation.json`),
-      fetchJSON(`${base}/structure.json`),
-      fetchJSON(`${base}/memorisation.json`),
-      fetchJSON(`${base}/rubrics.json`)
-    ]);
+  function bankFileName(path) {
+    const leaf = path.split("/").pop() || "";
+    return leaf.replace(/\.json$/i, "");
+  }
 
-    const bankFiles = unit.question_bank_files || [];
-    const bankResults = await Promise.all(bankFiles.map((f) => fetchJSON(`${base}/${f}`)));
-    const banks = {};
-    let allQuestions = [];
-    bankResults.forEach((b) => {
-      banks[b.bank] = b.questions;
-      allQuestions = allQuestions.concat(b.questions);
-    });
+  async function loadUnitMeta(unitId) {
+    return loadJSONCached(`${unitBase(unitId)}/unit.json`);
+  }
 
-    const bundle = { unit, text, background, appreciation, structure, memorisation, rubrics, banks, allQuestions };
-    cache.units[unitId] = bundle;
+  async function loadUnitResource(unitId, resource) {
+    return loadJSONCached(`${unitBase(unitId)}/${resource}.json`);
+  }
+
+  async function loadQuestionBank(unitId, unit, bankName) {
+    const file = (unit.question_bank_files || []).find((f) => bankFileName(f) === bankName);
+    if (!file) throw new Error(`篇章「${unit.title || unitId}」沒有題庫「${bankName}」。`);
+    return loadJSONCached(`${unitBase(unitId)}/${file}`);
+  }
+
+  async function loadUnitBundle(unitId, options = {}) {
+    const unit = await loadUnitMeta(unitId);
+    const resources = [...new Set(options.resources || [])];
+    const requestedBanks = [...new Set(options.banks || [])];
+    const bankNames = options.allQuestionBanks
+      ? (unit.question_bank_files || []).map(bankFileName)
+      : requestedBanks;
+
+    const bundle = { unit, banks: {} };
+
+    await Promise.all(resources.map(async (resource) => {
+      bundle[resource] = await loadUnitResource(unitId, resource);
+    }));
+
+    if (bankNames.length) {
+      const results = await Promise.all(bankNames.map((name) => loadQuestionBank(unitId, unit, name)));
+      results.forEach((bank, index) => {
+        const name = bank.bank || bankNames[index];
+        bundle.banks[name] = bank.questions || [];
+      });
+    }
+
+    if (options.allQuestionBanks) {
+      bundle.allQuestions = Object.values(bundle.banks).flat();
+    }
+
     return bundle;
   }
 
@@ -154,11 +188,15 @@ const App = (() => {
     `);
   }
 
-  async function withUnitBundle(unitId, onReady) {
+  async function withUnitBundle(unitId, options, onReady) {
+    if (typeof options === "function") {
+      onReady = options;
+      options = {};
+    }
     renderLoading("篇章資料");
     let bundle;
     try {
-      bundle = await loadUnitBundle(unitId);
+      bundle = await loadUnitBundle(unitId, options || {});
     } catch (e) {
       renderFatalError(e.message);
       return;
@@ -174,37 +212,37 @@ const App = (() => {
   }
 
   async function pageText(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["text"] }, (bundle) => {
       ContentRenderer.renderTextPage(bundle, params.unitId);
     });
   }
 
   async function pageWords(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["text"] }, (bundle) => {
       ContentRenderer.renderWordsPage(bundle, params.unitId);
     });
   }
 
   async function pageComprehension(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["text"] }, (bundle) => {
       ContentRenderer.renderComprehensionPage(bundle, params.unitId);
     });
   }
 
   async function pageAnalysis(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["structure"] }, (bundle) => {
       ContentRenderer.renderAnalysisPage(bundle, params.unitId);
     });
   }
 
   async function pageTheme(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["appreciation"] }, (bundle) => {
       ContentRenderer.renderThemePage(bundle, params.unitId);
     });
   }
 
   async function pageMemorisation(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["memorisation"] }, (bundle) => {
       MemorisationEngine.render(bundle, params.unitId);
     });
   }
@@ -216,14 +254,14 @@ const App = (() => {
   }
 
   async function pageProgress(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["memorisation"], allQuestionBanks: true }, (bundle) => {
       ContentRenderer.renderProgressPage(bundle, params.unitId);
     });
   }
 
   // quiz pages: bankName 對應 data/units/x/question-banks/<bankName>.json 的 "bank" 值
   async function pageQuiz(params, bankName, title) {
-    await withUnitBundle(params.unitId, (bundle) => {
+    await withUnitBundle(params.unitId, { banks: [bankName] }, (bundle) => {
       const questions = bundle.banks[bankName] || [];
       if (!questions.length) {
         mount(`<div class="empty-state">此題庫（${escapeHTML(bankName)}）暫無題目。</div>${footerNav(params.unitId, bundle.unit.title)}`);
@@ -239,7 +277,7 @@ const App = (() => {
   }
 
   async function pageCrossTextQuiz(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
+    await withUnitBundle(params.unitId, { banks: ["cross-text"] }, (bundle) => {
       const all = bundle.banks["cross-text"] || [];
       const questions = params.target === "all" ? all : all.filter((q) => q.cross_text_target === params.target);
       if (!questions.length) {
@@ -276,19 +314,19 @@ const App = (() => {
   }
 
   async function pageChallengeSetup(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
+    await withUnitBundle(params.unitId, { allQuestionBanks: true }, (bundle) => {
       QuestionEngine.renderChallengeSetup(bundle, params.unitId);
     });
   }
 
   async function pageChallengeRun(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
+    await withUnitBundle(params.unitId, { allQuestionBanks: true }, (bundle) => {
       QuestionEngine.renderChallengeRun(bundle, params.unitId);
     });
   }
 
   async function pageChallengeResult(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
+    await withUnitBundle(params.unitId, { allQuestionBanks: true }, (bundle) => {
       QuestionEngine.renderChallengeResult(bundle, params.unitId);
     });
   }
