@@ -1,0 +1,56 @@
+name: Apply accessibility patch
+
+on:
+  push:
+    branches:
+      - fix/accessibility-interactions
+    paths:
+      - .github/workflows/apply-accessibility-patch.yml
+      - scripts/patch-accessibility.py
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out patch branch
+        uses: actions/checkout@v4
+        with:
+          ref: fix/accessibility-interactions
+          fetch-depth: 0
+
+      - name: Check patch script
+        run: python3 -m py_compile scripts/patch-accessibility.py
+
+      - name: Apply accessibility patch
+        run: python3 scripts/patch-accessibility.py
+
+      - name: Check JavaScript syntax
+        run: |
+          node --check js/app.js
+          node --check js/question-engine.js
+          node --check js/content-renderer.js
+          node --check js/memorisation-engine.js
+
+      - name: Guard semantic interaction regressions
+        run: |
+          ! grep -q '<div class="option-item' js/question-engine.js
+          ! grep -q '<span class="reorder-chip" data-chip' js/memorisation-engine.js
+          grep -q 'button type="button" class="term"' js/content-renderer.js
+          grep -q 'aria-live="polite"' js/question-engine.js
+
+      - name: Commit patched files
+        run: |
+          if git diff --quiet; then
+            echo "No accessibility changes required."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/app.js js/question-engine.js js/content-renderer.js js/memorisation-engine.js css/style.css
+          git commit -m "Improve keyboard and screen reader interactions"
+          git push origin HEAD:fix/accessibility-interactions
