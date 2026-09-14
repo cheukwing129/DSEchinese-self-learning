@@ -44,7 +44,7 @@
       "unit": "liuguolun",
       "ability": "內容理解",
       "knowledge_point": "賂秦國家的三個錯誤",
-      "question_type": "fill_table",
+      "question_type": "long_answer",
       "is_cross_text": false,
       "paragraph_ref": 2,
       "difficulty": "basic",

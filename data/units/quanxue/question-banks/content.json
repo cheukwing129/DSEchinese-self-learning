@@ -193,7 +193,25 @@
         "stem": "承上題，上述句子採用了甚麼起筆方法？（A 設問／B 反問／C 比喻／D 開門見山）",
         "type": "single_choice",
         "score": 2,
-        "answer_text": "D 開門見山"
+        "options": [
+          {
+            "key": "A",
+            "text": "設問"
+          },
+          {
+            "key": "B",
+            "text": "反問"
+          },
+          {
+            "key": "C",
+            "text": "比喻"
+          },
+          {
+            "key": "D",
+            "text": "開門見山"
+          }
+        ],
+        "answer": "D"
       },
       "source": "校本試題庫"
     },
