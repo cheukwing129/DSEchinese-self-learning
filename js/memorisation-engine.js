@@ -170,8 +170,6 @@ const MemorisationEngine = (() => {
           st.revealed = true;
           Progress.recordMemorisationAttempt(unitId, group.id, "cloze", st.result);
           paint();
-          activeTab = "cloze";
-          renderCloze(document.getElementById("memo-body"));
         });
       }
       document.getElementById("cloze-retry-btn").addEventListener("click", () => {
@@ -238,6 +236,8 @@ const MemorisationEngine = (() => {
             const orderedText = st.placed.map((id) => st.chips.find((c) => c.id === id).text).join("");
             st.result = orderedText === group.text;
             Progress.recordMemorisationAttempt(unitId, group.id, "reorder", { isCorrect: st.result });
+            paint();
+            return;
           }
           renderReorder(el);
         });
