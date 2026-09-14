@@ -1,0 +1,5 @@
+/
+  Link: </css/style.css>; rel=preload; as=style, </js/progress.js>; rel=preload; as=script, </js/router.js>; rel=preload; as=script, </js/app.js>; rel=preload; as=script
+
+/index.html
+  Link: </css/style.css>; rel=preload; as=style, </js/progress.js>; rel=preload; as=script, </js/router.js>; rel=preload; as=script, </js/app.js>; rel=preload; as=script

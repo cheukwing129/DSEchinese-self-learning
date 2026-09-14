@@ -6,7 +6,12 @@ const App = (() => {
   const mainEl = () => document.getElementById("app-main");
   const crumbEl = () => document.getElementById("header-crumb");
 
-  const cache = { curriculum: null, json: {} };
+  const cache = { curriculum: null, json: {}, scripts: {} };
+  const UI_MODULES = Object.freeze({
+    content: "js/content-renderer.js",
+    questions: "js/question-engine.js",
+    memorisation: "js/memorisation-engine.js"
+  });
 
   // ---------- 資料載入 ----------
   async function fetchJSON(path) {
@@ -34,6 +39,33 @@ const App = (() => {
       });
     }
     return cache.json[path];
+  }
+
+  function loadScriptCached(src) {
+    if (!cache.scripts[src]) {
+      cache.scripts[src] = new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = src;
+        script.async = true;
+        script.dataset.uiModule = src;
+        script.addEventListener("load", () => resolve(), { once: true });
+        script.addEventListener("error", () => {
+          delete cache.scripts[src];
+          script.remove();
+          reject(new Error(`無法載入介面模組「${src}」。`));
+        }, { once: true });
+        document.head.appendChild(script);
+      });
+    }
+    return cache.scripts[src];
+  }
+
+  function loadUIModules(names = []) {
+    return Promise.all([...new Set(names)].map((name) => {
+      const src = UI_MODULES[name];
+      if (!src) return Promise.reject(new Error(`未知介面模組「${name}」。`));
+      return loadScriptCached(src);
+    }));
   }
 
   async function loadCurriculum() {
@@ -245,7 +277,10 @@ const App = (() => {
     setCrumb("跨篇章學習總覽");
     renderLoading("跨篇章學習總覽");
     try {
-      const { curriculum, unitBundles } = await loadCrossUnitBundles();
+      const [{ curriculum, unitBundles }] = await Promise.all([
+        loadCrossUnitBundles(),
+        loadUIModules(["content"])
+      ]);
       if (!Router.isCurrentNavigation(navigationId)) return;
       ContentRenderer.renderCrossUnitOverview(curriculum, unitBundles);
     } catch (e) {
@@ -260,7 +295,10 @@ const App = (() => {
     setCrumb(ability ? `${ability} · 跨篇章重練` : "跨篇章錯題重練");
     renderLoading("跨篇章錯題重練");
     try {
-      const { unitBundles } = await loadCrossUnitBundles();
+      const [{ unitBundles }] = await Promise.all([
+        loadCrossUnitBundles(),
+        loadUIModules(["questions"])
+      ]);
       if (!Router.isCurrentNavigation(navigationId)) return;
       QuestionEngine.renderCrossUnitWrongRetry(unitBundles, ability);
     } catch (e) {
@@ -275,10 +313,14 @@ const App = (() => {
       onReady = options;
       options = {};
     }
+    const uiModules = [...new Set(options.uiModules || [])];
     renderLoading("篇章資料");
     let bundle;
     try {
-      bundle = await loadUnitBundle(unitId, options || {});
+      [bundle] = await Promise.all([
+        loadUnitBundle(unitId, options || {}),
+        loadUIModules(uiModules)
+      ]);
       if (!Router.isCurrentNavigation(navigationId)) return;
     } catch (e) {
       if (!Router.isCurrentNavigation(navigationId)) return;
@@ -292,68 +334,68 @@ const App = (() => {
   }
 
   async function pageUnitHome(params) {
-    await withUnitBundle(params.unitId, { resources: ["background"] }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["background"], uiModules: ["content"] }, (bundle) => {
       ContentRenderer.renderUnitHome(bundle, params.unitId);
     });
   }
 
   async function pageText(params) {
-    await withUnitBundle(params.unitId, { resources: ["text"] }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["text"], uiModules: ["content"] }, (bundle) => {
       ContentRenderer.renderTextPage(bundle, params.unitId);
     });
   }
 
   async function pageWords(params) {
-    await withUnitBundle(params.unitId, { resources: ["text"] }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["text"], uiModules: ["content"] }, (bundle) => {
       ContentRenderer.renderWordsPage(bundle, params.unitId);
     });
   }
 
   async function pageComprehension(params) {
-    await withUnitBundle(params.unitId, { resources: ["text"] }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["text"], uiModules: ["content"] }, (bundle) => {
       ContentRenderer.renderComprehensionPage(bundle, params.unitId);
     });
   }
 
   async function pageAnalysis(params) {
-    await withUnitBundle(params.unitId, { resources: ["structure"] }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["structure"], uiModules: ["content"] }, (bundle) => {
       ContentRenderer.renderAnalysisPage(bundle, params.unitId);
     });
   }
 
   async function pageTheme(params) {
-    await withUnitBundle(params.unitId, { resources: ["appreciation"] }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["appreciation"], uiModules: ["content"] }, (bundle) => {
       ContentRenderer.renderThemePage(bundle, params.unitId);
     });
   }
 
   async function pageMemorisation(params) {
-    await withUnitBundle(params.unitId, { resources: ["memorisation"] }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["memorisation"], uiModules: ["memorisation"] }, (bundle) => {
       MemorisationEngine.render(bundle, params.unitId);
     });
   }
 
   async function pageCrossText(params) {
-    await withUnitBundle(params.unitId, (bundle) => {
+    await withUnitBundle(params.unitId, { uiModules: ["content"] }, (bundle) => {
       ContentRenderer.renderCrossTextPage(bundle, params.unitId);
     });
   }
 
   async function pageProgress(params) {
-    await withUnitBundle(params.unitId, { resources: ["memorisation", "rubrics"], allQuestionBanks: true }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["memorisation", "rubrics"], allQuestionBanks: true, uiModules: ["content"] }, (bundle) => {
       ContentRenderer.renderProgressPage(bundle, params.unitId);
     });
   }
 
   async function pageWrongRetry(params) {
-    await withUnitBundle(params.unitId, { resources: ["rubrics"], allQuestionBanks: true }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["rubrics"], allQuestionBanks: true, uiModules: ["questions"] }, (bundle) => {
       QuestionEngine.renderWrongRetry(bundle, params.unitId);
     });
   }
 
   // quiz pages: bankName 對應 data/units/x/question-banks/<bankName>.json 的 "bank" 值
   async function pageQuiz(params, bankName, title) {
-    await withUnitBundle(params.unitId, { resources: ["rubrics"], banks: [bankName] }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["rubrics"], banks: [bankName], uiModules: ["questions"] }, (bundle) => {
       const questions = bundle.banks[bankName] || [];
       if (!questions.length) {
         mount(`<div class="empty-state">此題庫（${escapeHTML(bankName)}）暫無題目。</div>${footerNav(params.unitId, bundle.unit.title)}`);
@@ -369,7 +411,7 @@ const App = (() => {
   }
 
   async function pageCrossTextQuiz(params) {
-    await withUnitBundle(params.unitId, { resources: ["rubrics"], banks: ["cross-text"] }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["rubrics"], banks: ["cross-text"], uiModules: ["questions"] }, (bundle) => {
       const all = bundle.banks["cross-text"] || [];
       const questions = params.target === "all" ? all : all.filter((q) => q.cross_text_target === params.target);
       if (!questions.length) {
@@ -406,19 +448,19 @@ const App = (() => {
   }
 
   async function pageChallengeSetup(params) {
-    await withUnitBundle(params.unitId, { resources: ["rubrics"], allQuestionBanks: true }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["rubrics"], allQuestionBanks: true, uiModules: ["questions"] }, (bundle) => {
       QuestionEngine.renderChallengeSetup(bundle, params.unitId);
     });
   }
 
   async function pageChallengeRun(params) {
-    await withUnitBundle(params.unitId, { resources: ["rubrics"], allQuestionBanks: true }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["rubrics"], allQuestionBanks: true, uiModules: ["questions"] }, (bundle) => {
       QuestionEngine.renderChallengeRun(bundle, params.unitId);
     });
   }
 
   async function pageChallengeResult(params) {
-    await withUnitBundle(params.unitId, { resources: ["rubrics"], allQuestionBanks: true }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["rubrics"], allQuestionBanks: true, uiModules: ["questions"] }, (bundle) => {
       QuestionEngine.renderChallengeResult(bundle, params.unitId);
     });
   }
