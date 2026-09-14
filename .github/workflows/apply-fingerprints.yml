@@ -1,0 +1,41 @@
+name: Apply fingerprint asset build
+
+on:
+  push:
+    branches:
+      - perf/fingerprinted-assets
+    paths:
+      - scripts/build-assets.mjs
+      - index.template.html
+      - css/style.css
+      - js/**
+      - .github/workflows/apply-fingerprints.yml
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: perf/fingerprinted-assets
+
+      - name: Build fingerprinted assets
+        run: node scripts/build-assets.mjs --write
+
+      - name: Verify fingerprint build
+        run: node scripts/build-assets.mjs --check
+
+      - name: Validate performance contract
+        run: node scripts/validate-performance.mjs
+
+      - name: Commit generated runtime assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html _headers assets/build
+          git commit -m "Build fingerprinted runtime assets"
+          git push
