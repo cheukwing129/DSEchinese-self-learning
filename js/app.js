@@ -168,39 +168,57 @@ const App = (() => {
   }
 
   async function pageUnitHome(params) {
-    await withUnitBundle(params.unitId, (bundle) => ContentRenderer.renderUnitHome(bundle, params.unitId));
+    await withUnitBundle(params.unitId, (bundle) => {
+      ContentRenderer.renderUnitHome(bundle, params.unitId);
+    });
   }
 
   async function pageText(params) {
-    await withUnitBundle(params.unitId, (bundle) => ContentRenderer.renderTextPage(bundle, params.unitId));
+    await withUnitBundle(params.unitId, (bundle) => {
+      ContentRenderer.renderTextPage(bundle, params.unitId);
+    });
   }
 
   async function pageWords(params) {
-    await withUnitBundle(params.unitId, (bundle) => ContentRenderer.renderWordsPage(bundle, params.unitId));
+    await withUnitBundle(params.unitId, (bundle) => {
+      ContentRenderer.renderWordsPage(bundle, params.unitId);
+    });
   }
 
   async function pageComprehension(params) {
-    await withUnitBundle(params.unitId, (bundle) => ContentRenderer.renderComprehensionPage(bundle, params.unitId));
+    await withUnitBundle(params.unitId, (bundle) => {
+      ContentRenderer.renderComprehensionPage(bundle, params.unitId);
+    });
   }
 
   async function pageAnalysis(params) {
-    await withUnitBundle(params.unitId, (bundle) => ContentRenderer.renderAnalysisPage(bundle, params.unitId));
+    await withUnitBundle(params.unitId, (bundle) => {
+      ContentRenderer.renderAnalysisPage(bundle, params.unitId);
+    });
   }
 
   async function pageTheme(params) {
-    await withUnitBundle(params.unitId, (bundle) => ContentRenderer.renderThemePage(bundle, params.unitId));
+    await withUnitBundle(params.unitId, (bundle) => {
+      ContentRenderer.renderThemePage(bundle, params.unitId);
+    });
   }
 
   async function pageMemorisation(params) {
-    await withUnitBundle(params.unitId, (bundle) => MemorisationEngine.render(bundle, params.unitId));
+    await withUnitBundle(params.unitId, (bundle) => {
+      MemorisationEngine.render(bundle, params.unitId);
+    });
   }
 
   async function pageCrossText(params) {
-    await withUnitBundle(params.unitId, (bundle) => ContentRenderer.renderCrossTextPage(bundle, params.unitId));
+    await withUnitBundle(params.unitId, (bundle) => {
+      ContentRenderer.renderCrossTextPage(bundle, params.unitId);
+    });
   }
 
   async function pageProgress(params) {
-    await withUnitBundle(params.unitId, (bundle) => ContentRenderer.renderProgressPage(bundle, params.unitId));
+    await withUnitBundle(params.unitId, (bundle) => {
+      ContentRenderer.renderProgressPage(bundle, params.unitId);
+    });
   }
 
   // quiz pages: bankName 對應 data/units/x/question-banks/<bankName>.json 的 "bank" 值
@@ -258,15 +276,21 @@ const App = (() => {
   }
 
   async function pageChallengeSetup(params) {
-    await withUnitBundle(params.unitId, (bundle) => QuestionEngine.renderChallengeSetup(bundle, params.unitId));
+    await withUnitBundle(params.unitId, (bundle) => {
+      QuestionEngine.renderChallengeSetup(bundle, params.unitId);
+    });
   }
 
   async function pageChallengeRun(params) {
-    await withUnitBundle(params.unitId, (bundle) => QuestionEngine.renderChallengeRun(bundle, params.unitId));
+    await withUnitBundle(params.unitId, (bundle) => {
+      QuestionEngine.renderChallengeRun(bundle, params.unitId);
+    });
   }
 
   async function pageChallengeResult(params) {
-    await withUnitBundle(params.unitId, (bundle) => QuestionEngine.renderChallengeResult(bundle, params.unitId));
+    await withUnitBundle(params.unitId, (bundle) => {
+      QuestionEngine.renderChallengeResult(bundle, params.unitId);
+    });
   }
 
   // ---------- 初始化 ----------
