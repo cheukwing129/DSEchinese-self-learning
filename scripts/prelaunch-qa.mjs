@@ -38,7 +38,7 @@ const CORE_ROUTES = [
   ["/analysis", ".analysis-study", "analysis"],
   ["/theme", ".theme-study", "theme"],
   ["/memorisation", "#memo-body", "memorisation"],
-  ["/cross-text", "#cross-text-title", "cross-text landing"],
+  ["/cross-text", ".cross-text-banner", "cross-text landing"],
   ["/progress", ".unit-progress-hero", "unit progress"],
   ["/challenge", "#start-challenge-btn", "challenge setup"]
 ];
