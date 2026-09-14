@@ -438,7 +438,7 @@ const QuestionEngine = (() => {
             ${question.is_cross_text ? `<span class="tag">跨篇</span>` : ""}
           </div>
           ${renderQuestionBody(question, state)}
-          <div id="reveal-slot" aria-live="polite" aria-atomic="true"></div>
+          <div id="reveal-slot" tabindex="-1" aria-live="polite" aria-atomic="true"></div>
           <div class="btn-row" id="action-row"></div>
         </div>
         <div class="quiz-nav-bar">
@@ -481,6 +481,8 @@ const QuestionEngine = (() => {
             part2IsCorrect: result.part2IsCorrect
           });
           paint();
+          const reveal = document.getElementById("reveal-slot");
+          if (reveal) reveal.focus();
         });
       }
 
@@ -506,7 +508,7 @@ const QuestionEngine = (() => {
       html += `<div style="margin-top:12px;">` + q.items.map((it, i) => `
         <div class="card card-tight" style="margin-bottom:8px;">
           <p style="margin:0 0 6px; font-size:14px;">${esc(it.text || `第 ${i + 1} 項`)}${it.target ? `　→　<strong>${esc(it.target)}</strong>` : ""}</p>
-          <input type="text" class="answer-input" id="item-input-${i}" value="${esc(itemSelection(q, state, i))}" placeholder="請輸入答案…" />
+          <input type="text" class="answer-input" id="item-input-${i}" value="${esc(itemSelection(q, state, i))}" placeholder="請輸入答案…" ${state.submitted ? "disabled" : ""} />
         </div>`).join("") + `</div>`;
     }
 
@@ -527,11 +529,11 @@ const QuestionEngine = (() => {
       case "single_choice": return renderSingleChoice(q, state, prefix);
       case "multi_select": return `<p style="font-size:12px; color:var(--color-ink-soft); margin:-8px 0 10px;">（答案可選多於一個）</p>${renderMultiSelect(q, state, prefix)}`;
       case "true_false_unknown": return renderTrueFalse(q, state, prefix);
-      case "extract_sentence": return `<textarea class="answer-input" id="input-extract" placeholder="請摘錄原文句子…">${esc(state.selected || "")}</textarea>`;
+      case "extract_sentence": return `<textarea class="answer-input" id="input-extract" placeholder="請摘錄原文句子…" ${state.submitted ? "disabled" : ""}>${esc(state.selected || "")}</textarea>`;
       case "short_answer":
-        return q.items && q.items.length ? "" : `<textarea class="answer-input" id="input-short" placeholder="請輸入答案（不設字數下限）…">${esc(state.selected || "")}</textarea>`;
+        return q.items && q.items.length ? "" : `<textarea class="answer-input" id="input-short" placeholder="請輸入答案（不設字數下限）…" ${state.submitted ? "disabled" : ""}>${esc(state.selected || "")}</textarea>`;
       case "long_answer":
-        return q.items && q.items.length ? "" : `<textarea class="answer-input" id="input-long" placeholder="請輸入你的答案（不設字數下限，將以評分元素自評）…">${esc(state.selected || "")}</textarea>`;
+        return q.items && q.items.length ? "" : `<textarea class="answer-input" id="input-long" placeholder="請輸入你的答案（不設字數下限，將以評分元素自評）…" ${state.submitted ? "disabled" : ""}>${esc(state.selected || "")}</textarea>`;
       case "fill_table": return renderFillTable(q, state, prefix);
       case "matching": return renderMatching(q, state, prefix);
       case "cloze_choice": return renderClozeChoice(q, state, prefix);
@@ -650,7 +652,7 @@ const QuestionEngine = (() => {
         </div>`;
     });
     if (q.open_prompt || q.open_answer_elements || q.follow_up_open_answer) {
-      html += `<textarea class="answer-input" data-cloze-open="${prefix}" placeholder="請完成開放部分的說明…">${esc((state.selected && state.selected.openText) || "")}</textarea>`;
+      html += `<textarea class="answer-input" data-cloze-open="${prefix}" placeholder="請完成開放部分的說明…" ${state.submitted ? "disabled" : ""}>${esc((state.selected && state.selected.openText) || "")}</textarea>`;
     }
     return html;
   }
@@ -665,9 +667,9 @@ const QuestionEngine = (() => {
       return renderByType(pseudo, pseudoState, "part2");
     }
     if (type === "extract_sentence") {
-      return `<textarea class="answer-input" id="input-part2" placeholder="請摘錄原文句子…">${esc(sel || "")}</textarea>`;
+      return `<textarea class="answer-input" id="input-part2" placeholder="請摘錄原文句子…" ${state.submitted ? "disabled" : ""}>${esc(sel || "")}</textarea>`;
     }
-    return `<textarea class="answer-input" id="input-part2" placeholder="請輸入答案…">${esc(sel || "")}</textarea>`;
+    return `<textarea class="answer-input" id="input-part2" placeholder="請輸入答案…" ${state.submitted ? "disabled" : ""}>${esc(sel || "")}</textarea>`;
   }
 
   // ---------- 事件綁定 ----------
@@ -737,16 +739,22 @@ const QuestionEngine = (() => {
         const prefix = el.dataset.prefix || "main";
         const current = selectionForPrefix(q, state, prefix);
         const next = current && typeof current === "object" && !Array.isArray(current) ? { ...current } : {};
-        next[el.dataset.stmt] = el.dataset.val;
+        const stmt = el.dataset.stmt;
+        const val = el.dataset.val;
+        next[stmt] = val;
         setSelectionForPrefix(q, state, prefix, next);
         repaint();
+        restoreChoiceFocus(".tf-btn", (node) => node.dataset.prefix === prefix && node.dataset.stmt === stmt && node.dataset.val === val);
       });
     });
     document.querySelectorAll(".tf-btn-single").forEach((el) => {
       el.addEventListener("click", () => {
         if (state.submitted) return;
-        setSelectionForPrefix(q, state, el.dataset.prefix || "main", el.dataset.val);
+        const prefix = el.dataset.prefix || "main";
+        const val = el.dataset.val;
+        setSelectionForPrefix(q, state, prefix, val);
         repaint();
+        restoreChoiceFocus(".tf-btn-single", (node) => node.dataset.prefix === prefix && node.dataset.val === val);
       });
     });
     document.querySelectorAll(".match-multi-btn").forEach((el) => {
@@ -756,10 +764,12 @@ const QuestionEngine = (() => {
         const current = selectionForPrefix(q, state, prefix);
         const next = current && typeof current === "object" && !Array.isArray(current) ? { ...current } : {};
         const ri = el.dataset.row;
+        const label = el.dataset.label;
         const arr = next[ri] || [];
-        next[ri] = arr.includes(el.dataset.label) ? arr.filter((l) => l !== el.dataset.label) : [...arr, el.dataset.label];
+        next[ri] = arr.includes(label) ? arr.filter((l) => l !== label) : [...arr, label];
         setSelectionForPrefix(q, state, prefix, next);
         repaint();
+        restoreChoiceFocus(".match-multi-btn", (node) => node.dataset.prefix === prefix && node.dataset.row === ri && node.dataset.label === label);
       });
     });
     document.querySelectorAll("[data-match-row]").forEach((el) => {

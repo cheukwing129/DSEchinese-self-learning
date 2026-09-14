@@ -167,7 +167,7 @@ const ContentRenderer = (() => {
     function renderShell() {
       App.mount(`
         <h1 class="page-title">原文與誦讀</h1>
-        <p class="page-subtitle">《${esc(unit.title)}》· 點擊底線字詞查看注釋</p>
+        <p class="page-subtitle">《${esc(unit.title)}》· 點擊字詞或用鍵盤選取以查看注釋</p>
         ${audioPlayerHTML(unit)}
         <div class="card">
           <div id="text-nav-slot"></div>
