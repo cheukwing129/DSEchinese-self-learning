@@ -246,11 +246,15 @@ async function answerMain(page, question) {
       break;
     case "cloze_choice":
       for (const blank of question.blanks || []) {
-        await page.locator('[data-role="cloze-option"][data-prefix="main"]').filter({ has: page.locator(".option-copy") }).evaluateAll((nodes, blankId) => {
+        await page.locator('[data-role="cloze-option"][data-prefix="main"]').evaluateAll((nodes, blankId) => {
           const node = nodes.find((item) => item.dataset.blank === blankId);
           if (node) node.click();
         }, blank.id);
       }
+      check(
+        await page.locator('[data-role="cloze-option"][data-prefix="main"][aria-checked="true"]').count() >= (question.blanks || []).length,
+        "cloze_choice QA interaction did not select every blank"
+      );
       break;
     case "short_answer":
       if (await page.locator("#input-short").count()) await page.locator("#input-short").fill("驗收短答答案");
