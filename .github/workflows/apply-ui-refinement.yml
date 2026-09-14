@@ -1,0 +1,56 @@
+name: Apply UI refinement
+
+on:
+  push:
+    branches:
+      - feat/ui-refinement
+    paths:
+      - scripts/apply-ui-refinement.py
+      - .github/workflows/apply-ui-refinement.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: feat/ui-refinement
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Apply UI patch
+        run: python3 scripts/apply-ui-refinement.py
+      - name: Rebuild fingerprinted assets
+        run: node scripts/build-assets.mjs --write
+      - name: Validate JavaScript syntax
+        run: |
+          node --check js/app.js
+          node --check js/content-renderer.js
+          for f in assets/build/*.js; do node --check "$f"; done
+      - name: Validate application contracts
+        run: |
+          node scripts/validate-data.mjs
+          node scripts/validate-accessibility.mjs
+          node scripts/validate-loading.mjs
+          node scripts/validate-learning-support.mjs
+          node scripts/validate-learning-continuity.mjs
+          node scripts/validate-wrong-answer-retry.mjs
+          node scripts/validate-cross-unit-overview.mjs
+          node scripts/validate-cross-unit-targeted-retry.mjs
+          node scripts/validate-route-race.mjs
+          node scripts/build-assets.mjs --check
+          node scripts/validate-performance.mjs
+      - name: Commit generated UI changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add css/style.css js/app.js js/content-renderer.js index.html _headers assets/build
+          if git diff --cached --quiet; then
+            echo "No product changes to commit."
+          else
+            git commit -m "Refine home and unit learning UI"
+            git push origin HEAD:feat/ui-refinement
+          fi
