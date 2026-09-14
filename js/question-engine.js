@@ -58,6 +58,33 @@ const QuestionEngine = (() => {
     return "重讀解析與題目相關內容，先指出自己需要補強的知識點，再重做同類題。";
   }
 
+  function rubricFallbackElements(q, rubrics) {
+    if (!rubrics || typeof rubrics !== "object") return [];
+    if (Array.isArray(rubrics.common_scoring_elements) && rubrics.common_scoring_elements.length) {
+      return rubrics.common_scoring_elements.map((item) => {
+        if (typeof item === "string") return item;
+        const label = item.label || "";
+        const description = item.description || "";
+        return [label, description].filter(Boolean).join("：");
+      }).filter(Boolean);
+    }
+
+    const groups = Array.isArray(rubrics.long_answer_scoring_elements) ? rubrics.long_answer_scoring_elements : [];
+    if (!groups.length) return [];
+    const context = `${q.ability || ""} ${q.knowledge_point || ""} ${q.stem || ""}`;
+    const candidates = [
+      ["結構", ["結構"]],
+      ["手法", ["手法", "賞析", "鑒賞", "修辭"]],
+      ["主旨", ["主旨", "寓意", "思想", "情感"]],
+      ["比較", ["比較", "跨篇", "異同"]],
+      ["開放", ["開放", "見解", "情境", "思考"]]
+    ];
+    const matchedKind = candidates.find(([, keywords]) => keywords.some((keyword) => context.includes(keyword)));
+    if (!matchedKind) return [];
+    const group = groups.find((item) => String(item.question_type || "").includes(matchedKind[0]));
+    return group && Array.isArray(group.elements) ? group.elements : [];
+  }
+
   // ---------- selection helpers ----------
   function isCompositeQuestion(q) {
     return !!((q.items && q.items.length) || q.part2);
@@ -462,7 +489,7 @@ const QuestionEngine = (() => {
       const revealSlot = document.getElementById("reveal-slot");
 
       if (state.submitted) {
-        revealSlot.innerHTML = renderReveal(question, state, showRemediation);
+        revealSlot.innerHTML = renderReveal(question, state, showRemediation, bundle.rubrics);
         actionRow.innerHTML = `<button class="btn btn-primary" id="confirm-next-btn">我已看完答案，下一題</button>`;
         document.getElementById("confirm-next-btn").addEventListener("click", () => {
           if (onAfterConfirm) onAfterConfirm();
@@ -865,7 +892,7 @@ const QuestionEngine = (() => {
   }
 
   // ---------- 顯示解析 ----------
-  function renderReveal(q, state, showRemediation) {
+  function renderReveal(q, state, showRemediation, rubrics) {
     const isObjective = OBJECTIVE_TYPES.includes(q.question_type);
     const main = mainSelection(q, state);
     let panelClass = "reveal-panel";
@@ -898,6 +925,12 @@ const QuestionEngine = (() => {
     if (q.scoring_elements) {
       html += `<div class="reveal-row" style="margin-top:10px;"><span class="reveal-label">評分元素</span><ul class="scoring-elements">${q.scoring_elements.map((e) => `<li>${esc(e)}</li>`).join("")}</ul></div>`;
     }
+    if (!isObjective && !q.answer_elements && !q.scoring_elements) {
+      const fallbackElements = rubricFallbackElements(q, rubrics);
+      if (fallbackElements.length) {
+        html += `<div class="reveal-row" style="margin-top:10px;"><span class="reveal-label">篇章通用自評框架（非本題精確評分）</span><ul class="scoring-elements">${fallbackElements.map((e) => `<li>${esc(e)}</li>`).join("")}</ul></div>`;
+      }
+    }
     if (q.follow_up_open_answer) {
       html += `<div class="reveal-row" style="margin-top:10px;"><span class="reveal-label">延伸問題參考答案</span><div class="reveal-explanation">${esc(q.follow_up_open_answer)}</div></div>`;
     }
@@ -905,7 +938,7 @@ const QuestionEngine = (() => {
       html += `<div class="reveal-row" style="margin-top:10px;"><span class="reveal-label">開放部分參考要點</span><ul class="scoring-elements">${q.open_answer_elements.map((e) => `<li>${esc(e)}</li>`).join("")}</ul></div>`;
     }
     if (q.rhetorical_device) html += reveaLine("修辭手法", q.rhetorical_device);
-    if (q.part2) html += renderPart2Reveal(q, state);
+    if (q.part2) html += renderPart2Reveal(q, state, rubrics);
     if (q.note) html += `<div class="reveal-row" style="margin-top:10px; color:var(--color-ink-soft); font-size:13px;">${esc(q.note)}</div>`;
 
     if (showRemediation && isObjective && state.isCorrect === false) {
@@ -977,7 +1010,7 @@ const QuestionEngine = (() => {
     }
   }
 
-  function renderPart2Reveal(q, state) {
+  function renderPart2Reveal(q, state, rubrics) {
     const part = q.part2;
     const type = part.question_type || part.type || "long_answer";
     const selected = part2Selection(q, state);
@@ -990,6 +1023,10 @@ const QuestionEngine = (() => {
     if (part.answer_text && type !== "extract_sentence") html += `<div class="reveal-explanation">參考答案：${esc(part.answer_text)}</div>`;
     if (part.answer_elements) html += `<ul class="scoring-elements">${part.answer_elements.map((e) => `<li>${esc(e)}</li>`).join("")}</ul>`;
     if (part.scoring_elements) html += `<ul class="scoring-elements">${part.scoring_elements.map((e) => `<li>${esc(e)}</li>`).join("")}</ul>`;
+    if (!OBJECTIVE_TYPES.includes(type) && !part.answer_elements && !part.scoring_elements) {
+      const fallbackElements = rubricFallbackElements({ ...part, question_type: type, ability: q.ability, knowledge_point: q.knowledge_point }, rubrics);
+      if (fallbackElements.length) html += `<div class="reveal-explanation" style="margin-top:8px;"><strong>篇章通用自評框架（非本題精確評分）</strong></div><ul class="scoring-elements">${fallbackElements.map((e) => `<li>${esc(e)}</li>`).join("")}</ul>`;
+    }
     if (part.explanation) html += `<div class="reveal-explanation">${esc(part.explanation)}</div>`;
     html += `</div>`;
     return html;
