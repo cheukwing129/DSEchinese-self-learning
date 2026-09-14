@@ -1,0 +1,41 @@
+name: Apply content correctness fixes
+
+on:
+  push:
+    branches:
+      - qa/content-correctness
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: ${{ !contains(github.event.head_commit.message, 'Apply targeted content correctness fixes') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out QA branch
+        uses: actions/checkout@v7
+        with:
+          ref: qa/content-correctness
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Apply targeted fixes
+        run: node scripts/apply-content-correctness-fixes.mjs
+
+      - name: Commit fixes if needed
+        run: |
+          if git diff --quiet; then
+            echo "No fixes needed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/units scripts/validate-content-correctness.mjs
+          git commit -m "Apply targeted content correctness fixes"
+          git push origin HEAD:qa/content-correctness
