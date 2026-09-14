@@ -131,33 +131,67 @@ const App = (() => {
     mainEl().innerHTML = html;
   }
 
+  function syncHeaderState() {
+    const path = Router.currentPath();
+    const routeKind = path.startsWith("/overview") ? "overview" : (path === "/" || path.startsWith("/unit/")) ? "chapters" : "other";
+    document.body.dataset.route = routeKind;
+    document.querySelectorAll(".header-nav-link").forEach((link) => {
+      const active = link.dataset.nav === routeKind;
+      if (active) link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
+    });
+  }
+
   function setCrumb(text) {
-    crumbEl().textContent = text || "";
+    const label = text || "";
+    crumbEl().textContent = label;
+    document.title = label ? `${label} · 文脈` : "文脈 · DSE 經典自學";
+    syncHeaderState();
   }
 
   function renderLoading(label) {
-    mount(`<div class="loading-state">正在載入${label || ""}…</div>`);
-  }
-
-  function renderFatalError(message) {
+    syncHeaderState();
+    const safeLabel = escapeHTML(label || "學習內容");
     mount(`
-      <div class="card">
-        <div class="error-banner">
-          <strong>發生錯誤</strong><br/>${escapeHTML(message)}
-        </div>
-        <div class="btn-row">
-          <a class="btn btn-secondary" href="#/">返回首頁</a>
-        </div>
+      <div class="loading-state launch-loading" role="status" aria-live="polite">
+        <span class="loading-mark" aria-hidden="true"><span>文</span></span>
+        <div><strong>正在整理${safeLabel}</strong><small>只載入這一頁真正需要的內容。</small></div>
       </div>
     `);
   }
 
-  function renderNotFound(path) {
+  function renderFatalError(message) {
+    setCrumb("載入失敗");
     mount(`
-      <div class="empty-state">
-        <p>找不到頁面：${escapeHTML(path)}</p>
-        <a class="btn btn-primary" href="#/">返回首頁</a>
-      </div>
+      <section class="launch-state is-error" role="alert" aria-labelledby="fatal-title">
+        <div class="launch-state-mark" aria-hidden="true">!</div>
+        <p class="launch-state-kicker">LOAD ERROR</p>
+        <h1 id="fatal-title" class="page-title">這一頁暫時未能載入</h1>
+        <p class="launch-state-copy">${escapeHTML(message)}</p>
+        <p class="launch-state-help">你的本機學習紀錄不會因這次載入失敗而被清除。</p>
+        <div class="launch-state-actions">
+          <button type="button" class="btn btn-primary" id="retry-page-btn">再試一次</button>
+          <a class="btn btn-secondary" href="#/">返回首頁</a>
+        </div>
+      </section>
+    `);
+    const retry = document.getElementById("retry-page-btn");
+    if (retry) retry.addEventListener("click", () => Router.navigate(Router.currentPath()));
+  }
+
+  function renderNotFound(path) {
+    setCrumb("找不到頁面");
+    mount(`
+      <section class="launch-state is-not-found" aria-labelledby="not-found-title">
+        <div class="launch-state-code" aria-hidden="true">404</div>
+        <p class="launch-state-kicker">LOST IN THE MARGIN</p>
+        <h1 id="not-found-title" class="page-title">這一頁不在文脈裡</h1>
+        <p class="launch-state-copy">網址「${escapeHTML(path)}」沒有對應的學習頁面。你可以回到篇章地圖，或查看目前的學習總覽。</p>
+        <div class="launch-state-actions">
+          <a class="btn btn-primary" href="#/">回到篇章</a>
+          <a class="btn btn-secondary" href="#/overview">學習總覽</a>
+        </div>
+      </section>
     `);
   }
 
