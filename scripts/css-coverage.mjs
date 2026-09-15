@@ -331,14 +331,15 @@ async function auditProfile(browser, profile, routes) {
   await page.coverage.startCSSCoverage({ resetOnNavigation: false });
   let visited = 0;
   for (const route of routes) {
-    await page.goto(`${baseURL}/#${route}`, { waitUntil: "domcontentloaded", timeout: 12000 });
     if (route === "/not-a-real-route") {
+      await page.evaluate(() => { window.location.hash = "#/not-a-real-route"; });
       await page.locator(".launch-state.is-error").waitFor({ state: "visible", timeout: 8000 });
       await page.waitForTimeout(25);
       visited += 1;
       continue;
     }
 
+    await page.goto(`${baseURL}/#${route}`, { waitUntil: "domcontentloaded", timeout: 12000 });
     await page.locator("#app-main > *").first().waitFor({ state: "visible", timeout: 8000 });
     await page.locator("#app-main .loading-state").waitFor({ state: "detached", timeout: 8000 }).catch(() => {});
     const state = await page.evaluate(() => ({
