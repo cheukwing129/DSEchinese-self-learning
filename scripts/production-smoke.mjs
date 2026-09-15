@@ -82,6 +82,19 @@ async function verifyDeployedAssets() {
   check(dataResponse.ok, `production curriculum data returned HTTP ${dataResponse.status}`);
   const dataCache = dataResponse.headers.get("cache-control") || "";
   check(/no-cache/i.test(dataCache), `data JSON should remain revalidatable/no-cache, got: ${dataCache || "<none>"}`);
+
+  const repeatStudyAssets = [
+    ["brand", "/assets/brand/wenmai-mark.svg"],
+    ["audio", "/assets/audio/deng_lou.mp3"]
+  ];
+  for (const [label, assetPath] of repeatStudyAssets) {
+    const response = await fetch(`${productionURL}${assetPath}`, { method: "HEAD", cache: "no-store", redirect: "follow" });
+    check(response.ok, `production ${label} cache probe returned HTTP ${response.status}: ${assetPath}`);
+    if (!response.ok) continue;
+    const cacheControl = response.headers.get("cache-control") || "";
+    check(/max-age=86400/i.test(cacheControl), `${label} asset is missing one-day browser cache: ${cacheControl || "<none>"}`);
+    check(/stale-while-revalidate=604800/i.test(cacheControl), `${label} asset is missing repeat-study stale-while-revalidate cache: ${cacheControl || "<none>"}`);
+  }
 }
 
 await waitForCurrentDeployment();
