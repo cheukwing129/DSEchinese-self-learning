@@ -92,7 +92,7 @@ gap: 6px;
 cursor: pointer;
 }
 
-.brand .brand-mark { color: var(--color-accent); font-size: 20px; }
+
 .header-crumb {
 font-size: 13px;
 color: var(--color-ink-soft);
@@ -579,18 +579,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   font-weight: 800;
   letter-spacing: -.01em;
 }
-.brand .brand-mark {
-  display: grid;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 11px;
-  background: linear-gradient(145deg, #1D5A50, var(--color-accent-strong));
-  color: #FFFDF8;
-  box-shadow: 0 7px 15px rgba(13, 56, 50, .19), inset 0 1px 0 rgba(255,255,255,.18);
-  font-family: var(--font-display);
-  font-size: 15px;
-}
+
 .header-nav {
   display: flex;
   align-items: center;
@@ -1396,7 +1385,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 @media (max-width: 560px) {
   .header-inner { padding: 8px; }
   .brand { gap: 7px; }
-  .brand .brand-mark { width: 31px; height: 31px; border-radius: 10px; font-size: 14px; }
+  
   .header-nav-link { min-height: 31px; padding: 6px 8px; font-size: 11px; }
   #app-main { padding-left: 16px; padding-right: 16px; }
   .quiz-nav-bar { margin-left: -16px; margin-right: -16px; }
