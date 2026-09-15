@@ -5,6 +5,8 @@ import { chromium } from "playwright";
 const productionURL = String(process.env.PRODUCTION_URL || "").replace(/\/$/, "");
 const errors = [];
 const manifest = JSON.parse(fs.readFileSync("assets/build/asset-manifest.json", "utf8"));
+const expectedIndexHTML = fs.readFileSync("index.html", "utf8");
+const indexAssetPattern = /\/assets\/build\/[A-Za-z0-9._-]+\.(?:css|js)/g;
 
 function fail(message) {
   errors.push(message);
@@ -27,15 +29,19 @@ function sha256(buffer) {
   return crypto.createHash("sha256").update(buffer).digest("hex");
 }
 
+function indexAssetRefs(html) {
+  return [...new Set(String(html).match(indexAssetPattern) || [])].sort();
+}
+
 if (!/^https:\/\//i.test(productionURL)) {
   console.error("PRODUCTION_URL must be an https:// URL");
   process.exit(1);
 }
 
 const assetEntries = Object.entries(manifest.assets || {});
-const appAsset = manifest.assets?.app?.path;
-if (!appAsset || assetEntries.length < 7) {
-  console.error("asset manifest is missing the expected runtime assets");
+const expectedIndexAssets = indexAssetRefs(expectedIndexHTML);
+if (assetEntries.length < 7 || expectedIndexAssets.length < 4) {
+  console.error("asset manifest or generated index is missing the expected runtime assets");
   process.exit(1);
 }
 
@@ -47,8 +53,14 @@ async function waitForCurrentDeployment() {
     try {
       const response = await fetch(`${productionURL}/`, { cache: "no-store", redirect: "follow" });
       const html = await response.text();
-      last = `HTTP ${response.status}; current app reference ${html.includes(appAsset) ? "present" : "not present"}`;
-      if (response.ok && html.includes(appAsset)) return;
+      const currentIndexAssets = indexAssetRefs(html);
+      const missing = expectedIndexAssets.filter((asset) => !currentIndexAssets.includes(asset));
+      const unexpected = currentIndexAssets.filter((asset) => !expectedIndexAssets.includes(asset));
+      const fingerprintMatches = missing.length === 0 && unexpected.length === 0;
+      last = `HTTP ${response.status}; entry fingerprint ${fingerprintMatches ? "matches" : "does not match"}`;
+      if (missing.length) last += `; missing ${missing.join(", ")}`;
+      if (unexpected.length) last += `; unexpected ${unexpected.join(", ")}`;
+      if (response.ok && fingerprintMatches) return;
     } catch (error) {
       last = error.message;
     }
@@ -56,7 +68,7 @@ async function waitForCurrentDeployment() {
     await sleep(5000);
   }
 
-  throw new Error(`production did not reach current asset manifest within 180s (${last})`);
+  throw new Error(`production did not reach current entry fingerprint within 180s (${last})`);
 }
 
 async function verifyDeployedAssets() {
