@@ -321,7 +321,7 @@ const ContentRenderer = (() => {
       return `
         <div class="reader-nav" role="tablist" aria-label="原文段落導航">
           ${groups.map((g, i) => `
-            <button type="button" role="tab" id="reader-tab-${i}" aria-controls="reader-passage" aria-selected="${i === activeIndex ? "true" : "false"}" data-idx="${i}" class="${i === activeIndex ? "is-active" : ""}">
+            <button type="button" role="tab" id="reader-tab-${i}" aria-controls="reader-passage" aria-selected="${i === activeIndex ? "true" : "false"}" tabindex="${i === activeIndex ? "0" : "-1"}" data-idx="${i}" class="${i === activeIndex ? "is-active" : ""}">
               <span class="reader-nav-index">${String(i + 1).padStart(2, "0")}</span>
               <span class="reader-nav-label">${esc(g.label)}</span>
             </button>`).join("")}
@@ -476,8 +476,24 @@ const ContentRenderer = (() => {
       prev.onclick = () => setActive(activeIndex - 1, { focusHeading: true });
       next.onclick = () => setActive(activeIndex + 1, { focusHeading: true });
 
+      const activateTab = (index) => {
+        setActive(index);
+        const tab = document.getElementById(`reader-tab-${index}`);
+        if (tab) tab.focus({ preventScroll: true });
+      };
       document.querySelectorAll(".reader-nav button").forEach((btn) => {
-        btn.addEventListener("click", () => setActive(parseInt(btn.dataset.idx, 10)));
+        btn.addEventListener("click", () => activateTab(parseInt(btn.dataset.idx, 10)));
+        btn.addEventListener("keydown", (event) => {
+          const current = parseInt(btn.dataset.idx, 10);
+          let nextIndex = null;
+          if (event.key === "ArrowRight" || event.key === "ArrowDown") nextIndex = (current + 1) % groups.length;
+          else if (event.key === "ArrowLeft" || event.key === "ArrowUp") nextIndex = (current - 1 + groups.length) % groups.length;
+          else if (event.key === "Home") nextIndex = 0;
+          else if (event.key === "End") nextIndex = groups.length - 1;
+          if (nextIndex == null) return;
+          event.preventDefault();
+          activateTab(nextIndex);
+        });
       });
       document.querySelectorAll(".term").forEach((button) => {
         button.addEventListener("click", (e) => showAnnotationPopover(e, annoMap[button.dataset.anno]));
