@@ -9,5 +9,11 @@
 /assets/build/*
   Cache-Control: public, max-age=31536000, immutable
 
+/assets/audio/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/assets/brand/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
 /data/*
   Cache-Control: no-cache
