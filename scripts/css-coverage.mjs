@@ -7,6 +7,7 @@ const root = process.cwd();
 const HOST = "127.0.0.1";
 const PORT = 4175;
 const baseURL = `http://${HOST}:${PORT}`;
+const sourceCssBytes = fs.statSync(path.join(root, "css", "style.css")).size;
 
 function contentType(filePath) {
   const ext = path.extname(filePath).toLowerCase();
@@ -92,6 +93,11 @@ function coverageBytes(entry) {
   return { total, used };
 }
 
+function styleName(url) {
+  const match = String(url).match(/\/assets\/build\/(style|content-style|questions-style)\.[0-9a-f]{12}\.css(?:$|\?)/);
+  return match?.[1] || null;
+}
+
 async function measureRoute(context, route) {
   const page = await context.newPage();
   await page.coverage.startCSSCoverage({ resetOnNavigation: true });
@@ -102,21 +108,30 @@ async function measureRoute(context, route) {
   }
   await page.waitForTimeout(75);
   const coverage = await page.coverage.stopCSSCoverage();
-  const bundleEntries = coverage.filter((entry) => /\/assets\/build\/style\.[0-9a-f]{12}\.css(?:$|\?)/.test(entry.url));
-  if (bundleEntries.length !== 1) {
-    throw new Error(`${route.label}: expected exactly one fingerprinted style coverage entry, got ${bundleEntries.length}`);
+  const bundleEntries = coverage
+    .map((entry) => ({ entry, name: styleName(entry.url) }))
+    .filter((item) => item.name);
+  const names = bundleEntries.map((item) => item.name).sort();
+  const expectedNames = [...route.styles].sort();
+  if (JSON.stringify(names) !== JSON.stringify(expectedNames)) {
+    throw new Error(`${route.label}: expected styles ${expectedNames.join(", ")}, got ${names.join(", ") || "none"}`);
   }
-  const result = coverageBytes(bundleEntries[0]);
+  const pieces = bundleEntries.map(({ entry, name }) => ({ name, ...coverageBytes(entry) }));
+  const result = {
+    total: pieces.reduce((sum, piece) => sum + piece.total, 0),
+    used: pieces.reduce((sum, piece) => sum + piece.used, 0),
+    pieces
+  };
   await page.close();
   return result;
 }
 
 const routes = [
-  { label: "home", hash: "#/", selector: ".map-grid", title: "讀懂經典" },
-  { label: "unit", hash: "#/unit/yueyanglouji", selector: ".unit-hero", title: "《岳陽樓記》" },
-  { label: "reader", hash: "#/unit/yueyanglouji/text", selector: ".reader-shell", title: "原文與誦讀" },
-  { label: "quiz", hash: "#/unit/yueyanglouji/words/quiz", selector: ".q-stem" },
-  { label: "progress", hash: "#/unit/yueyanglouji/progress", selector: ".unit-progress-hero" }
+  { label: "home", hash: "#/", selector: ".map-grid", title: "讀懂經典", styles: ["style"] },
+  { label: "unit", hash: "#/unit/yueyanglouji", selector: ".unit-hero", title: "《岳陽樓記》", styles: ["style", "content-style"] },
+  { label: "reader", hash: "#/unit/yueyanglouji/text", selector: ".reader-shell", title: "原文與誦讀", styles: ["style", "content-style"] },
+  { label: "quiz", hash: "#/unit/yueyanglouji/words/quiz", selector: ".q-stem", styles: ["style", "questions-style"] },
+  { label: "progress", hash: "#/unit/yueyanglouji/progress", selector: ".unit-progress-hero", styles: ["style", "content-style"] }
 ];
 
 await listen();
@@ -131,12 +146,14 @@ try {
   }
   for (const result of results) {
     const percent = result.total ? (result.used / result.total) * 100 : 0;
-    console.log(`CSS coverage ${result.label}: ${result.used}/${result.total} bytes used (${percent.toFixed(1)}%).`);
+    const files = result.pieces.map((piece) => `${piece.name}:${piece.total}`).join(" + ");
+    console.log(`CSS coverage ${result.label}: ${result.used}/${result.total} loaded bytes used (${percent.toFixed(1)}%); ${files}.`);
   }
   const home = results.find((result) => result.label === "home");
   if (home) {
-    const unused = home.total - home.used;
-    console.log(`CSS split audit: home leaves ${unused}/${home.total} bytes (${((unused / home.total) * 100).toFixed(1)}%) unused before route navigation.`);
+    const avoided = sourceCssBytes - home.total;
+    console.log(`CSS split audit: home loads ${home.total}/${sourceCssBytes} source CSS bytes and avoids ${avoided} bytes (${((avoided / sourceCssBytes) * 100).toFixed(1)}%) before route navigation.`);
+    if (home.total >= sourceCssBytes) throw new Error("home CSS split did not reduce startup stylesheet bytes");
   }
   await context.close();
 } finally {
