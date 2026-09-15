@@ -116,7 +116,7 @@ const routes = [
   { label: "unit", hash: "#/unit/yueyanglouji", selector: ".unit-hero", title: "《岳陽樓記》" },
   { label: "reader", hash: "#/unit/yueyanglouji/text", selector: ".reader-shell", title: "原文與誦讀" },
   { label: "quiz", hash: "#/unit/yueyanglouji/words/quiz", selector: ".q-stem" },
-  { label: "progress", hash: "#/unit/yueyanglouji/progress", selector: ".unit-progress-hero", title: "待修正" }
+  { label: "progress", hash: "#/unit/yueyanglouji/progress", selector: ".unit-progress-hero" }
 ];
 
 await listen();
@@ -124,11 +124,9 @@ let browser;
 try {
   browser = await chromium.launch({ headless: true });
   const context = await browser.newContext({ viewport: { width: 1280, height: 800 } });
-  let total = 0;
   const results = [];
   for (const route of routes) {
     const result = await measureRoute(context, route);
-    total = Math.max(total, result.total);
     results.push({ ...route, ...result });
   }
   for (const result of results) {
