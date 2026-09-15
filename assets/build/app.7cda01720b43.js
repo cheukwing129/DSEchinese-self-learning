@@ -206,6 +206,14 @@ const App = (() => {
     `);
   }
 
+  function scheduleLoading(label, navigationId, delay = 120) {
+    syncHeaderState();
+    const timer = window.setTimeout(() => {
+      if (Router.isCurrentNavigation(navigationId)) renderLoading(label);
+    }, delay);
+    return () => window.clearTimeout(timer);
+  }
+
   function renderFatalError(message) {
     setCrumb("載入失敗");
     mount(`
@@ -288,7 +296,7 @@ const App = (() => {
   async function pageHome() {
     const navigationId = Router.currentNavigationId();
     setCrumb("");
-    renderLoading("課程地圖");
+    const cancelLoading = scheduleLoading("課程地圖", navigationId);
     let curriculum;
     try {
       curriculum = await loadCurriculum();
@@ -297,6 +305,8 @@ const App = (() => {
       if (!Router.isCurrentNavigation(navigationId)) return;
       renderFatalError(e.message);
       return;
+    } finally {
+      cancelLoading();
     }
 
     const recent = Progress.latestLearning(curriculum.units);
@@ -416,7 +426,7 @@ const App = (() => {
   async function pageOverview() {
     const navigationId = Router.currentNavigationId();
     setCrumb("跨篇章學習總覽");
-    renderLoading("跨篇章學習總覽");
+    const cancelLoading = scheduleLoading("跨篇章學習總覽", navigationId);
     try {
       const [{ curriculum, unitBundles }] = await Promise.all([
         loadCrossUnitBundles(),
@@ -427,6 +437,8 @@ const App = (() => {
     } catch (e) {
       if (!Router.isCurrentNavigation(navigationId)) return;
       renderFatalError(e.message);
+    } finally {
+      cancelLoading();
     }
   }
 
@@ -434,7 +446,7 @@ const App = (() => {
     const navigationId = Router.currentNavigationId();
     const ability = params.ability === "all" ? null : params.ability;
     setCrumb(ability ? `${ability} · 跨篇章重練` : "跨篇章錯題重練");
-    renderLoading("跨篇章錯題重練");
+    const cancelLoading = scheduleLoading("跨篇章錯題重練", navigationId);
     try {
       const [{ unitBundles }] = await Promise.all([
         loadCrossUnitBundles(),
@@ -445,6 +457,8 @@ const App = (() => {
     } catch (e) {
       if (!Router.isCurrentNavigation(navigationId)) return;
       renderFatalError(e.message);
+    } finally {
+      cancelLoading();
     }
   }
 
@@ -455,7 +469,7 @@ const App = (() => {
       options = {};
     }
     const uiModules = [...new Set(options.uiModules || [])];
-    renderLoading("篇章資料");
+    const cancelLoading = scheduleLoading("篇章資料", navigationId);
     let bundle;
     try {
       [bundle] = await Promise.all([
@@ -467,6 +481,8 @@ const App = (() => {
       if (!Router.isCurrentNavigation(navigationId)) return;
       renderFatalError(e.message);
       return;
+    } finally {
+      cancelLoading();
     }
     setCrumb(`《${bundle.unit.title}》`);
     const currentPath = Router.currentPath();
