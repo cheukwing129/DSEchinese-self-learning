@@ -18,6 +18,10 @@ function check(condition, message) {
   if (!condition) fail(message);
 }
 
+function isKnownWebKitGTKConsoleNoise(message) {
+  return /^Button failed to load, iconName = invalid-placard, layoutTraits = \[AdwaitaLayoutTraits Inline\], src = data:image\/png;base64,$/.test(message);
+}
+
 function contentType(filePath) {
   const ext = path.extname(filePath).toLowerCase();
   return ({
@@ -118,7 +122,13 @@ try {
   page.on("requestfailed", (req) => fail(`request failed: ${req.method()} ${req.url()} (${req.failure()?.errorText || "unknown"})`));
   page.on("pageerror", (err) => fail(`page runtime error: ${err.message}`));
   page.on("console", (msg) => {
-    if (msg.type() === "error") fail(`console error: ${msg.text()}`);
+    if (msg.type() !== "error") return;
+    const text = msg.text();
+    if (isKnownWebKitGTKConsoleNoise(text)) {
+      console.log(`Ignoring known WebKitGTK browser chrome noise: ${text}`);
+      return;
+    }
+    fail(`console error: ${text}`);
   });
   page.on("response", (response) => {
     if (response.status() >= 400 && pathname(response.url()) !== "/favicon.ico") {
