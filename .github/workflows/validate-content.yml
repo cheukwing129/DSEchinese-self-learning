@@ -67,7 +67,7 @@ jobs:
         run: node scripts/validate-performance.mjs
 
   browser-smoke:
-    name: Chromium smoke, full-site QA, lazy-engine and warm-cache performance
+    name: Chromium smoke, constrained-mobile performance, full-site QA and warm-cache performance
     needs: validate
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -88,6 +88,9 @@ jobs:
 
       - name: Run real-browser smoke and performance contract
         run: node scripts/browser-smoke.mjs
+
+      - name: Run constrained-mobile performance contract
+        run: node scripts/mobile-performance.mjs
 
       - name: Run full pre-launch browser QA matrix
         run: node scripts/prelaunch-qa.mjs
