@@ -135,17 +135,3 @@ validator = replace_once(
     "accessibility validator insertion point",
 )
 validator_path.write_text(validator)
-
-workflow_path = Path(".github/workflows/validate-content.yml")
-workflow = workflow_path.read_text()
-workflow = replace_once(
-    workflow,
-    '      - name: Run real-browser smoke and performance contract\n'
-    '        run: node scripts/browser-smoke.mjs\n',
-    '      - name: Run real-browser smoke and performance contract\n'
-    '        run: node scripts/browser-smoke.mjs\n\n'
-    '      - name: Run keyboard and focus accessibility contract\n'
-    '        run: node scripts/browser-accessibility.mjs\n',
-    "validate workflow browser step",
-)
-workflow_path.write_text(workflow)
