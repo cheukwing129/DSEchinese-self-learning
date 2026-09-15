@@ -18,13 +18,13 @@ const PROFILE = {
 };
 
 const BUDGETS = {
-  readerTabMs: 600,
-  annotationOpenMs: 600,
-  annotationCloseMs: 600,
-  warmRouteMs: 700,
-  optionSelectMs: 600,
-  submitMs: 800,
-  nextQuestionMs: 700
+  readerTabMs: 300,
+  annotationOpenMs: 300,
+  annotationCloseMs: 200,
+  warmRouteMs: 300,
+  optionSelectMs: 300,
+  submitMs: 400,
+  nextQuestionMs: 600
 };
 
 function fail(message) {
