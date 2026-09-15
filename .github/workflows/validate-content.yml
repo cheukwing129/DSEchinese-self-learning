@@ -89,6 +89,9 @@ jobs:
       - name: Run real-browser smoke and performance contract
         run: node scripts/browser-smoke.mjs
 
+      - name: Run RC UX interaction regression
+        run: node scripts/ux-interaction-smoke.mjs
+
       - name: Run keyboard and focus accessibility contract
         run: node scripts/browser-accessibility.mjs
 
