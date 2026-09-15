@@ -18,9 +18,9 @@ const PROFILE = {
 };
 
 const BUDGETS = {
-  homeReadyMs: 3500,
-  textReadyMs: 4500,
-  quizReadyMs: 5000
+  homeReadyMs: 2500,
+  textReadyMs: 2500,
+  quizReadyMs: 3000
 };
 
 function fail(message) {
