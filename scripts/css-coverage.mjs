@@ -94,7 +94,7 @@ function coverageBytes(entry) {
 }
 
 function styleName(url) {
-  const match = String(url).match(/\/assets\/build\/(style|content-style|questions-style)\.[0-9a-f]{12}\.css(?:$|\?)/);
+  const match = String(url).match(/\/assets\/build\/(style|reader-style|study-style|progress-style|questions-style)\.[0-9a-f]{12}\.css(?:$|\?)/);
   return match?.[1] || null;
 }
 
@@ -128,10 +128,11 @@ async function measureRoute(context, route) {
 
 const routes = [
   { label: "home", hash: "#/", selector: ".map-grid", title: "讀懂經典", styles: ["style"] },
-  { label: "unit", hash: "#/unit/yueyanglouji", selector: ".unit-hero", title: "《岳陽樓記》", styles: ["style", "content-style"] },
-  { label: "reader", hash: "#/unit/yueyanglouji/text", selector: ".reader-shell", title: "原文與誦讀", styles: ["style", "content-style"] },
+  { label: "unit", hash: "#/unit/yueyanglouji", selector: ".unit-hero", title: "《岳陽樓記》", styles: ["style"] },
+  { label: "reader", hash: "#/unit/yueyanglouji/text", selector: ".reader-shell", title: "原文與誦讀", styles: ["style", "reader-style"] },
+  { label: "study", hash: "#/unit/yueyanglouji/words", selector: ".study-page-shell.words-study", styles: ["style", "study-style"] },
   { label: "quiz", hash: "#/unit/yueyanglouji/words/quiz", selector: ".q-stem", styles: ["style", "questions-style"] },
-  { label: "progress", hash: "#/unit/yueyanglouji/progress", selector: ".unit-progress-hero", styles: ["style", "content-style"] }
+  { label: "progress", hash: "#/unit/yueyanglouji/progress", selector: ".unit-progress-hero", styles: ["style", "progress-style"] }
 ];
 
 await listen();

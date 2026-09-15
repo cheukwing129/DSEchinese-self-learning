@@ -9,6 +9,9 @@ const App = (() => {
   const cache = { curriculum: null, json: {}, scripts: {} };
   const UI_MODULES = Object.freeze({
     content: "js/content-renderer.js",
+    contentReader: "js/content-renderer.js",
+    contentStudy: "js/content-renderer.js",
+    contentProgress: "js/content-renderer.js",
     questions: "js/question-engine.js",
     memorisation: "js/memorisation-engine.js"
   });
@@ -374,7 +377,7 @@ const App = (() => {
     try {
       const [{ curriculum, unitBundles }] = await Promise.all([
         loadCrossUnitBundles(),
-        loadUIModules(["content"])
+        loadUIModules(["contentProgress"])
       ]);
       if (!Router.isCurrentNavigation(navigationId)) return;
       ContentRenderer.renderCrossUnitOverview(curriculum, unitBundles);
@@ -435,31 +438,31 @@ const App = (() => {
   }
 
   async function pageText(params) {
-    await withUnitBundle(params.unitId, { resources: ["text"], uiModules: ["content"] }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["text"], uiModules: ["contentReader"] }, (bundle) => {
       ContentRenderer.renderTextPage(bundle, params.unitId);
     });
   }
 
   async function pageWords(params) {
-    await withUnitBundle(params.unitId, { resources: ["text"], uiModules: ["content"] }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["text"], uiModules: ["contentStudy"] }, (bundle) => {
       ContentRenderer.renderWordsPage(bundle, params.unitId);
     });
   }
 
   async function pageComprehension(params) {
-    await withUnitBundle(params.unitId, { resources: ["text"], uiModules: ["content"] }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["text"], uiModules: ["contentStudy"] }, (bundle) => {
       ContentRenderer.renderComprehensionPage(bundle, params.unitId);
     });
   }
 
   async function pageAnalysis(params) {
-    await withUnitBundle(params.unitId, { resources: ["structure"], uiModules: ["content"] }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["structure"], uiModules: ["contentStudy"] }, (bundle) => {
       ContentRenderer.renderAnalysisPage(bundle, params.unitId);
     });
   }
 
   async function pageTheme(params) {
-    await withUnitBundle(params.unitId, { resources: ["appreciation"], uiModules: ["content"] }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["appreciation"], uiModules: ["contentStudy"] }, (bundle) => {
       ContentRenderer.renderThemePage(bundle, params.unitId);
     });
   }
@@ -477,7 +480,7 @@ const App = (() => {
   }
 
   async function pageProgress(params) {
-    await withUnitBundle(params.unitId, { resources: ["memorisation", "rubrics"], allQuestionBanks: true, uiModules: ["content"] }, (bundle) => {
+    await withUnitBundle(params.unitId, { resources: ["memorisation", "rubrics"], allQuestionBanks: true, uiModules: ["contentProgress"] }, (bundle) => {
       ContentRenderer.renderProgressPage(bundle, params.unitId);
     });
   }

@@ -66,15 +66,19 @@ function splitRouteStyles(source) {
   const launchPolish = source.slice(launchStart);
   const core = source.slice(0, quizStart) + launchPolish;
   const questions = source.slice(quizStart, progressStart) + "\n\n" + launchPolish;
-  const content = source.slice(progressStart, launchStart) + "\n\n" + launchPolish;
+  const progress = source.slice(progressStart, readerStart) + "\n\n" + launchPolish;
+  const reader = source.slice(readerStart, studyStart) + "\n\n" + launchPolish;
+  const study = source.slice(studyStart, launchStart) + "\n\n" + launchPolish;
 
-  return { core, content, questions };
+  return { core, questions, progress, reader, study };
 }
 
 const styleSource = read("css/style.css");
 const splitStyles = splitRouteStyles(styleSource);
 const style = fingerprint("style", "css", "css/style.css", splitStyles.core);
-const contentStyle = fingerprint("content-style", "css", "css/style.css", splitStyles.content);
+const readerStyle = fingerprint("reader-style", "css", "css/style.css", splitStyles.reader);
+const studyStyle = fingerprint("study-style", "css", "css/style.css", splitStyles.study);
+const progressStyle = fingerprint("progress-style", "css", "css/style.css", splitStyles.progress);
 const questionsStyle = fingerprint("questions-style", "css", "css/style.css", splitStyles.questions);
 const progress = fingerprint("progress", "js", "js/progress.js", read("js/progress.js"));
 const router = fingerprint("router", "js", "js/router.js", read("js/router.js"));
@@ -98,8 +102,26 @@ builtApp = replaceOnce(
 builtApp = replaceOnce(
   builtApp,
   'content: "js/content-renderer.js"',
-  `content: { script: "${content.path}", style: "${contentStyle.path}" }`,
+  `content: "${content.path}"`,
   "content renderer fingerprint injection"
+);
+builtApp = replaceOnce(
+  builtApp,
+  'contentReader: "js/content-renderer.js"',
+  `contentReader: { script: "${content.path}", style: "${readerStyle.path}" }`,
+  "reader renderer fingerprint injection"
+);
+builtApp = replaceOnce(
+  builtApp,
+  'contentStudy: "js/content-renderer.js"',
+  `contentStudy: { script: "${content.path}", style: "${studyStyle.path}" }`,
+  "study renderer fingerprint injection"
+);
+builtApp = replaceOnce(
+  builtApp,
+  'contentProgress: "js/content-renderer.js"',
+  `contentProgress: { script: "${content.path}", style: "${progressStyle.path}" }`,
+  "progress renderer fingerprint injection"
 );
 builtApp = replaceOnce(
   builtApp,
@@ -115,7 +137,7 @@ builtApp = replaceOnce(
 );
 const app = fingerprint("app", "js", "js/app.js", builtApp);
 
-const assets = { style, contentStyle, questionsStyle, progress, router, app, content, questions, memorisation };
+const assets = { style, readerStyle, studyStyle, progressStyle, questionsStyle, progress, router, app, content, questions, memorisation };
 const manifest = {
   version: 1,
   hashAlgorithm: `sha256-${HASH_LENGTH}`,

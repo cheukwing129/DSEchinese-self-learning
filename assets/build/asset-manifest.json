@@ -8,11 +8,23 @@
       "hash": "157b6516ae72",
       "sha256": "157b6516ae72b72eeff7365d9085ae56bf2bdb86b7e5c519f641362360fc631a"
     },
-    "contentStyle": {
+    "readerStyle": {
       "source": "css/style.css",
-      "path": "/assets/build/content-style.f49a324727b6.css",
-      "hash": "f49a324727b6",
-      "sha256": "f49a324727b6092636a3939f742eec235ff423ae2ba5704234b77e078e7ef6e3"
+      "path": "/assets/build/reader-style.31008a660e3a.css",
+      "hash": "31008a660e3a",
+      "sha256": "31008a660e3a8a86102184d56cf973a4b2e4f7dfedd59de402ff59ac902986f1"
+    },
+    "studyStyle": {
+      "source": "css/style.css",
+      "path": "/assets/build/study-style.ded2901551ae.css",
+      "hash": "ded2901551ae",
+      "sha256": "ded2901551ae3962cbcf4864ae27c43b7bb7d3ed32ade44155b4610de10b94d7"
+    },
+    "progressStyle": {
+      "source": "css/style.css",
+      "path": "/assets/build/progress-style.03fc2038c56c.css",
+      "hash": "03fc2038c56c",
+      "sha256": "03fc2038c56c95429a1b9f65dc10bb92aa4ea71d6ea4567137ae8f8452d85e6b"
     },
     "questionsStyle": {
       "source": "css/style.css",
@@ -34,9 +46,9 @@
     },
     "app": {
       "source": "js/app.js",
-      "path": "/assets/build/app.44cdf017c349.js",
-      "hash": "44cdf017c349",
-      "sha256": "44cdf017c3493464ef00a669e8173186592a5d59aac0a5f0d94f7f031138382d"
+      "path": "/assets/build/app.3b1a0b02c990.js",
+      "hash": "3b1a0b02c990",
+      "sha256": "3b1a0b02c990db7e231bd63bdc7462009ebb63f398e8569dedf368f1af7a6225"
     },
     "content": {
       "source": "js/content-renderer.js",

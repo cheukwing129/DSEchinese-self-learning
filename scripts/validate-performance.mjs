@@ -23,7 +23,7 @@ function fileFromAsset(key) {
 check(!index.includes("fonts.googleapis.com") && !index.includes("fonts.gstatic.com"), "initial HTML must not depend on Google Fonts");
 check(!css.includes('"Mulish"') && !css.includes('"Source Serif Pro"'), "CSS must use local/system font stacks");
 
-for (const key of ["style", "contentStyle", "questionsStyle", "progress", "router", "app", "content", "questions", "memorisation"]) {
+for (const key of ["style", "readerStyle", "studyStyle", "progressStyle", "questionsStyle", "progress", "router", "app", "content", "questions", "memorisation"]) {
   check(!!asset(key), `asset manifest is missing ${key}`);
   check(/^\/assets\/build\/[a-z0-9-]+\.[0-9a-f]{12}\.(?:js|css)$/.test(asset(key)?.path || ""), `${key} must use a content-hashed runtime URL`);
 }
@@ -34,8 +34,9 @@ const expectedStartup = [asset("progress")?.path, asset("router")?.path, asset("
 check(JSON.stringify(startupScripts) === JSON.stringify(expectedStartup), "startup scripts must be exactly the fingerprinted progress, router and app assets");
 check(scriptTags.every((s) => /\bdefer\b/.test(s.attrs)), "all startup scripts must use defer");
 check(index.includes(`href="${asset("style")?.path}"`), "index must use the fingerprinted core stylesheet");
-check(!index.includes(asset("contentStyle")?.path || "__missing__"), "content stylesheet must remain route-lazy");
-check(!index.includes(asset("questionsStyle")?.path || "__missing__"), "question stylesheet must remain route-lazy");
+for (const lazyStyleKey of ["readerStyle", "studyStyle", "progressStyle", "questionsStyle"]) {
+  check(!index.includes(asset(lazyStyleKey)?.path || "__missing__"), `${lazyStyleKey} must remain route-lazy`);
+}
 for (const heavyKey of ["content", "questions", "memorisation"]) {
   check(!startupScripts.includes(asset(heavyKey)?.path), `${heavyKey} engine must remain route-lazy`);
 }
@@ -44,13 +45,19 @@ check(sourceApp.includes("function loadScriptCached(src)"), "App must cache rout
 check(sourceApp.includes("function loadUIModules(names = [])"), "App must expose route UI module loading");
 check(sourceApp.includes('uiModules: ["memorisation"]'), "memorisation route must load its engine on demand");
 check(sourceApp.includes('uiModules: ["questions"]'), "quiz routes must load question engine on demand");
-check(sourceApp.includes('uiModules: ["content"]'), "content routes must load content renderer on demand");
+check(sourceApp.includes('uiModules: ["content"]'), "basic content routes must load content renderer on demand");
+check(sourceApp.includes('uiModules: ["contentReader"]'), "reader route must request reader-specific UI assets");
+check(sourceApp.includes('uiModules: ["contentStudy"]'), "study routes must request study-specific UI assets");
+check(sourceApp.includes('uiModules: ["contentProgress"]'), "progress route must request progress-specific UI assets");
 
 const builtAppPath = fileFromAsset("app");
 if (builtAppPath && fs.existsSync(builtAppPath)) {
   const builtApp = fs.readFileSync(builtAppPath, "utf8");
   check(builtApp.includes("function loadStyleCached(href)"), "built app must cache route-only stylesheet requests");
-  check(builtApp.includes(`content: { script: "${asset("content")?.path}", style: "${asset("contentStyle")?.path}" }`), "built app must pair content renderer with its lazy stylesheet");
+  check(builtApp.includes(`content: "${asset("content")?.path}"`), "built app must keep basic content routes script-only");
+  check(builtApp.includes(`contentReader: { script: "${asset("content")?.path}", style: "${asset("readerStyle")?.path}" }`), "built app must pair reader route with reader CSS");
+  check(builtApp.includes(`contentStudy: { script: "${asset("content")?.path}", style: "${asset("studyStyle")?.path}" }`), "built app must pair study routes with study CSS");
+  check(builtApp.includes(`contentProgress: { script: "${asset("content")?.path}", style: "${asset("progressStyle")?.path}" }`), "built app must pair progress routes with progress CSS");
   check(builtApp.includes(`questions: { script: "${asset("questions")?.path}", style: "${asset("questionsStyle")?.path}" }`), "built app must pair question engine with its lazy stylesheet");
   check(builtApp.includes(`memorisation: "${asset("memorisation")?.path}"`), "built app must point to fingerprinted memorisation engine");
 }
@@ -63,8 +70,9 @@ check(headers.includes("rel=preload; as=style"), "Cloudflare Early Hints must pr
 for (const key of ["style", "progress", "router", "app"]) {
   check(headers.includes(`<${asset(key)?.path}>`), `_headers must hint fingerprinted ${key}`);
 }
-check(!headers.includes(`<${asset("contentStyle")?.path}>`), "route-lazy content CSS must not be preloaded on every page");
-check(!headers.includes(`<${asset("questionsStyle")?.path}>`), "route-lazy question CSS must not be preloaded on every page");
+for (const lazyStyleKey of ["readerStyle", "studyStyle", "progressStyle", "questionsStyle"]) {
+  check(!headers.includes(`<${asset(lazyStyleKey)?.path}>`), `route-lazy ${lazyStyleKey} must not be preloaded on every page`);
+}
 
 const eagerFiles = ["progress", "router", "app"].map(fileFromAsset).filter(Boolean);
 const deferredFiles = ["content", "questions", "memorisation"].map(fileFromAsset).filter(Boolean);
@@ -77,7 +85,7 @@ check(eagerBytes <= 50000, `startup JavaScript budget exceeded: ${eagerBytes} by
 const coreCssFile = fileFromAsset("style");
 const coreCssBytes = coreCssFile && fs.existsSync(coreCssFile) ? fs.statSync(coreCssFile).size : Infinity;
 const sourceCssBytes = fs.statSync("css/style.css").size;
-const lazyCssBytes = ["contentStyle", "questionsStyle"].map(fileFromAsset).filter(Boolean)
+const lazyCssBytes = ["readerStyle", "studyStyle", "progressStyle", "questionsStyle"].map(fileFromAsset).filter(Boolean)
   .reduce((sum, file) => sum + (fs.existsSync(file) ? fs.statSync(file).size : 0), 0);
 const cssReduction = Number.isFinite(coreCssBytes) ? Math.round((1 - coreCssBytes / sourceCssBytes) * 1000) / 10 : 0;
 check(coreCssBytes < sourceCssBytes, `core stylesheet must be smaller than the ${sourceCssBytes}-byte source bundle`);

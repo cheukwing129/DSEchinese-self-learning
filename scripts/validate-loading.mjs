@@ -16,13 +16,14 @@ function forbidText(text, label) {
 requireText("function loadJSONCached(path)", "shared JSON request cache");
 requireText("async function loadUnitBundle(unitId, options = {})", "option-based unit bundle loader");
 requireText('{ resources: ["background"], uiModules: ["content"] }', "background-only unit-home loading with lazy content UI");
-requireText('{ resources: ["text"], uiModules: ["content"] }', "text-only route loading with lazy content UI");
-requireText('{ resources: ["structure"], uiModules: ["content"] }', "structure-only route loading with lazy content UI");
-requireText('{ resources: ["appreciation"], uiModules: ["content"] }', "appreciation-only route loading with lazy content UI");
+requireText('{ resources: ["text"], uiModules: ["contentReader"] }', "reader text loading with reader-specific UI");
+requireText('{ resources: ["text"], uiModules: ["contentStudy"] }', "text-backed study loading with study-specific UI");
+requireText('{ resources: ["structure"], uiModules: ["contentStudy"] }', "structure-only route loading with study-specific UI");
+requireText('{ resources: ["appreciation"], uiModules: ["contentStudy"] }', "appreciation-only route loading with study-specific UI");
 requireText('{ resources: ["memorisation"], uiModules: ["memorisation"] }', "memorisation-only route loading with lazy memorisation UI");
 requireText('{ resources: ["rubrics"], banks: [bankName], uiModules: ["questions"] }', "single-bank quiz loading with rubric support and lazy question UI");
 requireText('{ resources: ["rubrics"], banks: ["cross-text"], uiModules: ["questions"] }', "cross-text bank loading with rubric support and lazy question UI");
-requireText('{ resources: ["memorisation", "rubrics"], allQuestionBanks: true, uiModules: ["content"] }', "aggregate progress loading with memorisation, rubrics and lazy content UI");
+requireText('{ resources: ["memorisation", "rubrics"], allQuestionBanks: true, uiModules: ["contentProgress"] }', "aggregate progress loading with memorisation, rubrics and progress-specific UI");
 requireText("allQuestionBanks: true", "full question-bank loading for aggregate views");
 requireText('bundle: await loadUnitBundle(entry.id, { allQuestionBanks: true })', "on-demand cross-unit overview loading");
 requireText('Router.register("/overview", pageOverview)', "dedicated cross-unit overview route");
