@@ -33,22 +33,39 @@ jobs:
     timeout-minutes: 8
     env:
       PRODUCTION_URL: ${{ github.event_name == 'workflow_dispatch' && inputs.production_url || vars.PRODUCTION_URL }}
+      TESTED_SHA: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
 
     steps:
       - name: Check out tested main commit
         uses: actions/checkout@v7
         with:
-          ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
+          ref: ${{ env.TESTED_SHA }}
+
+      - name: Ignore stale validated main commits
+        id: freshness
+        if: github.event_name == 'workflow_run'
+        run: |
+          current_main="$(git ls-remote origin refs/heads/main | awk '{print $1}')"
+          if [ "$current_main" != "$TESTED_SHA" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "Skipping stale production smoke: tested $TESTED_SHA; current main is $current_main."
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "Validated commit is still current main: $TESTED_SHA"
+          fi
 
       - name: Set up Node.js
+        if: github.event_name == 'workflow_dispatch' || steps.freshness.outputs.run == 'true'
         uses: actions/setup-node@v7
         with:
           node-version: 22
 
       - name: Install pinned Playwright runtime
+        if: github.event_name == 'workflow_dispatch' || steps.freshness.outputs.run == 'true'
         run: |
           npm install --no-save --package-lock=false playwright@1.55.0
           npx playwright install --with-deps chromium
 
       - name: Verify current Cloudflare deployment
+        if: github.event_name == 'workflow_dispatch' || steps.freshness.outputs.run == 'true'
         run: node scripts/production-smoke.mjs
