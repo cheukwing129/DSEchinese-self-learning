@@ -1,0 +1,53 @@
+name: One-time dead brand CSS cleanup
+
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/remove-dead-brand-css.yml]
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Remove legacy text-mark logo CSS
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path('css/style.css')
+          text = path.read_text()
+
+          patterns = [
+              r'\n\.brand \.brand-mark \{ color: var\(--color-accent\); font-size: 20px; \}\n',
+              r'\n\.brand \.brand-mark \{\n  display: grid;\n  place-items: center;\n  width: 34px;\n  height: 34px;\n  border-radius: 11px;\n  background: linear-gradient\(145deg, #1D5A50, var\(--color-accent-strong\)\);\n  color: #FFFDF8;\n  box-shadow: 0 7px 15px rgba\(13, 56, 50, \.19\), inset 0 1px 0 rgba\(255,255,255,\.18\);\n  font-family: var\(--font-display\);\n  font-size: 18px;\n  font-weight: 760;\n\}\n'
+          ]
+
+          for i, pattern in enumerate(patterns, 1):
+              text, count = re.subn(pattern, '\n', text, count=1)
+              if count != 1:
+                  raise SystemExit(f'legacy brand-mark rule {i}: expected exactly one match, got {count}')
+
+          if '.brand .brand-mark' in text:
+              raise SystemExit('legacy .brand .brand-mark selector still remains')
+          path.write_text(text)
+          PY
+
+          node scripts/build-assets.mjs --write
+          node scripts/build-assets.mjs --check
+          node scripts/validate-performance.mjs
+      - name: Commit source and regenerated assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add css/style.css assets/build index.html _headers
+          git commit -m "Remove obsolete pre-SVG brand mark CSS"
+          git push
