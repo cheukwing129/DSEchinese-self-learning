@@ -23,7 +23,7 @@ function fileFromAsset(key) {
 check(!index.includes("fonts.googleapis.com") && !index.includes("fonts.gstatic.com"), "initial HTML must not depend on Google Fonts");
 check(!css.includes('"Mulish"') && !css.includes('"Source Serif Pro"'), "CSS must use local/system font stacks");
 
-for (const key of ["style", "readerStyle", "studyStyle", "progressStyle", "questionsStyle", "progress", "router", "app", "content", "questions", "memorisation"]) {
+for (const key of ["style", "readerStyle", "studyStyle", "progressStyle", "questionsStyle", "progress", "progressAnalytics", "router", "app", "content", "questions", "memorisation"]) {
   check(!!asset(key), `asset manifest is missing ${key}`);
   check(/^\/assets\/build\/[a-z0-9-]+\.[0-9a-f]{12}\.(?:js|css)$/.test(asset(key)?.path || ""), `${key} must use a content-hashed runtime URL`);
 }
@@ -37,7 +37,7 @@ check(index.includes(`href="${asset("style")?.path}"`), "index must use the fing
 for (const lazyStyleKey of ["readerStyle", "studyStyle", "progressStyle", "questionsStyle"]) {
   check(!index.includes(asset(lazyStyleKey)?.path || "__missing__"), `${lazyStyleKey} must remain route-lazy`);
 }
-for (const heavyKey of ["content", "questions", "memorisation"]) {
+for (const heavyKey of ["content", "questions", "memorisation", "progressAnalytics"]) {
   check(!startupScripts.includes(asset(heavyKey)?.path), `${heavyKey} engine must remain route-lazy`);
 }
 
@@ -58,6 +58,7 @@ if (builtAppPath && fs.existsSync(builtAppPath)) {
   check(builtApp.includes(`contentReader: { script: "${asset("content")?.path}", style: "${asset("readerStyle")?.path}" }`), "built app must pair reader route with reader CSS");
   check(builtApp.includes(`contentStudy: { script: "${asset("content")?.path}", style: "${asset("studyStyle")?.path}" }`), "built app must pair study routes with study CSS");
   check(builtApp.includes(`contentProgress: { script: "${asset("content")?.path}", style: "${asset("progressStyle")?.path}" }`), "built app must pair progress routes with progress CSS");
+  check(builtApp.includes(`progressAnalytics: "${asset("progressAnalytics")?.path}"`), "built app must point to fingerprinted lazy progress analytics");
   check(builtApp.includes(`questions: { script: "${asset("questions")?.path}", style: "${asset("questionsStyle")?.path}" }`), "built app must pair question engine with its lazy stylesheet");
   check(builtApp.includes(`memorisation: "${asset("memorisation")?.path}"`), "built app must point to fingerprinted memorisation engine");
 }
@@ -75,7 +76,7 @@ for (const lazyStyleKey of ["readerStyle", "studyStyle", "progressStyle", "quest
 }
 
 const eagerFiles = ["progress", "router", "app"].map(fileFromAsset).filter(Boolean);
-const deferredFiles = ["content", "questions", "memorisation"].map(fileFromAsset).filter(Boolean);
+const deferredFiles = ["content", "questions", "memorisation", "progressAnalytics"].map(fileFromAsset).filter(Boolean);
 const eagerBytes = eagerFiles.reduce((sum, file) => sum + fs.statSync(file).size, 0);
 const deferredBytes = deferredFiles.reduce((sum, file) => sum + fs.statSync(file).size, 0);
 const previousBytes = eagerBytes + deferredBytes;
@@ -97,4 +98,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Initial-load contract validated: ${eagerBytes} raw JS bytes eager, ${deferredBytes} bytes route-lazy (${reduction}% less eager JS than the former six-script bootstrap); core CSS ${coreCssBytes}/${sourceCssBytes} bytes (${cssReduction}% removed from startup) with ${lazyCssBytes} route-lazy CSS bytes; versioned assets use one-year immutable caching.`);
+console.log(`Initial-load contract validated: ${eagerBytes} raw JS bytes eager, ${deferredBytes} bytes route-lazy (${reduction}% less eager JS than the combined eager + route-lazy runtime); core CSS ${coreCssBytes}/${sourceCssBytes} bytes (${cssReduction}% removed from startup) with ${lazyCssBytes} route-lazy CSS bytes; versioned assets use one-year immutable caching.`);

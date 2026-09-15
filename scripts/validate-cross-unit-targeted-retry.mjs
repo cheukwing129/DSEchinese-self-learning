@@ -2,6 +2,7 @@ import fs from "node:fs";
 import vm from "node:vm";
 
 const progressSource = fs.readFileSync("js/progress.js", "utf8");
+const analyticsSource = fs.readFileSync("js/progress-analytics.js", "utf8");
 const appSource = fs.readFileSync("js/app.js", "utf8");
 const contentSource = fs.readFileSync("js/content-renderer.js", "utf8");
 const questionSource = fs.readFileSync("js/question-engine.js", "utf8");
@@ -12,7 +13,8 @@ function check(condition, message) {
 }
 
 check(progressSource.includes('const STORAGE_KEY = "ccsl_progress_v1"'), "progress storage key must remain ccsl_progress_v1");
-check(progressSource.includes("function crossUnitWrongItems"), "Progress must expose one shared cross-unit unresolved selector");
+check(analyticsSource.includes("function crossUnitWrongItems"), "lazy analytics must expose one shared cross-unit unresolved selector");
+check(appSource.includes('loadUIModules(["questions", "progressAnalytics"])'), "targeted retry must lazy-load cross-unit analytics");
 check(appSource.includes('Router.register("/overview/retry/:ability", pageCrossUnitRetry)'), "app must register targeted retry route");
 check(appSource.includes("async function loadCrossUnitBundles()"), "overview and retry must share the on-demand aggregate loader");
 check(contentSource.includes("重練全部待修正"), "overview must expose an all-errors retry action");
@@ -31,6 +33,7 @@ const localStorage = {
 };
 const context = vm.createContext({ console, localStorage, Date, Math, Object, Array, String, Number, Set });
 vm.runInContext(progressSource, context);
+vm.runInContext(analyticsSource, context);
 const Progress = vm.runInContext("Progress", context);
 
 const inputs = [

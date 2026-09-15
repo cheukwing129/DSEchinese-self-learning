@@ -2,6 +2,7 @@ import fs from "node:fs";
 import vm from "node:vm";
 
 const progressSource = fs.readFileSync("js/progress.js", "utf8");
+const analyticsSource = fs.readFileSync("js/progress-analytics.js", "utf8");
 const appSource = fs.readFileSync("js/app.js", "utf8");
 const contentSource = fs.readFileSync("js/content-renderer.js", "utf8");
 const errors = [];
@@ -13,6 +14,7 @@ function check(condition, message) {
 check(appSource.includes('href="#/overview"'), "home must expose the cross-unit overview entry");
 check(appSource.includes('Router.register("/overview", pageOverview)'), "overview must have a dedicated route");
 check(appSource.includes('loadUnitBundle(entry.id, { allQuestionBanks: true })'), "overview route must load full banks only on demand");
+check(appSource.includes('loadUIModules(["contentProgress", "progressAnalytics"])'), "overview must lazy-load cross-unit analytics");
 check(contentSource.includes("不產生虛假的總掌握百分比"), "overview must reject synthetic total mastery percentages");
 check(contentSource.includes("排序規則：待修正錯題數"), "priority ordering must be explained to the student");
 
@@ -29,6 +31,7 @@ const localStorage = {
 };
 const context = vm.createContext({ console, localStorage, Date: FakeDate, Math, Object, Array, String, Number, Set });
 vm.runInContext(progressSource, context);
+vm.runInContext(analyticsSource, context);
 const Progress = vm.runInContext("Progress", context);
 
 const q1 = { id: "u1-q1", question_type: "single_choice", ability: "內容理解" };

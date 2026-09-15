@@ -34,9 +34,15 @@
     },
     "progress": {
       "source": "js/progress.js",
-      "path": "/assets/build/progress.5c69413fd6a5.js",
-      "hash": "5c69413fd6a5",
-      "sha256": "5c69413fd6a5bd5b4cad906d1bd9ccebec2ed82a6aca19be7a35003fc20b7732"
+      "path": "/assets/build/progress.e3516434afdc.js",
+      "hash": "e3516434afdc",
+      "sha256": "e3516434afdc97b2596f4a7b995ddb72c882b6806f042f873de01da23d8e8abe"
+    },
+    "progressAnalytics": {
+      "source": "js/progress-analytics.js",
+      "path": "/assets/build/progress-analytics.2de6dccfcf75.js",
+      "hash": "2de6dccfcf75",
+      "sha256": "2de6dccfcf75b3aebdcc57c73fa1b90b21640b627b79970086af890e65f83544"
     },
     "router": {
       "source": "js/router.js",
@@ -46,9 +52,9 @@
     },
     "app": {
       "source": "js/app.js",
-      "path": "/assets/build/app.929eddd9469e.js",
-      "hash": "929eddd9469e",
-      "sha256": "929eddd9469e016b7dbc2afaa7a318d04fe68481d27746520ff61ad3ae786ea0"
+      "path": "/assets/build/app.a07d1f0109a0.js",
+      "hash": "a07d1f0109a0",
+      "sha256": "a07d1f0109a082aca9006d157864260811536dd914d505a46db627fd5b770bd9"
     },
     "content": {
       "source": "js/content-renderer.js",

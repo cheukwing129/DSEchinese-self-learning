@@ -81,6 +81,7 @@ const studyStyle = fingerprint("study-style", "css", "css/style.css", splitStyle
 const progressStyle = fingerprint("progress-style", "css", "css/style.css", splitStyles.progress);
 const questionsStyle = fingerprint("questions-style", "css", "css/style.css", splitStyles.questions);
 const progress = fingerprint("progress", "js", "js/progress.js", read("js/progress.js"));
+const progressAnalytics = fingerprint("progress-analytics", "js", "js/progress-analytics.js", read("js/progress-analytics.js"));
 const router = fingerprint("router", "js", "js/router.js", read("js/router.js"));
 const content = fingerprint("content-renderer", "js", "js/content-renderer.js", read("js/content-renderer.js"));
 const questions = fingerprint("question-engine", "js", "js/question-engine.js", read("js/question-engine.js"));
@@ -125,6 +126,12 @@ builtApp = replaceOnce(
 );
 builtApp = replaceOnce(
   builtApp,
+  'progressAnalytics: "js/progress-analytics.js"',
+  `progressAnalytics: "${progressAnalytics.path}"`,
+  "progress analytics fingerprint injection"
+);
+builtApp = replaceOnce(
+  builtApp,
   'questions: "js/question-engine.js"',
   `questions: { script: "${questions.path}", style: "${questionsStyle.path}" }`,
   "question engine fingerprint injection"
@@ -137,7 +144,7 @@ builtApp = replaceOnce(
 );
 const app = fingerprint("app", "js", "js/app.js", builtApp);
 
-const assets = { style, readerStyle, studyStyle, progressStyle, questionsStyle, progress, router, app, content, questions, memorisation };
+const assets = { style, readerStyle, studyStyle, progressStyle, questionsStyle, progress, progressAnalytics, router, app, content, questions, memorisation };
 const manifest = {
   version: 1,
   hashAlgorithm: `sha256-${HASH_LENGTH}`,

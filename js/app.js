@@ -13,6 +13,7 @@ const App = (() => {
     contentReader: "js/content-renderer.js",
     contentStudy: "js/content-renderer.js",
     contentProgress: "js/content-renderer.js",
+    progressAnalytics: "js/progress-analytics.js",
     questions: "js/question-engine.js",
     memorisation: "js/memorisation-engine.js"
   });
@@ -396,7 +397,7 @@ const App = (() => {
     try {
       const [{ curriculum, unitBundles }] = await Promise.all([
         loadCrossUnitBundles(),
-        loadUIModules(["contentProgress"])
+        loadUIModules(["contentProgress", "progressAnalytics"])
       ]);
       if (!Router.isCurrentNavigation(navigationId)) return;
       ContentRenderer.renderCrossUnitOverview(curriculum, unitBundles);
@@ -414,7 +415,7 @@ const App = (() => {
     try {
       const [{ unitBundles }] = await Promise.all([
         loadCrossUnitBundles(),
-        loadUIModules(["questions"])
+        loadUIModules(["questions", "progressAnalytics"])
       ]);
       if (!Router.isCurrentNavigation(navigationId)) return;
       QuestionEngine.renderCrossUnitWrongRetry(unitBundles, ability);

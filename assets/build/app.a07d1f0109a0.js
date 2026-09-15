@@ -13,6 +13,7 @@ const App = (() => {
     contentReader: { script: "/assets/build/content-renderer.7363363ac841.js", style: "/assets/build/reader-style.31008a660e3a.css" },
     contentStudy: { script: "/assets/build/content-renderer.7363363ac841.js", style: "/assets/build/study-style.ded2901551ae.css" },
     contentProgress: { script: "/assets/build/content-renderer.7363363ac841.js", style: "/assets/build/progress-style.03fc2038c56c.css" },
+    progressAnalytics: "/assets/build/progress-analytics.2de6dccfcf75.js",
     questions: { script: "/assets/build/question-engine.686482b85cc0.js", style: "/assets/build/questions-style.d140f0d5c519.css" },
     memorisation: "/assets/build/memorisation-engine.dab19bb23e8e.js"
   });
@@ -419,7 +420,7 @@ const App = (() => {
     try {
       const [{ curriculum, unitBundles }] = await Promise.all([
         loadCrossUnitBundles(),
-        loadUIModules(["contentProgress"])
+        loadUIModules(["contentProgress", "progressAnalytics"])
       ]);
       if (!Router.isCurrentNavigation(navigationId)) return;
       ContentRenderer.renderCrossUnitOverview(curriculum, unitBundles);
@@ -437,7 +438,7 @@ const App = (() => {
     try {
       const [{ unitBundles }] = await Promise.all([
         loadCrossUnitBundles(),
-        loadUIModules(["questions"])
+        loadUIModules(["questions", "progressAnalytics"])
       ]);
       if (!Router.isCurrentNavigation(navigationId)) return;
       QuestionEngine.renderCrossUnitWrongRetry(unitBundles, ability);

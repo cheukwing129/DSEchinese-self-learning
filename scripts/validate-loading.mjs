@@ -29,6 +29,8 @@ requireText('bundle: await loadUnitBundle(entry.id, { allQuestionBanks: true })'
 requireText('Router.register("/overview", pageOverview)', "dedicated cross-unit overview route");
 requireText('Router.register("/overview/retry/:ability", pageCrossUnitRetry)', "dedicated cross-unit targeted retry route");
 requireText("async function loadCrossUnitBundles()", "shared on-demand aggregate loader");
+requireText('loadUIModules(["contentProgress", "progressAnalytics"])', "overview-only analytics loading");
+requireText('loadUIModules(["questions", "progressAnalytics"])', "targeted-retry analytics loading");
 requireText("Router.currentNavigationId()", "navigation generation capture for async routes");
 requireText("Router.isCurrentNavigation(navigationId)", "stale async route guard");
 forbidText('fetchJSON(`${base}/background.json`)', "eager resource preload has returned");
