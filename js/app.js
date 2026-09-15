@@ -5,8 +5,7 @@
 const App = (() => {
   const mainEl = () => document.getElementById("app-main");
   const crumbEl = () => document.getElementById("header-crumb");
-  let pendingRouteFocus = false;
-  let ignoreNextHashFocus = false;
+  let pendingRouteFocus = false, skipInitialHashFocus = !window.location.hash;
 
   const cache = { curriculum: null, json: {}, scripts: {} };
   const UI_MODULES = Object.freeze({
@@ -132,47 +131,25 @@ const App = (() => {
   }
 
   // ---------- 版面共用元件 ----------
-  function focusPrimaryContent() {
-    const main = mainEl();
-    if (!main) return;
-    const heading = main.querySelector("h1.page-title, h1");
-    const target = heading || main;
-    const addedTabIndex = !target.hasAttribute("tabindex");
-    if (addedTabIndex) target.setAttribute("tabindex", "-1");
-    target.focus({ preventScroll: true });
-    if (addedTabIndex) {
-      target.addEventListener("blur", () => target.removeAttribute("tabindex"), { once: true });
-    }
-  }
-
   function mount(html) {
     const main = mainEl();
     main.innerHTML = html;
     if (pendingRouteFocus && !main.querySelector(".loading-state")) {
       pendingRouteFocus = false;
-      focusPrimaryContent();
+      const target = main.querySelector("h1") || main;
+      target.tabIndex = -1;
+      target.focus({ preventScroll: true });
     }
   }
 
   function bindKeyboardNavigation() {
-    const skipLink = document.querySelector(".skip-link");
-    if (skipLink) {
-      skipLink.addEventListener("click", (event) => {
-        event.preventDefault();
-        pendingRouteFocus = false;
-        const main = mainEl();
-        main.focus({ preventScroll: true });
-        main.scrollIntoView({ block: "start" });
-      });
-    }
-
-    ignoreNextHashFocus = !window.location.hash;
+    document.querySelector(".skip-link").addEventListener("click", (event) => {
+      event.preventDefault();
+      mainEl().focus();
+    });
     window.addEventListener("hashchange", () => {
-      if (ignoreNextHashFocus) {
-        ignoreNextHashFocus = false;
-        return;
-      }
-      pendingRouteFocus = true;
+      if (skipInitialHashFocus) skipInitialHashFocus = false;
+      else pendingRouteFocus = true;
     });
   }
 
