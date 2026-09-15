@@ -58,6 +58,138 @@
   </main>
   <noscript><div class="noscript-state">文脈需要 JavaScript 才能載入篇章、練習與本機學習紀錄。</div></noscript>
 
+  <!-- RC UX safeguards: keep forward actions unambiguous and make reorder practice reversible. -->
+  <script>
+  (() => {
+    const generalQuizTitles = new Set([
+      "字詞與虛詞題庫",
+      "內容理解題庫",
+      "結構與手法題庫",
+      "主旨與思考題庫",
+      "跨篇比較與進階題"
+    ]);
+
+    function finalQuizState(title) {
+      if (generalQuizTitles.has(title)) {
+        return {
+          label: "完成這組練習",
+          hint: "先對照答案與解析，確認後完成這組練習。",
+          navigateBack: true
+        };
+      }
+      if (title === "錯題重練" || title.startsWith("跨篇章錯題重練")) {
+        return {
+          label: "完成本輪重練",
+          hint: "先對照答案與解析，確認後完成本輪重練。",
+          navigateBack: false
+        };
+      }
+      if (title === "核心篇章挑戰") {
+        return {
+          label: "完成挑戰，查看結果",
+          hint: "先對照答案與解析，確認後查看挑戰結果。",
+          navigateBack: false
+        };
+      }
+      return null;
+    }
+
+    function hideButton(button) {
+      if (!button) return;
+      button.hidden = true;
+      button.style.display = "none";
+    }
+
+    function enhanceQuiz() {
+      const shell = document.querySelector(".quiz-shell");
+      if (!shell || !shell.classList.contains("is-submitted")) return;
+
+      const nextButton = shell.querySelector("#next-btn");
+      hideButton(nextButton);
+
+      const confirmButton = shell.querySelector("#confirm-next-btn");
+      if (!confirmButton || !nextButton || !nextButton.disabled) return;
+
+      const title = shell.querySelector(".quiz-context-title")?.textContent?.trim() || "";
+      const finalState = finalQuizState(title);
+      if (!finalState) return;
+
+      confirmButton.textContent = finalState.label;
+      const hint = shell.querySelector(".question-action-hint");
+      if (hint) hint.textContent = finalState.hint;
+
+      hideButton(shell.querySelector("#finish-challenge-btn"));
+
+      if (finalState.navigateBack && !confirmButton.dataset.uxFinishBound) {
+        confirmButton.dataset.uxFinishBound = "true";
+        confirmButton.addEventListener("click", (event) => {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          const backHref = shell.querySelector(".quiz-context-back")?.getAttribute("href") || "";
+          if (backHref.startsWith("#")) window.location.hash = backHref.slice(1);
+        }, { capture: true });
+      }
+    }
+
+    function replayReorderSteps(texts) {
+      for (const text of texts) {
+        const match = [...document.querySelectorAll("#reorder-pool [data-chip]")]
+          .find((chip) => chip.textContent === text);
+        if (!match) return false;
+        match.click();
+      }
+      return true;
+    }
+
+    function enhanceReorder() {
+      const resetButton = document.getElementById("reorder-reset-btn");
+      if (!resetButton) return;
+      const row = resetButton.closest(".btn-row");
+      if (!row) return;
+
+      let undoButton = document.getElementById("reorder-undo-btn");
+      if (!undoButton) {
+        undoButton = document.createElement("button");
+        undoButton.type = "button";
+        undoButton.id = "reorder-undo-btn";
+        undoButton.className = "btn btn-secondary";
+        undoButton.textContent = "撤回上一步";
+        row.insertBefore(undoButton, resetButton);
+      }
+
+      const placed = [...document.querySelectorAll("#reorder-slots .reorder-chip.is-placed")];
+      undoButton.disabled = placed.length === 0;
+      undoButton.onclick = () => {
+        const keep = placed.slice(0, -1).map((chip) => chip.textContent);
+        resetButton.click();
+        replayReorderSteps(keep);
+        requestAnimationFrame(() => {
+          enhanceReorder();
+          document.getElementById("reorder-undo-btn")?.focus({ preventScroll: true });
+        });
+      };
+    }
+
+    const main = document.getElementById("app-main");
+    if (!main) return;
+
+    let scheduled = false;
+    const enhance = () => {
+      scheduled = false;
+      enhanceQuiz();
+      enhanceReorder();
+    };
+    const scheduleEnhance = () => {
+      if (scheduled) return;
+      scheduled = true;
+      requestAnimationFrame(enhance);
+    };
+
+    new MutationObserver(scheduleEnhance).observe(main, { childList: true, subtree: true });
+    scheduleEnhance();
+  })();
+  </script>
+
   <!-- ContentRenderer / QuestionEngine / MemorisationEngine 會按目前路由需要才載入。 -->
 </body>
 </html>
