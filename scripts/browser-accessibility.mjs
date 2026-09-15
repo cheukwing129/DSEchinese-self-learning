@@ -191,7 +191,10 @@ try {
   await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/words/quiz?qi=0"; });
   await waitReady(page, ".quiz-shell .q-stem");
   active = await activeState(page);
-  check(active.tag === "H1" && active.className.includes("page-title"), "hash route change should focus the quiz H1");
+  check(
+    active.tag === "H1" && active.className.includes("quiz-context-title"),
+    `hash route change should focus the quiz H1, got ${active.tag}.${active.className}`
+  );
 
   const option = page.locator('[data-role="option-main"]').first();
   check(await option.getAttribute("role") === "radio", "single-choice option should expose radio semantics");
