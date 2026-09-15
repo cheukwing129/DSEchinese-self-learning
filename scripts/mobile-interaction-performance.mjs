@@ -24,7 +24,7 @@ const BUDGETS = {
   warmRouteMs: 300,
   optionSelectMs: 300,
   submitMs: 400,
-  nextQuestionMs: 600
+  nextQuestionMs: 200
 };
 
 function fail(message) {
@@ -218,6 +218,10 @@ try {
   );
   check(submitMs <= BUDGETS.submitMs, `quiz submit/reveal ${submitMs}ms > ${BUDGETS.submitMs}ms`);
 
+  // Submitting focuses the answer reveal while the global smooth-scroll rule
+  // is still settling. That animation belongs to the previous interaction, so
+  // exclude it before timing the independent next-question transition.
+  await page.waitForTimeout(450);
   const oldStem = await page.locator(".q-stem").first().innerText();
   const nextQuestionMs = await elapsed(
     () => page.locator("#confirm-next-btn").click(),
