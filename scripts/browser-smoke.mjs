@@ -136,10 +136,10 @@ try {
     if (response.status() >= 400) fail(`HTTP ${response.status()}: ${response.url()}`);
   });
 
-  const coldStart = Date.now();
-  await page.goto(`${baseURL}/#/`, { waitUntil: "networkidle", timeout: 10000 });
+  await page.goto(`${baseURL}/#/`, { waitUntil: "domcontentloaded", timeout: 10000 });
   await waitForTitle(page, "讀懂經典");
-  const homeReadyMs = Date.now() - coldStart;
+  const homeReadyMs = await page.evaluate(() => performance.now());
+  await page.waitForLoadState("load", { timeout: 10000 });
   const mapCount = await page.locator(".map-card").count();
   check(mapCount === 16, `home should render 16 curriculum cards, got ${mapCount}`);
 
@@ -156,7 +156,7 @@ try {
   check(eagerJsEncoded <= 50000, `browser-observed eager JavaScript budget exceeded: ${eagerJsEncoded} bytes > 50000`);
   check((cold.domContentLoaded ?? Infinity) <= 2500, `DOMContentLoaded too slow on local smoke server: ${cold.domContentLoaded}ms > 2500ms`);
   check((cold.load ?? Infinity) <= 3000, `load event too slow on local smoke server: ${cold.load}ms > 3000ms`);
-  check(homeReadyMs <= 4000, `home did not become visibly ready within 4000ms (took ${homeReadyMs}ms)`);
+  check(homeReadyMs <= 1500, `home did not become visibly ready within 1500ms (took ${Math.round(homeReadyMs)}ms)`);
 
   await page.reload({ waitUntil: "networkidle", timeout: 10000 });
   await waitForTitle(page, "讀懂經典");
@@ -302,7 +302,7 @@ try {
   const overviewOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
   check(overviewOverflow <= 1, `mobile cross-unit overview has horizontal overflow of ${overviewOverflow}px`);
 
-  console.log(`Browser smoke metrics: home ready ${homeReadyMs}ms; DOMContentLoaded ${Math.round(cold.domContentLoaded || 0)}ms; load ${Math.round(cold.load || 0)}ms; eager JS ${eagerJsEncoded} encoded bytes; warm fingerprinted transfer ${warmTransferred} bytes.`);
+  console.log(`Browser smoke metrics: home ready ${Math.round(homeReadyMs)}ms; DOMContentLoaded ${Math.round(cold.domContentLoaded || 0)}ms; load ${Math.round(cold.load || 0)}ms; eager JS ${eagerJsEncoded} encoded bytes; warm fingerprinted transfer ${warmTransferred} bytes.`);
   console.log(`Browser smoke routes passed: home → unit → reader → four content-study pages → quiz submit → progress → memorisation; mobile overflow checks passed.`);
 
   await context.close();
