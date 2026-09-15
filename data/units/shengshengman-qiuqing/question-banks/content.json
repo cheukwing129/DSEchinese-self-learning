@@ -188,17 +188,18 @@
       "id": "cb-content-009",
       "unit": "shengshengman-qiuqing",
       "ability": "內容理解",
-      "knowledge_point": "疊字修辭手法辨析（可多選）",
+      "knowledge_point": "跨篇主要修辭手法辨析",
       "question_type": "short_answer",
       "is_cross_text": true,
       "paragraph_ref": 1,
       "difficulty": "advanced",
-      "stem": "試判斷以下詞句分別運用了哪種修辭手法（可選：A對偶　B疊字　C對比　D雙聲　E疊韻，答案可多於一個，全對才給分）。",
-      "score": 4,
+      "stem": "試判斷以下兩句最突出的修辭手法。請從 A對偶、B疊字、C對比、D反問 中各選一項。",
+      "score": 2,
       "items": [
-        {"text": "尋尋覓覓，冷冷清清，悽悽慘慘戚戚。（《聲聲慢‧秋情》）", "target": "①", "answer": "B、D（疊字、雙聲）"},
+        {"text": "尋尋覓覓，冷冷清清，悽悽慘慘戚戚。（《聲聲慢‧秋情》）", "target": "①", "answer": "B（疊字）"},
         {"text": "鳳簫聲動，玉壺光轉。（《青玉案‧元夕》）", "target": "②", "answer": "A（對偶）"}
       ],
+      "note": "本題只判斷最主要、最明確的修辭特徵，避免把相同字重複所形成的聲母／韻母重複另算作雙聲或疊韻。",
       "source": "校本試題庫"
     },
     {
