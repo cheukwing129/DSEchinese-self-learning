@@ -4,9 +4,21 @@
   "assets": {
     "style": {
       "source": "css/style.css",
-      "path": "/assets/build/style.52ad65fe0d7d.css",
-      "hash": "52ad65fe0d7d",
-      "sha256": "52ad65fe0d7db9f7bd5a2b214721bd3537b619b8dd5f24e5d67e0fb891cad2bf"
+      "path": "/assets/build/style.157b6516ae72.css",
+      "hash": "157b6516ae72",
+      "sha256": "157b6516ae72b72eeff7365d9085ae56bf2bdb86b7e5c519f641362360fc631a"
+    },
+    "contentStyle": {
+      "source": "css/style.css",
+      "path": "/assets/build/content-style.f49a324727b6.css",
+      "hash": "f49a324727b6",
+      "sha256": "f49a324727b6092636a3939f742eec235ff423ae2ba5704234b77e078e7ef6e3"
+    },
+    "questionsStyle": {
+      "source": "css/style.css",
+      "path": "/assets/build/questions-style.85e583f626db.css",
+      "hash": "85e583f626db",
+      "sha256": "85e583f626db91196192db5037999c15521a10c89dd1f28a13096af60f0b8e40"
     },
     "progress": {
       "source": "js/progress.js",
@@ -22,9 +34,9 @@
     },
     "app": {
       "source": "js/app.js",
-      "path": "/assets/build/app.f58baa3a9c75.js",
-      "hash": "f58baa3a9c75",
-      "sha256": "f58baa3a9c75cc0712e803e7ddf2d0f8a3d5f7b56ba1bb2f1b19bb0feeb8711c"
+      "path": "/assets/build/app.44cdf017c349.js",
+      "hash": "44cdf017c349",
+      "sha256": "44cdf017c3493464ef00a669e8173186592a5d59aac0a5f0d94f7f031138382d"
     },
     "content": {
       "source": "js/content-renderer.js",

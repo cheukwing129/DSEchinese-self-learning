@@ -6,10 +6,10 @@ const App = (() => {
   const mainEl = () => document.getElementById("app-main");
   const crumbEl = () => document.getElementById("header-crumb");
 
-  const cache = { curriculum: null, json: {}, scripts: {} };
+  const cache = { curriculum: null, json: {}, scripts: {}, styles: {} };
   const UI_MODULES = Object.freeze({
-    content: "/assets/build/content-renderer.20678a614fb2.js",
-    questions: "/assets/build/question-engine.ab36f2066af2.js",
+    content: { script: "/assets/build/content-renderer.20678a614fb2.js", style: "/assets/build/content-style.f49a324727b6.css" },
+    questions: { script: "/assets/build/question-engine.ab36f2066af2.js", style: "/assets/build/questions-style.85e583f626db.css" },
     memorisation: "/assets/build/memorisation-engine.dab19bb23e8e.js"
   });
 
@@ -60,11 +60,34 @@ const App = (() => {
     return cache.scripts[src];
   }
 
+  function loadStyleCached(href) {
+    if (!cache.styles[href]) {
+      cache.styles[href] = new Promise((resolve, reject) => {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = href;
+        link.dataset.uiStyle = href;
+        link.addEventListener("load", () => resolve(), { once: true });
+        link.addEventListener("error", () => {
+          delete cache.styles[href];
+          link.remove();
+          reject(new Error(`無法載入介面樣式「${href}」。`));
+        }, { once: true });
+        document.head.appendChild(link);
+      });
+    }
+    return cache.styles[href];
+  }
+
   function loadUIModules(names = []) {
     return Promise.all([...new Set(names)].map((name) => {
-      const src = UI_MODULES[name];
-      if (!src) return Promise.reject(new Error(`未知介面模組「${name}」。`));
-      return loadScriptCached(src);
+      const module = UI_MODULES[name];
+      if (!module) return Promise.reject(new Error(`未知介面模組「${name}」。`));
+      const descriptor = typeof module === "string" ? { script: module, style: null } : module;
+      return Promise.all([
+        descriptor.style ? loadStyleCached(descriptor.style) : Promise.resolve(),
+        loadScriptCached(descriptor.script)
+      ]);
     }));
   }
 
