@@ -58,7 +58,7 @@
   </main>
   <noscript><div class="noscript-state">文脈需要 JavaScript 才能載入篇章、練習與本機學習紀錄。</div></noscript>
 
-  <!-- RC UX safeguards: keep forward actions unambiguous and make reorder practice reversible. -->
+  <!-- RC UX safeguards: keep forward actions unambiguous, make reorder reversible, and turn open-answer rubrics into self review. -->
   <script>
   (() => {
     const generalQuizTitles = new Set([
@@ -68,6 +68,7 @@
       "主旨與思考題庫",
       "跨篇比較與進階題"
     ]);
+    const progressStorageKey = "ccsl_progress_v1";
 
     function finalQuizState(title) {
       if (generalQuizTitles.has(title)) {
@@ -170,6 +171,166 @@
       };
     }
 
+    function currentUnitId() {
+      const match = window.location.hash.match(/^#\/unit\/([^/?]+)/);
+      if (!match) return "";
+      try {
+        return decodeURIComponent(match[1]);
+      } catch {
+        return match[1];
+      }
+    }
+
+    function stableReviewId(shell, unitId) {
+      const title = shell.querySelector(".quiz-context-title")?.textContent?.trim() || "";
+      const stem = shell.querySelector(".q-stem")?.textContent?.trim() || "";
+      const quote = shell.querySelector(".q-quote")?.textContent?.trim() || "";
+      const source = `${unitId}|${title}|${stem}|${quote}`;
+      let hash = 2166136261;
+      for (let i = 0; i < source.length; i += 1) {
+        hash ^= source.charCodeAt(i);
+        hash = Math.imul(hash, 16777619);
+      }
+      return `q-${(hash >>> 0).toString(16)}`;
+    }
+
+    function loadOpenReview(unitId, reviewId) {
+      try {
+        const all = JSON.parse(localStorage.getItem(progressStorageKey) || "{}");
+        const review = all?.[unitId]?.openQuestionReviews?.[reviewId];
+        return review && typeof review === "object" ? review : {};
+      } catch {
+        return {};
+      }
+    }
+
+    function saveOpenReview(unitId, reviewId, patch) {
+      try {
+        const parsed = JSON.parse(localStorage.getItem(progressStorageKey) || "{}");
+        const all = parsed && typeof parsed === "object" ? parsed : {};
+        const unit = all[unitId] && typeof all[unitId] === "object" ? all[unitId] : {};
+        const reviews = unit.openQuestionReviews && typeof unit.openQuestionReviews === "object" ? unit.openQuestionReviews : {};
+        const previous = reviews[reviewId] && typeof reviews[reviewId] === "object" ? reviews[reviewId] : {};
+        const now = Date.now();
+        reviews[reviewId] = { ...previous, ...patch, updatedAt: now };
+        unit.openQuestionReviews = reviews;
+        unit.lastActivityAt = now;
+        all[unitId] = unit;
+        localStorage.setItem(progressStorageKey, JSON.stringify(all));
+      } catch (error) {
+        console.error("Open-answer self review: unable to save progress", error);
+      }
+    }
+
+    function setTextIfChanged(node, text) {
+      if (node && node.textContent !== text) node.textContent = text;
+    }
+
+    function updateOpenReviewSummary(shell, unitId, reviewId) {
+      const summary = shell.querySelector(".open-self-review-summary");
+      if (!summary) return;
+      const inputs = [...shell.querySelectorAll(".open-self-review-checkbox")];
+      const checked = inputs.filter((input) => input.checked).length;
+      setTextIfChanged(summary.querySelector("[data-open-review-count]"), `你已對照 ${checked}/${inputs.length} 項。`);
+
+      const saved = loadOpenReview(unitId, reviewId);
+      const decision = saved.decision || "";
+      summary.querySelectorAll("[data-open-review-decision]").forEach((button) => {
+        const selected = button.dataset.openReviewDecision === decision;
+        button.setAttribute("aria-pressed", selected ? "true" : "false");
+        button.style.borderColor = selected ? "var(--color-accent)" : "";
+        button.style.background = selected ? "var(--color-accent-soft)" : "";
+      });
+      const decisionText = decision === "mastered"
+        ? "已記錄為「我已掌握」。"
+        : decision === "retry"
+          ? "已記錄為「稍後重做」。"
+          : "核對後，可標記這題目前的學習狀態。";
+      setTextIfChanged(summary.querySelector("[data-open-review-status]"), decisionText);
+    }
+
+    function enhanceOpenSelfReview() {
+      const shell = document.querySelector(".quiz-shell.is-submitted");
+      if (!shell) return;
+      const panel = shell.querySelector(".reveal-panel");
+      if (!panel) return;
+      const lists = [...panel.querySelectorAll("ul.scoring-elements")];
+      if (!lists.length) return;
+
+      const unitId = currentUnitId();
+      if (!unitId) return;
+      const reviewId = stableReviewId(shell, unitId);
+      const saved = loadOpenReview(unitId, reviewId);
+      const savedChecked = saved.checked && typeof saved.checked === "object" ? saved.checked : {};
+
+      lists.forEach((list, listIndex) => {
+        if (list.dataset.openSelfReviewBound) return;
+        list.dataset.openSelfReviewBound = "true";
+        list.style.listStyle = "none";
+        list.style.paddingLeft = "0";
+        [...list.children].forEach((item, itemIndex) => {
+          const text = item.textContent?.trim() || "";
+          const itemKey = `${listIndex}:${itemIndex}`;
+          item.textContent = "";
+          item.style.margin = "0 0 8px";
+          const label = document.createElement("label");
+          label.style.display = "flex";
+          label.style.alignItems = "flex-start";
+          label.style.gap = "10px";
+          label.style.cursor = "pointer";
+          const checkbox = document.createElement("input");
+          checkbox.type = "checkbox";
+          checkbox.className = "open-self-review-checkbox";
+          checkbox.dataset.openReviewItem = itemKey;
+          checkbox.checked = savedChecked[itemKey] === true;
+          checkbox.style.marginTop = "3px";
+          checkbox.style.flex = "0 0 auto";
+          const copy = document.createElement("span");
+          copy.textContent = text;
+          label.append(checkbox, copy);
+          item.appendChild(label);
+          checkbox.addEventListener("change", () => {
+            const latest = loadOpenReview(unitId, reviewId);
+            const nextChecked = { ...(latest.checked && typeof latest.checked === "object" ? latest.checked : {}) };
+            if (checkbox.checked) nextChecked[itemKey] = true;
+            else delete nextChecked[itemKey];
+            saveOpenReview(unitId, reviewId, { checked: nextChecked });
+            updateOpenReviewSummary(shell, unitId, reviewId);
+          });
+        });
+      });
+
+      let summary = panel.querySelector(".open-self-review-summary");
+      if (!summary) {
+        summary = document.createElement("div");
+        summary.className = "reveal-row open-self-review-summary";
+        summary.style.marginTop = "14px";
+        summary.style.paddingTop = "12px";
+        summary.style.borderTop = "1px dashed var(--color-border)";
+        summary.innerHTML = `
+          <span class="reveal-label">你的自評</span>
+          <div>
+            <p data-open-review-count aria-live="polite" style="margin:0; font-weight:700;"></p>
+            <p style="margin:4px 0 10px; font-size:12px; color:var(--color-ink-soft);">逐項核對你已做到的要點；這是自我檢視，不是系統分數。</p>
+            <div class="btn-row" style="margin:0;">
+              <button type="button" class="btn btn-secondary" data-open-review-decision="mastered" aria-pressed="false">我已掌握</button>
+              <button type="button" class="btn btn-secondary" data-open-review-decision="retry" aria-pressed="false">稍後重做</button>
+            </div>
+            <p data-open-review-status aria-live="polite" style="margin:8px 0 0; font-size:12px; color:var(--color-ink-soft);"></p>
+          </div>`;
+        panel.querySelector(".reveal-content")?.appendChild(summary);
+        summary.querySelectorAll("[data-open-review-decision]").forEach((button) => {
+          button.addEventListener("click", () => {
+            const decision = button.dataset.openReviewDecision;
+            saveOpenReview(unitId, reviewId, { decision });
+            updateOpenReviewSummary(shell, unitId, reviewId);
+          });
+        });
+      }
+
+      updateOpenReviewSummary(shell, unitId, reviewId);
+    }
+
     const main = document.getElementById("app-main");
     if (!main) return;
 
@@ -178,6 +339,7 @@
       scheduled = false;
       enhanceQuiz();
       enhanceReorder();
+      enhanceOpenSelfReview();
     };
     const scheduleEnhance = () => {
       if (scheduled) return;
