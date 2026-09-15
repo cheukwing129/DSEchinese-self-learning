@@ -26,7 +26,7 @@ jobs:
           node --check js/content-renderer.js
           node --check scripts/browser-accessibility.mjs
           node scripts/validate-accessibility.mjs
-          node scripts/build-assets.mjs
+          node scripts/build-assets.mjs --write
           node scripts/build-assets.mjs --check
 
       - name: Commit migration and remove one-time helpers
