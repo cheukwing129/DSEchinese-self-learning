@@ -21,7 +21,8 @@
     { "id": "niannujiao-chibihuaigu", "title": "念奴嬌．赤壁懷古", "author": "蘇軾" },
     { "id": "quanxue", "title": "勸學（節錄）", "author": "荀子" },
     { "id": "yuexia-duzhuo", "title": "月下獨酌（其一）", "author": "李白" },
-    { "id": "yu-wo-suoyu", "title": "魚我所欲也", "author": "孟子" }
+    { "id": "yu-wo-suoyu", "title": "魚我所欲也", "author": "孟子" },
+    { "id": "lianpo-linxiangru", "title": "廉頗藺相如列傳（節錄）", "author": "司馬遷" }
   ],
   "question_bank_files": [
     "question-banks/words.json",
