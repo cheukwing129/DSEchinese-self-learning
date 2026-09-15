@@ -129,6 +129,45 @@ try {
   await page.locator("#confirm-next-btn").click();
   await page.waitForURL((url) => url.hash === "#/unit/yueyanglouji", { timeout: 5000 });
 
+  // Open answers should turn scoring elements into a persistent, non-scored self-review checklist.
+  await page.goto(`${baseURL}/#/unit/denglou/theme/quiz?qi=0`, { waitUntil: "domcontentloaded", timeout: 10000 });
+  await waitForQuiz(page);
+  await page.locator("#input-long").fill("兩人都關心天下與國事，但表達方式並不完全相同。");
+  await page.locator("#submit-btn").click();
+  await page.locator(".open-self-review-summary").waitFor({ state: "visible", timeout: 5000 });
+  const reviewCheckboxes = page.locator(".open-self-review-checkbox");
+  check(await reviewCheckboxes.count() === 4, "open-answer scoring elements should become four self-review checkboxes");
+  check((await page.locator("[data-open-review-count]").textContent())?.includes("0/4"), "open-answer self review should start at 0/4 checked");
+  check((await page.locator(".open-self-review-summary").innerText()).includes("不是系統分數"), "open-answer self review should state that it is not a system score");
+
+  await reviewCheckboxes.first().check();
+  await page.waitForFunction(() => document.querySelector("[data-open-review-count]")?.textContent?.includes("1/4"));
+  await page.locator('[data-open-review-decision="retry"]').click();
+  await page.waitForFunction(() => document.querySelector("[data-open-review-status]")?.textContent?.includes("稍後重做"));
+
+  const retryReview = await page.evaluate(() => {
+    const all = JSON.parse(localStorage.getItem("ccsl_progress_v1") || "{}");
+    const reviews = Object.values(all.denglou?.openQuestionReviews || {});
+    return reviews[0] || null;
+  });
+  check(!!retryReview, "open-answer self review should persist inside the existing progress store");
+  check(retryReview?.decision === "retry", "open-answer self review should persist the retry decision");
+  check(Object.keys(retryReview?.checked || {}).length === 1, "open-answer self review should persist checked scoring elements");
+
+  await page.reload({ waitUntil: "domcontentloaded", timeout: 10000 });
+  await page.locator(".quiz-shell.is-submitted").waitFor({ state: "visible", timeout: 5000 });
+  await page.locator(".open-self-review-summary").waitFor({ state: "visible", timeout: 5000 });
+  check(await page.locator(".open-self-review-checkbox").first().isChecked(), "open-answer checklist state should survive reload");
+  check(await page.locator('[data-open-review-decision="retry"]').getAttribute("aria-pressed") === "true", "open-answer retry decision should survive reload");
+
+  await page.locator('[data-open-review-decision="mastered"]').click();
+  await page.waitForFunction(() => document.querySelector("[data-open-review-status]")?.textContent?.includes("我已掌握"));
+  const masteredDecision = await page.evaluate(() => {
+    const all = JSON.parse(localStorage.getItem("ccsl_progress_v1") || "{}");
+    return Object.values(all.denglou?.openQuestionReviews || {})[0]?.decision || null;
+  });
+  check(masteredDecision === "mastered", "open-answer self review should update the persisted learning decision");
+
   // Reorder practice should support one-step undo without clearing the whole attempt.
   await page.goto(`${baseURL}/#/unit/yueyanglouji/memorisation`, { waitUntil: "domcontentloaded", timeout: 10000 });
   await page.locator('[data-tab="reorder"]').waitFor({ state: "visible", timeout: 5000 });
@@ -163,4 +202,4 @@ try {
 }
 
 if (failures.length) process.exit(1);
-console.log("RC UX interaction smoke passed: review-first quiz navigation, final-set completion and reorder undo are healthy.");
+console.log("RC UX interaction smoke passed: quiz navigation, open-answer self review persistence and reorder undo are healthy.");
