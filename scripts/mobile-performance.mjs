@@ -19,6 +19,8 @@ const PROFILE = {
 
 const BUDGETS = {
   homeReadyMs: 2500,
+  homeLcpMs: 2500,
+  homeCls: 0.1,
   textReadyMs: 2500,
   quizReadyMs: 3000
 };
@@ -120,6 +122,25 @@ let browser;
 try {
   browser = await chromium.launch({ headless: true });
   const context = await browser.newContext({ viewport: PROFILE.viewport });
+  await context.addInitScript(() => {
+    window.__cwv = { lcp: 0, cls: 0 };
+    try {
+      if (PerformanceObserver.supportedEntryTypes?.includes("largest-contentful-paint")) {
+        new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            window.__cwv.lcp = Math.max(window.__cwv.lcp, entry.startTime || entry.renderTime || entry.loadTime || 0);
+          }
+        }).observe({ type: "largest-contentful-paint", buffered: true });
+      }
+      if (PerformanceObserver.supportedEntryTypes?.includes("layout-shift")) {
+        new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!entry.hadRecentInput) window.__cwv.cls += entry.value || 0;
+          }
+        }).observe({ type: "layout-shift", buffered: true });
+      }
+    } catch {}
+  });
   const page = await context.newPage();
   const session = await configureConstrainedMobile(context, page);
 
@@ -139,6 +160,17 @@ try {
   check(homeReadyMs <= BUDGETS.homeReadyMs, `constrained-mobile home ready ${Math.round(homeReadyMs)}ms > ${BUDGETS.homeReadyMs}ms`);
   check(await page.locator(".map-card").count() === 16, "constrained-mobile home should render 16 curriculum cards");
 
+  // Give Chromium a short paint-settling window, then freeze the home CWV
+  // snapshot before SPA navigation changes the document further.
+  await page.waitForTimeout(250);
+  const homeVitals = await page.evaluate(() => ({
+    lcp: Number(window.__cwv?.lcp || 0),
+    cls: Number(window.__cwv?.cls || 0)
+  }));
+  check(homeVitals.lcp > 0, "constrained-mobile home did not produce an LCP entry");
+  check(homeVitals.lcp <= BUDGETS.homeLcpMs, `constrained-mobile home LCP ${Math.round(homeVitals.lcp)}ms > ${BUDGETS.homeLcpMs}ms`);
+  check(homeVitals.cls <= BUDGETS.homeCls, `constrained-mobile home CLS ${homeVitals.cls.toFixed(3)} > ${BUDGETS.homeCls}`);
+
   const textStart = Date.now();
   await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/text"; });
   await waitVisible(page, ".reader-shell", 12000);
@@ -157,7 +189,8 @@ try {
   check(overflow <= 1, `constrained-mobile quiz has horizontal overflow of ${overflow}px`);
 
   console.log(
-    `Constrained mobile metrics: home ${Math.round(homeReadyMs)}ms; first reader ${textReadyMs}ms; first quiz ${quizReadyMs}ms; ` +
+    `Constrained mobile metrics: home ${Math.round(homeReadyMs)}ms; LCP ${Math.round(homeVitals.lcp)}ms; CLS ${homeVitals.cls.toFixed(3)}; ` +
+    `first reader ${textReadyMs}ms; first quiz ${quizReadyMs}ms; ` +
     `${PROFILE.cpuSlowdown}x CPU, ${PROFILE.latencyMs}ms RTT, ${PROFILE.downloadMbps}Mbps down / ${PROFILE.uploadMbps}Mbps up, cache disabled.`
   );
 
