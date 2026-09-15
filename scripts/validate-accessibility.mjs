@@ -32,10 +32,11 @@ requireMatch("Reorder button", files.memorisation, /<button type=\"button\" clas
 requireMatch("Semantic home link", files.index, /<a class=\"brand\"[^>]*href=\"#\/\"/);
 requireMatch("Visible keyboard focus", files.css, /:focus-visible/);
 requireMatch("Touch target sizing", files.css, /min-height:\s*44px/);
+requireMatch("Mobile header touch target", files.index, /@media\s*\(max-width:\s*600px\)\s*\{\s*\.header-nav-link\s*\{\s*min-height:\s*44px/s);
 
 if (errors.length) {
   console.error("Accessibility validation failed:\n" + errors.map((e) => `- ${e}`).join("\n"));
   process.exit(1);
 }
 
-console.log("Accessibility interaction validation passed: semantic controls, live feedback, focus visibility and keyboard-flow guards are present.");
+console.log("Accessibility interaction validation passed: semantic controls, live feedback, focus visibility, touch targets and keyboard-flow guards are present.");
