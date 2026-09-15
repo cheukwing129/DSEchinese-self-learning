@@ -333,7 +333,11 @@ async function auditProfile(browser, profile, routes) {
   for (const route of routes) {
     if (route === "/not-a-real-route") {
       await page.evaluate(() => { window.location.hash = "#/not-a-real-route"; });
-      await page.locator(".launch-state.is-error").waitFor({ state: "visible", timeout: 8000 });
+      await page.locator(".launch-state.is-not-found").waitFor({ state: "visible", timeout: 8000 });
+      await page.evaluate(() => App.renderLoading("coverage loading"));
+      await page.locator(".launch-loading .loading-mark").waitFor({ state: "visible", timeout: 2000 });
+      await page.evaluate(() => App.renderFatalError("coverage error"));
+      await page.locator(".launch-state.is-error").waitFor({ state: "visible", timeout: 2000 });
       await page.waitForTimeout(25);
       visited += 1;
       continue;
