@@ -1,0 +1,39 @@
+name: One-time browser accessibility fix
+
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/apply-browser-accessibility-fix.yml]
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Apply accessibility fixes
+        run: python scripts/fix-browser-accessibility.py
+
+      - name: Rebuild and verify static contracts
+        run: |
+          node --check js/question-engine.js
+          node --check scripts/browser-accessibility.mjs
+          node scripts/validate-accessibility.mjs
+          node scripts/build-assets.mjs --write
+          node scripts/build-assets.mjs --check
+          node scripts/validate-performance.mjs
+
+      - name: Commit source and rebuilt assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm scripts/fix-browser-accessibility.py
+          git add -A
+          git commit -m "Fix quiz heading and accessibility timing"
+          git push
