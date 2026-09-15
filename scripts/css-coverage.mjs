@@ -135,10 +135,14 @@ async function measureRoute(context, route) {
   return result;
 }
 
+function availableUnits() {
+  return (curriculum.units || []).filter((unit) => unit.status === "available");
+}
+
 function buildAuditRoutes() {
   const routes = ["/", "/overview"];
   const seen = new Set(routes);
-  for (const entry of (curriculum.units || []).filter((unit) => unit.status === "available")) {
+  for (const entry of availableUnits()) {
     const id = entry.id;
     const unitDir = path.join(root, "data", "units", id);
     const unit = JSON.parse(fs.readFileSync(path.join(unitDir, "unit.json"), "utf8"));
@@ -164,15 +168,114 @@ function buildAuditRoutes() {
       const bank = JSON.parse(fs.readFileSync(path.join(unitDir, rel), "utf8"));
       const suffix = BANK_ROUTE[bank.bank];
       if (!suffix || !(bank.questions || []).length) continue;
-      const query = bank.bank === "cross-text" ? "?qi=0" : "?qi=0";
-      const route = `/unit/${id}/${suffix}${query}`;
+      const route = `/unit/${id}/${suffix}?qi=0`;
       if (!seen.has(route)) {
         seen.add(route);
         routes.push(route);
       }
     }
   }
+
+  // Revisit evidence-heavy views only after quiz/memorisation interactions have
+  // had a chance to persist real records. Query strings keep the audit routes
+  // unique while still resolving to the same SPA handlers.
+  for (const entry of availableUnits()) {
+    routes.push(`/unit/${entry.id}/progress?coverage=after`);
+  }
+  routes.push("/overview?coverage=after");
+
+  // Keep the real fatal route last so all lazy styles are already attached;
+  // this exercises shared launch/error rules in core and lazy bundles.
+  routes.push("/not-a-real-route");
   return routes;
+}
+
+async function exerciseQuizState(page) {
+  const single = page.locator('[data-role="option-main"]').first();
+  if (await single.count()) {
+    await single.click().catch(() => {});
+  } else {
+    const multi = page.locator('[data-role="option-main-multi"]').first();
+    if (await multi.count()) {
+      await multi.click().catch(() => {});
+    } else {
+      const tfSingle = page.locator('.tf-btn-single[data-prefix="main"]').first();
+      if (await tfSingle.count()) {
+        await tfSingle.click().catch(() => {});
+      } else {
+        const tf = page.locator('.tf-btn[data-prefix="main"]');
+        const tfCount = await tf.count();
+        const seenStatements = new Set();
+        for (let i = 0; i < tfCount; i += 1) {
+          const button = tf.nth(i);
+          const stmt = await button.getAttribute("data-stmt");
+          if (seenStatements.has(stmt)) continue;
+          seenStatements.add(stmt);
+          await button.click().catch(() => {});
+        }
+      }
+    }
+  }
+
+  const selects = page.locator('select[data-prefix="main"]');
+  for (let i = 0; i < await selects.count(); i += 1) {
+    await selects.nth(i).selectOption({ index: 1 }).catch(() => {});
+  }
+
+  const fillInputs = page.locator('[data-fillkey][data-prefix="main"]');
+  for (let i = 0; i < await fillInputs.count(); i += 1) {
+    await fillInputs.nth(i).fill(`coverage-${i + 1}`).catch(() => {});
+  }
+
+  for (const selector of ["#input-extract", "#input-short", "#input-long"]) {
+    const input = page.locator(selector).first();
+    if (await input.count()) await input.fill("coverage audit answer").catch(() => {});
+  }
+
+  const cloze = page.locator('[data-role="cloze-option"][data-prefix="main"]');
+  const clozeCount = await cloze.count();
+  const blankIds = new Set();
+  for (let i = 0; i < clozeCount; i += 1) {
+    const option = cloze.nth(i);
+    const blank = await option.getAttribute("data-blank");
+    if (!blank || blankIds.has(blank)) continue;
+    blankIds.add(blank);
+    await option.click().catch(() => {});
+  }
+
+  const submit = page.locator("#submit-btn").first();
+  if (await submit.count() && await submit.isEnabled().catch(() => false)) {
+    await submit.click().catch(() => {});
+    await page.locator("#reveal-slot .reveal-panel").waitFor({ state: "visible", timeout: 1500 }).catch(() => {});
+  }
+}
+
+async function exerciseMemorisationState(page) {
+  const clozeTab = page.locator('[data-tab="cloze"]').first();
+  if (await clozeTab.count()) {
+    await clozeTab.click().catch(() => {});
+    await page.locator(".blank-token").first().waitFor({ state: "visible", timeout: 1200 }).catch(() => {});
+    const blank = page.locator(".blank-token").first();
+    if (await blank.count()) await blank.fill("錯").catch(() => {});
+    const check = page.locator("#cloze-check-btn").first();
+    if (await check.count()) {
+      await check.click().catch(() => {});
+      await page.locator("#cloze-result").waitFor({ state: "visible", timeout: 1200 }).catch(() => {});
+    }
+  }
+
+  const reorderTab = page.locator('[data-tab="reorder"]').first();
+  if (await reorderTab.count()) {
+    await reorderTab.click().catch(() => {});
+    await page.locator(".reorder-list").first().waitFor({ state: "visible", timeout: 1200 }).catch(() => {});
+    for (let guard = 0; guard < 40; guard += 1) {
+      const chip = page.locator('[data-chip]').first();
+      if (!(await chip.count())) break;
+      await chip.click().catch(() => {});
+      await page.waitForTimeout(5);
+    }
+    await page.locator("#reorder-result").waitFor({ state: "visible", timeout: 1200 }).catch(() => {});
+  }
 }
 
 async function exerciseState(page, route) {
@@ -182,6 +285,17 @@ async function exerciseState(page, route) {
       await tabs.nth(1).click().catch(() => {});
       await page.waitForTimeout(20);
     }
+    const term = page.locator("button.term").first();
+    if (await term.count()) {
+      await term.click().catch(() => {});
+      await page.locator('.annotation-popover[role="dialog"]').waitFor({ state: "visible", timeout: 1200 }).catch(() => {});
+      await page.waitForTimeout(20);
+      await page.keyboard.press("Escape").catch(() => {});
+    }
+  }
+
+  if (route.includes("/memorisation")) {
+    await exerciseMemorisationState(page);
   }
 
   if (route.includes("/progress")) {
@@ -193,34 +307,24 @@ async function exerciseState(page, route) {
   }
 
   if (route.includes("/quiz")) {
-    const candidates = [
-      '[data-role="option-main"]',
-      '[data-role="option-main-multi"]',
-      '.tf-btn-single[data-prefix="main"]',
-      '.tf-btn[data-prefix="main"]',
-      '[data-role="cloze-option"][data-prefix="main"]'
-    ];
-    for (const selector of candidates) {
-      const item = page.locator(selector).first();
-      if (await item.count()) {
-        await item.click().catch(() => {});
-        break;
-      }
-    }
-    const submit = page.locator("#submit-btn").first();
-    if (await submit.count() && await submit.isEnabled().catch(() => false)) {
-      await submit.click().catch(() => {});
-      await page.waitForTimeout(20);
-    }
+    await exerciseQuizState(page);
   }
 }
 
 async function auditProfile(browser, profile, routes) {
-  const context = await browser.newContext({ viewport: profile.viewport });
+  const context = await browser.newContext({
+    viewport: profile.viewport,
+    reducedMotion: profile.reducedMotion || "no-preference"
+  });
   await context.addInitScript(() => {
     try {
-      localStorage.clear();
-      sessionStorage.clear();
+      // addInitScript runs before every SPA document navigation. Clear once per
+      // profile, then preserve real quiz/memorisation records for later progress
+      // routes so evidence-heavy states can participate in coverage.
+      if (!sessionStorage.getItem("__css_union_initialised")) {
+        localStorage.clear();
+        sessionStorage.setItem("__css_union_initialised", "1");
+      }
     } catch {}
   });
   const page = await context.newPage();
@@ -228,6 +332,13 @@ async function auditProfile(browser, profile, routes) {
   let visited = 0;
   for (const route of routes) {
     await page.goto(`${baseURL}/#${route}`, { waitUntil: "domcontentloaded", timeout: 12000 });
+    if (route === "/not-a-real-route") {
+      await page.locator(".launch-state.is-error").waitFor({ state: "visible", timeout: 8000 });
+      await page.waitForTimeout(25);
+      visited += 1;
+      continue;
+    }
+
     await page.locator("#app-main > *").first().waitFor({ state: "visible", timeout: 8000 });
     await page.locator("#app-main .loading-state").waitFor({ state: "detached", timeout: 8000 }).catch(() => {});
     const state = await page.evaluate(() => ({
@@ -291,9 +402,20 @@ const representativeRoutes = [
   { label: "progress", hash: "#/unit/yueyanglouji/progress", selector: ".unit-progress-hero", styles: ["style", "progress-style"] }
 ];
 
+const reducedMotionRoutes = [
+  "/",
+  "/unit/yueyanglouji/text",
+  "/unit/yueyanglouji/words",
+  "/unit/yueyanglouji/memorisation",
+  "/unit/yueyanglouji/words/quiz?qi=0",
+  "/unit/yueyanglouji/progress?coverage=reduce",
+  "/not-a-real-route"
+];
+
 const profiles = [
   { label: "desktop", viewport: { width: 1280, height: 800 } },
-  { label: "mobile", viewport: { width: 390, height: 844 } }
+  { label: "mobile", viewport: { width: 390, height: 844 } },
+  { label: "reduced-motion", viewport: { width: 390, height: 844 }, reducedMotion: "reduce", routes: reducedMotionRoutes }
 ];
 
 await listen();
@@ -323,7 +445,7 @@ try {
   const auditRoutes = buildAuditRoutes();
   const union = new Map();
   for (const profile of profiles) {
-    const result = await auditProfile(browser, profile, auditRoutes);
+    const result = await auditProfile(browser, profile, profile.routes || auditRoutes);
     addCoverageToUnion(union, result.coverage);
     console.log(`CSS union profile ${result.label}: visited ${result.visited} direct routes/states.`);
   }
@@ -343,7 +465,7 @@ try {
     const unused = total - used;
     totalBytes += total;
     totalUsed += used;
-    console.log(`CSS union ${name}: ${used}/${total} bytes used across desktop+mobile (${((used / total) * 100).toFixed(1)}%); ${unused} bytes never hit in this audit.`);
+    console.log(`CSS union ${name}: ${used}/${total} bytes used across normal + rare states (${((used / total) * 100).toFixed(1)}%); ${unused} bytes never hit in this audit.`);
 
     const candidates = complementRanges(item.text.length, ranges)
       .map((range) => ({ ...range, bytes: Buffer.byteLength(item.text.slice(range.start, range.end), "utf8") }))
@@ -355,7 +477,7 @@ try {
     }
   }
 
-  console.log(`CSS union total: ${totalUsed}/${totalBytes} built CSS bytes hit (${((totalUsed / totalBytes) * 100).toFixed(1)}%); ${totalBytes - totalUsed} bytes not hit. Treat unhit ranges as cleanup candidates, not automatic deletions, because rare interaction states may be absent from coverage.`);
+  console.log(`CSS union total: ${totalUsed}/${totalBytes} built CSS bytes hit (${((totalUsed / totalBytes) * 100).toFixed(1)}%); ${totalBytes - totalUsed} bytes not hit after rare-state coverage. Remaining ranges are cleanup candidates only, not automatic deletions.`);
 } finally {
   if (browser) await browser.close();
   await closeServer();
