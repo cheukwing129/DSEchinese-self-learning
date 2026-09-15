@@ -94,12 +94,18 @@
       return null;
     }
 
+    function hideButton(button) {
+      if (!button) return;
+      button.hidden = true;
+      button.style.display = "none";
+    }
+
     function enhanceQuiz() {
       const shell = document.querySelector(".quiz-shell");
       if (!shell || !shell.classList.contains("is-submitted")) return;
 
       const nextButton = shell.querySelector("#next-btn");
-      if (nextButton) nextButton.hidden = true;
+      hideButton(nextButton);
 
       const confirmButton = shell.querySelector("#confirm-next-btn");
       if (!confirmButton || !nextButton || !nextButton.disabled) return;
@@ -112,8 +118,7 @@
       const hint = shell.querySelector(".question-action-hint");
       if (hint) hint.textContent = finalState.hint;
 
-      const challengeFinish = shell.querySelector("#finish-challenge-btn");
-      if (challengeFinish) challengeFinish.hidden = true;
+      hideButton(shell.querySelector("#finish-challenge-btn"));
 
       if (finalState.navigateBack && !confirmButton.dataset.uxFinishBound) {
         confirmButton.dataset.uxFinishBound = "true";
