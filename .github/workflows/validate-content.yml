@@ -67,7 +67,7 @@ jobs:
         run: node scripts/validate-performance.mjs
 
   browser-smoke:
-    name: Chromium smoke, accessibility, constrained-mobile performance, CSS coverage, full-site QA and warm-cache performance
+    name: Chromium smoke, accessibility, constrained-mobile performance/interactions, CSS coverage, full-site QA and warm-cache performance
     needs: validate
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -94,6 +94,9 @@ jobs:
 
       - name: Run constrained-mobile performance contract
         run: node scripts/mobile-performance.mjs
+
+      - name: Run constrained-mobile interaction performance contract
+        run: node scripts/mobile-interaction-performance.mjs
 
       - name: Measure route CSS coverage
         run: node scripts/css-coverage.mjs
