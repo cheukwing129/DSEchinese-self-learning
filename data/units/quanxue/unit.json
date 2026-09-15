@@ -22,7 +22,8 @@
     { "id": "shishuo", "title": "師說", "author": "韓愈" },
     { "id": "xiaoyaoyou", "title": "逍遙遊（節錄）", "author": "莊子" },
     { "id": "yu-wo-suoyu", "title": "魚我所欲也", "author": "孟子" },
-    { "id": "liuguolun", "title": "六國論", "author": "蘇洵" }
+    { "id": "liuguolun", "title": "六國論", "author": "蘇洵" },
+    { "id": "shide-xishan-yanyouji", "title": "始得西山宴遊記", "author": "柳宗元" }
   ],
   "question_bank_files": [
     "question-banks/words.json",
