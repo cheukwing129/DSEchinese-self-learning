@@ -84,6 +84,15 @@ async function waitForQuiz(page) {
   await page.locator("#submit-btn").waitFor({ state: "visible", timeout: 5000 });
 }
 
+async function waitForQuizEnhancement(page, expectedLabel = null) {
+  await page.waitForFunction((label) => {
+    const next = document.getElementById("next-btn");
+    const confirm = document.getElementById("confirm-next-btn");
+    if (!next || !confirm || !next.hidden) return false;
+    return label == null || confirm.textContent.trim() === label;
+  }, expectedLabel, { timeout: 5000 });
+}
+
 await listen();
 let browser;
 try {
@@ -101,6 +110,7 @@ try {
   await waitForQuiz(page);
   await page.locator("#submit-btn").click();
   await page.locator("#confirm-next-btn").waitFor({ state: "visible", timeout: 5000 });
+  await waitForQuizEnhancement(page, "我已看完答案，下一題");
   check(await page.locator("#next-btn").isHidden(), "submitted quiz should hide the duplicate bottom next button");
   check((await page.locator("#confirm-next-btn").textContent())?.trim() === "我已看完答案，下一題", "non-final submitted question should keep the review-first next label");
   await page.locator("#confirm-next-btn").click();
@@ -111,6 +121,8 @@ try {
   await waitForQuiz(page);
   await page.locator("#submit-btn").click();
   await page.locator("#confirm-next-btn").waitFor({ state: "visible", timeout: 5000 });
+  await waitForQuizEnhancement(page, "完成這組練習");
+  await page.waitForFunction(() => document.querySelector(".question-action-hint")?.textContent?.includes("完成這組練習"), null, { timeout: 5000 });
   check(await page.locator("#next-btn").isHidden(), "final submitted quiz should hide the duplicate bottom next button");
   check((await page.locator("#confirm-next-btn").textContent())?.trim() === "完成這組練習", "final ordinary quiz should use a completion label");
   check((await page.locator(".question-action-hint").textContent())?.includes("完成這組練習"), "final ordinary quiz hint should explain completion");
@@ -129,12 +141,18 @@ try {
   if (chipCount >= 2) {
     await page.locator("#reorder-pool [data-chip]").first().click();
     await page.waitForFunction(() => document.querySelectorAll("#reorder-slots .reorder-chip.is-placed").length === 1);
-    await page.locator("#reorder-undo-btn").waitFor({ state: "attached", timeout: 5000 });
+    await page.waitForFunction(() => {
+      const undo = document.getElementById("reorder-undo-btn");
+      return !!undo && !undo.disabled;
+    });
     check(!(await page.locator("#reorder-undo-btn").isDisabled()), "reorder undo should enable after one placement");
 
     await page.locator("#reorder-pool [data-chip]").first().click();
     await page.waitForFunction(() => document.querySelectorAll("#reorder-slots .reorder-chip.is-placed").length === 2);
-    await page.locator("#reorder-undo-btn").waitFor({ state: "attached", timeout: 5000 });
+    await page.waitForFunction(() => {
+      const undo = document.getElementById("reorder-undo-btn");
+      return !!undo && !undo.disabled;
+    });
     await page.locator("#reorder-undo-btn").click();
     await page.waitForFunction(() => document.querySelectorAll("#reorder-slots .reorder-chip.is-placed").length === 1);
     check(await page.locator("#reorder-pool [data-chip]").count() >= 1, "undo should return only the latest placement to the pool");
