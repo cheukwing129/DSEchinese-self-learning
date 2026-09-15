@@ -13,7 +13,7 @@ const App = (() => {
     contentReader: { script: "/assets/build/content-renderer.7363363ac841.js", style: "/assets/build/reader-style.31008a660e3a.css" },
     contentStudy: { script: "/assets/build/content-renderer.7363363ac841.js", style: "/assets/build/study-style.ded2901551ae.css" },
     contentProgress: { script: "/assets/build/content-renderer.7363363ac841.js", style: "/assets/build/progress-style.03fc2038c56c.css" },
-    questions: { script: "/assets/build/question-engine.ab36f2066af2.js", style: "/assets/build/questions-style.85e583f626db.css" },
+    questions: { script: "/assets/build/question-engine.686482b85cc0.js", style: "/assets/build/questions-style.d140f0d5c519.css" },
     memorisation: "/assets/build/memorisation-engine.dab19bb23e8e.js"
   });
 

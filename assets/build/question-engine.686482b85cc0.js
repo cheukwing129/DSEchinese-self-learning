@@ -623,7 +623,7 @@ const QuestionEngine = (() => {
         <section class="quiz-shell ${state.submitted ? "is-submitted" : ""}" aria-label="${esc(title)}">
           <header class="quiz-context-bar">
             <div class="quiz-context-copy">
-              <span class="quiz-context-title">${esc(title)}</span>
+              <h1 class="quiz-context-title">${esc(title)}</h1>
               <span class="quiz-progress-label">${esc(indexLabel)}</span>
             </div>
             <a class="quiz-context-back" href="${backHref}">${backLabel ? esc(backLabel) : `返回《${esc(bundle.unit.title)}》`}</a>

@@ -123,6 +123,7 @@ try {
   await page.keyboard.press("Tab");
   let active = await activeState(page);
   check(active.className.split(/\s+/).includes("skip-link"), "first Tab should focus the skip link");
+  await page.waitForTimeout(180);
   const skipBox = await page.locator(".skip-link").boundingBox();
   check(Boolean(skipBox && skipBox.y >= 0), "skip link should become visibly positioned when keyboard-focused");
   const hashBeforeSkip = await page.evaluate(() => window.location.hash);
