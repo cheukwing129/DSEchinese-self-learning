@@ -103,3 +103,26 @@ jobs:
 
       - name: Run full pre-launch browser QA matrix
         run: node scripts/prelaunch-qa.mjs
+
+  webkit-smoke:
+    name: WebKit iPhone core student-flow and mobile-layout smoke
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Install pinned Playwright WebKit runtime
+        run: |
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps webkit
+
+      - name: Run iPhone WebKit release-candidate smoke
+        run: node scripts/webkit-smoke.mjs
