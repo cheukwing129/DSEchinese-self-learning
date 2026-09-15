@@ -1,0 +1,213 @@
+name: One-time browser accessibility migration
+
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/apply-browser-accessibility.yml]
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Apply keyboard and focus fixes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          app_path = Path("js/app.js")
+          app = app_path.read_text()
+          old = '''  const mainEl = () => document.getElementById("app-main");
+            const crumbEl = () => document.getElementById("header-crumb");
+          '''.replace('            const', '  const')
+          new = '''  const mainEl = () => document.getElementById("app-main");
+          const crumbEl = () => document.getElementById("header-crumb");
+          let pendingRouteFocus = false;
+          let ignoreNextHashFocus = false;
+          '''
+          new = '\n'.join(line[10:] if line.startswith('          ') else line for line in new.splitlines()) + '\n'
+          if old not in app:
+              raise SystemExit("app header insertion point not found")
+          app = app.replace(old, new, 1)
+
+          old = '''  function mount(html) {
+            mainEl().innerHTML = html;
+          }
+          '''
+          old = '\n'.join(line[10:] if line.startswith('          ') else line for line in old.splitlines()) + '\n'
+          new = '''  function focusPrimaryContent() {
+            const main = mainEl();
+            if (!main) return;
+            const heading = main.querySelector("h1.page-title, h1");
+            const target = heading || main;
+            const addedTabIndex = !target.hasAttribute("tabindex");
+            if (addedTabIndex) target.setAttribute("tabindex", "-1");
+            target.focus({ preventScroll: true });
+            if (addedTabIndex) {
+              target.addEventListener("blur", () => target.removeAttribute("tabindex"), { once: true });
+            }
+          }
+
+          function mount(html) {
+            const main = mainEl();
+            main.innerHTML = html;
+            if (pendingRouteFocus && !main.querySelector(".loading-state")) {
+              pendingRouteFocus = false;
+              focusPrimaryContent();
+            }
+          }
+
+          function bindKeyboardNavigation() {
+            const skipLink = document.querySelector(".skip-link");
+            if (skipLink) {
+              skipLink.addEventListener("click", (event) => {
+                event.preventDefault();
+                pendingRouteFocus = false;
+                const main = mainEl();
+                main.focus({ preventScroll: true });
+                main.scrollIntoView({ block: "start" });
+              });
+            }
+
+            ignoreNextHashFocus = !window.location.hash;
+            window.addEventListener("hashchange", () => {
+              if (ignoreNextHashFocus) {
+                ignoreNextHashFocus = false;
+                return;
+              }
+              pendingRouteFocus = true;
+            });
+
+            document.addEventListener("click", (event) => {
+              const link = event.target.closest?.('a[href^="#/"]');
+              if (!link) return;
+              const href = link.getAttribute("href");
+              if (href && href !== window.location.hash) pendingRouteFocus = true;
+            });
+          }
+          '''
+          new = '\n'.join(line[10:] if line.startswith('          ') else line for line in new.splitlines()) + '\n'
+          if old not in app:
+              raise SystemExit("app mount block not found")
+          app = app.replace(old, new, 1)
+
+          old = '''  function init() {
+            registerRoutes();
+            Router.start();
+          }
+          '''
+          old = '\n'.join(line[10:] if line.startswith('          ') else line for line in old.splitlines()) + '\n'
+          new = '''  function init() {
+            bindKeyboardNavigation();
+            registerRoutes();
+            Router.start();
+          }
+          '''
+          new = '\n'.join(line[10:] if line.startswith('          ') else line for line in new.splitlines()) + '\n'
+          if old not in app:
+              raise SystemExit("app init block not found")
+          app = app.replace(old, new, 1)
+          app_path.write_text(app)
+
+          content_path = Path("js/content-renderer.js")
+          content = content_path.read_text()
+          old = 'aria-selected="${i === activeIndex ? "true" : "false"}" data-idx="${i}" class="${i === activeIndex ? "is-active" : ""}"'
+          new = 'aria-selected="${i === activeIndex ? "true" : "false"}" tabindex="${i === activeIndex ? "0" : "-1"}" data-idx="${i}" class="${i === activeIndex ? "is-active" : ""}"'
+          if old not in content:
+              raise SystemExit("reader tab markup not found")
+          content = content.replace(old, new, 1)
+
+          old = '''      document.querySelectorAll(".reader-nav button").forEach((btn) => {
+                btn.addEventListener("click", () => setActive(parseInt(btn.dataset.idx, 10)));
+              });
+          '''
+          old = '\n'.join(line[6:] if line.startswith('      ') else line for line in old.splitlines()) + '\n'
+          new = '''      const activateTab = (index) => {
+                setActive(index);
+                const tab = document.getElementById(`reader-tab-${index}`);
+                if (tab) tab.focus({ preventScroll: true });
+              };
+              document.querySelectorAll(".reader-nav button").forEach((btn) => {
+                btn.addEventListener("click", () => activateTab(parseInt(btn.dataset.idx, 10)));
+                btn.addEventListener("keydown", (event) => {
+                  const current = parseInt(btn.dataset.idx, 10);
+                  let nextIndex = null;
+                  if (event.key === "ArrowRight" || event.key === "ArrowDown") nextIndex = (current + 1) % groups.length;
+                  else if (event.key === "ArrowLeft" || event.key === "ArrowUp") nextIndex = (current - 1 + groups.length) % groups.length;
+                  else if (event.key === "Home") nextIndex = 0;
+                  else if (event.key === "End") nextIndex = groups.length - 1;
+                  if (nextIndex == null) return;
+                  event.preventDefault();
+                  activateTab(nextIndex);
+                });
+              });
+          '''
+          new = '\n'.join(line[6:] if line.startswith('      ') else line for line in new.splitlines()) + '\n'
+          if old not in content:
+              raise SystemExit("reader tab event block not found")
+          content = content.replace(old, new, 1)
+          content_path.write_text(content)
+
+          validator_path = Path("scripts/validate-accessibility.mjs")
+          validator = validator_path.read_text()
+          validator = validator.replace(
+              'const files = {\n  questions:',
+              'const files = {\n  app: fs.readFileSync("js/app.js", "utf8"),\n  questions:',
+              1
+          )
+          marker = 'requireMatch("Mobile header touch target", files.index, /@media\\s*\\(max-width:\\s*600px\\)\\s*\\{\\s*\\.header-nav-link\\s*\\{\\s*min-height:\\s*44px/s);'
+          extra = marker + '''
+          requireMatch("Skip-link hash protection", files.app, /skipLink\\.addEventListener\\("click"[\\s\\S]*?event\\.preventDefault\\(\\)[\\s\\S]*?main\\.focus/);
+          requireMatch("SPA route focus management", files.app, /pendingRouteFocus[\\s\\S]*?focusPrimaryContent\\(\\)/);
+          requireMatch("Reader roving tab stop", files.content, /role=\\"tab\\"[\\s\\S]*?tabindex=\\"\\$\\{i === activeIndex \\? \\"0\\" : \\"-1\\"\\}\\"/);
+          requireMatch("Reader arrow-key tabs", files.content, /ArrowRight[\\s\\S]*?ArrowLeft[\\s\\S]*?Home[\\s\\S]*?End/);
+          '''
+          extra = '\n'.join(line[10:] if line.startswith('          ') else line for line in extra.splitlines()).rstrip()
+          if marker not in validator:
+              raise SystemExit("accessibility validator insertion point not found")
+          validator = validator.replace(marker, extra, 1)
+          validator_path.write_text(validator)
+
+          workflow_path = Path(".github/workflows/validate-content.yml")
+          workflow = workflow_path.read_text()
+          old = '''      - name: Run real-browser smoke and performance contract
+                run: node scripts/browser-smoke.mjs
+          '''
+          old = '\n'.join(line[6:] if line.startswith('      ') else line for line in old.splitlines()) + '\n'
+          new = '''      - name: Run real-browser smoke and performance contract
+                run: node scripts/browser-smoke.mjs
+
+              - name: Run keyboard and focus accessibility contract
+                run: node scripts/browser-accessibility.mjs
+          '''
+          new = '\n'.join(line[6:] if line.startswith('      ') else line for line in new.splitlines()) + '\n'
+          if old not in workflow:
+              raise SystemExit("validate workflow browser step not found")
+          workflow = workflow.replace(old, new, 1)
+          workflow_path.write_text(workflow)
+          PY
+
+      - name: Rebuild and verify assets
+        run: |
+          node --check js/app.js
+          node --check js/content-renderer.js
+          node --check scripts/browser-accessibility.mjs
+          node scripts/validate-accessibility.mjs
+          node scripts/build-assets.mjs
+          node scripts/build-assets.mjs --check
+
+      - name: Commit migration and remove one-time workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/apply-browser-accessibility.yml
+          git add -A
+          git commit -m "Improve keyboard navigation and route focus"
+          git push
