@@ -37,7 +37,45 @@ function replaceOnce(text, oldValue, newValue, label) {
   return text.slice(0, first) + newValue + text.slice(first + oldValue.length);
 }
 
-const style = fingerprint("style", "css", "css/style.css", read("css/style.css"));
+function uniqueMarkerIndex(source, marker, label) {
+  const first = source.indexOf(marker);
+  const last = source.lastIndexOf(marker);
+  if (first < 0 || first !== last) {
+    throw new Error(`${label}: expected exactly one CSS marker ${JSON.stringify(marker)}`);
+  }
+  return first;
+}
+
+function splitRouteStyles(source) {
+  const quizMarker = "/* ===== Quiz UI 2.0: focused answering workspace ===== */";
+  const progressMarker = "/* ===== Progress UI 2.0: learning decisions before dashboards ===== */";
+  const readerMarker = "/* ===== Reader UI 2.0: modern Chinese text workspace ===== */";
+  const studyMarker = "/* ===== Content Study UI 2.0: words / comprehension / analysis / theme ===== */";
+  const launchMarker = "/* ============================================================\n   Launch polish — 品牌 chrome、狀態頁、mobile header、motion";
+
+  const quizStart = uniqueMarkerIndex(source, quizMarker, "quiz CSS split");
+  const progressStart = uniqueMarkerIndex(source, progressMarker, "progress CSS split");
+  const readerStart = uniqueMarkerIndex(source, readerMarker, "reader CSS split");
+  const studyStart = uniqueMarkerIndex(source, studyMarker, "content-study CSS split");
+  const launchStart = uniqueMarkerIndex(source, launchMarker, "launch polish CSS split");
+
+  if (!(quizStart < progressStart && progressStart < readerStart && readerStart < studyStart && studyStart < launchStart)) {
+    throw new Error("route CSS markers are out of the expected cascade order");
+  }
+
+  const launchPolish = source.slice(launchStart);
+  const core = source.slice(0, quizStart) + launchPolish;
+  const questions = source.slice(quizStart, progressStart) + "\n\n" + launchPolish;
+  const content = source.slice(progressStart, launchStart) + "\n\n" + launchPolish;
+
+  return { core, content, questions };
+}
+
+const styleSource = read("css/style.css");
+const splitStyles = splitRouteStyles(styleSource);
+const style = fingerprint("style", "css", "css/style.css", splitStyles.core);
+const contentStyle = fingerprint("content-style", "css", "css/style.css", splitStyles.content);
+const questionsStyle = fingerprint("questions-style", "css", "css/style.css", splitStyles.questions);
 const progress = fingerprint("progress", "js", "js/progress.js", read("js/progress.js"));
 const router = fingerprint("router", "js", "js/router.js", read("js/router.js"));
 const content = fingerprint("content-renderer", "js", "js/content-renderer.js", read("js/content-renderer.js"));
@@ -47,14 +85,26 @@ const memorisation = fingerprint("memorisation-engine", "js", "js/memorisation-e
 let builtApp = read("js/app.js");
 builtApp = replaceOnce(
   builtApp,
+  "const cache = { curriculum: null, json: {}, scripts: {} };",
+  "const cache = { curriculum: null, json: {}, scripts: {}, styles: {} };",
+  "route stylesheet cache injection"
+);
+builtApp = replaceOnce(
+  builtApp,
+  `  function loadUIModules(names = []) {\n    return Promise.all([...new Set(names)].map((name) => {\n      const src = UI_MODULES[name];\n      if (!src) return Promise.reject(new Error(\`未知介面模組「\${name}」。\`));\n      return loadScriptCached(src);\n    }));\n  }`,
+  `  function loadStyleCached(href) {\n    if (!cache.styles[href]) {\n      cache.styles[href] = new Promise((resolve, reject) => {\n        const link = document.createElement("link");\n        link.rel = "stylesheet";\n        link.href = href;\n        link.dataset.uiStyle = href;\n        link.addEventListener("load", () => resolve(), { once: true });\n        link.addEventListener("error", () => {\n          delete cache.styles[href];\n          link.remove();\n          reject(new Error(\`無法載入介面樣式「\${href}」。\`));\n        }, { once: true });\n        document.head.appendChild(link);\n      });\n    }\n    return cache.styles[href];\n  }\n\n  function loadUIModules(names = []) {\n    return Promise.all([...new Set(names)].map((name) => {\n      const module = UI_MODULES[name];\n      if (!module) return Promise.reject(new Error(\`未知介面模組「\${name}」。\`));\n      const descriptor = typeof module === "string" ? { script: module, style: null } : module;\n      return Promise.all([\n        descriptor.style ? loadStyleCached(descriptor.style) : Promise.resolve(),\n        loadScriptCached(descriptor.script)\n      ]);\n    }));\n  }`,
+  "route stylesheet loader injection"
+);
+builtApp = replaceOnce(
+  builtApp,
   'content: "js/content-renderer.js"',
-  `content: "${content.path}"`,
+  `content: { script: "${content.path}", style: "${contentStyle.path}" }`,
   "content renderer fingerprint injection"
 );
 builtApp = replaceOnce(
   builtApp,
   'questions: "js/question-engine.js"',
-  `questions: "${questions.path}"`,
+  `questions: { script: "${questions.path}", style: "${questionsStyle.path}" }`,
   "question engine fingerprint injection"
 );
 builtApp = replaceOnce(
@@ -65,7 +115,7 @@ builtApp = replaceOnce(
 );
 const app = fingerprint("app", "js", "js/app.js", builtApp);
 
-const assets = { style, progress, router, app, content, questions, memorisation };
+const assets = { style, contentStyle, questionsStyle, progress, router, app, content, questions, memorisation };
 const manifest = {
   version: 1,
   hashAlgorithm: `sha256-${HASH_LENGTH}`,
