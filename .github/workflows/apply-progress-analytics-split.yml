@@ -20,6 +20,21 @@ jobs:
       - name: Split route-only progress analytics
         run: python scripts/split-progress-analytics.py
 
+      - name: Repair extracted core boundary
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path("js/progress.js")
+          text = path.read_text()
+          start_marker = "  return {\n      engagedUnits,"
+          export_marker = "  return {\n    recordAnswer, getAnswer, getAllAnswers,"
+          start = text.find(start_marker)
+          end = text.find(export_marker, start)
+          if start < 0 or end < 0:
+              raise SystemExit("post-split boundary markers not found")
+          path.write_text(text[:start] + text[end:])
+          PY
+
       - name: Rebuild and validate split
         run: |
           for file in js/*.js scripts/*.mjs; do node --check "$file"; done
