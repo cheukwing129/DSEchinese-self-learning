@@ -1,0 +1,154 @@
+name: Phase 2 CSS split migration
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/phase2-css-split.yml
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Split content CSS by route
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+
+          function replaceOnce(source, oldText, newText, label) {
+            const first = source.indexOf(oldText);
+            const last = source.lastIndexOf(oldText);
+            if (first < 0 || first !== last) throw new Error(`${label}: expected exactly one match`);
+            return source.slice(0, first) + newText + source.slice(first + oldText.length);
+          }
+
+          function replaceInFunction(source, functionName, oldText, newText) {
+            const marker = `async function ${functionName}`;
+            const start = source.indexOf(marker);
+            if (start < 0) throw new Error(`${functionName}: function not found`);
+            const next = source.indexOf('\n  async function ', start + marker.length);
+            const end = next < 0 ? source.length : next;
+            const block = source.slice(start, end);
+            if (block.indexOf(oldText) < 0 || block.indexOf(oldText) !== block.lastIndexOf(oldText)) {
+              throw new Error(`${functionName}: expected exactly one ${oldText}`);
+            }
+            return source.slice(0, start) + block.replace(oldText, newText) + source.slice(end);
+          }
+
+          let app = fs.readFileSync('js/app.js', 'utf8');
+          app = replaceOnce(app,
+            `  const UI_MODULES = Object.freeze({\n    content: "js/content-renderer.js",\n    questions: "js/question-engine.js",\n    memorisation: "js/memorisation-engine.js"\n  });`,
+            `  const UI_MODULES = Object.freeze({\n    content: "js/content-renderer.js",\n    contentReader: "js/content-renderer.js",\n    contentStudy: "js/content-renderer.js",\n    contentProgress: "js/content-renderer.js",\n    questions: "js/question-engine.js",\n    memorisation: "js/memorisation-engine.js"\n  });`,
+            'content UI aliases');
+          app = replaceInFunction(app, 'pageOverview', 'loadUIModules(["content"])', 'loadUIModules(["contentProgress"])');
+          app = replaceInFunction(app, 'pageText', 'uiModules: ["content"]', 'uiModules: ["contentReader"]');
+          app = replaceInFunction(app, 'pageWords', 'uiModules: ["content"]', 'uiModules: ["contentStudy"]');
+          app = replaceInFunction(app, 'pageComprehension', 'uiModules: ["content"]', 'uiModules: ["contentStudy"]');
+          app = replaceInFunction(app, 'pageAnalysis', 'uiModules: ["content"]', 'uiModules: ["contentStudy"]');
+          app = replaceInFunction(app, 'pageTheme', 'uiModules: ["content"]', 'uiModules: ["contentStudy"]');
+          app = replaceInFunction(app, 'pageProgress', 'uiModules: ["content"]', 'uiModules: ["contentProgress"]');
+          fs.writeFileSync('js/app.js', app);
+
+          let build = fs.readFileSync('scripts/build-assets.mjs', 'utf8');
+          const splitStart = build.indexOf('function splitRouteStyles(source) {');
+          const splitEnd = build.indexOf('const progress = fingerprint(', splitStart);
+          if (splitStart < 0 || splitEnd < 0) throw new Error('build CSS split block not found');
+          const splitBlock = `function splitRouteStyles(source) {\n  const quizMarker = "/* ===== Quiz UI 2.0: focused answering workspace ===== */";\n  const progressMarker = "/* ===== Progress UI 2.0: learning decisions before dashboards ===== */";\n  const readerMarker = "/* ===== Reader UI 2.0: modern Chinese text workspace ===== */";\n  const studyMarker = "/* ===== Content Study UI 2.0: words / comprehension / analysis / theme ===== */";\n  const launchMarker = "/* ============================================================\\n   Launch polish — 品牌 chrome、狀態頁、mobile header、motion";\n\n  const quizStart = uniqueMarkerIndex(source, quizMarker, "quiz CSS split");\n  const progressStart = uniqueMarkerIndex(source, progressMarker, "progress CSS split");\n  const readerStart = uniqueMarkerIndex(source, readerMarker, "reader CSS split");\n  const studyStart = uniqueMarkerIndex(source, studyMarker, "content-study CSS split");\n  const launchStart = uniqueMarkerIndex(source, launchMarker, "launch polish CSS split");\n\n  if (!(quizStart < progressStart && progressStart < readerStart && readerStart < studyStart && studyStart < launchStart)) {\n    throw new Error("route CSS markers are out of the expected cascade order");\n  }\n\n  const launchPolish = source.slice(launchStart);\n  const core = source.slice(0, quizStart) + launchPolish;\n  const questions = source.slice(quizStart, progressStart) + "\\n\\n" + launchPolish;\n  const progress = source.slice(progressStart, readerStart) + "\\n\\n" + launchPolish;\n  const reader = source.slice(readerStart, studyStart) + "\\n\\n" + launchPolish;\n  const study = source.slice(studyStart, launchStart) + "\\n\\n" + launchPolish;\n\n  return { core, questions, progress, reader, study };\n}\n\nconst styleSource = read("css/style.css");\nconst splitStyles = splitRouteStyles(styleSource);\nconst style = fingerprint("style", "css", "css/style.css", splitStyles.core);\nconst readerStyle = fingerprint("reader-style", "css", "css/style.css", splitStyles.reader);\nconst studyStyle = fingerprint("study-style", "css", "css/style.css", splitStyles.study);\nconst progressStyle = fingerprint("progress-style", "css", "css/style.css", splitStyles.progress);\nconst questionsStyle = fingerprint("questions-style", "css", "css/style.css", splitStyles.questions);\n`;
+          build = build.slice(0, splitStart) + splitBlock + build.slice(splitEnd);
+
+          const contentInjectStart = build.indexOf(`builtApp = replaceOnce(\n  builtApp,\n  'content: "js/content-renderer.js"'`);
+          const questionsInjectStart = build.indexOf(`builtApp = replaceOnce(\n  builtApp,\n  'questions: "js/question-engine.js"'`, contentInjectStart);
+          if (contentInjectStart < 0 || questionsInjectStart < 0) throw new Error('content fingerprint injection block not found');
+          const contentInjections = `builtApp = replaceOnce(\n  builtApp,\n  'content: "js/content-renderer.js"',\n  \`content: "\${content.path}"\`,\n  "content renderer fingerprint injection"\n);\nbuiltApp = replaceOnce(\n  builtApp,\n  'contentReader: "js/content-renderer.js"',\n  \`contentReader: { script: "\${content.path}", style: "\${readerStyle.path}" }\`,\n  "reader renderer fingerprint injection"\n);\nbuiltApp = replaceOnce(\n  builtApp,\n  'contentStudy: "js/content-renderer.js"',\n  \`contentStudy: { script: "\${content.path}", style: "\${studyStyle.path}" }\`,\n  "study renderer fingerprint injection"\n);\nbuiltApp = replaceOnce(\n  builtApp,\n  'contentProgress: "js/content-renderer.js"',\n  \`contentProgress: { script: "\${content.path}", style: "\${progressStyle.path}" }\`,\n  "progress renderer fingerprint injection"\n);\n`;
+          build = build.slice(0, contentInjectStart) + contentInjections + build.slice(questionsInjectStart);
+          build = replaceOnce(build,
+            'const assets = { style, contentStyle, questionsStyle, progress, router, app, content, questions, memorisation };',
+            'const assets = { style, readerStyle, studyStyle, progressStyle, questionsStyle, progress, router, app, content, questions, memorisation };',
+            'asset manifest style keys');
+          fs.writeFileSync('scripts/build-assets.mjs', build);
+
+          let perf = fs.readFileSync('scripts/validate-performance.mjs', 'utf8');
+          perf = replaceOnce(perf,
+            '["style", "contentStyle", "questionsStyle", "progress", "router", "app", "content", "questions", "memorisation"]',
+            '["style", "readerStyle", "studyStyle", "progressStyle", "questionsStyle", "progress", "router", "app", "content", "questions", "memorisation"]',
+            'manifest asset validation keys');
+          perf = replaceOnce(perf,
+            `check(!index.includes(asset("contentStyle")?.path || "__missing__"), "content stylesheet must remain route-lazy");\ncheck(!index.includes(asset("questionsStyle")?.path || "__missing__"), "question stylesheet must remain route-lazy");`,
+            `for (const lazyStyleKey of ["readerStyle", "studyStyle", "progressStyle", "questionsStyle"]) {\n  check(!index.includes(asset(lazyStyleKey)?.path || "__missing__"), \`${'${lazyStyleKey}'} must remain route-lazy\`);\n}`,
+            'lazy stylesheet index contract');
+          perf = replaceOnce(perf,
+            `check(sourceApp.includes('uiModules: ["content"]'), "content routes must load content renderer on demand");`,
+            `check(sourceApp.includes('uiModules: ["content"]'), "basic content routes must load content renderer on demand");\ncheck(sourceApp.includes('uiModules: ["contentReader"]'), "reader route must request reader-specific UI assets");\ncheck(sourceApp.includes('uiModules: ["contentStudy"]'), "study routes must request study-specific UI assets");\ncheck(sourceApp.includes('uiModules: ["contentProgress"]'), "progress route must request progress-specific UI assets");`,
+            'source route-specific UI contracts');
+          perf = replaceOnce(perf,
+            `  check(builtApp.includes(\`content: { script: "${'${asset("content")?.path}'}", style: "${'${asset("contentStyle")?.path}'}" }\`), "built app must pair content renderer with its lazy stylesheet");`,
+            `  check(builtApp.includes(\`content: "${'${asset("content")?.path}'}"\`), "built app must keep basic content routes script-only");\n  check(builtApp.includes(\`contentReader: { script: "${'${asset("content")?.path}'}", style: "${'${asset("readerStyle")?.path}'}" }\`), "built app must pair reader route with reader CSS");\n  check(builtApp.includes(\`contentStudy: { script: "${'${asset("content")?.path}'}", style: "${'${asset("studyStyle")?.path}'}" }\`), "built app must pair study routes with study CSS");\n  check(builtApp.includes(\`contentProgress: { script: "${'${asset("content")?.path}'}", style: "${'${asset("progressStyle")?.path}'}" }\`), "built app must pair progress routes with progress CSS");`,
+            'built app content style contracts');
+          perf = replaceOnce(perf,
+            `check(!headers.includes(\`<${'${asset("contentStyle")?.path}'}>\`), "route-lazy content CSS must not be preloaded on every page");\ncheck(!headers.includes(\`<${'${asset("questionsStyle")?.path}'}>\`), "route-lazy question CSS must not be preloaded on every page");`,
+            `for (const lazyStyleKey of ["readerStyle", "studyStyle", "progressStyle", "questionsStyle"]) {\n  check(!headers.includes(\`<${'${asset(lazyStyleKey)?.path}'}>\`), \`route-lazy ${'${lazyStyleKey}'} must not be preloaded on every page\`);\n}`,
+            'header lazy CSS contract');
+          perf = replaceOnce(perf,
+            'const lazyCssBytes = ["contentStyle", "questionsStyle"].map(fileFromAsset).filter(Boolean)',
+            'const lazyCssBytes = ["readerStyle", "studyStyle", "progressStyle", "questionsStyle"].map(fileFromAsset).filter(Boolean)',
+            'lazy CSS byte accounting');
+          fs.writeFileSync('scripts/validate-performance.mjs', perf);
+
+          let loading = fs.readFileSync('scripts/validate-loading.mjs', 'utf8');
+          loading = replaceOnce(loading,
+            `requireText('{ resources: ["text"], uiModules: ["content"] }', "text-only route loading with lazy content UI");\nrequireText('{ resources: ["structure"], uiModules: ["content"] }', "structure-only route loading with lazy content UI");\nrequireText('{ resources: ["appreciation"], uiModules: ["content"] }', "appreciation-only route loading with lazy content UI");`,
+            `requireText('{ resources: ["text"], uiModules: ["contentReader"] }', "reader text loading with reader-specific UI");\nrequireText('{ resources: ["text"], uiModules: ["contentStudy"] }', "text-backed study loading with study-specific UI");\nrequireText('{ resources: ["structure"], uiModules: ["contentStudy"] }', "structure-only route loading with study-specific UI");\nrequireText('{ resources: ["appreciation"], uiModules: ["contentStudy"] }', "appreciation-only route loading with study-specific UI");`,
+            'content route loading contracts');
+          loading = replaceOnce(loading,
+            `requireText('{ resources: ["memorisation", "rubrics"], allQuestionBanks: true, uiModules: ["content"] }', "aggregate progress loading with memorisation, rubrics and lazy content UI");`,
+            `requireText('{ resources: ["memorisation", "rubrics"], allQuestionBanks: true, uiModules: ["contentProgress"] }', "aggregate progress loading with memorisation, rubrics and progress-specific UI");`,
+            'progress route loading contract');
+          fs.writeFileSync('scripts/validate-loading.mjs', loading);
+
+          let coverage = fs.readFileSync('scripts/css-coverage.mjs', 'utf8');
+          coverage = replaceOnce(coverage,
+            '/\\/assets\\/build\\/(style|content-style|questions-style)\\.[0-9a-f]{12}\\.css(?:$|\\?)/',
+            '/\\/assets\\/build\\/(style|reader-style|study-style|progress-style|questions-style)\\.[0-9a-f]{12}\\.css(?:$|\\?)/',
+            'coverage style-name matcher');
+          coverage = replaceOnce(coverage,
+            `  { label: "unit", hash: "#/unit/yueyanglouji", selector: ".unit-hero", title: "《岳陽樓記》", styles: ["style", "content-style"] },\n  { label: "reader", hash: "#/unit/yueyanglouji/text", selector: ".reader-shell", title: "原文與誦讀", styles: ["style", "content-style"] },\n  { label: "quiz", hash: "#/unit/yueyanglouji/words/quiz", selector: ".q-stem", styles: ["style", "questions-style"] },\n  { label: "progress", hash: "#/unit/yueyanglouji/progress", selector: ".unit-progress-hero", styles: ["style", "content-style"] }`,
+            `  { label: "unit", hash: "#/unit/yueyanglouji", selector: ".unit-hero", title: "《岳陽樓記》", styles: ["style"] },\n  { label: "reader", hash: "#/unit/yueyanglouji/text", selector: ".reader-shell", title: "原文與誦讀", styles: ["style", "reader-style"] },\n  { label: "study", hash: "#/unit/yueyanglouji/words", selector: ".study-page-shell.words-study", styles: ["style", "study-style"] },\n  { label: "quiz", hash: "#/unit/yueyanglouji/words/quiz", selector: ".q-stem", styles: ["style", "questions-style"] },\n  { label: "progress", hash: "#/unit/yueyanglouji/progress", selector: ".unit-progress-hero", styles: ["style", "progress-style"] }`,
+            'coverage route style expectations');
+          fs.writeFileSync('scripts/css-coverage.mjs', coverage);
+          NODE
+
+      - name: Rebuild fingerprinted assets
+        run: node scripts/build-assets.mjs --write
+
+      - name: Verify migration contracts
+        run: |
+          node --check js/app.js
+          node --check scripts/build-assets.mjs
+          node --check scripts/css-coverage.mjs
+          node scripts/build-assets.mjs --check
+          node scripts/validate-loading.mjs
+          node scripts/validate-performance.mjs
+
+      - name: Commit final migration and remove one-time workflow
+        run: |
+          git rm .github/workflows/phase2-css-split.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/app.js scripts/build-assets.mjs scripts/validate-performance.mjs scripts/validate-loading.mjs scripts/css-coverage.mjs index.html _headers assets/build
+          git commit -m "Split content CSS by route"
+          git push
