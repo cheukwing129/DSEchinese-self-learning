@@ -58,7 +58,7 @@
   </main>
   <noscript><div class="noscript-state">文脈需要 JavaScript 才能載入篇章、練習與本機學習紀錄。</div></noscript>
 
-  <!-- RC UX safeguards: keep forward actions unambiguous, make reorder reversible, and turn open-answer rubrics into self review. -->
+  <!-- RC UX safeguards: keep forward actions unambiguous, make reorder reversible, turn open-answer rubrics into self review, and surface honest home-card learning states. -->
   <script>
   (() => {
     const generalQuizTitles = new Set([
@@ -331,6 +331,108 @@
       updateOpenReviewSummary(shell, unitId, reviewId);
     }
 
+    function loadProgressSnapshot() {
+      try {
+        const parsed = JSON.parse(localStorage.getItem(progressStorageKey) || "{}");
+        return parsed && typeof parsed === "object" ? parsed : {};
+      } catch {
+        return {};
+      }
+    }
+
+    function unitActivityAt(unit) {
+      if (!unit || typeof unit !== "object") return 0;
+      let latest = Math.max(Number(unit.lastActivityAt) || 0, Number(unit.navigation?.lastAt) || 0);
+      Object.values(unit.answers || {}).forEach((record) => {
+        latest = Math.max(
+          latest,
+          Number(record?.timestamp) || 0,
+          Number(record?.lastWrongAt) || 0,
+          Number(record?.lastCorrectAt) || 0
+        );
+      });
+      Object.values(unit.openQuestionReviews || {}).forEach((review) => {
+        latest = Math.max(latest, Number(review?.updatedAt) || 0);
+      });
+      const memo = unit.memorisation || {};
+      latest = Math.max(latest, Number(memo.charsViewedAt) || 0);
+      Object.values(memo.groups || {}).forEach((group) => {
+        latest = Math.max(
+          latest,
+          Number(group?.cloze?.lastAt) || 0,
+          Number(group?.reorder?.lastAt) || 0
+        );
+      });
+      return latest;
+    }
+
+    function unitHasEvidence(unit) {
+      if (!unit || typeof unit !== "object") return false;
+      if (unitActivityAt(unit)) return true;
+      if (Object.values(unit.answers || {}).some((record) => record?.answered)) return true;
+      if (Object.values(unit.reflections || {}).some((value) => String(value || "").trim())) return true;
+      if (Object.values(unit.selfReview || {}).some(Boolean)) return true;
+      if (Object.keys(unit.openQuestionReviews || {}).length) return true;
+      return false;
+    }
+
+    function enhanceHomeLearningStatus() {
+      const cards = [...document.querySelectorAll('a.map-card[href^="#/unit/"]')];
+      if (!cards.length) return;
+
+      const all = loadProgressSnapshot();
+      let recentUnitId = "";
+      let recentAt = 0;
+      Object.entries(all).forEach(([unitId, unit]) => {
+        const at = unitActivityAt(unit);
+        if (at > recentAt) {
+          recentAt = at;
+          recentUnitId = unitId;
+        }
+      });
+
+      cards.forEach((card) => {
+        const href = card.getAttribute("href") || "";
+        const match = href.match(/^#\/unit\/([^/?]+)/);
+        if (!match) return;
+        let unitId = match[1];
+        try { unitId = decodeURIComponent(unitId); } catch { /* keep raw id */ }
+
+        const unit = all[unitId] && typeof all[unitId] === "object" ? all[unitId] : {};
+        const objectiveWrong = Object.values(unit.answers || {})
+          .filter((record) => record?.answered && record.isCorrect === false).length;
+        const openRetry = Object.values(unit.openQuestionReviews || {})
+          .filter((review) => review?.decision === "retry").length;
+        const engaged = unitHasEvidence(unit);
+
+        let label = "未開始";
+        let status = "not-started";
+        let needsAttention = false;
+        if (objectiveWrong) {
+          label = `待修正 ×${objectiveWrong}`;
+          status = "objective-wrong";
+          needsAttention = true;
+        } else if (openRetry) {
+          label = `開放題待重做 ×${openRetry}`;
+          status = "open-retry";
+          needsAttention = true;
+        } else if (engaged && unitId === recentUnitId) {
+          label = "最近學習";
+          status = "recent";
+        } else if (engaged) {
+          label = "已開始";
+          status = "started";
+        }
+
+        const badge = card.querySelector(".badge");
+        if (!badge) return;
+        setTextIfChanged(badge, label);
+        badge.dataset.learningStatus = status;
+        badge.classList.toggle("badge-soon", needsAttention);
+        badge.classList.toggle("badge-available", !needsAttention);
+      });
+    }
+
     const main = document.getElementById("app-main");
     if (!main) return;
 
@@ -340,6 +442,7 @@
       enhanceQuiz();
       enhanceReorder();
       enhanceOpenSelfReview();
+      enhanceHomeLearningStatus();
     };
     const scheduleEnhance = () => {
       if (scheduled) return;
