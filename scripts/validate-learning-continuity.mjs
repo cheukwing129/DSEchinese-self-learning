@@ -15,6 +15,7 @@ check(appSource.includes("繼續上次學習"), "home must expose continue-learn
 check(appSource.includes("Progress.recordLearningVisit(unitId, currentPath)"), "successful unit routes must record learning visits");
 check(contentSource.includes("建議下一步"), "unit home must expose next-step guidance");
 check(contentSource.includes("不等同系統判定你已掌握前一階段"), "next-step UI must disclaim mastery inference");
+check(progressSource.includes("openQuestionReviews"), "next-step guidance must understand open-answer self-review records");
 
 const store = new Map();
 const localStorage = {
@@ -43,6 +44,31 @@ check(recent && recent.path === "/unit/u1/challenge", "ephemeral challenge run m
 Progress.recordAnswer("u1", "q1", { answered: true, isCorrect: false, selected: "A" });
 next = Progress.recommendNextStep("u1");
 check(next.path === "/unit/u1/progress", "wrong answers should prioritize remediation");
+
+// A self-marked open answer should become the next step only when there are no objective wrong answers.
+localStorage.clear();
+localStorage.setItem("ccsl_progress_v1", JSON.stringify({
+  u1: {
+    answers: {},
+    reflections: {},
+    memorisation: { groups: {}, charsViewedAt: null },
+    selfReview: {},
+    openQuestionReviews: {
+      review1: { decision: "retry", checked: { "0:0": true }, updatedAt: 200 }
+    },
+    navigation: { lastPath: "/unit/u1/theme/quiz?qi=2", lastAt: 150 },
+    lastActivityAt: 200
+  }
+}));
+next = Progress.recommendNextStep("u1");
+check(next.path === "/unit/u1/theme/quiz?qi=2", "open-answer retry should return to the latest relevant learning route");
+check(next.label === "重做標記的開放題", "one open-answer retry should use a clear singular CTA");
+check(next.reason.includes("稍後重做"), "open-answer retry guidance should explain why it is recommended");
+
+// Objective wrong answers remain higher priority than open-answer self review.
+Progress.recordAnswer("u1", "q-wrong", { answered: true, isCorrect: false, selected: "A" });
+next = Progress.recommendNextStep("u1");
+check(next.path === "/unit/u1/progress" && next.label === "先修正錯題", "objective wrong answers should remain the highest remediation priority");
 
 Progress.clearUnit("u1");
 Progress.recordAnswer("u1", "q1", { answered: true, isCorrect: true, selected: "A" });
@@ -79,4 +105,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log("Learning continuity behavior validated, including legacy fallback and honest recommendations.");
+console.log("Learning continuity behavior validated, including open-answer retry priority, legacy fallback and honest recommendations.");

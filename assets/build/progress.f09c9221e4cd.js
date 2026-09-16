@@ -39,6 +39,7 @@ const Progress = (() => {
     }
     if (!("charsViewedAt" in unit.memorisation)) unit.memorisation.charsViewedAt = null;
     if (!unit.selfReview || typeof unit.selfReview !== "object") unit.selfReview = {};
+    if (!unit.openQuestionReviews || typeof unit.openQuestionReviews !== "object") unit.openQuestionReviews = {};
     if (!unit.navigation || typeof unit.navigation !== "object") {
       unit.navigation = { lastPath: null, lastAt: null };
     }
@@ -257,6 +258,9 @@ const Progress = (() => {
     const unit = all[unitId];
     const answered = Object.values(unit.answers || {}).filter((rec) => rec && rec.answered).length;
     const wrong = Object.values(unit.answers || {}).filter((rec) => rec && rec.answered && rec.isCorrect === false).length;
+    const openRetryReviews = Object.values(unit.openQuestionReviews || {})
+      .filter((review) => review && review.decision === "retry")
+      .sort((a, b) => (Number(b.updatedAt) || 0) - (Number(a.updatedAt) || 0));
     const memoPractised = Object.values((unit.memorisation && unit.memorisation.groups) || {}).some((group) =>
       !!((group.cloze && group.cloze.attempts) || (group.reorder && group.reorder.attempts))
     );
@@ -268,6 +272,16 @@ const Progress = (() => {
         path: `/unit/${unitId}/progress`,
         label: "先修正錯題",
         reason: `目前有 ${wrong} 題客觀題留下錯誤紀錄；先到「我的掌握」重看錯題與補強方向。`
+      };
+    }
+    if (openRetryReviews.length) {
+      const recentReviewPath = safeLearningPath(unitId, openRetryReviews[0].path);
+      const recentLearningPath = safeLearningPath(unitId, unit.navigation && unit.navigation.lastPath);
+      const path = recentReviewPath || recentLearningPath || `/unit/${unitId}/progress`;
+      return {
+        path,
+        label: openRetryReviews.length === 1 ? "重做標記的開放題" : `重做 ${openRetryReviews.length} 題開放題`,
+        reason: `你有 ${openRetryReviews.length} 題開放題標記為「稍後重做」；先回到最近的學習位置重新作答，再逐項核對評分要點。`
       };
     }
     if (!answered && !memoPractised && !reflectionSaved) {

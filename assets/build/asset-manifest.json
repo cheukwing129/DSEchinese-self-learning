@@ -34,9 +34,9 @@
     },
     "progress": {
       "source": "js/progress.js",
-      "path": "/assets/build/progress.e3516434afdc.js",
-      "hash": "e3516434afdc",
-      "sha256": "e3516434afdc97b2596f4a7b995ddb72c882b6806f042f873de01da23d8e8abe"
+      "path": "/assets/build/progress.f09c9221e4cd.js",
+      "hash": "f09c9221e4cd",
+      "sha256": "f09c9221e4cda97897680cd0b87cd9158c6352553b2d8ace4857c338d1695aad"
     },
     "progressAnalytics": {
       "source": "js/progress-analytics.js",
