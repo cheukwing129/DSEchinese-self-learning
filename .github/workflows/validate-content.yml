@@ -98,6 +98,9 @@ jobs:
       - name: Run reader comfort regression
         run: node scripts/reader-comfort-smoke.mjs
 
+      - name: Run quick-study regression
+        run: node scripts/quick-study-smoke.mjs
+
       - name: Run keyboard and focus accessibility contract
         run: node scripts/browser-accessibility.mjs
 
