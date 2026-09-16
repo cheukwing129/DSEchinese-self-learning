@@ -73,13 +73,25 @@
 
     function finalQuizState(title) {
       if (generalQuizTitles.has(title)) {
-        return { label: "完成這組練習", hint: "先對照答案與解析，確認後完成這組練習。", navigateBack: true };
+        return {
+          label: "完成這組練習",
+          hint: "先對照答案與解析，確認後完成這組練習。",
+          navigateBack: true
+        };
       }
       if (title === "錯題重練" || title.startsWith("跨篇章錯題重練")) {
-        return { label: "完成本輪重練", hint: "先對照答案與解析，確認後完成本輪重練。", navigateBack: false };
+        return {
+          label: "完成本輪重練",
+          hint: "先對照答案與解析，確認後完成本輪重練。",
+          navigateBack: false
+        };
       }
       if (title === "核心篇章挑戰") {
-        return { label: "完成挑戰，查看結果", hint: "先對照答案與解析，確認後查看挑戰結果。", navigateBack: false };
+        return {
+          label: "完成挑戰，查看結果",
+          hint: "先對照答案與解析，確認後查看挑戰結果。",
+          navigateBack: false
+        };
       }
       return null;
     }
@@ -93,17 +105,23 @@
     function enhanceQuiz() {
       const shell = document.querySelector(".quiz-shell");
       if (!shell || !shell.classList.contains("is-submitted")) return;
+
       const nextButton = shell.querySelector("#next-btn");
       hideButton(nextButton);
+
       const confirmButton = shell.querySelector("#confirm-next-btn");
       if (!confirmButton || !nextButton || !nextButton.disabled) return;
+
       const title = shell.querySelector(".quiz-context-title")?.textContent?.trim() || "";
       const finalState = finalQuizState(title);
       if (!finalState) return;
+
       confirmButton.textContent = finalState.label;
       const hint = shell.querySelector(".question-action-hint");
       if (hint) hint.textContent = finalState.hint;
+
       hideButton(shell.querySelector("#finish-challenge-btn"));
+
       if (finalState.navigateBack && !confirmButton.dataset.uxFinishBound) {
         confirmButton.dataset.uxFinishBound = "true";
         confirmButton.addEventListener("click", (event) => {
@@ -117,7 +135,8 @@
 
     function replayReorderSteps(texts) {
       for (const text of texts) {
-        const match = [...document.querySelectorAll("#reorder-pool [data-chip]")].find((chip) => chip.textContent === text);
+        const match = [...document.querySelectorAll("#reorder-pool [data-chip]")]
+          .find((chip) => chip.textContent === text);
         if (!match) return false;
         match.click();
       }
@@ -129,6 +148,7 @@
       if (!resetButton) return;
       const row = resetButton.closest(".btn-row");
       if (!row) return;
+
       let undoButton = document.getElementById("reorder-undo-btn");
       if (!undoButton) {
         undoButton = document.createElement("button");
@@ -138,6 +158,7 @@
         undoButton.textContent = "撤回上一步";
         row.insertBefore(undoButton, resetButton);
       }
+
       const placed = [...document.querySelectorAll("#reorder-slots .reorder-chip.is-placed")];
       undoButton.disabled = placed.length === 0;
       undoButton.onclick = () => {
@@ -154,7 +175,11 @@
     function currentUnitId() {
       const match = window.location.hash.match(/^#\/unit\/([^/?]+)/);
       if (!match) return "";
-      try { return decodeURIComponent(match[1]); } catch { return match[1]; }
+      try {
+        return decodeURIComponent(match[1]);
+      } catch {
+        return match[1];
+      }
     }
 
     function stableReviewId(shell, unitId) {
@@ -175,7 +200,9 @@
         const all = JSON.parse(localStorage.getItem(progressStorageKey) || "{}");
         const review = all?.[unitId]?.openQuestionReviews?.[reviewId];
         return review && typeof review === "object" ? review : {};
-      } catch { return {}; }
+      } catch {
+        return {};
+      }
     }
 
     function saveOpenReview(unitId, reviewId, patch) {
@@ -206,6 +233,7 @@
       const inputs = [...shell.querySelectorAll(".open-self-review-checkbox")];
       const checked = inputs.filter((input) => input.checked).length;
       setTextIfChanged(summary.querySelector("[data-open-review-count]"), `你已對照 ${checked}/${inputs.length} 項。`);
+
       const saved = loadOpenReview(unitId, reviewId);
       const decision = saved.decision || "";
       summary.querySelectorAll("[data-open-review-decision]").forEach((button) => {
@@ -214,7 +242,11 @@
         button.style.borderColor = selected ? "var(--color-accent)" : "";
         button.style.background = selected ? "var(--color-accent-soft)" : "";
       });
-      const decisionText = decision === "mastered" ? "已記錄為「我已掌握」。" : decision === "retry" ? "已記錄為「稍後重做」。" : "核對後，可標記這題目前的學習狀態。";
+      const decisionText = decision === "mastered"
+        ? "已記錄為「我已掌握」。"
+        : decision === "retry"
+          ? "已記錄為「稍後重做」。"
+          : "核對後，可標記這題目前的學習狀態。";
       setTextIfChanged(summary.querySelector("[data-open-review-status]"), decisionText);
     }
 
@@ -225,11 +257,13 @@
       if (!panel) return;
       const lists = [...panel.querySelectorAll("ul.scoring-elements")];
       if (!lists.length) return;
+
       const unitId = currentUnitId();
       if (!unitId) return;
       const reviewId = stableReviewId(shell, unitId);
       const saved = loadOpenReview(unitId, reviewId);
       const savedChecked = saved.checked && typeof saved.checked === "object" ? saved.checked : {};
+
       lists.forEach((list, listIndex) => {
         if (list.dataset.openSelfReviewBound) return;
         list.dataset.openSelfReviewBound = "true";
@@ -266,6 +300,7 @@
           });
         });
       });
+
       let summary = panel.querySelector(".open-self-review-summary");
       if (!summary) {
         summary = document.createElement("div");
@@ -273,15 +308,27 @@
         summary.style.marginTop = "14px";
         summary.style.paddingTop = "12px";
         summary.style.borderTop = "1px dashed var(--color-border)";
-        summary.innerHTML = `<span class="reveal-label">你的自評</span><div><p data-open-review-count aria-live="polite" style="margin:0;font-weight:700;"></p><p style="margin:4px 0 10px;font-size:12px;color:var(--color-ink-soft);">逐項核對你已做到的要點；這是自我檢視，不是系統分數。</p><div class="btn-row" style="margin:0;"><button type="button" class="btn btn-secondary" data-open-review-decision="mastered" aria-pressed="false">我已掌握</button><button type="button" class="btn btn-secondary" data-open-review-decision="retry" aria-pressed="false">稍後重做</button></div><p data-open-review-status aria-live="polite" style="margin:8px 0 0;font-size:12px;color:var(--color-ink-soft);"></p></div>`;
+        summary.innerHTML = `
+          <span class="reveal-label">你的自評</span>
+          <div>
+            <p data-open-review-count aria-live="polite" style="margin:0; font-weight:700;"></p>
+            <p style="margin:4px 0 10px; font-size:12px; color:var(--color-ink-soft);">逐項核對你已做到的要點；這是自我檢視，不是系統分數。</p>
+            <div class="btn-row" style="margin:0;">
+              <button type="button" class="btn btn-secondary" data-open-review-decision="mastered" aria-pressed="false">我已掌握</button>
+              <button type="button" class="btn btn-secondary" data-open-review-decision="retry" aria-pressed="false">稍後重做</button>
+            </div>
+            <p data-open-review-status aria-live="polite" style="margin:8px 0 0; font-size:12px; color:var(--color-ink-soft);"></p>
+          </div>`;
         panel.querySelector(".reveal-content")?.appendChild(summary);
         summary.querySelectorAll("[data-open-review-decision]").forEach((button) => {
           button.addEventListener("click", () => {
-            saveOpenReview(unitId, reviewId, { decision: button.dataset.openReviewDecision });
+            const decision = button.dataset.openReviewDecision;
+            saveOpenReview(unitId, reviewId, { decision });
             updateOpenReviewSummary(shell, unitId, reviewId);
           });
         });
       }
+
       updateOpenReviewSummary(shell, unitId, reviewId);
     }
 
@@ -289,17 +336,34 @@
       try {
         const parsed = JSON.parse(localStorage.getItem(progressStorageKey) || "{}");
         return parsed && typeof parsed === "object" ? parsed : {};
-      } catch { return {}; }
+      } catch {
+        return {};
+      }
     }
 
     function unitActivityAt(unit) {
       if (!unit || typeof unit !== "object") return 0;
       let latest = Math.max(Number(unit.lastActivityAt) || 0, Number(unit.navigation?.lastAt) || 0);
-      Object.values(unit.answers || {}).forEach((record) => { latest = Math.max(latest, Number(record?.timestamp) || 0, Number(record?.lastWrongAt) || 0, Number(record?.lastCorrectAt) || 0); });
-      Object.values(unit.openQuestionReviews || {}).forEach((review) => { latest = Math.max(latest, Number(review?.updatedAt) || 0); });
+      Object.values(unit.answers || {}).forEach((record) => {
+        latest = Math.max(
+          latest,
+          Number(record?.timestamp) || 0,
+          Number(record?.lastWrongAt) || 0,
+          Number(record?.lastCorrectAt) || 0
+        );
+      });
+      Object.values(unit.openQuestionReviews || {}).forEach((review) => {
+        latest = Math.max(latest, Number(review?.updatedAt) || 0);
+      });
       const memo = unit.memorisation || {};
       latest = Math.max(latest, Number(memo.charsViewedAt) || 0);
-      Object.values(memo.groups || {}).forEach((group) => { latest = Math.max(latest, Number(group?.cloze?.lastAt) || 0, Number(group?.reorder?.lastAt) || 0); });
+      Object.values(memo.groups || {}).forEach((group) => {
+        latest = Math.max(
+          latest,
+          Number(group?.cloze?.lastAt) || 0,
+          Number(group?.reorder?.lastAt) || 0
+        );
+      });
       return latest;
     }
 
@@ -316,23 +380,51 @@
     function enhanceHomeLearningStatus() {
       const cards = [...document.querySelectorAll('a.map-card[href^="#/unit/"]')];
       if (!cards.length) return;
+
       const all = loadProgressSnapshot();
-      let recentUnitId = "", recentAt = 0;
-      Object.entries(all).forEach(([unitId, unit]) => { const at = unitActivityAt(unit); if (at > recentAt) { recentAt = at; recentUnitId = unitId; } });
+      let recentUnitId = "";
+      let recentAt = 0;
+      Object.entries(all).forEach(([unitId, unit]) => {
+        const at = unitActivityAt(unit);
+        if (at > recentAt) {
+          recentAt = at;
+          recentUnitId = unitId;
+        }
+      });
+
       cards.forEach((card) => {
-        const match = (card.getAttribute("href") || "").match(/^#\/unit\/([^/?]+)/);
+        const href = card.getAttribute("href") || "";
+        const match = href.match(/^#\/unit\/([^/?]+)/);
         if (!match) return;
         let unitId = match[1];
-        try { unitId = decodeURIComponent(unitId); } catch {}
+        try { unitId = decodeURIComponent(unitId); } catch { /* keep raw id */ }
+
         const unit = all[unitId] && typeof all[unitId] === "object" ? all[unitId] : {};
-        const objectiveWrong = Object.values(unit.answers || {}).filter((record) => record?.answered && record.isCorrect === false).length;
-        const openRetry = Object.values(unit.openQuestionReviews || {}).filter((review) => review?.decision === "retry").length;
+        const objectiveWrong = Object.values(unit.answers || {})
+          .filter((record) => record?.answered && record.isCorrect === false).length;
+        const openRetry = Object.values(unit.openQuestionReviews || {})
+          .filter((review) => review?.decision === "retry").length;
         const engaged = unitHasEvidence(unit);
-        let label = "未開始", status = "not-started", needsAttention = false;
-        if (objectiveWrong) { label = `待修正 ×${objectiveWrong}`; status = "objective-wrong"; needsAttention = true; }
-        else if (openRetry) { label = `開放題待重做 ×${openRetry}`; status = "open-retry"; needsAttention = true; }
-        else if (engaged && unitId === recentUnitId) { label = "最近學習"; status = "recent"; }
-        else if (engaged) { label = "已開始"; status = "started"; }
+
+        let label = "未開始";
+        let status = "not-started";
+        let needsAttention = false;
+        if (objectiveWrong) {
+          label = `待修正 ×${objectiveWrong}`;
+          status = "objective-wrong";
+          needsAttention = true;
+        } else if (openRetry) {
+          label = `開放題待重做 ×${openRetry}`;
+          status = "open-retry";
+          needsAttention = true;
+        } else if (engaged && unitId === recentUnitId) {
+          label = "最近學習";
+          status = "recent";
+        } else if (engaged) {
+          label = "已開始";
+          status = "started";
+        }
+
         const badge = card.querySelector(".badge");
         if (!badge) return;
         setTextIfChanged(badge, label);
@@ -351,23 +443,40 @@
     function quickStudyPlan(candidate) {
       const { unitId, title, unit, objectiveWrong, openRetry, engaged } = candidate;
       const answered = Object.values(unit.answers || {}).filter((record) => record?.answered).length;
-      const memoPractised = Object.values(unit.memorisation?.groups || {}).some((group) => !!((group?.cloze?.attempts || 0) || (group?.reorder?.attempts || 0)));
+      const memoPractised = Object.values(unit.memorisation?.groups || {}).some((group) =>
+        !!((group?.cloze?.attempts || 0) || (group?.reorder?.attempts || 0))
+      );
       const reflectionSaved = Object.values(unit.reflections || {}).some((value) => String(value || "").trim());
       const selfReviewed = Object.values(unit.selfReview || {}).some(Boolean);
       const recentPath = safeQuickStudyPath(unitId, unit.navigation?.lastPath);
-      let mode = "guided", reason = `按這部裝置留下的紀錄，先集中溫習《${title}》。`, steps;
+      let mode = "guided";
+      let reason = `按這部裝置留下的紀錄，先集中溫習《${title}》。`;
+      let steps;
+
       if (objectiveWrong) {
         mode = "objective-wrong";
         reason = `《${title}》目前有 ${objectiveWrong} 題客觀題待修正；短時間內先處理已知弱點最划算。`;
-        steps = [{ minutes: 5, label: "重練待修正錯題", detail: `先處理最後一次仍答錯的 ${objectiveWrong} 題。`, path: `/unit/${unitId}/progress/retry-wrong` }, { minutes: 3, label: "短背誦", detail: "用遮字或句子重組快速回憶原文。", path: `/unit/${unitId}/memorisation` }, { minutes: 2, label: "查看我的掌握", detail: "核對剛才修正後還有哪些項目值得跟進。", path: `/unit/${unitId}/progress` }];
+        steps = [
+          { minutes: 5, label: `重練待修正錯題`, detail: `先處理最後一次仍答錯的 ${objectiveWrong} 題。`, path: `/unit/${unitId}/progress/retry-wrong` },
+          { minutes: 3, label: "短背誦", detail: "用遮字或句子重組快速回憶原文。", path: `/unit/${unitId}/memorisation` },
+          { minutes: 2, label: "查看我的掌握", detail: "核對剛才修正後還有哪些項目值得跟進。", path: `/unit/${unitId}/progress` }
+        ];
       } else if (openRetry) {
         mode = "open-retry";
         reason = `《${title}》有 ${openRetry} 題開放題標記為「稍後重做」；先重新作答，再對照評分要點。`;
-        steps = [{ minutes: 5, label: openRetry === 1 ? "重做標記的開放題" : `重做 ${openRetry} 題開放題`, detail: "重新作答後，再逐項核對評分元素。", path: recentPath || `/unit/${unitId}/theme` }, { minutes: 3, label: "短背誦", detail: "把理解再拉回原文，用短練習鞏固句子。", path: `/unit/${unitId}/memorisation` }, { minutes: 2, label: "整理學習紀錄", detail: "查看是否仍有待修正或需要補強的項目。", path: `/unit/${unitId}/progress` }];
+        steps = [
+          { minutes: 5, label: openRetry === 1 ? "重做標記的開放題" : `重做 ${openRetry} 題開放題`, detail: "重新作答後，再逐項核對評分元素。", path: recentPath || `/unit/${unitId}/theme` },
+          { minutes: 3, label: "短背誦", detail: "把理解再拉回原文，用短練習鞏固句子。", path: `/unit/${unitId}/memorisation` },
+          { minutes: 2, label: "整理學習紀錄", detail: "查看是否仍有待修正或需要補強的項目。", path: `/unit/${unitId}/progress` }
+        ];
       } else if (!engaged) {
         mode = "new";
         reason = `這部裝置尚未有學習紀錄；先用《${title}》建立一段短而完整的讀、練、背循環。`;
-        steps = [{ minutes: 4, label: "讀一節原文", detail: "先讀原文，需要時才點開注釋。", path: `/unit/${unitId}/text` }, { minutes: 4, label: "做幾題內容理解", detail: "用題目檢查自己是否真的讀懂。", path: `/unit/${unitId}/comprehension/quiz` }, { minutes: 2, label: "短背誦", detail: "用遮字或重組把剛讀過的內容再喚回一次。", path: `/unit/${unitId}/memorisation` }];
+        steps = [
+          { minutes: 4, label: "讀一節原文", detail: "先讀原文，需要時才點開注釋。", path: `/unit/${unitId}/text` },
+          { minutes: 4, label: "做幾題內容理解", detail: "用題目檢查自己是否真的讀懂。", path: `/unit/${unitId}/comprehension/quiz` },
+          { minutes: 2, label: "短背誦", detail: "用遮字或重組把剛讀過的內容再喚回一次。", path: `/unit/${unitId}/memorisation` }
+        ];
       } else {
         let first = { minutes: 4, label: "繼續最近學習", detail: "由最近留下的學習位置接續。", path: recentPath || `/unit/${unitId}/text` };
         if (!answered && !memoPractised && !reflectionSaved) first = { minutes: 4, label: "由原文開始", detail: "先熟讀原文及注釋，再進入練習。", path: `/unit/${unitId}/text` };
@@ -375,9 +484,12 @@
         else if (!reflectionSaved) first = { minutes: 4, label: "整理主旨與反思", detail: "把篇章內容連回自己的理解。", path: `/unit/${unitId}/theme` };
         else if (!selfReviewed) first = { minutes: 4, label: "做一次自我檢核", detail: "檢查哪些範疇仍想補強。", path: `/unit/${unitId}/progress` };
         else first = { minutes: 4, label: "做核心篇章挑戰", detail: "用綜合題檢查不同能力範疇。", path: `/unit/${unitId}/challenge` };
-        const second = first.path.endsWith("/memorisation") ? { minutes: 3, label: "做幾題內容理解", detail: "把原文記憶轉回理解與判斷。", path: `/unit/${unitId}/comprehension/quiz` } : { minutes: 3, label: "短背誦", detail: "用遮字或重組快速回憶原文。", path: `/unit/${unitId}/memorisation` };
+        const second = first.path.endsWith("/memorisation")
+          ? { minutes: 3, label: "做幾題內容理解", detail: "把原文記憶轉回理解與判斷。", path: `/unit/${unitId}/comprehension/quiz` }
+          : { minutes: 3, label: "短背誦", detail: "用遮字或重組快速回憶原文。", path: `/unit/${unitId}/memorisation` };
         steps = [first, second, { minutes: 3, label: "查看我的掌握", detail: "用最後幾分鐘整理今天留下的學習證據。", path: `/unit/${unitId}/progress` }];
       }
+
       return { unitId, title, mode, reason, steps };
     }
 
@@ -387,16 +499,35 @@
       if (!actionGrid || !cards.length) return;
       const all = loadProgressSnapshot();
       const candidates = cards.map((card, index) => {
-        const match = (card.getAttribute("href") || "").match(/^#\/unit\/([^/?]+)/);
+        const href = card.getAttribute("href") || "";
+        const match = href.match(/^#\/unit\/([^/?]+)/);
         if (!match) return null;
         let unitId = match[1];
-        try { unitId = decodeURIComponent(unitId); } catch {}
+        try { unitId = decodeURIComponent(unitId); } catch { /* keep raw id */ }
         const unit = all[unitId] && typeof all[unitId] === "object" ? all[unitId] : {};
-        return { unitId, title: card.querySelector(".map-title")?.textContent?.trim() || unitId, unit, index, activityAt: unitActivityAt(unit), engaged: unitHasEvidence(unit), objectiveWrong: Object.values(unit.answers || {}).filter((record) => record?.answered && record.isCorrect === false).length, openRetry: Object.values(unit.openQuestionReviews || {}).filter((review) => review?.decision === "retry").length };
+        return {
+          unitId,
+          title: card.querySelector(".map-title")?.textContent?.trim() || unitId,
+          unit,
+          index,
+          activityAt: unitActivityAt(unit),
+          engaged: unitHasEvidence(unit),
+          objectiveWrong: Object.values(unit.answers || {}).filter((record) => record?.answered && record.isCorrect === false).length,
+          openRetry: Object.values(unit.openQuestionReviews || {}).filter((review) => review?.decision === "retry").length
+        };
       }).filter(Boolean);
       if (!candidates.length) return;
+
       const rank = (item) => item.objectiveWrong ? 0 : item.openRetry ? 1 : item.engaged ? 2 : 3;
-      candidates.sort((a, b) => { const rankDiff = rank(a) - rank(b); if (rankDiff) return rankDiff; if (rank(a) === 0 && b.objectiveWrong !== a.objectiveWrong) return b.objectiveWrong - a.objectiveWrong; if (rank(a) === 1 && b.openRetry !== a.openRetry) return b.openRetry - a.openRetry; if (rank(a) <= 2 && b.activityAt !== a.activityAt) return b.activityAt - a.activityAt; return a.index - b.index; });
+      candidates.sort((a, b) => {
+        const rankDiff = rank(a) - rank(b);
+        if (rankDiff) return rankDiff;
+        if (rank(a) === 0 && b.objectiveWrong !== a.objectiveWrong) return b.objectiveWrong - a.objectiveWrong;
+        if (rank(a) === 1 && b.openRetry !== a.openRetry) return b.openRetry - a.openRetry;
+        if (rank(a) <= 2 && b.activityAt !== a.activityAt) return b.activityAt - a.activityAt;
+        return a.index - b.index;
+      });
+
       const plan = quickStudyPlan(candidates[0]);
       const signature = `${plan.unitId}|${plan.mode}|${plan.steps.map((step) => `${step.minutes}:${step.path}`).join("|")}`;
       let panel = actionGrid.querySelector("[data-quick-study-panel]");
@@ -411,20 +542,46 @@
       panel.dataset.quickStudySignature = signature;
       panel.dataset.quickStudyUnit = plan.unitId;
       panel.dataset.quickStudyMode = plan.mode;
-      const escape = (text) => text.replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" }[char]));
-      panel.innerHTML = `<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;margin-bottom:15px;"><div style="min-width:0;flex:1 1 420px;"><p class="section-kicker" style="margin:0 0 5px;">10 分鐘快速溫習</p><h2 style="margin:0;font-family:var(--font-display);font-size:25px;font-weight:650;line-height:1.25;">約 10 分鐘，先處理《${escape(plan.title)}》</h2><p style="margin:8px 0 0;color:var(--color-ink-soft);font-size:13px;line-height:1.75;">${escape(plan.reason)}</p></div><span style="flex:none;padding:6px 10px;border-radius:999px;background:var(--color-accent-soft);color:var(--color-accent);font-size:11px;font-weight:800;">約 10 分鐘</span></div><div data-quick-study-steps style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;">${plan.steps.map((step, index) => `<a data-quick-study-step="${index + 1}" data-minutes="${step.minutes}" href="#${step.path}" style="display:block;min-width:0;padding:14px 15px;border:1px solid rgba(23,73,64,.10);border-radius:14px;background:rgba(255,255,255,.72);"><span style="display:block;margin-bottom:6px;color:var(--color-reader-orange);font-size:9px;font-weight:850;letter-spacing:.08em;">${String(index + 1).padStart(2, "0")} · ${step.minutes} 分鐘</span><strong style="display:block;color:var(--color-ink);font-size:14px;line-height:1.35;">${step.label}</strong><small style="display:block;margin-top:5px;color:var(--color-ink-soft);font-size:11px;line-height:1.55;">${step.detail}</small></a>`).join("")}</div><p style="margin:12px 0 0;color:var(--color-ink-faint);font-size:10px;line-height:1.6;">時間只是節奏建議，不會自動倒數；如果今天只夠完成第一步，也算一次有方向的溫習。</p>`;
+      panel.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;margin-bottom:15px;">
+          <div style="min-width:0;flex:1 1 420px;">
+            <p class="section-kicker" style="margin:0 0 5px;">10 分鐘快速溫習</p>
+            <h2 style="margin:0;font-family:var(--font-display);font-size:25px;font-weight:650;line-height:1.25;">約 10 分鐘，先處理《${plan.title.replace(/[&<>"']/g, (char) => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[char]))}》</h2>
+            <p style="margin:8px 0 0;color:var(--color-ink-soft);font-size:13px;line-height:1.75;">${plan.reason.replace(/[&<>"']/g, (char) => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[char]))}</p>
+          </div>
+          <span style="flex:none;padding:6px 10px;border-radius:999px;background:var(--color-accent-soft);color:var(--color-accent);font-size:11px;font-weight:800;">約 10 分鐘</span>
+        </div>
+        <div data-quick-study-steps style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;">
+          ${plan.steps.map((step, index) => `
+            <a data-quick-study-step="${index + 1}" data-minutes="${step.minutes}" href="#${step.path}" style="display:block;min-width:0;padding:14px 15px;border:1px solid rgba(23,73,64,.10);border-radius:14px;background:rgba(255,255,255,.72);">
+              <span style="display:block;margin-bottom:6px;color:var(--color-reader-orange);font-size:9px;font-weight:850;letter-spacing:.08em;">${String(index + 1).padStart(2, "0")} · ${step.minutes} 分鐘</span>
+              <strong style="display:block;color:var(--color-ink);font-size:14px;line-height:1.35;">${step.label}</strong>
+              <small style="display:block;margin-top:5px;color:var(--color-ink-soft);font-size:11px;line-height:1.55;">${step.detail}</small>
+            </a>`).join("")}
+        </div>
+        <p style="margin:12px 0 0;color:var(--color-ink-faint);font-size:10px;line-height:1.6;">時間只是節奏建議，不會自動倒數；如果今天只夠完成第一步，也算一次有方向的溫習。</p>`;
     }
 
     function loadReaderPreferences() {
       const defaults = { font: "normal", line: "standard", focus: false };
       try {
         const saved = JSON.parse(localStorage.getItem(readerPreferencesKey) || "{}");
-        return { font: ["small", "normal", "large"].includes(saved.font) ? saved.font : defaults.font, line: ["compact", "standard", "relaxed"].includes(saved.line) ? saved.line : defaults.line, focus: saved.focus === true };
-      } catch { return defaults; }
+        return {
+          font: ["small", "normal", "large"].includes(saved.font) ? saved.font : defaults.font,
+          line: ["compact", "standard", "relaxed"].includes(saved.line) ? saved.line : defaults.line,
+          focus: saved.focus === true
+        };
+      } catch {
+        return defaults;
+      }
     }
 
     function saveReaderPreferences(prefs) {
-      try { localStorage.setItem(readerPreferencesKey, JSON.stringify(prefs)); } catch {}
+      try {
+        localStorage.setItem(readerPreferencesKey, JSON.stringify(prefs));
+      } catch {
+        /* Display preferences are optional; reading remains usable without storage. */
+      }
     }
 
     function readerControlButton(label, group, value) {
@@ -441,15 +598,28 @@
     function enhanceReaderComfort() {
       const shell = document.querySelector(".reader-shell");
       if (!shell) return;
-      const sidebar = shell.querySelector(".reader-sidebar"), sticky = shell.querySelector(".reader-sidebar-sticky"), paper = shell.querySelector(".reader-paper"), layout = shell.querySelector(".reader-layout"), hero = shell.querySelector(".reader-hero"), note = shell.querySelector(".reader-study-note");
+      const sidebar = shell.querySelector(".reader-sidebar");
+      const sticky = shell.querySelector(".reader-sidebar-sticky");
+      const paper = shell.querySelector(".reader-paper");
+      const layout = shell.querySelector(".reader-layout");
+      const hero = shell.querySelector(".reader-hero");
+      const note = shell.querySelector(".reader-study-note");
       if (!sidebar || !sticky || !paper || !layout) return;
+
       let panel = shell.querySelector(".reader-comfort-panel");
       if (!panel) {
         panel = document.createElement("section");
         panel.className = "reader-comfort-panel";
         panel.setAttribute("aria-label", "閱讀顯示設定");
         panel.style.cssText = "margin:0 0 14px;padding:12px;border:1px solid rgba(23,73,64,.10);border-radius:14px;background:rgba(252,252,250,.72);box-shadow:inset 0 1px 0 rgba(255,255,255,.72);";
-        panel.innerHTML = `<p style="margin:0 0 9px;color:var(--color-ink);font-size:11px;font-weight:800;">閱讀顯示</p><div data-reader-row="font" role="group" aria-label="原文字體大小" style="display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-bottom:8px;"><span style="width:31px;color:var(--color-ink-faint);font-size:9px;font-weight:800;">字體</span></div><div data-reader-row="line" role="group" aria-label="原文行距" style="display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-bottom:9px;"><span style="width:31px;color:var(--color-ink-faint);font-size:9px;font-weight:800;">行距</span></div>`;
+        panel.innerHTML = `
+          <p style="margin:0 0 9px;color:var(--color-ink);font-size:11px;font-weight:800;">閱讀顯示</p>
+          <div data-reader-row="font" role="group" aria-label="原文字體大小" style="display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-bottom:8px;">
+            <span style="width:31px;color:var(--color-ink-faint);font-size:9px;font-weight:800;">字體</span>
+          </div>
+          <div data-reader-row="line" role="group" aria-label="原文行距" style="display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-bottom:9px;">
+            <span style="width:31px;color:var(--color-ink-faint);font-size:9px;font-weight:800;">行距</span>
+          </div>`;
         const fontRow = panel.querySelector('[data-reader-row="font"]');
         [["小", "small"], ["標準", "normal"], ["大", "large"]].forEach(([label, value]) => fontRow.appendChild(readerControlButton(label, "font", value)));
         const lineRow = panel.querySelector('[data-reader-row="line"]');
@@ -459,17 +629,21 @@
         focusButton.style.width = "100%";
         panel.appendChild(focusButton);
         const heading = sticky.querySelector(".reader-sidebar-heading");
-        if (heading?.nextSibling) sticky.insertBefore(panel, heading.nextSibling); else sticky.insertBefore(panel, sticky.firstChild);
+        if (heading?.nextSibling) sticky.insertBefore(panel, heading.nextSibling);
+        else sticky.insertBefore(panel, sticky.firstChild);
+
         panel.addEventListener("click", (event) => {
           const button = event.target.closest("[data-reader-preference]");
           if (!button) return;
           const prefs = loadReaderPreferences();
           const group = button.dataset.readerPreference;
-          if (group === "focus") prefs.focus = !prefs.focus; else prefs[group] = button.dataset.readerValue;
+          if (group === "focus") prefs.focus = !prefs.focus;
+          else prefs[group] = button.dataset.readerValue;
           saveReaderPreferences(prefs);
           enhanceReaderComfort();
         });
       }
+
       let exitRow = shell.querySelector(".reader-focus-exit-row");
       if (!exitRow) {
         exitRow = document.createElement("div");
@@ -479,17 +653,39 @@
         exitButton.id = "reader-focus-exit";
         exitRow.appendChild(exitButton);
         paper.insertBefore(exitRow, paper.firstChild);
-        exitButton.addEventListener("click", () => { const prefs = loadReaderPreferences(); prefs.focus = false; saveReaderPreferences(prefs); enhanceReaderComfort(); document.getElementById("reader-focus-toggle")?.focus({ preventScroll: true }); });
+        exitButton.addEventListener("click", () => {
+          const prefs = loadReaderPreferences();
+          prefs.focus = false;
+          saveReaderPreferences(prefs);
+          enhanceReaderComfort();
+          document.getElementById("reader-focus-toggle")?.focus({ preventScroll: true });
+        });
       }
+
       const prefs = loadReaderPreferences();
       const mobile = window.matchMedia("(max-width: 560px)").matches;
       const fontSize = prefs.font === "small" ? (mobile ? "19px" : "22px") : prefs.font === "large" ? (mobile ? "25px" : "32px") : "";
       const lineHeight = prefs.line === "compact" ? "1.85" : prefs.line === "relaxed" ? "2.55" : "";
-      shell.querySelectorAll(".reader-paper .text-passage").forEach((passage) => { passage.style.fontSize = fontSize; passage.style.lineHeight = lineHeight; });
-      panel.querySelectorAll("[data-reader-preference]").forEach((button) => { const group = button.dataset.readerPreference; const selected = group === "focus" ? prefs.focus : prefs[group] === button.dataset.readerValue; button.setAttribute("aria-pressed", selected ? "true" : "false"); button.style.borderColor = selected ? "var(--color-accent)" : ""; button.style.background = selected ? "var(--color-accent-soft)" : ""; });
+      shell.querySelectorAll(".reader-paper .text-passage").forEach((passage) => {
+        passage.style.fontSize = fontSize;
+        passage.style.lineHeight = lineHeight;
+      });
+
+      panel.querySelectorAll("[data-reader-preference]").forEach((button) => {
+        const group = button.dataset.readerPreference;
+        const selected = group === "focus" ? prefs.focus : prefs[group] === button.dataset.readerValue;
+        button.setAttribute("aria-pressed", selected ? "true" : "false");
+        button.style.borderColor = selected ? "var(--color-accent)" : "";
+        button.style.background = selected ? "var(--color-accent-soft)" : "";
+      });
       const focusToggle = panel.querySelector("#reader-focus-toggle");
       if (focusToggle) focusToggle.textContent = prefs.focus ? "專注閱讀中" : "專注閱讀";
-      [hero, sidebar, note].forEach((node) => { if (!node) return; node.hidden = prefs.focus; node.style.display = prefs.focus ? "none" : ""; });
+
+      [hero, sidebar, note].forEach((node) => {
+        if (!node) return;
+        node.hidden = prefs.focus;
+        node.style.display = prefs.focus ? "none" : "";
+      });
       layout.style.gridTemplateColumns = prefs.focus ? "minmax(0, 1fr)" : "";
       paper.style.maxWidth = prefs.focus ? "820px" : "";
       paper.style.margin = prefs.focus ? "0 auto" : "";
@@ -502,9 +698,23 @@
 
     const main = document.getElementById("app-main");
     if (!main) return;
+
     let scheduled = false;
-    const enhance = () => { scheduled = false; enhanceQuiz(); enhanceReorder(); enhanceOpenSelfReview(); enhanceHomeLearningStatus(); enhanceQuickStudy(); enhanceReaderComfort(); };
-    const scheduleEnhance = () => { if (scheduled) return; scheduled = true; requestAnimationFrame(enhance); };
+    const enhance = () => {
+      scheduled = false;
+      enhanceQuiz();
+      enhanceReorder();
+      enhanceOpenSelfReview();
+      enhanceHomeLearningStatus();
+      enhanceQuickStudy();
+      enhanceReaderComfort();
+    };
+    const scheduleEnhance = () => {
+      if (scheduled) return;
+      scheduled = true;
+      requestAnimationFrame(enhance);
+    };
+
     new MutationObserver(scheduleEnhance).observe(main, { childList: true, subtree: true });
     window.addEventListener("resize", scheduleEnhance, { passive: true });
     scheduleEnhance();
@@ -535,7 +745,11 @@
       if (!status) return;
       status.textContent = text;
       status.hidden = !text;
-      status.style.color = tone === "error" ? "var(--color-error)" : tone === "success" ? "var(--color-success)" : "var(--color-ink-soft)";
+      status.style.color = tone === "error"
+        ? "var(--color-error)"
+        : tone === "success"
+          ? "var(--color-success)"
+          : "var(--color-ink-soft)";
     }
 
     function validateBackup(data) {
@@ -556,8 +770,15 @@
         setStatus(panel, "這部裝置目前沒有可匯出的學習紀錄。", "info");
         return;
       }
-      const payload = { format: backupFormat, version: backupVersion, exportedAt: new Date().toISOString(), progress };
-      const blob = new Blob([`${JSON.stringify(payload, null, 2)}\n`], { type: "application/json;charset=utf-8" });
+      const payload = {
+        format: backupFormat,
+        version: backupVersion,
+        exportedAt: new Date().toISOString(),
+        progress
+      };
+      const blob = new Blob([`${JSON.stringify(payload, null, 2)}\n`], {
+        type: "application/json;charset=utf-8"
+      });
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
@@ -577,14 +798,22 @@
         setStatus(panel, "備份檔過大；文脈只接受 2 MB 以下的學習紀錄 JSON。", "error");
         return;
       }
+
       let progress;
       try {
         const data = JSON.parse(await file.text());
         progress = validateBackup(data);
       } catch (error) {
-        setStatus(panel, error?.message?.startsWith("這不是有效的文脈") ? error.message : "這不是有效的文脈學習紀錄備份（JSON 無法讀取）。", "error");
+        setStatus(
+          panel,
+          error?.message?.startsWith("這不是有效的文脈")
+            ? error.message
+            : "這不是有效的文脈學習紀錄備份（JSON 無法讀取）。",
+          "error"
+        );
         return;
       }
+
       const current = snapshot();
       if (Object.keys(current).length) {
         const confirmed = window.confirm("匯入將取代這部裝置現有的學習紀錄。建議先匯出目前紀錄作備份。確定繼續嗎？");
@@ -593,6 +822,7 @@
           return;
         }
       }
+
       try {
         localStorage.setItem(storageKey, JSON.stringify(progress));
         sessionStorage.setItem(noticeKey, "imported");
@@ -606,17 +836,37 @@
       if (!window.location.hash.startsWith("#/overview")) return;
       const hero = document.querySelector(".progress-hero.overview-hero");
       if (!hero || document.querySelector("[data-progress-transfer-panel]")) return;
+
       const panel = document.createElement("section");
       panel.className = "card";
       panel.dataset.progressTransferPanel = "true";
       panel.style.cssText = "margin:18px 0 34px;padding:20px 22px;border-color:rgba(23,73,64,.12);background:rgba(255,255,255,.88);";
-      panel.innerHTML = `<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;"><div style="min-width:0;flex:1 1 420px;"><p class="section-kicker" style="margin:0 0 5px;">學習紀錄</p><h2 style="margin:0;font-family:var(--font-display);font-size:22px;line-height:1.3;">備份與轉移學習紀錄</h2><p style="margin:8px 0 0;color:var(--color-ink-soft);font-size:13px;line-height:1.75;">匯出這部裝置的作答、錯題、背誦、自評與反思紀錄，再到另一部裝置匯入。閱讀字體、行距等顯示偏好不會包含在備份內。</p><p style="margin:6px 0 0;color:var(--color-ink-faint);font-size:11px;line-height:1.65;">匯入有效備份後將取代這部裝置現有學習紀錄；如有需要，請先匯出目前紀錄。</p></div><div style="display:flex;gap:9px;flex-wrap:wrap;align-items:center;"><button type="button" class="btn btn-secondary" id="progress-export-btn">匯出學習紀錄</button><label class="btn btn-primary" for="progress-import-input" style="cursor:pointer;">匯入備份</label><input id="progress-import-input" type="file" accept=".json,application/json" hidden /></div></div><p data-progress-transfer-status role="status" aria-live="polite" hidden style="margin:12px 0 0;font-size:12px;line-height:1.6;"></p>`;
+      panel.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;">
+          <div style="min-width:0;flex:1 1 420px;">
+            <p class="section-kicker" style="margin:0 0 5px;">學習紀錄</p>
+            <h2 style="margin:0;font-family:var(--font-display);font-size:22px;line-height:1.3;">備份與轉移學習紀錄</h2>
+            <p style="margin:8px 0 0;color:var(--color-ink-soft);font-size:13px;line-height:1.75;">匯出這部裝置的作答、錯題、背誦、自評與反思紀錄，再到另一部裝置匯入。閱讀字體、行距等顯示偏好不會包含在備份內。</p>
+            <p style="margin:6px 0 0;color:var(--color-ink-faint);font-size:11px;line-height:1.65;">匯入有效備份後將取代這部裝置現有學習紀錄；如有需要，請先匯出目前紀錄。</p>
+          </div>
+          <div style="display:flex;gap:9px;flex-wrap:wrap;align-items:center;">
+            <button type="button" class="btn btn-secondary" id="progress-export-btn">匯出學習紀錄</button>
+            <label class="btn btn-primary" for="progress-import-input" style="cursor:pointer;">匯入備份</label>
+            <input id="progress-import-input" type="file" accept=".json,application/json" hidden />
+          </div>
+        </div>
+        <p data-progress-transfer-status role="status" aria-live="polite" hidden style="margin:12px 0 0;font-size:12px;line-height:1.6;"></p>`;
+
       const anchor = document.querySelector(".evidence-footnote") || hero;
       anchor.insertAdjacentElement("afterend", panel);
+
       const exportButton = panel.querySelector("#progress-export-btn");
       exportButton.disabled = !Object.keys(snapshot()).length;
       exportButton.addEventListener("click", () => exportRecords(panel));
-      panel.querySelector("#progress-import-input").addEventListener("change", (event) => importRecords(panel, event.currentTarget));
+      panel.querySelector("#progress-import-input").addEventListener("change", (event) => {
+        importRecords(panel, event.currentTarget);
+      });
+
       if (sessionStorage.getItem(noticeKey) === "imported") {
         sessionStorage.removeItem(noticeKey);
         setStatus(panel, "匯入完成。這個總覽現在使用剛匯入的學習紀錄。", "success");
@@ -625,12 +875,17 @@
 
     const main = document.getElementById("app-main");
     if (!main) return;
+
     let queued = false;
     const schedule = () => {
       if (queued) return;
       queued = true;
-      requestAnimationFrame(() => { queued = false; enhanceProgressTransfer(); });
+      requestAnimationFrame(() => {
+        queued = false;
+        enhanceProgressTransfer();
+      });
     };
+
     new MutationObserver(schedule).observe(main, { childList: true, subtree: true });
     window.addEventListener("hashchange", schedule);
     schedule();
