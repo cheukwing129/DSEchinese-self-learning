@@ -101,6 +101,9 @@ jobs:
       - name: Run quick-study regression
         run: node scripts/quick-study-smoke.mjs
 
+      - name: Run today-review regression
+        run: node scripts/today-review-smoke.mjs
+
       - name: Run learning record transfer regression
         run: node scripts/progress-transfer-smoke.mjs
 
