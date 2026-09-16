@@ -171,6 +171,18 @@ if (/\{\{[A-Z0-9_]+\}\}/.test(index)) {
   throw new Error("index.template.html contains an unresolved asset placeholder");
 }
 
+const todayReviewSource = read("js/today-review.js");
+if (/<\/script/i.test(todayReviewSource)) {
+  throw new Error("js/today-review.js must not contain a closing script tag when inlined");
+}
+const inlineMarker = "  <!-- ContentRenderer / QuestionEngine / MemorisationEngine 會按目前路由需要才載入。 -->";
+index = replaceOnce(
+  index,
+  inlineMarker,
+  `  <script>\n${todayReviewSource}\n  </script>\n\n${inlineMarker}`,
+  "today-review inline injection"
+);
+
 const preload = [
   `<${style.path}>; rel=preload; as=style`,
   `<${progress.path}>; rel=preload; as=script`,
