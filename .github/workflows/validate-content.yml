@@ -95,6 +95,9 @@ jobs:
       - name: Run home learning status regression
         run: node scripts/home-learning-status-smoke.mjs
 
+      - name: Run reader comfort regression
+        run: node scripts/reader-comfort-smoke.mjs
+
       - name: Run keyboard and focus accessibility contract
         run: node scripts/browser-accessibility.mjs
 
