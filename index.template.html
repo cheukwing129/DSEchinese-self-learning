@@ -58,7 +58,7 @@
   </main>
   <noscript><div class="noscript-state">文脈需要 JavaScript 才能載入篇章、練習與本機學習紀錄。</div></noscript>
 
-  <!-- RC UX safeguards: keep forward actions unambiguous, make reorder reversible, turn open-answer rubrics into self review, and surface honest home-card learning states. -->
+  <!-- RC UX safeguards: keep forward actions unambiguous, make reorder reversible, turn open-answer rubrics into self review, surface honest home-card learning states, and improve reader comfort. -->
   <script>
   (() => {
     const generalQuizTitles = new Set([
@@ -69,6 +69,7 @@
       "跨篇比較與進階題"
     ]);
     const progressStorageKey = "ccsl_progress_v1";
+    const readerPreferencesKey = "wenmai_reader_preferences_v1";
 
     function finalQuizState(title) {
       if (generalQuizTitles.has(title)) {
@@ -433,6 +434,140 @@
       });
     }
 
+    function loadReaderPreferences() {
+      const defaults = { font: "normal", line: "standard", focus: false };
+      try {
+        const saved = JSON.parse(localStorage.getItem(readerPreferencesKey) || "{}");
+        return {
+          font: ["small", "normal", "large"].includes(saved.font) ? saved.font : defaults.font,
+          line: ["compact", "standard", "relaxed"].includes(saved.line) ? saved.line : defaults.line,
+          focus: saved.focus === true
+        };
+      } catch {
+        return defaults;
+      }
+    }
+
+    function saveReaderPreferences(prefs) {
+      try {
+        localStorage.setItem(readerPreferencesKey, JSON.stringify(prefs));
+      } catch {
+        /* Display preferences are optional; reading remains usable without storage. */
+      }
+    }
+
+    function readerControlButton(label, group, value) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "btn btn-secondary";
+      button.dataset.readerPreference = group;
+      button.dataset.readerValue = value;
+      button.textContent = label;
+      button.style.cssText = "min-height:34px;padding:5px 8px;border-radius:9px;font-size:10px;line-height:1.2;";
+      return button;
+    }
+
+    function enhanceReaderComfort() {
+      const shell = document.querySelector(".reader-shell");
+      if (!shell) return;
+      const sidebar = shell.querySelector(".reader-sidebar");
+      const sticky = shell.querySelector(".reader-sidebar-sticky");
+      const paper = shell.querySelector(".reader-paper");
+      const layout = shell.querySelector(".reader-layout");
+      const hero = shell.querySelector(".reader-hero");
+      const note = shell.querySelector(".reader-study-note");
+      if (!sidebar || !sticky || !paper || !layout) return;
+
+      let panel = shell.querySelector(".reader-comfort-panel");
+      if (!panel) {
+        panel = document.createElement("section");
+        panel.className = "reader-comfort-panel";
+        panel.setAttribute("aria-label", "閱讀顯示設定");
+        panel.style.cssText = "margin:0 0 14px;padding:12px;border:1px solid rgba(23,73,64,.10);border-radius:14px;background:rgba(252,252,250,.72);box-shadow:inset 0 1px 0 rgba(255,255,255,.72);";
+        panel.innerHTML = `
+          <p style="margin:0 0 9px;color:var(--color-ink);font-size:11px;font-weight:800;">閱讀顯示</p>
+          <div data-reader-row="font" role="group" aria-label="原文字體大小" style="display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-bottom:8px;">
+            <span style="width:31px;color:var(--color-ink-faint);font-size:9px;font-weight:800;">字體</span>
+          </div>
+          <div data-reader-row="line" role="group" aria-label="原文行距" style="display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-bottom:9px;">
+            <span style="width:31px;color:var(--color-ink-faint);font-size:9px;font-weight:800;">行距</span>
+          </div>`;
+        const fontRow = panel.querySelector('[data-reader-row="font"]');
+        [["小", "small"], ["標準", "normal"], ["大", "large"]].forEach(([label, value]) => fontRow.appendChild(readerControlButton(label, "font", value)));
+        const lineRow = panel.querySelector('[data-reader-row="line"]');
+        [["緊密", "compact"], ["標準", "standard"], ["寬鬆", "relaxed"]].forEach(([label, value]) => lineRow.appendChild(readerControlButton(label, "line", value)));
+        const focusButton = readerControlButton("專注閱讀", "focus", "toggle");
+        focusButton.id = "reader-focus-toggle";
+        focusButton.style.width = "100%";
+        panel.appendChild(focusButton);
+        const heading = sticky.querySelector(".reader-sidebar-heading");
+        if (heading?.nextSibling) sticky.insertBefore(panel, heading.nextSibling);
+        else sticky.insertBefore(panel, sticky.firstChild);
+
+        panel.addEventListener("click", (event) => {
+          const button = event.target.closest("[data-reader-preference]");
+          if (!button) return;
+          const prefs = loadReaderPreferences();
+          const group = button.dataset.readerPreference;
+          if (group === "focus") prefs.focus = !prefs.focus;
+          else prefs[group] = button.dataset.readerValue;
+          saveReaderPreferences(prefs);
+          enhanceReaderComfort();
+        });
+      }
+
+      let exitRow = shell.querySelector(".reader-focus-exit-row");
+      if (!exitRow) {
+        exitRow = document.createElement("div");
+        exitRow.className = "reader-focus-exit-row";
+        exitRow.style.cssText = "display:none;justify-content:flex-end;margin:0 0 10px;";
+        const exitButton = readerControlButton("退出專注", "focus-exit", "off");
+        exitButton.id = "reader-focus-exit";
+        exitRow.appendChild(exitButton);
+        paper.insertBefore(exitRow, paper.firstChild);
+        exitButton.addEventListener("click", () => {
+          const prefs = loadReaderPreferences();
+          prefs.focus = false;
+          saveReaderPreferences(prefs);
+          enhanceReaderComfort();
+          document.getElementById("reader-focus-toggle")?.focus({ preventScroll: true });
+        });
+      }
+
+      const prefs = loadReaderPreferences();
+      const mobile = window.matchMedia("(max-width: 560px)").matches;
+      const fontSize = prefs.font === "small" ? (mobile ? "19px" : "22px") : prefs.font === "large" ? (mobile ? "25px" : "32px") : "";
+      const lineHeight = prefs.line === "compact" ? "1.85" : prefs.line === "relaxed" ? "2.55" : "";
+      shell.querySelectorAll(".reader-paper .text-passage").forEach((passage) => {
+        passage.style.fontSize = fontSize;
+        passage.style.lineHeight = lineHeight;
+      });
+
+      panel.querySelectorAll("[data-reader-preference]").forEach((button) => {
+        const group = button.dataset.readerPreference;
+        const selected = group === "focus" ? prefs.focus : prefs[group] === button.dataset.readerValue;
+        button.setAttribute("aria-pressed", selected ? "true" : "false");
+        button.style.borderColor = selected ? "var(--color-accent)" : "";
+        button.style.background = selected ? "var(--color-accent-soft)" : "";
+      });
+      const focusToggle = panel.querySelector("#reader-focus-toggle");
+      if (focusToggle) focusToggle.textContent = prefs.focus ? "專注閱讀中" : "專注閱讀";
+
+      [hero, sidebar, note].forEach((node) => {
+        if (!node) return;
+        node.hidden = prefs.focus;
+        node.style.display = prefs.focus ? "none" : "";
+      });
+      layout.style.gridTemplateColumns = prefs.focus ? "minmax(0, 1fr)" : "";
+      paper.style.maxWidth = prefs.focus ? "820px" : "";
+      paper.style.margin = prefs.focus ? "0 auto" : "";
+      exitRow.hidden = !prefs.focus;
+      exitRow.style.display = prefs.focus ? "flex" : "none";
+      shell.dataset.readerFocus = prefs.focus ? "true" : "false";
+      shell.dataset.readerFont = prefs.font;
+      shell.dataset.readerLine = prefs.line;
+    }
+
     const main = document.getElementById("app-main");
     if (!main) return;
 
@@ -443,6 +578,7 @@
       enhanceReorder();
       enhanceOpenSelfReview();
       enhanceHomeLearningStatus();
+      enhanceReaderComfort();
     };
     const scheduleEnhance = () => {
       if (scheduled) return;
@@ -451,6 +587,7 @@
     };
 
     new MutationObserver(scheduleEnhance).observe(main, { childList: true, subtree: true });
+    window.addEventListener("resize", scheduleEnhance, { passive: true });
     scheduleEnhance();
   })();
   </script>
