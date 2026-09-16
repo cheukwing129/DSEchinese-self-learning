@@ -721,6 +721,177 @@
   })();
   </script>
 
+  <script>
+  (() => {
+    const storageKey = "ccsl_progress_v1";
+    const backupFormat = "wenmai-learning-records";
+    const backupVersion = 1;
+    const noticeKey = "wenmai_progress_transfer_notice";
+    const maxBytes = 2 * 1024 * 1024;
+    const reservedKeys = new Set(["__proto__", "prototype", "constructor"]);
+    const plainObject = (value) => !!value && typeof value === "object" && !Array.isArray(value);
+
+    function snapshot() {
+      try {
+        const parsed = JSON.parse(localStorage.getItem(storageKey) || "{}");
+        return plainObject(parsed) ? parsed : {};
+      } catch {
+        return {};
+      }
+    }
+
+    function setStatus(panel, text, tone = "info") {
+      const status = panel?.querySelector("[data-progress-transfer-status]");
+      if (!status) return;
+      status.textContent = text;
+      status.hidden = !text;
+      status.style.color = tone === "error"
+        ? "var(--color-error)"
+        : tone === "success"
+          ? "var(--color-success)"
+          : "var(--color-ink-soft)";
+    }
+
+    function validateBackup(data) {
+      if (!plainObject(data) || data.format !== backupFormat || data.version !== backupVersion || !plainObject(data.progress)) {
+        throw new Error("這不是有效的文脈學習紀錄備份（只支援目前的 v1 格式）。");
+      }
+      for (const [unitId, unit] of Object.entries(data.progress)) {
+        if (!/^[a-z0-9-]{1,80}$/.test(unitId) || reservedKeys.has(unitId) || !plainObject(unit)) {
+          throw new Error("這不是有效的文脈學習紀錄備份（篇章資料格式不正確）。");
+        }
+      }
+      return data.progress;
+    }
+
+    function exportRecords(panel) {
+      const progress = snapshot();
+      if (!Object.keys(progress).length) {
+        setStatus(panel, "這部裝置目前沒有可匯出的學習紀錄。", "info");
+        return;
+      }
+      const payload = {
+        format: backupFormat,
+        version: backupVersion,
+        exportedAt: new Date().toISOString(),
+        progress
+      };
+      const blob = new Blob([`${JSON.stringify(payload, null, 2)}\n`], {
+        type: "application/json;charset=utf-8"
+      });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `wenmai-learning-records-${new Date().toISOString().slice(0, 10)}.json`;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      window.setTimeout(() => URL.revokeObjectURL(url), 0);
+      setStatus(panel, "已匯出學習紀錄。請妥善保存這個 JSON 備份檔。", "success");
+    }
+
+    async function importRecords(panel, input) {
+      const file = input.files?.[0];
+      input.value = "";
+      if (!file) return;
+      if (file.size > maxBytes) {
+        setStatus(panel, "備份檔過大；文脈只接受 2 MB 以下的學習紀錄 JSON。", "error");
+        return;
+      }
+
+      let progress;
+      try {
+        const data = JSON.parse(await file.text());
+        progress = validateBackup(data);
+      } catch (error) {
+        setStatus(
+          panel,
+          error?.message?.startsWith("這不是有效的文脈")
+            ? error.message
+            : "這不是有效的文脈學習紀錄備份（JSON 無法讀取）。",
+          "error"
+        );
+        return;
+      }
+
+      const current = snapshot();
+      if (Object.keys(current).length) {
+        const confirmed = window.confirm("匯入將取代這部裝置現有的學習紀錄。建議先匯出目前紀錄作備份。確定繼續嗎？");
+        if (!confirmed) {
+          setStatus(panel, "已取消匯入；這部裝置原有的學習紀錄沒有改動。", "info");
+          return;
+        }
+      }
+
+      try {
+        localStorage.setItem(storageKey, JSON.stringify(progress));
+        sessionStorage.setItem(noticeKey, "imported");
+        window.location.reload();
+      } catch {
+        setStatus(panel, "未能寫入這部裝置的儲存空間；原有頁面仍可繼續使用。", "error");
+      }
+    }
+
+    function enhanceProgressTransfer() {
+      if (!window.location.hash.startsWith("#/overview")) return;
+      const hero = document.querySelector(".progress-hero.overview-hero");
+      if (!hero || document.querySelector("[data-progress-transfer-panel]")) return;
+
+      const panel = document.createElement("section");
+      panel.className = "card";
+      panel.dataset.progressTransferPanel = "true";
+      panel.style.cssText = "margin:18px 0 34px;padding:20px 22px;border-color:rgba(23,73,64,.12);background:rgba(255,255,255,.88);";
+      panel.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;">
+          <div style="min-width:0;flex:1 1 420px;">
+            <p class="section-kicker" style="margin:0 0 5px;">學習紀錄</p>
+            <h2 style="margin:0;font-family:var(--font-display);font-size:22px;line-height:1.3;">備份與轉移學習紀錄</h2>
+            <p style="margin:8px 0 0;color:var(--color-ink-soft);font-size:13px;line-height:1.75;">匯出這部裝置的作答、錯題、背誦、自評與反思紀錄，再到另一部裝置匯入。閱讀字體、行距等顯示偏好不會包含在備份內。</p>
+            <p style="margin:6px 0 0;color:var(--color-ink-faint);font-size:11px;line-height:1.65;">匯入有效備份後將取代這部裝置現有學習紀錄；如有需要，請先匯出目前紀錄。</p>
+          </div>
+          <div style="display:flex;gap:9px;flex-wrap:wrap;align-items:center;">
+            <button type="button" class="btn btn-secondary" id="progress-export-btn">匯出學習紀錄</button>
+            <label class="btn btn-primary" for="progress-import-input" style="cursor:pointer;">匯入備份</label>
+            <input id="progress-import-input" type="file" accept=".json,application/json" hidden />
+          </div>
+        </div>
+        <p data-progress-transfer-status role="status" aria-live="polite" hidden style="margin:12px 0 0;font-size:12px;line-height:1.6;"></p>`;
+
+      const anchor = document.querySelector(".evidence-footnote") || hero;
+      anchor.insertAdjacentElement("afterend", panel);
+
+      const exportButton = panel.querySelector("#progress-export-btn");
+      exportButton.disabled = !Object.keys(snapshot()).length;
+      exportButton.addEventListener("click", () => exportRecords(panel));
+      panel.querySelector("#progress-import-input").addEventListener("change", (event) => {
+        importRecords(panel, event.currentTarget);
+      });
+
+      if (sessionStorage.getItem(noticeKey) === "imported") {
+        sessionStorage.removeItem(noticeKey);
+        setStatus(panel, "匯入完成。這個總覽現在使用剛匯入的學習紀錄。", "success");
+      }
+    }
+
+    const main = document.getElementById("app-main");
+    if (!main) return;
+
+    let queued = false;
+    const schedule = () => {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(() => {
+        queued = false;
+        enhanceProgressTransfer();
+      });
+    };
+
+    new MutationObserver(schedule).observe(main, { childList: true, subtree: true });
+    window.addEventListener("hashchange", schedule);
+    schedule();
+  })();
+  </script>
+
   <!-- ContentRenderer / QuestionEngine / MemorisationEngine 會按目前路由需要才載入。 -->
 </body>
 </html>
