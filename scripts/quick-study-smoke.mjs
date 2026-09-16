@@ -110,72 +110,40 @@ try {
   check(await totalMinutes(page) === 10, "fresh quick-study plan should total 10 suggested minutes");
   const freshMinutes = await page.locator("[data-quick-study-step]").evaluateAll((nodes) => nodes.map((node) => Number(node.dataset.minutes)));
   check(JSON.stringify(freshMinutes) === JSON.stringify([4, 4, 2]), "fresh learner plan should use a 4+4+2 read/practise/memorise rhythm");
+  check(await page.locator("[data-today-review-panel]").count() === 0, "fresh learners should not receive review tasks without review evidence");
 
-  await page.evaluate(() => {
+  const returningUnit = await page.locator('a.map-card[href^="#/unit/"]').nth(1).evaluate((card) => {
+    const match = (card.getAttribute("href") || "").match(/^#\/unit\/([^/?]+)/);
+    return match ? decodeURIComponent(match[1]) : "";
+  });
+  check(!!returningUnit, "quick-study regression needs a second available curriculum unit");
+
+  const now = Date.now();
+  await page.evaluate(({ returningUnit, now }) => {
     localStorage.setItem("ccsl_progress_v1", JSON.stringify({
-      yueyanglouji: {
+      [returningUnit]: {
         answers: {
-          q1: { answered: true, isCorrect: false, timestamp: 100 },
-          q2: { answered: true, isCorrect: false, timestamp: 110 }
+          q1: {
+            answered: true,
+            isCorrect: true,
+            timestamp: now,
+            lastCorrectAt: now,
+            attemptCount: 1,
+            correctAttempts: 1
+          }
         },
-        navigation: { lastPath: "/unit/yueyanglouji/words/quiz?qi=1", lastAt: 110 },
-        lastActivityAt: 110
-      },
-      denglou: {
-        openQuestionReviews: {
-          review1: { decision: "retry", updatedAt: 500 },
-          review2: { decision: "retry", updatedAt: 510 },
-          review3: { decision: "retry", updatedAt: 520 }
+        navigation: {
+          lastPath: `/unit/${returningUnit}/comprehension`,
+          lastAt: now
         },
-        navigation: { lastPath: "/unit/denglou/theme/quiz?qi=0", lastAt: 520 },
-        lastActivityAt: 520
-      },
-      chushibiao: {
-        answers: { q1: { answered: true, isCorrect: true, timestamp: 900 } },
-        navigation: { lastPath: "/unit/chushibiao/comprehension", lastAt: 900 },
-        lastActivityAt: 900
+        lastActivityAt: now
       }
     }));
-  });
-  await page.reload({ waitUntil: "domcontentloaded", timeout: 10000 });
-  await waitForPlan(page, "objective-wrong", "yueyanglouji");
-  check(await totalMinutes(page) === 10, "objective-remediation plan should still total 10 suggested minutes");
-  check((await page.locator('[data-quick-study-step="1"]').getAttribute("href")) === "#/unit/yueyanglouji/progress/retry-wrong", "objective wrong answers must be the first quick-study action even when another unit is more recent");
-  check((await page.locator('[data-quick-study-step="1"] strong').textContent())?.includes("重練待修正錯題"), "objective-remediation plan should name the correction task clearly");
+  }, { returningUnit, now });
 
-  await page.evaluate(() => {
-    localStorage.setItem("ccsl_progress_v1", JSON.stringify({
-      denglou: {
-        openQuestionReviews: {
-          review1: { decision: "retry", updatedAt: 500 },
-          review2: { decision: "retry", updatedAt: 510 }
-        },
-        navigation: { lastPath: "/unit/denglou/theme/quiz?qi=0", lastAt: 510 },
-        lastActivityAt: 510
-      },
-      chushibiao: {
-        answers: { q1: { answered: true, isCorrect: true, timestamp: 900 } },
-        navigation: { lastPath: "/unit/chushibiao/comprehension", lastAt: 900 },
-        lastActivityAt: 900
-      }
-    }));
-  });
   await page.reload({ waitUntil: "domcontentloaded", timeout: 10000 });
-  await waitForPlan(page, "open-retry", "denglou");
-  check((await page.locator('[data-quick-study-step="1"]').getAttribute("href")) === "#/unit/denglou/theme/quiz?qi=0", "open-answer retry should return to the unit's safe recent learning path");
-  check((await page.locator('[data-quick-study-step="1"] strong').textContent())?.includes("重做 2 題開放題"), "open-answer retry plan should surface the pending count");
-
-  await page.evaluate(() => {
-    localStorage.setItem("ccsl_progress_v1", JSON.stringify({
-      chushibiao: {
-        answers: { q1: { answered: true, isCorrect: true, timestamp: 900 } },
-        navigation: { lastPath: "/unit/chushibiao/comprehension", lastAt: 900 },
-        lastActivityAt: 900
-      }
-    }));
-  });
-  await page.reload({ waitUntil: "domcontentloaded", timeout: 10000 });
-  await waitForPlan(page, "guided", "chushibiao");
+  await waitForPlan(page, "guided", returningUnit);
+  check(await page.locator("[data-today-review-panel]").count() === 0, "recent clean learning should stay in the guided quick-study flow instead of being treated as due review");
   check(await totalMinutes(page) === 10, "guided returning-student plan should total 10 suggested minutes");
 
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
@@ -187,4 +155,4 @@ try {
 }
 
 if (failures.length) process.exit(1);
-console.log("Quick-study smoke passed: adaptive 10-minute plans prioritise real learning evidence without fake timing or mobile overflow.");
+console.log("Quick-study smoke passed: fresh and recent-clean learners keep the 10-minute plan; due-review evidence is covered separately by today-review regression.");
