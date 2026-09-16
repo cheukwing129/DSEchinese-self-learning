@@ -58,7 +58,7 @@
   </main>
   <noscript><div class="noscript-state">文脈需要 JavaScript 才能載入篇章、練習與本機學習紀錄。</div></noscript>
 
-  <!-- RC UX safeguards: keep forward actions unambiguous, make reorder reversible, turn open-answer rubrics into self review, surface honest home-card learning states, and improve reader comfort. -->
+  <!-- RC UX safeguards: keep forward actions unambiguous, make reorder reversible, turn open-answer rubrics into self review, surface honest home-card learning states, improve reader comfort, and offer an adaptive short-study plan. -->
   <script>
   (() => {
     const generalQuizTitles = new Set([
@@ -434,6 +434,134 @@
       });
     }
 
+    function safeQuickStudyPath(unitId, path) {
+      if (typeof path !== "string") return "";
+      const clean = path.startsWith("#") ? path.slice(1) : path;
+      return clean.startsWith(`/unit/${unitId}/`) ? clean : "";
+    }
+
+    function quickStudyPlan(candidate) {
+      const { unitId, title, unit, objectiveWrong, openRetry, engaged } = candidate;
+      const answered = Object.values(unit.answers || {}).filter((record) => record?.answered).length;
+      const memoPractised = Object.values(unit.memorisation?.groups || {}).some((group) =>
+        !!((group?.cloze?.attempts || 0) || (group?.reorder?.attempts || 0))
+      );
+      const reflectionSaved = Object.values(unit.reflections || {}).some((value) => String(value || "").trim());
+      const selfReviewed = Object.values(unit.selfReview || {}).some(Boolean);
+      const recentPath = safeQuickStudyPath(unitId, unit.navigation?.lastPath);
+      let mode = "guided";
+      let reason = `按這部裝置留下的紀錄，先集中溫習《${title}》。`;
+      let steps;
+
+      if (objectiveWrong) {
+        mode = "objective-wrong";
+        reason = `《${title}》目前有 ${objectiveWrong} 題客觀題待修正；短時間內先處理已知弱點最划算。`;
+        steps = [
+          { minutes: 5, label: `重練待修正錯題`, detail: `先處理最後一次仍答錯的 ${objectiveWrong} 題。`, path: `/unit/${unitId}/progress/retry-wrong` },
+          { minutes: 3, label: "短背誦", detail: "用遮字或句子重組快速回憶原文。", path: `/unit/${unitId}/memorisation` },
+          { minutes: 2, label: "查看我的掌握", detail: "核對剛才修正後還有哪些項目值得跟進。", path: `/unit/${unitId}/progress` }
+        ];
+      } else if (openRetry) {
+        mode = "open-retry";
+        reason = `《${title}》有 ${openRetry} 題開放題標記為「稍後重做」；先重新作答，再對照評分要點。`;
+        steps = [
+          { minutes: 5, label: openRetry === 1 ? "重做標記的開放題" : `重做 ${openRetry} 題開放題`, detail: "重新作答後，再逐項核對評分元素。", path: recentPath || `/unit/${unitId}/theme` },
+          { minutes: 3, label: "短背誦", detail: "把理解再拉回原文，用短練習鞏固句子。", path: `/unit/${unitId}/memorisation` },
+          { minutes: 2, label: "整理學習紀錄", detail: "查看是否仍有待修正或需要補強的項目。", path: `/unit/${unitId}/progress` }
+        ];
+      } else if (!engaged) {
+        mode = "new";
+        reason = `這部裝置尚未有學習紀錄；先用《${title}》建立一段短而完整的讀、練、背循環。`;
+        steps = [
+          { minutes: 4, label: "讀一節原文", detail: "先讀原文，需要時才點開注釋。", path: `/unit/${unitId}/text` },
+          { minutes: 4, label: "做幾題內容理解", detail: "用題目檢查自己是否真的讀懂。", path: `/unit/${unitId}/comprehension/quiz` },
+          { minutes: 2, label: "短背誦", detail: "用遮字或重組把剛讀過的內容再喚回一次。", path: `/unit/${unitId}/memorisation` }
+        ];
+      } else {
+        let first = { minutes: 4, label: "繼續最近學習", detail: "由最近留下的學習位置接續。", path: recentPath || `/unit/${unitId}/text` };
+        if (!answered && !memoPractised && !reflectionSaved) first = { minutes: 4, label: "由原文開始", detail: "先熟讀原文及注釋，再進入練習。", path: `/unit/${unitId}/text` };
+        else if (!memoPractised) first = { minutes: 4, label: "開始背誦練習", detail: "用遮字或句子重組做一次短背誦。", path: `/unit/${unitId}/memorisation` };
+        else if (!reflectionSaved) first = { minutes: 4, label: "整理主旨與反思", detail: "把篇章內容連回自己的理解。", path: `/unit/${unitId}/theme` };
+        else if (!selfReviewed) first = { minutes: 4, label: "做一次自我檢核", detail: "檢查哪些範疇仍想補強。", path: `/unit/${unitId}/progress` };
+        else first = { minutes: 4, label: "做核心篇章挑戰", detail: "用綜合題檢查不同能力範疇。", path: `/unit/${unitId}/challenge` };
+        const second = first.path.endsWith("/memorisation")
+          ? { minutes: 3, label: "做幾題內容理解", detail: "把原文記憶轉回理解與判斷。", path: `/unit/${unitId}/comprehension/quiz` }
+          : { minutes: 3, label: "短背誦", detail: "用遮字或重組快速回憶原文。", path: `/unit/${unitId}/memorisation` };
+        steps = [first, second, { minutes: 3, label: "查看我的掌握", detail: "用最後幾分鐘整理今天留下的學習證據。", path: `/unit/${unitId}/progress` }];
+      }
+
+      return { unitId, title, mode, reason, steps };
+    }
+
+    function enhanceQuickStudy() {
+      const actionGrid = document.querySelector(".home-action-grid");
+      const cards = [...document.querySelectorAll('a.map-card[href^="#/unit/"]')];
+      if (!actionGrid || !cards.length) return;
+      const all = loadProgressSnapshot();
+      const candidates = cards.map((card, index) => {
+        const href = card.getAttribute("href") || "";
+        const match = href.match(/^#\/unit\/([^/?]+)/);
+        if (!match) return null;
+        let unitId = match[1];
+        try { unitId = decodeURIComponent(unitId); } catch { /* keep raw id */ }
+        const unit = all[unitId] && typeof all[unitId] === "object" ? all[unitId] : {};
+        return {
+          unitId,
+          title: card.querySelector(".map-title")?.textContent?.trim() || unitId,
+          unit,
+          index,
+          activityAt: unitActivityAt(unit),
+          engaged: unitHasEvidence(unit),
+          objectiveWrong: Object.values(unit.answers || {}).filter((record) => record?.answered && record.isCorrect === false).length,
+          openRetry: Object.values(unit.openQuestionReviews || {}).filter((review) => review?.decision === "retry").length
+        };
+      }).filter(Boolean);
+      if (!candidates.length) return;
+
+      const rank = (item) => item.objectiveWrong ? 0 : item.openRetry ? 1 : item.engaged ? 2 : 3;
+      candidates.sort((a, b) => {
+        const rankDiff = rank(a) - rank(b);
+        if (rankDiff) return rankDiff;
+        if (rank(a) === 0 && b.objectiveWrong !== a.objectiveWrong) return b.objectiveWrong - a.objectiveWrong;
+        if (rank(a) === 1 && b.openRetry !== a.openRetry) return b.openRetry - a.openRetry;
+        if (rank(a) <= 2 && b.activityAt !== a.activityAt) return b.activityAt - a.activityAt;
+        return a.index - b.index;
+      });
+
+      const plan = quickStudyPlan(candidates[0]);
+      const signature = `${plan.unitId}|${plan.mode}|${plan.steps.map((step) => `${step.minutes}:${step.path}`).join("|")}`;
+      let panel = actionGrid.querySelector("[data-quick-study-panel]");
+      if (panel?.dataset.quickStudySignature === signature) return;
+      if (!panel) {
+        panel = document.createElement("section");
+        panel.className = "card quick-study-panel";
+        panel.dataset.quickStudyPanel = "true";
+        panel.style.cssText = "grid-column:1/-1;margin:0;padding:22px 24px;border-color:rgba(23,73,64,.12);background:linear-gradient(135deg,rgba(255,255,255,.92),rgba(231,241,237,.78));box-shadow:0 14px 34px rgba(31,48,43,.06);";
+        actionGrid.appendChild(panel);
+      }
+      panel.dataset.quickStudySignature = signature;
+      panel.dataset.quickStudyUnit = plan.unitId;
+      panel.dataset.quickStudyMode = plan.mode;
+      panel.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;margin-bottom:15px;">
+          <div style="min-width:0;flex:1 1 420px;">
+            <p class="section-kicker" style="margin:0 0 5px;">10 分鐘快速溫習</p>
+            <h2 style="margin:0;font-family:var(--font-display);font-size:25px;font-weight:650;line-height:1.25;">約 10 分鐘，先處理《${plan.title.replace(/[&<>"']/g, (char) => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[char]))}》</h2>
+            <p style="margin:8px 0 0;color:var(--color-ink-soft);font-size:13px;line-height:1.75;">${plan.reason.replace(/[&<>"']/g, (char) => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[char]))}</p>
+          </div>
+          <span style="flex:none;padding:6px 10px;border-radius:999px;background:var(--color-accent-soft);color:var(--color-accent);font-size:11px;font-weight:800;">約 10 分鐘</span>
+        </div>
+        <div data-quick-study-steps style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;">
+          ${plan.steps.map((step, index) => `
+            <a data-quick-study-step="${index + 1}" data-minutes="${step.minutes}" href="#${step.path}" style="display:block;min-width:0;padding:14px 15px;border:1px solid rgba(23,73,64,.10);border-radius:14px;background:rgba(255,255,255,.72);">
+              <span style="display:block;margin-bottom:6px;color:var(--color-reader-orange);font-size:9px;font-weight:850;letter-spacing:.08em;">${String(index + 1).padStart(2, "0")} · ${step.minutes} 分鐘</span>
+              <strong style="display:block;color:var(--color-ink);font-size:14px;line-height:1.35;">${step.label}</strong>
+              <small style="display:block;margin-top:5px;color:var(--color-ink-soft);font-size:11px;line-height:1.55;">${step.detail}</small>
+            </a>`).join("")}
+        </div>
+        <p style="margin:12px 0 0;color:var(--color-ink-faint);font-size:10px;line-height:1.6;">時間只是節奏建議，不會自動倒數；如果今天只夠完成第一步，也算一次有方向的溫習。</p>`;
+    }
+
     function loadReaderPreferences() {
       const defaults = { font: "normal", line: "standard", focus: false };
       try {
@@ -578,6 +706,7 @@
       enhanceReorder();
       enhanceOpenSelfReview();
       enhanceHomeLearningStatus();
+      enhanceQuickStudy();
       enhanceReaderComfort();
     };
     const scheduleEnhance = () => {
