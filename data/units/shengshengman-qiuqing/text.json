@@ -6,7 +6,12 @@
       "label": "上片‧疊字起興",
       "text": "尋尋覓覓，冷冷清清，悽悽慘慘戚戚。",
       "summary": "連用七組疊字，由外而內、由弱到強地傳達情感從失落、清冷轉為悽戚悲痛的過程，是歷來備受激賞的名句。",
-      "annotation_ids": []
+      "annotation_ids": [],
+      "reader_annotation_ids": [
+        "r1-001",
+        "r1-002",
+        "r1-003"
+      ]
     },
     {
       "id": 2,
@@ -17,6 +22,17 @@
         "n01",
         "n02",
         "n03"
+      ],
+      "reader_annotation_ids": [
+        "r2-004",
+        "r2-005",
+        "r2-006",
+        "r2-007",
+        "r2-008",
+        "r2-009",
+        "r2-010",
+        "r2-011",
+        "r2-012"
       ]
     },
     {
@@ -24,7 +40,13 @@
       "label": "上片‧雁過傷心",
       "text": "雁過也，正傷心，卻是舊時相識。",
       "summary": "正傷心之際見征雁飛過，雁曾是傳信的舊識，如今丈夫已逝、故土難返，雁的無知無識反而更添傷心惆悵。",
-      "annotation_ids": []
+      "annotation_ids": [],
+      "reader_annotation_ids": [
+        "r3-013",
+        "r3-014",
+        "r3-015",
+        "r3-016"
+      ]
     },
     {
       "id": 4,
@@ -33,6 +55,13 @@
       "summary": "遍地黃花凋謝或盛放堆積，「憔悴損」既可指花亦可指人，詞人歷經離亂、身心疲憊，正如那憔悴的黃花，也再無人可以相贈。",
       "annotation_ids": [
         "n04"
+      ],
+      "reader_annotation_ids": [
+        "r4-017",
+        "r4-018",
+        "r4-019",
+        "r4-020",
+        "r4-021"
       ]
     },
     {
@@ -40,7 +69,14 @@
       "label": "下片‧獨守寒窗",
       "text": "守着窗兒，獨自怎生得黑！梧桐更兼細雨，到黃昏、點點滴滴。",
       "summary": "獨自守着寒窗，盼望黑夜早來卻時間難熬；梧桐細雨在黃昏時分點點滴滴，聲聲入耳，更添惆悵愁思。",
-      "annotation_ids": []
+      "annotation_ids": [],
+      "reader_annotation_ids": [
+        "r5-022",
+        "r5-023",
+        "r5-024",
+        "r5-025",
+        "r5-026"
+      ]
     },
     {
       "id": 6,
@@ -50,6 +86,12 @@
       "annotation_ids": [
         "n05",
         "n06"
+      ],
+      "reader_annotation_ids": [
+        "r6-027",
+        "r6-028",
+        "r6-029",
+        "r6-030"
       ]
     }
   ],
@@ -84,5 +126,251 @@
       "term": "了得",
       "explanation": "概括得了。"
     }
-  ]
+  ],
+  "reader_annotations": [
+    {
+      "id": "r1-001",
+      "term": "尋尋覓覓",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "不斷尋找。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-002",
+      "term": "冷冷清清",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "環境冷落寂寞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-003",
+      "term": "悽悽慘慘戚戚",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "悲傷痛苦的樣子；戚為憂傷。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-004",
+      "term": "乍",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "剛剛、忽然。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-005",
+      "term": "煖",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "同暖，溫暖。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-006",
+      "term": "還寒",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "又變冷。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-007",
+      "term": "將息",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "調養休息。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-008",
+      "term": "怎敵",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "怎能抵擋。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-009",
+      "term": "他",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "這裏指風，宋代口語代詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-010",
+      "term": "晚來",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "傍晚時分。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-011",
+      "term": "急",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "猛烈。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-012",
+      "term": "怎敵他，晚來風急",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "反問句：淡酒怎能抵擋傍晚的急風？",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-013",
+      "term": "正",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "正在、恰好。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-014",
+      "term": "卻",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "卻又，表示轉折。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-015",
+      "term": "舊時相識",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "從前認識的，這裏指曾見過的雁。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-016",
+      "term": "卻是舊時相識",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "將雁擬作舊識，雁引起往昔回憶，加深當下傷心。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-017",
+      "term": "黃花",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "菊花。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-018",
+      "term": "憔悴損",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "凋謝枯萎；損是程度補語，表示極、很。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-019",
+      "term": "堪",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "能夠、忍心。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-020",
+      "term": "摘",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "採摘。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-021",
+      "term": "如今有誰堪摘",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "疑問句：如今還有誰能夠或忍心採摘？",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-022",
+      "term": "怎生",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "怎樣，宋代口語。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-023",
+      "term": "得黑",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "等到天黑；得是能夠。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-024",
+      "term": "更兼",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "又加上。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-025",
+      "term": "到黃昏",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "直到黃昏。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-026",
+      "term": "獨自怎生得黑",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "疑問句：獨自一人怎樣才能捱到天黑？",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-027",
+      "term": "次第",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "光景、情形。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-028",
+      "term": "箇",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "同個。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-029",
+      "term": "了得",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "概括得了、說得盡。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-030",
+      "term": "怎一箇愁字了得",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "反問句：怎能用一個愁字概括這種光景？",
+      "source": "supplement"
+    }
+  ],
+  "reader_annotation_source": {
+    "label": "教育局原有注釋；新增字詞及句式為按語境補充",
+    "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_17b.pdf"
+  }
 }

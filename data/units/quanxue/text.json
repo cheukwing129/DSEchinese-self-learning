@@ -5,68 +5,1267 @@
       "id": 1,
       "text": "君子曰：學不可以已。青，取之於藍，而青於藍；冰，水為之，而寒於水。木直中繩，輮以為輪，其曲中規；雖有槁暴、不復挺者，輮使之然也。故木受繩則直，金就礪則利，君子博學而日參省乎己，則知明而行無過矣。",
       "summary": "提出「學不可以已」的中心論點，以青出於藍、冰寒於水、輮木為輪等比喻，說明學習能改變人的本性，使人達致心智清明、行為無過。",
-      "annotation_ids": ["n01", "n02", "n03", "n04", "n05", "n06", "n07", "n08", "n09", "n10", "n11", "n12", "n13", "n14", "n15", "n16"]
+      "annotation_ids": [
+        "n01",
+        "n02",
+        "n03",
+        "n04",
+        "n05",
+        "n06",
+        "n07",
+        "n08",
+        "n09",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16"
+      ],
+      "reader_annotation_ids": [
+        "r1-001",
+        "r1-002",
+        "r1-003",
+        "r1-004",
+        "r1-005",
+        "r1-006",
+        "r1-007",
+        "r1-008",
+        "r1-009",
+        "r1-010",
+        "r1-011",
+        "r1-012",
+        "r1-013",
+        "r1-014",
+        "r1-015",
+        "r1-016",
+        "r1-017",
+        "r1-018",
+        "r1-019",
+        "r1-020",
+        "r1-021",
+        "r1-022",
+        "r1-023",
+        "r1-024",
+        "r1-025",
+        "r1-026",
+        "r1-027",
+        "r1-028",
+        "r1-029",
+        "r1-030",
+        "r1-031",
+        "r1-032",
+        "r1-033",
+        "r1-034",
+        "r1-035",
+        "r1-036"
+      ]
     },
     {
       "id": 2,
       "text": "吾嘗終日而思矣，不如須臾之所學也；吾嘗跂而望矣，不如登高之博見也。登高而招，臂非加長也，而見者遠。順風而呼，聲非加疾也，而聞者彰。假輿馬者，非利足也，而致千里；假舟楫者，非能水也，而絕江河。君子生非異也，善假於物也。",
       "summary": "以登高而招、順風而呼、假輿馬、假舟楫為喻，說明君子並非天生異稟，只是善於借助外物（學習），從而能超越自身能力。",
-      "annotation_ids": ["n17", "n18", "n19", "n20", "n21", "n22", "n23", "n24", "n25", "n26", "n27", "n28"]
+      "annotation_ids": [
+        "n17",
+        "n18",
+        "n19",
+        "n20",
+        "n21",
+        "n22",
+        "n23",
+        "n24",
+        "n25",
+        "n26",
+        "n27",
+        "n28"
+      ],
+      "reader_annotation_ids": [
+        "r2-037",
+        "r2-038",
+        "r2-039",
+        "r2-040",
+        "r2-041",
+        "r2-042",
+        "r2-043",
+        "r2-044",
+        "r2-045",
+        "r2-046",
+        "r2-047",
+        "r2-048",
+        "r2-049",
+        "r2-050",
+        "r2-051",
+        "r2-052",
+        "r2-053",
+        "r2-054",
+        "r2-055",
+        "r2-056",
+        "r2-057",
+        "r2-058",
+        "r2-059",
+        "r2-060",
+        "r2-061",
+        "r2-062",
+        "r2-063",
+        "r2-064"
+      ]
     },
     {
       "id": 3,
       "text": "積土成山，風雨興焉；積水成淵，蛟龍生焉；積善成德，而神明自得，聖心備焉。故不積跬步，無以至千里；不積小流，無以成江海。騏驥一躍，不能十步；駑馬十駕，功在不舍。鍥而舍之，朽木不折；鍥而不舍，金石可鏤。螾無爪牙之利，筋骨之強，上食埃土，下飲黃泉，用心一也。蟹六跪而二螯，非蛇蟺之穴無可寄託者，用心躁也。",
       "summary": "以積土成山、積水成淵論證積累的重要；以騏驥與駑馬對比說明持之以恆勝於天資；以鍥而舍之與鍥而不舍對比說明堅持的重要；以螾與蟹對比說明專心致志的重要。",
-      "annotation_ids": ["n29", "n30", "n31", "n32", "n33", "n34", "n35", "n36", "n37", "n38", "n39", "n40", "n41", "n42", "n43", "n44", "n45", "n46", "n47"]
+      "annotation_ids": [
+        "n29",
+        "n30",
+        "n31",
+        "n32",
+        "n33",
+        "n34",
+        "n35",
+        "n36",
+        "n37",
+        "n38",
+        "n39",
+        "n40",
+        "n41",
+        "n42",
+        "n43",
+        "n44",
+        "n45",
+        "n46",
+        "n47"
+      ],
+      "reader_annotation_ids": [
+        "r3-065",
+        "r3-066",
+        "r3-067",
+        "r3-068",
+        "r3-069",
+        "r3-070",
+        "r3-098",
+        "r3-072",
+        "r3-073",
+        "r3-074",
+        "r3-075",
+        "r3-076",
+        "r3-077",
+        "r3-078",
+        "r3-079",
+        "r3-080",
+        "r3-081",
+        "r3-082",
+        "r3-083",
+        "r3-084",
+        "r3-085",
+        "r3-100",
+        "r3-087",
+        "r3-088",
+        "r3-089",
+        "r3-090",
+        "r3-091",
+        "r3-092",
+        "r3-093",
+        "r3-094",
+        "r3-095",
+        "r3-096",
+        "r3-097",
+        "r3-099",
+        "r3-101",
+        "r3-102",
+        "r3-103",
+        "r3-104",
+        "r3-105"
+      ]
     }
   ],
   "annotations": [
-    { "id": "n01", "term": "君子", "explanation": "品格崇高的飽學之士。在篇中可理解為荀子心目中的聖哲先賢，或荀子弟子對荀子的尊稱。" },
-    { "id": "n02", "term": "學不可以已", "explanation": "已：終止、放棄。" },
-    { "id": "n03", "term": "青", "explanation": "靛青色顏料。藍：植物名稱，其葉可製作顏料。" },
-    { "id": "n04", "term": "青於藍", "explanation": "指經提煉出的靛青色顏料，比原本藍草的青色要青得多。這個比喻包含兩方面的意思：在知識上，不斷學習可以提升我們的學養識見；在人格上，不斷學習可以提升我們的性情品位。《荀子》原文側重於後者。" },
-    { "id": "n05", "term": "冰，水為之", "explanation": "冰是由水凝固而成的。" },
-    { "id": "n06", "term": "寒於水", "explanation": "比水更低溫。" },
-    { "id": "n07", "term": "木直中繩", "jyutping": "zung3", "putonghua": "zhònɡ", "explanation": "指樹木的枝幹本來長得筆直。中：符合、合於，動詞。繩，沾上墨的線，是古代工匠繪畫直線的工具。" },
-    { "id": "n08", "term": "輮", "jyutping": "jau4", "putonghua": "róu", "explanation": "通「揉」，屈曲。一說通「煣」，指用火烘木材，使它彎曲。" },
-    { "id": "n09", "term": "其曲中規", "explanation": "它的弧度合乎圓規畫出來的圖形。規：圓規。" },
-    { "id": "n10", "term": "雖有槁暴", "jyutping": "buk6", "putonghua": "pù", "explanation": "有：通「又」。槁：枯乾。暴：通「曝」，曬乾。" },
-    { "id": "n11", "term": "不復挺者", "explanation": "不能回復筆直的樣子。" },
-    { "id": "n12", "term": "故木受繩則直", "explanation": "受繩：被工匠以墨繩校正。" },
-    { "id": "n13", "term": "金就礪則利", "explanation": "金：金屬，泛指刀劍等利器。就礪：在磨刀石上磨。就：接受，動詞。礪，磨刀石。" },
-    { "id": "n14", "term": "君子博學而日參省乎己", "jyutping": "caam1 / sing2", "putonghua": "cɑ̄n / xǐnɡ", "explanation": "參省：檢討反省。參：檢視、審察。省：省察、反省。另一解，「參省乎己」即《論語》曾子曰：「吾日三省吾身」之意。" },
-    { "id": "n15", "term": "則知明", "explanation": "知明：心智清明。「知」：通「智」，指心思、智慧。" },
-    { "id": "n16", "term": "而行無過矣", "explanation": "行：行為。" },
-    { "id": "n17", "term": "吾嘗終日而思矣", "explanation": "我曾經終日思考（聖賢教化和人生禍福等道理）。" },
-    { "id": "n18", "term": "不如須臾之所學也", "explanation": "須臾之所學：片刻的學習。" },
-    { "id": "n19", "term": "吾嘗跂而望矣", "jyutping": "kei5", "putonghua": "qǐ", "explanation": "跂：踮起腳跟。" },
-    { "id": "n20", "term": "聲非加疾也", "explanation": "聲量沒有提高。疾：猛烈，這裏指聲音宏亮。" },
-    { "id": "n21", "term": "而聞者彰", "explanation": "彰：明顯、清晰。" },
-    { "id": "n22", "term": "假輿馬者", "explanation": "假：假借，憑藉、利用之意。輿馬：車馬。" },
-    { "id": "n23", "term": "非利足也", "explanation": "利足：跑得快。利：便利，迅疾。" },
-    { "id": "n24", "term": "而致千里", "explanation": "致：達到。" },
-    { "id": "n25", "term": "假舟楫者", "jyutping": "zip3", "putonghua": "jí", "explanation": "楫：船槳，這裏借代為船。" },
-    { "id": "n26", "term": "非能水也", "explanation": "能水：善於游泳。水，作動詞用。" },
-    { "id": "n27", "term": "而絕江河", "explanation": "絕江河：橫渡江河。絕：渡過，作動詞用。" },
-    { "id": "n28", "term": "君子生非異也", "explanation": "生非異：本性與眾人沒有分別。生：通「性」，指天賦、本性。善假於物：善於借助外在的條件。物：外物，即「外在條件」。" },
-    { "id": "n29", "term": "風雨興焉", "explanation": "興：興起。" },
-    { "id": "n30", "term": "積水成淵", "explanation": "淵：深水之處。" },
-    { "id": "n31", "term": "蛟龍生焉", "explanation": "蛟龍：蛟、龍是兩種動物，相傳蛟能引發洪水，龍可翻雲覆雨。" },
-    { "id": "n32", "term": "而神明自得", "explanation": "神明自得：自然得到智慧。" },
-    { "id": "n33", "term": "聖心備焉", "explanation": "聖心：聖人的精神境界。" },
-    { "id": "n34", "term": "故不積跬步", "jyutping": "kwai2", "putonghua": "kuǐ", "explanation": "跬步：跬同「蹞」，半步。古人以一腳踏出為一蹞，兩腳各踏出一次為一步。" },
-    { "id": "n35", "term": "騏驥一躍", "explanation": "騏驥：駿馬。" },
-    { "id": "n36", "term": "駑馬十駕", "jyutping": "nou4", "putonghua": "nú", "explanation": "縱使是質素低劣的馬，憑着十日的努力，也可以完成駿馬的行程。駑馬：劣馬。十駕：十日之程。" },
-    { "id": "n37", "term": "功在不舍", "explanation": "功：成效、功勞。舍：通「捨」，放棄。" },
-    { "id": "n38", "term": "鍥而舍之", "jyutping": "kit3", "putonghua": "qiè", "explanation": "鍥：雕刻。" },
-    { "id": "n39", "term": "金石可鏤", "jyutping": "lau6", "putonghua": "lòu", "explanation": "鏤：雕刻。" },
-    { "id": "n40", "term": "螾無爪牙之利", "explanation": "螾：同「蚓」，蚯蚓。" },
-    { "id": "n41", "term": "上食埃土", "explanation": "埃：細土，指土壤。" },
-    { "id": "n42", "term": "下飲黃泉", "explanation": "黃泉：地底深處的水源。" },
-    { "id": "n43", "term": "用心一也", "explanation": "一：專一。" },
-    { "id": "n44", "term": "蟹六跪而二螯", "jyutping": "ngou4", "putonghua": "ɑ́o", "explanation": "「六跪」或作「八跪」。跪：足，名詞。螯：蟹鉗。" },
-    { "id": "n45", "term": "非蛇蟺之穴", "explanation": "蟺：同「鱓」，今作「鱔」。" },
-    { "id": "n46", "term": "無可寄託者", "explanation": "寄託：寄居。" },
-    { "id": "n47", "term": "用心躁也", "explanation": "躁：浮躁、不專心。" }
-  ]
+    {
+      "id": "n01",
+      "term": "君子",
+      "explanation": "品格崇高的飽學之士。在篇中可理解為荀子心目中的聖哲先賢，或荀子弟子對荀子的尊稱。"
+    },
+    {
+      "id": "n02",
+      "term": "學不可以已",
+      "explanation": "已：終止、放棄。"
+    },
+    {
+      "id": "n03",
+      "term": "青",
+      "explanation": "靛青色顏料。藍：植物名稱，其葉可製作顏料。"
+    },
+    {
+      "id": "n04",
+      "term": "青於藍",
+      "explanation": "指經提煉出的靛青色顏料，比原本藍草的青色要青得多。這個比喻包含兩方面的意思：在知識上，不斷學習可以提升我們的學養識見；在人格上，不斷學習可以提升我們的性情品位。《荀子》原文側重於後者。"
+    },
+    {
+      "id": "n05",
+      "term": "冰，水為之",
+      "explanation": "冰是由水凝固而成的。"
+    },
+    {
+      "id": "n06",
+      "term": "寒於水",
+      "explanation": "比水更低溫。"
+    },
+    {
+      "id": "n07",
+      "term": "木直中繩",
+      "jyutping": "zung3",
+      "putonghua": "zhònɡ",
+      "explanation": "指樹木的枝幹本來長得筆直。中：符合、合於，動詞。繩，沾上墨的線，是古代工匠繪畫直線的工具。"
+    },
+    {
+      "id": "n08",
+      "term": "輮",
+      "jyutping": "jau4",
+      "putonghua": "róu",
+      "explanation": "通「揉」，屈曲。一說通「煣」，指用火烘木材，使它彎曲。"
+    },
+    {
+      "id": "n09",
+      "term": "其曲中規",
+      "explanation": "它的弧度合乎圓規畫出來的圖形。規：圓規。"
+    },
+    {
+      "id": "n10",
+      "term": "雖有槁暴",
+      "jyutping": "buk6",
+      "putonghua": "pù",
+      "explanation": "有：通「又」。槁：枯乾。暴：通「曝」，曬乾。"
+    },
+    {
+      "id": "n11",
+      "term": "不復挺者",
+      "explanation": "不能回復筆直的樣子。"
+    },
+    {
+      "id": "n12",
+      "term": "故木受繩則直",
+      "explanation": "受繩：被工匠以墨繩校正。"
+    },
+    {
+      "id": "n13",
+      "term": "金就礪則利",
+      "explanation": "金：金屬，泛指刀劍等利器。就礪：在磨刀石上磨。就：接受，動詞。礪，磨刀石。"
+    },
+    {
+      "id": "n14",
+      "term": "君子博學而日參省乎己",
+      "jyutping": "caam1 / sing2",
+      "putonghua": "cɑ̄n / xǐnɡ",
+      "explanation": "參省：檢討反省。參：檢視、審察。省：省察、反省。另一解，「參省乎己」即《論語》曾子曰：「吾日三省吾身」之意。"
+    },
+    {
+      "id": "n15",
+      "term": "則知明",
+      "explanation": "知明：心智清明。「知」：通「智」，指心思、智慧。"
+    },
+    {
+      "id": "n16",
+      "term": "而行無過矣",
+      "explanation": "行：行為。"
+    },
+    {
+      "id": "n17",
+      "term": "吾嘗終日而思矣",
+      "explanation": "我曾經終日思考（聖賢教化和人生禍福等道理）。"
+    },
+    {
+      "id": "n18",
+      "term": "不如須臾之所學也",
+      "explanation": "須臾之所學：片刻的學習。"
+    },
+    {
+      "id": "n19",
+      "term": "吾嘗跂而望矣",
+      "jyutping": "kei5",
+      "putonghua": "qǐ",
+      "explanation": "跂：踮起腳跟。"
+    },
+    {
+      "id": "n20",
+      "term": "聲非加疾也",
+      "explanation": "聲量沒有提高。疾：猛烈，這裏指聲音宏亮。"
+    },
+    {
+      "id": "n21",
+      "term": "而聞者彰",
+      "explanation": "彰：明顯、清晰。"
+    },
+    {
+      "id": "n22",
+      "term": "假輿馬者",
+      "explanation": "假：假借，憑藉、利用之意。輿馬：車馬。"
+    },
+    {
+      "id": "n23",
+      "term": "非利足也",
+      "explanation": "利足：跑得快。利：便利，迅疾。"
+    },
+    {
+      "id": "n24",
+      "term": "而致千里",
+      "explanation": "致：達到。"
+    },
+    {
+      "id": "n25",
+      "term": "假舟楫者",
+      "jyutping": "zip3",
+      "putonghua": "jí",
+      "explanation": "楫：船槳，這裏借代為船。"
+    },
+    {
+      "id": "n26",
+      "term": "非能水也",
+      "explanation": "能水：善於游泳。水，作動詞用。"
+    },
+    {
+      "id": "n27",
+      "term": "而絕江河",
+      "explanation": "絕江河：橫渡江河。絕：渡過，作動詞用。"
+    },
+    {
+      "id": "n28",
+      "term": "君子生非異也",
+      "explanation": "生非異：本性與眾人沒有分別。生：通「性」，指天賦、本性。善假於物：善於借助外在的條件。物：外物，即「外在條件」。"
+    },
+    {
+      "id": "n29",
+      "term": "風雨興焉",
+      "explanation": "興：興起。"
+    },
+    {
+      "id": "n30",
+      "term": "積水成淵",
+      "explanation": "淵：深水之處。"
+    },
+    {
+      "id": "n31",
+      "term": "蛟龍生焉",
+      "explanation": "蛟龍：蛟、龍是兩種動物，相傳蛟能引發洪水，龍可翻雲覆雨。"
+    },
+    {
+      "id": "n32",
+      "term": "而神明自得",
+      "explanation": "神明自得：自然得到智慧。"
+    },
+    {
+      "id": "n33",
+      "term": "聖心備焉",
+      "explanation": "聖心：聖人的精神境界。"
+    },
+    {
+      "id": "n34",
+      "term": "故不積跬步",
+      "jyutping": "kwai2",
+      "putonghua": "kuǐ",
+      "explanation": "跬步：跬同「蹞」，半步。古人以一腳踏出為一蹞，兩腳各踏出一次為一步。"
+    },
+    {
+      "id": "n35",
+      "term": "騏驥一躍",
+      "explanation": "騏驥：駿馬。"
+    },
+    {
+      "id": "n36",
+      "term": "駑馬十駕",
+      "jyutping": "nou4",
+      "putonghua": "nú",
+      "explanation": "縱使是質素低劣的馬，憑着十日的努力，也可以完成駿馬的行程。駑馬：劣馬。十駕：十日之程。"
+    },
+    {
+      "id": "n37",
+      "term": "功在不舍",
+      "explanation": "功：成效、功勞。舍：通「捨」，放棄。"
+    },
+    {
+      "id": "n38",
+      "term": "鍥而舍之",
+      "jyutping": "kit3",
+      "putonghua": "qiè",
+      "explanation": "鍥：雕刻。"
+    },
+    {
+      "id": "n39",
+      "term": "金石可鏤",
+      "jyutping": "lau6",
+      "putonghua": "lòu",
+      "explanation": "鏤：雕刻。"
+    },
+    {
+      "id": "n40",
+      "term": "螾無爪牙之利",
+      "explanation": "螾：同「蚓」，蚯蚓。"
+    },
+    {
+      "id": "n41",
+      "term": "上食埃土",
+      "explanation": "埃：細土，指土壤。"
+    },
+    {
+      "id": "n42",
+      "term": "下飲黃泉",
+      "explanation": "黃泉：地底深處的水源。"
+    },
+    {
+      "id": "n43",
+      "term": "用心一也",
+      "explanation": "一：專一。"
+    },
+    {
+      "id": "n44",
+      "term": "蟹六跪而二螯",
+      "jyutping": "ngou4",
+      "putonghua": "ɑ́o",
+      "explanation": "「六跪」或作「八跪」。跪：足，名詞。螯：蟹鉗。"
+    },
+    {
+      "id": "n45",
+      "term": "非蛇蟺之穴",
+      "explanation": "蟺：同「鱓」，今作「鱔」。"
+    },
+    {
+      "id": "n46",
+      "term": "無可寄託者",
+      "explanation": "寄託：寄居。"
+    },
+    {
+      "id": "n47",
+      "term": "用心躁也",
+      "explanation": "躁：浮躁、不專心。"
+    }
+  ],
+  "reader_annotations": [
+    {
+      "id": "r1-001",
+      "term": "君子",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "有學問、有修養的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-002",
+      "term": "君子",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "有學問、有修養的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-003",
+      "term": "已",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "停止。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-004",
+      "term": "青",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "靛青，一種染料，名詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-005",
+      "term": "青",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "顏色青、深，形容詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-006",
+      "term": "藍",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "蓼藍，能提取靛青的植物。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-007",
+      "term": "藍",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "蓼藍，能提取靛青的植物。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-008",
+      "term": "為之",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "形成它，之指冰。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-009",
+      "term": "中",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "符合。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-010",
+      "term": "中",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "符合。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-011",
+      "term": "繩",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "木工用來取直的墨線。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-012",
+      "term": "繩",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "木工用來取直的墨線。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-013",
+      "term": "輮",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "用火烘木使它彎曲。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-014",
+      "term": "輮",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "用火烘木使它彎曲。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-015",
+      "term": "曲",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "彎曲的弧度，名詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-016",
+      "term": "規",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "畫圓的工具。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-017",
+      "term": "有",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "在「雖有」中通又。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-018",
+      "term": "槁暴",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "枯乾、曬乾；暴同曝。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-019",
+      "term": "挺",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "挺直。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-020",
+      "term": "然",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "這樣。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-021",
+      "term": "金",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "金屬製的刀劍。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-022",
+      "term": "就",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "靠近、接近。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-023",
+      "term": "礪",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "磨刀石。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-024",
+      "term": "利",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "鋒利。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-025",
+      "term": "日",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "每天，名詞作狀語。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-026",
+      "term": "參省",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "檢驗、反省。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-027",
+      "term": "乎",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "於，對。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-028",
+      "term": "知",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "通智，智慧。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-029",
+      "term": "行",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "行為。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-030",
+      "term": "過",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "過失。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-031",
+      "term": "取之",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "提取它；之代指靛青。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-032",
+      "term": "博學",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "廣泛學習。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-033",
+      "term": "使之然",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "使木頭變成這樣；之指木，然是這樣。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-034",
+      "term": "青，取之於藍，而青於藍",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "前一於表示從，後一於表示比；而表示轉折，卻比蓼藍更青。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-035",
+      "term": "冰，水為之，而寒於水",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "比較句：於表示比，冰比水更冷。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-036",
+      "term": "輮使之然也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "判斷句：是輮這種加工使它變成這樣。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-037",
+      "term": "嘗",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "曾經。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-038",
+      "term": "嘗",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "曾經。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-039",
+      "term": "終日",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "整天。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-040",
+      "term": "須臾",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "片刻。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-041",
+      "term": "跂",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "提起腳跟。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-042",
+      "term": "博見",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "見得廣遠。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-043",
+      "term": "招",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "招手。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-044",
+      "term": "疾",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "強勁，這裏形容聲音宏亮。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-045",
+      "term": "彰",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "清楚。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-046",
+      "term": "假",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "借助、利用。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-047",
+      "term": "假",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "借助、利用。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-048",
+      "term": "假",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "借助、利用。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-049",
+      "term": "輿馬",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "車馬。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-050",
+      "term": "利足",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "善於步行；利指快、敏捷。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-051",
+      "term": "致",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "到達。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-052",
+      "term": "舟楫",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "船和槳，借指船隻。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-053",
+      "term": "能水",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "善於游泳；水用作動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-054",
+      "term": "絕",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "橫渡。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-055",
+      "term": "生",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "通性，天賦、本性。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-056",
+      "term": "物",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "外在條件。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-057",
+      "term": "善",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "善於。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-058",
+      "term": "吾",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "我。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-059",
+      "term": "吾",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "我。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-060",
+      "term": "所學",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "學到的東西。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-061",
+      "term": "見者",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "看見招手的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-062",
+      "term": "聞者",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "聽見呼聲的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-063",
+      "term": "非利足也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "不是腳走得快，是借助車馬；省略的語境須與前句合讀。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-064",
+      "term": "善假於物也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "於引出所借助的外在條件。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-065",
+      "term": "興",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "興起。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-066",
+      "term": "焉",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "於此，在這裏，指山中。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-067",
+      "term": "焉",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "於此，在這裏，指深潭中。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-068",
+      "term": "焉",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "句末語氣詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-069",
+      "term": "淵",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "深水潭。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-070",
+      "term": "德",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "品德。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-072",
+      "term": "備",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "具備。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-073",
+      "term": "跬步",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "半步與一步，泛指小步。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-074",
+      "term": "無以",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "沒有用來……的辦法。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-075",
+      "term": "無以",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "沒有用來……的辦法。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-076",
+      "term": "騏驥",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "駿馬。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-077",
+      "term": "駑馬",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "劣馬。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-078",
+      "term": "駕",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "馬拉車一天的行程。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-079",
+      "term": "舍",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "通捨，放棄。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-080",
+      "term": "舍",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "通捨，放棄。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-081",
+      "term": "舍",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "通捨，放棄。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-082",
+      "term": "鍥",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "雕刻。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-083",
+      "term": "鍥",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "雕刻。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-084",
+      "term": "鏤",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "雕刻。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-085",
+      "term": "螾",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "同蚓，蚯蚓。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-087",
+      "term": "上",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "向上，方位名詞作狀語。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-088",
+      "term": "下",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "向下，方位名詞作狀語。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-089",
+      "term": "埃土",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "細土。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-090",
+      "term": "黃泉",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "地下的水。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-091",
+      "term": "一",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "專一。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-092",
+      "term": "一",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "專一。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-093",
+      "term": "跪",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "腳，名詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-094",
+      "term": "螯",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "蟹鉗。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-095",
+      "term": "蛇蟺",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "蛇和鱔；蟺同鱔。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-096",
+      "term": "寄託",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "寄居、安身。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-097",
+      "term": "躁",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "浮躁、不專心。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-098",
+      "term": "神明",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "高明的智慧。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-099",
+      "term": "聖心",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "聖人的精神境界。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-100",
+      "term": "爪牙",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "爪和牙。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-101",
+      "term": "筋骨",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "筋肉骨骼。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-102",
+      "term": "用心",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "運用心思。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-103",
+      "term": "用心",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "運用心思。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-104",
+      "term": "螾無爪牙之利，筋骨之強",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "定語後置：即無利之爪牙、強之筋骨，沒有鋒利的爪牙和強健的筋骨。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-105",
+      "term": "非蛇蟺之穴無可寄託者，用心躁也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "判斷句：不能自行找到安身處，是因為用心浮躁。",
+      "source": "supplement"
+    }
+  ],
+  "reader_annotation_source": {
+    "label": "教育局原有注釋；新增字詞及句式為按語境補充",
+    "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_06.pdf"
+  }
 }

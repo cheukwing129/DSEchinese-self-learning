@@ -29,6 +29,90 @@
         "n12c",
         "n16b",
         "n17b"
+      ],
+      "reader_annotation_ids": [
+        "r1-001",
+        "r1-002",
+        "r1-003",
+        "r1-004",
+        "r1-005",
+        "r1-006",
+        "r1-007",
+        "r1-008",
+        "r1-009",
+        "r1-010",
+        "r1-011",
+        "r1-012",
+        "r1-013",
+        "r1-014",
+        "r1-015",
+        "r1-016",
+        "r1-017",
+        "r1-018",
+        "r1-019",
+        "r1-020",
+        "r1-021",
+        "r1-022",
+        "r1-023",
+        "r1-024",
+        "r1-025",
+        "r1-026",
+        "r1-027",
+        "r1-028",
+        "r1-029",
+        "r1-030",
+        "r1-031",
+        "r1-032",
+        "r1-033",
+        "r1-034",
+        "r1-035",
+        "r1-036",
+        "r1-037",
+        "r1-038",
+        "r1-039",
+        "r1-040",
+        "r1-041",
+        "r1-042",
+        "r1-043",
+        "r1-044",
+        "r1-045",
+        "r1-046",
+        "r1-047",
+        "r1-048",
+        "r1-049",
+        "r1-050",
+        "r1-051",
+        "r1-052",
+        "r1-053",
+        "r1-054",
+        "r1-055",
+        "r1-056",
+        "r1-057",
+        "r1-058",
+        "r1-059",
+        "r1-060",
+        "r1-061",
+        "r1-062",
+        "r1-063",
+        "r1-064",
+        "r1-065",
+        "r1-066",
+        "r1-067",
+        "r1-068",
+        "r1-069",
+        "r1-070",
+        "r1-071",
+        "r1-072",
+        "r1-073",
+        "r1-074",
+        "r1-075",
+        "r1-076",
+        "r1-077",
+        "r1-078",
+        "r1-079",
+        "r1-080",
+        "r1-081",
+        "r1-082"
       ]
     },
     {
@@ -52,6 +136,63 @@
         "n33",
         "n34",
         "n35"
+      ],
+      "reader_annotation_ids": [
+        "r2-083",
+        "r2-084",
+        "r2-085",
+        "r2-086",
+        "r2-087",
+        "r2-088",
+        "r2-089",
+        "r2-090",
+        "r2-091",
+        "r2-092",
+        "r2-093",
+        "r2-094",
+        "r2-095",
+        "r2-096",
+        "r2-097",
+        "r2-098",
+        "r2-099",
+        "r2-100",
+        "r2-101",
+        "r2-102",
+        "r2-103",
+        "r2-104",
+        "r2-105",
+        "r2-106",
+        "r2-107",
+        "r2-108",
+        "r2-109",
+        "r2-110",
+        "r2-111",
+        "r2-112",
+        "r2-113",
+        "r2-114",
+        "r2-115",
+        "r2-116",
+        "r2-117",
+        "r2-118",
+        "r2-119",
+        "r2-120",
+        "r2-121",
+        "r2-122",
+        "r2-123",
+        "r2-124",
+        "r2-125",
+        "r2-126",
+        "r2-127",
+        "r2-128",
+        "r2-129",
+        "r2-130",
+        "r2-131",
+        "r2-132",
+        "r2-133",
+        "r2-134",
+        "r2-135",
+        "r2-136",
+        "r2-137"
       ]
     }
   ],
@@ -294,5 +435,1107 @@
       "occurrence": 1,
       "explanation": "有人、有的（此句「或……，或……」即「有的人……，有的人……」的結構）。"
     }
-  ]
+  ],
+  "reader_annotations": [
+    {
+      "id": "r1-001",
+      "term": "謂",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "對……說。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-002",
+      "term": "曰",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "說。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-003",
+      "term": "曰",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "說。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-004",
+      "term": "曰",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "說。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-005",
+      "term": "貽",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "贈送。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-006",
+      "term": "瓠",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "葫蘆。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-007",
+      "term": "瓠",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "葫蘆。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-008",
+      "term": "瓠",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "葫蘆。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-009",
+      "term": "瓠",
+      "occurrence": 4,
+      "kind": "word",
+      "explanation": "葫蘆。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-010",
+      "term": "種",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "種子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-011",
+      "term": "樹",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "種植，動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-012",
+      "term": "實",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "結果實，動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-013",
+      "term": "石",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "古代容量單位，十斗為一石。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-014",
+      "term": "石",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "古代容量單位，十斗為一石。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-015",
+      "term": "盛",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "盛載。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-016",
+      "term": "水漿",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "水或飲料。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-017",
+      "term": "堅",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "堅硬程度。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-018",
+      "term": "舉",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "拿起、提起。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-019",
+      "term": "剖",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "剖開。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-020",
+      "term": "以為",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "把……用作。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-021",
+      "term": "以為",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "把……用作。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-022",
+      "term": "瓢",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "舀水的器具。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-023",
+      "term": "瓠落",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "空闊而大。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-024",
+      "term": "瓠落",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "空闊而大。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-025",
+      "term": "呺然",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "虛空而巨大的樣子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-026",
+      "term": "掊",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "擊破。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-027",
+      "term": "固",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "實在、本來。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-028",
+      "term": "拙",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "不善於。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-029",
+      "term": "用大",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "利用大的東西；大作名詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-030",
+      "term": "龜",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "通皸，皮膚凍裂。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-031",
+      "term": "龜",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "通皸，皮膚凍裂。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-032",
+      "term": "洴澼",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "漂洗。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-033",
+      "term": "洴澼",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "漂洗。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-034",
+      "term": "洴澼",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "漂洗。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-035",
+      "term": "絖",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "棉絮。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-036",
+      "term": "絖",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "棉絮。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-037",
+      "term": "絖",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "棉絮。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-038",
+      "term": "事",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "職業、營生。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-039",
+      "term": "方",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "藥方。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-040",
+      "term": "百金",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "一百金，表示一筆大錢。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-041",
+      "term": "百金",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "一百金，表示一筆大錢。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-042",
+      "term": "族",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "家族。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-043",
+      "term": "謀",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "商議。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-044",
+      "term": "一朝",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "一旦。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-045",
+      "term": "鬻",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "賣。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-046",
+      "term": "請與之",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "請把藥方給他；與為給予，之指買方。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-047",
+      "term": "說",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "遊說、勸說。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-048",
+      "term": "難",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "戰事、入侵。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-049",
+      "term": "使",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "派遣，動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-050",
+      "term": "將",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "領兵，動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-051",
+      "term": "裂地",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "劃出土地。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-052",
+      "term": "封",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "封賞，賜予封地。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-053",
+      "term": "封",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "封賞，賜予封地。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-054",
+      "term": "一也",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "是相同的。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-055",
+      "term": "或",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "有的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-056",
+      "term": "或",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "有的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-057",
+      "term": "慮",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "考慮；此句考慮把葫蘆繫作腰舟。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-058",
+      "term": "樽",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "原為盛酒器，這裏指可助浮的腰舟。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-059",
+      "term": "猶",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "仍然。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-060",
+      "term": "蓬之心",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "像蓬草般曲折閉塞、不懂變通的心思。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-061",
+      "term": "吾",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "我。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-062",
+      "term": "夫子",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "對惠子的尊稱，相當於先生。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-063",
+      "term": "夫子",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "對惠子的尊稱，相當於先生。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-064",
+      "term": "善",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "善於。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-065",
+      "term": "世世",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "世世代代。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-066",
+      "term": "世世",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "世世代代。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-067",
+      "term": "冬",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "冬天。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-068",
+      "term": "水戰",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "水上作戰。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-069",
+      "term": "大敗",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "大大擊敗。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-070",
+      "term": "子",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "您。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-071",
+      "term": "子",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "您。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-072",
+      "term": "子",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "您。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-073",
+      "term": "子",
+      "occurrence": 4,
+      "kind": "word",
+      "explanation": "您。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-074",
+      "term": "子",
+      "occurrence": 5,
+      "kind": "word",
+      "explanation": "您。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-075",
+      "term": "子",
+      "occurrence": 6,
+      "kind": "word",
+      "explanation": "您。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-076",
+      "term": "憂",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "憂慮。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-077",
+      "term": "其堅不能自舉也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "省略語意：盛水後，葫蘆的質地不足以承受水的重量而提起來。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-078",
+      "term": "客聞之，請買其方百金",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "省略介詞：請以百金買其方，即用百金買他的藥方。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-079",
+      "term": "夫子固拙於用大矣",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "於引出不善運用的方面：你實在不善於利用大的東西。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-080",
+      "term": "能不龜手一也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "判斷句：能使手不皸裂這一效能是相同的。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-081",
+      "term": "或以封，或不免於洴澼絖",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "省略句：有人憑同一藥方受封，有人仍不免從事漂絮；以後省略藥方。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-082",
+      "term": "而浮於江湖",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "介詞結構置於動詞後：在江湖上漂浮。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-083",
+      "term": "謂",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "對……說。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-084",
+      "term": "謂",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "稱作、叫做。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-085",
+      "term": "樗",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "樹名，木質粗劣。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-086",
+      "term": "本",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "樹幹。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-087",
+      "term": "擁腫",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "臃腫、盤結。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-088",
+      "term": "中繩墨",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "符合木工取直的標準；中是符合。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-089",
+      "term": "卷曲",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "彎曲。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-090",
+      "term": "規矩",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "畫圓和畫方的木工工具。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-091",
+      "term": "塗",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "通途，道路。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-092",
+      "term": "顧",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "看、理會。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-093",
+      "term": "去",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "捨棄。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-094",
+      "term": "獨",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "難道，反問副詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-095",
+      "term": "狸狌",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "野貓、黃鼠狼一類小動物。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-096",
+      "term": "卑身",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "低伏身體；卑作動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-097",
+      "term": "候",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "等待。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-098",
+      "term": "敖者",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "出遊的小動物；敖通遨。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-099",
+      "term": "東西",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "向東向西，名詞作狀語。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-100",
+      "term": "跳梁",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "跳躍。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-101",
+      "term": "辟",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "在「不辟」中通避，躲避。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-102",
+      "term": "辟",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "在「不辟」中通避，躲避。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-103",
+      "term": "機辟",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "捕捉鳥獸的機關、陷阱。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-104",
+      "term": "罔罟",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "捕獵的網；罔通網。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-105",
+      "term": "斄牛",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "旄牛，體形大的牛。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-106",
+      "term": "若",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "像。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-107",
+      "term": "執",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "捕捉。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-108",
+      "term": "患",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "憂慮。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-109",
+      "term": "樹",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "種植，動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-110",
+      "term": "樹",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "種植，動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-111",
+      "term": "樹",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "種植，動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-112",
+      "term": "無何有之鄉",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "甚麼也沒有的地方，空曠之地。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-113",
+      "term": "廣莫",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "遼闊空曠；莫同漠。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-114",
+      "term": "彷徨",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "自在徜徉。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-115",
+      "term": "逍遙",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "悠閒自在。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-116",
+      "term": "夭",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "摧折、夭折。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-117",
+      "term": "斤斧",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "斧頭。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-118",
+      "term": "害",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "傷害。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-119",
+      "term": "安",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "哪裏、怎麼，疑問詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-120",
+      "term": "吾",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "我。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-121",
+      "term": "子",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "您。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-122",
+      "term": "子",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "您。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-123",
+      "term": "子",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "您。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-124",
+      "term": "子",
+      "occurrence": 4,
+      "kind": "word",
+      "explanation": "您。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-125",
+      "term": "子",
+      "occurrence": 5,
+      "kind": "word",
+      "explanation": "您。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-126",
+      "term": "子",
+      "occurrence": 6,
+      "kind": "word",
+      "explanation": "您。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-127",
+      "term": "言",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "言論。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-128",
+      "term": "匠者",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "木匠。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-129",
+      "term": "中",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "落入、觸中；在中於機辟中指落入機關陷阱。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-130",
+      "term": "側",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "旁邊。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-131",
+      "term": "寢卧",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "睡卧。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-132",
+      "term": "垂天之雲",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "低垂在天空的雲，形容牛體形大。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-133",
+      "term": "中於機辟，死於罔罟",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "於引出遭遇的陷阱和網具，意即落入陷阱、死在捕網中。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-134",
+      "term": "何不樹之於無何有之鄉",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "介詞結構置於動詞後：何不在空曠之地種下它？",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-135",
+      "term": "彷徨乎無為其側，逍遙乎寢卧其下",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "省略處所介詞：自在徜徉於樹旁，悠閒睡卧於樹下。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-136",
+      "term": "不夭斤斧",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "省略介詞的被動表達：不夭於斤斧，不被斧頭砍伐摧折。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-137",
+      "term": "安所困苦哉",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "反問句：哪裏還會有甚麼困苦呢？",
+      "source": "supplement"
+    }
+  ],
+  "reader_annotation_source": {
+    "label": "教育局原有注釋；新增字詞及句式為按語境補充",
+    "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_05.pdf"
+  }
 }

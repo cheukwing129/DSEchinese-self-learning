@@ -6,7 +6,15 @@
       "label": "首聯",
       "text": "花近高樓傷客心，萬方多難此登臨。",
       "summary": "眼前繁花本應賞心悅目，卻反而使客居他鄉的詩人傷心，因為此刻正值天下多災多難，詩人在此時登臨此樓，感觸尤深。",
-      "annotation_ids": []
+      "annotation_ids": [],
+      "reader_annotation_ids": [
+        "r1-001",
+        "r1-002",
+        "r1-003",
+        "r1-004",
+        "r1-005",
+        "r1-006"
+      ]
     },
     {
       "id": 2,
@@ -16,6 +24,13 @@
       "annotation_ids": [
         "n01",
         "n02"
+      ],
+      "reader_annotation_ids": [
+        "r2-007",
+        "r2-008",
+        "r2-009",
+        "r2-010",
+        "r2-011"
       ]
     },
     {
@@ -26,6 +41,16 @@
       "annotation_ids": [
         "n03",
         "n04"
+      ],
+      "reader_annotation_ids": [
+        "r3-012",
+        "r3-013",
+        "r3-014",
+        "r3-015",
+        "r3-016",
+        "r3-017",
+        "r3-018",
+        "r3-019"
       ]
     },
     {
@@ -36,6 +61,16 @@
       "annotation_ids": [
         "n05",
         "n06"
+      ],
+      "reader_annotation_ids": [
+        "r4-020",
+        "r4-021",
+        "r4-022",
+        "r4-023",
+        "r4-024",
+        "r4-025",
+        "r4-026",
+        "r4-027"
       ]
     }
   ],
@@ -70,5 +105,227 @@
       "term": "梁甫吟",
       "explanation": "一作《梁父吟》。據《三國志‧蜀志》，諸葛亮在隆中躬耕時，好為《梁父吟》。"
     }
-  ]
+  ],
+  "reader_annotations": [
+    {
+      "id": "r1-001",
+      "term": "傷",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "使……悲傷。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-002",
+      "term": "客心",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "旅居他鄉的詩人之心。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-003",
+      "term": "萬方",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "天下各地。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-004",
+      "term": "多難",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "多有禍亂。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-005",
+      "term": "登臨",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "登高遠望。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-006",
+      "term": "萬方多難此登臨",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "語序調整：天下多難之時，在此登樓遠望；此表示眼前登臨的地方。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-007",
+      "term": "錦江",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "成都的河流。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-008",
+      "term": "玉壘",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "成都附近的山。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-009",
+      "term": "來天地",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "春色從天地間湧來。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-010",
+      "term": "變古今",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "浮雲古往今來變幻不定。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-011",
+      "term": "錦江春色來天地，玉壘浮雲變古今",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "省略介詞的詩句：春色來於天地，浮雲變於古今；前句寫空間，後句寫時間。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-012",
+      "term": "北極",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "北極星，借喻朝廷。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-013",
+      "term": "終",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "終究。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-014",
+      "term": "改",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "改變，這裏指朝廷覆亡。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-015",
+      "term": "西山",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "成都西部群山。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-016",
+      "term": "寇盜",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "入侵的吐蕃軍隊。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-017",
+      "term": "莫",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "不要。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-018",
+      "term": "相侵",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "侵犯唐朝；相在此指侵擾的對象。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-019",
+      "term": "北極朝廷終不改",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "以北極星固定不移比喻朝廷仍能維持，表達對國運的期望。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-020",
+      "term": "可憐",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "可歎、可惜。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-021",
+      "term": "後主",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "蜀漢後主劉禪。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-022",
+      "term": "還",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "仍然。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-023",
+      "term": "祠廟",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "祭祀人物的廟宇。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-024",
+      "term": "聊",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "姑且。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-025",
+      "term": "為",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "吟作、吟誦。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-026",
+      "term": "梁甫吟",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "樂府篇名，相傳諸葛亮未出仕時愛吟此曲。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-027",
+      "term": "可憐後主還祠廟",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "省略句：可歎劉禪仍有祠廟受祭祀，寄託對昏庸誤國者的感慨。",
+      "source": "supplement"
+    }
+  ],
+  "reader_annotation_source": {
+    "label": "教育局原有注釋；新增字詞及句式為按語境補充",
+    "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_16c.pdf"
+  }
 }

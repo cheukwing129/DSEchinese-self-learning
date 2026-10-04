@@ -2700,6 +2700,14 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 
 
+.reader-extra-notes { margin: 12px 0; font-size: 14px; }
+.reader-extra-notes summary { cursor: pointer; color: var(--color-ink-soft); padding: 8px 0; }
+.reader-extra-notes summary:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+.reader-note-list { display: flex; flex-wrap: wrap; gap: 8px 12px; padding: 8px 0; }
+.reader-note-button { text-align: left; max-width: 100%; overflow-wrap: anywhere; line-height: 1.8; }
+.reader-source-note { font-size: 12px; line-height: 1.8; color: var(--color-ink-soft); }
+.reader-source-note a { display: block; }
+
 /* ===== Content Study UI 2.0: words / comprehension / analysis / theme ===== */
 .study-page-shell {
   --study-accent: var(--color-accent);

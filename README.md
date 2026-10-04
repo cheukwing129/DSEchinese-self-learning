@@ -122,6 +122,10 @@ data/_staging/dse-12-vocab-table.json  ← 十二篇字詞表原始資料（暫�
 
 ### `text.json` 資料模型備註
 
+- **原文頁專用補充**：`reader_annotations` 與各段的 `reader_annotation_ids` 只由「原文與誦讀」讀取，不改動字詞與句式頁使用的 `annotations`。補充條目以 `kind: "word"`／`"sentence"` 區分字詞、句式，以 `source: "supplement"` 明示語境補充；每次出現以段內 `occurrence` 定位。同字異義必須分開寫，不可跨段套用詞解。
+- **注釋交疊**：原文先保留可點選的字詞及完整複詞，句式另在段落下方展開；被短詞遮住的原有長句注釋也保留於「原有及延伸注釋」，不因交疊而消失。教育局每篇 PDF 連結放在 `reader_annotation_source`。
+- 修改原文補充後執行 `node scripts/validate-reader-annotations.mjs`，檢查 16 篇的定位、重複資料、原文不變及全部詞解可查閱。
+
 - **段落分組（`section` 欄位）**：若某段落物件加上 `"section": "論仁"` 這類欄位，「原文與誦讀」頁面會自動改為按 `section` 分組導覽（如《論仁、論孝、論君子》分成「論仁／論孝／論君子」三個分頁），而非逐段導覽。適合語錄體、輯錄體等非單一敘事結構的篇章。
 - **重複詞語注釋（`occurrence` 欄位）**：若同一段內有兩個完全相同的詞語，但意思不同，可為注釋加上 `"occurrence": 1` 或 `"occurrence": 2`（預設為 1），分別建立兩條注釋，避免兩處被誤標成同一個解釋。
 - **詩詞的 `label` 欄位**：詩詞段落物件除 `id`、`text`、`summary`、`annotation_ids` 外，會額外加上 `label`（如「首聯」「上片‧起筆」），用作前端顯示分段名稱之用；古文篇章不需要此欄位。

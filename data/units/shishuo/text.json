@@ -7,6 +7,33 @@
       "summary": "開宗明義提出「古之學者必有師」的中心論點，指出老師的角色是傳道、受業、解惑。",
       "annotation_ids": [
         "n01"
+      ],
+      "reader_annotation_ids": [
+        "r1-001",
+        "r1-002",
+        "r1-003",
+        "r1-004",
+        "r1-005",
+        "r1-006",
+        "r1-007",
+        "r1-008",
+        "r1-009",
+        "r1-010",
+        "r1-011",
+        "r1-012",
+        "r1-013",
+        "r1-014",
+        "r1-015",
+        "r1-016",
+        "r1-017",
+        "r1-018",
+        "r1-019",
+        "r1-020",
+        "r1-021",
+        "r1-022",
+        "r1-023",
+        "r1-024",
+        "r1-025"
       ]
     },
     {
@@ -18,6 +45,51 @@
         "n03",
         "n04",
         "n02b"
+      ],
+      "reader_annotation_ids": [
+        "r2-026",
+        "r2-027",
+        "r2-028",
+        "r2-029",
+        "r2-030",
+        "r2-031",
+        "r2-032",
+        "r2-033",
+        "r2-034",
+        "r2-035",
+        "r2-036",
+        "r2-037",
+        "r2-038",
+        "r2-039",
+        "r2-040",
+        "r2-041",
+        "r2-042",
+        "r2-043",
+        "r2-044",
+        "r2-045",
+        "r2-046",
+        "r2-047",
+        "r2-048",
+        "r2-049",
+        "r2-050",
+        "r2-051",
+        "r2-052",
+        "r2-053",
+        "r2-054",
+        "r2-055",
+        "r2-056",
+        "r2-057",
+        "r2-058",
+        "r2-059",
+        "r2-062",
+        "r2-061",
+        "r2-063",
+        "r2-064",
+        "r2-065",
+        "r2-066",
+        "r2-067",
+        "r2-068",
+        "r2-069"
       ]
     },
     {
@@ -29,6 +101,41 @@
         "n06",
         "n07",
         "n06b"
+      ],
+      "reader_annotation_ids": [
+        "r3-070",
+        "r3-071",
+        "r3-072",
+        "r3-073",
+        "r3-074",
+        "r3-075",
+        "r3-076",
+        "r3-077",
+        "r3-078",
+        "r3-079",
+        "r3-080",
+        "r3-081",
+        "r3-082",
+        "r3-083",
+        "r3-084",
+        "r3-085",
+        "r3-086",
+        "r3-087",
+        "r3-088",
+        "r3-089",
+        "r3-090",
+        "r3-091",
+        "r3-092",
+        "r3-093",
+        "r3-094",
+        "r3-097",
+        "r3-096",
+        "r3-098",
+        "r3-099",
+        "r3-100",
+        "r3-101",
+        "r3-102",
+        "r3-103"
       ]
     },
     {
@@ -40,6 +147,29 @@
         "n09",
         "n10",
         "n08b"
+      ],
+      "reader_annotation_ids": [
+        "r4-104",
+        "r4-105",
+        "r4-106",
+        "r4-107",
+        "r4-108",
+        "r4-109",
+        "r4-110",
+        "r4-111",
+        "r4-112",
+        "r4-113",
+        "r4-114",
+        "r4-115",
+        "r4-116",
+        "r4-117",
+        "r4-118",
+        "r4-119",
+        "r4-120",
+        "r4-121",
+        "r4-122",
+        "r4-123",
+        "r4-124"
       ]
     },
     {
@@ -54,6 +184,37 @@
         "n15",
         "n16",
         "n17"
+      ],
+      "reader_annotation_ids": [
+        "r5-125",
+        "r5-126",
+        "r5-127",
+        "r5-128",
+        "r5-129",
+        "r5-130",
+        "r5-131",
+        "r5-132",
+        "r5-133",
+        "r5-134",
+        "r5-135",
+        "r5-136",
+        "r5-137",
+        "r5-138",
+        "r5-139",
+        "r5-140",
+        "r5-141",
+        "r5-142",
+        "r5-143",
+        "r5-144",
+        "r5-145",
+        "r5-146",
+        "r5-147",
+        "r5-148",
+        "r5-149",
+        "r5-150",
+        "r5-151",
+        "r5-152",
+        "r5-153"
       ]
     },
     {
@@ -65,6 +226,29 @@
         "n19",
         "n20",
         "n21"
+      ],
+      "reader_annotation_ids": [
+        "r6-154",
+        "r6-155",
+        "r6-156",
+        "r6-157",
+        "r6-158",
+        "r6-159",
+        "r6-160",
+        "r6-161",
+        "r6-162",
+        "r6-163",
+        "r6-164",
+        "r6-165",
+        "r6-166",
+        "r6-167",
+        "r6-168",
+        "r6-169",
+        "r6-170",
+        "r6-171",
+        "r6-172",
+        "r6-173",
+        "r6-174"
       ]
     },
     {
@@ -77,6 +261,24 @@
         "n24",
         "n25",
         "n26"
+      ],
+      "reader_annotation_ids": [
+        "r7-175",
+        "r7-176",
+        "r7-177",
+        "r7-178",
+        "r7-179",
+        "r7-180",
+        "r7-181",
+        "r7-182",
+        "r7-183",
+        "r7-184",
+        "r7-185",
+        "r7-186",
+        "r7-187",
+        "r7-188",
+        "r7-189",
+        "r7-190"
       ]
     }
   ],
@@ -239,5 +441,1515 @@
       "occurrence": 1,
       "explanation": "糊塗、不明事理。"
     }
-  ]
+  ],
+  "reader_annotations": [
+    {
+      "id": "r1-001",
+      "term": "古",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "古代。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-002",
+      "term": "學者",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "求學的人；不是現代所指專門研究學問的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-003",
+      "term": "師",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "老師，名詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-004",
+      "term": "師",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "老師，名詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-005",
+      "term": "師",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "老師，名詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-006",
+      "term": "傳道",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "傳授儒家道理。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-007",
+      "term": "受業",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "教授經書課業；受通授。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-008",
+      "term": "解惑",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "解答疑難。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-009",
+      "term": "惑",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "疑惑、疑難，名詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-010",
+      "term": "惑",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "疑惑、疑難，名詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-011",
+      "term": "惑",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "疑惑、疑難，名詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-012",
+      "term": "惑",
+      "occurrence": 4,
+      "kind": "word",
+      "explanation": "疑惑、疑難，名詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-013",
+      "term": "孰",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "誰，疑問代詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-014",
+      "term": "從師",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "跟隨老師學習。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-015",
+      "term": "終",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "始終、終究。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-016",
+      "term": "矣",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "句末語氣詞，表示陳述或感歎。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-017",
+      "term": "其",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "那些，指不從師求解的疑難。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-018",
+      "term": "所以",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "用來；此處表示老師的職責與用途。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-019",
+      "term": "從",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "跟隨。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-020",
+      "term": "解",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "解開、解答。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-021",
+      "term": "解",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "解開、解答。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-022",
+      "term": "生而知之",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "一出生便懂得道理；之指道理。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-023",
+      "term": "師者，所以傳道、受業、解惑也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "判斷句：以「者……也」說明老師的職責；所以是用來……的，不是表示因果的「所以」。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-024",
+      "term": "古之學者",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "之作結構助詞，相當於「的」。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-025",
+      "term": "人非生而知之者",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "非表示否定；之代指道理，者指這樣的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-026",
+      "term": "生",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "出生。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-027",
+      "term": "生",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "出生。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-028",
+      "term": "生",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "出生。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-029",
+      "term": "乎",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "於，介詞；在「生乎吾前／後」「先乎吾」中分別表示在、比。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-030",
+      "term": "乎",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "於，介詞；在「生乎吾前／後」「先乎吾」中分別表示在、比。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-031",
+      "term": "乎",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "於，介詞；在「生乎吾前／後」「先乎吾」中分別表示在、比。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-032",
+      "term": "乎",
+      "occurrence": 4,
+      "kind": "word",
+      "explanation": "於，介詞；在「生乎吾前／後」「先乎吾」中分別表示在、比。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-033",
+      "term": "乎",
+      "occurrence": 5,
+      "kind": "word",
+      "explanation": "於，介詞；在「生乎吾前／後」「先乎吾」中分別表示在、比。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-034",
+      "term": "吾",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "我。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-035",
+      "term": "吾",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "我。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-036",
+      "term": "吾",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "我。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-037",
+      "term": "吾",
+      "occurrence": 4,
+      "kind": "word",
+      "explanation": "我。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-038",
+      "term": "吾",
+      "occurrence": 5,
+      "kind": "word",
+      "explanation": "我。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-039",
+      "term": "吾",
+      "occurrence": 6,
+      "kind": "word",
+      "explanation": "我。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-040",
+      "term": "吾",
+      "occurrence": 7,
+      "kind": "word",
+      "explanation": "我。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-041",
+      "term": "吾",
+      "occurrence": 8,
+      "kind": "word",
+      "explanation": "我。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-042",
+      "term": "聞道",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "懂得道理。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-043",
+      "term": "聞道",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "懂得道理。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-044",
+      "term": "師之",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "以他為老師；師為意動用法，之代指懂得道理的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-045",
+      "term": "師之",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "以他為老師；師為意動用法，之代指懂得道理的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-046",
+      "term": "師之",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "以他為老師；師為意動用法，之代指懂得道理的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-047",
+      "term": "師道",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "學習道理；此處師為動詞，道為賓語。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-048",
+      "term": "庸",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "豈、難道，反問副詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-049",
+      "term": "是故",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "因此。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-050",
+      "term": "無",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "不論、不分。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-051",
+      "term": "無",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "不論、不分。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-052",
+      "term": "無",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "不論、不分。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-053",
+      "term": "無",
+      "occurrence": 4,
+      "kind": "word",
+      "explanation": "不論、不分。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-054",
+      "term": "貴",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "地位高。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-055",
+      "term": "賤",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "地位低。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-056",
+      "term": "長",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "年長。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-057",
+      "term": "少",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "年少。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-058",
+      "term": "所存",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "存在的地方。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-059",
+      "term": "所存",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "存在的地方。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-061",
+      "term": "固",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "本來。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-062",
+      "term": "亦",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "也。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-063",
+      "term": "年",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "年齡。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-064",
+      "term": "之所存",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "存在的地方；之連接主語與所字結構。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-065",
+      "term": "之所存",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "存在的地方；之連接主語與所字結構。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-066",
+      "term": "其聞道也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "其代指所說的人；也用於句中停頓，整句意為他懂得道理本來就比我早。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-067",
+      "term": "其聞道也",
+      "occurrence": 2,
+      "kind": "sentence",
+      "explanation": "其代指所說的人；也用於句中停頓，整句意為他懂得道理本來就比我早。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-068",
+      "term": "道之所存，師之所存也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "判斷句：道理存在的地方，就是老師所在的地方。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-069",
+      "term": "生於吾",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "於引出比較對象「我」；整句問是否需要計較出生比我早或晚。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-070",
+      "term": "嗟乎",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "表示感歎。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-071",
+      "term": "師道",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "從師學習的風尚。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-072",
+      "term": "傳",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "流傳。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-073",
+      "term": "聖人",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "道德學問高超的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-074",
+      "term": "聖人",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "道德學問高超的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-075",
+      "term": "聖人",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "道德學問高超的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-076",
+      "term": "出人",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "超出一般人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-077",
+      "term": "猶且",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "尚且。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-078",
+      "term": "眾人",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "一般人；不是單純指很多人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-079",
+      "term": "恥",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "以……為羞恥，意動用法。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-080",
+      "term": "聖",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "「聖益聖」前一聖指聖人，後一聖指聖明。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-081",
+      "term": "聖",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "「聖益聖」前一聖指聖人，後一聖指聖明。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-082",
+      "term": "聖",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "「聖益聖」前一聖指聖人，後一聖指聖明。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-083",
+      "term": "聖",
+      "occurrence": 4,
+      "kind": "word",
+      "explanation": "「聖益聖」前一聖指聖人，後一聖指聖明。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-084",
+      "term": "聖",
+      "occurrence": 5,
+      "kind": "word",
+      "explanation": "「聖益聖」前一聖指聖人，後一聖指聖明。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-085",
+      "term": "聖",
+      "occurrence": 6,
+      "kind": "word",
+      "explanation": "「聖益聖」前一聖指聖人，後一聖指聖明。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-086",
+      "term": "愚",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "「愚益愚」前一愚指愚人，後一愚指愚昧。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-087",
+      "term": "愚",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "「愚益愚」前一愚指愚人，後一愚指愚昧。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-088",
+      "term": "愚",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "「愚益愚」前一愚指愚人，後一愚指愚昧。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-089",
+      "term": "愚",
+      "occurrence": 4,
+      "kind": "word",
+      "explanation": "「愚益愚」前一愚指愚人，後一愚指愚昧。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-090",
+      "term": "益",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "更加、越來越。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-091",
+      "term": "益",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "更加、越來越。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-092",
+      "term": "所以",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "……的原因。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-093",
+      "term": "所以",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "……的原因。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-094",
+      "term": "此",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "指從師與恥於從師兩種態度。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-096",
+      "term": "下",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "低於、比不上。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-097",
+      "term": "焉",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "句末語氣詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-098",
+      "term": "從師",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "向老師學習。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-099",
+      "term": "為聖",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "成為聖人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-100",
+      "term": "為愚",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "成為愚人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-101",
+      "term": "恥學於師",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "於引出學習的對象；即以向老師學習為恥。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-102",
+      "term": "其皆出於此乎",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "其表示推測，大概；乎表示疑問。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-103",
+      "term": "師道之不傳也久矣",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "之置於主謂之間，使「師道不傳」成為陳述對象，不必逐字翻譯。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-104",
+      "term": "子",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "子女。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-105",
+      "term": "子",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "子女。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-106",
+      "term": "擇",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "選擇。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-107",
+      "term": "身",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "自身、自己。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-108",
+      "term": "童子",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "兒童。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-109",
+      "term": "句讀",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "文句中的停頓；句為語意已盡，讀為語意未盡而須停頓。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-110",
+      "term": "句讀",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "文句中的停頓；句為語意已盡，讀為語意未盡而須停頓。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-111",
+      "term": "或",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "有的方面，分指句讀與疑惑兩種情況。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-112",
+      "term": "或",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "有的方面，分指句讀與疑惑兩種情況。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-113",
+      "term": "或不焉",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "有的方面不從師；不在這裏通否。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-114",
+      "term": "小學",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "學習小的方面，指句讀；不是小學教育。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-115",
+      "term": "大遺",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "遺漏大的方面，指傳道解惑。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-116",
+      "term": "明",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "明智。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-117",
+      "term": "師焉",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "向老師學習。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-118",
+      "term": "師焉",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "向老師學習。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-119",
+      "term": "惑矣",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "真糊塗；惑作形容詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-120",
+      "term": "彼",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "那些。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-121",
+      "term": "授",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "教授。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-122",
+      "term": "習",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "使兒童學會、熟習，這裏有使動意味。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-123",
+      "term": "句讀之不知，惑之不解",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "賓語前置：即「不知句讀，不解惑」，之用來標示前置的賓語。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-124",
+      "term": "授之書而習其句讀者",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "授之書：把書教給他，之指兒童；習其句讀指使兒童學會句讀。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-125",
+      "term": "巫",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "從事祭祀、占卜等活動的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-126",
+      "term": "巫",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "從事祭祀、占卜等活動的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-127",
+      "term": "醫",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "醫生。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-128",
+      "term": "醫",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "醫生。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-129",
+      "term": "樂師",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "掌管或教授音樂的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-130",
+      "term": "樂師",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "掌管或教授音樂的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-131",
+      "term": "百工",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "各種工匠。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-132",
+      "term": "百工",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "各種工匠。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-133",
+      "term": "相師",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "互相學習。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-134",
+      "term": "族",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "一類人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-135",
+      "term": "羣聚",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "聚在一起。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-136",
+      "term": "相若",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "相近、差不多。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-137",
+      "term": "卑",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "低。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-138",
+      "term": "盛",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "高、大，形容官位顯赫。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-139",
+      "term": "諛",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "諂媚、奉承。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-140",
+      "term": "復",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "恢復。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-141",
+      "term": "君子",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "這裏帶諷刺意味，指士大夫。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-142",
+      "term": "不齒",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "不屑與之並列。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-143",
+      "term": "乃",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "竟然。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-144",
+      "term": "及",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "比得上。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-145",
+      "term": "歟",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "句末感歎語氣詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-146",
+      "term": "士大夫",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "有官職的士人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-147",
+      "term": "相似",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "相近。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-148",
+      "term": "官",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "官位。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-149",
+      "term": "羞",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "羞恥。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-150",
+      "term": "反",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "反而。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-151",
+      "term": "智",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "智慧、才智。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-152",
+      "term": "云者",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "如此說的，指老師、弟子的稱呼。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-153",
+      "term": "位卑則足羞，官盛則近諛",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "省略句：向地位低的人求教便覺得羞恥，向官位高的人求教便覺得近於奉承；補出求教的意思。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-154",
+      "term": "常師",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "固定的老師。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-155",
+      "term": "師郯子",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "以郯子為師；師為意動用法。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-156",
+      "term": "萇弘",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "周朝大夫，孔子曾向他請教音樂。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-157",
+      "term": "師襄",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "魯國樂官，孔子曾向他學琴。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-158",
+      "term": "老聃",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "老子，孔子曾向他問禮。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-159",
+      "term": "徒",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "這一類人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-160",
+      "term": "賢",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "才德高。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-161",
+      "term": "賢",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "才德高。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-162",
+      "term": "不必",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "不一定；不是「毋須」。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-163",
+      "term": "不必",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "不一定；不是「毋須」。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-164",
+      "term": "術業",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "學問、技藝。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-165",
+      "term": "專攻",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "專門研究。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-166",
+      "term": "如是",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "像這樣。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-167",
+      "term": "而已",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "罷了，表示限定。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-168",
+      "term": "聞道",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "懂得道理。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-169",
+      "term": "弟子",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "學生。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-170",
+      "term": "弟子",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "學生。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-171",
+      "term": "不如",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "比不上。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-172",
+      "term": "先後",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "時間的早晚。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-173",
+      "term": "是故",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "因此。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-174",
+      "term": "師不必賢於弟子",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "比較句：於表示比，老師不一定比學生賢能。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-175",
+      "term": "好",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "喜愛。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-176",
+      "term": "古文",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "古代散文，這裏指先秦兩漢散文。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-177",
+      "term": "經傳",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "經書及解釋經書的文字。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-178",
+      "term": "通習",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "全面學習。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-179",
+      "term": "拘",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "拘束、限制。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-180",
+      "term": "時",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "當時恥於從師的風氣。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-181",
+      "term": "余",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "我，作者自稱。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-182",
+      "term": "余",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "我，作者自稱。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-183",
+      "term": "嘉",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "讚許。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-184",
+      "term": "古道",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "古人從師學習的風尚。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-185",
+      "term": "以",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "用來，表示目的。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-186",
+      "term": "六藝",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "《詩》《書》《禮》《樂》《易》《春秋》六部經書。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-187",
+      "term": "皆",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "都。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-188",
+      "term": "貽",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "贈送。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-189",
+      "term": "不拘於時",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "被動句：於引出施事，意思是不被當時的風氣拘束。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-190",
+      "term": "學於余",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "介詞結構置於動詞後，向我學習。",
+      "source": "supplement"
+    }
+  ],
+  "reader_annotation_source": {
+    "label": "教育局原有注釋；新增字詞及句式為按語境補充",
+    "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_12.pdf"
+  }
 }

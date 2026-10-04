@@ -6,7 +6,14 @@
       "label": "上片‧起筆",
       "text": "大江東去，浪淘盡、千古風流人物。",
       "summary": "以滾滾東流的大江起筆，展現雄闊的意境空間，藉江水東去強調時間流逝，帶出千古風流人物如被江浪淘盡，物是人非之感。",
-      "annotation_ids": []
+      "annotation_ids": [],
+      "reader_annotation_ids": [
+        "r1-001",
+        "r1-002",
+        "r1-003",
+        "r1-004",
+        "r1-005"
+      ]
     },
     {
       "id": 2,
@@ -16,6 +23,12 @@
       "annotation_ids": [
         "n01",
         "n02"
+      ],
+      "reader_annotation_ids": [
+        "r2-006",
+        "r2-007",
+        "r2-008",
+        "r2-009"
       ]
     },
     {
@@ -23,7 +36,17 @@
       "label": "上片‧寫景",
       "text": "亂石穿空，驚濤拍岸，捲起千堆雪。江山如畫，一時多少豪傑！",
       "summary": "具體描寫赤壁磯崖岸險峻、驚濤拍岸、浪花如雪的壯觀景色，總結大好江山曾出現無數令人景仰的豪傑。",
-      "annotation_ids": []
+      "annotation_ids": [],
+      "reader_annotation_ids": [
+        "r3-010",
+        "r3-011",
+        "r3-012",
+        "r3-013",
+        "r3-014",
+        "r3-015",
+        "r3-016",
+        "r3-017"
+      ]
     },
     {
       "id": 4,
@@ -34,6 +57,17 @@
         "n03",
         "n04",
         "n05"
+      ],
+      "reader_annotation_ids": [
+        "r4-018",
+        "r4-019",
+        "r4-020",
+        "r4-021",
+        "r4-022",
+        "r4-023",
+        "r4-024",
+        "r4-025",
+        "r4-026"
       ]
     },
     {
@@ -44,6 +78,13 @@
       "annotation_ids": [
         "n06",
         "n07"
+      ],
+      "reader_annotation_ids": [
+        "r5-027",
+        "r5-028",
+        "r5-029",
+        "r5-030",
+        "r5-031"
       ]
     },
     {
@@ -54,6 +95,14 @@
       "annotation_ids": [
         "n08",
         "n09"
+      ],
+      "reader_annotation_ids": [
+        "r6-032",
+        "r6-033",
+        "r6-034",
+        "r6-035",
+        "r6-036",
+        "r6-037"
       ]
     }
   ],
@@ -109,5 +158,307 @@
       "putonghua": "lèi",
       "explanation": "把酒灑在地上表示祭奠。"
     }
-  ]
+  ],
+  "reader_annotations": [
+    {
+      "id": "r1-001",
+      "term": "大江",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "長江。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-002",
+      "term": "東",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "向東，名詞作狀語。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-003",
+      "term": "淘盡",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "沖洗盡，比喻歷史使人物消逝。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-004",
+      "term": "千古",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "悠久的歷史。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-005",
+      "term": "風流人物",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "才華出眾、功業卓著的人物；不是風流男女。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-006",
+      "term": "故壘",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "舊時軍營的壁壘。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-007",
+      "term": "人道",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "人們說。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-008",
+      "term": "周郎",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "周瑜，字公瑾。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-009",
+      "term": "赤壁",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "這裏指黃州赤壁，借此追想三國赤壁之戰。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-010",
+      "term": "亂石",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "錯落突兀的岩石。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-011",
+      "term": "穿空",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "高聳入雲。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-012",
+      "term": "驚濤",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "洶湧的浪濤。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-013",
+      "term": "雪",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "比喻浪花。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-014",
+      "term": "江山",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "山川景色。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-015",
+      "term": "一時",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "同一時代。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-016",
+      "term": "豪傑",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "才智、功業傑出的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-017",
+      "term": "捲起千堆雪",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "比喻句：雪指白色浪花，千堆形容浪花很多。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-018",
+      "term": "公瑾",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "周瑜的字。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-019",
+      "term": "小喬",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "周瑜的妻子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-020",
+      "term": "初嫁了",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "剛嫁給周瑜；了表示動作完成。詞中將婚事與建功歲月連寫。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-021",
+      "term": "雄姿英發",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "英姿勃發。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-022",
+      "term": "羽扇",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "羽毛製成的扇子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-023",
+      "term": "綸巾",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "青絲頭巾。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-024",
+      "term": "檣櫓",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "桅杆與船槳，借指曹軍戰船。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-025",
+      "term": "灰飛煙滅",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "像灰和煙般消散，指曹軍戰船被焚毀。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-026",
+      "term": "羽扇綸巾",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "省略動詞：手持羽扇，頭戴綸巾，寫周瑜儒雅從容。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-027",
+      "term": "故國",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "三國時的古戰場。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-028",
+      "term": "神遊",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "在想像中遊歷。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-029",
+      "term": "多情",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "情感豐富，這裏指懷古感慨很多。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-030",
+      "term": "華髮",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "花白的頭髮。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-031",
+      "term": "故國神遊，多情應笑我，早生華髮",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "倒裝：神遊故國，應笑我多情、早生華髮；故國是神遊的賓語，多情是笑我的內容。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-032",
+      "term": "人間",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "人生、世間。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-033",
+      "term": "尊",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "同樽，酒杯。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-034",
+      "term": "還",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "還是、且。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-035",
+      "term": "酹",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "把酒灑在地上或水上祭奠。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-036",
+      "term": "江月",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "江上的明月。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-037",
+      "term": "一尊還酹江月",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "省略介詞：以一尊酒酹江月，把一杯酒灑下，祭奠江上的明月。",
+      "source": "supplement"
+    }
+  ],
+  "reader_annotation_source": {
+    "label": "教育局原有注釋；新增字詞及句式為按語境補充",
+    "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_17a.pdf"
+  }
 }

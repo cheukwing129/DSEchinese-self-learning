@@ -11,6 +11,30 @@
         "n03",
         "n04",
         "n05"
+      ],
+      "reader_annotation_ids": [
+        "r1-001",
+        "r1-002",
+        "r1-003",
+        "r1-004",
+        "r1-005",
+        "r1-006",
+        "r1-007",
+        "r1-008",
+        "r1-009",
+        "r1-010",
+        "r1-011",
+        "r1-012",
+        "r1-013",
+        "r1-014",
+        "r1-015",
+        "r1-016",
+        "r1-017",
+        "r1-018",
+        "r1-019",
+        "r1-020",
+        "r1-021",
+        "r1-022"
       ]
     },
     {
@@ -23,6 +47,22 @@
         "n08",
         "n09",
         "n10"
+      ],
+      "reader_annotation_ids": [
+        "r2-023",
+        "r2-024",
+        "r2-025",
+        "r2-026",
+        "r2-027",
+        "r2-028",
+        "r2-029",
+        "r2-030",
+        "r2-031",
+        "r2-032",
+        "r2-033",
+        "r2-034",
+        "r2-035",
+        "r2-036"
       ]
     },
     {
@@ -36,6 +76,27 @@
         "n14",
         "n15",
         "n16"
+      ],
+      "reader_annotation_ids": [
+        "r3-037",
+        "r3-038",
+        "r3-039",
+        "r3-040",
+        "r3-041",
+        "r3-042",
+        "r3-043",
+        "r3-044",
+        "r3-045",
+        "r3-046",
+        "r3-047",
+        "r3-048",
+        "r3-049",
+        "r3-050",
+        "r3-051",
+        "r3-052",
+        "r3-053",
+        "r3-054",
+        "r3-055"
       ]
     },
     {
@@ -51,6 +112,42 @@
         "n22",
         "n23",
         "n22b"
+      ],
+      "reader_annotation_ids": [
+        "r4-056",
+        "r4-057",
+        "r4-058",
+        "r4-059",
+        "r4-060",
+        "r4-061",
+        "r4-062",
+        "r4-063",
+        "r4-064",
+        "r4-065",
+        "r4-066",
+        "r4-067",
+        "r4-068",
+        "r4-069",
+        "r4-070",
+        "r4-071",
+        "r4-072",
+        "r4-073",
+        "r4-074",
+        "r4-075",
+        "r4-076",
+        "r4-087",
+        "r4-088",
+        "r4-089",
+        "r4-080",
+        "r4-081",
+        "r4-082",
+        "r4-083",
+        "r4-084",
+        "r4-085",
+        "r4-086",
+        "r4-090",
+        "r4-091",
+        "r4-092"
       ]
     },
     {
@@ -62,6 +159,32 @@
         "n25",
         "n26",
         "n25b"
+      ],
+      "reader_annotation_ids": [
+        "r5-093",
+        "r5-094",
+        "r5-095",
+        "r5-096",
+        "r5-097",
+        "r5-098",
+        "r5-099",
+        "r5-100",
+        "r5-101",
+        "r5-102",
+        "r5-103",
+        "r5-104",
+        "r5-105",
+        "r5-106",
+        "r5-107",
+        "r5-108",
+        "r5-109",
+        "r5-110",
+        "r5-111",
+        "r5-112",
+        "r5-113",
+        "r5-114",
+        "r5-115",
+        "r5-116"
       ]
     },
     {
@@ -84,6 +207,55 @@
         "n31b",
         "n32b",
         "n35b"
+      ],
+      "reader_annotation_ids": [
+        "r6-117",
+        "r6-118",
+        "r6-119",
+        "r6-120",
+        "r6-121",
+        "r6-122",
+        "r6-123",
+        "r6-124",
+        "r6-125",
+        "r6-126",
+        "r6-127",
+        "r6-128",
+        "r6-129",
+        "r6-130",
+        "r6-131",
+        "r6-132",
+        "r6-133",
+        "r6-134",
+        "r6-135",
+        "r6-136",
+        "r6-137",
+        "r6-138",
+        "r6-139",
+        "r6-140",
+        "r6-141",
+        "r6-142",
+        "r6-143",
+        "r6-144",
+        "r6-145",
+        "r6-146",
+        "r6-147",
+        "r6-148",
+        "r6-149",
+        "r6-150",
+        "r6-151",
+        "r6-152",
+        "r6-153",
+        "r6-154",
+        "r6-155",
+        "r6-156",
+        "r6-157",
+        "r6-158",
+        "r6-159",
+        "r6-160",
+        "r6-161",
+        "r6-162",
+        "r6-163"
       ]
     },
     {
@@ -95,6 +267,28 @@
         "n39",
         "n40",
         "n41"
+      ],
+      "reader_annotation_ids": [
+        "r7-164",
+        "r7-165",
+        "r7-166",
+        "r7-167",
+        "r7-168",
+        "r7-169",
+        "r7-170",
+        "r7-171",
+        "r7-172",
+        "r7-173",
+        "r7-174",
+        "r7-175",
+        "r7-176",
+        "r7-177",
+        "r7-178",
+        "r7-179",
+        "r7-180",
+        "r7-181",
+        "r7-182",
+        "r7-183"
       ]
     }
   ],
@@ -358,5 +552,1451 @@
       "term": "當獎率三軍",
       "explanation": "當：應當。率：率領。"
     }
-  ]
+  ],
+  "reader_annotations": [
+    {
+      "id": "r1-001",
+      "term": "先帝",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "已故皇帝劉備。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-002",
+      "term": "先帝",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "已故皇帝劉備。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-003",
+      "term": "創業",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "開創帝業。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-004",
+      "term": "中道",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "中途。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-005",
+      "term": "崩殂",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "帝王死亡。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-006",
+      "term": "益州",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "蜀漢主要領地，大致在四川一帶。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-007",
+      "term": "疲弊",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "困乏衰弱。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-008",
+      "term": "誠",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "實在。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-009",
+      "term": "秋",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "時候，不是秋季。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-010",
+      "term": "懈",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "懈怠。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-011",
+      "term": "內",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "宮廷內。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-012",
+      "term": "外",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "宮廷外，這裏指在外作戰。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-013",
+      "term": "蓋",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "因為，解釋原因。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-014",
+      "term": "追",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "追念。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-015",
+      "term": "殊遇",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "特別的恩遇。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-016",
+      "term": "陛下",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "對皇帝的敬稱。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-017",
+      "term": "然",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "然而。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-018",
+      "term": "忘身",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "奮不顧身。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-019",
+      "term": "危急存亡",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "形勢危急，關係國家存亡。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-020",
+      "term": "此誠危急存亡之秋也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "判斷句：這實在是關係危急存亡的時候。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-021",
+      "term": "不懈於內",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "於內作處所補語：在宮廷內不懈怠。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-022",
+      "term": "欲報之於陛下也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "之指先帝的恩遇；於引出報答對象陛下。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-023",
+      "term": "誠",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "確實。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-024",
+      "term": "宜",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "應該。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-025",
+      "term": "宜",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "應該。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-026",
+      "term": "開張",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "擴大，這裏指廣泛聽取意見。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-027",
+      "term": "聖聽",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "皇帝的聽聞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-028",
+      "term": "光",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "發揚光大，形容詞作動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-029",
+      "term": "遺德",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "先帝留下的美德。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-030",
+      "term": "恢弘",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "擴大、發揚。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-031",
+      "term": "菲薄",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "輕視。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-032",
+      "term": "引喻",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "引用譬喻。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-033",
+      "term": "義",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "合宜、恰當。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-034",
+      "term": "塞",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "堵塞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-035",
+      "term": "忠諫",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "忠誠勸諫。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-036",
+      "term": "妄自菲薄",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "賓語前置：自指自己，在動詞菲薄之前，即不應隨便輕視自己。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-037",
+      "term": "宮中",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "皇宮中的官員。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-038",
+      "term": "府中",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "丞相府中的官員。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-039",
+      "term": "俱",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "都。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-040",
+      "term": "陟",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "提升、獎賞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-041",
+      "term": "罰",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "處罰。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-042",
+      "term": "臧否",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "善惡，這裏指褒貶善惡。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-043",
+      "term": "異同",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "不同；偏義複詞，意思偏重異，不應有所分別。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-044",
+      "term": "作姦",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "做奸邪的事。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-045",
+      "term": "犯科",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "違犯法律。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-046",
+      "term": "忠善",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "忠誠善良的事。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-047",
+      "term": "付",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "交給。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-048",
+      "term": "有司",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "主管相關事務的官員。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-049",
+      "term": "論",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "評定。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-050",
+      "term": "昭",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "彰顯。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-051",
+      "term": "平明",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "公平清明。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-052",
+      "term": "治",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "治理。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-053",
+      "term": "偏私",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "偏袒徇私。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-054",
+      "term": "異法",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "刑賞標準不同。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-055",
+      "term": "使內外異法也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "使動表達：使宮內與府內採用不同的法度。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-056",
+      "term": "良實",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "善良忠實，這裏形容所推薦的臣子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-057",
+      "term": "志慮",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "志向和心思。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-058",
+      "term": "忠純",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "忠誠純正。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-059",
+      "term": "是以",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "因此。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-060",
+      "term": "是以",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "因此。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-061",
+      "term": "簡拔",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "選拔；簡是挑選。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-062",
+      "term": "遺",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "留給、給予。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-063",
+      "term": "愚",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "謙稱自己的意見。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-064",
+      "term": "愚",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "謙稱自己的意見。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-065",
+      "term": "以為",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "認為。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-066",
+      "term": "以為",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "認為。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-067",
+      "term": "悉",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "全、都。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-068",
+      "term": "悉",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "全、都。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-069",
+      "term": "咨",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "詢問、商議。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-070",
+      "term": "咨",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "詢問、商議。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-071",
+      "term": "裨補",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "補益。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-072",
+      "term": "闕漏",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "缺失遺漏；闕通缺。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-073",
+      "term": "廣益",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "更多益處。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-074",
+      "term": "性行",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "性情和品行。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-075",
+      "term": "淑均",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "善良公正。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-076",
+      "term": "曉暢",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "通曉熟悉。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-080",
+      "term": "舉",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "推舉。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-081",
+      "term": "督",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "軍隊督帥。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-082",
+      "term": "行陣",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "軍隊。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-083",
+      "term": "優劣",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "才能高低不同的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-084",
+      "term": "得所",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "各得合適的安排。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-085",
+      "term": "施行",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "實行。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-086",
+      "term": "稱",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "稱讚。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-087",
+      "term": "能",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "有才能。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-088",
+      "term": "能",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "有才能。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-089",
+      "term": "能",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "有才能。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-090",
+      "term": "事無大小，悉以咨之",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "無表示不論；以後省略宮中事務，之指郭攸之等人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-091",
+      "term": "試用於昔日",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "語境中的被動表達：過去曾被任用試驗；於昔日表示時間。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-092",
+      "term": "優劣得所",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "優劣作名詞，指才能高低不同的人都獲得適當的任用。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-093",
+      "term": "親",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "親近，形容詞作動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-094",
+      "term": "親",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "親近，形容詞作動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-095",
+      "term": "親",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "親近，形容詞作動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-096",
+      "term": "遠",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "疏遠，形容詞作動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-097",
+      "term": "遠",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "疏遠，形容詞作動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-098",
+      "term": "小人",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "奸邪的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-099",
+      "term": "小人",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "奸邪的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-100",
+      "term": "先漢",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "西漢。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-101",
+      "term": "後漢",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "東漢。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-102",
+      "term": "所以",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "……的原因。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-103",
+      "term": "所以",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "……的原因。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-104",
+      "term": "傾頹",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "衰敗。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-105",
+      "term": "未嘗",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "未曾。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-106",
+      "term": "痛恨",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "痛惜、遺憾；不同於現代的極度憎恨。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-107",
+      "term": "桓、靈",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "東漢桓帝和靈帝。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-108",
+      "term": "悉",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "全都。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-109",
+      "term": "貞良",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "忠正賢良。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-110",
+      "term": "死節",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "為守節義而死。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-111",
+      "term": "信",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "信任。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-112",
+      "term": "隆",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "興盛。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-113",
+      "term": "隆",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "興盛。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-114",
+      "term": "計日",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "計算日子，指時間不久。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-115",
+      "term": "此先漢所以興隆也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "判斷句：這是西漢興盛的原因；所以表示原因。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-116",
+      "term": "未嘗不歎息痛恨於桓、靈也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "雙重否定表示肯定：每次談起桓帝、靈帝，總是歎息痛惜。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-117",
+      "term": "布衣",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "平民。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-118",
+      "term": "躬",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "親自。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-119",
+      "term": "苟全",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "苟且保全。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-120",
+      "term": "聞達",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "有聲名而顯達。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-121",
+      "term": "卑鄙",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "地位低微、見識淺陋；不是品格惡劣。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-122",
+      "term": "猥",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "辱，謙辭，表示承蒙對方屈尊。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-123",
+      "term": "枉屈",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "委屈、屈尊。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-124",
+      "term": "顧",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "拜訪。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-125",
+      "term": "諮",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "詢問。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-126",
+      "term": "由是",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "因此。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-127",
+      "term": "感激",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "感動振奮。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-128",
+      "term": "遂",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "於是。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-129",
+      "term": "許",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "答應。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-130",
+      "term": "驅馳",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "奔走效勞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-131",
+      "term": "值",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "遇上。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-132",
+      "term": "傾覆",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "失敗、危難。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-133",
+      "term": "爾來",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "自那時以來。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-134",
+      "term": "有",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "通又，連接整數和零數。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-135",
+      "term": "臨崩",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "將死的時候。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-136",
+      "term": "寄",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "託付。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-137",
+      "term": "夙夜",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "早晚。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-138",
+      "term": "效",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "奏效、完成託付。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-139",
+      "term": "明",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "英明。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-140",
+      "term": "不毛",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "不生長草木的地方；毛指草木，作動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-141",
+      "term": "兵甲",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "兵器和鎧甲，借指軍備。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-142",
+      "term": "獎率",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "勉勵率領。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-143",
+      "term": "北",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "向北，名詞作狀語。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-144",
+      "term": "庶",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "希望。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-145",
+      "term": "竭",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "盡。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-146",
+      "term": "駑鈍",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "才能低下，諸葛亮謙稱自己的才力。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-147",
+      "term": "攘除",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "排除、剷除。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-148",
+      "term": "姦凶",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "奸邪凶惡的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-149",
+      "term": "舊都",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "原來的都城，指洛陽。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-150",
+      "term": "職分",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "職責。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-151",
+      "term": "斟酌",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "考量。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-152",
+      "term": "損益",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "減少或增加，指政務的取捨調整。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-153",
+      "term": "許先帝",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "答應先帝。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-154",
+      "term": "奉命",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "接受命令。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-155",
+      "term": "託付",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "交付任務。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-156",
+      "term": "北定",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "向北平定。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-157",
+      "term": "忠陛下",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "盡忠於陛下。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-158",
+      "term": "躬耕於南陽",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "介詞結構置於動詞後：親自在南陽耕作。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-159",
+      "term": "先帝不以臣卑鄙",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "以表示因為：先帝不因我地位低微、見識淺陋而嫌棄我。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-160",
+      "term": "諮臣以當世之事",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "介詞結構置於動詞後：拿當時天下的大事詢問我。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-161",
+      "term": "遂許先帝以驅馳",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "答應先帝為他奔走效勞；以驅馳說明所答應的內容。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-162",
+      "term": "寄臣以大事",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "把大事託付給我；以大事引出所託之事。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-163",
+      "term": "此臣所以報先帝而忠陛下之職分也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "所以表示用以……；這是我用來報答先帝、盡忠陛下的職責。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-164",
+      "term": "效",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "任務，這裏指討賊復國的重任。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-165",
+      "term": "效",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "奏效、成功。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-166",
+      "term": "治",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "治罪、懲處。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-167",
+      "term": "告",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "告慰。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-168",
+      "term": "興德",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "發揚德政。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-169",
+      "term": "慢",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "怠慢失職。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-170",
+      "term": "彰",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "顯示。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-171",
+      "term": "咎",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "過失。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-172",
+      "term": "自謀",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "自行考慮。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-173",
+      "term": "諮諏",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "詢問。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-174",
+      "term": "善道",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "好的道理、治國方法。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-175",
+      "term": "察納",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "明察採納。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-176",
+      "term": "雅言",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "正確合理的言論。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-177",
+      "term": "遺詔",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "先帝留下的詔令。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-178",
+      "term": "不勝",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "不能承受，表示感激至極。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-179",
+      "term": "臨表",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "面對這篇奏表。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-180",
+      "term": "涕",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "眼淚。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-181",
+      "term": "零",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "落下。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-182",
+      "term": "託臣以討賊興復之效",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "介詞結構置於動詞後：把討賊興復的任務託付給我。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-183",
+      "term": "不知所言",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "所言即所說的話；因流淚感傷而不知自己說了些甚麼。",
+      "source": "supplement"
+    }
+  ],
+  "reader_annotation_source": {
+    "label": "教育局原有注釋；新增字詞及句式為按語境補充",
+    "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_09.pdf"
+  }
 }

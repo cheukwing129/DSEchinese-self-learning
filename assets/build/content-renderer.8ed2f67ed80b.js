@@ -294,6 +294,10 @@ const ContentRenderer = (() => {
     const { text, unit } = bundle;
     const annoMap = {};
     text.annotations.forEach((a) => (annoMap[a.id] = a));
+    // Reader-only additions must not change the vocabulary/sentence study page.
+    (text.reader_annotations || []).forEach((a) => (annoMap[a.id] = a));
+    const paragraphTerms = (p) => [...(p.annotation_ids || []), ...(p.reader_annotation_ids || [])]
+      .map((id) => annoMap[id]).filter(Boolean);
 
     // 若段落有 section 欄位（如論仁/論孝/論君子），按 section 分組導覽；
     // 否則逐段／逐聯／逐片導覽，優先使用資料中的 label。
@@ -315,7 +319,7 @@ const ContentRenderer = (() => {
     }
 
     let activeIndex = 0;
-    const totalAnnotations = text.annotations.length;
+    const totalAnnotations = text.annotations.length + (text.reader_annotations || []).length;
 
     function navHTML() {
       return `
@@ -332,7 +336,7 @@ const ContentRenderer = (() => {
     // 依 annotation term 在原文中「第 occurrence 次」出現的位置，包上可鍵盤操作的 button。
     // 用位置區間而非逐次字串取代，避免重複字詞互相干擾，亦避免長詞被短詞截斷。
     function paragraphHTML(p) {
-      const terms = p.annotation_ids.map((id) => annoMap[id]).filter(Boolean);
+      const terms = paragraphTerms(p);
       const matches = [];
       terms.forEach((a) => {
         const occurrence = a.occurrence || 1;
@@ -350,7 +354,12 @@ const ContentRenderer = (() => {
       const claimed = [];
       matches
         .slice()
-        .sort((x, y) => (y.end - y.start) - (x.end - x.start))
+        // Explicit lexical additions take precedence over long original glosses;
+        // within lexical additions, keep compounds intact (e.g. 機辟, 師道).
+        // Sentence and overlapping original glosses remain accessible below.
+        .filter((m) => m.anno.kind !== "sentence")
+        .sort((x, y) => Number(y.anno.source === "supplement") - Number(x.anno.source === "supplement")
+          || (y.end - y.start) - (x.end - x.start))
         .forEach((m) => {
           const overlap = claimed.some((c) => !(m.end <= c.start || m.start >= c.end));
           if (!overlap) claimed.push(m);
@@ -365,20 +374,30 @@ const ContentRenderer = (() => {
         cursor = m.end;
       });
       html += esc(p.text.slice(cursor));
-      return html;
+      const inlineIds = new Set(claimed.map((m) => m.anno.id));
+      const extra = terms.filter((a) => !inlineIds.has(a.id));
+      // Repeated occurrences keep their own inline target; list identical notes once.
+      const unique = extra.filter((a, i) => extra.findIndex((b) => b.term === a.term && b.explanation === a.explanation) === i);
+      const button = (a) => `<button type="button" class="term reader-note-button" data-anno="${esc(a.id)}" aria-haspopup="dialog" aria-label="查看「${esc(a.term)}」${a.kind === "sentence" ? "句式" : "注釋"}">${esc(a.term)}</button>`;
+      const sentences = unique.filter((a) => a.kind === "sentence");
+      const other = unique.filter((a) => a.kind !== "sentence");
+      const notesHTML = (label, entries) => entries.length ? `<details class="reader-extra-notes"><summary>${label}（${entries.length}）</summary><div class="reader-note-list">${entries.map(button).join("")}</div></details>` : "";
+      return { html, notes: notesHTML("文言句式", sentences) + notesHTML("原有及延伸注釋", other) };
     }
 
     function passageHTML(paragraphs) {
       return paragraphs.map((p, index) => {
-        const annotationCount = (p.annotation_ids || []).filter((id) => annoMap[id]).length;
+        const annotationCount = paragraphTerms(p).length;
+        const passage = paragraphHTML(p);
         const label = paragraphLabel(p);
         return `
           <article class="reader-paragraph-block" data-paragraph-id="${esc(p.id)}">
             <div class="reader-paragraph-meta">
               <span>${esc(label)}</span>
-              ${annotationCount ? `<span>${annotationCount} 個注釋字詞</span>` : `<span>純讀原文</span>`}
+              ${annotationCount ? `<span>${annotationCount} 處字詞及句式注釋</span>` : `<span>純讀原文</span>`}
             </div>
-            <p class="text-passage">${paragraphHTML(p)}</p>
+            <p class="text-passage">${passage.html}</p>
+            ${passage.notes}
             <div class="para-summary">
               <span class="para-summary-label">${paragraphs.length > 1 ? `${esc(label)} · 段意` : "段意"}</span>
               <p>${esc(p.summary)}</p>
@@ -415,7 +434,8 @@ const ContentRenderer = (() => {
                   <strong>段落導航</strong>
                 </div>
                 <div id="text-nav-slot"></div>
-                <div class="reader-legend"><span aria-hidden="true">文</span><p>有細底線的字詞可點擊或用鍵盤選取，查看注釋。</p></div>
+                <div class="reader-legend"><span aria-hidden="true">文</span><p>點擊有細底線的字詞看詞解；段落下方可展開文言句式與原有注釋。</p></div>
+                ${text.reader_annotation_source ? `<p class="reader-source-note">以教育局注釋為基礎，新增解釋按原句語境補充。<a href="${esc(text.reader_annotation_source.url)}" target="_blank" rel="noopener noreferrer">教育局篇章資料</a></p>` : ""}
                 ${unit.audio_file ? `<div class="reader-audio-wrap">${audioPlayerHTML(unit)}</div>` : ""}
               </div>
             </aside>
@@ -519,7 +539,7 @@ const ContentRenderer = (() => {
     ].filter(Boolean).join("");
     pop.innerHTML = `
       <button type="button" class="annotation-close" aria-label="關閉注釋">×</button>
-      <div class="annotation-kicker">字詞注釋</div>
+      <div class="annotation-kicker">${anno.kind === "sentence" ? "文言句式" : "字詞注釋"}${anno.source === "supplement" ? " · 語境補充" : ""}</div>
       <div class="term-name">${App.escapeHTML(anno.term)}</div>
       ${readings ? `<div class="reading">${readings}</div>` : ""}
       <div class="annotation-explanation">${App.escapeHTML(anno.explanation)}</div>

@@ -6,7 +6,15 @@
       "label": "上片‧花燈煙火",
       "text": "東風夜放花千樹，更吹落、星如雨。",
       "summary": "春風吹起的夜晚，花燈像千棵樹上綻放的花兒，煙花如被吹落的星雨，以比喻和想像為上片的元宵夜景定下繁盛華麗的基調。",
-      "annotation_ids": []
+      "annotation_ids": [],
+      "reader_annotation_ids": [
+        "r1-001",
+        "r1-002",
+        "r1-003",
+        "r1-004",
+        "r1-005",
+        "r1-006"
+      ]
     },
     {
       "id": 2,
@@ -18,6 +26,15 @@
         "n02",
         "n03",
         "n04"
+      ],
+      "reader_annotation_ids": [
+        "r2-007",
+        "r2-008",
+        "r2-009",
+        "r2-010",
+        "r2-011",
+        "r2-012",
+        "r2-013"
       ]
     },
     {
@@ -28,6 +45,14 @@
       "annotation_ids": [
         "n05",
         "n06"
+      ],
+      "reader_annotation_ids": [
+        "r3-014",
+        "r3-015",
+        "r3-016",
+        "r3-017",
+        "r3-018",
+        "r3-019"
       ]
     },
     {
@@ -37,6 +62,12 @@
       "summary": "作者在人群中尋找「那人」千百次而不見，經過重重轉折，帶引讀者體會尋覓過程的焦急與執着。",
       "annotation_ids": [
         "n07"
+      ],
+      "reader_annotation_ids": [
+        "r4-020",
+        "r4-021",
+        "r4-022",
+        "r4-023"
       ]
     },
     {
@@ -47,6 +78,13 @@
       "annotation_ids": [
         "n08",
         "n09"
+      ],
+      "reader_annotation_ids": [
+        "r5-024",
+        "r5-025",
+        "r5-026",
+        "r5-027",
+        "r5-028"
       ]
     }
   ],
@@ -100,5 +138,235 @@
       "term": "闌珊",
       "explanation": "暗淡、零落。"
     }
-  ]
+  ],
+  "reader_annotations": [
+    {
+      "id": "r1-001",
+      "term": "東風",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "春風。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-002",
+      "term": "夜",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "在夜間，名詞作狀語。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-003",
+      "term": "花千樹",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "如千樹開花的燈火。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-004",
+      "term": "更",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "又。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-005",
+      "term": "星如雨",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "比喻焰火紛紛散落如星雨。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-006",
+      "term": "東風夜放花千樹",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "燈火如千樹花開；不是實寫春風吹開千樹花朵。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-007",
+      "term": "寶馬",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "名貴的駿馬。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-008",
+      "term": "雕車",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "有雕飾的車子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-009",
+      "term": "鳳簫",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "簫的美稱。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-010",
+      "term": "聲動",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "樂聲響起。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-011",
+      "term": "玉壺",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "這裏指月亮；亦有燈的解釋，依本篇原有注釋理解。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-012",
+      "term": "光轉",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "月光照射的位置轉變，表示時間推移。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-013",
+      "term": "魚龍舞",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "魚形、龍形燈彩舞動。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-014",
+      "term": "蛾兒",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "蛾形頭飾。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-015",
+      "term": "雪柳",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "柳形的白色頭飾。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-016",
+      "term": "黃金縷",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "金絲頭飾。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-017",
+      "term": "盈盈",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "儀態美好、微笑含情的樣子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-018",
+      "term": "暗香",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "幽微的香氣，這裏指女子身上的香氣。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-019",
+      "term": "去",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "走過、離去。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-020",
+      "term": "眾裏",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "人群中。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-021",
+      "term": "他",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "她，古代他不區分男女。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-022",
+      "term": "千百度",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "很多次；度是次、回。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-023",
+      "term": "眾裏尋他千百度",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "省略介詞及調整語序：於眾裏千百度尋他，在人群中尋找她千百次。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-024",
+      "term": "驀然",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "忽然、猛然。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-025",
+      "term": "迴首",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "回頭。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-026",
+      "term": "卻",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "竟然、原來。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-027",
+      "term": "闌珊",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "稀落、將盡。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-028",
+      "term": "那人卻在，燈火闌珊處",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "省略的處所結構連讀：那人卻在燈火稀疏的地方。",
+      "source": "supplement"
+    }
+  ],
+  "reader_annotation_source": {
+    "label": "教育局原有注釋；新增字詞及句式為按語境補充",
+    "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_17c.pdf"
+  }
 }
