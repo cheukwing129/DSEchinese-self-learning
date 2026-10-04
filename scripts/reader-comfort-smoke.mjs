@@ -136,7 +136,9 @@ try {
   for (const unitId of fs.readdirSync(path.join(root, "data/units"))) {
     const text = JSON.parse(fs.readFileSync(path.join(root, "data/units", unitId, "text.json"), "utf8"));
     await page.goto(`${baseURL}/#/unit/${encodeURIComponent(unitId)}/text`, { waitUntil: "domcontentloaded" });
-    await page.locator(".reader-shell").waitFor();
+    // Hash navigation may briefly retain the previous reader; wait for this
+    // unit's first paragraph before reading its navigation count.
+    await page.waitForFunction((firstText) => document.querySelector(".text-passage")?.textContent === firstText, text.paragraphs[0].text);
     const count = await page.locator(".reader-nav button").count();
     let read = 0;
     for (let i = 0; i < count; i++) {
@@ -155,7 +157,7 @@ try {
       }
       check(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${unitId}/${i}: expanded notes fit mobile`);
     }
-    check(read === text.paragraphs.length, `${unitId}: every paragraph checked`);
+    check(read === text.paragraphs.length, `${unitId}: every paragraph checked (${read}/${text.paragraphs.length})`);
     await page.goto(`${baseURL}/#/unit/${encodeURIComponent(unitId)}/words`, { waitUntil: "domcontentloaded" });
     await page.locator("[data-word-card]").first().waitFor();
     check(await page.locator("[data-word-card]").count() === text.annotations.length, `${unitId}: vocabulary page remains unchanged`);
