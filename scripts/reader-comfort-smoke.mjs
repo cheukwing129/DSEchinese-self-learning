@@ -132,6 +132,39 @@ try {
 
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
   check(overflow <= 1, `reader comfort controls should not create mobile horizontal overflow (${overflow}px)`);
+  // Exercise the reader-only additions across every paragraph on a phone viewport.
+  for (const unitId of fs.readdirSync(path.join(root, "data/units"))) {
+    const text = JSON.parse(fs.readFileSync(path.join(root, "data/units", unitId, "text.json"), "utf8"));
+    await page.goto(`${baseURL}/#/unit/${encodeURIComponent(unitId)}/text`, { waitUntil: "domcontentloaded" });
+    await page.locator(".reader-shell").waitFor();
+    const count = await page.locator(".reader-nav button").count();
+    let read = 0;
+    for (let i = 0; i < count; i++) {
+      await page.locator(`.reader-nav button[data-idx="${i}"]`).click();
+      for (const block of await page.locator(".reader-paragraph-block").all()) {
+        const id = await block.getAttribute("data-paragraph-id");
+        const original = text.paragraphs.find((p) => String(p.id) === id);
+        check(await block.locator(".text-passage").textContent() === original.text, `${unitId}/${id}: original text intact`);
+        read++;
+      }
+      await page.locator(".reader-extra-notes").evaluateAll((items) => items.forEach((el) => { el.open = true; }));
+      check(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${unitId}/${i}: expanded notes fit mobile`);
+    }
+    check(read === text.paragraphs.length, `${unitId}: every paragraph checked`);
+    await page.goto(`${baseURL}/#/unit/${encodeURIComponent(unitId)}/words`, { waitUntil: "domcontentloaded" });
+    await page.locator("[data-word-card]").first().waitFor();
+    check(await page.locator("[data-word-card]").count() === text.annotations.length, `${unitId}: vocabulary page remains unchanged`);
+  }
+  await page.goto(`${baseURL}/#/unit/lianpo-linxiangru/text`, { waitUntil: "domcontentloaded" });
+  await page.locator('.reader-nav button[data-idx="1"]').click();
+  const readings = await page.locator(".text-passage button.term").evaluateAll((items) => items.map((el) => el.textContent));
+  check(readings.filter((s) => s === "嘗").length === 2, "both occurrences of 嘗 are annotated");
+  check(readings.filter((s) => s === "計").length === 3, "noun and verb occurrences of 計 are annotated");
+  await page.locator(".reader-extra-notes").evaluateAll((items) => items.forEach((el) => { el.open = true; }));
+  await page.getByRole("button", { name: "查看「何以知之」句式", exact: true }).click();
+  check((await page.locator(".annotation-explanation").textContent()).includes("以何知之"), "sentence note explains inverted order");
+  await page.keyboard.press("Escape");
+  check(await page.locator(".annotation-popover").count() === 0, "sentence dialog closes with Escape");
 } finally {
   if (browser) await browser.close();
   await closeServer();

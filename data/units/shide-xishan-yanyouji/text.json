@@ -20,6 +20,43 @@
         "n12",
         "n13",
         "n14"
+      ],
+      "reader_annotation_ids": [
+        "r1-001",
+        "r1-002",
+        "r1-003",
+        "r1-004",
+        "r1-005",
+        "r1-006",
+        "r1-007",
+        "r1-008",
+        "r1-009",
+        "r1-010",
+        "r1-011",
+        "r1-012",
+        "r1-013",
+        "r1-014",
+        "r1-015",
+        "r1-016",
+        "r1-017",
+        "r1-018",
+        "r1-019",
+        "r1-020",
+        "r1-021",
+        "r1-022",
+        "r1-023",
+        "r1-024",
+        "r1-025",
+        "r1-026",
+        "r1-027",
+        "r1-028",
+        "r1-029",
+        "r1-030",
+        "r1-031",
+        "r1-032",
+        "r1-033",
+        "r1-034",
+        "r1-035"
       ]
     },
     {
@@ -57,6 +94,59 @@
         "n42",
         "n43",
         "n44"
+      ],
+      "reader_annotation_ids": [
+        "r2-036",
+        "r2-037",
+        "r2-038",
+        "r2-039",
+        "r2-040",
+        "r2-041",
+        "r2-042",
+        "r2-043",
+        "r2-044",
+        "r2-045",
+        "r2-046",
+        "r2-047",
+        "r2-048",
+        "r2-049",
+        "r2-050",
+        "r2-051",
+        "r2-052",
+        "r2-053",
+        "r2-054",
+        "r2-055",
+        "r2-056",
+        "r2-057",
+        "r2-058",
+        "r2-059",
+        "r2-060",
+        "r2-061",
+        "r2-062",
+        "r2-063",
+        "r2-064",
+        "r2-065",
+        "r2-066",
+        "r2-067",
+        "r2-068",
+        "r2-069",
+        "r2-070",
+        "r2-071",
+        "r2-072",
+        "r2-073",
+        "r2-074",
+        "r2-075",
+        "r2-076",
+        "r2-077",
+        "r2-078",
+        "r2-079",
+        "r2-080",
+        "r2-081",
+        "r2-082",
+        "r2-083",
+        "r2-084",
+        "r2-085",
+        "r2-086"
       ]
     }
   ],
@@ -304,5 +394,699 @@
       "term": "志",
       "explanation": "通「誌」，記述其事。"
     }
-  ]
+  ],
+  "reader_annotations": [
+    {
+      "id": "r1-001",
+      "term": "自",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "自從。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-002",
+      "term": "余",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "我。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-003",
+      "term": "為",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "成為。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-004",
+      "term": "為",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "成為。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-005",
+      "term": "是州",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "這個州，指永州。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-006",
+      "term": "是州",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "這個州，指永州。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-007",
+      "term": "恒",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "經常。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-008",
+      "term": "惴慄",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "恐懼不安。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-009",
+      "term": "隙",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "閒暇。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-010",
+      "term": "施施",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "慢慢行走的樣子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-011",
+      "term": "漫漫",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "隨意自在的樣子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-012",
+      "term": "日",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "每天，名詞作狀語。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-013",
+      "term": "徒",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "同遊的朋友。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-014",
+      "term": "窮",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "走到盡頭，動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-015",
+      "term": "迴溪",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "曲折溪流。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-016",
+      "term": "幽",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "僻靜。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-017",
+      "term": "披",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "撥開。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-018",
+      "term": "傾壺",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "倒酒。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-019",
+      "term": "更相",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "互相。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-020",
+      "term": "枕",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "把頭枕在……上。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-021",
+      "term": "卧",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "躺卧。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-022",
+      "term": "卧",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "躺卧。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-023",
+      "term": "極",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "到達。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-024",
+      "term": "趣",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "意趣；也可通趨，前往。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-025",
+      "term": "覺",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "醒。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-026",
+      "term": "以為",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "認為。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-027",
+      "term": "凡",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "所有。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-028",
+      "term": "異態",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "與眾不同的形態。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-029",
+      "term": "有",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "領略、享有。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-030",
+      "term": "有",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "領略、享有。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-031",
+      "term": "有",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "領略、享有。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-032",
+      "term": "未始",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "未曾。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-033",
+      "term": "怪特",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "奇異獨特。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-034",
+      "term": "凡是州之山有異態者",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "定語後置：是州有異態之山，這個州所有形態奇特的山。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-035",
+      "term": "無遠不到",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "不論多遠，沒有不到的地方。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-036",
+      "term": "因",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "因為、由於，連接坐亭遠望與發現西山。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-037",
+      "term": "始",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "才、開始。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-038",
+      "term": "始",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "才、開始。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-039",
+      "term": "始",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "才、開始。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-040",
+      "term": "異之",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "以它為奇異，意動用法。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-041",
+      "term": "遂",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "於是。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-042",
+      "term": "緣",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "沿着。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-043",
+      "term": "斫",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "砍伐。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-044",
+      "term": "榛莽",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "叢生的草木。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-045",
+      "term": "茅茷",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "茂密茅草。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-046",
+      "term": "窮",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "走到盡處，動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-047",
+      "term": "窮",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "盡頭，名詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-048",
+      "term": "箕踞",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "兩腿伸開，形如箕地坐着。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-049",
+      "term": "遨",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "游目四顧。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-050",
+      "term": "土壤",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "土地。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-051",
+      "term": "衽席",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "座席。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-052",
+      "term": "岈然",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "山谷深邃或山勢高峻的樣子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-053",
+      "term": "窪然",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "低凹的樣子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-054",
+      "term": "垤",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "蟻穴旁的小土堆。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-055",
+      "term": "攢蹙",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "聚集緊迫。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-056",
+      "term": "遯隱",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "隱藏；遯通遁。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-057",
+      "term": "縈",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "環繞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-058",
+      "term": "繚",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "纏繞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-059",
+      "term": "青",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "青山，形容詞作名詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-060",
+      "term": "白",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "白水，形容詞作名詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-061",
+      "term": "際",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "相接，動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-062",
+      "term": "四望",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "向四周望去。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-063",
+      "term": "特出",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "超出一般。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-064",
+      "term": "培塿",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "小土丘。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-065",
+      "term": "顥氣",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "天地間浩大的氣。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-066",
+      "term": "涯",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "邊際。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-067",
+      "term": "造物者",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "創造萬物的大自然。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-068",
+      "term": "引",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "拿起。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-069",
+      "term": "觴",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "酒杯。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-070",
+      "term": "酌",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "斟酒。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-071",
+      "term": "頹然",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "醉得身體鬆弛、站不穩的樣子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-072",
+      "term": "入",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "落下。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-073",
+      "term": "蒼然",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "深沉昏暗的樣子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-074",
+      "term": "猶",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "仍然。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-075",
+      "term": "心凝形釋",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "心神凝聚，形體拘束消解。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-076",
+      "term": "萬化",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "萬物、大自然。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-077",
+      "term": "冥合",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "默契地融為一體。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-078",
+      "term": "嚮",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "同向，從前。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-079",
+      "term": "未始",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "未曾。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-080",
+      "term": "為之文",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "為此寫文章。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-081",
+      "term": "志",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "同誌，記述。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-082",
+      "term": "是歲",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "這一年。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-083",
+      "term": "箕踞而遨",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "箕作狀語，像箕一樣張腿而坐，並游目四顧。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-084",
+      "term": "悠悠乎與顥氣俱",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "乎為形容詞詞尾，形容悠遠；俱即同在，心境與天地浩氣融為一體。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-085",
+      "term": "遊於是乎始",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "於是指從這一次，而非現代的於是；乎用於語中停頓，真正的遊覽從這次才開始。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-086",
+      "term": "是歲元和四年也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "判斷句：這一年是元和四年。",
+      "source": "supplement"
+    }
+  ],
+  "reader_annotation_source": {
+    "label": "教育局原有注釋；新增字詞及句式為按語境補充",
+    "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_13.pdf"
+  }
 }

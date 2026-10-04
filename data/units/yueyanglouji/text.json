@@ -15,6 +15,25 @@
         "n07",
         "n08",
         "n07b"
+      ],
+      "reader_annotation_ids": [
+        "r1-001",
+        "r1-002",
+        "r1-003",
+        "r1-004",
+        "r1-005",
+        "r1-006",
+        "r1-007",
+        "r1-008",
+        "r1-009",
+        "r1-010",
+        "r1-011",
+        "r1-012",
+        "r1-013",
+        "r1-014",
+        "r1-015",
+        "r1-016",
+        "r1-017"
       ]
     },
     {
@@ -31,6 +50,37 @@
         "n15",
         "n16",
         "n16b"
+      ],
+      "reader_annotation_ids": [
+        "r2-018",
+        "r2-019",
+        "r2-020",
+        "r2-021",
+        "r2-022",
+        "r2-023",
+        "r2-024",
+        "r2-025",
+        "r2-026",
+        "r2-027",
+        "r2-028",
+        "r2-029",
+        "r2-030",
+        "r2-031",
+        "r2-032",
+        "r2-033",
+        "r2-034",
+        "r2-035",
+        "r2-036",
+        "r2-037",
+        "r2-038",
+        "r2-039",
+        "r2-040",
+        "r2-041",
+        "r2-042",
+        "r2-043",
+        "r2-044",
+        "r2-045",
+        "r2-046"
       ]
     },
     {
@@ -48,6 +98,32 @@
         "n23b",
         "n23c",
         "n23d"
+      ],
+      "reader_annotation_ids": [
+        "r3-047",
+        "r3-048",
+        "r3-049",
+        "r3-050",
+        "r3-051",
+        "r3-052",
+        "r3-053",
+        "r3-054",
+        "r3-055",
+        "r3-056",
+        "r3-057",
+        "r3-058",
+        "r3-059",
+        "r3-060",
+        "r3-061",
+        "r3-062",
+        "r3-063",
+        "r3-064",
+        "r3-065",
+        "r3-066",
+        "r3-067",
+        "r3-068",
+        "r3-069",
+        "r3-070"
       ]
     },
     {
@@ -68,6 +144,27 @@
         "n32",
         "n33a",
         "n33b"
+      ],
+      "reader_annotation_ids": [
+        "r4-071",
+        "r4-072",
+        "r4-073",
+        "r4-074",
+        "r4-075",
+        "r4-076",
+        "r4-077",
+        "r4-078",
+        "r4-079",
+        "r4-080",
+        "r4-081",
+        "r4-082",
+        "r4-083",
+        "r4-084",
+        "r4-085",
+        "r4-086",
+        "r4-087",
+        "r4-088",
+        "r4-089"
       ]
     },
     {
@@ -83,6 +180,32 @@
         "n39",
         "n40",
         "n41"
+      ],
+      "reader_annotation_ids": [
+        "r5-090",
+        "r5-091",
+        "r5-092",
+        "r5-093",
+        "r5-094",
+        "r5-095",
+        "r5-096",
+        "r5-097",
+        "r5-098",
+        "r5-099",
+        "r5-100",
+        "r5-101",
+        "r5-102",
+        "r5-103",
+        "r5-104",
+        "r5-105",
+        "r5-106",
+        "r5-107",
+        "r5-108",
+        "r5-109",
+        "r5-110",
+        "r5-111",
+        "r5-112",
+        "r5-113"
       ]
     }
   ],
@@ -340,5 +463,915 @@
       "term": "感",
       "explanation": "感慨、有所感觸。"
     }
-  ]
+  ],
+  "reader_annotations": [
+    {
+      "id": "r1-001",
+      "term": "乃",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "於是。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-002",
+      "term": "重修",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "重新修建。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-003",
+      "term": "增",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "擴大、增加。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-004",
+      "term": "制",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "規模。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-005",
+      "term": "其",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "指岳陽樓的。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-006",
+      "term": "其",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "指岳陽樓的。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-007",
+      "term": "予",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "我。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-008",
+      "term": "作文",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "寫文章；不是現代的作文科目。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-009",
+      "term": "以",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "用來，表示目的。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-010",
+      "term": "之",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "指重修岳陽樓這件事。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-011",
+      "term": "興",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "興辦、恢復。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-012",
+      "term": "謫守",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "被貶官到地方任太守。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-013",
+      "term": "越",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "及至。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-014",
+      "term": "明年",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "第二年。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-015",
+      "term": "具",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "同俱，全都。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-016",
+      "term": "屬",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "同囑，囑咐。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-017",
+      "term": "刻唐賢、今人詩賦於其上",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "於其上作處所補語：把詩賦刻在樓上。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-018",
+      "term": "夫",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "發語詞，引出敘述對象。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-019",
+      "term": "浩浩",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "水勢廣闊的樣子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-020",
+      "term": "際涯",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "邊際。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-021",
+      "term": "朝暉",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "早晨的陽光；暉為日光。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-022",
+      "term": "夕陰",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "傍晚的陰暗景象。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-023",
+      "term": "氣象",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "景象。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-024",
+      "term": "此",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "指洞庭湖的壯闊景色。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-025",
+      "term": "此",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "指洞庭湖的壯闊景色。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-026",
+      "term": "述",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "記述。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-027",
+      "term": "然則",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "既然如此，那麼。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-028",
+      "term": "北",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "向北，方位名詞作狀語。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-029",
+      "term": "南",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "向南，方位名詞作狀語。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-030",
+      "term": "極",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "到達。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-031",
+      "term": "覽物",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "觀看景物。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-032",
+      "term": "得無",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "莫非、恐怕，表示推測疑問。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-033",
+      "term": "觀",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "觀看。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-034",
+      "term": "觀",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "觀看。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-035",
+      "term": "勝狀",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "美好景象。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-036",
+      "term": "銜",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "含着。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-037",
+      "term": "吞",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "吞入，形容湖泊容納長江來水。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-038",
+      "term": "湯湯",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "水勢浩大的樣子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-039",
+      "term": "大觀",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "雄偉景象。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-040",
+      "term": "備",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "詳盡完備。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-041",
+      "term": "遷客",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "被貶官的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-042",
+      "term": "騷人",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "失意的文人、詩人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-043",
+      "term": "會",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "聚集。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-044",
+      "term": "此則岳陽樓之大觀也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "判斷句：這就是岳陽樓的雄偉景象。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-045",
+      "term": "多會於此",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "於表示在，此指岳陽樓。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-046",
+      "term": "覽物之情，得無異乎",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "推測疑問句：觀賞景物的感受，恐怕會有所不同吧？",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-047",
+      "term": "若夫",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "至於，引出一種情境。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-048",
+      "term": "霪雨",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "連綿過量的雨。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-049",
+      "term": "霏霏",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "雨絲細密的樣子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-050",
+      "term": "開",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "放晴。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-051",
+      "term": "耀",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "光芒。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-052",
+      "term": "潛形",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "隱沒形影。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-053",
+      "term": "商旅",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "商人和旅客。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-054",
+      "term": "檣",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "桅杆。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-055",
+      "term": "楫",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "船槳。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-056",
+      "term": "薄暮",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "接近黃昏。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-057",
+      "term": "冥冥",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "昏暗的樣子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-058",
+      "term": "斯",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "這、此。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-059",
+      "term": "懷鄉",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "懷念家鄉。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-060",
+      "term": "讒",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "讒言、毀謗。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-061",
+      "term": "譏",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "譏諷。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-062",
+      "term": "感極",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "感慨到了極點。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-063",
+      "term": "陰風",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "陰冷的風。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-064",
+      "term": "怒號",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "大聲呼嘯。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-065",
+      "term": "排空",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "沖向天空。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-066",
+      "term": "傾",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "倒下。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-067",
+      "term": "摧",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "折斷、摧毀。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-068",
+      "term": "去國",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "離開國都。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-069",
+      "term": "蕭然",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "蕭條冷落。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-070",
+      "term": "則有去國懷鄉，憂讒畏譏，滿目蕭然，感極而悲者矣",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "者把前面的心情名詞化，可理解為產生這樣的悲傷感受。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-071",
+      "term": "至若",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "至於，轉入另一種情境。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-072",
+      "term": "景",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "日光。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-073",
+      "term": "驚",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "這裏指波浪湧起。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-074",
+      "term": "萬頃",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "極廣闊的水面；頃是土地面積單位。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-075",
+      "term": "錦鱗",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "美麗的魚；以魚鱗代魚。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-076",
+      "term": "或",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "有時。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-077",
+      "term": "皓月",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "明亮的月亮。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-078",
+      "term": "何極",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "哪有盡頭，指無窮。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-079",
+      "term": "心曠神怡",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "心胸開闊，精神愉快。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-080",
+      "term": "寵辱",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "得寵或受辱。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-081",
+      "term": "洋洋",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "喜悅的樣子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-082",
+      "term": "集",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "棲息。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-083",
+      "term": "芷",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "白芷，香草。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-084",
+      "term": "汀",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "水中或水邊平地。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-085",
+      "term": "一空",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "全部消散；一是全。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-086",
+      "term": "把",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "持、拿着。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-087",
+      "term": "臨",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "面對、迎着。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-088",
+      "term": "郁郁青青",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "香氣濃郁、草木繁盛的樣子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-089",
+      "term": "此樂何極",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "反問句：這種快樂哪有盡頭？",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-090",
+      "term": "嘗",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "曾經。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-091",
+      "term": "求",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "探求。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-092",
+      "term": "古仁人",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "古代品德高尚的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-093",
+      "term": "或",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "或許。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-094",
+      "term": "為",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "表現、心境，名詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-095",
+      "term": "以",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "因為，介詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-096",
+      "term": "以",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "因為，介詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-097",
+      "term": "進",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "在朝廷做官。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-098",
+      "term": "退",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "離開朝廷。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-099",
+      "term": "然則",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "既然如此，那麼。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-100",
+      "term": "其",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "大概，表示推測。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-101",
+      "term": "其",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "大概，表示推測。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-102",
+      "term": "其",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "大概，表示推測。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-103",
+      "term": "必",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "一定。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-104",
+      "term": "先",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "在……之前，表示時間先後。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-105",
+      "term": "後",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "在……之後，表示時間先後。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-106",
+      "term": "歟",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "句末語氣詞，表示推測或感歎。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-107",
+      "term": "微",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "如果沒有。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-108",
+      "term": "斯人",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "這樣的人，指古仁人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-109",
+      "term": "歸",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "歸依、效法。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-110",
+      "term": "居廟堂之高",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "定語後置：廟堂之高即高之廟堂，這裏指在朝廷任職。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-111",
+      "term": "處江湖之遠",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "定語後置：江湖之遠即遠之江湖，指處於遠離朝廷的地方。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-112",
+      "term": "不以物喜，不以己悲",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "互文：不因外物或個人的得失而或喜或悲。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-113",
+      "term": "吾誰與歸",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "賓語前置：即「吾與誰歸」，疑問代詞誰置於介詞與之前。",
+      "source": "supplement"
+    }
+  ],
+  "reader_annotation_source": {
+    "label": "教育局原有注釋；新增字詞及句式為按語境補充",
+    "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_14.pdf"
+  }
 }

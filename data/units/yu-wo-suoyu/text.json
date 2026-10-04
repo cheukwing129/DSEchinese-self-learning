@@ -5,48 +5,1413 @@
       "id": 1,
       "text": "孟子曰：「魚，我所欲也，熊掌，亦我所欲也；二者不可得兼，舍魚而取熊掌者也。生亦我所欲也，義亦我所欲也；二者不可得兼，舍生而取義者也。生亦我所欲，所欲有甚於生者，故不為苟得也；死亦我所惡，所惡有甚於死者，故患有所不辟也。如使人之所欲莫甚於生，則凡可以得生者，何不用也？使人之所惡莫甚於死者，則凡可以辟患者，何不為也？由是則生而有不用也，由是則可以辟患而有不為也，是故所欲有甚於生者，所惡有甚於死者。非獨賢者有是心也，人皆有之，賢者能勿喪耳。",
       "summary": "以魚與熊掌作比喻，帶出生與義不可兼得時應捨生取義；並論證人人皆有此「本心」，只是賢者能不喪失。",
-      "annotation_ids": ["n00b", "n01", "n02", "n03", "n04", "n05", "n06", "n07", "n08", "n09", "n10", "n11", "n12", "n13", "n14", "n15", "n16"]
+      "annotation_ids": [
+        "n00b",
+        "n01",
+        "n02",
+        "n03",
+        "n04",
+        "n05",
+        "n06",
+        "n07",
+        "n08",
+        "n09",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16"
+      ],
+      "reader_annotation_ids": [
+        "r1-001",
+        "r1-002",
+        "r1-003",
+        "r1-004",
+        "r1-005",
+        "r1-006",
+        "r1-007",
+        "r1-008",
+        "r1-009",
+        "r1-010",
+        "r1-011",
+        "r1-012",
+        "r1-013",
+        "r1-014",
+        "r1-015",
+        "r1-016",
+        "r1-017",
+        "r1-018",
+        "r1-019",
+        "r1-020",
+        "r1-021",
+        "r1-022",
+        "r1-023",
+        "r1-024",
+        "r1-025",
+        "r1-026",
+        "r1-027",
+        "r1-028",
+        "r1-029",
+        "r1-030",
+        "r1-031",
+        "r1-032",
+        "r1-033",
+        "r1-034",
+        "r1-035",
+        "r1-036",
+        "r1-037",
+        "r1-038",
+        "r1-039",
+        "r1-040",
+        "r1-041",
+        "r1-042",
+        "r1-043",
+        "r1-044",
+        "r1-045",
+        "r1-046",
+        "r1-047",
+        "r1-048",
+        "r1-049",
+        "r1-050",
+        "r1-051",
+        "r1-052",
+        "r1-053",
+        "r1-054",
+        "r1-055",
+        "r1-056",
+        "r1-057",
+        "r1-058",
+        "r1-059",
+        "r1-060",
+        "r1-061",
+        "r1-062",
+        "r1-063",
+        "r1-064",
+        "r1-065",
+        "r1-066",
+        "r1-067",
+        "r1-068",
+        "r1-069",
+        "r1-070",
+        "r1-071",
+        "r1-072",
+        "r1-073",
+        "r1-074",
+        "r1-075",
+        "r1-076",
+        "r1-077",
+        "r1-078",
+        "r1-079",
+        "r1-080",
+        "r1-081",
+        "r1-082"
+      ]
     },
     {
       "id": 2,
       "text": "一簞食，一豆羹，得之則生，弗得則死。嘑爾而與之，行道之人弗受；蹴爾而與之，乞人不屑也。萬鍾則不辯禮義而受之。萬鍾於我何加焉？為宮室之美、妻妾之奉、所識窮乏者得我與？鄉為身死而不受，今為宮室之美為之；鄉為身死而不受，今為妻妾之奉為之；鄉為身死而不受，今為所識窮乏者得我而為之，是亦不可以已乎？此之謂失其本心。」",
       "summary": "以「嗟來之食」與「萬鍾」的對比，說明有人會為物質享受而喪失本心，即使昔日寧死不受，今日卻不辨禮義而接受。",
-      "annotation_ids": ["n17", "n18", "n19", "n20", "n21", "n22", "n23", "n24", "n25", "n26", "n27", "n28", "n29", "n30", "n31", "n32"]
+      "annotation_ids": [
+        "n17",
+        "n18",
+        "n19",
+        "n20",
+        "n21",
+        "n22",
+        "n23",
+        "n24",
+        "n25",
+        "n26",
+        "n27",
+        "n28",
+        "n29",
+        "n30",
+        "n31",
+        "n32"
+      ],
+      "reader_annotation_ids": [
+        "r2-083",
+        "r2-084",
+        "r2-085",
+        "r2-086",
+        "r2-087",
+        "r2-088",
+        "r2-089",
+        "r2-090",
+        "r2-091",
+        "r2-092",
+        "r2-093",
+        "r2-094",
+        "r2-095",
+        "r2-096",
+        "r2-097",
+        "r2-098",
+        "r2-099",
+        "r2-100",
+        "r2-101",
+        "r2-102",
+        "r2-103",
+        "r2-104",
+        "r2-105",
+        "r2-106",
+        "r2-107",
+        "r2-108",
+        "r2-109",
+        "r2-110",
+        "r2-111",
+        "r2-112",
+        "r2-113",
+        "r2-114",
+        "r2-115",
+        "r2-116",
+        "r2-117",
+        "r2-118",
+        "r2-119",
+        "r2-120",
+        "r2-121",
+        "r2-122",
+        "r2-123",
+        "r2-124",
+        "r2-125",
+        "r2-126",
+        "r2-127",
+        "r2-128",
+        "r2-129",
+        "r2-130",
+        "r2-131"
+      ]
     }
   ],
   "annotations": [
-    { "id": "n01", "term": "魚", "explanation": "魚營養豐富，是春秋戰國期間的美食。" },
-    { "id": "n00b", "term": "兼", "explanation": "兼有、同時得到。" },
-    { "id": "n02", "term": "熊掌", "explanation": "熊是山中野獸，難以捕獵，是珍貴的美食。" },
-    { "id": "n03", "term": "舍魚而取熊掌", "explanation": "舍：通「捨」，放棄。" },
-    { "id": "n04", "term": "生亦我所欲也", "explanation": "生：生命、性命。" },
-    { "id": "n05", "term": "義亦我所欲也", "explanation": "義：正義、道義。此處指善性良知的實踐。" },
-    { "id": "n06", "term": "甚於生者", "explanation": "甚於：在程度上超過。" },
-    { "id": "n07", "term": "不為苟得也", "explanation": "苟得：指苟且偷生。苟：隨便、輕率。" },
-    { "id": "n08", "term": "死亦我所惡", "jyutping": "wu3", "putonghua": "wù", "explanation": "惡：憎厭。" },
-    { "id": "n09", "term": "故患有所不辟也", "explanation": "辟：通「避」。" },
-    { "id": "n10", "term": "如使人之所欲", "explanation": "如：假如、假設。" },
-    { "id": "n11", "term": "凡可以得生者", "explanation": "可以得生者：可以活下去的方法或機會。" },
-    { "id": "n12", "term": "何不用也", "explanation": "用：選取、接受。" },
-    { "id": "n13", "term": "由是則生而有不用也", "explanation": "承接上文的反問句，根據這些事例，可以活命的方法竟然有人不接受。" },
-    { "id": "n14", "term": "是故所欲有甚於生者", "explanation": "是故：因此之故。" },
-    { "id": "n15", "term": "所欲有甚於生者，所惡有甚於死者", "explanation": "人所追求的東西，有些比生命更重要；人所憎惡的東西，有些比死亡更嚴重。" },
-    { "id": "n16", "term": "非獨賢者有是心也，人皆有之，賢者能勿喪耳", "explanation": "不僅賢人有這個「本心」，其實人人都有，唯獨賢人能夠堅持本心，不讓它喪失罷了。耳：這裏作為句末語助詞，是「而已」的合音字。" },
-    { "id": "n17", "term": "簞", "jyutping": "daan1", "putonghua": "dɑ̄n", "explanation": "盛飯的竹器。食：飯食。" },
-    { "id": "n18", "term": "一豆羹", "explanation": "豆：盛載食物的器皿，形似高腳盤，象形字。羹：指帶汁的肉食。" },
-    { "id": "n19", "term": "弗得則死", "explanation": "弗：通「不」。" },
-    { "id": "n20", "term": "嘑爾而與之", "explanation": "嘑爾：大聲呼叱的意思。一說「嘑」同「呼」。與：給予。" },
-    { "id": "n21", "term": "行道之人弗受", "explanation": "行道之人：路人。弗受：不接受。" },
-    { "id": "n22", "term": "蹴爾而與之", "explanation": "蹴：踐踏。爾：助詞，此處用於動詞之後，表示狀態，相當於「着」。" },
-    { "id": "n23", "term": "乞人不屑也", "explanation": "不屑：輕視。" },
-    { "id": "n24", "term": "萬鍾", "occurrence": 1, "explanation": "這裏解作達官貴人豐厚的俸祿。鍾：古代的一種量器，此處作量詞用，表示俸祿的數量。" },
-    { "id": "n25", "term": "不辯禮義而受之", "explanation": "辯：通「辨」，辨別。" },
-    { "id": "n26", "term": "萬鍾於我何加焉", "explanation": "何加：有甚麼好處？加：增益。" },
-    { "id": "n27", "term": "宮室之美", "occurrence": 1, "explanation": "宮室：居所。並非後世「皇宮」之意。" },
-    { "id": "n28", "term": "妻妾之奉", "occurrence": 1, "explanation": "奉：供奉、服侍。" },
-    { "id": "n29", "term": "所識窮乏者得我與", "occurrence": 1, "explanation": "讓所認識的窮乏之人感謝我的賙濟嗎？得：通「德」，感激，作動詞用。與：通「歟」，表示反問的語氣詞。" },
-    { "id": "n30", "term": "鄉為身死而不受", "occurrence": 1, "explanation": "鄉：通「向」，過往。" },
-    { "id": "n31", "term": "是亦不可以已乎", "explanation": "已：停止。" },
-    { "id": "n32", "term": "此之謂失其本心", "explanation": "本心：指人人本來都有的良心、本性，如羞惡之心、重義之心。" }
-  ]
+    {
+      "id": "n01",
+      "term": "魚",
+      "explanation": "魚營養豐富，是春秋戰國期間的美食。"
+    },
+    {
+      "id": "n00b",
+      "term": "兼",
+      "explanation": "兼有、同時得到。"
+    },
+    {
+      "id": "n02",
+      "term": "熊掌",
+      "explanation": "熊是山中野獸，難以捕獵，是珍貴的美食。"
+    },
+    {
+      "id": "n03",
+      "term": "舍魚而取熊掌",
+      "explanation": "舍：通「捨」，放棄。"
+    },
+    {
+      "id": "n04",
+      "term": "生亦我所欲也",
+      "explanation": "生：生命、性命。"
+    },
+    {
+      "id": "n05",
+      "term": "義亦我所欲也",
+      "explanation": "義：正義、道義。此處指善性良知的實踐。"
+    },
+    {
+      "id": "n06",
+      "term": "甚於生者",
+      "explanation": "甚於：在程度上超過。"
+    },
+    {
+      "id": "n07",
+      "term": "不為苟得也",
+      "explanation": "苟得：指苟且偷生。苟：隨便、輕率。"
+    },
+    {
+      "id": "n08",
+      "term": "死亦我所惡",
+      "jyutping": "wu3",
+      "putonghua": "wù",
+      "explanation": "惡：憎厭。"
+    },
+    {
+      "id": "n09",
+      "term": "故患有所不辟也",
+      "explanation": "辟：通「避」。"
+    },
+    {
+      "id": "n10",
+      "term": "如使人之所欲",
+      "explanation": "如：假如、假設。"
+    },
+    {
+      "id": "n11",
+      "term": "凡可以得生者",
+      "explanation": "可以得生者：可以活下去的方法或機會。"
+    },
+    {
+      "id": "n12",
+      "term": "何不用也",
+      "explanation": "用：選取、接受。"
+    },
+    {
+      "id": "n13",
+      "term": "由是則生而有不用也",
+      "explanation": "承接上文的反問句，根據這些事例，可以活命的方法竟然有人不接受。"
+    },
+    {
+      "id": "n14",
+      "term": "是故所欲有甚於生者",
+      "explanation": "是故：因此之故。"
+    },
+    {
+      "id": "n15",
+      "term": "所欲有甚於生者，所惡有甚於死者",
+      "explanation": "人所追求的東西，有些比生命更重要；人所憎惡的東西，有些比死亡更嚴重。"
+    },
+    {
+      "id": "n16",
+      "term": "非獨賢者有是心也，人皆有之，賢者能勿喪耳",
+      "explanation": "不僅賢人有這個「本心」，其實人人都有，唯獨賢人能夠堅持本心，不讓它喪失罷了。耳：這裏作為句末語助詞，是「而已」的合音字。"
+    },
+    {
+      "id": "n17",
+      "term": "簞",
+      "jyutping": "daan1",
+      "putonghua": "dɑ̄n",
+      "explanation": "盛飯的竹器。食：飯食。"
+    },
+    {
+      "id": "n18",
+      "term": "一豆羹",
+      "explanation": "豆：盛載食物的器皿，形似高腳盤，象形字。羹：指帶汁的肉食。"
+    },
+    {
+      "id": "n19",
+      "term": "弗得則死",
+      "explanation": "弗：通「不」。"
+    },
+    {
+      "id": "n20",
+      "term": "嘑爾而與之",
+      "explanation": "嘑爾：大聲呼叱的意思。一說「嘑」同「呼」。與：給予。"
+    },
+    {
+      "id": "n21",
+      "term": "行道之人弗受",
+      "explanation": "行道之人：路人。弗受：不接受。"
+    },
+    {
+      "id": "n22",
+      "term": "蹴爾而與之",
+      "explanation": "蹴：踐踏。爾：助詞，此處用於動詞之後，表示狀態，相當於「着」。"
+    },
+    {
+      "id": "n23",
+      "term": "乞人不屑也",
+      "explanation": "不屑：輕視。"
+    },
+    {
+      "id": "n24",
+      "term": "萬鍾",
+      "occurrence": 1,
+      "explanation": "這裏解作達官貴人豐厚的俸祿。鍾：古代的一種量器，此處作量詞用，表示俸祿的數量。"
+    },
+    {
+      "id": "n25",
+      "term": "不辯禮義而受之",
+      "explanation": "辯：通「辨」，辨別。"
+    },
+    {
+      "id": "n26",
+      "term": "萬鍾於我何加焉",
+      "explanation": "何加：有甚麼好處？加：增益。"
+    },
+    {
+      "id": "n27",
+      "term": "宮室之美",
+      "occurrence": 1,
+      "explanation": "宮室：居所。並非後世「皇宮」之意。"
+    },
+    {
+      "id": "n28",
+      "term": "妻妾之奉",
+      "occurrence": 1,
+      "explanation": "奉：供奉、服侍。"
+    },
+    {
+      "id": "n29",
+      "term": "所識窮乏者得我與",
+      "occurrence": 1,
+      "explanation": "讓所認識的窮乏之人感謝我的賙濟嗎？得：通「德」，感激，作動詞用。與：通「歟」，表示反問的語氣詞。"
+    },
+    {
+      "id": "n30",
+      "term": "鄉為身死而不受",
+      "occurrence": 1,
+      "explanation": "鄉：通「向」，過往。"
+    },
+    {
+      "id": "n31",
+      "term": "是亦不可以已乎",
+      "explanation": "已：停止。"
+    },
+    {
+      "id": "n32",
+      "term": "此之謂失其本心",
+      "explanation": "本心：指人人本來都有的良心、本性，如羞惡之心、重義之心。"
+    }
+  ],
+  "reader_annotations": [
+    {
+      "id": "r1-001",
+      "term": "欲",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "想要、追求。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-002",
+      "term": "欲",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "想要、追求。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-003",
+      "term": "欲",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "想要、追求。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-004",
+      "term": "欲",
+      "occurrence": 4,
+      "kind": "word",
+      "explanation": "想要、追求。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-005",
+      "term": "欲",
+      "occurrence": 5,
+      "kind": "word",
+      "explanation": "想要、追求。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-006",
+      "term": "欲",
+      "occurrence": 6,
+      "kind": "word",
+      "explanation": "想要、追求。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-007",
+      "term": "欲",
+      "occurrence": 7,
+      "kind": "word",
+      "explanation": "想要、追求。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-008",
+      "term": "欲",
+      "occurrence": 8,
+      "kind": "word",
+      "explanation": "想要、追求。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-009",
+      "term": "所欲",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "想要的東西；所使動詞名詞化。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-010",
+      "term": "所欲",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "想要的東西；所使動詞名詞化。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-011",
+      "term": "所欲",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "想要的東西；所使動詞名詞化。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-012",
+      "term": "所欲",
+      "occurrence": 4,
+      "kind": "word",
+      "explanation": "想要的東西；所使動詞名詞化。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-013",
+      "term": "所欲",
+      "occurrence": 5,
+      "kind": "word",
+      "explanation": "想要的東西；所使動詞名詞化。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-014",
+      "term": "所欲",
+      "occurrence": 6,
+      "kind": "word",
+      "explanation": "想要的東西；所使動詞名詞化。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-015",
+      "term": "所欲",
+      "occurrence": 7,
+      "kind": "word",
+      "explanation": "想要的東西；所使動詞名詞化。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-016",
+      "term": "所欲",
+      "occurrence": 8,
+      "kind": "word",
+      "explanation": "想要的東西；所使動詞名詞化。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-017",
+      "term": "得兼",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "同時得到。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-018",
+      "term": "得兼",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "同時得到。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-019",
+      "term": "舍",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "通捨，放棄。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-020",
+      "term": "舍",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "通捨，放棄。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-021",
+      "term": "取",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "選取。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-022",
+      "term": "取",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "選取。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-023",
+      "term": "生",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "生命、活下去。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-024",
+      "term": "生",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "生命、活下去。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-025",
+      "term": "生",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "生命、活下去。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-026",
+      "term": "生",
+      "occurrence": 4,
+      "kind": "word",
+      "explanation": "生命、活下去。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-027",
+      "term": "生",
+      "occurrence": 5,
+      "kind": "word",
+      "explanation": "生命、活下去。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-028",
+      "term": "生",
+      "occurrence": 6,
+      "kind": "word",
+      "explanation": "生命、活下去。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-029",
+      "term": "生",
+      "occurrence": 7,
+      "kind": "word",
+      "explanation": "生命、活下去。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-030",
+      "term": "生",
+      "occurrence": 8,
+      "kind": "word",
+      "explanation": "生命、活下去。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-031",
+      "term": "義",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "道義。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-032",
+      "term": "義",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "道義。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-033",
+      "term": "甚",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "超過。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-034",
+      "term": "甚",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "超過。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-035",
+      "term": "甚",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "超過。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-036",
+      "term": "甚",
+      "occurrence": 4,
+      "kind": "word",
+      "explanation": "超過。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-037",
+      "term": "甚",
+      "occurrence": 5,
+      "kind": "word",
+      "explanation": "超過。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-038",
+      "term": "甚",
+      "occurrence": 6,
+      "kind": "word",
+      "explanation": "超過。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-039",
+      "term": "苟得",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "苟且取得生命，苟且偷生。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-040",
+      "term": "惡",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "厭惡。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-041",
+      "term": "惡",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "厭惡。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-042",
+      "term": "惡",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "厭惡。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-043",
+      "term": "惡",
+      "occurrence": 4,
+      "kind": "word",
+      "explanation": "厭惡。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-044",
+      "term": "患",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "禍患。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-045",
+      "term": "患",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "禍患。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-046",
+      "term": "患",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "禍患。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-047",
+      "term": "辟",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "通避，躲避。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-048",
+      "term": "辟",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "通避，躲避。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-049",
+      "term": "辟",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "通避，躲避。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-050",
+      "term": "如使",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "假如。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-051",
+      "term": "使人",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "假使人們；使表示假設。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-052",
+      "term": "使人",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "假使人們；使表示假設。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-053",
+      "term": "莫",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "沒有甚麼。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-054",
+      "term": "莫",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "沒有甚麼。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-055",
+      "term": "凡",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "凡是、一切。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-056",
+      "term": "凡",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "凡是、一切。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-057",
+      "term": "由是",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "憑這種方法。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-058",
+      "term": "由是",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "憑這種方法。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-059",
+      "term": "是故",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "因此。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-060",
+      "term": "非獨",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "不僅。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-061",
+      "term": "賢者",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "有道德的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-062",
+      "term": "賢者",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "有道德的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-063",
+      "term": "是心",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "這種本心，指重義、羞惡之心。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-064",
+      "term": "喪",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "喪失。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-065",
+      "term": "耳",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "罷了。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-066",
+      "term": "熊掌",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "熊的腳掌，珍貴食物。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-067",
+      "term": "熊掌",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "熊的腳掌，珍貴食物。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-068",
+      "term": "兼",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "兼有、同時得到。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-069",
+      "term": "兼",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "兼有、同時得到。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-070",
+      "term": "亦",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "也。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-071",
+      "term": "亦",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "也。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-072",
+      "term": "亦",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "也。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-073",
+      "term": "亦",
+      "occurrence": 4,
+      "kind": "word",
+      "explanation": "也。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-074",
+      "term": "亦",
+      "occurrence": 5,
+      "kind": "word",
+      "explanation": "也。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-075",
+      "term": "二者",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "兩樣東西，分別指魚與熊掌、生命與道義。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-076",
+      "term": "二者",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "兩樣東西，分別指魚與熊掌、生命與道義。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-077",
+      "term": "皆",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "都。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-078",
+      "term": "勿",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "不要。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-079",
+      "term": "所欲有甚於生者",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "比較句：於表示比；所追求的東西中，有比生命更重要的。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-080",
+      "term": "所欲有甚於生者",
+      "occurrence": 2,
+      "kind": "sentence",
+      "explanation": "比較句：於表示比；所追求的東西中，有比生命更重要的。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-081",
+      "term": "何不用也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "反問句：有甚麼方法不採用呢？",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-082",
+      "term": "何不為也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "反問句：有甚麼辦法不去做呢？",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-083",
+      "term": "食",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "飯食。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-084",
+      "term": "豆",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "古代盛食物的器具。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-085",
+      "term": "羹",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "帶汁的肉食。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-086",
+      "term": "弗",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "不。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-087",
+      "term": "弗",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "不。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-088",
+      "term": "嘑爾",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "大聲呼叱的樣子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-089",
+      "term": "與之",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "給他，與為動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-090",
+      "term": "與之",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "給他，與為動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-091",
+      "term": "蹴",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "踐踏。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-092",
+      "term": "乞人",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "乞丐。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-093",
+      "term": "不屑",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "輕視，不肯接受。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-094",
+      "term": "萬鍾",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "優厚的俸祿；鍾原是容量單位。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-095",
+      "term": "萬鍾",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "優厚的俸祿；鍾原是容量單位。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-096",
+      "term": "辯",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "通辨，辨別。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-097",
+      "term": "加",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "增益、好處。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-098",
+      "term": "奉",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "供養、侍奉。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-099",
+      "term": "奉",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "供養、侍奉。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-100",
+      "term": "窮乏",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "貧困。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-101",
+      "term": "窮乏",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "貧困。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-102",
+      "term": "得我",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "感激我；得通德。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-103",
+      "term": "得我",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "感激我；得通德。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-104",
+      "term": "與",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "通歟，表示疑問的句末語氣詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-105",
+      "term": "鄉",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "通向，從前。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-106",
+      "term": "鄉",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "通向，從前。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-107",
+      "term": "鄉",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "通向，從前。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-108",
+      "term": "為之",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "做這件事，指接受不合禮義的俸祿。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-109",
+      "term": "為之",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "做這件事，指接受不合禮義的俸祿。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-110",
+      "term": "為之",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "做這件事，指接受不合禮義的俸祿。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-111",
+      "term": "已",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "停止。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-112",
+      "term": "本心",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "人本有的善心、羞惡之心。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-113",
+      "term": "簞",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "盛飯的竹器。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-114",
+      "term": "宮室",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "住宅。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-115",
+      "term": "宮室",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "住宅。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-116",
+      "term": "所識",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "所認識的。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-117",
+      "term": "所識",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "所認識的。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-118",
+      "term": "受",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "接受。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-119",
+      "term": "受",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "接受。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-120",
+      "term": "受",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "接受。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-121",
+      "term": "受",
+      "occurrence": 4,
+      "kind": "word",
+      "explanation": "接受。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-122",
+      "term": "受",
+      "occurrence": 5,
+      "kind": "word",
+      "explanation": "接受。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-123",
+      "term": "爾",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "形容動作狀態的詞尾，相當於……的樣子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-124",
+      "term": "爾",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "形容動作狀態的詞尾，相當於……的樣子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-125",
+      "term": "萬鍾於我何加焉",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "疑問句：對我有甚麼增益？於我表示對我，何加即有何好處。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-126",
+      "term": "此之謂失其本心",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "賓語前置：即「謂此失其本心」，之標示賓語此前置，意思是這就叫失去本心。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-127",
+      "term": "鄉為身死而不受",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "從前寧願犧牲生命也不接受不合禮義的施捨；須聯繫前文受辱而拒食的語境理解。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-128",
+      "term": "鄉為身死而不受",
+      "occurrence": 2,
+      "kind": "sentence",
+      "explanation": "從前寧願犧牲生命也不接受不合禮義的施捨；須聯繫前文受辱而拒食的語境理解。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-129",
+      "term": "鄉為身死而不受",
+      "occurrence": 3,
+      "kind": "sentence",
+      "explanation": "從前寧願犧牲生命也不接受不合禮義的施捨；須聯繫前文受辱而拒食的語境理解。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-130",
+      "term": "今為宮室之美為之",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "前一為是介詞「為了」，後一為是動詞「做」，之指不合禮義而接受俸祿。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-131",
+      "term": "為宮室之美、妻妾之奉、所識窮乏者得我與",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "省略主語和接受俸祿的行為，問是否為了住宅美麗、妻妾供奉和使窮人感激自己。",
+      "source": "supplement"
+    }
+  ],
+  "reader_annotation_source": {
+    "label": "教育局原有注釋；新增字詞及句式為按語境補充",
+    "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_04.pdf"
+  }
 }

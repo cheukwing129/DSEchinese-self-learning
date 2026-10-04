@@ -16,6 +16,29 @@
         "n08",
         "n09",
         "n10"
+      ],
+      "reader_annotation_ids": [
+        "r1-001",
+        "r1-002",
+        "r1-003",
+        "r1-004",
+        "r1-005",
+        "r1-006",
+        "r1-007",
+        "r1-008",
+        "r1-009",
+        "r1-010",
+        "r1-011",
+        "r1-012",
+        "r1-013",
+        "r1-014",
+        "r1-015",
+        "r1-016",
+        "r1-017",
+        "r1-018",
+        "r1-019",
+        "r1-020",
+        "r1-021"
       ]
     },
     {
@@ -40,6 +63,54 @@
         "n21b",
         "n22b",
         "n22c"
+      ],
+      "reader_annotation_ids": [
+        "r2-022",
+        "r2-023",
+        "r2-024",
+        "r2-025",
+        "r2-026",
+        "r2-027",
+        "r2-028",
+        "r2-029",
+        "r2-030",
+        "r2-031",
+        "r2-032",
+        "r2-033",
+        "r2-034",
+        "r2-035",
+        "r2-036",
+        "r2-037",
+        "r2-038",
+        "r2-039",
+        "r2-040",
+        "r2-041",
+        "r2-042",
+        "r2-043",
+        "r2-044",
+        "r2-045",
+        "r2-046",
+        "r2-047",
+        "r2-048",
+        "r2-049",
+        "r2-050",
+        "r2-051",
+        "r2-052",
+        "r2-053",
+        "r2-054",
+        "r2-055",
+        "r2-056",
+        "r2-057",
+        "r2-058",
+        "r2-059",
+        "r2-060",
+        "r2-061",
+        "r2-062",
+        "r2-063",
+        "r2-064",
+        "r2-065",
+        "r2-066",
+        "r2-067"
       ]
     },
     {
@@ -70,6 +141,54 @@
         "n30b",
         "n37b",
         "n41b"
+      ],
+      "reader_annotation_ids": [
+        "r3-068",
+        "r3-069",
+        "r3-070",
+        "r3-071",
+        "r3-072",
+        "r3-073",
+        "r3-074",
+        "r3-075",
+        "r3-076",
+        "r3-077",
+        "r3-078",
+        "r3-079",
+        "r3-080",
+        "r3-081",
+        "r3-082",
+        "r3-083",
+        "r3-084",
+        "r3-085",
+        "r3-086",
+        "r3-087",
+        "r3-088",
+        "r3-089",
+        "r3-090",
+        "r3-091",
+        "r3-092",
+        "r3-093",
+        "r3-094",
+        "r3-095",
+        "r3-096",
+        "r3-097",
+        "r3-098",
+        "r3-099",
+        "r3-100",
+        "r3-101",
+        "r3-102",
+        "r3-103",
+        "r3-104",
+        "r3-105",
+        "r3-106",
+        "r3-107",
+        "r3-108",
+        "r3-109",
+        "r3-110",
+        "r3-111",
+        "r3-112",
+        "r3-113"
       ]
     },
     {
@@ -81,6 +200,28 @@
         "n44",
         "n45",
         "n46"
+      ],
+      "reader_annotation_ids": [
+        "r4-114",
+        "r4-115",
+        "r4-116",
+        "r4-117",
+        "r4-118",
+        "r4-119",
+        "r4-120",
+        "r4-121",
+        "r4-122",
+        "r4-123",
+        "r4-124",
+        "r4-125",
+        "r4-126",
+        "r4-127",
+        "r4-128",
+        "r4-129",
+        "r4-130",
+        "r4-131",
+        "r4-132",
+        "r4-133"
       ]
     },
     {
@@ -89,6 +230,17 @@
       "summary": "借古諷今：六國之勢雖弱於秦仍有機會不賂而勝，若北宋以天下之大卻重蹈六國覆轍，就連六國也不如了。",
       "annotation_ids": [
         "n47"
+      ],
+      "reader_annotation_ids": [
+        "r5-134",
+        "r5-135",
+        "r5-136",
+        "r5-137",
+        "r5-138",
+        "r5-139",
+        "r5-140",
+        "r5-141",
+        "r5-142"
       ]
     }
   ],
@@ -382,5 +534,1147 @@
       "occurrence": 1,
       "explanation": "倘若、假若。"
     }
-  ]
+  ],
+  "reader_annotations": [
+    {
+      "id": "r1-001",
+      "term": "兵",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "兵器。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-002",
+      "term": "利",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "鋒利。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-003",
+      "term": "善",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "好、得法。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-004",
+      "term": "弊",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "弊病。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-005",
+      "term": "弊",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "弊病。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-006",
+      "term": "賂",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "以財物或土地討好。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-007",
+      "term": "賂",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "以財物或土地討好。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-008",
+      "term": "賂",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "以財物或土地討好。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-009",
+      "term": "賂",
+      "occurrence": 4,
+      "kind": "word",
+      "explanation": "以財物或土地討好。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-010",
+      "term": "賂",
+      "occurrence": 5,
+      "kind": "word",
+      "explanation": "以財物或土地討好。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-011",
+      "term": "賂",
+      "occurrence": 6,
+      "kind": "word",
+      "explanation": "以財物或土地討好。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-012",
+      "term": "虧",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "削弱、虧損。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-013",
+      "term": "道",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "原因。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-014",
+      "term": "或",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "有人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-015",
+      "term": "互喪",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "相繼滅亡。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-016",
+      "term": "率",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "全都。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-017",
+      "term": "以",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "因為。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-018",
+      "term": "蓋",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "原來、因為，表示解釋原因。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-019",
+      "term": "援",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "援助，指盟國。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-020",
+      "term": "完",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "保全。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-021",
+      "term": "賂秦而力虧，破滅之道也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "判斷句：賄賂秦國導致力量削弱，是滅亡的原因。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-022",
+      "term": "攻取",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "攻打奪取。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-023",
+      "term": "邑",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "小城鎮。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-024",
+      "term": "所得",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "得到的土地。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-025",
+      "term": "所亡",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "失去的土地。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-026",
+      "term": "其實",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "它實際的數量；不同於現代「其實」的轉折用法。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-027",
+      "term": "其實",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "它實際的數量；不同於現代「其實」的轉折用法。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-028",
+      "term": "患",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "憂患。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-029",
+      "term": "固",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "本來。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-030",
+      "term": "固",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "本來。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-031",
+      "term": "厥",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "其，他們的。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-032",
+      "term": "先祖父",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "祖先、祖父和父親輩。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-033",
+      "term": "暴",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "暴露，讀如曝。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-034",
+      "term": "暴",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "暴露，讀如曝。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-035",
+      "term": "荊棘",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "帶刺草木。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-036",
+      "term": "尺寸",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "極少，形容土地得來不易。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-037",
+      "term": "舉",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "全部。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-038",
+      "term": "予",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "給予。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-039",
+      "term": "草芥",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "小草，比喻不值錢的東西。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-040",
+      "term": "寢",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "睡眠。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-041",
+      "term": "四境",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "國土四周。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-042",
+      "term": "然則",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "既然如此，那麼。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-043",
+      "term": "厭",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "通饜，滿足。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-044",
+      "term": "奉",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "奉送。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-045",
+      "term": "彌",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "更加。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-046",
+      "term": "繁",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "多。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-047",
+      "term": "愈",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "更加。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-048",
+      "term": "判",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "確定、分明。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-049",
+      "term": "顛覆",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "滅亡。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-050",
+      "term": "宜",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "應該。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-051",
+      "term": "然",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "這樣。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-052",
+      "term": "然",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "這樣。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-053",
+      "term": "然",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "這樣。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-054",
+      "term": "事",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "侍奉、服事。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-055",
+      "term": "薪",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "柴草。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-056",
+      "term": "薪",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "柴草。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-057",
+      "term": "得之",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "說中了道理。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-058",
+      "term": "然後",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "這樣以後；指割地賂秦後才獲一夕安寢。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-059",
+      "term": "諸侯",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "六國國君或各諸侯國。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-060",
+      "term": "諸侯",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "六國國君或各諸侯國。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-061",
+      "term": "諸侯",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "六國國君或各諸侯國。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-062",
+      "term": "斬",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "砍伐。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-063",
+      "term": "侵",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "侵略。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-064",
+      "term": "至",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "到達。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-065",
+      "term": "至",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "到達。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-066",
+      "term": "小則獲邑，大則得城",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "小、大作狀語，表示規模小或大；省略的語境是秦國不經攻戰而得到土地。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-067",
+      "term": "不戰而強弱勝負已判矣",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "而表示轉折：沒有交戰，強弱勝負卻已確定。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-068",
+      "term": "未嘗",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "未曾。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-069",
+      "term": "繼",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "跟隨。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-070",
+      "term": "遷滅",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "逐漸滅亡。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-071",
+      "term": "與嬴",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "親附秦國；與為親附，嬴代指秦。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-072",
+      "term": "始",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "起初。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-073",
+      "term": "始",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "才。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-074",
+      "term": "遠略",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "長遠謀略。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-075",
+      "term": "義",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "堅持道義，認為賂秦不義。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-076",
+      "term": "斯",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "這。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-077",
+      "term": "效",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "成效。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-078",
+      "term": "荊卿",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "荊軻。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-079",
+      "term": "為計",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "作為計策。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-080",
+      "term": "速",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "招致。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-081",
+      "term": "嘗",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "曾經。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-082",
+      "term": "嘗",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "曾經。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-083",
+      "term": "于",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "於，與。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-084",
+      "term": "再",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "兩次。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-085",
+      "term": "卻",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "使……退卻，擊退。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-086",
+      "term": "洎",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "及至。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-087",
+      "term": "讒",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "讒言。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-088",
+      "term": "誅",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "被殺。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-089",
+      "term": "終",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "堅持到最後。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-090",
+      "term": "終",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "堅持到最後。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-091",
+      "term": "革滅",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "消滅。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-092",
+      "term": "殆",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "幾乎。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-093",
+      "term": "智力",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "智謀和力量。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-094",
+      "term": "誠",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "實在。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-095",
+      "term": "向使",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "假使當初。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-096",
+      "term": "愛",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "愛惜。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-097",
+      "term": "行",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "出發、行動。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-098",
+      "term": "數",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "命運、天數。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-099",
+      "term": "理",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "道理、命運。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-100",
+      "term": "當",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "倘若、如果；與秦相較指與秦較量，承接上文的假設。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-101",
+      "term": "或",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "或許。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-102",
+      "term": "量",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "估量。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-103",
+      "term": "不免",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "不能避免滅亡。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-104",
+      "term": "連",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "接連。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-105",
+      "term": "良將",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "優秀的將領，指李牧。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-106",
+      "term": "孤危",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "孤立危弱。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-107",
+      "term": "不得已",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "沒有辦法、迫於形勢。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-108",
+      "term": "未易",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "不容易。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-109",
+      "term": "既",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "已經。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-110",
+      "term": "猶",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "仍然。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-111",
+      "term": "洎牧以讒誅",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "被動表達：到李牧因讒言被殺；誅在語境中是被誅殺。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-112",
+      "term": "義不賂秦",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "以不賂秦為合乎道義；义在這裏表示道義立場。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-113",
+      "term": "後秦擊趙者再",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "再指兩次，不能譯作又一次。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-114",
+      "term": "封",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "封賞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-115",
+      "term": "謀臣",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "有謀略的臣子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-116",
+      "term": "禮",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "以禮相待，名詞作動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-117",
+      "term": "奇才",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "傑出人才。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-118",
+      "term": "幷力",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "合力；幷同並。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-119",
+      "term": "西嚮",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "向西，指向秦國進攻。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-120",
+      "term": "勢",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "有利形勢。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-121",
+      "term": "積威",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "長久累積的威勢。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-122",
+      "term": "積威",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "長久累積的威勢。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-123",
+      "term": "劫",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "脅迫。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-124",
+      "term": "劫",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "脅迫。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-125",
+      "term": "日",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "每天，名詞作狀語。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-126",
+      "term": "月",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "每月，名詞作狀語。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-127",
+      "term": "趨",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "走向。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-128",
+      "term": "為國",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "治理國家；為是動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-129",
+      "term": "無使",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "不要使。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-130",
+      "term": "所劫",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "受到脅迫；所使動詞名詞化，與為組成被動句。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-131",
+      "term": "所劫",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "受到脅迫；所使動詞名詞化，與為組成被動句。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-132",
+      "term": "為秦人積威之所劫",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "被動句：「為……所……」表示被秦國積累的威勢脅迫。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-133",
+      "term": "為國者無使為積威之所劫哉",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "前一為是治理，後一為是被；治理國家的人不要讓自己被積威脅迫。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-134",
+      "term": "諸侯",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "天子分封的各國國君。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-135",
+      "term": "猶",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "尚且。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-136",
+      "term": "茍",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "如果；同苟。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-137",
+      "term": "天下",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "這裏指北宋王朝的國土及力量。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-138",
+      "term": "從",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "跟從、沿襲。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-139",
+      "term": "故事",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "舊事、前例；不是現代的故事。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-140",
+      "term": "是",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "這。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-141",
+      "term": "其勢弱於秦",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "比較句：於表示比，六國的勢力比秦國弱。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-142",
+      "term": "以天下之大",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "定語後置：天下之大即廣大的天下，憑大國的力量。",
+      "source": "supplement"
+    }
+  ],
+  "reader_annotation_source": {
+    "label": "教育局原有注釋；新增字詞及句式為按語境補充",
+    "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_15.pdf"
+  }
 }

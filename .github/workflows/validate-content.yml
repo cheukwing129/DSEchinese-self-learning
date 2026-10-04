@@ -36,6 +36,9 @@ jobs:
       - name: Validate question and source-text correctness contracts
         run: node scripts/validate-content-correctness.mjs
 
+      - name: Validate reader annotation locations and accessibility
+        run: node scripts/validate-reader-annotations.mjs
+
       - name: Validate accessibility interactions
         run: node scripts/validate-accessibility.mjs
 

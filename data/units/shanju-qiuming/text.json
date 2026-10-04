@@ -8,6 +8,12 @@
       "summary": "點出季節、時間、環境：空山剛下過一場雨，又正是傍晚秋涼的天氣，描繪出山中秋色的清新疏淡。",
       "annotation_ids": [
         "n01"
+      ],
+      "reader_annotation_ids": [
+        "r1-001",
+        "r1-002",
+        "r1-003",
+        "r1-004"
       ]
     },
     {
@@ -15,7 +21,12 @@
       "label": "頷聯",
       "text": "明月松間照，清泉石上流。",
       "summary": "以概括的筆墨描繪山中夜色：松林間露出一輪皎潔明月，泉水流過山溪白石，畫面鮮明完整，突出清朗爽淨的基調。",
-      "annotation_ids": []
+      "annotation_ids": [],
+      "reader_annotation_ids": [
+        "r2-005",
+        "r2-006",
+        "r2-007"
+      ]
     },
     {
       "id": 3,
@@ -25,6 +36,14 @@
       "annotation_ids": [
         "n02",
         "n03"
+      ],
+      "reader_annotation_ids": [
+        "r3-008",
+        "r3-009",
+        "r3-010",
+        "r3-011",
+        "r3-012",
+        "r3-013"
       ]
     },
     {
@@ -34,6 +53,15 @@
       "summary": "任憑春天芳草自然凋謝，秋色仍然很美，王孫自可留在山中，反用《楚辭‧招隱士》之意，流露對隱居生活的嚮往。",
       "annotation_ids": [
         "n04"
+      ],
+      "reader_annotation_ids": [
+        "r4-014",
+        "r4-015",
+        "r4-016",
+        "r4-017",
+        "r4-018",
+        "r4-019",
+        "r4-020"
       ]
     }
   ],
@@ -62,5 +90,171 @@
       "putonghua": "xiē",
       "explanation": "任憑春天的花草凋謝，秋色仍然很美，王孫自可留在山中。歇：凋謝。王孫：原指貴族子弟，這裏指隱士。《楚辭‧招隱士》：「王孫遊兮不歸，春草生兮萋萋。」「王孫兮歸來，山中兮不可以久留。」這裏反用其意。"
     }
-  ]
+  ],
+  "reader_annotations": [
+    {
+      "id": "r1-001",
+      "term": "空山",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "空寂的山林。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-002",
+      "term": "新雨",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "剛下過的雨。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-003",
+      "term": "晚來",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "傍晚時分。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-004",
+      "term": "天氣晚來秋",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "詩句語序：晚來天氣秋，傍晚時天氣顯出秋意。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-005",
+      "term": "松間",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "松林之間。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-006",
+      "term": "石上",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "石頭上。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-007",
+      "term": "明月松間照，清泉石上流",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "省略介詞：明月於松間照，清泉於石上流。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-008",
+      "term": "喧",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "喧鬧。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-009",
+      "term": "歸",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "歸來。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-010",
+      "term": "浣女",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "洗衣女子；浣為洗衣。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-011",
+      "term": "下",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "順流而下。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-012",
+      "term": "漁舟",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "捕魚的船。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-013",
+      "term": "竹喧歸浣女，蓮動下漁舟",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "詩句倒裝：浣女歸而竹喧，漁舟下而蓮動；先寫聽見、看見的景象，再點出原因。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-014",
+      "term": "隨意",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "任憑。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-015",
+      "term": "春芳",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "春天的花草。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-016",
+      "term": "歇",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "凋謝。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-017",
+      "term": "王孫",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "原指貴族子弟，這裏指隱士，詩人自指。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-018",
+      "term": "自",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "自然、儘可。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-019",
+      "term": "留",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "留居山中。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-020",
+      "term": "隨意春芳歇，王孫自可留",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "反用《楚辭・招隱士》「山中兮不可以久留」的意思，表達願留山中的心意。",
+      "source": "supplement"
+    }
+  ],
+  "reader_annotation_source": {
+    "label": "教育局原有注釋；新增字詞及句式為按語境補充",
+    "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_16a.pdf"
+  }
 }

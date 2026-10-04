@@ -11,6 +11,21 @@
         "n02",
         "n01b",
         "n02b"
+      ],
+      "reader_annotation_ids": [
+        "r1-001",
+        "r1-002",
+        "r1-003",
+        "r1-004",
+        "r1-005",
+        "r1-006",
+        "r1-007",
+        "r1-008",
+        "r1-009",
+        "r1-010",
+        "r1-011",
+        "r1-012",
+        "r1-013"
       ]
     },
     {
@@ -26,6 +41,26 @@
         "n06",
         "n07",
         "n08"
+      ],
+      "reader_annotation_ids": [
+        "r2-014",
+        "r2-015",
+        "r2-016",
+        "r2-017",
+        "r2-018",
+        "r2-019",
+        "r2-020",
+        "r2-021",
+        "r2-022",
+        "r2-023",
+        "r2-024",
+        "r2-025",
+        "r2-026",
+        "r2-027",
+        "r2-028",
+        "r2-029",
+        "r2-030",
+        "r2-031"
       ]
     },
     {
@@ -41,6 +76,34 @@
         "n13",
         "n14",
         "n10b"
+      ],
+      "reader_annotation_ids": [
+        "r3-032",
+        "r3-033",
+        "r3-034",
+        "r3-035",
+        "r3-036",
+        "r3-037",
+        "r3-038",
+        "r3-039",
+        "r3-040",
+        "r3-041",
+        "r3-042",
+        "r3-043",
+        "r3-044",
+        "r3-045",
+        "r3-046",
+        "r3-047",
+        "r3-048",
+        "r3-049",
+        "r3-050",
+        "r3-051",
+        "r3-052",
+        "r3-053",
+        "r3-054",
+        "r3-055",
+        "r3-056",
+        "r3-057"
       ]
     },
     {
@@ -50,6 +113,17 @@
       "summary": "志士仁人不會為求生而損害仁德，只會犧牲性命以成全仁德。",
       "annotation_ids": [
         "n15"
+      ],
+      "reader_annotation_ids": [
+        "r4-058",
+        "r4-059",
+        "r4-060",
+        "r4-061",
+        "r4-062",
+        "r4-063",
+        "r4-064",
+        "r4-065",
+        "r4-066"
       ]
     },
     {
@@ -64,6 +138,22 @@
         "n19",
         "n20",
         "n21"
+      ],
+      "reader_annotation_ids": [
+        "r5-067",
+        "r5-068",
+        "r5-069",
+        "r5-070",
+        "r5-071",
+        "r5-072",
+        "r5-073",
+        "r5-074",
+        "r5-075",
+        "r5-076",
+        "r5-077",
+        "r5-078",
+        "r5-079",
+        "r5-080"
       ]
     },
     {
@@ -76,6 +166,14 @@
         "n23",
         "n24",
         "n25"
+      ],
+      "reader_annotation_ids": [
+        "r6-081",
+        "r6-082",
+        "r6-083",
+        "r6-084",
+        "r6-085",
+        "r6-086"
       ]
     },
     {
@@ -86,6 +184,16 @@
       "annotation_ids": [
         "n26",
         "n27"
+      ],
+      "reader_annotation_ids": [
+        "r7-087",
+        "r7-088",
+        "r7-089",
+        "r7-090",
+        "r7-091",
+        "r7-092",
+        "r7-093",
+        "r7-094"
       ]
     },
     {
@@ -95,6 +203,14 @@
       "summary": "子女應緊記父母年紀，既為其長壽而喜，也為其漸老而懼。",
       "annotation_ids": [
         "n28"
+      ],
+      "reader_annotation_ids": [
+        "r8-095",
+        "r8-096",
+        "r8-097",
+        "r8-098",
+        "r8-099",
+        "r8-100"
       ]
     },
     {
@@ -108,6 +224,19 @@
         "n31",
         "n32",
         "n33"
+      ],
+      "reader_annotation_ids": [
+        "r9-101",
+        "r9-102",
+        "r9-103",
+        "r9-104",
+        "r9-105",
+        "r9-106",
+        "r9-107",
+        "r9-108",
+        "r9-109",
+        "r9-110",
+        "r9-111"
       ]
     },
     {
@@ -117,6 +246,12 @@
       "summary": "君子心胸坦蕩寬廣，小人則常常憂愁不安。",
       "annotation_ids": [
         "n34"
+      ],
+      "reader_annotation_ids": [
+        "r10-112",
+        "r10-113",
+        "r10-114",
+        "r10-115"
       ]
     },
     {
@@ -129,6 +264,20 @@
         "n36",
         "n37",
         "n38"
+      ],
+      "reader_annotation_ids": [
+        "r11-116",
+        "r11-117",
+        "r11-118",
+        "r11-119",
+        "r11-120",
+        "r11-121",
+        "r11-122",
+        "r11-123",
+        "r11-124",
+        "r11-125",
+        "r11-126",
+        "r11-127"
       ]
     },
     {
@@ -139,6 +288,13 @@
       "annotation_ids": [
         "n39",
         "n40"
+      ],
+      "reader_annotation_ids": [
+        "r12-128",
+        "r12-129",
+        "r12-130",
+        "r12-131",
+        "r12-132"
       ]
     },
     {
@@ -148,6 +304,13 @@
       "summary": "君子以言過其行（說得多做得少）為恥。",
       "annotation_ids": [
         "n41"
+      ],
+      "reader_annotation_ids": [
+        "r13-133",
+        "r13-134",
+        "r13-135",
+        "r13-136",
+        "r13-137"
       ]
     },
     {
@@ -158,6 +321,18 @@
       "annotation_ids": [
         "n42",
         "n43"
+      ],
+      "reader_annotation_ids": [
+        "r14-138",
+        "r14-139",
+        "r14-140",
+        "r14-141",
+        "r14-142",
+        "r14-143",
+        "r14-144",
+        "r14-145",
+        "r14-146",
+        "r14-147"
       ]
     },
     {
@@ -167,6 +342,14 @@
       "summary": "君子只憂慮自己沒有能力，不擔心別人不了解自己。",
       "annotation_ids": [
         "n44"
+      ],
+      "reader_annotation_ids": [
+        "r15-148",
+        "r15-149",
+        "r15-150",
+        "r15-151",
+        "r15-152",
+        "r15-153"
       ]
     },
     {
@@ -176,6 +359,16 @@
       "summary": "君子要求自己，小人只會要求別人。",
       "annotation_ids": [
         "n45"
+      ],
+      "reader_annotation_ids": [
+        "r16-154",
+        "r16-155",
+        "r16-156",
+        "r16-157",
+        "r16-158",
+        "r16-159",
+        "r16-160",
+        "r16-161"
       ]
     }
   ],
@@ -446,5 +639,1299 @@
       "occurrence": 1,
       "explanation": "稱許、讚許。"
     }
-  ]
+  ],
+  "reader_annotations": [
+    {
+      "id": "r1-001",
+      "term": "仁",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "合乎仁德的品行。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-002",
+      "term": "仁",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "合乎仁德的品行。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-003",
+      "term": "仁",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "合乎仁德的品行。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-004",
+      "term": "仁",
+      "occurrence": 4,
+      "kind": "word",
+      "explanation": "合乎仁德的品行。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-005",
+      "term": "仁",
+      "occurrence": 5,
+      "kind": "word",
+      "explanation": "合乎仁德的品行。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-006",
+      "term": "約",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "貧困。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-007",
+      "term": "樂",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "安樂富足的環境。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-008",
+      "term": "安仁",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "安於實行仁德。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-009",
+      "term": "知者",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "有智慧的人；知通智。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-010",
+      "term": "利仁",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "認識仁德的益處而實行仁。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-011",
+      "term": "處",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "處於、生活在。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-012",
+      "term": "處",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "處於、生活在。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-013",
+      "term": "不仁者，不可以久處約，不可以長處樂",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "者指不仁的人；可以為能夠，不能長久承受貧困，也不能長久安處富貴。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-014",
+      "term": "所欲",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "想要的事物。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-015",
+      "term": "道",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "正當的方法、途徑。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-016",
+      "term": "道",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "正當的方法、途徑。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-017",
+      "term": "處",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "安處、接受。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-018",
+      "term": "惡",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "厭惡。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-019",
+      "term": "惡",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "怎麼、如何，疑問代詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-020",
+      "term": "去",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "離開、捨棄。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-021",
+      "term": "去",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "離開、捨棄。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-022",
+      "term": "終食",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "吃完一頓飯。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-023",
+      "term": "間",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "時間。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-024",
+      "term": "違仁",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "違背仁德。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-025",
+      "term": "造次",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "倉促、緊迫的時候。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-026",
+      "term": "顛沛",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "困頓流離的時候。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-027",
+      "term": "於是",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "在這方面，指守仁；不是現代表示承接的於是。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-028",
+      "term": "於是",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "在這方面，指守仁；不是現代表示承接的於是。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-029",
+      "term": "不以其道得之，不處也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "省略句：不用正當方法得到富貴，就不接受；之代富貴。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-030",
+      "term": "不以其道得之，不去也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "語境解釋：不能以正當的方法擺脫貧賤，就不捨棄它；不去即不以不義的方法擺脫。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-031",
+      "term": "君子去仁，惡乎成名",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "疑問句：惡乎是怎樣、從何，離開仁德，怎能成就君子之名？",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-032",
+      "term": "克己",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "克制自己的私欲。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-033",
+      "term": "克己",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "克制自己的私欲。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-034",
+      "term": "復禮",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "使言行回復於禮。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-035",
+      "term": "復禮",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "使言行回復於禮。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-036",
+      "term": "為仁",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "是仁德的表現；為是判斷動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-037",
+      "term": "為仁",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "實行仁德；為是實行。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-038",
+      "term": "一日",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "一旦。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-039",
+      "term": "歸仁",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "歸於仁德，這裏指天下稱許其仁德。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-040",
+      "term": "由",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "靠、取決於。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-041",
+      "term": "由",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "靠、取決於。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-042",
+      "term": "目",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "具體條目。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-043",
+      "term": "非禮",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "不合禮的。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-044",
+      "term": "非禮",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "不合禮的。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-045",
+      "term": "非禮",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "不合禮的。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-046",
+      "term": "非禮",
+      "occurrence": 4,
+      "kind": "word",
+      "explanation": "不合禮的。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-047",
+      "term": "勿",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "不要。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-048",
+      "term": "勿",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "不要。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-049",
+      "term": "勿",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "不要。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-050",
+      "term": "勿",
+      "occurrence": 4,
+      "kind": "word",
+      "explanation": "不要。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-051",
+      "term": "敏",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "聰敏。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-052",
+      "term": "請",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "請讓我，表示自請。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-053",
+      "term": "請",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "請讓我，表示自請。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-054",
+      "term": "事",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "實行。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-055",
+      "term": "斯語",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "這番話。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-056",
+      "term": "為仁由己，而由人乎哉",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "反問句：實行仁德靠自己，難道靠別人嗎？",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-057",
+      "term": "克己復禮為仁",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "判斷句：克制私欲、回復禮的要求，就是仁。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-058",
+      "term": "志士",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "有志節的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-059",
+      "term": "仁人",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "有仁德的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-060",
+      "term": "求生",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "求取生存。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-061",
+      "term": "害仁",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "損害仁德。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-062",
+      "term": "殺身",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "犧牲生命。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-063",
+      "term": "成仁",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "成全仁德。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-064",
+      "term": "以",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "用來，表示目的。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-065",
+      "term": "以",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "用來，表示目的。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-066",
+      "term": "無求生以害仁，有殺身以成仁",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "兩句對舉：不為求生而損害仁，必要時犧牲生命以成全仁。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-067",
+      "term": "御",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "駕車。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-068",
+      "term": "告",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "告訴。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-069",
+      "term": "對",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "回答。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-070",
+      "term": "無違",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "不要違背禮。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-071",
+      "term": "無違",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "不要違背禮。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-072",
+      "term": "事",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "侍奉。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-073",
+      "term": "葬",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "埋葬。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-074",
+      "term": "祭",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "祭祀。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-075",
+      "term": "以禮",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "依照禮。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-076",
+      "term": "以禮",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "依照禮。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-077",
+      "term": "以禮",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "依照禮。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-078",
+      "term": "孟孫問孝於我",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "介詞結構置於動詞後：向我詢問孝道。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-079",
+      "term": "何謂也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "賓語前置：即謂何，說的是甚麼意思？",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-080",
+      "term": "生，事之以禮；死，葬之以禮，祭之以禮",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "省略主語：父母在世時以禮侍奉，父母去世後以禮安葬、祭祀；之指父母。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-081",
+      "term": "是謂",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "這叫做。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-082",
+      "term": "養",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "供養，使有生活所需。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-083",
+      "term": "養",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "供養，使有生活所需。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-084",
+      "term": "敬",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "敬重。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-085",
+      "term": "別",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "分別、區分。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-086",
+      "term": "何以別乎",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "賓語前置：即以何別乎，憑甚麼區分供養父母與飼養犬馬？",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-087",
+      "term": "事",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "侍奉。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-088",
+      "term": "幾諫",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "委婉勸諫；幾指輕微、婉轉。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-089",
+      "term": "志",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "心意，這裏指父母的意思。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-090",
+      "term": "從",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "聽從勸諫。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-091",
+      "term": "違",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "違逆。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-092",
+      "term": "勞",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "憂愁、操心。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-093",
+      "term": "怨",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "怨恨。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-094",
+      "term": "見志不從，又敬不違",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "省略句：看出父母心意不願聽從，仍然敬重他們，不違逆他們。",
+      "source": "supplement"
+    },
+    {
+      "id": "r8-095",
+      "term": "年",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "年齡。",
+      "source": "supplement"
+    },
+    {
+      "id": "r8-096",
+      "term": "則",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "表示列舉的分項。",
+      "source": "supplement"
+    },
+    {
+      "id": "r8-097",
+      "term": "則",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "表示列舉的分項。",
+      "source": "supplement"
+    },
+    {
+      "id": "r8-098",
+      "term": "以喜",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "因父母高壽而喜。",
+      "source": "supplement"
+    },
+    {
+      "id": "r8-099",
+      "term": "以懼",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "因父母年老而擔憂。",
+      "source": "supplement"
+    },
+    {
+      "id": "r8-100",
+      "term": "一則以喜，一則以懼",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "省略以的賓語：一方面因父母年齡而喜，一方面因父母年齡而懼。",
+      "source": "supplement"
+    },
+    {
+      "id": "r9-101",
+      "term": "重",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "莊重。",
+      "source": "supplement"
+    },
+    {
+      "id": "r9-102",
+      "term": "威",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "威嚴。",
+      "source": "supplement"
+    },
+    {
+      "id": "r9-103",
+      "term": "固",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "可解作牢固，或閉塞固陋；學則不固的兩種解法保留原有注釋。",
+      "source": "supplement"
+    },
+    {
+      "id": "r9-104",
+      "term": "主",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "以……為主要原則。",
+      "source": "supplement"
+    },
+    {
+      "id": "r9-105",
+      "term": "忠信",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "忠誠和守信。",
+      "source": "supplement"
+    },
+    {
+      "id": "r9-106",
+      "term": "無",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "同毋，不要。",
+      "source": "supplement"
+    },
+    {
+      "id": "r9-107",
+      "term": "友",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "與……交朋友，名詞作動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r9-108",
+      "term": "如",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "及、比得上。",
+      "source": "supplement"
+    },
+    {
+      "id": "r9-109",
+      "term": "過",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "有過失，名詞作動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r9-110",
+      "term": "憚",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "害怕。",
+      "source": "supplement"
+    },
+    {
+      "id": "r9-111",
+      "term": "無友不如己者",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "友作動詞，指不要與在忠信等方面不如自己的人交友，應結交有助修養的朋友。",
+      "source": "supplement"
+    },
+    {
+      "id": "r10-112",
+      "term": "坦蕩蕩",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "心胸開闊舒暢。",
+      "source": "supplement"
+    },
+    {
+      "id": "r10-113",
+      "term": "小人",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "品德低下的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r10-114",
+      "term": "長",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "常常。",
+      "source": "supplement"
+    },
+    {
+      "id": "r10-115",
+      "term": "戚戚",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "憂愁的樣子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r11-116",
+      "term": "憂",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "憂愁。",
+      "source": "supplement"
+    },
+    {
+      "id": "r11-117",
+      "term": "憂",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "憂愁。",
+      "source": "supplement"
+    },
+    {
+      "id": "r11-118",
+      "term": "憂",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "憂愁。",
+      "source": "supplement"
+    },
+    {
+      "id": "r11-119",
+      "term": "懼",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "恐懼。",
+      "source": "supplement"
+    },
+    {
+      "id": "r11-120",
+      "term": "懼",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "恐懼。",
+      "source": "supplement"
+    },
+    {
+      "id": "r11-121",
+      "term": "懼",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "恐懼。",
+      "source": "supplement"
+    },
+    {
+      "id": "r11-122",
+      "term": "斯",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "這樣。",
+      "source": "supplement"
+    },
+    {
+      "id": "r11-123",
+      "term": "已乎",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "罷了嗎；已表示罷了，與乎合用表示疑問。",
+      "source": "supplement"
+    },
+    {
+      "id": "r11-124",
+      "term": "內省",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "內心反省。",
+      "source": "supplement"
+    },
+    {
+      "id": "r11-125",
+      "term": "疚",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "愧疚。",
+      "source": "supplement"
+    },
+    {
+      "id": "r11-126",
+      "term": "夫",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "發語詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r11-127",
+      "term": "夫何憂何懼",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "賓語前置：何憂、何懼即憂何、懼何，有甚麼可憂愁、可恐懼呢？",
+      "source": "supplement"
+    },
+    {
+      "id": "r12-128",
+      "term": "成",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "成全。",
+      "source": "supplement"
+    },
+    {
+      "id": "r12-129",
+      "term": "成",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "成全。",
+      "source": "supplement"
+    },
+    {
+      "id": "r12-130",
+      "term": "美",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "好的事情，形容詞作名詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r12-131",
+      "term": "惡",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "壞的事情，形容詞作名詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r12-132",
+      "term": "反是",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "與此相反；是指前述君子的做法。",
+      "source": "supplement"
+    },
+    {
+      "id": "r13-133",
+      "term": "恥",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "以……為恥，意動用法。",
+      "source": "supplement"
+    },
+    {
+      "id": "r13-134",
+      "term": "言",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "言語。",
+      "source": "supplement"
+    },
+    {
+      "id": "r13-135",
+      "term": "過",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "超過。",
+      "source": "supplement"
+    },
+    {
+      "id": "r13-136",
+      "term": "行",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "行為。",
+      "source": "supplement"
+    },
+    {
+      "id": "r13-137",
+      "term": "君子恥其言而過其行",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "君子以言語超過實際行動為恥；其指自己，而連接言與過其行。",
+      "source": "supplement"
+    },
+    {
+      "id": "r14-138",
+      "term": "義",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "合宜的道義。",
+      "source": "supplement"
+    },
+    {
+      "id": "r14-139",
+      "term": "質",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "根本。",
+      "source": "supplement"
+    },
+    {
+      "id": "r14-140",
+      "term": "禮",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "禮節、禮的規範。",
+      "source": "supplement"
+    },
+    {
+      "id": "r14-141",
+      "term": "行之",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "實行它，之指合義之事。",
+      "source": "supplement"
+    },
+    {
+      "id": "r14-142",
+      "term": "孫",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "通遜，謙遜。",
+      "source": "supplement"
+    },
+    {
+      "id": "r14-143",
+      "term": "出之",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "表達它。",
+      "source": "supplement"
+    },
+    {
+      "id": "r14-144",
+      "term": "信",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "誠信。",
+      "source": "supplement"
+    },
+    {
+      "id": "r14-145",
+      "term": "成之",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "完成它。",
+      "source": "supplement"
+    },
+    {
+      "id": "r14-146",
+      "term": "君子義以為質",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "賓語前置：以義為質，以道義為根本。",
+      "source": "supplement"
+    },
+    {
+      "id": "r14-147",
+      "term": "禮以行之，孫以出之，信以成之",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "以禮行之、以孫出之、以信成之，禮、孫、信是前置於以的賓語。",
+      "source": "supplement"
+    },
+    {
+      "id": "r15-148",
+      "term": "病",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "憂慮，動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r15-149",
+      "term": "病",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "憂慮，動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r15-150",
+      "term": "無能",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "沒有才德能力。",
+      "source": "supplement"
+    },
+    {
+      "id": "r15-151",
+      "term": "焉",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "句末語氣詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r15-152",
+      "term": "知",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "了解、賞識。",
+      "source": "supplement"
+    },
+    {
+      "id": "r15-153",
+      "term": "不病人之不己知也",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "否定句賓語前置：不己知即不知己；不憂慮別人不了解自己。",
+      "source": "supplement"
+    },
+    {
+      "id": "r16-154",
+      "term": "求",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "要求、責求。",
+      "source": "supplement"
+    },
+    {
+      "id": "r16-155",
+      "term": "求",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "要求、責求。",
+      "source": "supplement"
+    },
+    {
+      "id": "r16-156",
+      "term": "諸",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "之於的合音。",
+      "source": "supplement"
+    },
+    {
+      "id": "r16-157",
+      "term": "諸",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "之於的合音。",
+      "source": "supplement"
+    },
+    {
+      "id": "r16-158",
+      "term": "己",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "自己。",
+      "source": "supplement"
+    },
+    {
+      "id": "r16-159",
+      "term": "人",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "別人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r16-160",
+      "term": "人",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "別人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r16-161",
+      "term": "君子求諸己，小人求諸人",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "諸即之於：君子對自己提出要求，小人只對別人提出要求。",
+      "source": "supplement"
+    }
+  ],
+  "reader_annotation_source": {
+    "label": "教育局原有注釋；新增字詞及句式為按語境補充",
+    "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_03.pdf"
+  }
 }

@@ -8,6 +8,13 @@
       "summary": "點出李白獨酌，無人相伴的處境。",
       "annotation_ids": [
         "n01"
+      ],
+      "reader_annotation_ids": [
+        "r1-001",
+        "r1-002",
+        "r1-003",
+        "r1-004",
+        "r1-005"
       ]
     },
     {
@@ -17,6 +24,12 @@
       "summary": "寫李白忽發奇想，舉杯邀請月亮和身影共飲，以消解孤獨苦悶之情。",
       "annotation_ids": [
         "n02"
+      ],
+      "reader_annotation_ids": [
+        "r2-006",
+        "r2-007",
+        "r2-008",
+        "r2-009"
       ]
     },
     {
@@ -26,6 +39,14 @@
       "summary": "雖有月和影相伴，但月畢竟不會飲酒，影子也徒然跟隨身體而動，情感又復歸孤獨。",
       "annotation_ids": [
         "n03"
+      ],
+      "reader_annotation_ids": [
+        "r3-010",
+        "r3-011",
+        "r3-012",
+        "r3-013",
+        "r3-014",
+        "r3-015"
       ]
     },
     {
@@ -36,6 +57,14 @@
       "annotation_ids": [
         "n04",
         "n05"
+      ],
+      "reader_annotation_ids": [
+        "r4-016",
+        "r4-017",
+        "r4-018",
+        "r4-019",
+        "r4-020",
+        "r4-021"
       ]
     },
     {
@@ -45,6 +74,11 @@
       "summary": "寫李白高歌，月亮好像徘徊起舞；舞動時因酒醉而令身影變得散亂，意思愈轉愈奇。",
       "annotation_ids": [
         "n06"
+      ],
+      "reader_annotation_ids": [
+        "r5-022",
+        "r5-023",
+        "r5-024"
       ]
     },
     {
@@ -54,6 +88,11 @@
       "summary": "未醉時與月、影共樂，已醉後則復歸與月和影分離，流露出依然孤獨之傷歎。",
       "annotation_ids": [
         "n07"
+      ],
+      "reader_annotation_ids": [
+        "r6-025",
+        "r6-026",
+        "r6-027"
       ]
     },
     {
@@ -64,6 +103,15 @@
       "annotation_ids": [
         "n08",
         "n09"
+      ],
+      "reader_annotation_ids": [
+        "r7-028",
+        "r7-029",
+        "r7-030",
+        "r7-031",
+        "r7-032",
+        "r7-033",
+        "r7-034"
       ]
     }
   ],
@@ -115,5 +163,283 @@
       "putonghua": "mìɑo",
       "explanation": "（與月和身影）相約於遙遠的銀河之上。相期：相約。邈：遙遠。雲漢：銀漢，即銀河。"
     }
-  ]
+  ],
+  "reader_annotations": [
+    {
+      "id": "r1-001",
+      "term": "花間",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "花叢間。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-002",
+      "term": "酌",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "飲酒。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-003",
+      "term": "獨酌",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "獨自飲酒。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-004",
+      "term": "無相親",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "沒有可以親近、作伴的人。",
+      "source": "supplement"
+    },
+    {
+      "id": "r1-005",
+      "term": "花間一壺酒",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "省略句：在花叢間放着一壺酒，省略處所介詞及動詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-006",
+      "term": "舉",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "舉起。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-007",
+      "term": "邀",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "邀請。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-008",
+      "term": "對影",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "面對自己的影子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r2-009",
+      "term": "三人",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "詩人、明月和自己的影子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-010",
+      "term": "既",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "已、原本。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-011",
+      "term": "解",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "懂得。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-012",
+      "term": "飲",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "飲酒。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-013",
+      "term": "徒",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "只是、徒然。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-014",
+      "term": "隨",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "跟隨。",
+      "source": "supplement"
+    },
+    {
+      "id": "r3-015",
+      "term": "身",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "身體。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-016",
+      "term": "暫",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "暫且。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-017",
+      "term": "將",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "和，連詞。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-018",
+      "term": "行樂",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "享受歡樂。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-019",
+      "term": "須",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "應當。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-020",
+      "term": "及",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "趁着。",
+      "source": "supplement"
+    },
+    {
+      "id": "r4-021",
+      "term": "暫伴月將影",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "將是和，不是將要，暫且與月和影作伴。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-022",
+      "term": "徘徊",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "來回移動的樣子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-023",
+      "term": "零亂",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "散亂的樣子。",
+      "source": "supplement"
+    },
+    {
+      "id": "r5-024",
+      "term": "我歌月徘徊，我舞影零亂",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "我歌唱時月似徘徊，我舞動時影子散亂；透過人的動作賦予月影活動。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-025",
+      "term": "交歡",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "一同歡樂。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-026",
+      "term": "各",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "各自。",
+      "source": "supplement"
+    },
+    {
+      "id": "r6-027",
+      "term": "分散",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "分別、離散。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-028",
+      "term": "永",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "永遠。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-029",
+      "term": "結",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "結交。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-030",
+      "term": "無情遊",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "超越世俗情累的交遊，對象是月與影。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-031",
+      "term": "相期",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "相約。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-032",
+      "term": "邈",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "遙遠。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-033",
+      "term": "雲漢",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "銀河。",
+      "source": "supplement"
+    },
+    {
+      "id": "r7-034",
+      "term": "相期邈雲漢",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "省略處所介詞：相約於遙遠的銀河。",
+      "source": "supplement"
+    }
+  ],
+  "reader_annotation_source": {
+    "label": "教育局原有注釋；新增字詞及句式為按語境補充",
+    "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_16b.pdf"
+  }
 }
