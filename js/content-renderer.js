@@ -354,11 +354,11 @@ const ContentRenderer = (() => {
       const claimed = [];
       matches
         .slice()
-        // Explicit lexical additions take precedence over long original glosses;
-        // within lexical additions, keep compounds intact (e.g. 機辟, 師道).
-        // Sentence and overlapping original glosses remain accessible below.
+        // Original EDB glosses take precedence whenever ranges overlap.
+        // Within each source, keep compounds intact; supplementary words and
+        // sentences obscured by an original gloss remain accessible below.
         .filter((m) => m.anno.kind !== "sentence")
-        .sort((x, y) => Number(y.anno.source === "supplement") - Number(x.anno.source === "supplement")
+        .sort((x, y) => Number(x.anno.source === "supplement") - Number(y.anno.source === "supplement")
           || (y.end - y.start) - (x.end - x.start))
         .forEach((m) => {
           const overlap = claimed.some((c) => !(m.end <= c.start || m.start >= c.end));

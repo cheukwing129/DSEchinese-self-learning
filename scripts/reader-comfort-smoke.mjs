@@ -159,7 +159,8 @@ try {
   await page.locator('.reader-nav button[data-idx="1"]').click();
   const readings = await page.locator(".text-passage button.term").evaluateAll((items) => items.map((el) => el.textContent));
   check(readings.filter((s) => s === "嘗").length === 2, "both occurrences of 嘗 are annotated");
-  check(readings.filter((s) => s === "計").length === 3, "noun and verb occurrences of 計 are annotated");
+  check(readings.filter((s) => s === "計").length === 2, "uncovered noun occurrences of 計 are annotated");
+  check(readings.includes("竊計欲亡走燕"), "overlapping EDB phrase takes precedence over supplemental verb 計");
   await page.locator(".reader-extra-notes").evaluateAll((items) => items.forEach((el) => { el.open = true; }));
   await page.getByRole("button", { name: "查看「何以知之」句式", exact: true }).click();
   check((await page.locator(".annotation-explanation").textContent()).includes("以何知之"), "sentence note explains inverted order");

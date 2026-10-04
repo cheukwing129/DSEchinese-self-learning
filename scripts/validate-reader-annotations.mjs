@@ -66,4 +66,17 @@ for (const unitId of fs.readdirSync(path.join(root, "data/units"))) {
   assert.equal(used.size, text.reader_annotations.length, `${unitId}: no unused reader additions`);
 }
 assert.equal(paragraphs > 70, true);
+// Both longer and shorter EDB ranges must outrank supplemental ranges.
+for (const [originalTerm, extraTerm] of [["竊計欲亡走燕", "計"], ["計", "竊計欲亡走燕"], ["計", "計"]]) {
+  const map = {
+    edb: { id: "edb", term: originalTerm, explanation: "原有詞解" },
+    extra: { id: "extra", term: extraTerm, explanation: "補充詞解", kind: "word", source: "supplement" }
+  };
+  const render = new Function("esc", "paragraphTerms", "annoMap",
+    source.slice(start, end) + "\nreturn paragraphHTML;")(esc, () => [map.extra, map.edb], map);
+  const result = render({ text: "竊計欲亡走燕" });
+  assert(result.html.includes('data-anno="edb"'), "EDB explanation wins regardless of range length or input order");
+  assert(!result.html.includes('data-anno="extra"'), "Overlapping supplement is not substituted for EDB");
+  assert(result.notes.includes('data-anno="extra"'), "Supplement remains accessible below");
+}
 console.log(`Reader annotation validation passed: ${additions} additions (${sentences} sentence notes), ${paragraphs} paragraphs; text preserved and every gloss accessible.`);
