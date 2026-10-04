@@ -13,7 +13,9 @@
         "r1-003",
         "r1-004",
         "r1-005",
-        "r1-006"
+        "r1-006",
+        "denglou-teacher-1-1",
+        "denglou-teacher-1-2"
       ]
     },
     {
@@ -30,7 +32,8 @@
         "r2-008",
         "r2-009",
         "r2-010",
-        "r2-011"
+        "r2-011",
+        "denglou-teacher-2-3"
       ]
     },
     {
@@ -50,7 +53,8 @@
         "r3-016",
         "r3-017",
         "r3-018",
-        "r3-019"
+        "r3-019",
+        "denglou-teacher-3-4"
       ]
     },
     {
@@ -200,8 +204,11 @@
       "term": "北極",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "北極星，借喻朝廷。",
-      "source": "supplement"
+      "explanation": "北極星比喻唐朝政權；終不改表達詩人對朝廷的信念，與寇盜侵犯相對。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "137"
     },
     {
       "id": "r3-013",
@@ -288,8 +295,11 @@
       "term": "祠廟",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "祭祀人物的廟宇。",
-      "source": "supplement"
+      "explanation": "此處用作動詞，指仍有人建祠供奉後主；詩人藉昏君受供奉的情況寄託諷刺。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "138"
     },
     {
       "id": "r4-024",
@@ -312,8 +322,11 @@
       "term": "梁甫吟",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "樂府篇名，相傳諸葛亮未出仕時愛吟此曲。",
-      "source": "supplement"
+      "explanation": "相傳諸葛亮未受劉備賞識前喜歡吟誦的歌；杜甫借此自況，寄託不遇之感及朝廷起用賢才的願望。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "138"
     },
     {
       "id": "r4-027",
@@ -322,10 +335,61 @@
       "kind": "sentence",
       "explanation": "省略句：可歎劉禪仍有祠廟受祭祀，寄託對昏庸誤國者的感慨。",
       "source": "supplement"
+    },
+    {
+      "id": "denglou-teacher-1-1",
+      "term": "客",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "杜甫自稱，因他當時寄居四川；客心寫的是客居者在國難中的心情。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "137"
+    },
+    {
+      "id": "denglou-teacher-1-2",
+      "term": "萬方多難",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "萬方指天下各地；多難涉及當時內有藩鎮、宦官問題，外有吐蕃侵擾的國家處境。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "137"
+    },
+    {
+      "id": "denglou-teacher-2-3",
+      "term": "玉壘浮雲變古今",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "以浮雲的變動聯想到古今世事的變化，寫眼前景物同時寄寓對時局的感慨。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "137"
+    },
+    {
+      "id": "denglou-teacher-3-4",
+      "term": "西山寇盜",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "此處指進犯蜀地的吐蕃軍，須結合寫作時的外患理解，不能泛解為山中盜賊。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "137"
     }
   ],
   "reader_annotation_source": {
     "label": "教育局原有注釋；新增字詞及句式為按語境補充",
     "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_16c.pdf"
+  },
+  "reader_teacher_source": {
+    "label": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+    "url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+    "publisher": "香港教育圖書有限公司",
+    "edition": "第三版，2022年",
+    "page_reference": "書內印刷頁碼"
   }
 }

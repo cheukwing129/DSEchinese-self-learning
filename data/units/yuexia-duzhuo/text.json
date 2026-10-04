@@ -14,7 +14,8 @@
         "r1-002",
         "r1-003",
         "r1-004",
-        "r1-005"
+        "r1-005",
+        "yuexia-duzhuo-teacher-1-1"
       ]
     },
     {
@@ -234,8 +235,11 @@
       "term": "三人",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "詩人、明月和自己的影子。",
-      "source": "supplement"
+      "explanation": "指詩人、明月和詩人的身影；把月與影當作伙伴，構成想像中的熱鬧。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "128"
     },
     {
       "id": "r3-010",
@@ -266,8 +270,11 @@
       "term": "徒",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "只是、徒然。",
-      "source": "supplement"
+      "explanation": "只是、空自；影子只能隨身，不能真正與人交談飲酒，呼應沒有親友相伴的現實。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "128"
     },
     {
       "id": "r3-014",
@@ -298,8 +305,11 @@
       "term": "將",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "和，連詞。",
-      "source": "supplement"
+      "explanation": "和、與，連接月與影；此處不是將來、將軍或帶兵的意思。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "128"
     },
     {
       "id": "r4-018",
@@ -338,8 +348,11 @@
       "term": "徘徊",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "來回移動的樣子。",
-      "source": "supplement"
+      "explanation": "來回移動；詩人把月亮寫成隨歌聲徘徊的伙伴，使無情之物具有人的活動。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "128"
     },
     {
       "id": "r5-023",
@@ -362,8 +375,11 @@
       "term": "交歡",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "一同歡樂。",
-      "source": "supplement"
+      "explanation": "交是一同，歡是歡樂；承接月、影與詩人三者一起作伴的想像。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "128"
     },
     {
       "id": "r6-026",
@@ -402,8 +418,11 @@
       "term": "無情遊",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "超越世俗情累的交遊，對象是月與影。",
-      "source": "supplement"
+      "explanation": "無情可解為忘情，即消除物我、得失的界限，超越世俗情累；也可指月與影本無知覺和感情。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "128"
     },
     {
       "id": "r7-031",
@@ -426,8 +445,11 @@
       "term": "雲漢",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "銀河。",
-      "source": "supplement"
+      "explanation": "本指天上的銀河，這裏借指遙遠仙境；把與月影相會的願望推向超越現實的境界。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "128"
     },
     {
       "id": "r7-034",
@@ -436,10 +458,28 @@
       "kind": "sentence",
       "explanation": "省略處所介詞：相約於遙遠的銀河。",
       "source": "supplement"
+    },
+    {
+      "id": "yuexia-duzhuo-teacher-1-1",
+      "term": "相親",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "可相互親近的人；無相親交代沒有親友作伴，與後文邀月、對影的想像相連。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "128"
     }
   ],
   "reader_annotation_source": {
     "label": "教育局原有注釋；新增字詞及句式為按語境補充",
     "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_16b.pdf"
+  },
+  "reader_teacher_source": {
+    "label": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+    "url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+    "publisher": "香港教育圖書有限公司",
+    "edition": "第三版，2022年",
+    "page_reference": "書內印刷頁碼"
   }
 }

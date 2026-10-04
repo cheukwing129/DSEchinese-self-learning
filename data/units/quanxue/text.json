@@ -59,7 +59,8 @@
         "r1-033",
         "r1-034",
         "r1-035",
-        "r1-036"
+        "r1-036",
+        "quanxue-teacher-1-1"
       ]
     },
     {
@@ -175,7 +176,9 @@
         "r3-102",
         "r3-103",
         "r3-104",
-        "r3-105"
+        "r3-105",
+        "quanxue-teacher-3-2",
+        "quanxue-teacher-3-3"
       ]
     }
   ],
@@ -468,32 +471,44 @@
       "term": "青",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "靛青，一種染料，名詞。",
-      "source": "supplement"
+      "explanation": "本段首個青是名詞，指靛青顏料；「青於藍」的青是形容詞，表示顏色更青、更深。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "91"
     },
     {
       "id": "r1-005",
       "term": "青",
       "occurrence": 2,
       "kind": "word",
-      "explanation": "顏色青、深，形容詞。",
-      "source": "supplement"
+      "explanation": "本段首個青是名詞，指靛青顏料；「青於藍」的青是形容詞，表示顏色更青、更深。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "91"
     },
     {
       "id": "r1-006",
       "term": "藍",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "蓼藍，能提取靛青的植物。",
-      "source": "supplement"
+      "explanation": "蓼藍，一種可提取靛青顏料的植物；不能只解作藍色。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "91"
     },
     {
       "id": "r1-007",
       "term": "藍",
       "occurrence": 2,
       "kind": "word",
-      "explanation": "蓼藍，能提取靛青的植物。",
-      "source": "supplement"
+      "explanation": "蓼藍，一種可提取靛青顏料的植物；不能只解作藍色。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "91"
     },
     {
       "id": "r1-008",
@@ -644,8 +659,11 @@
       "term": "參省",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "檢驗、反省。",
-      "source": "supplement"
+      "explanation": "參有檢驗之意，省是自我反省；一說參通三，表示多次。重點是學習之後反覆檢查自己。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "92"
     },
     {
       "id": "r1-027",
@@ -836,8 +854,11 @@
       "term": "利足",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "善於步行；利指快、敏捷。",
-      "source": "supplement"
+      "explanation": "利是迅疾，足借指行走；利足即走得快。與前段刀劍鋒利的「利」須按語境區分。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "92"
     },
     {
       "id": "r2-051",
@@ -860,8 +881,11 @@
       "term": "能水",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "善於游泳；水用作動詞。",
-      "source": "supplement"
+      "explanation": "水由名詞活用為動詞，指游泳；能水即善於游泳，不是能夠取得水。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "93"
     },
     {
       "id": "r2-054",
@@ -1012,8 +1036,11 @@
       "term": "跬步",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "半步與一步，泛指小步。",
-      "source": "supplement"
+      "explanation": "古人舉一足為跬，兩足各舉一次為步；跬步在這裏用來說明微小進展須逐次累積。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "93"
     },
     {
       "id": "r3-074",
@@ -1140,8 +1167,11 @@
       "term": "黃泉",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "地下的水。",
-      "source": "supplement"
+      "explanation": "地下的泉水，描述蚯蚓向下取得水分；此處沒有死亡或陰間之意。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "94"
     },
     {
       "id": "r3-091",
@@ -1262,10 +1292,50 @@
       "kind": "sentence",
       "explanation": "判斷句：不能自行找到安身處，是因為用心浮躁。",
       "source": "supplement"
+    },
+    {
+      "id": "quanxue-teacher-1-1",
+      "term": "中繩",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "中是符合；繩是工匠用來校正直線的墨線。整詞表示符合筆直的標準。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "91"
+    },
+    {
+      "id": "quanxue-teacher-3-2",
+      "term": "神明自得",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "神明在此指精神澄明、智慧通達的境界；自得是自然獲得。指積善成德所帶來的內在修養。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "93"
+    },
+    {
+      "id": "quanxue-teacher-3-3",
+      "term": "駑馬十駕",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "駕指馬拉車行走一天的路程；十駕是走十天，與良馬的一躍比較，突出堅持可以彌補資質不足。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "94"
     }
   ],
   "reader_annotation_source": {
     "label": "教育局原有注釋；新增字詞及句式為按語境補充",
     "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_06.pdf"
+  },
+  "reader_teacher_source": {
+    "label": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+    "url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+    "publisher": "香港教育圖書有限公司",
+    "edition": "第三版，2022年",
+    "page_reference": "書內印刷頁碼"
   }
 }

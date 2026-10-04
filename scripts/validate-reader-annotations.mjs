@@ -34,7 +34,12 @@ for (const unitId of fs.readdirSync(path.join(root, "data/units"))) {
       assert(!used.has(id), `${id}: reader additions belong to one paragraph`);
       used.add(id);
       assert(["word", "sentence"].includes(a.kind));
-      assert.equal(a.source, "supplement");
+      assert(["supplement", "teacher-book"].includes(a.source));
+      if (a.source === "teacher-book") {
+        assert(a.source_title.includes("教師用書"));
+        assert.match(a.source_pages, /^\d+(?:-\d+)?$/);
+        assert.equal(a.source_url, text.reader_teacher_source.url);
+      }
       assert(a.explanation.trim().length > 0);
       assert(Number.isInteger(a.occurrence) && a.occurrence > 0);
       const key = `${a.term}:${a.occurrence}:${a.kind}`;
@@ -64,6 +69,23 @@ for (const unitId of fs.readdirSync(path.join(root, "data/units"))) {
     }
   }
   assert.equal(used.size, text.reader_annotations.length, `${unitId}: no unused reader additions`);
+}
+// Priority is determined by provenance, even when a lower-priority term is longer.
+{
+  const map = {
+    edb: { id: "edb", term: "計", explanation: "教育局" },
+    teacher: { id: "teacher", term: "竊計", explanation: "教師用書", source: "teacher-book", kind: "word" },
+    extra: { id: "extra", term: "竊計欲亡走燕", explanation: "其他補充", source: "supplement", kind: "word" }
+  };
+  const makeRender = (entries) => new Function("esc", "paragraphTerms", "annoMap",
+    source.slice(start, end) + "\nreturn paragraphHTML;")(esc, () => entries, map);
+  const result = makeRender([map.extra, map.teacher, map.edb])({ text: "竊計欲亡走燕" });
+  assert(result.html.includes('data-anno="edb"'));
+  assert(!result.html.includes('data-anno="teacher"'));
+  assert(result.notes.indexOf('data-anno="teacher"') < result.notes.indexOf('data-anno="extra"'));
+  const withoutEDB = makeRender([map.extra, map.teacher])({ text: "竊計欲亡走燕" });
+  assert(withoutEDB.html.includes('data-anno="teacher"'));
+  assert(!withoutEDB.html.includes('data-anno="extra"'));
 }
 assert.equal(paragraphs > 70, true);
 // Both longer and shorter EDB ranges must outrank supplemental ranges.

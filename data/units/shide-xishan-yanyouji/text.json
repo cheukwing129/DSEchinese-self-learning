@@ -56,7 +56,9 @@
         "r1-032",
         "r1-033",
         "r1-034",
-        "r1-035"
+        "r1-035",
+        "shide-xishan-yanyouji-teacher-1-1",
+        "shide-xishan-yanyouji-teacher-1-2"
       ]
     },
     {
@@ -146,7 +148,12 @@
         "r2-083",
         "r2-084",
         "r2-085",
-        "r2-086"
+        "r2-086",
+        "shide-xishan-yanyouji-teacher-2-3",
+        "shide-xishan-yanyouji-teacher-2-4",
+        "shide-xishan-yanyouji-teacher-2-5",
+        "shide-xishan-yanyouji-teacher-2-6",
+        "shide-xishan-yanyouji-teacher-2-7"
       ]
     }
   ],
@@ -537,8 +544,11 @@
       "term": "傾壺",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "倒酒。",
-      "source": "supplement"
+      "explanation": "傾在此表示倒盡；以酒壺代其中的酒，描寫倒盡壺中酒而醉的遊歷方式。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "228"
     },
     {
       "id": "r1-019",
@@ -777,8 +787,11 @@
       "term": "箕踞",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "兩腿伸開，形如箕地坐着。",
-      "source": "supplement"
+      "explanation": "箕是簸箕，作狀語表示像簸箕一般；踞指張開兩腿坐，寫登高後不拘禮俗的姿態。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "230"
     },
     {
       "id": "r2-049",
@@ -929,8 +942,11 @@
       "term": "造物者",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "創造萬物的大自然。",
-      "source": "supplement"
+      "explanation": "指天地自然；與造物者遊表示登高後忘我的精神感受，不是與一位實際人物同行。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "231"
     },
     {
       "id": "r2-068",
@@ -1083,10 +1099,94 @@
       "kind": "sentence",
       "explanation": "判斷句：這一年是元和四年。",
       "source": "supplement"
+    },
+    {
+      "id": "shide-xishan-yanyouji-teacher-1-1",
+      "term": "僇人",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "僇通戮，原與刑罰有關；此處是柳宗元對自己被貶謫身份的稱呼，交代遊山前的處境。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "228"
+    },
+    {
+      "id": "shide-xishan-yanyouji-teacher-1-2",
+      "term": "意有所極，夢亦同趣",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "極是到達，趣通趨，指前往；夢境追隨心中想去的地方，與醒後再遊相連。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "228"
+    },
+    {
+      "id": "shide-xishan-yanyouji-teacher-2-3",
+      "term": "異",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "「始指異之」的異是意動用法，認為西山奇特；之指西山，不是說西山與其他物件不同而已。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "229"
+    },
+    {
+      "id": "shide-xishan-yanyouji-teacher-2-4",
+      "term": "尺寸千里",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "登高俯瞰，實際相隔千里的山川，在眼前縮成尺寸之間；形容視野廣闊及西山高峻。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "230"
+    },
+    {
+      "id": "shide-xishan-yanyouji-teacher-2-5",
+      "term": "縈青繚白",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "青借指山，白借指水；描寫青山白水交錯纏繞，不能只解作兩種顏色。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "231"
+    },
+    {
+      "id": "shide-xishan-yanyouji-teacher-2-6",
+      "term": "與萬化冥合",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "萬化指天地萬物；冥合是自然而然地契合。承接心凝形釋，寫身心解除拘束、與自然融為一體。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "232"
+    },
+    {
+      "id": "shide-xishan-yanyouji-teacher-2-7",
+      "term": "於是乎",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "是指這次西山宴遊；於是乎表示在這次遊歷，不是現代表示順承的於是。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "232"
     }
   ],
   "reader_annotation_source": {
     "label": "教育局原有注釋；新增字詞及句式為按語境補充",
     "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_13.pdf"
+  },
+  "reader_teacher_source": {
+    "label": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+    "url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+    "publisher": "香港教育圖書有限公司",
+    "edition": "第三版，2022年",
+    "page_reference": "書內印刷頁碼"
   }
 }

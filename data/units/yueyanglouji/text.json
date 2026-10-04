@@ -33,7 +33,9 @@
         "r1-014",
         "r1-015",
         "r1-016",
-        "r1-017"
+        "r1-017",
+        "yueyanglouji-teacher-1-1",
+        "yueyanglouji-teacher-1-2"
       ]
     },
     {
@@ -123,7 +125,9 @@
         "r3-067",
         "r3-068",
         "r3-069",
-        "r3-070"
+        "r3-070",
+        "yueyanglouji-teacher-3-3",
+        "yueyanglouji-teacher-3-4"
       ]
     },
     {
@@ -164,7 +168,9 @@
         "r4-086",
         "r4-087",
         "r4-088",
-        "r4-089"
+        "r4-089",
+        "yueyanglouji-teacher-4-5",
+        "yueyanglouji-teacher-4-6"
       ]
     },
     {
@@ -205,7 +211,9 @@
         "r5-110",
         "r5-111",
         "r5-112",
-        "r5-113"
+        "r5-113",
+        "yueyanglouji-teacher-5-7",
+        "yueyanglouji-teacher-5-8"
       ]
     }
   ],
@@ -798,8 +806,11 @@
       "term": "騷人",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "失意的文人、詩人。",
-      "source": "supplement"
+      "explanation": "騷與屈原的離騷有關；後人以騷人稱詩人，與遷客並列，帶出登樓者多有失意的背景。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "16"
     },
     {
       "id": "r2-043",
@@ -1358,8 +1369,11 @@
       "term": "不以物喜，不以己悲",
       "occurrence": 1,
       "kind": "sentence",
-      "explanation": "互文：不因外物或個人的得失而或喜或悲。",
-      "source": "supplement"
+      "explanation": "互文見義：既不因外物而喜或悲，也不因自己的遭遇而喜或悲；喜悲須交互補足。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "19-20"
     },
     {
       "id": "r5-113",
@@ -1368,10 +1382,105 @@
       "kind": "sentence",
       "explanation": "賓語前置：即「吾與誰歸」，疑問代詞誰置於介詞與之前。",
       "source": "supplement"
+    },
+    {
+      "id": "yueyanglouji-teacher-1-1",
+      "term": "唐賢",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "指唐代才德出眾的文人；文中與今人並列，說明樓上刻有前代及當代的詩賦。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "15"
+    },
+    {
+      "id": "yueyanglouji-teacher-1-2",
+      "term": "守",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "太守的簡稱在此作動詞，指出任地方長官；謫守連用表示貶官後到巴陵任職。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "15"
+    },
+    {
+      "id": "yueyanglouji-teacher-3-3",
+      "term": "去國懷鄉",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "教師用書以互文解讀：離開京師或故鄉，因而懷念京師或故鄉；國在此指京城。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "17"
+    },
+    {
+      "id": "yueyanglouji-teacher-3-4",
+      "term": "憂讒畏譏",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "教師用書以互文解讀：憂慮、害怕讒言和譏諷，憂與畏都涉及讒與譏，表現遷客的不安心境。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "17"
+    },
+    {
+      "id": "yueyanglouji-teacher-4-5",
+      "term": "岸芷汀蘭",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "教師用書以互文解讀：岸邊及水中小洲上的白芷與蘭草，不限定岸只生芷、洲只生蘭。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "18"
+    },
+    {
+      "id": "yueyanglouji-teacher-4-6",
+      "term": "靜影沉璧",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "影是水中月影；用沉在水中的玉璧比喻平靜的月影，與浮光躍金的動態景象相對。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "18"
+    },
+    {
+      "id": "yueyanglouji-teacher-5-7",
+      "term": "二者",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "指前文因陰雨而悲、因晴景而喜的兩類登樓者；不是指兩種天氣本身。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "19-20"
+    },
+    {
+      "id": "yueyanglouji-teacher-5-8",
+      "term": "處江湖之遠",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "與居廟堂之高相對，指遠離朝廷、在外任官或在野隱居的處境，重點是政治處境的進退。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "19-20"
     }
   ],
   "reader_annotation_source": {
     "label": "教育局原有注釋；新增字詞及句式為按語境補充",
     "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_14.pdf"
+  },
+  "reader_teacher_source": {
+    "label": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+    "url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+    "publisher": "香港教育圖書有限公司",
+    "edition": "第三版，2022年",
+    "page_reference": "書內印刷頁碼"
   }
 }

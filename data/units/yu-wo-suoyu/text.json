@@ -180,7 +180,8 @@
         "r2-128",
         "r2-129",
         "r2-130",
-        "r2-131"
+        "r2-131",
+        "yu-wo-suoyu-teacher-2-1"
       ]
     }
   ],
@@ -494,16 +495,22 @@
       "term": "得兼",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "同時得到。",
-      "source": "supplement"
+      "explanation": "得表示能夠；兼是同時取得。「不可得兼」是不能兩者同時得到。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "52"
     },
     {
       "id": "r1-018",
       "term": "得兼",
       "occurrence": 2,
       "kind": "word",
-      "explanation": "同時得到。",
-      "source": "supplement"
+      "explanation": "得表示能夠；兼是同時取得。「不可得兼」是不能兩者同時得到。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "52"
     },
     {
       "id": "r1-019",
@@ -814,16 +821,22 @@
       "term": "由是",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "憑這種方法。",
-      "source": "supplement"
+      "explanation": "由是憑藉，是指上文求生或避患的方法；兩句都要承接前文理解。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "53"
     },
     {
       "id": "r1-058",
       "term": "由是",
       "occurrence": 2,
       "kind": "word",
-      "explanation": "憑這種方法。",
-      "source": "supplement"
+      "explanation": "由是憑藉，是指上文求生或避患的方法；兩句都要承接前文理解。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "53"
     },
     {
       "id": "r1-059",
@@ -878,24 +891,33 @@
       "term": "耳",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "罷了。",
-      "source": "supplement"
+      "explanation": "句末限制語氣，相當於罷了；強調賢者與常人的差別在於能保住所共有的本心。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "53"
     },
     {
       "id": "r1-066",
       "term": "熊掌",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "熊的腳掌，珍貴食物。",
-      "source": "supplement"
+      "explanation": "古人視熊掌為珍貴美味；用魚與熊掌的取捨，比喻生命與道義不能兼得時的選擇。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "52"
     },
     {
       "id": "r1-067",
       "term": "熊掌",
       "occurrence": 2,
       "kind": "word",
-      "explanation": "熊的腳掌，珍貴食物。",
-      "source": "supplement"
+      "explanation": "古人視熊掌為珍貴美味；用魚與熊掌的取捨，比喻生命與道義不能兼得時的選擇。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "52"
     },
     {
       "id": "r1-068",
@@ -1110,16 +1132,22 @@
       "term": "萬鍾",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "優厚的俸祿；鍾原是容量單位。",
-      "source": "supplement"
+      "explanation": "鍾是古代量器及容量單位；古代俸祿多以穀物計算，故萬鍾在此借指豐厚俸祿。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "54"
     },
     {
       "id": "r2-095",
       "term": "萬鍾",
       "occurrence": 2,
       "kind": "word",
-      "explanation": "優厚的俸祿；鍾原是容量單位。",
-      "source": "supplement"
+      "explanation": "鍾是古代量器及容量單位；古代俸祿多以穀物計算，故萬鍾在此借指豐厚俸祿。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "54"
     },
     {
       "id": "r2-096",
@@ -1174,16 +1202,22 @@
       "term": "得我",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "感激我；得通德。",
-      "source": "supplement"
+      "explanation": "得通德，在此用作動詞，指感激我，不是得到我。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "54"
     },
     {
       "id": "r2-103",
       "term": "得我",
       "occurrence": 2,
       "kind": "word",
-      "explanation": "感激我；得通德。",
-      "source": "supplement"
+      "explanation": "得通德，在此用作動詞，指感激我，不是得到我。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "54"
     },
     {
       "id": "r2-104",
@@ -1254,8 +1288,11 @@
       "term": "本心",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "人本有的善心、羞惡之心。",
-      "source": "supplement"
+      "explanation": "指人本有的羞惡之心，即對不義感到羞恥、厭惡的道德心；不是一般的心情或個人願望。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "54"
     },
     {
       "id": "r2-113",
@@ -1408,10 +1445,28 @@
       "kind": "sentence",
       "explanation": "省略主語和接受俸祿的行為，問是否為了住宅美麗、妻妾供奉和使窮人感激自己。",
       "source": "supplement"
+    },
+    {
+      "id": "yu-wo-suoyu-teacher-2-1",
+      "term": "一豆羹",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "豆是盛食物的器皿；羹是帶汁的食物。與一簞食並列，表示維持生命所需的少量食物。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "53"
     }
   ],
   "reader_annotation_source": {
     "label": "教育局原有注釋；新增字詞及句式為按語境補充",
     "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_04.pdf"
+  },
+  "reader_teacher_source": {
+    "label": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+    "url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+    "publisher": "香港教育圖書有限公司",
+    "edition": "第三版，2022年",
+    "page_reference": "書內印刷頁碼"
   }
 }

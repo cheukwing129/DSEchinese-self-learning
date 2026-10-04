@@ -60,7 +60,9 @@
         "r2-028",
         "r2-029",
         "r2-030",
-        "r2-031"
+        "r2-031",
+        "lunyu-renxiaojunzi-teacher-2-1",
+        "lunyu-renxiaojunzi-teacher-2-2"
       ]
     },
     {
@@ -103,7 +105,10 @@
         "r3-054",
         "r3-055",
         "r3-056",
-        "r3-057"
+        "r3-057",
+        "lunyu-renxiaojunzi-teacher-3-3",
+        "lunyu-renxiaojunzi-teacher-3-4",
+        "lunyu-renxiaojunzi-teacher-3-5"
       ]
     },
     {
@@ -153,7 +158,8 @@
         "r5-077",
         "r5-078",
         "r5-079",
-        "r5-080"
+        "r5-080",
+        "lunyu-renxiaojunzi-teacher-5-6"
       ]
     },
     {
@@ -193,7 +199,8 @@
         "r7-091",
         "r7-092",
         "r7-093",
-        "r7-094"
+        "r7-094",
+        "lunyu-renxiaojunzi-teacher-7-7"
       ]
     },
     {
@@ -210,7 +217,8 @@
         "r8-097",
         "r8-098",
         "r8-099",
-        "r8-100"
+        "r8-100",
+        "lunyu-renxiaojunzi-teacher-8-8"
       ]
     },
     {
@@ -277,7 +285,8 @@
         "r11-124",
         "r11-125",
         "r11-126",
-        "r11-127"
+        "r11-127",
+        "lunyu-renxiaojunzi-teacher-11-9"
       ]
     },
     {
@@ -294,7 +303,8 @@
         "r12-129",
         "r12-130",
         "r12-131",
-        "r12-132"
+        "r12-132",
+        "lunyu-renxiaojunzi-teacher-12-10"
       ]
     },
     {
@@ -332,7 +342,10 @@
         "r14-144",
         "r14-145",
         "r14-146",
-        "r14-147"
+        "r14-147",
+        "lunyu-renxiaojunzi-teacher-14-11",
+        "lunyu-renxiaojunzi-teacher-14-12",
+        "lunyu-renxiaojunzi-teacher-14-13"
       ]
     },
     {
@@ -702,8 +715,11 @@
       "term": "安仁",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "安於實行仁德。",
-      "source": "supplement"
+      "explanation": "安是安於、習慣於；安仁指實行仁德已成為自然的生活態度。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "33"
     },
     {
       "id": "r1-009",
@@ -1166,8 +1182,11 @@
       "term": "無求生以害仁，有殺身以成仁",
       "occurrence": 1,
       "kind": "sentence",
-      "explanation": "兩句對舉：不為求生而損害仁，必要時犧牲生命以成全仁。",
-      "source": "supplement"
+      "explanation": "前一個「以」連接求生所造成的結果，後一個「以」表示犧牲生命的目的；兩句分別說不能因求生損害仁德，以及可以為成仁犧牲。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "35"
     },
     {
       "id": "r5-067",
@@ -1326,8 +1345,11 @@
       "term": "何以別乎",
       "occurrence": 1,
       "kind": "sentence",
-      "explanation": "賓語前置：即以何別乎，憑甚麼區分供養父母與飼養犬馬？",
-      "source": "supplement"
+      "explanation": "「以何別乎」的倒裝。省略比較對象，指若沒有敬意，供養父母與飼養犬馬靠甚麼來區別？",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "37"
     },
     {
       "id": "r7-087",
@@ -1494,8 +1516,11 @@
       "term": "友",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "與……交朋友，名詞作動詞。",
-      "source": "supplement"
+      "explanation": "本為朋友，這裏用作動詞，指結交朋友；不能把「無友」理解為沒有朋友。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "38"
     },
     {
       "id": "r9-108",
@@ -1542,8 +1567,11 @@
       "term": "小人",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "品德低下的人。",
-      "source": "supplement"
+      "explanation": "此處指品格或見識卑下的人，與君子作道德上的對比。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "38"
     },
     {
       "id": "r10-114",
@@ -1702,8 +1730,11 @@
       "term": "恥",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "以……為恥，意動用法。",
-      "source": "supplement"
+      "explanation": "以某事為羞恥，這裏以言語超過實際行動為恥，要求慎言力行。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "39"
     },
     {
       "id": "r13-134",
@@ -1862,8 +1893,11 @@
       "term": "不病人之不己知也",
       "occurrence": 1,
       "kind": "sentence",
-      "explanation": "否定句賓語前置：不己知即不知己；不憂慮別人不了解自己。",
-      "source": "supplement"
+      "explanation": "病是憂慮；「不己知」即「不知己」，否定句中的代詞賓語提前。君子不因別人不了解自己而憂慮。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "40"
     },
     {
       "id": "r16-154",
@@ -1886,16 +1920,22 @@
       "term": "諸",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "之於的合音。",
-      "source": "supplement"
+      "explanation": "「之於」的合音；求諸己即求之於己，表示向自己要求、責求自己。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "40"
     },
     {
       "id": "r16-157",
       "term": "諸",
       "occurrence": 2,
       "kind": "word",
-      "explanation": "之於的合音。",
-      "source": "supplement"
+      "explanation": "「之於」的合音；求諸己即求之於己，表示向自己要求、責求自己。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "40"
     },
     {
       "id": "r16-158",
@@ -1928,10 +1968,160 @@
       "kind": "sentence",
       "explanation": "諸即之於：君子對自己提出要求，小人只對別人提出要求。",
       "source": "supplement"
+    },
+    {
+      "id": "lunyu-renxiaojunzi-teacher-2-1",
+      "term": "不以其道得之",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "本則兩次出現「之」，指涉隨上下文改變：前一句指富貴，後一句指貧賤；須分別理解為正當取得富貴及正當擺脫貧賤。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "33-34"
+    },
+    {
+      "id": "lunyu-renxiaojunzi-teacher-2-2",
+      "term": "不以其道得之",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "本則兩次出現「之」，指涉隨上下文改變：前一句指富貴，後一句指貧賤；須分別理解為正當取得富貴及正當擺脫貧賤。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "33-34"
+    },
+    {
+      "id": "lunyu-renxiaojunzi-teacher-3-3",
+      "term": "克己復禮",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "克是約束自己；復禮是使言語行動合乎禮的準則。此處着重自我約束與實踐。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "34"
+    },
+    {
+      "id": "lunyu-renxiaojunzi-teacher-3-4",
+      "term": "克己復禮",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "克是約束自己；復禮是使言語行動合乎禮的準則。此處着重自我約束與實踐。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "34"
+    },
+    {
+      "id": "lunyu-renxiaojunzi-teacher-3-5",
+      "term": "不敏",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "敏是聰慧；顏回說自己不敏，是自謙，不是老師對他的評價。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "35"
+    },
+    {
+      "id": "lunyu-renxiaojunzi-teacher-5-6",
+      "term": "樊遲御",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "御是駕駛車馬；本句省略駕車的對象，指樊遲為孔子駕車。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "36"
+    },
+    {
+      "id": "lunyu-renxiaojunzi-teacher-7-7",
+      "term": "見志不從",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "志指子女勸諫的意見；從在此有被聽從的意思，即看見自己的意見不被父母採納。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "37"
+    },
+    {
+      "id": "lunyu-renxiaojunzi-teacher-8-8",
+      "term": "知",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "此處是記住父母的年歲。知道父母長壽而喜，也因父母年老而憂懼，提醒子女及時盡孝。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "37"
+    },
+    {
+      "id": "lunyu-renxiaojunzi-teacher-11-9",
+      "term": "內省不疚",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "省是自我反省；疚是因過失而內心不安。此處以問心無愧說明君子無憂無懼的原因。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "39"
+    },
+    {
+      "id": "lunyu-renxiaojunzi-teacher-12-10",
+      "term": "成人之美",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "成是促成；美指善事、善行。意指幫助別人向善，不只是成全個人願望。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "39"
+    },
+    {
+      "id": "lunyu-renxiaojunzi-teacher-14-11",
+      "term": "之",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "「禮以行之」「孫以出之」「信以成之」的之相互呼應，指所行之事，一說指上文的義。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "40"
+    },
+    {
+      "id": "lunyu-renxiaojunzi-teacher-14-12",
+      "term": "之",
+      "occurrence": 2,
+      "kind": "word",
+      "explanation": "「禮以行之」「孫以出之」「信以成之」的之相互呼應，指所行之事，一說指上文的義。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "40"
+    },
+    {
+      "id": "lunyu-renxiaojunzi-teacher-14-13",
+      "term": "之",
+      "occurrence": 3,
+      "kind": "word",
+      "explanation": "「禮以行之」「孫以出之」「信以成之」的之相互呼應，指所行之事，一說指上文的義。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "40"
     }
   ],
   "reader_annotation_source": {
     "label": "教育局原有注釋；新增字詞及句式為按語境補充",
     "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_03.pdf"
+  },
+  "reader_teacher_source": {
+    "label": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+    "url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+    "publisher": "香港教育圖書有限公司",
+    "edition": "第三版，2022年",
+    "page_reference": "書內印刷頁碼"
   }
 }

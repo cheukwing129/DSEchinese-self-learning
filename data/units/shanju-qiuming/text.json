@@ -61,7 +61,8 @@
         "r4-017",
         "r4-018",
         "r4-019",
-        "r4-020"
+        "r4-020",
+        "shanju-qiuming-teacher-4-1"
       ]
     }
   ],
@@ -97,8 +98,11 @@
       "term": "空山",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "空寂的山林。",
-      "source": "supplement"
+      "explanation": "空指幽靜、空曠；山中仍有浣女、漁舟，不能解作全無人跡。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "120"
     },
     {
       "id": "r1-002",
@@ -129,8 +133,11 @@
       "term": "松間",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "松林之間。",
-      "source": "supplement"
+      "explanation": "松林之間，說月光穿過松樹而照下；與石上泉水流動並列，呈現雨後山景。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "120"
     },
     {
       "id": "r2-006",
@@ -169,8 +176,11 @@
       "term": "浣女",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "洗衣女子；浣為洗衣。",
-      "source": "supplement"
+      "explanation": "浣是洗滌；浣女指洗衣的女子。竹林喧聲來自她們歸來，而非竹子自行喧鬧。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "120"
     },
     {
       "id": "r3-011",
@@ -225,8 +235,11 @@
       "term": "王孫",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "原指貴族子弟，這裏指隱士，詩人自指。",
-      "source": "supplement"
+      "explanation": "原指貴族子弟，此處借指像詩人一樣的隱居者，含自指意味。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "120"
     },
     {
       "id": "r4-018",
@@ -251,10 +264,28 @@
       "kind": "sentence",
       "explanation": "反用《楚辭・招隱士》「山中兮不可以久留」的意思，表達願留山中的心意。",
       "source": "supplement"
+    },
+    {
+      "id": "shanju-qiuming-teacher-4-1",
+      "term": "王孫自可留",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "反用楚辭招隱士勸王孫歸來、不宜久留山中的意思；詩人認為秋日山景也佳，自己可以留下。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "120"
     }
   ],
   "reader_annotation_source": {
     "label": "教育局原有注釋；新增字詞及句式為按語境補充",
     "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_16a.pdf"
+  },
+  "reader_teacher_source": {
+    "label": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+    "url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+    "publisher": "香港教育圖書有限公司",
+    "edition": "第三版，2022年",
+    "page_reference": "書內印刷頁碼"
   }
 }

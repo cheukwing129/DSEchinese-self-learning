@@ -12,7 +12,8 @@
         "r1-002",
         "r1-003",
         "r1-004",
-        "r1-005"
+        "r1-005",
+        "niannujiao-chibihuaigu-teacher-1-1"
       ]
     },
     {
@@ -28,7 +29,8 @@
         "r2-006",
         "r2-007",
         "r2-008",
-        "r2-009"
+        "r2-009",
+        "niannujiao-chibihuaigu-teacher-2-2"
       ]
     },
     {
@@ -67,7 +69,8 @@
         "r4-023",
         "r4-024",
         "r4-025",
-        "r4-026"
+        "r4-026",
+        "niannujiao-chibihuaigu-teacher-4-3"
       ]
     },
     {
@@ -84,7 +87,9 @@
         "r5-028",
         "r5-029",
         "r5-030",
-        "r5-031"
+        "r5-031",
+        "niannujiao-chibihuaigu-teacher-5-4",
+        "niannujiao-chibihuaigu-teacher-5-5"
       ]
     },
     {
@@ -277,8 +282,11 @@
       "term": "一時",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "同一時代。",
-      "source": "supplement"
+      "explanation": "指那一個時代，即三國時代；不是短短片刻。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "184"
     },
     {
       "id": "r3-016",
@@ -349,8 +357,11 @@
       "term": "檣櫓",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "桅杆與船槳，借指曹軍戰船。",
-      "source": "supplement"
+      "explanation": "檣是桅杆，櫓是划船工具，以船的部分借代曹軍戰船。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "185"
     },
     {
       "id": "r4-025",
@@ -437,8 +448,11 @@
       "term": "酹",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "把酒灑在地上或水上祭奠。",
-      "source": "supplement"
+      "explanation": "把酒灑向地面或江水的祭奠儀式；此處寄情江月，也含以酒遣懷之意。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "185"
     },
     {
       "id": "r6-036",
@@ -455,10 +469,72 @@
       "kind": "sentence",
       "explanation": "省略介詞：以一尊酒酹江月，把一杯酒灑下，祭奠江上的明月。",
       "source": "supplement"
+    },
+    {
+      "id": "niannujiao-chibihuaigu-teacher-1-1",
+      "term": "大江東去",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "江水流向東方，也引起時間、生命不斷流逝的聯想，為懷古作鋪墊。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "184"
+    },
+    {
+      "id": "niannujiao-chibihuaigu-teacher-2-2",
+      "term": "人道是",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "道是說；以人們說是的口吻交代，留下黃州赤壁是否古戰場的餘地，不作確定判斷。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "184"
+    },
+    {
+      "id": "niannujiao-chibihuaigu-teacher-4-3",
+      "term": "羽扇綸巾",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "儒將從容瀟灑的裝束，在此寫周瑜；談笑間制勝也突出他的從容自信。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "185"
+    },
+    {
+      "id": "niannujiao-chibihuaigu-teacher-5-4",
+      "term": "故國神遊",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "即神遊故國；故國指赤壁故地，神遊是想像自己置身三國戰場，不是實際重返故鄉。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "185"
+    },
+    {
+      "id": "niannujiao-chibihuaigu-teacher-5-5",
+      "term": "多情應笑我",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "語序可整理為應笑我多情；意指笑自己多情善感，與早生白髮、功業未成的感慨相連。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "185"
     }
   ],
   "reader_annotation_source": {
     "label": "教育局原有注釋；新增字詞及句式為按語境補充",
     "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_17a.pdf"
+  },
+  "reader_teacher_source": {
+    "label": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+    "url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+    "publisher": "香港教育圖書有限公司",
+    "edition": "第三版，2022年",
+    "page_reference": "書內印刷頁碼"
   }
 }

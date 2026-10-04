@@ -112,7 +112,12 @@
         "r1-079",
         "r1-080",
         "r1-081",
-        "r1-082"
+        "r1-082",
+        "xiaoyaoyou-teacher-1-1",
+        "xiaoyaoyou-teacher-1-2",
+        "xiaoyaoyou-teacher-1-3",
+        "xiaoyaoyou-teacher-1-4",
+        "xiaoyaoyou-teacher-1-5"
       ]
     },
     {
@@ -192,7 +197,9 @@
         "r2-134",
         "r2-135",
         "r2-136",
-        "r2-137"
+        "r2-137",
+        "xiaoyaoyou-teacher-2-6",
+        "xiaoyaoyou-teacher-2-7"
       ]
     }
   ],
@@ -538,16 +545,22 @@
       "term": "石",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "古代容量單位，十斗為一石。",
-      "source": "supplement"
+      "explanation": "古代容量單位。此處用五石形容葫蘆容量大，不能按現代石頭的意思理解。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "212"
     },
     {
       "id": "r1-014",
       "term": "石",
       "occurrence": 2,
       "kind": "word",
-      "explanation": "古代容量單位，十斗為一石。",
-      "source": "supplement"
+      "explanation": "古代容量單位。此處用五石形容葫蘆容量大，不能按現代石頭的意思理解。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "212"
     },
     {
       "id": "r1-015",
@@ -914,8 +927,11 @@
       "term": "蓬之心",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "像蓬草般曲折閉塞、不懂變通的心思。",
-      "source": "supplement"
+      "explanation": "借蓬草曲折閉塞的形態比喻惠子的思路不通達，指出他受慣常用途限制而不懂變通。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "214"
     },
     {
       "id": "r1-061",
@@ -1154,8 +1170,11 @@
       "term": "規矩",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "畫圓和畫方的木工工具。",
-      "source": "supplement"
+      "explanation": "規是圓規，矩是曲尺；此處指木工測量的工具及形狀標準，與現代表示行為準則的用法不同。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "215"
     },
     {
       "id": "r2-091",
@@ -1202,8 +1221,11 @@
       "term": "卑身",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "低伏身體；卑作動詞。",
-      "source": "supplement"
+      "explanation": "伏低身體，描述狸狌等待獵物的姿態；卑在此與身體高低有關。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "215"
     },
     {
       "id": "r2-097",
@@ -1532,10 +1554,94 @@
       "kind": "sentence",
       "explanation": "反問句：哪裏還會有甚麼困苦呢？",
       "source": "supplement"
+    },
+    {
+      "id": "xiaoyaoyou-teacher-1-1",
+      "term": "魏王",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "指魏惠王；遷都大梁後亦稱梁惠王。惠子所說的贈種者是他。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "212"
+    },
+    {
+      "id": "xiaoyaoyou-teacher-1-2",
+      "term": "其堅不能自舉也",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "其指大葫蘆；堅是堅固程度，舉是支撐。意指盛水後葫蘆不能支撐自身的重量。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "212"
+    },
+    {
+      "id": "xiaoyaoyou-teacher-1-3",
+      "term": "請買其方百金",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "語序可整理為「請以百金買其方」，以被省略；百金是買藥方的代價，方不是方向。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "213"
+    },
+    {
+      "id": "xiaoyaoyou-teacher-1-4",
+      "term": "技",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "製作不龜手之藥的技術；買賣的不只是一次配製出的藥，更是可以反覆運用的方法。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "213"
+    },
+    {
+      "id": "xiaoyaoyou-teacher-1-5",
+      "term": "使之將",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "使是派遣，之指買得藥方的客人，將用作動詞，指率領軍隊。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "214"
+    },
+    {
+      "id": "xiaoyaoyou-teacher-2-6",
+      "term": "彷徨乎無為其側",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "可整理為「於其側彷徨乎無為」；其指樗樹，側是旁邊，意思是在樹旁悠閒自在地無所事事。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "216"
+    },
+    {
+      "id": "xiaoyaoyou-teacher-2-7",
+      "term": "不夭斤斧",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "夭是砍伐、摧折；斤與斧是伐木工具。大樹因不合木匠用途而免受砍伐，表現無用也能保全生命。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "216"
     }
   ],
   "reader_annotation_source": {
     "label": "教育局原有注釋；新增字詞及句式為按語境補充",
     "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_05.pdf"
+  },
+  "reader_teacher_source": {
+    "label": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+    "url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+    "publisher": "香港教育圖書有限公司",
+    "edition": "第三版，2022年",
+    "page_reference": "書內印刷頁碼"
   }
 }

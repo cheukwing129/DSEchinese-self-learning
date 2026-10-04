@@ -171,7 +171,9 @@
         "r2-131",
         "r2-132",
         "r2-133",
-        "r2-134"
+        "r2-134",
+        "lianpo-linxiangru-teacher-2-1",
+        "lianpo-linxiangru-teacher-2-2"
       ]
     },
     {
@@ -351,7 +353,10 @@
         "r3-277",
         "r3-278",
         "r3-279",
-        "r3-280"
+        "r3-280",
+        "lianpo-linxiangru-teacher-3-3",
+        "lianpo-linxiangru-teacher-3-4",
+        "lianpo-linxiangru-teacher-3-5"
       ]
     },
     {
@@ -372,7 +377,8 @@
         "r4-287",
         "r4-288",
         "r4-289",
-        "r4-290"
+        "r4-290",
+        "lianpo-linxiangru-teacher-4-6"
       ]
     },
     {
@@ -401,7 +407,8 @@
         "r5-304",
         "r5-305",
         "r5-306",
-        "r5-307"
+        "r5-307",
+        "lianpo-linxiangru-teacher-5-7"
       ]
     },
     {
@@ -493,7 +500,8 @@
         "r6-374",
         "r6-375",
         "r6-376",
-        "r6-377"
+        "r6-377",
+        "lianpo-linxiangru-teacher-6-8"
       ]
     },
     {
@@ -1166,16 +1174,22 @@
       "term": "宦者令",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "宦官首領的官名。",
-      "source": "supplement"
+      "explanation": "宦者是宦官，令是頭目；繆賢的官職是宦官頭目，不是命令的意思。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "65"
     },
     {
       "id": "r1-015",
       "term": "舍人",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "門客。",
-      "source": "supplement"
+      "explanation": "受貴族供養、替主人辦事或出謀獻策的門客；藺相如原是繆賢的門客。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "65"
     },
     {
       "id": "r1-016",
@@ -2366,24 +2380,33 @@
       "term": "齋戒",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "祭祀或重大禮儀前潔身慎行。",
-      "source": "supplement"
+      "explanation": "古人在祭祀或辦理要事前潔身、節制飲食等，以示虔敬；相如用趙王齋戒反襯秦王接待的傲慢。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "70"
     },
     {
       "id": "r3-165",
       "term": "齋戒",
       "occurrence": 2,
       "kind": "word",
-      "explanation": "祭祀或重大禮儀前潔身慎行。",
-      "source": "supplement"
+      "explanation": "古人在祭祀或辦理要事前潔身、節制飲食等，以示虔敬；相如用趙王齋戒反襯秦王接待的傲慢。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "70"
     },
     {
       "id": "r3-166",
       "term": "齋戒",
       "occurrence": 3,
       "kind": "word",
-      "explanation": "祭祀或重大禮儀前潔身慎行。",
-      "source": "supplement"
+      "explanation": "古人在祭祀或辦理要事前潔身、節制飲食等，以示虔敬；相如用趙王齋戒反襯秦王接待的傲慢。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "70"
     },
     {
       "id": "r3-167",
@@ -2742,8 +2765,11 @@
       "term": "一介之使",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "一名使者；介為量詞。",
-      "source": "supplement"
+      "explanation": "一介指一個，也帶謙抑語氣；指普通、微不足道的使者，與秦國的強大形成對比。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "72"
     },
     {
       "id": "r3-217",
@@ -4174,8 +4200,11 @@
       "term": "朝",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "上朝，動詞。",
-      "source": "supplement"
+      "explanation": "本指朝廷，這裏用作動詞，指進宮朝見君主；相如稱病不上朝，是避免與廉頗爭位。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "77"
     },
     {
       "id": "r7-396",
@@ -4478,16 +4507,22 @@
       "term": "負荊",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "背着荊條，表示願受責打。",
-      "source": "supplement"
+      "explanation": "背着荊杖，表示認錯並願意受罰；與肉袒一同表現廉頗謝罪的誠意。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "78"
     },
     {
       "id": "r7-434",
       "term": "因賓客",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "經由賓客引領；因為通過、依靠。",
-      "source": "supplement"
+      "explanation": "因指通過；賓客是門客。廉頗通過門客引領，到相如家門謝罪。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "78"
     },
     {
       "id": "r7-435",
@@ -4648,10 +4683,105 @@
       "kind": "sentence",
       "explanation": "判斷句：秦不敢攻趙的原因，只是因為我們二人都在；於趙指向趙國。",
       "source": "supplement"
+    },
+    {
+      "id": "lianpo-linxiangru-teacher-2-1",
+      "term": "使人遺",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "使是派遣，遺是送給；意思是秦王派人把信送給趙王，兩個字都是動詞。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "66"
+    },
+    {
+      "id": "lianpo-linxiangru-teacher-2-2",
+      "term": "會境上",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "省略表示處所的於，即在兩國邊境上會面；會面的主角是趙王與燕王。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "66"
+    },
+    {
+      "id": "lianpo-linxiangru-teacher-3-3",
+      "term": "章臺",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "秦王遊憩的樓臺，是一般接見場所；在此接見趙國使者，與相如後文要求正式禮儀相呼應。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "69"
+    },
+    {
+      "id": "lianpo-linxiangru-teacher-3-4",
+      "term": "布衣之交",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "布衣本指平民穿的粗布衣服，借代平民；全詞指平民之間的交往，作為大國應守信的比較。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "70"
+    },
+    {
+      "id": "lianpo-linxiangru-teacher-3-5",
+      "term": "就湯鑊",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "就是接受；湯是滾水，鑊是烹煮用的大鼎。借指受烹煮的酷刑，表現相如願承擔後果。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "72"
+    },
+    {
+      "id": "lianpo-linxiangru-teacher-4-6",
+      "term": "上大夫",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "古代官階，大夫中的最高一級，低於卿；相如完璧歸趙後先受封上大夫。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "74"
+    },
+    {
+      "id": "lianpo-linxiangru-teacher-5-7",
+      "term": "拔石城",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "拔是攻取，石城是地名；表示秦軍攻陷趙國城邑，交代澠池會面前趙國受壓的形勢。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "74"
+    },
+    {
+      "id": "lianpo-linxiangru-teacher-6-8",
+      "term": "會遇之禮",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "兩國君主會面所需的禮節；廉頗估算期限時，把路程及會面行禮的時間一同計算。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "75"
     }
   ],
   "reader_annotation_source": {
     "label": "教育局原有注釋；新增字詞及句式為按語境補充",
     "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_08.pdf"
+  },
+  "reader_teacher_source": {
+    "label": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+    "url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+    "publisher": "香港教育圖書有限公司",
+    "edition": "第三版，2022年",
+    "page_reference": "書內印刷頁碼"
   }
 }

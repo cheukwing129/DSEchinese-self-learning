@@ -148,6 +148,11 @@ try {
         read++;
       }
       await page.locator(".reader-extra-notes").evaluateAll((items) => items.forEach((el) => { el.open = true; }));
+      for (const block of await page.locator(".reader-paragraph-block").all()) {
+        const labels = await block.locator(".reader-extra-notes summary").allTextContents();
+        const ranks = labels.map((s) => s.startsWith("教育局") ? 0 : s.startsWith("教師用書") ? 1 : 2);
+        check(ranks.every((rank, index) => index === 0 || ranks[index - 1] <= rank), `${unitId}/${i}: source order is EDB, teacher book, other`);
+      }
       check(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${unitId}/${i}: expanded notes fit mobile`);
     }
     check(read === text.paragraphs.length, `${unitId}: every paragraph checked`);
@@ -166,6 +171,15 @@ try {
   check((await page.locator(".annotation-explanation").textContent()).includes("以何知之"), "sentence note explains inverted order");
   await page.keyboard.press("Escape");
   check(await page.locator(".annotation-popover").count() === 0, "sentence dialog closes with Escape");
+  await page.goto(`${baseURL}/#/unit/shanju-qiuming/text`, { waitUntil: "domcontentloaded" });
+  await page.locator(".reader-shell").waitFor();
+  await page.locator(".reader-extra-notes").evaluateAll((items) => items.forEach((el) => { el.open = true; }));
+  const teacherText = JSON.parse(fs.readFileSync(path.join(root, "data/units/shanju-qiuming/text.json"), "utf8"));
+  const teacherEntry = teacherText.reader_annotations.find((a) => a.source === "teacher-book" && a.term === "空山");
+  await page.locator(`button[data-anno="${teacherEntry.id}"]`).click();
+  check((await page.locator(".annotation-kicker").textContent()).includes("教師用書補充"), "teacher note is clearly attributed");
+  check((await page.locator(".annotation-popover").textContent()).includes(`第${teacherEntry.source_pages}頁`), "teacher note includes printed page reference");
+  check(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), "teacher attribution fits mobile screen");
 } finally {
   if (browser) await browser.close();
   await closeServer();

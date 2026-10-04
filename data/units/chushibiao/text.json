@@ -96,7 +96,8 @@
         "r3-052",
         "r3-053",
         "r3-054",
-        "r3-055"
+        "r3-055",
+        "chushibiao-teacher-3-1"
       ]
     },
     {
@@ -147,7 +148,8 @@
         "r4-086",
         "r4-090",
         "r4-091",
-        "r4-092"
+        "r4-092",
+        "chushibiao-teacher-4-2"
       ]
     },
     {
@@ -288,7 +290,8 @@
         "r7-180",
         "r7-181",
         "r7-182",
-        "r7-183"
+        "r7-183",
+        "chushibiao-teacher-7-3"
       ]
     }
   ],
@@ -599,8 +602,11 @@
       "term": "益州",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "蜀漢主要領地，大致在四川一帶。",
-      "source": "supplement"
+      "explanation": "當時蜀漢統治的主要地域，在此以地域借指蜀漢；疲弊說的是蜀漢國力困乏。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "146"
     },
     {
       "id": "r1-007",
@@ -639,8 +645,11 @@
       "term": "內",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "宮廷內。",
-      "source": "supplement"
+      "explanation": "指皇宮內廷、朝廷；與外相對，分說朝廷官員及地方、邊疆將士各自盡忠。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "146"
     },
     {
       "id": "r1-012",
@@ -775,8 +784,11 @@
       "term": "光",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "發揚光大，形容詞作動詞。",
-      "source": "supplement"
+      "explanation": "本指光輝，這裏用作動詞，指發揚光大；以光先帝遺德即發揚先帝留下的美德。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "147"
     },
     {
       "id": "r2-029",
@@ -1055,16 +1067,22 @@
       "term": "愚",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "謙稱自己的意見。",
-      "source": "supplement"
+      "explanation": "諸葛亮自稱的謙詞，不是判斷自己沒有才智；表達臣子向皇帝進言的謙敬態度。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "148"
     },
     {
       "id": "r4-064",
       "term": "愚",
       "occurrence": 2,
       "kind": "word",
-      "explanation": "謙稱自己的意見。",
-      "source": "supplement"
+      "explanation": "諸葛亮自稱的謙詞，不是判斷自己沒有才智；表達臣子向皇帝進言的謙敬態度。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "148"
     },
     {
       "id": "r4-065",
@@ -1383,8 +1401,11 @@
       "term": "桓、靈",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "東漢桓帝和靈帝。",
-      "source": "supplement"
+      "explanation": "指東漢桓帝和靈帝；以兩帝寵信宦官的歷史教訓，說明親小人、遠賢臣會導致衰敗。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "149"
     },
     {
       "id": "r5-108",
@@ -1495,8 +1516,11 @@
       "term": "卑鄙",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "地位低微、見識淺陋；不是品格惡劣。",
-      "source": "supplement"
+      "explanation": "卑指地位低微，鄙指見識鄙陋；是諸葛亮自謙的說法，與現代指品格惡劣的意思不同。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "150"
     },
     {
       "id": "r6-122",
@@ -1599,8 +1623,11 @@
       "term": "有",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "通又，連接整數和零數。",
-      "source": "supplement"
+      "explanation": "「二十有一年」的有通又，連接整數與餘數，表示二十一年，不是擁有。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "151"
     },
     {
       "id": "r6-135",
@@ -1695,8 +1722,11 @@
       "term": "駑鈍",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "才能低下，諸葛亮謙稱自己的才力。",
-      "source": "supplement"
+      "explanation": "駑本指劣馬，鈍本指刀刃不利；兩字合用比喻才能平庸，是諸葛亮自謙。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "152"
     },
     {
       "id": "r6-147",
@@ -1935,8 +1965,11 @@
       "term": "雅言",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "正確合理的言論。",
-      "source": "supplement"
+      "explanation": "雅在此是正確、合乎規範；雅言指有助治國的正確意見，不是辭藻優美的話。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "153"
     },
     {
       "id": "r7-177",
@@ -1993,10 +2026,50 @@
       "kind": "sentence",
       "explanation": "所言即所說的話；因流淚感傷而不知自己說了些甚麼。",
       "source": "supplement"
+    },
+    {
+      "id": "chushibiao-teacher-3-1",
+      "term": "陟罰臧否",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "可依意思整理為「陟臧罰否」：陟是升遷，罰是懲罰，臧否指官員的善惡，要求善者獲升、惡者受罰。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "147"
+    },
+    {
+      "id": "chushibiao-teacher-4-2",
+      "term": "性行淑均",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "性與淑、行與均分別配合，即品性善良，行事公正；不能把四字只當作一個籠統讚語。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "149"
+    },
+    {
+      "id": "chushibiao-teacher-7-3",
+      "term": "不知所言",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "奏表末尾的謙抑結語；結合涕零，表達離別與受恩的激動，不能只按字面判為內容沒有條理。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "153"
     }
   ],
   "reader_annotation_source": {
     "label": "教育局原有注釋；新增字詞及句式為按語境補充",
     "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_09.pdf"
+  },
+  "reader_teacher_source": {
+    "label": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+    "url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+    "publisher": "香港教育圖書有限公司",
+    "edition": "第三版，2022年",
+    "page_reference": "書內印刷頁碼"
   }
 }

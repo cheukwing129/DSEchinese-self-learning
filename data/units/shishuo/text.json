@@ -33,7 +33,9 @@
         "r1-022",
         "r1-023",
         "r1-024",
-        "r1-025"
+        "r1-025",
+        "shishuo-teacher-1-1",
+        "shishuo-teacher-1-2"
       ]
     },
     {
@@ -89,7 +91,8 @@
         "r2-066",
         "r2-067",
         "r2-068",
-        "r2-069"
+        "r2-069",
+        "shishuo-teacher-2-3"
       ]
     },
     {
@@ -135,7 +138,8 @@
         "r3-100",
         "r3-101",
         "r3-102",
-        "r3-103"
+        "r3-103",
+        "shishuo-teacher-3-4"
       ]
     },
     {
@@ -169,7 +173,9 @@
         "r4-121",
         "r4-122",
         "r4-123",
-        "r4-124"
+        "r4-124",
+        "shishuo-teacher-4-5",
+        "shishuo-teacher-4-6"
       ]
     },
     {
@@ -214,7 +220,8 @@
         "r5-150",
         "r5-151",
         "r5-152",
-        "r5-153"
+        "r5-153",
+        "shishuo-teacher-5-7"
       ]
     },
     {
@@ -248,7 +255,8 @@
         "r6-171",
         "r6-172",
         "r6-173",
-        "r6-174"
+        "r6-174",
+        "shishuo-teacher-6-8"
       ]
     },
     {
@@ -278,7 +286,8 @@
         "r7-187",
         "r7-188",
         "r7-189",
-        "r7-190"
+        "r7-190",
+        "shishuo-teacher-7-9"
       ]
     }
   ],
@@ -1552,8 +1561,11 @@
       "term": "君子",
       "occurrence": 1,
       "kind": "word",
-      "explanation": "這裏帶諷刺意味，指士大夫。",
-      "source": "supplement"
+      "explanation": "此處指士大夫，帶諷刺意味；他們鄙視工匠等人，才智卻反而不及對方，不能一概解作有德者。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "108"
     },
     {
       "id": "r5-142",
@@ -1946,10 +1958,116 @@
       "kind": "sentence",
       "explanation": "介詞結構置於動詞後，向我學習。",
       "source": "supplement"
+    },
+    {
+      "id": "shishuo-teacher-1-1",
+      "term": "道",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "本篇主要指儒家的道理與學說，關乎修身、治人；不是道路或一般技能。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "105"
+    },
+    {
+      "id": "shishuo-teacher-1-2",
+      "term": "生而知之者",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "之承接上文的道與業，指道理和學問；說人不是一出生便懂得這些，因此需要從師。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "105"
+    },
+    {
+      "id": "shishuo-teacher-2-3",
+      "term": "吾師道也",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "師在此用作動詞，指學習；韓愈要學的是道理，所以擇師不應受對方年齡限制。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "105"
+    },
+    {
+      "id": "shishuo-teacher-3-4",
+      "term": "聖益聖，愚益愚",
+      "occurrence": 1,
+      "kind": "sentence",
+      "explanation": "每句前一字指人，後一字指人的性質：聖人更聖明，愚人更愚昧。益是更加，表達從師態度造成的差距。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "106"
+    },
+    {
+      "id": "shishuo-teacher-4-5",
+      "term": "授之書而習其句讀者",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "之與其都指孩子；書指經書，句讀指文辭停頓。此處區分教孩子斷句與傳道解惑兩種教學層次。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "107"
+    },
+    {
+      "id": "shishuo-teacher-4-6",
+      "term": "小學而大遺",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "小指句讀，大指道理與疑惑；不是現代學制的小學。批評時人只願學小事，卻放棄更重要的學問。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "107"
+    },
+    {
+      "id": "shishuo-teacher-5-7",
+      "term": "士大夫之族",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "族是類；士大夫在此泛指做官、有地位的讀書人，是文中批判恥於從師風氣的對象。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "107"
+    },
+    {
+      "id": "shishuo-teacher-6-8",
+      "term": "三人行",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "三是概數，表示幾個人；意思是身邊總有值得學習的對象，不必限定恰好三人。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "109"
+    },
+    {
+      "id": "shishuo-teacher-7-9",
+      "term": "六藝經傳",
+      "occurrence": 1,
+      "kind": "word",
+      "explanation": "此處六藝是詩、書、禮、樂、易、春秋六經；經是原文，傳是解說經文的文字，不是人物傳記。",
+      "source": "teacher-book",
+      "source_title": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+      "source_url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+      "source_pages": "109"
     }
   ],
   "reader_annotation_source": {
     "label": "教育局原有注釋；新增字詞及句式為按語境補充",
     "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS4_12.pdf"
+  },
+  "reader_teacher_source": {
+    "label": "《高中建議篇章必讀筆記》（指定篇章）教師用書",
+    "url": "https://drive.google.com/file/d/1nNjHW5UlDIYT6OZ2Vyh6MwCxaieeO0Bt/view",
+    "publisher": "香港教育圖書有限公司",
+    "edition": "第三版，2022年",
+    "page_reference": "書內印刷頁碼"
   }
 }
