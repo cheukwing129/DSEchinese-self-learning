@@ -293,13 +293,13 @@ const App = (() => {
   }
 
   // 文脈藏書閣：獨立輕量線描，不另發圖片網絡請求。
-  const BOOKPLATES = {"lunyu-renxiaojunzi":["先秦 · 語錄","仁、孝與君子","bamboo","jade"],"yu-wo-suoyu":["先秦 · 論說","捨生取義","fish","blue"],"xiaoyaoyou":["先秦 · 哲思","乘風逍遙","crane","sea"],"quanxue":["先秦 · 論說","積學成德","books","umber"],"lianpo-linxiangru":["漢 · 史傳","將相和合","horse","rust"],"shishuo":["唐 · 論說","傳道授業","scroll","gold"],"chushibiao":["三國 · 表奏","忠誠與北伐","standard","blue"],"shide-xishan-yanyouji":["唐 · 遊記","遊觀西山","peaks","jade"],"yueyanglouji":["宋 · 記","洞庭煙波","tower","blue"],"liuguolun":["宋 · 論說","六國興亡","fortress","umber"],"shanju-qiuming":["唐 · 詩","空山新雨","pines","jade"],"yuexia-duzhuo":["唐 · 詩","花間月下","wine","gold"],"denglou":["唐 · 詩","登高望遠","terrace","blue"],"niannujiao-chibihuaigu":["宋 · 詞","大江東去","cliffs","rust"],"shengshengman-qiuqing":["宋 · 詞","梧桐細雨","leaves","umber"],"qingyu'an-yuanxi":["宋 · 詞","東風夜放花千樹","lanterns","gold"]};
+  const BOOKPLATES = {"lunyu-renxiaojunzi":["先秦 · 語錄","仁、孝與君子","bamboo","jade"],"yu-wo-suoyu":["先秦 · 論說","捨生取義","fish","blue"],"xiaoyaoyou":["先秦 · 哲思","乘風逍遙","gourd","sea"],"quanxue":["先秦 · 論說","積學成德","books","umber"],"lianpo-linxiangru":["漢 · 史傳","將相和合","horse","rust"],"shishuo":["唐 · 論說","傳道授業","scroll","gold"],"chushibiao":["三國 · 表奏","忠誠與北伐","standard","blue"],"shide-xishan-yanyouji":["唐 · 遊記","遊觀西山","peaks","jade"],"yueyanglouji":["宋 · 記","洞庭煙波","tower","blue"],"liuguolun":["宋 · 論說","六國興亡","fortress","umber"],"shanju-qiuming":["唐 · 詩","空山新雨","pines","jade"],"yuexia-duzhuo":["唐 · 詩","花間月下","wine","gold"],"denglou":["唐 · 詩","登高望遠","terrace","blue"],"niannujiao-chibihuaigu":["宋 · 詞","大江東去","cliffs","rust"],"shengshengman-qiuqing":["宋 · 詞","梧桐細雨","leaves","umber"],"qingyu'an-yuanxi":["宋 · 詞","東風夜放花千樹","lanterns","gold"]};
 
   // 16 幅線描共用同一個  SVG 圖庫：首頁 JavaScript 仍保持原有輕量預算。
   function bookplateArt(motif) {
     const type = /^[a-z]+$/.test(motif) ? motif : "peaks";
     return '<svg class="bookplate-illustration" viewBox="0 0 220 132" aria-hidden="true" focusable="false">'
-      + '<use href="/assets/brand/bookplate-scenes.svg#art-' + type + '"></use></svg>';
+      + '<use href="/assets/brand/bookplate-scenes-v2.svg#art-' + type + '"></use></svg>';
   }
 
   function renderChapterCards(units) {

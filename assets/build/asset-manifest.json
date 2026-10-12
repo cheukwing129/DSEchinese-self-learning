@@ -52,9 +52,9 @@
     },
     "app": {
       "source": "js/app.js",
-      "path": "/assets/build/app.13a28db0775b.js",
-      "hash": "13a28db0775b",
-      "sha256": "13a28db0775befa51608dd72d1155ebedd099f95535fb86e4b2d8be321819694"
+      "path": "/assets/build/app.578f0b436e44.js",
+      "hash": "578f0b436e44",
+      "sha256": "578f0b436e44fd79ef81bc78b35a4e0e55ce645a3972381318c86efa814cf86b"
     },
     "content": {
       "source": "js/content-renderer.js",
