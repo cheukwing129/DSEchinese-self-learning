@@ -292,6 +292,72 @@ const App = (() => {
     return "篇章學習";
   }
 
+  // 文脈藏書閣：獨立輕量線描，不另發圖片網絡請求。
+  const BOOKPLATES = {"lunyu-renxiaojunzi":["先秦 · 語錄","仁、孝與君子","bamboo","jade"],"yu-wo-suoyu":["先秦 · 論說","捨生取義","fish","blue"],"xiaoyaoyou":["先秦 · 哲思","乘風逍遙","crane","sea"],"quanxue":["先秦 · 論說","積學成德","books","umber"],"lianpo-linxiangru":["漢 · 史傳","將相和合","horse","rust"],"shishuo":["唐 · 論說","傳道授業","scroll","gold"],"chushibiao":["三國 · 表奏","忠誠與北伐","standard","blue"],"shide-xishan-yanyouji":["唐 · 遊記","遊觀西山","peaks","jade"],"yueyanglouji":["宋 · 記","洞庭煙波","tower","blue"],"liuguolun":["宋 · 論說","六國興亡","fortress","umber"],"shanju-qiuming":["唐 · 詩","空山新雨","pines","jade"],"yuexia-duzhuo":["唐 · 詩","花間月下","wine","gold"],"denglou":["唐 · 詩","登高望遠","terrace","blue"],"niannujiao-chibihuaigu":["宋 · 詞","大江東去","cliffs","rust"],"shengshengman-qiuqing":["宋 · 詞","梧桐細雨","leaves","umber"],"qingyu'an-yuanxi":["宋 · 詞","東風夜放花千樹","lanterns","gold"]};
+
+  function bookplateArt(motif) {
+  const scenes={
+    bamboo:'<path d="M65 120 87 24M97 120 105 16M135 120 133 33" stroke-width="3"/><path d="M87 53q-20-24-39-10 18 20 39 17M87 67q22-29 47-21-20 24-45 28M106 36q-15-21-30-15 13 21 30 22M134 59q17-23 43-23-15 25-43 29M134 86q-20-19-40-14 19 17 40 20" fill="#4b8174" stroke="none"/><path d="M74 75l24 4M93 103l25 3M123 73l23 2" stroke-width="1.7"/>',
+    fish:'<path d="M38 89c28-34 64-37 98-15l26-17-3 40-24-12C107 108 65 108 38 89Z" fill="#476f83" stroke-width="2"/><path d="M39 88l-18-15 4 29 14-14ZM85 74q20 15 39 0M88 104q18-20 38-10M66 89h2" stroke-width="2"/><circle cx="56" cy="85" r="2.5" fill="#f7efe0" stroke="none"/><path d="M139 35q10-15 21 0t21 0M45 40q7-12 15 0t15 0" stroke="#b89054" stroke-width="2"/>',
+    crane:'<path d="M30 86Q70 48 113 71q28 5 42-18-5 31-35 32l-21 31-9-37-42 27-18-20Z" fill="#62899a" stroke-width="1.7"/><path d="M104 68q37-46 92-42-41 19-83 56" stroke-width="4"/><path d="M168 46l25-7-17 13" stroke="#b89054"/><path d="M32 65q5-8 11 0M15 48q8-9 17 0M160 101q18-10 36 0" stroke="#b89054" stroke-width="2"/>',
+    books:'<path d="M48 93v-24l81-24 50 18v25l-84 24-47-19Z" fill="#e8d7ba" stroke-width="2"/><path d="M48 69l47 19 84-25M95 88v24M58 66V47l71-20 42 17v18M57 47l43 18 71-21M100 65v21M67 43V31l59-16 34 12v17M67 31l35 14 58-18" stroke-width="2"/><path d="m118 60 24-8m-20 18 24-8m-33 33 45-14" stroke="#b89054" stroke-width="2"/>',
+    horse:'<path d="M40 100 59 71 94 66l17-18 20 5 7 21-17 13-15-4-19 10-10 24-12-1 2-27-17 26-13-4Z" fill="#36586b" stroke-width="2.5"/><path d="M115 50q-1-15 12-23l-2 26M68 70Q47 59 43 36M77 84l14 14M115 83l16 29" stroke-width="3"/><path d="M144 44q18-12 31 0M149 58q24-7 40 4" stroke="#b89054" stroke-width="2"/>',
+    scroll:'<path d="M50 41q0-11 11-11h109q11 0 11 11v55q0 11-11 11H61q-11 0-11-11Z" fill="#eee0c8" stroke-width="2"/><path d="M65 24v92M169 24v92" stroke-width="4"/><path d="M90 53h55M90 65h51M90 77h55M90 89h35" stroke="#9b7546" stroke-width="1.7"/>',
+    standard:'<path d="M96 14v108" stroke-width="3"/><path d="M99 23q30-9 80 1v42q-44-18-80-1Z" fill="#496579" stroke-width="2"/><path d="M105 32q28-7 63 1M105 44q29-6 63 3M105 56q26-4 60 3" stroke="#d3b47f" stroke-width="2"/><path d="M24 119q45-30 78-9 30-24 92-6" stroke-width="2"/>',
+    peaks:'<path d="M8 121 77 22l23 35 19-26 69 90Z" fill="#b6cbd0" stroke-width="2"/><path d="M37 121 77 22l31 49M90 121l29-90 49 90" stroke-width="2"/><path d="M17 109q35-21 66-8t91-9M61 83q37-15 83 6" stroke="#b89054" stroke-width="1.8"/><circle cx="169" cy="31" r="16" fill="#d8b781" stroke="none"/>',
+    tower:'<path d="M65 108h110M80 108V64M159 108V64M73 87h96M69 67l56-17 51 17-14 7H83Z" fill="#e9d6b5" stroke-width="2"/><path d="M81 52l44-13 39 13-12 7H93Z" fill="#355873" stroke-width="2"/><path d="M100 107V84h34v23M77 52V43m91 12V43" stroke-width="2"/><path d="M8 111q28-17 49 0t46 0 53 0 53 0" stroke="#a0bac1" stroke-width="2.5"/>',
+    fortress:'<path d="M31 110V73l29-17 28 7 25-17 43 18 21-8v54Z" fill="#b3bcc0" stroke-width="2"/><path d="M31 73 60 61 88 67l25-15 43 18 21-8M45 71v-17l11-6v14M119 51V35l12-4v25M150 67V47l10-4v26" stroke-width="2"/><path d="M41 89h12m21 0h10m31-10h12m23 8h12" stroke="#f3e9d8" stroke-width="3"/>',
+    pines:'<path d="M56 115V41m0 2-33 19 31-1-38 19 38-3-37 24 39-7m0-50 37 21-37-4 41 23-41-5 35 28-35-9" stroke-width="2.5"/><path d="M145 115V62m0 0-27 19 27-5-25 20 25-7m0-27 31 19-31-5 25 20-25-7" stroke-width="2.2"/><circle cx="163" cy="35" r="21" fill="#dbbd88" stroke="none"/>',
+    wine:'<circle cx="164" cy="34" r="27" fill="#e7cda1" stroke="none"/><path d="M69 60h63l-8 26q-23 14-47 0Z" fill="#d1b98e" stroke-width="2.5"/><path d="M101 92v15m-23 0h46M70 52q30-11 61 0M38 112q14-39 36-33m72 32q13-43 36-30" stroke-width="2.5"/>',
+    terrace:'<path d="M50 114h142M79 114V71M168 114V71M69 71l58-24 58 24-13 8H81Z" fill="#d6cab4" stroke-width="2"/><path d="M91 50l36-18 37 18-12 9H103Z" fill="#49677e" stroke-width="2"/><path d="M94 94h56m-25-16v36m-67 0V92m121 22V92" stroke-width="2"/><path d="M9 53q11-10 23 0m3-15q12-10 24 1" stroke="#b89054" stroke-width="2"/>',
+    cliffs:'<path d="M0 114 46 43l28 20 28-37 32 34 16-17 47 71Z" fill="#b6bdbe" stroke-width="2"/><path d="M46 43 66 77 91 61M102 26l11 40M150 43l-13 31" stroke-width="2.5"/><path d="M0 112q25-14 50 0t51 0 50 0 50 0M0 125q28-14 54 0t53 0 53 0 51 0" stroke="#426c82" stroke-width="3"/>',
+    leaves:'<path d="M87 6q13 53 16 118M87 53Q58 35 23 29M93 75q24-27 70-28M100 95Q63 85 43 100" stroke-width="2.5"/><path d="M35 28q15-13 29-4-9 17-29 4M134 41q14-18 36-10-7 19-36 10M46 97q21-12 31 0-13 15-31 0M120 82q20-13 37 0-14 13-37 0" fill="#be8a6e" stroke-width="1"/>',
+    lanterns:'<path d="M45 15v23m68-28v18m56-11v25" stroke-width="2"/><path d="M25 42q20-17 40 0v39q-20 16-40 0ZM92 30q21-14 42 0v48q-21 16-42 0Zm59 15q19-14 38 0v35q-19 14-38 0Z" fill="#dfbc85" stroke-width="2"/><path d="M27 54h36M94 44h38M151 56h37M44 86v20m69-22v25m57-22v19" stroke-width="2"/>'
+  };
+  return `<svg class="bookplate-illustration" viewBox="0 0 220 132" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <path d="M0 110Q42 79 73 100T148 94T220 103V132H0Z" fill="#b9cbd0" opacity=".35"/>
+    <path d="M0 119Q39 99 70 118T149 113T220 111V132H0Z" fill="#c7a77c" opacity=".18"/>
+    <circle cx="193" cy="30" r="21" fill="#dcbf94" opacity=".26"/>
+    <path d="M10 36q18-10 34 0M166 101q19-10 42-4" fill="none" stroke="#b89054" stroke-width="1.3" opacity=".48"/>
+    <g stroke="#193f59" stroke-linecap="round" stroke-linejoin="round" fill="none">${scenes[motif] || scenes.peaks}</g>
+    <path d="M5 123q48-8 86 0t68 0 58-2" stroke="#b89054" stroke-width="1.3" fill="none" opacity=".55"/>
+  </svg>`;
+}
+
+  function renderBookcaseCards(units) {
+  const allCards=units.map((u,i)=>{
+    const isAvailable=u.status==="available";
+    const p=BOOKPLATES[u.id]||["指定篇章","文言經典","peaks","blue"];
+    const tag=isAvailable?"a":"div";
+    const link=isAvailable?`href="#/unit/${encodeURIComponent(u.id)}"`:"";
+    const badge=isAvailable?'<span class="badge badge-available">可學習</span>':'<span class="badge badge-soon">準備中</span>';
+    return `<${tag} class="card map-card bookplate-card card-tappable ${isAvailable?"":"is-disabled"}" data-bookplate-tone="${p[3]}" ${link}>
+      <span class="bookplate-spine" aria-hidden="true"></span>
+      <span class="bookplate-corner corner-tl" aria-hidden="true">❧</span>
+      <span class="bookplate-corner corner-br" aria-hidden="true">❧</span>
+      <div class="map-card-top"><div class="map-card-meta">
+        <span class="map-sequence">${String(i+1).padStart(2,"0")}</span>
+        <span class="bookplate-era">${escapeHTML(p[0])}</span>
+      </div>${badge}</div>
+      <div class="bookplate-copy">
+        <p class="map-title">${escapeHTML(u.title)}</p>
+        <p class="map-author">${escapeHTML(u.author)}</p>
+        <p class="bookplate-caption">${escapeHTML(p[1])}</p>
+      </div>
+      <div class="bookplate-art">${bookplateArt(p[2])}</div>
+      <div class="bookplate-footer">
+        <span>${isAvailable?"打開篇章":"準備中"}</span>
+        <span class="map-arrow" aria-hidden="true">↗</span>
+      </div>
+    </${tag}>`;
+  });
+  const shelves=[];
+  for(let i=0;i<allCards.length;i+=4)shelves.push(
+    `<div class="bookcase-row" role="group" aria-label="第${Math.floor(i/4)+1}層藏書">${allCards.slice(i,i+4).join("")}<div class="bookcase-plank" aria-hidden="true"></div></div>`
+  );
+  return shelves.join("");
+}
+
   // ---------- 路由頁面 ----------
   async function pageHome() {
     const navigationId = Router.currentNavigationId();
@@ -335,30 +401,7 @@ const App = (() => {
         </div>
       </article>`;
 
-    const cards = curriculum.units
-      .map((u, unitIndex) => {
-        const isAvailable = u.status === "available";
-        const badge = isAvailable
-          ? `<span class="badge badge-available">可學習</span>`
-          : `<span class="badge badge-soon">準備中</span>`;
-        const tag = isAvailable ? "a" : "div";
-        const href = isAvailable ? `href="#/unit/${u.id}"` : "";
-        return `
-          <${tag} class="card map-card card-tappable ${isAvailable ? "" : "is-disabled"}" ${href}>
-            <div class="map-card-top">
-              <div class="map-card-meta">
-                <span class="map-sequence">${String(unitIndex + 1).padStart(2, "0")}</span>
-                ${u.group ? `<p class="map-group">${escapeHTML(u.group)}</p>` : ""}
-              </div>
-              ${badge}
-            </div>
-            <p class="map-title">${escapeHTML(u.title)}</p>
-            <p class="map-author">${escapeHTML(u.author)}</p>
-            ${isAvailable ? `<span class="map-arrow" aria-hidden="true">→</span>` : ""}
-          </${tag}>
-        `;
-      })
-      .join("");
+    const cards = renderBookcaseCards(curriculum.units);
 
     mount(`
       <header class="home-simple-head">
@@ -373,8 +416,11 @@ const App = (() => {
         ${overviewCard}
       </section>
       <section class="home-curriculum" aria-labelledby="curriculum-title">
-        <div class="home-section-heading"><div><h2 id="curriculum-title">選擇篇章</h2></div></div>
-        <div class="map-grid">${cards}</div>
+        <div class="home-section-heading bookcase-heading">
+          <div><p class="section-kicker">經典藏書閣 · 十六篇</p><h2 id="curriculum-title">打開一篇經典</h2></div>
+          <span class="bookcase-heading-stamp" aria-hidden="true">文脈藏書</span>
+        </div>
+        <div class="map-grid bookcase-shelves">${cards}</div>
       </section>
     `);
   }

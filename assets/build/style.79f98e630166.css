@@ -1448,6 +1448,128 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   }
 }
 
+
+/* ===== Wenmai Bookcase · 經典藏書閣，獨立藏書票與層板 ===== */
+.home-curriculum { --shelf-ink:#183951;--shelf-gold:#c49a58;margin-bottom:54px; }
+.home-curriculum .bookcase-heading { margin:0 0 16px;padding:0 6px 14px;border-bottom:1px solid rgba(45,69,83,.18); }
+.bookcase-heading h2 { font-size:clamp(27px,3vw,34px);color:#1d3f56;letter-spacing:.015em; }
+.bookcase-heading-stamp {
+  padding:8px 12px 7px;border:1px solid #c9a370;color:#956b3c;background:#fff9ed;
+  font-family:var(--font-display);font-weight:700;font-size:12px;letter-spacing:.1em;
+  box-shadow:inset 0 0 0 3px #fff9ed,inset 0 0 0 4px rgba(180,131,75,.24);
+}
+.home-curriculum .bookcase-shelves {
+  display:grid;grid-template-columns:minmax(0,1fr);gap:24px;overflow:visible;
+  border:1px solid rgba(121,99,72,.21);border-radius:22px;
+  background:linear-gradient(90deg,rgba(70,52,35,.065),transparent 3%,transparent 97%,rgba(70,52,35,.07)),
+    linear-gradient(180deg,#f6f0e4,#f8f3e9 25%,#f2e9dc);
+  box-shadow:0 22px 55px rgba(50,50,48,.08),inset 0 0 0 8px rgba(255,255,255,.3);
+  padding:27px 23px 17px;
+}
+.bookcase-row { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px;position:relative;padding-bottom:28px; }
+.bookcase-plank {
+  position:absolute;height:21px;left:-18px;right:-18px;bottom:0;pointer-events:none;z-index:0;
+  background:linear-gradient(180deg,#d8c3a1 0%,#c3a47b 25%,#a88863 40%,#b7966c 77%,#947650 100%);
+  border-top:2px solid #e6d5b8;border-bottom:2px solid rgba(71,57,43,.3);
+  border-radius:2px 2px 5px 5px;
+  box-shadow:0 5px 8px rgba(55,45,36,.18),inset 0 2px 1px rgba(255,248,227,.5);
+}
+.bookcase-plank::before { content:"";display:block;position:absolute;inset:6px 0 5px;background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(71,48,30,.065) 4px 5px); }
+.home-curriculum .map-card.bookplate-card {
+  display:flex;flex-direction:column;min-width:0;min-height:295px;padding:16px 16px 0 22px;
+  margin:0;overflow:hidden;position:relative;z-index:1;
+  border:1px solid #dac8a6;border-radius:8px 11px 10px 6px;
+  background:radial-gradient(ellipse at 83% 14%,rgba(214,183,125,.16),transparent 57%),
+    repeating-linear-gradient(0deg,transparent 0 25px,rgba(174,147,104,.018) 26px 27px),#fcf7ec;
+  box-shadow:3px 5px 0 rgba(72,55,41,.13),0 9px 15px rgba(58,49,39,.11),inset 0 0 0 4px rgba(255,255,255,.55),inset 0 0 0 5px rgba(161,128,81,.29);
+  color:#213c4f;transform-origin:bottom center;
+  transition:transform .22s cubic-bezier(.2,.7,.3,1),box-shadow .22s ease,border-color .22s ease;
+}
+.home-curriculum .map-card.bookplate-card:hover {
+  transform:translateY(-6px);border-color:#b99562;
+  box-shadow:4px 7px 0 rgba(72,55,41,.13),0 16px 25px rgba(58,49,39,.19),inset 0 0 0 4px rgba(255,255,255,.55),inset 0 0 0 5px rgba(161,128,81,.36);
+}
+.home-curriculum .map-card.bookplate-card:focus-visible {outline:3px solid #b88a4a;outline-offset:3px;}
+.home-curriculum .map-card.bookplate-card::before {
+  content:"";position:absolute;inset:9px 9px 9px 14px;width:auto;height:auto;
+  border:1px solid rgba(178,135,80,.23);background:none;opacity:1;pointer-events:none;
+}
+.bookplate-spine {position:absolute;inset:0 auto 0 0;width:12px;background:linear-gradient(90deg,#102c43 0%,#285170 58%,#102c43 100%);border-right:1px solid #b78b50;}
+.bookplate-card[data-bookplate-tone="jade"] .bookplate-spine {background:linear-gradient(90deg,#29544e,#547d70 58%,#254b47);}
+.bookplate-card[data-bookplate-tone="rust"] .bookplate-spine {background:linear-gradient(90deg,#7c493d,#b16c55 58%,#7c493d);}
+.bookplate-card[data-bookplate-tone="umber"] .bookplate-spine {background:linear-gradient(90deg,#806247,#a78a63 58%,#806247);}
+.bookplate-card[data-bookplate-tone="gold"] .bookplate-spine {background:linear-gradient(90deg,#946f38,#c6a06a 58%,#946f38);}
+.bookplate-card[data-bookplate-tone="sea"] .bookplate-spine {background:linear-gradient(90deg,#3a6574,#658a91 58%,#3a6574);}
+.bookplate-corner {position:absolute;color:#b38c56;font-size:17px;opacity:.54;line-height:1;pointer-events:none;}
+.corner-tl {left:18px;top:6px;transform:rotate(146deg);}
+.corner-br {right:8px;bottom:6px;transform:rotate(-34deg);}
+.home-curriculum .map-card .map-card-top {display:flex;align-items:flex-start;gap:5px;min-height:27px;margin-bottom:15px;}
+.home-curriculum .map-card .map-card-meta {flex:1;min-width:0;gap:7px;flex-wrap:wrap;}
+.home-curriculum .map-card .map-sequence {color:#a77e47;font-size:11px;font-weight:850;line-height:1.7;}
+.bookplate-era {max-width:100%;min-width:0;color:#837057;font-size:10px;line-height:1.85;}
+.home-curriculum .map-card .badge {
+  flex:none;margin-left:auto;border-radius:7px;padding:3px 5px;font-size:9px;line-height:1.4;
+  max-width:85px;text-align:center;white-space:normal;overflow-wrap:anywhere;
+}
+.home-curriculum .map-card .badge-available {color:#426b62;background:#e6eee7;border-color:#cfded5;}
+.home-curriculum .map-card .badge-soon {color:#985441;background:#f8e7db;border-color:#e2bdaa;}
+.bookplate-copy {position:relative;z-index:1;min-height:93px;padding-right:1px;}
+.home-curriculum .map-card .map-title {
+  font-family:var(--font-display);font-weight:700;color:#183951;max-width:none;min-width:0;
+  font-size:clamp(18px,1.75vw,22px);line-height:1.25;letter-spacing:-.03em;
+  margin:0 0 6px;overflow-wrap:anywhere;
+}
+.home-curriculum .map-card .map-author {margin:0;color:#6e665b;font-size:12px;line-height:1.55;}
+.bookplate-caption {margin:7px 0 0;color:#9c794d;font-size:10px;line-height:1.4;letter-spacing:.02em;}
+.bookplate-art {position:relative;flex:1;display:flex;align-items:flex-end;margin:0 -11px 0 -16px;min-height:100px;overflow:hidden;}
+.bookplate-art::after {content:"";position:absolute;inset:auto 0 0;height:36px;background:linear-gradient(180deg,transparent,rgba(231,213,176,.23));pointer-events:none;}
+.bookplate-illustration {display:block;width:100%;height:122px;object-fit:contain;}
+.bookplate-footer {
+  position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;
+  margin:0 -16px 0 -22px;min-height:39px;padding:6px 13px 6px 25px;
+  background:rgba(241,231,211,.90);border-top:1px solid rgba(173,133,76,.31);
+  font-size:11px;color:#725536;font-weight:800;letter-spacing:.05em;
+}
+.home-curriculum .map-card .map-arrow {position:static;flex:none;width:25px;height:25px;border-radius:50%;background:#b89054;color:#fff;font-size:15px;box-shadow:0 2px 5px rgba(76,49,29,.14);}
+.bookplate-card:hover .map-arrow {background:#193f59;color:#fff;transform:translate(2px,-1px);}
+.home-curriculum .map-card.is-disabled {opacity:.55;pointer-events:none;}
+.home-action-grid {margin-bottom:40px;}
+.home-action-card {min-height:166px;}
+.home-action-grid [data-quick-study-panel] {border-color:rgba(42,75,97,.18)!important;background:linear-gradient(120deg,#fffdfa,#e9edf0)!important;box-shadow:0 8px 22px rgba(30,54,71,.06)!important;}
+@media (max-width:1100px) {
+  .bookcase-row {grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;}
+  .home-curriculum .map-card.bookplate-card {min-height:287px;}
+}
+@media (max-width:680px) {
+  .home-curriculum .bookcase-shelves {padding:14px 11px 8px;gap:20px;border-radius:15px;}
+  .bookcase-row {grid-template-columns:minmax(0,1fr);gap:12px;padding-bottom:15px;}
+  .bookcase-plank {left:-7px;right:-7px;height:10px;}
+  .home-curriculum .map-card.bookplate-card {
+    min-height:175px;display:grid;grid-template-columns:minmax(0,1fr) 135px;
+    grid-template-rows:auto minmax(70px,1fr) auto;
+    padding:13px 12px 0 20px;box-shadow:2px 3px 0 rgba(72,55,41,.11),0 5px 12px rgba(58,49,39,.07),inset 0 0 0 3px rgba(255,255,255,.5);
+  }
+  .home-curriculum .map-card .map-card-top {grid-column:1/-1;grid-row:1;margin-bottom:6px;min-height:22px;}
+  .bookplate-copy {grid-column:1;grid-row:2;min-height:0;align-self:center;}
+  .home-curriculum .map-card .map-title {font-size:clamp(20px,5.3vw,25px);line-height:1.2;}
+  .bookplate-art {grid-column:2;grid-row:2;min-height:0;margin:0 -12px 0 -9px;align-items:center;}
+  .bookplate-illustration {height:102px;}
+  .bookplate-footer {grid-column:1/-1;grid-row:3;margin:0 -12px 0 -20px;min-height:34px;padding-left:23px;}
+  .bookplate-era {font-size:9px;}
+  .bookplate-caption {margin-top:4px;}
+  .home-curriculum .bookcase-heading {align-items:center;gap:10px;}
+  .bookcase-heading-stamp {padding:5px;font-size:10px;}
+  .home-curriculum .map-card .badge {font-size:9px;max-width:none;white-space:nowrap;}
+}
+@media (max-width:360px) {
+  .home-curriculum .map-card.bookplate-card {grid-template-columns:minmax(0,1fr) 103px;}
+  .home-curriculum .map-card .map-title {font-size:19px;}
+  .bookplate-art {margin-left:-19px;}
+}
+@media (prefers-reduced-motion:reduce) {
+  .home-curriculum .map-card.bookplate-card {transition:none!important;}
+}
+
 /* ============================================================
    Launch polish — 品牌 chrome、狀態頁、mobile header、motion
    ============================================================ */

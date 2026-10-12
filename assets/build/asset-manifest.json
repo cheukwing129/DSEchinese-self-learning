@@ -4,9 +4,9 @@
   "assets": {
     "style": {
       "source": "css/style.css",
-      "path": "/assets/build/style.cc272e18b58d.css",
-      "hash": "cc272e18b58d",
-      "sha256": "cc272e18b58d3c1f768c4fc5a7686a30844d96870590fc8a1ee7694bf3b5fd84"
+      "path": "/assets/build/style.79f98e630166.css",
+      "hash": "79f98e630166",
+      "sha256": "79f98e630166498cc205462b7c97ebcf11eed718c3f390a8a4d50ed7581e6c58"
     },
     "readerStyle": {
       "source": "css/style.css",
@@ -52,9 +52,9 @@
     },
     "app": {
       "source": "js/app.js",
-      "path": "/assets/build/app.32f2957ab74a.js",
-      "hash": "32f2957ab74a",
-      "sha256": "32f2957ab74a0544a4549b65bcda79518fd93c4987d831292621e15c22f1d293"
+      "path": "/assets/build/app.eb687ecbaab4.js",
+      "hash": "eb687ecbaab4",
+      "sha256": "eb687ecbaab45f11b85136acf169f088ca0e773a51184bf0fad3c2e49864c9ce"
     },
     "content": {
       "source": "js/content-renderer.js",
