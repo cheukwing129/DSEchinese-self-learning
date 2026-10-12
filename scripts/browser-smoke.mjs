@@ -145,7 +145,7 @@ try {
   check(await page.locator(".chapter-art .bookplate-illustration").count() === 16, "illustrations are retained across all sixteen cards");
   const gourdArtwork = await page.locator('a[href="#/unit/xiaoyaoyou"] .bookplate-illustration use').getAttribute("href");
   check(gourdArtwork === "/assets/brand/bookplate-scenes-v2.svg#art-gourd", "Xiaoyaoyou should feature a complete gourd drawing");
-  const gourdSprite = await page.request.get("/assets/brand/bookplate-scenes-v2.svg");
+  const gourdSprite = await page.request.get(`${baseURL}/assets/brand/bookplate-scenes-v2.svg`);
   check(gourdSprite.ok() && (await gourdSprite.text()).includes('id="art-gourd"'), "gourd asset should be accessible to the browser");
   check(await page.locator(".bookcase-plank").count() === 0, "antique bookshelf props should be removed");
   check(await page.locator(".chapter-grid").count() === 1, "chapter cards should use the modern responsive grid");
