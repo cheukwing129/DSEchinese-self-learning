@@ -160,7 +160,7 @@ try {
 
   await page.reload({ waitUntil: "networkidle", timeout: 10000 });
   await waitForTitle(page, "讀懂經典");
-  check(await page.locator('link[rel="icon"][href="/assets/brand/wenmai-mark.svg"]').count() === 1, "launch shell should expose the Wenmai favicon");
+  check(await page.locator('link[rel="icon"][href="/assets/brand/wenmai-flow.svg"]').count() === 1, "launch shell should expose the Wenmai favicon");
   const launchMeta = await page.evaluate(() => ({
     canonical: document.querySelector('link[rel="canonical"]')?.href || "",
     ogTitle: document.querySelector('meta[property="og:title"]')?.content || "",
@@ -174,7 +174,7 @@ try {
   check(launchMeta.theme.toLowerCase() === '#174940', "theme-color should match the Wenmai ink green");
   check(launchMeta.chapterCurrent === 'page', "home route should mark the chapter navigation as current");
   check(await page.locator('.brand-mark-image').count() === 1, "header should render the Wenmai brand mark");
-  check(await page.evaluate(() => fetch('/assets/brand/wenmai-mark.svg').then((r) => r.ok).catch(() => false)), "Wenmai brand mark asset should be fetchable");
+  check(await page.evaluate(() => fetch('/assets/brand/wenmai-flow.svg').then((r) => r.ok).catch(() => false)), "Wenmai brand mark asset should be fetchable");
   check(await page.evaluate(() => fetch('/assets/brand/wenmai-share.png').then((r) => r.ok).catch(() => false)), "Wenmai share image should be fetchable");
   const warm = await navigationMetrics(page);
   const warmVersioned = warm.resources.filter((r) => pathname(r.name).startsWith("/assets/build/"));
