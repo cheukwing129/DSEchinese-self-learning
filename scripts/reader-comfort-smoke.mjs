@@ -82,9 +82,11 @@ try {
     return { fontSize: parseFloat(style.fontSize), lineHeight: parseFloat(style.lineHeight) };
   });
 
-  await page.locator('[data-reader-preference="font"][data-reader-value="large"]').click();
-  await page.locator('[data-reader-preference="line"][data-reader-value="relaxed"]').click();
-  await page.waitForFunction(() => document.querySelector(".reader-shell")?.dataset.readerFont === "large" && document.querySelector(".reader-shell")?.dataset.readerLine === "relaxed");
+  for (let i = 0; i < 4; i++) await page.locator('[data-reader-control="font"][data-delta="1"]').click();
+  await page.locator('[data-reader-control="line"][data-delta="1"]').click();
+  await page.waitForFunction(() => document.querySelector(".reader-shell")?.dataset.readerFont === "30" && document.querySelector(".reader-shell")?.dataset.readerLine === "2");
+  check(await page.locator('[data-reader-control="font"][data-delta="1"]').isDisabled(), "font increase should stop at 30px");
+  check(await page.locator('[data-reader-control="line"][data-delta="1"]').isDisabled(), "line-height increase should stop at 2.0");
 
   const enlarged = await page.locator(".text-passage").first().evaluate((el) => {
     const style = getComputedStyle(el);
@@ -102,8 +104,8 @@ try {
   check(await page.locator(".term").count() > 0, "focus mode should keep annotation terms available");
 
   const saved = await page.evaluate(() => JSON.parse(localStorage.getItem("wenmai_reader_preferences_v1") || "{}"));
-  check(saved.font === "large", "reader font preference should persist separately in local storage");
-  check(saved.line === "relaxed", "reader line-height preference should persist separately in local storage");
+  check(saved.fontPx === 30, "reader font preference should persist separately in local storage");
+  check(saved.lineHeight === 2, "reader line-height preference should persist separately in local storage");
   check(saved.focus === true, "reader focus preference should persist separately in local storage");
 
   await page.reload({ waitUntil: "domcontentloaded", timeout: 10000 });
