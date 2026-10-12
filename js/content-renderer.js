@@ -343,7 +343,7 @@ const ContentRenderer = (() => {
       // Only notes without an inline target need a list. Keep provenance in the
       // data for editorial checks, but do not expose source groups to students.
       const notes = unique.length
-        ? `<details class="reader-extra-notes"><summary>更多注釋（${unique.length}）</summary><div class="reader-note-list">${unique.map(button).join("")}</div></details>`
+        ? `<details class="reader-extra-notes"><summary>更多注釋（${unique.length}）</summary><div class="reader-note-list">${unique.slice().sort((a, b) => sourceRank(a) - sourceRank(b)).map(button).join("")}</div></details>`
         : "";
       return { html, notes };
     }
