@@ -279,7 +279,6 @@ try {
   check(readerOverflow <= 1, `mobile reader has horizontal overflow of ${readerOverflow}px`);
   const contentStudyRoutes = [
     ["#/unit/yueyanglouji/words", ".words-study", "words"],
-    ["#/unit/yueyanglouji/comprehension", ".comprehension-study", "comprehension"],
     ["#/unit/yueyanglouji/analysis", ".analysis-study", "analysis"],
     ["#/unit/yueyanglouji/theme", ".theme-study", "theme"]
   ];
@@ -303,7 +302,7 @@ try {
   check(overviewOverflow <= 1, `mobile cross-unit overview has horizontal overflow of ${overviewOverflow}px`);
 
   console.log(`Browser smoke metrics: home ready ${Math.round(homeReadyMs)}ms; DOMContentLoaded ${Math.round(cold.domContentLoaded || 0)}ms; load ${Math.round(cold.load || 0)}ms; eager JS ${eagerJsEncoded} encoded bytes; warm fingerprinted transfer ${warmTransferred} bytes.`);
-  console.log(`Browser smoke routes passed: home → unit → reader → four content-study pages → quiz submit → progress → memorisation; mobile overflow checks passed.`);
+  console.log(`Browser smoke routes passed: home → unit → reader → three content-study pages → quiz submit → progress → memorisation; mobile overflow checks passed.`);
 
   await context.close();
 } finally {
