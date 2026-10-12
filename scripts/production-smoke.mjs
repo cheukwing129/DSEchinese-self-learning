@@ -130,7 +130,7 @@ try {
   });
 
   await page.goto(`${productionURL}/#/`, { waitUntil: "networkidle", timeout: 20000 });
-  await page.locator(".page-title", { hasText: "讀懂經典" }).waitFor({ state: "visible", timeout: 8000 });
+  await page.locator(".page-title", { hasText: "篇章目錄" }).waitFor({ state: "visible", timeout: 8000 });
   check(await page.locator(".map-card").count() === 16, "production home should render 16 curriculum cards");
   const homeOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
   check(homeOverflow <= 1, `production mobile home has horizontal overflow of ${homeOverflow}px`);
@@ -144,10 +144,10 @@ try {
   await page.evaluate(() => { window.location.hash = "#/not-a-real-route"; });
   await page.locator(".launch-state.is-not-found").waitFor({ state: "visible", timeout: 4000 });
   await page.evaluate(() => { window.location.hash = "#/"; });
-  await page.locator(".home-hero").waitFor({ state: "visible", timeout: 5000 });
+  await page.locator(".home-simple-head").waitFor({ state: "visible", timeout: 5000 });
 
   await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/text"; });
-  await page.locator(".page-title", { hasText: "原文與誦讀" }).waitFor({ state: "visible", timeout: 10000 });
+  await page.locator(".page-title", { hasText: "文章內容" }).waitFor({ state: "visible", timeout: 10000 });
   await page.locator(".reader-shell").waitFor({ state: "visible", timeout: 4000 });
   const readerOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
   check(readerOverflow <= 1, `production mobile reader has horizontal overflow of ${readerOverflow}px`);
