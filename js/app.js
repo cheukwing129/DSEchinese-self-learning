@@ -279,39 +279,39 @@ const App = (() => {
       + '<use href="/assets/brand/bookplate-scenes.svg#art-' + type + '"></use></svg>';
   }
 
-  function renderBookcaseCards(units) {
-  const allCards=units.map((u,i)=>{
-    const isAvailable=u.status==="available";
-    const p=BOOKPLATES[u.id]||["指定篇章","文言經典","peaks","blue"];
-    const tag=isAvailable?"a":"div";
-    const link=isAvailable?`href="#/unit/${encodeURIComponent(u.id)}"`:"";
-    const badge=isAvailable?'<span class="badge badge-available">可學習</span>':'<span class="badge badge-soon">準備中</span>';
-    return `<${tag} class="card map-card bookplate-card card-tappable ${isAvailable?"":"is-disabled"}" data-bookplate-tone="${p[3]}" ${link}>
-      <span class="bookplate-spine" aria-hidden="true"></span>
-      <span class="bookplate-corner corner-tl" aria-hidden="true">❧</span>
-      <span class="bookplate-corner corner-br" aria-hidden="true">❧</span>
-      <div class="map-card-top"><div class="map-card-meta">
-        <span class="map-sequence">${String(i+1).padStart(2,"0")}</span>
-        <span class="bookplate-era">${escapeHTML(p[0])}</span>
-      </div>${badge}</div>
-      <div class="bookplate-copy">
-        <p class="map-title">${escapeHTML(u.title)}</p>
-        <p class="map-author">${escapeHTML(u.author)}</p>
-        <p class="bookplate-caption">${escapeHTML(p[1])}</p>
-      </div>
-      <div class="bookplate-art">${bookplateArt(p[2])}</div>
-      <div class="bookplate-footer">
-        <span>${isAvailable?"打開篇章":"準備中"}</span>
-        <span class="map-arrow" aria-hidden="true">↗</span>
-      </div>
-    </${tag}>`;
-  });
-  const shelves=[];
-  for(let i=0;i<allCards.length;i+=4)shelves.push(
-    `<div class="bookcase-row" role="group" aria-label="第${Math.floor(i/4)+1}層藏書">${allCards.slice(i,i+4).join("")}<div class="bookcase-plank" aria-hidden="true"></div></div>`
-  );
-  return shelves.join("");
-}
+  function renderChapterCards(units) {
+    return units.map((u, i) => {
+      const isAvailable = u.status === "available";
+      const p = BOOKPLATES[u.id] || ["指定篇章", "文言經典", "peaks", "blue"];
+      const tag = isAvailable ? "a" : "div";
+      const link = isAvailable ? `href="#/unit/${encodeURIComponent(u.id)}"` : "";
+      const badge = isAvailable
+        ? '<span class="badge badge-available">可學習</span>'
+        : '<span class="badge badge-soon">準備中</span>';
+      return `<${tag} class="card map-card chapter-card card-tappable ${isAvailable ? "" : "is-disabled"}"
+        data-art-tone="${p[3]}" ${link}>
+        <div class="map-card-top">
+          <div class="map-card-meta">
+            <span class="map-sequence">${String(i + 1).padStart(2, "0")}</span>
+            <span class="chapter-era">${escapeHTML(p[0])}</span>
+          </div>
+          ${badge}
+        </div>
+        <div class="chapter-card-main">
+          <div class="chapter-card-copy">
+            <p class="map-title">${escapeHTML(u.title)}</p>
+            <p class="map-author">${escapeHTML(u.author)}</p>
+            <p class="chapter-caption">${escapeHTML(p[1])}</p>
+          </div>
+          <div class="chapter-art">${bookplateArt(p[2])}</div>
+        </div>
+        <div class="chapter-card-footer">
+          <span>${isAvailable ? "進入篇章" : "準備中"}</span>
+          <span class="map-arrow" aria-hidden="true">↗</span>
+        </div>
+      </${tag}>`;
+    }).join("");
+  }
 
   // ---------- 路由頁面 ----------
   async function pageHome() {
@@ -356,7 +356,7 @@ const App = (() => {
         </div>
       </article>`;
 
-    const cards = renderBookcaseCards(curriculum.units);
+    const cards = renderChapterCards(curriculum.units);
 
     mount(`
       <header class="home-simple-head">
@@ -371,11 +371,11 @@ const App = (() => {
         ${overviewCard}
       </section>
       <section class="home-curriculum" aria-labelledby="curriculum-title">
-        <div class="home-section-heading bookcase-heading">
-          <div><p class="section-kicker">經典藏書閣 · 十六篇</p><h2 id="curriculum-title">打開一篇經典</h2></div>
-          <span class="bookcase-heading-stamp" aria-hidden="true">文脈藏書</span>
+        <div class="home-section-heading chapter-grid-heading">
+          <div><p class="section-kicker">DSE 中文 · 十六篇指定文言</p><h2 id="curriculum-title">選擇篇章</h2></div>
+          <span class="chapter-grid-heading-aside">按課程次序排列</span>
         </div>
-        <div class="map-grid bookcase-shelves">${cards}</div>
+        <div class="map-grid chapter-grid">${cards}</div>
       </section>
     `);
   }

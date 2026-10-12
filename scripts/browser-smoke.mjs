@@ -141,6 +141,10 @@ try {
   const homeReadyMs = await page.evaluate(() => performance.now());
   await page.waitForLoadState("load", { timeout: 10000 });
   const mapCount = await page.locator(".map-card").count();
+  check(await page.locator(".chapter-card").count() === 16, "modern chapter grid should include sixteen cards");
+  check(await page.locator(".chapter-art .bookplate-illustration").count() === 16, "illustrations are retained across all sixteen cards");
+  check(await page.locator(".bookcase-plank").count() === 0, "antique bookshelf props should be removed");
+  check(await page.locator(".chapter-grid").count() === 1, "chapter cards should use the modern responsive grid");
   check(mapCount === 16, `home should render 16 curriculum cards, got ${mapCount}`);
 
   const cold = await navigationMetrics(page);
