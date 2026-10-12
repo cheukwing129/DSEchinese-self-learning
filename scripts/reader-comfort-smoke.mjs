@@ -154,8 +154,9 @@ try {
       await page.locator(".reader-extra-notes").evaluateAll((items) => items.forEach((el) => { el.open = true; }));
       for (const block of await page.locator(".reader-paragraph-block").all()) {
         const labels = await block.locator(".reader-extra-notes summary").allTextContents();
-        const ranks = labels.map((s) => s.startsWith("教育局") ? 0 : s.startsWith("教師用書") ? 1 : 2);
-        check(ranks.every((rank, index) => index === 0 || ranks[index - 1] <= rank), `${unitId}/${i}: source order is EDB, teacher book, other`);
+        check(labels.length <= 1, `${unitId}/${i}: a paragraph should have at most one extra-notes group`);
+        check(labels.every((label) => /^更多注釋（\\d+）$/.test(label)), `${unitId}/${i}: extra notes must have a source-neutral label`);
+        check(!(await block.innerText()).includes("教師用書補充"), `${unitId}/${i}: note provenance must stay hidden from students`);
       }
       check(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${unitId}/${i}: expanded notes fit mobile`);
     }
@@ -181,9 +182,10 @@ try {
   const teacherText = JSON.parse(fs.readFileSync(path.join(root, "data/units/shanju-qiuming/text.json"), "utf8"));
   const teacherEntry = teacherText.reader_annotations.find((a) => a.source === "teacher-book" && a.term === "空山");
   await page.locator(`button[data-anno="${teacherEntry.id}"]`).click();
-  check((await page.locator(".annotation-kicker").textContent()).includes("教師用書補充"), "teacher note is clearly attributed");
-  check((await page.locator(".annotation-popover").textContent()).includes(`第${teacherEntry.source_pages}頁`), "teacher note includes printed page reference");
-  check(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), "teacher attribution fits mobile screen");
+  check((await page.locator(".annotation-kicker").textContent()).trim() === "字詞注釋", "annotation popup should use content type rather than provenance");
+  check(!(await page.locator(".annotation-popover").innerText()).includes("教師用書"), "annotation popup must hide internal provenance and page references");
+  check((await page.locator(".annotation-explanation").innerText()).length > 0, "source-neutral popup still explains the note");
+  check(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), "source-neutral note popup fits mobile screen");
 } finally {
   if (browser) await browser.close();
   await closeServer();

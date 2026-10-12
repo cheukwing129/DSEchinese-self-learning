@@ -340,12 +340,12 @@ const ContentRenderer = (() => {
       // Repeated occurrences keep their own inline target; list identical notes once.
       const unique = extra.filter((a, i) => extra.findIndex((b) => b.term === a.term && b.explanation === a.explanation) === i);
       const button = (a) => `<button type="button" class="term reader-note-button" data-anno="${esc(a.id)}" aria-haspopup="dialog" aria-label="查看「${esc(a.term)}」${a.kind === "sentence" ? "句式" : "注釋"}">${esc(a.term)}</button>`;
-      const originals = unique.filter((a) => sourceRank(a) === 0);
-      const teacher = unique.filter((a) => sourceRank(a) === 1);
-      const sentences = unique.filter((a) => sourceRank(a) === 2 && a.kind === "sentence");
-      const other = unique.filter((a) => sourceRank(a) === 2 && a.kind !== "sentence");
-      const notesHTML = (label, entries) => entries.length ? `<details class="reader-extra-notes"><summary>${label}（${entries.length}）</summary><div class="reader-note-list">${entries.map(button).join("")}</div></details>` : "";
-      return { html, notes: notesHTML("教育局及原有注釋", originals) + notesHTML("教師用書補充（字詞與句式）", teacher) + notesHTML("其他補充：文言句式", sentences) + notesHTML("其他補充：字詞注釋", other) };
+      // Only notes without an inline target need a list. Keep provenance in the
+      // data for editorial checks, but do not expose source groups to students.
+      const notes = unique.length
+        ? `<details class="reader-extra-notes"><summary>更多注釋（${unique.length}）</summary><div class="reader-note-list">${unique.map(button).join("")}</div></details>`
+        : "";
+      return { html, notes };
     }
 
     function passageHTML(paragraphs) {
@@ -397,8 +397,7 @@ const ContentRenderer = (() => {
                   <strong>段落導航</strong>
                 </div>
                 <div id="text-nav-slot"></div>
-                <div class="reader-legend"><span aria-hidden="true">文</span><p>點擊有細底線的字詞看詞解；段落下方依來源展開字詞及文言句式補充。</p></div>
-                ${text.reader_annotation_source ? `<p class="reader-source-note">注釋依次以教育局、教師用書、其他語境補充為先；重疊詞句優先顯示教育局原有注釋。<a href="${esc(text.reader_annotation_source.url)}" target="_blank" rel="noopener noreferrer">教育局篇章資料</a>${text.reader_teacher_source ? ` · 教師用書補充另標書內頁碼。` : ""}</p>` : ""}
+                <div class="reader-legend"><span aria-hidden="true">文</span><p>點擊有細底線的字詞查看注釋；未能直接標示在原文中的字詞和句式可在「更多注釋」查看。</p></div>
                 ${unit.audio_file ? `<div class="reader-audio-wrap">${audioPlayerHTML(unit)}</div>` : ""}
               </div>
             </aside>
@@ -502,11 +501,10 @@ const ContentRenderer = (() => {
     ].filter(Boolean).join("");
     pop.innerHTML = `
       <button type="button" class="annotation-close" aria-label="關閉注釋">×</button>
-      <div class="annotation-kicker">${anno.kind === "sentence" ? "文言句式" : "字詞注釋"}${anno.source === "teacher-book" ? " · 教師用書補充" : anno.source === "supplement" ? " · 語境補充" : ""}</div>
+      <div class="annotation-kicker">${anno.kind === "sentence" ? "文言句式" : "字詞注釋"}</div>
       <div class="term-name">${App.escapeHTML(anno.term)}</div>
       ${readings ? `<div class="reading">${readings}</div>` : ""}
       <div class="annotation-explanation">${App.escapeHTML(anno.explanation)}</div>
-      ${anno.source === "teacher-book" ? `<p class="reader-source-note">參考${App.escapeHTML(anno.source_title)}，書內第${App.escapeHTML(anno.source_pages)}頁；按原句整理。</p>` : ""}
     `;
     document.body.appendChild(backdrop);
     document.body.appendChild(pop);
