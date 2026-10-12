@@ -8,18 +8,53 @@
   "status": "available",
   "audio_file": "assets/audio/yu_wo_suo_yu_ye.mp3",
   "modules": [
-    { "id": "text", "title": "原文與誦讀", "icon": "book" },
-    { "id": "words", "title": "字詞與句式", "icon": "characters" },
-    { "id": "comprehension", "title": "疏通文意", "icon": "translate" },
-    { "id": "analysis", "title": "結構與鑒賞", "icon": "structure" },
-    { "id": "theme", "title": "主旨與思考", "icon": "lightbulb" },
-    { "id": "memorisation", "title": "背誦精華", "icon": "memory" },
-    { "id": "challenge", "title": "核心篇章挑戰", "icon": "target" },
-    { "id": "progress", "title": "我的掌握", "icon": "chart" }
+    {
+      "id": "text",
+      "title": "文章內容",
+      "icon": "book"
+    },
+    {
+      "id": "words",
+      "title": "字詞與句式",
+      "icon": "characters"
+    },
+    {
+      "id": "analysis",
+      "title": "結構與鑒賞",
+      "icon": "structure"
+    },
+    {
+      "id": "theme",
+      "title": "主旨與思考",
+      "icon": "lightbulb"
+    },
+    {
+      "id": "memorisation",
+      "title": "背誦精華",
+      "icon": "memory"
+    },
+    {
+      "id": "challenge",
+      "title": "核心篇章挑戰",
+      "icon": "target"
+    },
+    {
+      "id": "progress",
+      "title": "我的掌握",
+      "icon": "chart"
+    }
   ],
   "cross_text_targets": [
-    { "id": "lunyu-renxiaojunzi", "title": "論仁、論孝、論君子", "author": "《論語》" },
-    { "id": "quanxue", "title": "勸學（節錄）", "author": "荀子" }
+    {
+      "id": "lunyu-renxiaojunzi",
+      "title": "論仁、論孝、論君子",
+      "author": "《論語》"
+    },
+    {
+      "id": "quanxue",
+      "title": "勸學（節錄）",
+      "author": "荀子"
+    }
   ],
   "question_bank_files": [
     "question-banks/words.json",

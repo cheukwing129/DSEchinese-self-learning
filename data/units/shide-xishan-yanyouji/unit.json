@@ -10,18 +10,13 @@
   "modules": [
     {
       "id": "text",
-      "title": "原文與誦讀",
+      "title": "文章內容",
       "icon": "book"
     },
     {
       "id": "words",
       "title": "字詞與句式",
       "icon": "characters"
-    },
-    {
-      "id": "comprehension",
-      "title": "疏通文意",
-      "icon": "translate"
     },
     {
       "id": "analysis",
