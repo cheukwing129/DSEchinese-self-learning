@@ -137,7 +137,7 @@ try {
   });
 
   await page.goto(`${baseURL}/#/`, { waitUntil: "domcontentloaded", timeout: 10000 });
-  await waitForTitle(page, "讀懂經典");
+  await waitForTitle(page, "篇章目錄");
   const homeReadyMs = await page.evaluate(() => performance.now());
   await page.waitForLoadState("load", { timeout: 10000 });
   const mapCount = await page.locator(".map-card").count();
@@ -159,7 +159,7 @@ try {
   check(homeReadyMs <= 1500, `home did not become visibly ready within 1500ms (took ${Math.round(homeReadyMs)}ms)`);
 
   await page.reload({ waitUntil: "networkidle", timeout: 10000 });
-  await waitForTitle(page, "讀懂經典");
+  await waitForTitle(page, "篇章目錄");
   check(await page.locator('link[rel="icon"][href="/assets/brand/wenmai-flow.svg"]').count() === 1, "launch shell should expose the Wenmai favicon");
   const launchMeta = await page.evaluate(() => ({
     canonical: document.querySelector('link[rel="canonical"]')?.href || "",
@@ -217,7 +217,7 @@ try {
   await page.locator("#word-filter").fill("");
 
   await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/comprehension"; });
-  await waitForTitle(page, "疏通文意");
+  await waitForTitle(page, "文章內容");
   check(await page.locator(".comprehension-sequence").count() === 1, "comprehension route should render the sequence workspace");
   check(await page.locator(".comprehension-step").count() === 5, "Yueyang comprehension should render five understanding steps");
 
@@ -267,7 +267,7 @@ try {
 
   await page.setViewportSize({ width: 390, height: 844 });
   await page.evaluate(() => { window.location.hash = "#/"; });
-  await waitForTitle(page, "讀懂經典");
+  await waitForTitle(page, "篇章目錄");
   const homeOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
   check(homeOverflow <= 1, `mobile home has horizontal overflow of ${homeOverflow}px`);
   check(await page.locator('.header-nav').count() === 1, "mobile shell should retain compact primary navigation");
