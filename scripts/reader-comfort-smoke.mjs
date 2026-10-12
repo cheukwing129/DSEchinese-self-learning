@@ -155,7 +155,7 @@ try {
       for (const block of await page.locator(".reader-paragraph-block").all()) {
         const labels = await block.locator(".reader-extra-notes summary").allTextContents();
         check(labels.length <= 1, `${unitId}/${i}: a paragraph should have at most one extra-notes group`);
-        check(labels.every((label) => /^更多注釋（\\d+）$/.test(label)), `${unitId}/${i}: extra notes must have a source-neutral label`);
+        check(labels.every((label) => /^更多注釋（\d+）$/.test(label)), `${unitId}/${i}: extra notes must have a source-neutral label`);
         check(!(await block.innerText()).includes("教師用書補充"), `${unitId}/${i}: note provenance must stay hidden from students`);
       }
       check(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${unitId}/${i}: expanded notes fit mobile`);
