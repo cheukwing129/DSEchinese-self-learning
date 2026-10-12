@@ -31,10 +31,9 @@ const BANK_ROUTE = {
 };
 
 const CORE_ROUTES = [
-  ["", ".unit-hero", "unit home"],
+  ["", ".unit-simple-head", "unit home"],
   ["/text", ".reader-shell", "reader"],
   ["/words", ".words-study", "words"],
-  ["/comprehension", ".comprehension-study", "comprehension"],
   ["/analysis", ".analysis-study", "analysis"],
   ["/theme", ".theme-study", "theme"],
   ["/memorisation", "#memo-body", "memorisation"],
@@ -410,11 +409,11 @@ async function runHistoryCheck(browser, representativeId) {
   attachDiagnostics(page);
   currentCheck = "browser back/forward routing";
   await page.goto(`${baseURL}/#/unit/${representativeId}`, { waitUntil: "domcontentloaded", timeout: 12000 });
-  await page.locator(".unit-hero").waitFor({ state: "visible", timeout: 8000 });
+  await page.locator(".unit-simple-head").waitFor({ state: "visible", timeout: 8000 });
   await page.goto(`${baseURL}/#/unit/${representativeId}/text`, { waitUntil: "domcontentloaded", timeout: 12000 });
   await page.locator(".reader-shell").waitFor({ state: "visible", timeout: 8000 });
   await page.goBack({ waitUntil: "domcontentloaded", timeout: 12000 });
-  await page.locator(".unit-hero").waitFor({ state: "visible", timeout: 8000 });
+  await page.locator(".unit-simple-head").waitFor({ state: "visible", timeout: 8000 });
   check(page.url().endsWith(`#/unit/${representativeId}`), "browser Back should return to the unit home hash route");
   await page.goForward({ waitUntil: "domcontentloaded", timeout: 12000 });
   await page.locator(".reader-shell").waitFor({ state: "visible", timeout: 8000 });
@@ -428,10 +427,9 @@ async function runMobileMatrix(browser, unitIds) {
   const page = await context.newPage();
   attachDiagnostics(page);
   const representativeRoutes = [
-    ["", ".unit-hero", "home"],
+    ["", ".unit-simple-head", "home"],
     ["/text", ".reader-shell", "reader"],
     ["/words", ".words-study", "words"],
-    ["/comprehension", ".comprehension-study", "comprehension"],
     ["/analysis", ".analysis-study", "analysis"],
     ["/theme", ".theme-study", "theme"],
     ["/memorisation", "#memo-body", "memorisation"],
