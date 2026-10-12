@@ -220,7 +220,7 @@ const ContentRenderer = (() => {
         <div class="unit-support-grid">${supportCards}</div>
       </section>
       <aside class="unit-next-compact">
-        <div><span class="section-kicker">依學習紀錄建議</span><strong>${esc(nextStep.label)}</strong></div>
+        <div><span class="section-kicker">建議下一步</span><strong>${esc(nextStep.label)}</strong><small>建議參考本機學習紀錄，不等同系統判定你已掌握前一階段。</small></div>
         <a href="#${esc(nextStep.path)}">前往 <span aria-hidden="true">→</span></a>
       </aside>
       ${backgroundCards ? `
