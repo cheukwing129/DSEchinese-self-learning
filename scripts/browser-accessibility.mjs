@@ -139,7 +139,7 @@ try {
   const unitLink = page.locator('a[href="#/unit/yueyanglouji"]').first();
   await unitLink.focus();
   await page.keyboard.press("Enter");
-  await waitReady(page, ".unit-hero");
+  await waitReady(page, ".unit-simple-head");
   active = await activeState(page);
   check(active.tag === "H1" && active.className.includes("page-title"), "unit route should focus its H1 after keyboard navigation");
 
