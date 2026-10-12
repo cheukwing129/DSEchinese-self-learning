@@ -82,7 +82,7 @@ try {
     return { fontSize: parseFloat(style.fontSize), lineHeight: parseFloat(style.lineHeight) };
   });
 
-  for (let i = 0; i < 4; i++) await page.locator('[data-reader-control="font"][data-delta="1"]').click();
+  for (let i = 0; i < 3; i++) await page.locator('[data-reader-control="font"][data-delta="1"]').click();
   await page.locator('[data-reader-control="line"][data-delta="1"]').click();
   await page.waitForFunction(() => document.querySelector(".reader-shell")?.dataset.readerFont === "30" && document.querySelector(".reader-shell")?.dataset.readerLine === "2");
   check(await page.locator('[data-reader-control="font"][data-delta="1"]').isDisabled(), "font increase should stop at 30px");
