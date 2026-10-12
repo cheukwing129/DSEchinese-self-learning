@@ -9,10 +9,10 @@ const App = (() => {
 
   const cache = { curriculum: null, json: {}, scripts: {}, styles: {} };
   const UI_MODULES = Object.freeze({
-    content: "/assets/build/content-renderer.133012014f7d.js",
-    contentReader: { script: "/assets/build/content-renderer.133012014f7d.js", style: "/assets/build/reader-style.38f12411e954.css" },
-    contentStudy: { script: "/assets/build/content-renderer.133012014f7d.js", style: "/assets/build/study-style.e0013e266293.css" },
-    contentProgress: { script: "/assets/build/content-renderer.133012014f7d.js", style: "/assets/build/progress-style.200934de830f.css" },
+    content: "/assets/build/content-renderer.e6fc23f266d4.js",
+    contentReader: { script: "/assets/build/content-renderer.e6fc23f266d4.js", style: "/assets/build/reader-style.38f12411e954.css" },
+    contentStudy: { script: "/assets/build/content-renderer.e6fc23f266d4.js", style: "/assets/build/study-style.e0013e266293.css" },
+    contentProgress: { script: "/assets/build/content-renderer.e6fc23f266d4.js", style: "/assets/build/progress-style.200934de830f.css" },
     progressAnalytics: "/assets/build/progress-analytics.2de6dccfcf75.js",
     questions: { script: "/assets/build/question-engine.686482b85cc0.js", style: "/assets/build/questions-style.528e43728dc3.css" },
     memorisation: "/assets/build/memorisation-engine.dab19bb23e8e.js"
