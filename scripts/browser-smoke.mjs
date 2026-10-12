@@ -171,7 +171,7 @@ try {
   check(launchMeta.canonical.endsWith('/'), "launch shell should expose a canonical URL");
   check(launchMeta.ogTitle.includes("文脈"), "Open Graph title should carry the Wenmai brand");
   check(launchMeta.ogImage.endsWith('/assets/brand/wenmai-share.png'), "Open Graph image should point at the Wenmai share card");
-  check(launchMeta.theme.toLowerCase() === '#174940', "theme-color should match the Wenmai ink green");
+  check(launchMeta.theme.toLowerCase() === '#193a56', "theme-color should match the Wenmai navy");
   check(launchMeta.chapterCurrent === 'page', "home route should mark the chapter navigation as current");
   check(await page.locator('.brand-mark-image').count() === 1, "header should render the Wenmai brand mark");
   check(await page.evaluate(() => fetch('/assets/brand/wenmai-flow.svg').then((r) => r.ok).catch(() => false)), "Wenmai brand mark asset should be fetchable");
@@ -186,7 +186,7 @@ try {
   check(requestPaths.filter((p) => /\/content-renderer\.[0-9a-f]{12}\.js$/.test(p)).length === 1, "content renderer should load exactly once when first entering a content route");
 
   await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/text"; });
-  await waitForTitle(page, "原文與誦讀");
+  await waitForTitle(page, "文章內容");
   check(await page.locator(".reader-shell").count() === 1, "text route should render the dedicated reader workspace");
   check(await page.locator(".reader-paper").count() === 1, "reader should expose a focused reading paper surface");
   const readerTabs = page.locator(".reader-nav [role=\"tab\"]");
@@ -218,8 +218,8 @@ try {
 
   await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/comprehension"; });
   await waitForTitle(page, "文章內容");
-  check(await page.locator(".comprehension-sequence").count() === 1, "comprehension route should render the sequence workspace");
-  check(await page.locator(".comprehension-step").count() === 5, "Yueyang comprehension should render five understanding steps");
+  check(await page.locator(".reader-shell").count() === 1, "legacy comprehension bookmarks should open the article content instead");
+  check(await page.evaluate(() => location.hash.endsWith("/text")), "legacy comprehension route should normalize to article content");
 
   await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/analysis"; });
   await waitForTitle(page, "結構與鑒賞");
