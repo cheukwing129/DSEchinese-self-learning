@@ -154,7 +154,7 @@ try {
   });
 
   await page.goto(`${baseURL}/#/`, { waitUntil: "domcontentloaded", timeout: 15000 });
-  await page.locator(".page-title", { hasText: "讀懂經典" }).waitFor({ state: "visible", timeout: 10000 });
+  await page.locator(".page-title", { hasText: "篇章目錄" }).waitFor({ state: "visible", timeout: 10000 });
   await page.locator(".loading-state").waitFor({ state: "detached", timeout: 10000 }).catch(() => {});
   const homeReadyMs = await page.evaluate(() => performance.now());
   check(homeReadyMs <= BUDGETS.homeReadyMs, `constrained-mobile home ready ${Math.round(homeReadyMs)}ms > ${BUDGETS.homeReadyMs}ms`);
@@ -174,7 +174,7 @@ try {
   const textStart = Date.now();
   await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/text"; });
   await waitVisible(page, ".reader-shell", 12000);
-  await page.locator(".page-title", { hasText: "原文與誦讀" }).waitFor({ state: "visible", timeout: 12000 });
+  await page.locator(".page-title", { hasText: "文章內容" }).waitFor({ state: "visible", timeout: 12000 });
   const textReadyMs = Date.now() - textStart;
   check(textReadyMs <= BUDGETS.textReadyMs, `constrained-mobile first reader ready ${textReadyMs}ms > ${BUDGETS.textReadyMs}ms`);
   check(await page.locator("audio[preload=\"none\"]").count() === 1, "reader audio must remain non-preloading on constrained mobile");
