@@ -330,7 +330,7 @@ const App = (() => {
   });
   const shelves=[];
   for(let i=0;i<allCards.length;i+=4)shelves.push(
-    `<div class="bookcase-row" aria-label="第${Math.floor(i/4)+1}層藏書">${allCards.slice(i,i+4).join("")}<div class="bookcase-plank" aria-hidden="true"></div></div>`
+    `<div class="bookcase-row" role="group" aria-label="第${Math.floor(i/4)+1}層藏書">${allCards.slice(i,i+4).join("")}<div class="bookcase-plank" aria-hidden="true"></div></div>`
   );
   return shelves.join("");
 }
