@@ -148,7 +148,7 @@ try {
   check(download.suggestedFilename().startsWith("wenmai-learning-records-"), "export filename should be recognisable to students");
 
   await page.locator("#progress-import-input").setInputFiles(invalidImportPath);
-  await page.locator("[data-progress-transfer-status]").waitFor({ state: "visible", timeout: 3000 });
+  await page.waitForFunction(() => document.querySelector("[data-progress-transfer-status]")?.textContent?.includes("不是有效的文脈學習紀錄備份"), null, { timeout: 5000 });
   check((await page.locator("[data-progress-transfer-status]").textContent())?.includes("不是有效的文脈學習紀錄備份"), "invalid backup formats should be rejected with a clear message");
   let stored = await page.evaluate(() => JSON.parse(localStorage.getItem("ccsl_progress_v1") || "{}"));
   check(!!stored.yueyanglouji && !stored.denglou, "invalid imports must leave existing progress untouched");
