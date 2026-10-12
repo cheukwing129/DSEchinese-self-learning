@@ -52,15 +52,15 @@
     },
     "app": {
       "source": "js/app.js",
-      "path": "/assets/build/app.6e24238226d1.js",
-      "hash": "6e24238226d1",
-      "sha256": "6e24238226d153cd18bb7d1e0712c74c03846a06deec79d454b8b999f45f7a7f"
+      "path": "/assets/build/app.ec204e7c7f6a.js",
+      "hash": "ec204e7c7f6a",
+      "sha256": "ec204e7c7f6a4627245cec28d89acd0c689d457d9f02790b1cd69dd6b5f8d2e0"
     },
     "content": {
       "source": "js/content-renderer.js",
-      "path": "/assets/build/content-renderer.c8ca461aaf53.js",
-      "hash": "c8ca461aaf53",
-      "sha256": "c8ca461aaf534e5955ec7e520ca86727f9ef2141db99a1fde17ca97951d95308"
+      "path": "/assets/build/content-renderer.133012014f7d.js",
+      "hash": "133012014f7d",
+      "sha256": "133012014f7dc75070f007242f19dddb6ca3fef7682ce0e62489095bf199533a"
     },
     "questions": {
       "source": "js/question-engine.js",
