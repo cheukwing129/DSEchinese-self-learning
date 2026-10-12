@@ -137,13 +137,13 @@ try {
   });
 
   await page.goto(`${baseURL}/#/`, { waitUntil: "domcontentloaded", timeout: 15000 });
-  await waitForTitle(page, "讀懂經典");
+  await waitForTitle(page, "篇章目錄");
   check(await page.locator(".map-card").count() === 16, "WebKit home should render 16 curriculum cards");
   check(await page.locator(".brand-mark-image").count() === 1, "WebKit home should render the Wenmai brand mark");
   await checkMobileLayout(page, "home");
 
   await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/text"; });
-  await waitForTitle(page, "原文與誦讀");
+  await waitForTitle(page, "文章內容");
   await page.locator(".reader-shell").waitFor({ state: "visible", timeout: 5000 });
   check(await page.locator(".reader-nav [role=\"tab\"]").count() === 5, "WebKit reader should expose five paragraph tabs");
   const firstLabel = await page.locator("#reader-section-title").textContent();
