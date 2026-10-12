@@ -399,9 +399,9 @@ function snippet(text, start, end) {
 }
 
 const representativeRoutes = [
-  { label: "home", hash: "#/", selector: ".map-grid", title: "讀懂經典", styles: ["style"] },
-  { label: "unit", hash: "#/unit/yueyanglouji", selector: ".unit-hero", title: "《岳陽樓記》", styles: ["style"] },
-  { label: "reader", hash: "#/unit/yueyanglouji/text", selector: ".reader-shell", title: "原文與誦讀", styles: ["style", "reader-style"] },
+  { label: "home", hash: "#/", selector: ".map-grid", title: "篇章目錄", styles: ["style"] },
+  { label: "unit", hash: "#/unit/yueyanglouji", selector: ".unit-simple-head", title: "《岳陽樓記》", styles: ["style"] },
+  { label: "reader", hash: "#/unit/yueyanglouji/text", selector: ".reader-shell", title: "文章內容", styles: ["style", "reader-style"] },
   { label: "study", hash: "#/unit/yueyanglouji/words", selector: ".study-page-shell.words-study", styles: ["style", "study-style"] },
   { label: "quiz", hash: "#/unit/yueyanglouji/words/quiz", selector: ".q-stem", styles: ["style", "questions-style"] },
   { label: "progress", hash: "#/unit/yueyanglouji/progress", selector: ".unit-progress-hero", styles: ["style", "progress-style"] }
