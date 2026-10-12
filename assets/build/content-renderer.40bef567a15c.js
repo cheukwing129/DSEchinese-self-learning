@@ -171,107 +171,67 @@ const ContentRenderer = (() => {
       backgroundCardHTML(background.author_intro, "作者簡介"),
       backgroundCardHTML(background.writing_background, "寫作背景")
     ].filter(Boolean).join("");
-    const moduleDescs = {
-      text: "全文分段、點字看注釋、朗讀提示",
-      words: "實詞／虛詞／通假／古今義",
-      comprehension: "白話理解、段意、內容理解練習",
-      analysis: "結構圖、景情配對、手法賞析",
-      theme: "主旨解說、生活反思、開放題",
-      memorisation: "句群背誦、遮字、重組",
-      challenge: "整合各分類抽題，標示需補強範疇與補救",
-      progress: "能力分項、錯題、背誦重溫、反思"
+    const descriptions = {
+      words: "字詞解釋、文言句式",
+      "content-quiz": "從原文提取、推斷及整合資訊",
+      analysis: "文章結構與寫作手法",
+      theme: "主旨、思想與賞析",
+      memorisation: "背誦、遮字及重組",
+      progress: "錯題、練習及學習紀錄"
     };
-    const coreIds = new Set(["text", "words", "comprehension", "analysis", "theme"]);
-    const moduleCard = (m, index) => `
-      <a class="module-card module-card-${m.id} ${m.id === "text" ? "module-card-featured" : ""} card-tappable" href="${moduleHref(unitId, m.id)}">
-        <span class="module-order">${String(index + 1).padStart(2, "0")}</span>
+    const supporting = (u.modules || []).filter((m) => !["text", "challenge", "comprehension"].includes(m.id));
+    const wordIndex = supporting.findIndex((m) => m.id === "words");
+    supporting.splice(wordIndex < 0 ? 0 : wordIndex + 1, 0, { id: "content-quiz", title: "內容理解題庫", icon: "translate" });
+    const supportCards = supporting.map((m) => `
+      <a class="module-card unit-support-card card-tappable" href="${m.id === "content-quiz" ? `#/unit/${unitId}/comprehension/quiz` : moduleHref(unitId, m.id)}">
         <div class="module-icon" aria-hidden="true">${App.moduleIconGlyph(m.icon)}</div>
         <div class="module-copy">
           <p class="module-name">${esc(m.title)}</p>
-          <p class="module-desc">${esc(moduleDescs[m.id] || "")}</p>
+          <p class="module-desc">${esc(descriptions[m.id] || "")}</p>
         </div>
         <span class="module-arrow" aria-hidden="true">→</span>
-      </a>`;
-    const coreModules = u.modules.filter((m) => coreIds.has(m.id));
-    const practiceModules = u.modules.filter((m) => !coreIds.has(m.id));
-    const coreCards = coreModules.map((m, index) => moduleCard(m, index)).join("");
-    const practiceCards = practiceModules.map((m, index) => moduleCard(m, coreModules.length + index)).join("");
-
+      </a>`).join("");
     App.mount(`
-      <header class="unit-hero">
-        <div class="unit-hero-copy">
-          <div class="unit-meta-row">
-            <p class="unit-kicker">${esc(u.dynasty)} · ${esc(u.genre)}</p>
-            <span class="unit-mode-pill">篇章學習</span>
-          </div>
-          <h1 class="page-title unit-title">《${esc(u.title)}》</h1>
-          <p class="unit-author">${esc(u.author)}</p>
-          <div class="unit-flow-mini" aria-label="建議學習方向">
-            <span>讀原文</span><i aria-hidden="true">→</i><span>疏文意</span><i aria-hidden="true">→</i><span>看賞析</span><i aria-hidden="true">→</i><span>做練習</span>
-          </div>
-        </div>
-        <div class="unit-hero-art" aria-hidden="true">
-          <span class="unit-art-orbit orbit-one"></span>
-          <span class="unit-art-orbit orbit-two"></span>
-          <div class="unit-monogram">${esc((u.title || "篇").slice(0, 1))}</div>
-          <span class="unit-art-caption">讀 · 解 · 析 · 練</span>
-        </div>
+      <header class="unit-simple-head">
+        <div class="unit-meta-row"><p class="unit-kicker">${esc(u.dynasty)} · ${esc(u.genre)}</p></div>
+        <h1 class="page-title unit-title">《${esc(u.title)}》</h1>
+        <p class="unit-author">${esc(u.author)}</p>
       </header>
-
-      <section class="next-step-panel" aria-labelledby="next-step-title">
-        <div class="next-step-copy">
-          <p class="section-kicker">建議下一步</p>
-          <h2 id="next-step-title">${esc(nextStep.label)}</h2>
-          <p class="next-step-reason">${esc(nextStep.reason)}</p>
-          <p class="next-step-note">建議只根據這部裝置的作答、背誦、自評與反思紀錄，不等同系統判定你已掌握前一階段。</p>
-        </div>
-        <a class="btn btn-primary next-step-button" href="#${esc(nextStep.path)}">${esc(nextStep.label)} <span aria-hidden="true">→</span></a>
+      <section class="unit-feature-grid" aria-label="主要學習入口">
+        <a class="unit-feature unit-feature-reading" href="#/unit/${unitId}/text">
+          <span class="unit-feature-kicker">01 · READ</span>
+          <span class="unit-feature-symbol" aria-hidden="true">文</span>
+          <h2>文章內容</h2>
+          <p>原文、注釋、語譯與誦讀</p>
+          <span class="unit-feature-cta">進入閱讀 <span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="unit-feature unit-feature-challenge" href="#/unit/${unitId}/challenge">
+          <span class="unit-feature-kicker">02 · CHALLENGE</span>
+          <span class="unit-feature-symbol" aria-hidden="true">戰</span>
+          <h2>核心篇章挑戰</h2>
+          <p>綜合題目與學習成果檢視</p>
+          <span class="unit-feature-cta">開始挑戰 <span aria-hidden="true">↗</span></span>
+        </a>
       </section>
-
-      <section class="unit-section" aria-labelledby="core-learning-title">
-        <div class="unit-section-heading">
-          <div>
-            <p class="section-kicker">核心學習</p>
-            <h2 id="core-learning-title">先讀懂，再看深一層</h2>
-          </div>
-          <p>原文、字詞、文意、結構與主旨依次展開；不必一次完成所有模組。</p>
+      <section class="unit-section unit-support-section" aria-labelledby="unit-support-title">
+        <div class="unit-section-heading compact">
+          <div><p class="section-kicker">學習工具</p><h2 id="unit-support-title">分類學習與練習</h2></div>
         </div>
-        <div class="module-grid module-grid-core">${coreCards}</div>
+        <div class="unit-support-grid">${supportCards}</div>
       </section>
-
-      ${practiceCards ? `
-        <section class="unit-section" aria-labelledby="practice-title">
-          <div class="unit-section-heading compact">
-            <div>
-              <p class="section-kicker">鞏固與挑戰</p>
-              <h2 id="practice-title">把理解變成可用的能力</h2>
-            </div>
-          </div>
-          <div class="module-grid module-grid-practice">${practiceCards}</div>
-        </section>
-      ` : ""}
-
+      <aside class="unit-next-compact">
+        <div><span class="section-kicker">依學習紀錄建議</span><strong>${esc(nextStep.label)}</strong></div>
+        <a href="#${esc(nextStep.path)}">前往 <span aria-hidden="true">→</span></a>
+      </aside>
       ${backgroundCards ? `
         <section class="unit-section unit-background-section" aria-labelledby="background-title">
-          <div class="unit-section-heading compact">
-            <div>
-              <p class="section-kicker">延伸閱讀</p>
-              <h2 id="background-title">作者與背景</h2>
-            </div>
-          </div>
+          <div class="unit-section-heading compact"><div><p class="section-kicker">延伸閱讀</p><h2 id="background-title">作者與背景</h2></div></div>
           <div class="background-grid">${backgroundCards}</div>
-        </section>
-      ` : ""}
-
+        </section>` : ""}
       <section class="cross-text-panel" aria-labelledby="cross-text-title">
-        <div>
-          <p class="section-kicker">選做 · 進階</p>
-          <h2 id="cross-text-title">跨篇比較與進階題</h2>
-          <p>如尚未學習相關篇章，可先略過；完成更多篇章後再回來比較會更有價值。</p>
-        </div>
+        <div><p class="section-kicker">進階</p><h2 id="cross-text-title">跨篇比較與進階題</h2></div>
         <a class="home-text-link" href="#/unit/${unitId}/cross-text">前往跨篇比較 <span aria-hidden="true">→</span></a>
       </section>
-
       ${App.footerNav(null, null).replace('<div class="footer-nav">', '<div class="footer-nav unit-footer-nav">')}
     `);
   }
@@ -289,7 +249,7 @@ const ContentRenderer = (() => {
     `;
   }
 
-  // ---------- 1. 原文與誦讀 ----------
+  // ---------- 1. 文章內容 ----------
   function renderTextPage(bundle, unitId) {
     const { text, unit } = bundle;
     const annoMap = {};
@@ -417,7 +377,7 @@ const ContentRenderer = (() => {
           <header class="reader-hero">
             <div class="reader-hero-copy">
               <p class="section-kicker">原文閱讀${dynastyGenre ? ` · ${dynastyGenre}` : ""}</p>
-              <h1 class="page-title reader-page-title">原文與誦讀</h1>
+              <h1 class="page-title reader-page-title">文章內容</h1>
               <p class="reader-work-title">《${esc(unit.title)}》</p>
               <p class="reader-work-author">${esc(unit.author || "")}</p>
               <p class="reader-intro">先把注意力留給原文。需要時再點開注釋，讀完一節後才看段意，讓理解建立在自己的閱讀上。</p>
@@ -694,75 +654,6 @@ const ContentRenderer = (() => {
     }
   }
 
-  // ---------- 3. 疏通文意 ----------
-  function renderComprehensionPage(bundle, unitId) {
-    const { text, unit } = bundle;
-    const paragraphs = Array.isArray(text.paragraphs) ? text.paragraphs : [];
-    const sequence = paragraphs
-      .map((p, index) => `
-        <article class="comprehension-step">
-          <div class="comprehension-rail" aria-hidden="true">
-            <span>${String(index + 1).padStart(2, "0")}</span>
-            ${index < paragraphs.length - 1 ? `<i></i>` : ""}
-          </div>
-          <div class="comprehension-card">
-            <header>
-              <span class="study-chip">${esc(paragraphLabel(p))}</span>
-              <small>原文 → 概括 → 再核對細節</small>
-            </header>
-            <p class="comprehension-text">${esc(p.text)}</p>
-            <div class="comprehension-summary">
-              <span>理解重點</span>
-              <p>${esc(p.summary)}</p>
-            </div>
-          </div>
-        </article>`)
-      .join("");
-
-    App.mount(`
-      <div class="study-page-shell comprehension-study">
-        <section class="study-hero" aria-labelledby="study-page-title">
-          <div class="study-hero-copy">
-            <p class="study-kicker">COMPREHENSION · 文意脈絡</p>
-            <h1 class="page-title study-title" id="study-page-title">疏通文意</h1>
-            <p class="study-lead">逐段拆開原文，先看每段在「說甚麼」，再把段落重新連成完整脈絡。段意是理解支架，不是唯一標準答案。</p>
-            <div class="study-meta-row">
-              <span>《${esc(unit.title)}》</span>
-              ${unit.author ? `<span>${esc(unit.author)}</span>` : ""}
-              <span>${paragraphs.length} 個理解節點</span>
-            </div>
-            <a class="btn btn-primary study-hero-action" href="#/unit/${unitId}/comprehension/quiz">開始內容理解題庫 <span aria-hidden="true">→</span></a>
-          </div>
-          <div class="study-hero-side" aria-hidden="true">
-            <span class="study-hero-mark">解</span>
-            <div class="study-hero-stats single">
-              <strong>${paragraphs.length}</strong><small>段／聯／片</small>
-            </div>
-          </div>
-        </section>
-
-        <section class="study-section" aria-labelledby="comprehension-sequence-title">
-          <div class="study-section-heading compact">
-            <div>
-              <p class="section-kicker">逐段理解</p>
-              <h2 id="comprehension-sequence-title">把全文拆成可理解的節點</h2>
-              <p>先閱讀原文，再看下方概括；若你能用自己的話重新說一次，才算真正疏通。</p>
-            </div>
-          </div>
-          <div class="comprehension-sequence">
-            ${sequence || `<div class="progress-empty-card"><span aria-hidden="true">解</span><div><strong>本篇暫未提供逐段資料</strong><p>可先回到原文閱讀頁。</p></div></div>`}
-          </div>
-        </section>
-
-        <aside class="study-next-panel">
-          <div><p class="section-kicker">檢查理解</p><h2>不要只認得段意</h2><p>題目會重新換一種問法，檢查你能否從原文提取、判斷和整合內容，而不是只記住這些概括。</p></div>
-          <a class="btn btn-primary" href="#/unit/${unitId}/comprehension/quiz">開始理解題 →</a>
-        </aside>
-      </div>
-      ${App.footerNav(unitId, unit.title)}
-    `);
-  }
-
   // ---------- 4. 結構與鑒賞 ----------
   function renderAnalysisPage(bundle, unitId) {
     const { structure, unit } = bundle;
@@ -841,7 +732,7 @@ const ContentRenderer = (() => {
           <div class="study-section-heading compact">
             <div><p class="section-kicker">篇章骨架</p><h2 id="analysis-flow-title">文章如何一步一步推進</h2><p>先掌握順序和轉折，再回頭理解每一段的功能。</p></div>
           </div>
-          <div class="analysis-flow">${flow || `<div class="progress-empty-card"><span aria-hidden="true">構</span><div><strong>本篇暫未提供結構圖</strong><p>可先從原文與疏通文意開始。</p></div></div>`}</div>
+          <div class="analysis-flow">${flow || `<div class="progress-empty-card"><span aria-hidden="true">構</span><div><strong>本篇暫未提供結構圖</strong><p>可先從文章內容開始。</p></div></div>`}</div>
         </section>
 
         ${contrastCards ? `
@@ -1180,7 +1071,7 @@ const ContentRenderer = (() => {
 
   return {
     renderCrossUnitOverview,
-    renderUnitHome, renderTextPage, renderWordsPage, renderComprehensionPage,
+    renderUnitHome, renderTextPage, renderWordsPage,
     renderAnalysisPage, renderThemePage, renderCrossTextPage, renderProgressPage
   };
 })();

@@ -4,33 +4,33 @@
   "assets": {
     "style": {
       "source": "css/style.css",
-      "path": "/assets/build/style.b91739827cf4.css",
-      "hash": "b91739827cf4",
-      "sha256": "b91739827cf401a532f44ce82925f8340ab9c77f648d6d6d525f6dd05a674973"
+      "path": "/assets/build/style.cc272e18b58d.css",
+      "hash": "cc272e18b58d",
+      "sha256": "cc272e18b58d3c1f768c4fc5a7686a30844d96870590fc8a1ee7694bf3b5fd84"
     },
     "readerStyle": {
       "source": "css/style.css",
-      "path": "/assets/build/reader-style.8ce23bd1ebe1.css",
-      "hash": "8ce23bd1ebe1",
-      "sha256": "8ce23bd1ebe18232400d6f73dcdada9f553629c868ad1577e2a636373be76c3f"
+      "path": "/assets/build/reader-style.38f12411e954.css",
+      "hash": "38f12411e954",
+      "sha256": "38f12411e954504b4a77400dfb03e2539be2455a15afb0180785761f11cdb3d5"
     },
     "studyStyle": {
       "source": "css/style.css",
-      "path": "/assets/build/study-style.ded2901551ae.css",
-      "hash": "ded2901551ae",
-      "sha256": "ded2901551ae3962cbcf4864ae27c43b7bb7d3ed32ade44155b4610de10b94d7"
+      "path": "/assets/build/study-style.e0013e266293.css",
+      "hash": "e0013e266293",
+      "sha256": "e0013e266293ad60f6a0be2181fc54e8f2b8e8cc4e930f5207947061e7f560e1"
     },
     "progressStyle": {
       "source": "css/style.css",
-      "path": "/assets/build/progress-style.03fc2038c56c.css",
-      "hash": "03fc2038c56c",
-      "sha256": "03fc2038c56c95429a1b9f65dc10bb92aa4ea71d6ea4567137ae8f8452d85e6b"
+      "path": "/assets/build/progress-style.200934de830f.css",
+      "hash": "200934de830f",
+      "sha256": "200934de830fefc80cd213abdccc58ab0e43d2eeff24df076777e0ceab232ee7"
     },
     "questionsStyle": {
       "source": "css/style.css",
-      "path": "/assets/build/questions-style.d140f0d5c519.css",
-      "hash": "d140f0d5c519",
-      "sha256": "d140f0d5c519f1c1f9f6873ce37f0ca41550dc9d3fbe428819306bb2fe3c155e"
+      "path": "/assets/build/questions-style.528e43728dc3.css",
+      "hash": "528e43728dc3",
+      "sha256": "528e43728dc33a678080edb7b800696eabf52336ff3ee85e0104af560ed74b6a"
     },
     "progress": {
       "source": "js/progress.js",
@@ -52,15 +52,15 @@
     },
     "app": {
       "source": "js/app.js",
-      "path": "/assets/build/app.7f966d19a9ce.js",
-      "hash": "7f966d19a9ce",
-      "sha256": "7f966d19a9ceb01dff85a7c9af1613e5384a17a9f22dd655c39f99d8ff7a2ea8"
+      "path": "/assets/build/app.d4bde6c53df1.js",
+      "hash": "d4bde6c53df1",
+      "sha256": "d4bde6c53df125b89c9f69b85123b1db5b324a7fb35c80f4f50efc8bd1c0e93d"
     },
     "content": {
       "source": "js/content-renderer.js",
-      "path": "/assets/build/content-renderer.e47f7dc5baca.js",
-      "hash": "e47f7dc5baca",
-      "sha256": "e47f7dc5baca12ba38aa1dc93a00525c240a712d27ab3fcd8132818661363e3b"
+      "path": "/assets/build/content-renderer.40bef567a15c.js",
+      "hash": "40bef567a15c",
+      "sha256": "40bef567a15c13e39526b716a9bd1ba29311c38243162ca81c82aab0a6272d9b"
     },
     "questions": {
       "source": "js/question-engine.js",

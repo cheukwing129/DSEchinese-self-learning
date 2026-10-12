@@ -9,12 +9,12 @@ const App = (() => {
 
   const cache = { curriculum: null, json: {}, scripts: {}, styles: {} };
   const UI_MODULES = Object.freeze({
-    content: "/assets/build/content-renderer.e47f7dc5baca.js",
-    contentReader: { script: "/assets/build/content-renderer.e47f7dc5baca.js", style: "/assets/build/reader-style.8ce23bd1ebe1.css" },
-    contentStudy: { script: "/assets/build/content-renderer.e47f7dc5baca.js", style: "/assets/build/study-style.ded2901551ae.css" },
-    contentProgress: { script: "/assets/build/content-renderer.e47f7dc5baca.js", style: "/assets/build/progress-style.03fc2038c56c.css" },
+    content: "/assets/build/content-renderer.40bef567a15c.js",
+    contentReader: { script: "/assets/build/content-renderer.40bef567a15c.js", style: "/assets/build/reader-style.38f12411e954.css" },
+    contentStudy: { script: "/assets/build/content-renderer.40bef567a15c.js", style: "/assets/build/study-style.e0013e266293.css" },
+    contentProgress: { script: "/assets/build/content-renderer.40bef567a15c.js", style: "/assets/build/progress-style.200934de830f.css" },
     progressAnalytics: "/assets/build/progress-analytics.2de6dccfcf75.js",
-    questions: { script: "/assets/build/question-engine.686482b85cc0.js", style: "/assets/build/questions-style.d140f0d5c519.css" },
+    questions: { script: "/assets/build/question-engine.686482b85cc0.js", style: "/assets/build/questions-style.528e43728dc3.css" },
     memorisation: "/assets/build/memorisation-engine.dab19bb23e8e.js"
   });
 
@@ -279,9 +279,9 @@ const App = (() => {
     if (path.includes("/analysis/quiz")) return "結構與手法題庫";
     if (path.includes("/theme/quiz")) return "主旨與思考題庫";
     if (path.includes("/cross-text/quiz")) return "跨篇比較題";
-    if (path.endsWith("/text")) return "原文與誦讀";
+    if (path.endsWith("/text")) return "文章內容";
     if (path.endsWith("/words")) return "字詞與句式";
-    if (path.endsWith("/comprehension")) return "疏通文意";
+    if (path.endsWith("/comprehension")) return "文章內容";
     if (path.endsWith("/analysis")) return "結構與鑒賞";
     if (path.endsWith("/theme")) return "主旨與思考";
     if (path.endsWith("/memorisation")) return "背誦精華";
@@ -317,24 +317,20 @@ const App = (() => {
         <p class="home-action-eyebrow">繼續上次學習</p>
         <h2 class="home-action-title">《${escapeHTML(recentUnit.title)}》</h2>
         <p class="home-action-meta">${escapeHTML(learningPathLabel(recent.path))}</p>
-        <p class="home-action-copy">從你在這部裝置留下的最近學習位置接續，不必重新尋找進度。</p>
         <a class="btn home-action-button" href="#${escapeHTML(recent.path)}">繼續學習 <span aria-hidden="true">→</span></a>
       </article>` : firstAvailable ? `
       <article class="home-action-card home-action-primary">
-        <p class="home-action-eyebrow">第一次來到這裡？</p>
-        <h2 class="home-action-title">從《${escapeHTML(firstAvailable.title)}》開始</h2>
+        <p class="home-action-eyebrow">開始學習</p>
+        <h2 class="home-action-title">《${escapeHTML(firstAvailable.title)}》</h2>
         <p class="home-action-meta">${escapeHTML(firstAvailable.author || "")}</p>
-        <p class="home-action-copy">先讀原文，再按自己的節奏進入字詞、理解、賞析與練習。</p>
-        <a class="btn home-action-button" href="#/unit/${firstAvailable.id}">開始學習 <span aria-hidden="true">→</span></a>
+        <a class="btn home-action-button" href="#/unit/${firstAvailable.id}">進入篇章 <span aria-hidden="true">→</span></a>
       </article>` : "";
-
     const overviewCard = `
       <article class="home-action-card home-action-secondary">
         <div class="home-action-symbol" aria-hidden="true">總</div>
         <div>
-          <p class="home-action-eyebrow">學習整理</p>
+          <p class="home-action-eyebrow">學習紀錄</p>
           <h2 class="home-action-title">跨篇章學習總覽</h2>
-          <p class="home-action-copy">集中查看待修正錯題、已修正紀錄與錯題較集中的能力範疇；只在開啟時載入完整題庫。</p>
           <a class="home-text-link" href="#/overview">查看總覽 <span aria-hidden="true">→</span></a>
         </div>
       </article>`;
@@ -365,49 +361,19 @@ const App = (() => {
       .join("");
 
     mount(`
-      <section class="home-hero" aria-labelledby="home-title">
-        <div class="home-hero-copy">
-          <div class="home-kicker-row">
-            <p class="home-kicker">DSE 中文 · 指定文言經典</p>
-            <span class="home-edition-pill">SELF · STUDY</span>
-          </div>
-          <h1 id="home-title" class="page-title home-title">讀懂經典，<span>把每一步，<br />變成自己的能力。</span></h1>
-          <p class="home-lead">從原文、字詞與文意出發，再進入賞析、背誦、作答與錯題修復。介面替你整理路徑，判斷仍然交給真實學習紀錄。</p>
-          <div class="home-hero-chips" aria-label="學習內容">
-            <span>原文</span><span>字詞</span><span>賞析</span><span>背誦</span><span>作答</span>
-          </div>
+      <header class="home-simple-head">
+        <div>
+          <p class="section-kicker">DSE 中文 · 指定文言篇章</p>
+          <h1 id="home-title" class="page-title">篇章目錄</h1>
         </div>
-        <aside class="home-hero-visual" aria-label="自學路徑示意；不代表完成度或掌握程度">
-          <div class="hero-visual-head">
-            <div>
-              <span class="hero-visual-label">LEARNING FLOW</span>
-              <strong>一條清楚的自學路徑</strong>
-            </div>
-            <span class="hero-unit-count">${curriculum.units.length} 篇</span>
-          </div>
-          <div class="hero-path-grid">
-            <div class="hero-path-step"><span>01</span><strong>讀</strong><small>原文與語境</small></div>
-            <div class="hero-path-step"><span>02</span><strong>解</strong><small>字詞與文意</small></div>
-            <div class="hero-path-step"><span>03</span><strong>析</strong><small>結構與主旨</small></div>
-            <div class="hero-path-step"><span>04</span><strong>練</strong><small>作答與修正</small></div>
-          </div>
-          <p class="hero-visual-note">路徑只協助導航，不以瀏覽頁面推斷掌握程度。</p>
-        </aside>
-      </section>
-
+        <span class="home-count-pill">${curriculum.units.length} 篇</span>
+      </header>
       <section class="home-action-grid" aria-label="學習捷徑">
         ${primaryCard}
         ${overviewCard}
       </section>
-
       <section class="home-curriculum" aria-labelledby="curriculum-title">
-        <div class="home-section-heading">
-          <div>
-            <p class="section-kicker">課程地圖</p>
-            <h2 id="curriculum-title">選一篇，開始今天的學習</h2>
-          </div>
-          <p>不設虛假的總掌握百分比；進度只反映這部裝置留下的真實學習紀錄。</p>
-        </div>
+        <div class="home-section-heading"><div><h2 id="curriculum-title">選擇篇章</h2></div></div>
         <div class="map-grid">${cards}</div>
       </section>
     `);
@@ -505,12 +471,6 @@ const App = (() => {
   async function pageWords(params) {
     await withUnitBundle(params.unitId, { resources: ["text"], uiModules: ["contentStudy"] }, (bundle) => {
       ContentRenderer.renderWordsPage(bundle, params.unitId);
-    });
-  }
-
-  async function pageComprehension(params) {
-    await withUnitBundle(params.unitId, { resources: ["text"], uiModules: ["contentStudy"] }, (bundle) => {
-      ContentRenderer.renderComprehensionPage(bundle, params.unitId);
     });
   }
 
@@ -631,7 +591,8 @@ const App = (() => {
     Router.register("/unit/:unitId/text", pageText);
     Router.register("/unit/:unitId/words", pageWords);
     Router.register("/unit/:unitId/words/quiz", (p) => pageQuiz(p, "words", "字詞與虛詞題庫"));
-    Router.register("/unit/:unitId/comprehension", pageComprehension);
+    // Preserve existing bookmarks without bringing back the duplicate lesson.
+    Router.register("/unit/:unitId/comprehension", (p) => Router.navigate(`/unit/${p.unitId}/text`));
     Router.register("/unit/:unitId/comprehension/quiz", (p) => pageQuiz(p, "content", "內容理解題庫"));
     Router.register("/unit/:unitId/analysis", pageAnalysis);
     Router.register("/unit/:unitId/analysis/quiz", (p) => pageQuiz(p, "structure-skill", "結構與手法題庫"));

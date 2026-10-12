@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>文脈 · DSE 經典自學</title>
-  <meta name="description" content="文脈是為 DSE 中文指定文言經典而設的自學平台，從原文、字詞與文意，逐步進入賞析、背誦、作答與錯題修復。" />
+  <meta name="description" content="文脈 · 香港 DSE 中文指定文言篇章學習與練習。" />
   <meta name="application-name" content="文脈" />
-  <meta name="theme-color" content="#174940" />
+  <meta name="theme-color" content="#193A56" />
   <meta name="color-scheme" content="light" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://dsechinese-self-learning.pages.dev/" />
@@ -15,21 +15,21 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="文脈" />
   <meta property="og:title" content="文脈 · DSE 經典自學" />
-  <meta property="og:description" content="從原文、字詞與文意，逐步進入賞析、背誦、作答與錯題修復。" />
+  <meta property="og:description" content="DSE 中文指定文言篇章、原文注釋、練習及核心篇章挑戰。" />
   <meta property="og:url" content="https://dsechinese-self-learning.pages.dev/" />
   <meta property="og:image" content="https://dsechinese-self-learning.pages.dev/assets/brand/wenmai-share.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="文脈 · DSE 經典自學" />
-  <meta name="twitter:description" content="讀懂經典，把每一步變成自己的能力。" />
+  <meta name="twitter:description" content="文脈 · DSE 指定文言篇章。" />
   <meta name="twitter:image" content="https://dsechinese-self-learning.pages.dev/assets/brand/wenmai-share.png" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"文脈","url":"https://dsechinese-self-learning.pages.dev/","description":"DSE 中文指定文言經典自學平台","applicationCategory":"EducationalApplication","inLanguage":"zh-Hant-HK","isAccessibleForFree":true}</script>
-  <link rel="stylesheet" href="/assets/build/style.b91739827cf4.css" />
+  <link rel="stylesheet" href="/assets/build/style.cc272e18b58d.css" />
   <style>@media (max-width:600px){.header-nav-link{min-height:44px}}</style>
   <script defer src="/assets/build/progress.f09c9221e4cd.js"></script>
   <script defer src="/assets/build/router.9119a4cb77c2.js"></script>
-  <script defer src="/assets/build/app.7f966d19a9ce.js"></script>
+  <script defer src="/assets/build/app.d4bde6c53df1.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#app-main">跳到主要內容</a>
@@ -562,28 +562,27 @@
         <p style="margin:12px 0 0;color:var(--color-ink-faint);font-size:10px;line-height:1.6;">時間只是節奏建議，不會自動倒數；如果今天只夠完成第一步，也算一次有方向的溫習。</p>`;
     }
 
+    const readerFontSteps = [12, 14, 16, 18, 20, 22, 24, 27, 30];
+    const readerLineSteps = [1, 1.25, 1.5, 1.75, 2];
     function loadReaderPreferences() {
-      const defaults = { font: "normal", line: "standard", focus: false };
+      const defaults = { fontPx: 22, lineHeight: 1.75, focus: false };
       try {
         const saved = JSON.parse(localStorage.getItem(readerPreferencesKey) || "{}");
-        return {
-          font: ["small", "normal", "large"].includes(saved.font) ? saved.font : defaults.font,
-          line: ["compact", "standard", "relaxed"].includes(saved.line) ? saved.line : defaults.line,
-          focus: saved.focus === true
-        };
-      } catch {
-        return defaults;
-      }
+        const fontLegacy = { small: 18, normal: 22, large: 27 };
+        const lineLegacy = { compact: 1.5, standard: 1.75, relaxed: 2 };
+        const font = Number(saved.fontPx ?? fontLegacy[saved.font] ?? defaults.fontPx);
+        const line = Number(saved.lineHeight ?? lineLegacy[saved.line] ?? defaults.lineHeight);
+        const closest = (steps, value, fallback) => Number.isFinite(value)
+          ? steps.reduce((best, step) => Math.abs(step - value) < Math.abs(best - value) ? step : best, fallback)
+          : fallback;
+        return { fontPx: closest(readerFontSteps, font, defaults.fontPx),
+          lineHeight: closest(readerLineSteps, line, defaults.lineHeight), focus: saved.focus === true };
+      } catch { return defaults; }
     }
-
     function saveReaderPreferences(prefs) {
-      try {
-        localStorage.setItem(readerPreferencesKey, JSON.stringify(prefs));
-      } catch {
-        /* Display preferences are optional; reading remains usable without storage. */
-      }
+      try { localStorage.setItem(readerPreferencesKey, JSON.stringify(prefs)); }
+      catch { /* Preferences are optional. */ }
     }
-
     function readerControlButton(label, group, value) {
       const button = document.createElement("button");
       button.type = "button";
@@ -591,10 +590,8 @@
       button.dataset.readerPreference = group;
       button.dataset.readerValue = value;
       button.textContent = label;
-      button.style.cssText = "min-height:34px;padding:5px 8px;border-radius:9px;font-size:10px;line-height:1.2;";
       return button;
     }
-
     function enhanceReaderComfort() {
       const shell = document.querySelector(".reader-shell");
       if (!shell) return;
@@ -605,45 +602,48 @@
       const hero = shell.querySelector(".reader-hero");
       const note = shell.querySelector(".reader-study-note");
       if (!sidebar || !sticky || !paper || !layout) return;
-
       let panel = shell.querySelector(".reader-comfort-panel");
       if (!panel) {
         panel = document.createElement("section");
         panel.className = "reader-comfort-panel";
         panel.setAttribute("aria-label", "閱讀顯示設定");
-        panel.style.cssText = "margin:0 0 14px;padding:12px;border:1px solid rgba(23,73,64,.10);border-radius:14px;background:rgba(252,252,250,.72);box-shadow:inset 0 1px 0 rgba(255,255,255,.72);";
         panel.innerHTML = `
-          <p style="margin:0 0 9px;color:var(--color-ink);font-size:11px;font-weight:800;">閱讀顯示</p>
-          <div data-reader-row="font" role="group" aria-label="原文字體大小" style="display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-bottom:8px;">
-            <span style="width:31px;color:var(--color-ink-faint);font-size:9px;font-weight:800;">字體</span>
+          <h2 class="reader-comfort-heading">閱讀顯示</h2>
+          <div class="reader-stepper" data-reader-row="font" role="group" aria-label="字體大小">
+            <span class="reader-stepper-label">字體</span>
+            <button type="button" data-reader-control="font" data-delta="-1" aria-label="縮小字體">−</button>
+            <output data-reader-output="font" aria-live="polite">22 px</output>
+            <button type="button" data-reader-control="font" data-delta="1" aria-label="放大字體">+</button>
           </div>
-          <div data-reader-row="line" role="group" aria-label="原文行距" style="display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-bottom:9px;">
-            <span style="width:31px;color:var(--color-ink-faint);font-size:9px;font-weight:800;">行距</span>
+          <div class="reader-stepper" data-reader-row="line" role="group" aria-label="行距">
+            <span class="reader-stepper-label">行距</span>
+            <button type="button" data-reader-control="line" data-delta="-1" aria-label="縮小行距">−</button>
+            <output data-reader-output="line" aria-live="polite">1.75</output>
+            <button type="button" data-reader-control="line" data-delta="1" aria-label="增加行距">+</button>
           </div>`;
-        const fontRow = panel.querySelector('[data-reader-row="font"]');
-        [["小", "small"], ["標準", "normal"], ["大", "large"]].forEach(([label, value]) => fontRow.appendChild(readerControlButton(label, "font", value)));
-        const lineRow = panel.querySelector('[data-reader-row="line"]');
-        [["緊密", "compact"], ["標準", "standard"], ["寬鬆", "relaxed"]].forEach(([label, value]) => lineRow.appendChild(readerControlButton(label, "line", value)));
         const focusButton = readerControlButton("專注閱讀", "focus", "toggle");
         focusButton.id = "reader-focus-toggle";
-        focusButton.style.width = "100%";
         panel.appendChild(focusButton);
         const heading = sticky.querySelector(".reader-sidebar-heading");
         if (heading?.nextSibling) sticky.insertBefore(panel, heading.nextSibling);
         else sticky.insertBefore(panel, sticky.firstChild);
-
         panel.addEventListener("click", (event) => {
-          const button = event.target.closest("[data-reader-preference]");
+          const button = event.target.closest("button");
           if (!button) return;
           const prefs = loadReaderPreferences();
-          const group = button.dataset.readerPreference;
-          if (group === "focus") prefs.focus = !prefs.focus;
-          else prefs[group] = button.dataset.readerValue;
+          if (button.dataset.readerPreference === "focus") {
+            prefs.focus = !prefs.focus;
+          } else if (button.dataset.readerControl) {
+            const kind = button.dataset.readerControl;
+            const steps = kind === "font" ? readerFontSteps : readerLineSteps;
+            const key = kind === "font" ? "fontPx" : "lineHeight";
+            const pos = steps.indexOf(prefs[key]);
+            prefs[key] = steps[Math.max(0, Math.min(steps.length - 1, pos + Number(button.dataset.delta)))];
+          } else return;
           saveReaderPreferences(prefs);
           enhanceReaderComfort();
         });
       }
-
       let exitRow = shell.querySelector(".reader-focus-exit-row");
       if (!exitRow) {
         exitRow = document.createElement("div");
@@ -661,26 +661,21 @@
           document.getElementById("reader-focus-toggle")?.focus({ preventScroll: true });
         });
       }
-
       const prefs = loadReaderPreferences();
-      const mobile = window.matchMedia("(max-width: 560px)").matches;
-      const fontSize = prefs.font === "small" ? (mobile ? "19px" : "22px") : prefs.font === "large" ? (mobile ? "25px" : "32px") : "";
-      const lineHeight = prefs.line === "compact" ? "1.85" : prefs.line === "relaxed" ? "2.55" : "";
       shell.querySelectorAll(".reader-paper .text-passage").forEach((passage) => {
-        passage.style.fontSize = fontSize;
-        passage.style.lineHeight = lineHeight;
+        passage.style.fontSize = `${prefs.fontPx}px`;
+        passage.style.lineHeight = String(prefs.lineHeight);
       });
-
-      panel.querySelectorAll("[data-reader-preference]").forEach((button) => {
-        const group = button.dataset.readerPreference;
-        const selected = group === "focus" ? prefs.focus : prefs[group] === button.dataset.readerValue;
-        button.setAttribute("aria-pressed", selected ? "true" : "false");
-        button.style.borderColor = selected ? "var(--color-accent)" : "";
-        button.style.background = selected ? "var(--color-accent-soft)" : "";
+      panel.querySelector('[data-reader-output="font"]').textContent = `${prefs.fontPx} px`;
+      panel.querySelector('[data-reader-output="line"]').textContent = String(prefs.lineHeight);
+      panel.querySelectorAll("[data-reader-control]").forEach((button) => {
+        const steps = button.dataset.readerControl === "font" ? readerFontSteps : readerLineSteps;
+        const val = button.dataset.readerControl === "font" ? prefs.fontPx : prefs.lineHeight;
+        button.disabled = button.dataset.delta === "-1" ? val === steps[0] : val === steps[steps.length - 1];
       });
       const focusToggle = panel.querySelector("#reader-focus-toggle");
-      if (focusToggle) focusToggle.textContent = prefs.focus ? "專注閱讀中" : "專注閱讀";
-
+      focusToggle.textContent = prefs.focus ? "專注閱讀中" : "專注閱讀";
+      focusToggle.setAttribute("aria-pressed", prefs.focus ? "true" : "false");
       [hero, sidebar, note].forEach((node) => {
         if (!node) return;
         node.hidden = prefs.focus;
@@ -692,8 +687,8 @@
       exitRow.hidden = !prefs.focus;
       exitRow.style.display = prefs.focus ? "flex" : "none";
       shell.dataset.readerFocus = prefs.focus ? "true" : "false";
-      shell.dataset.readerFont = prefs.font;
-      shell.dataset.readerLine = prefs.line;
+      shell.dataset.readerFont = String(prefs.fontPx);
+      shell.dataset.readerLine = String(prefs.lineHeight);
     }
 
     const main = document.getElementById("app-main");
