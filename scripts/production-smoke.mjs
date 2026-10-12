@@ -96,7 +96,7 @@ async function verifyDeployedAssets() {
   check(/no-cache/i.test(dataCache), `data JSON should remain revalidatable/no-cache, got: ${dataCache || "<none>"}`);
 
   const repeatStudyAssets = [
-    ["brand", "/assets/brand/wenmai-mark.svg"],
+    ["brand", "/assets/brand/wenmai-flow.svg"],
     ["audio", "/assets/audio/deng_lou.mp3"]
   ];
   for (const [label, assetPath] of repeatStudyAssets) {
@@ -135,7 +135,7 @@ try {
   const homeOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
   check(homeOverflow <= 1, `production mobile home has horizontal overflow of ${homeOverflow}px`);
   const brandAssets = await page.evaluate(async () => {
-    const [mark, share] = await Promise.all([fetch('/assets/brand/wenmai-mark.svg'), fetch('/assets/brand/wenmai-share.png')]);
+    const [mark, share] = await Promise.all([fetch('/assets/brand/wenmai-flow.svg'), fetch('/assets/brand/wenmai-share.png')]);
     return { mark: mark.ok, share: share.ok, og: document.querySelector('meta[property="og:image"]')?.content || "" };
   });
   check(brandAssets.mark, "production Wenmai favicon/mark should be available");
