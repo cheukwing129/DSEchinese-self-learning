@@ -144,9 +144,19 @@ try {
   check(await page.locator(".chapter-card").count() === 16, "modern chapter grid should include sixteen cards");
   check(await page.locator(".chapter-art .bookplate-illustration").count() === 16, "illustrations are retained across all sixteen cards");
   const gourdArtwork = await page.locator('a[href="#/unit/xiaoyaoyou"] .bookplate-illustration use').getAttribute("href");
-  check(gourdArtwork === "/assets/brand/bookplate-scenes-v2.svg#art-gourd", "Xiaoyaoyou should feature a complete gourd drawing");
-  const gourdSprite = await page.request.get(`${baseURL}/assets/brand/bookplate-scenes-v2.svg`);
+  check(gourdArtwork === "/assets/brand/bookplate-scenes-v3.svg#art-gourd", "Xiaoyaoyou should feature a complete gourd drawing");
+  const gourdSprite = await page.request.get(`${baseURL}/assets/brand/bookplate-scenes-v3.svg`);
   check(gourdSprite.ok() && (await gourdSprite.text()).includes('id="art-gourd"'), "gourd asset should be accessible to the browser");
+  const spriteText = await gourdSprite.text();
+  for (const artworkName of ["horse","scroll","standard","tower","fortress"]) {
+    check(spriteText.includes('id="art-' + artworkName + '"'), 'Missing approved redraw: ' + artworkName);
+  }
+  for (const [unitId, artId] of [
+    ["lianpo-linxiangru","horse"],["shishuo","scroll"],["chushibiao","standard"],
+    ["yueyanglouji","tower"],["liuguolun","fortress"]]) {
+    const href = await page.locator('a[href="#/unit/' + unitId + '"] .bookplate-illustration use').getAttribute("href");
+    check(href === "/assets/brand/bookplate-scenes-v3.svg#art-" + artId, 'Wrong illustration for ' + unitId);
+  }
   check(await page.locator(".bookcase-plank").count() === 0, "antique bookshelf props should be removed");
   check(await page.locator(".chapter-grid").count() === 1, "chapter cards should use the modern responsive grid");
   check(mapCount === 16, `home should render 16 curriculum cards, got ${mapCount}`);

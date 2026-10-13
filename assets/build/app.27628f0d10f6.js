@@ -299,7 +299,7 @@ const App = (() => {
   function bookplateArt(motif) {
     const type = /^[a-z]+$/.test(motif) ? motif : "peaks";
     return '<svg class="bookplate-illustration" viewBox="0 0 220 132" aria-hidden="true" focusable="false">'
-      + '<use href="/assets/brand/bookplate-scenes-v2.svg#art-' + type + '"></use></svg>';
+      + '<use href="/assets/brand/bookplate-scenes-v3.svg#art-' + type + '"></use></svg>';
   }
 
   function renderChapterCards(units) {
