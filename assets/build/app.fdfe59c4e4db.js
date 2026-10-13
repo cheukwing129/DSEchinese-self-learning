@@ -9,12 +9,12 @@ const App = (() => {
 
   const cache = { curriculum: null, json: {}, scripts: {}, styles: {} };
   const UI_MODULES = Object.freeze({
-    content: "/assets/build/content-renderer.e6fc23f266d4.js",
-    contentReader: { script: "/assets/build/content-renderer.e6fc23f266d4.js", style: "/assets/build/reader-style.38f12411e954.css" },
-    contentStudy: { script: "/assets/build/content-renderer.e6fc23f266d4.js", style: "/assets/build/study-style.e0013e266293.css" },
-    contentProgress: { script: "/assets/build/content-renderer.e6fc23f266d4.js", style: "/assets/build/progress-style.200934de830f.css" },
+    content: "/assets/build/content-renderer.ffeea45e03a1.js",
+    contentReader: { script: "/assets/build/content-renderer.ffeea45e03a1.js", style: "/assets/build/reader-style.b6b3030eb32b.css" },
+    contentStudy: { script: "/assets/build/content-renderer.ffeea45e03a1.js", style: "/assets/build/study-style.9fcee20b7eb0.css" },
+    contentProgress: { script: "/assets/build/content-renderer.ffeea45e03a1.js", style: "/assets/build/progress-style.50c92cda5854.css" },
     progressAnalytics: "/assets/build/progress-analytics.2de6dccfcf75.js",
-    questions: { script: "/assets/build/question-engine.686482b85cc0.js", style: "/assets/build/questions-style.528e43728dc3.css" },
+    questions: { script: "/assets/build/question-engine.686482b85cc0.js", style: "/assets/build/questions-style.e3bec457537e.css" },
     memorisation: "/assets/build/memorisation-engine.dab19bb23e8e.js"
   });
 
