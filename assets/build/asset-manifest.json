@@ -4,33 +4,33 @@
   "assets": {
     "style": {
       "source": "css/style.css",
-      "path": "/assets/build/style.c28b4778f189.css",
-      "hash": "c28b4778f189",
-      "sha256": "c28b4778f189b94ae45e0c2617495dec186287c3e89893378833ff6426791301"
+      "path": "/assets/build/style.b2b22d7598cb.css",
+      "hash": "b2b22d7598cb",
+      "sha256": "b2b22d7598cb776d1502aa058958acd5de5b3ca020b039dd89a26f6990c5baaa"
     },
     "readerStyle": {
       "source": "css/style.css",
-      "path": "/assets/build/reader-style.b6b3030eb32b.css",
-      "hash": "b6b3030eb32b",
-      "sha256": "b6b3030eb32b0960c1e1b6e5b50ab2ff720bd3ec35c0bf1fb0883bf22021e895"
+      "path": "/assets/build/reader-style.1911c761e7a5.css",
+      "hash": "1911c761e7a5",
+      "sha256": "1911c761e7a57cdc8fd2699b54f96af0a508c4f211b0e9075daf474c9dc2e8f4"
     },
     "studyStyle": {
       "source": "css/style.css",
-      "path": "/assets/build/study-style.9fcee20b7eb0.css",
-      "hash": "9fcee20b7eb0",
-      "sha256": "9fcee20b7eb04b4d61f1e8533ca6389ed2ebbbf8e61baee15b5e338dc94bcacb"
+      "path": "/assets/build/study-style.5921f103ff1e.css",
+      "hash": "5921f103ff1e",
+      "sha256": "5921f103ff1ec251c9a9b8d53475d0a337e7027cc2933f3a9bed1d57e30ace82"
     },
     "progressStyle": {
       "source": "css/style.css",
-      "path": "/assets/build/progress-style.50c92cda5854.css",
-      "hash": "50c92cda5854",
-      "sha256": "50c92cda585433e92ad691ca2de397a508fa598986116f680ffda2da9ac2029a"
+      "path": "/assets/build/progress-style.65bc97eac7d1.css",
+      "hash": "65bc97eac7d1",
+      "sha256": "65bc97eac7d18b2481784835b4b3e0d442a0325feeaca79d39f21dacde35f82f"
     },
     "questionsStyle": {
       "source": "css/style.css",
-      "path": "/assets/build/questions-style.e3bec457537e.css",
-      "hash": "e3bec457537e",
-      "sha256": "e3bec457537e2316dcd48599a600f5da9e83f6b2c8ce7936d5ce2ab5cc6d4326"
+      "path": "/assets/build/questions-style.e930aab33a7a.css",
+      "hash": "e930aab33a7a",
+      "sha256": "e930aab33a7accdd8d23dfb41ae18223240c0d4a9c5caa451f7c5e0e90f13bfb"
     },
     "progress": {
       "source": "js/progress.js",
@@ -52,9 +52,9 @@
     },
     "app": {
       "source": "js/app.js",
-      "path": "/assets/build/app.fdfe59c4e4db.js",
-      "hash": "fdfe59c4e4db",
-      "sha256": "fdfe59c4e4db4cfa9746e40124ccb301e06d6af6461842605a30343c130e3f4a"
+      "path": "/assets/build/app.ce6d6ec48bf7.js",
+      "hash": "ce6d6ec48bf7",
+      "sha256": "ce6d6ec48bf78b521efb5d9a823450b61fc32918a55c85687be7279fe2af7292"
     },
     "content": {
       "source": "js/content-renderer.js",
@@ -70,9 +70,9 @@
     },
     "memorisation": {
       "source": "js/memorisation-engine.js",
-      "path": "/assets/build/memorisation-engine.dab19bb23e8e.js",
-      "hash": "dab19bb23e8e",
-      "sha256": "dab19bb23e8e916c804a99d315b14278ba29538790be58754715d5e6f75d4a9d"
+      "path": "/assets/build/memorisation-engine.049cad9a7a0f.js",
+      "hash": "049cad9a7a0f",
+      "sha256": "049cad9a7a0ff246a2910f3d64fc393bd226004ace1e2053a4c4bcf0df19c59e"
     }
   }
 }
