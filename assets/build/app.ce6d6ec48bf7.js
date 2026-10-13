@@ -10,12 +10,12 @@ const App = (() => {
   const cache = { curriculum: null, json: {}, scripts: {}, styles: {} };
   const UI_MODULES = Object.freeze({
     content: "/assets/build/content-renderer.ffeea45e03a1.js",
-    contentReader: { script: "/assets/build/content-renderer.ffeea45e03a1.js", style: "/assets/build/reader-style.b6b3030eb32b.css" },
-    contentStudy: { script: "/assets/build/content-renderer.ffeea45e03a1.js", style: "/assets/build/study-style.9fcee20b7eb0.css" },
-    contentProgress: { script: "/assets/build/content-renderer.ffeea45e03a1.js", style: "/assets/build/progress-style.50c92cda5854.css" },
+    contentReader: { script: "/assets/build/content-renderer.ffeea45e03a1.js", style: "/assets/build/reader-style.1911c761e7a5.css" },
+    contentStudy: { script: "/assets/build/content-renderer.ffeea45e03a1.js", style: "/assets/build/study-style.5921f103ff1e.css" },
+    contentProgress: { script: "/assets/build/content-renderer.ffeea45e03a1.js", style: "/assets/build/progress-style.65bc97eac7d1.css" },
     progressAnalytics: "/assets/build/progress-analytics.2de6dccfcf75.js",
-    questions: { script: "/assets/build/question-engine.686482b85cc0.js", style: "/assets/build/questions-style.e3bec457537e.css" },
-    memorisation: "/assets/build/memorisation-engine.dab19bb23e8e.js"
+    questions: { script: "/assets/build/question-engine.686482b85cc0.js", style: "/assets/build/questions-style.e930aab33a7a.css" },
+    memorisation: "/assets/build/memorisation-engine.049cad9a7a0f.js"
   });
 
   // ---------- 資料載入 ----------

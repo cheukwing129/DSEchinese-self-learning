@@ -96,15 +96,19 @@ const MemorisationEngine = (() => {
       const stats = Progress.memorisationStats(unitId, groups);
       const byId = Object.fromEntries(stats.groups.map((g) => [g.id, g]));
       return `
-        <div class="para-nav">
-          ${groups
-            .map((g) => {
-              const s = byId[g.id];
-              const practised = s && s.practised ? " · 已練" : "";
-              return `<button data-group="${g.id}" class="${activeGroupId === g.id ? "is-active" : ""}">${esc(g.title)}${practised}</button>`;
-            })
-            .join("")}
-        </div>`;
+        <section class="memo-group-picker" aria-label="句群選擇">
+          <p class="memo-group-picker__label">選擇句群</p>
+          <div class="memo-group-nav" role="group" aria-label="選擇句群">
+            ${groups
+              .map((g) => {
+                const s = byId[g.id];
+                const practised = s && s.practised ? " · 已練" : "";
+                const active = activeGroupId === g.id;
+                return `<button type="button" data-group="${g.id}" class="memo-group-button ${active ? "is-active" : ""}" aria-pressed="${active ? "true" : "false"}">${esc(g.title)}${practised}</button>`;
+              })
+              .join("")}
+          </div>
+        </section>`;
     }
 
     // ---------- 遮字練習 ----------
