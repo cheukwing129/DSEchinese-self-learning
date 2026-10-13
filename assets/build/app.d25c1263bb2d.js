@@ -302,6 +302,11 @@ const App = (() => {
       + '<use href="/assets/brand/bookplate-scenes-v4.svg#art-' + type + '"></use></svg>';
   }
 
+  function bookplateArtForUnit(unitId) {
+    const plate = BOOKPLATES[unitId];
+    return plate ? bookplateArt(plate[2]) : "";
+  }
+
   function renderChapterCards(units) {
     return units.map((u, i) => {
       const isAvailable = u.status === "available";
@@ -640,7 +645,7 @@ const App = (() => {
 
   return {
     init, mount, setCrumb, renderLoading, renderFatalError, renderNotFound,
-    escapeHTML, footerNav, moduleIconGlyph, fetchJSON
+    escapeHTML, footerNav, moduleIconGlyph, bookplateArtForUnit, fetchJSON
   };
 })();
 
