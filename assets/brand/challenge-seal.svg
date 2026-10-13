@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 132" width="220" height="132" fill="none" aria-hidden="true">
+  <!-- Transparent challenge illustration; visual language matches the chapter bookplates. -->
+  <path d="M9 115q32-9 64 0t67-1q32-8 71 0" stroke="#B89054" stroke-width="1.4" opacity=".42" stroke-linecap="round"/>
+  <circle cx="192" cy="30" r="18" fill="#D9C295" opacity=".22"/>
+  <path d="M177 18v-8m-4 4h8M28 50v-8m-4 4h8" stroke="#B89054" stroke-width="1.7" opacity=".65" stroke-linecap="round"/>
+  <!-- A rolled parchment and three unanswered stages of the challenge. -->
+  <path d="M48 27c-5 0-8 4-8 11v68c0 6 4 9 10 9h101c-5-3-7-6-7-12V36c0-5 3-9 7-10Z" fill="#D0B58C" opacity=".18"/>
+  <path d="M50 23q40-4 91 0v80q-45-3-93 2V31q0-5 2-8Z" fill="#F7EBD1" stroke="#193F59" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M57 31q35-3 75 0v64q-37-2-76 2Z" fill="#FFF8E8" opacity=".75"/>
+  <path d="M50 23q-10-2-12 8v67q0 9 10 7 7-1 7-9V33q0-7-5-10Z" fill="#D5B27C" stroke="#193F59" stroke-width="2.3" stroke-linejoin="round"/>
+  <path d="M43 32v62" stroke="#F8E6BD" stroke-width="2.8" opacity=".85" stroke-linecap="round"/>
+  <path d="M59 37h42" stroke="#92754B" stroke-width="3" opacity=".65" stroke-linecap="round"/>
+  <path d="M59 43h27" stroke="#B59B71" stroke-width="1.7" opacity=".7" stroke-linecap="round"/>
+  <g stroke="#193F59" stroke-width="1.7" stroke-linejoin="round">
+    <rect x="61" y="52" width="10" height="10" rx="1.6" fill="#E7D6B6"/>
+    <rect x="61" y="69" width="10" height="10" rx="1.6" fill="#E7D6B6"/>
+    <rect x="61" y="86" width="10" height="10" rx="1.6" fill="#E7D6B6"/>
+  </g>
+  <path d="M78 57h31M78 74h22M78 91h26" stroke="#B2956A" stroke-width="2.3" stroke-linecap="round"/>
+  <path d="M63 57l3 3 5-7" stroke="#4B7C70" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Bronze challenge medallion: star signifies the goal, not a pre-awarded grade. -->
+  <path d="M141 83l-6 36 17-11 14 14 6-36" fill="#83A99A" stroke="#193F59" stroke-width="2.1" stroke-linejoin="round"/>
+  <path d="M156 92l9 30 6-36" fill="#567D77" opacity=".55"/>
+  <path d="M149 34l6 4 7-2 4 6 7 2 1 8 6 5-3 8 3 8-6 5-1 8-7 2-4 6-7-2-6 4-6-4-7 2-4-6-7-2-1-8-6-5 3-8-3-8 6-5 1-8 7-2 4-6 7 2Z" fill="#D8B877" stroke="#193F59" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="149" cy="62" r="20" fill="#F4DCAB" stroke="#9B7747" stroke-width="1.5"/>
+  <path d="m149 46 4.8 10.1 11.2 1.4-8.2 7.6 2.1 11-9.9-5.4-9.9 5.4 2.1-11-8.2-7.6 11.2-1.4Z" fill="#7EA99A" stroke="#193F59" stroke-width="2" stroke-linejoin="round"/>
+  <path d="m145 56 4-4" stroke="#E8F3DC" stroke-width="1.8" opacity=".9" stroke-linecap="round"/>
+  <path d="M18 94q8-5 16 0m152 7q8-5 16 0" stroke="#B89054" stroke-width="1.5" opacity=".5" stroke-linecap="round"/>
+</svg>
