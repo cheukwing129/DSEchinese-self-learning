@@ -200,7 +200,7 @@ const ContentRenderer = (() => {
       <section class="unit-feature-grid" aria-label="主要學習入口">
         <a class="unit-feature unit-feature-reading" href="#/unit/${unitId}/text">
           <span class="unit-feature-kicker">01 · READ</span>
-          <span class="unit-feature-symbol" aria-hidden="true">文</span>
+          <span class="unit-feature-art" aria-hidden="true">${App.bookplateArtForUnit(unitId)}</span>
           <h2>文章內容</h2>
           <p>原文、注釋、語譯與誦讀</p>
           <span class="unit-feature-cta">進入閱讀 <span aria-hidden="true">↗</span></span>

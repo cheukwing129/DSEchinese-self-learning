@@ -204,6 +204,10 @@ try {
 
   await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji"; });
   await waitForTitle(page, "《岳陽樓記》");
+  const articleCardArtwork = page.locator(".unit-feature-reading .unit-feature-art .bookplate-illustration use");
+  check(await articleCardArtwork.count() === 1, "reading feature card should show the unit SVG artwork");
+  check(await articleCardArtwork.getAttribute("href") === "/assets/brand/bookplate-scenes-v4.svg#art-tower", "Yueyanglouji reading card should use the tower artwork");
+  check(await page.locator(".unit-feature-reading .unit-feature-symbol").count() === 0, "reading feature card must no longer show the character 文");
   check(requestPaths.filter((p) => /\/content-renderer\.[0-9a-f]{12}\.js$/.test(p)).length === 1, "content renderer should load exactly once when first entering a content route");
 
   await page.evaluate(() => { window.location.hash = "#/unit/yueyanglouji/text"; });
