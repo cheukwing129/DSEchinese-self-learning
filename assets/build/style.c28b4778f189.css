@@ -1849,17 +1849,28 @@ body {
 .unit-feature-art .bookplate-illustration {
   display:block; width:100%; height:100%;
 }
+/* Shared transparent SVG for all sixteen challenge entries. */
+.unit-feature-challenge .unit-feature-symbol {
+  top:43px; right:23px; width:198px; aspect-ratio:220 / 132;
+  display:block; font-size:0; line-height:0; opacity:1;
+  background:transparent url("/assets/brand/challenge-seal.svg") center / contain no-repeat;
+  transform:rotate(2deg); transition:transform .2s ease;
+}
+.unit-feature-challenge:hover .unit-feature-symbol { transform:translateY(-2px) rotate(0); }
 .unit-feature-reading:hover .unit-feature-art { transform:translateY(-2px) rotate(0); }
 @media(max-width:980px) {
   .unit-feature-art { width:145px; right:14px; top:37px; }
+  .unit-feature-challenge .unit-feature-symbol { width:145px; right:14px; top:37px; }
 }
 @media(max-width:680px) {
   .unit-feature-art { width:134px; top:35px; right:17px; }
+  .unit-feature-challenge .unit-feature-symbol { width:134px; top:35px; right:17px; }
 }
 @media(max-width:360px) {
   .unit-feature-art { width:116px; right:12px; }
+  .unit-feature-challenge .unit-feature-symbol { width:116px; right:12px; }
 }
-@media(prefers-reduced-motion:reduce) { .unit-feature-art { transition:none !important; } }
+@media(prefers-reduced-motion:reduce) { .unit-feature-art,.unit-feature-challenge .unit-feature-symbol { transition:none !important; } }
 .unit-feature-cta {
   position:relative; display:inline-flex; align-items:center; justify-content:space-between; gap:28px;
   min-width:148px; padding:11px 15px; border:1px solid currentColor;
