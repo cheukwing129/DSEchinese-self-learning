@@ -144,18 +144,21 @@ try {
   check(await page.locator(".chapter-card").count() === 16, "modern chapter grid should include sixteen cards");
   check(await page.locator(".chapter-art .bookplate-illustration").count() === 16, "illustrations are retained across all sixteen cards");
   const gourdArtwork = await page.locator('a[href="#/unit/xiaoyaoyou"] .bookplate-illustration use').getAttribute("href");
-  check(gourdArtwork === "/assets/brand/bookplate-scenes-v3.svg#art-gourd", "Xiaoyaoyou should feature a complete gourd drawing");
-  const gourdSprite = await page.request.get(`${baseURL}/assets/brand/bookplate-scenes-v3.svg`);
+  check(gourdArtwork === "/assets/brand/bookplate-scenes-v4.svg#art-gourd", "Xiaoyaoyou should feature a complete gourd drawing");
+  const gourdSprite = await page.request.get(`${baseURL}/assets/brand/bookplate-scenes-v4.svg`);
   check(gourdSprite.ok() && (await gourdSprite.text()).includes('id="art-gourd"'), "gourd asset should be accessible to the browser");
   const spriteText = await gourdSprite.text();
-  for (const artworkName of ["horse","scroll","standard","tower","fortress"]) {
+  for (const artworkName of ["bamboo","fish","books","horse","scroll","standard","peaks","tower","fortress","pines","wine","terrace","cliffs","leaves","lanterns"]) {
     check(spriteText.includes('id="art-' + artworkName + '"'), 'Missing approved redraw: ' + artworkName);
   }
   for (const [unitId, artId] of [
+    ["lunyu-renxiaojunzi","bamboo"],["yu-wo-suoyu","fish"],["quanxue","books"],
     ["lianpo-linxiangru","horse"],["shishuo","scroll"],["chushibiao","standard"],
-    ["yueyanglouji","tower"],["liuguolun","fortress"]]) {
+    ["shide-xishan-yanyouji","peaks"],["yueyanglouji","tower"],["liuguolun","fortress"],
+    ["shanju-qiuming","pines"],["yuexia-duzhuo","wine"],["denglou","terrace"],
+    ["niannujiao-chibihuaigu","cliffs"],["shengshengman-qiuqing","leaves"],["qingyu'an-yuanxi","lanterns"]]) {
     const href = await page.locator('a[href="#/unit/' + unitId + '"] .bookplate-illustration use').getAttribute("href");
-    check(href === "/assets/brand/bookplate-scenes-v3.svg#art-" + artId, 'Wrong illustration for ' + unitId);
+    check(href === "/assets/brand/bookplate-scenes-v4.svg#art-" + artId, 'Wrong illustration for ' + unitId);
   }
   check(await page.locator(".bookcase-plank").count() === 0, "antique bookshelf props should be removed");
   check(await page.locator(".chapter-grid").count() === 1, "chapter cards should use the modern responsive grid");
