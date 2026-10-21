@@ -12,6 +12,16 @@
 
 ---
 
+
+## 選擇中文：延伸選擇題練習入口
+
+首頁「學習捷徑」區及頁首導覽新增「選擇中文」外部入口，連往 `https://everydaychinese.pages.dev/`（此網址為預定部署網址，尚待在 Cloudflare 確認網站已公開上線）。
+
+- 使用獨立的 `js/choice-chinese-entry.js` 在首頁 SPA 內容渲染後加入卡片；切換路由不重複插入。
+- 樣式在 `css/choice-chinese-entry.css`，支援手機版及鍵盤焦點，會在原有指紋版樣式後載入。
+- `index.template.html` 和生成的 `index.html` 同步引入這兩個檔案及頂部導覽連結；未改動已有的核心路由、題庫或學習紀錄。
+- 外部連結以新分頁開啟，並採用 `rel="noopener noreferrer"`。
+
 ## 一、技術架構
 
 - 純 **HTML + CSS + JavaScript**，無 React / Vue / Tailwind / npm / 任何框架
