@@ -1,0 +1,45 @@
+/* 「選擇中文」延伸練習入口：延續文脈首頁色調，不改動原有卡片。 */
+.header-nav-link-choice{color:#167460!important;white-space:nowrap}
+.header-nav-link-choice:hover,.header-nav-link-choice:focus-visible{background:#e1f3e9!important}
+.header-nav-link-choice .choice-external-arrow{margin-left:2px;font-size:12px;opacity:.7}
+.home-action-grid .home-choice-chinese-card{
+  grid-column:1/-1;
+  display:flex;align-items:center;gap:20px;
+  min-height:146px;margin:0;padding:24px 27px;
+  color:#244b41;text-decoration:none;
+  border:1px solid #cfe7d8;border-radius:22px;
+  background:linear-gradient(115deg,#e2f3e9 0%,#f5faef 66%,#fffaed 100%);
+  box-shadow:0 13px 28px rgba(30,91,70,.07);
+  transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;
+}
+.home-action-grid .home-choice-chinese-card:hover{
+  transform:translateY(-2px);border-color:#8bc4a6;
+  box-shadow:0 17px 32px rgba(30,91,70,.11)
+}
+.home-choice-chinese-symbol{width:72px;height:72px;flex:0 0 72px}
+.home-choice-chinese-symbol svg{width:100%;height:100%;display:block}
+.home-choice-chinese-copy{display:flex;flex:1;min-width:0;flex-direction:column;gap:2px}
+.home-choice-chinese-kicker{color:#41816a;font-size:11px;font-weight:750;letter-spacing:.04em}
+.home-choice-chinese-title{font-size:clamp(21px,2.5vw,29px);line-height:1.3;font-weight:850;color:#154f43}
+.home-choice-chinese-desc{max-width:620px;color:#55776c;line-height:1.75;font-size:13px}
+.home-choice-chinese-action{
+  display:inline-flex;align-items:center;gap:12px;flex-shrink:0;
+  padding:11px 16px;border-radius:12px;
+  background:#146e5c;color:white;font-weight:800;font-size:12px
+}
+.home-choice-chinese-action span{font-size:17px}
+@media(max-width:700px){
+  .home-action-grid .home-choice-chinese-card{gap:14px;padding:19px;flex-wrap:wrap}
+  .home-choice-chinese-symbol{width:54px;height:54px;flex-basis:54px}
+  .home-choice-chinese-copy{flex-basis:calc(100% - 72px)}
+  .home-choice-chinese-action{margin-left:68px;padding:9px 13px}
+}
+@media(max-width:420px){
+  .header-nav-link-choice{padding-left:7px!important;padding-right:7px!important}
+  .header-nav-link-choice .choice-external-arrow{display:none}
+  .home-choice-chinese-action{margin-left:0}
+}
+@media(prefers-reduced-motion:reduce){
+  .home-action-grid .home-choice-chinese-card{transition:none}
+  .home-action-grid .home-choice-chinese-card:hover{transform:none}
+}
