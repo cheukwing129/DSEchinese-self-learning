@@ -52,15 +52,15 @@
     },
     "app": {
       "source": "js/app.js",
-      "path": "/assets/build/app.ce6d6ec48bf7.js",
-      "hash": "ce6d6ec48bf7",
-      "sha256": "ce6d6ec48bf78b521efb5d9a823450b61fc32918a55c85687be7279fe2af7292"
+      "path": "/assets/build/app.4a9a74ee241d.js",
+      "hash": "4a9a74ee241d",
+      "sha256": "4a9a74ee241d23aefac0139863ccc92195fd702f667670ad19e7d1dd69c66cc1"
     },
     "content": {
       "source": "js/content-renderer.js",
-      "path": "/assets/build/content-renderer.ffeea45e03a1.js",
-      "hash": "ffeea45e03a1",
-      "sha256": "ffeea45e03a10b8cdbcf86227410c75d29686d0e170b57f6777d0e167aded2e0"
+      "path": "/assets/build/content-renderer.da13d77006a1.js",
+      "hash": "da13d77006a1",
+      "sha256": "da13d77006a1e8eb0543cba57cc94bc043208a2840cb12a128672faf8db86121"
     },
     "questions": {
       "source": "js/question-engine.js",
@@ -73,6 +73,18 @@
       "path": "/assets/build/memorisation-engine.049cad9a7a0f.js",
       "hash": "049cad9a7a0f",
       "sha256": "049cad9a7a0ff246a2910f3d64fc393bd226004ace1e2053a4c4bcf0df19c59e"
+    },
+    "textSearch": {
+      "source": "js/text-search.js",
+      "path": "/assets/build/text-search.ca52c572a42b.js",
+      "hash": "ca52c572a42b",
+      "sha256": "ca52c572a42bfc94a540aa1ed2e2c9c5e9e34224fc7f65753a7a357616b4f46b"
+    },
+    "textSearchStyle": {
+      "source": "css/text-search.css",
+      "path": "/assets/build/text-search-style.0e093f6960d5.css",
+      "hash": "0e093f6960d5",
+      "sha256": "0e093f6960d5d042a71332339f483810075732962f039aa14aa6366e0facb4e9"
     }
   }
 }

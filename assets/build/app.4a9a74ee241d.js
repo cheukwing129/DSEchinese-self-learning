@@ -9,11 +9,12 @@ const App = (() => {
 
   const cache = { curriculum: null, json: {}, scripts: {}, styles: {} };
   const UI_MODULES = Object.freeze({
-    content: "/assets/build/content-renderer.ffeea45e03a1.js",
-    contentReader: { script: "/assets/build/content-renderer.ffeea45e03a1.js", style: "/assets/build/reader-style.1911c761e7a5.css" },
-    contentStudy: { script: "/assets/build/content-renderer.ffeea45e03a1.js", style: "/assets/build/study-style.5921f103ff1e.css" },
-    contentProgress: { script: "/assets/build/content-renderer.ffeea45e03a1.js", style: "/assets/build/progress-style.65bc97eac7d1.css" },
+    content: "/assets/build/content-renderer.da13d77006a1.js",
+    contentReader: { script: "/assets/build/content-renderer.da13d77006a1.js", style: "/assets/build/reader-style.1911c761e7a5.css" },
+    contentStudy: { script: "/assets/build/content-renderer.da13d77006a1.js", style: "/assets/build/study-style.5921f103ff1e.css" },
+    contentProgress: { script: "/assets/build/content-renderer.da13d77006a1.js", style: "/assets/build/progress-style.65bc97eac7d1.css" },
     progressAnalytics: "/assets/build/progress-analytics.2de6dccfcf75.js",
+    textSearch: { script: "/assets/build/text-search.ca52c572a42b.js", style: "/assets/build/text-search-style.0e093f6960d5.css" },
     questions: { script: "/assets/build/question-engine.686482b85cc0.js", style: "/assets/build/questions-style.e930aab33a7a.css" },
     memorisation: "/assets/build/memorisation-engine.049cad9a7a0f.js"
   });
@@ -179,7 +180,7 @@ const App = (() => {
 
   function syncHeaderState() {
     const path = Router.currentPath();
-    const routeKind = path.startsWith("/overview") ? "overview" : (path === "/" || path.startsWith("/unit/")) ? "chapters" : "other";
+    const routeKind = path === "/search" ? "search" : path.startsWith("/overview") ? "overview" : (path === "/" || path.startsWith("/unit/")) ? "chapters" : "other";
     document.body.dataset.route = routeKind;
     document.querySelectorAll(".header-nav-link").forEach((link) => {
       const active = link.dataset.nav === routeKind;
@@ -397,6 +398,11 @@ const App = (() => {
       <section class="home-action-grid" aria-label="學習捷徑">
         ${primaryCard}
         ${overviewCard}
+        <article class="home-action-card home-action-secondary">
+          <div class="home-action-symbol" aria-hidden="true">字</div>
+          <div><p class="home-action-eyebrow">原句與字義比較</p><h2 class="home-action-title">跨篇章字詞搜尋</h2>
+          <a class="home-text-link" href="#/search">選篇搜尋原文 <span aria-hidden="true">→</span></a></div>
+        </article>
       </section>
       <section class="home-curriculum" aria-labelledby="curriculum-title">
         <div class="home-section-heading chapter-grid-heading">
@@ -406,6 +412,22 @@ const App = (() => {
         <div class="map-grid chapter-grid">${cards}</div>
       </section>
     `);
+  }
+
+  async function pageTextSearch(params) {
+    const navigationId = Router.currentNavigationId();
+    setCrumb("跨篇章字詞搜尋");
+    const cancelLoading = scheduleLoading("字詞搜尋", navigationId);
+    try {
+      const [curriculum] = await Promise.all([loadCurriculum(), loadUIModules(["textSearch"])]);
+      if (!Router.isCurrentNavigation(navigationId)) return;
+      TextSearch.render(curriculum, params.__query, (id) => loadUnitResource(id, "text"));
+    } catch (e) {
+      if (!Router.isCurrentNavigation(navigationId)) return;
+      renderFatalError(e.message);
+    } finally {
+      cancelLoading();
+    }
   }
 
   async function loadCrossUnitBundles() {
@@ -493,7 +515,7 @@ const App = (() => {
 
   async function pageText(params) {
     await withUnitBundle(params.unitId, { resources: ["text"], uiModules: ["contentReader"] }, (bundle) => {
-      ContentRenderer.renderTextPage(bundle, params.unitId);
+      ContentRenderer.renderTextPage(bundle, params.unitId, params.__query);
     });
   }
 
@@ -615,6 +637,7 @@ const App = (() => {
   function registerRoutes() {
     Router.register("/", pageHome);
     Router.register("/overview", pageOverview);
+    Router.register("/search", pageTextSearch);
     Router.register("/overview/retry/:ability", pageCrossUnitRetry);
     Router.register("/unit/:unitId", pageUnitHome);
     Router.register("/unit/:unitId/text", pageText);

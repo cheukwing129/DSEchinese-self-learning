@@ -14,6 +14,7 @@ const App = (() => {
     contentStudy: "js/content-renderer.js",
     contentProgress: "js/content-renderer.js",
     progressAnalytics: "js/progress-analytics.js",
+    textSearch: "js/text-search.js",
     questions: "js/question-engine.js",
     memorisation: "js/memorisation-engine.js"
   });
@@ -156,7 +157,7 @@ const App = (() => {
 
   function syncHeaderState() {
     const path = Router.currentPath();
-    const routeKind = path.startsWith("/overview") ? "overview" : (path === "/" || path.startsWith("/unit/")) ? "chapters" : "other";
+    const routeKind = path === "/search" ? "search" : path.startsWith("/overview") ? "overview" : (path === "/" || path.startsWith("/unit/")) ? "chapters" : "other";
     document.body.dataset.route = routeKind;
     document.querySelectorAll(".header-nav-link").forEach((link) => {
       const active = link.dataset.nav === routeKind;
@@ -374,6 +375,11 @@ const App = (() => {
       <section class="home-action-grid" aria-label="學習捷徑">
         ${primaryCard}
         ${overviewCard}
+        <article class="home-action-card home-action-secondary">
+          <div class="home-action-symbol" aria-hidden="true">字</div>
+          <div><p class="home-action-eyebrow">原句與字義比較</p><h2 class="home-action-title">跨篇章字詞搜尋</h2>
+          <a class="home-text-link" href="#/search">選篇搜尋原文 <span aria-hidden="true">→</span></a></div>
+        </article>
       </section>
       <section class="home-curriculum" aria-labelledby="curriculum-title">
         <div class="home-section-heading chapter-grid-heading">
@@ -383,6 +389,22 @@ const App = (() => {
         <div class="map-grid chapter-grid">${cards}</div>
       </section>
     `);
+  }
+
+  async function pageTextSearch(params) {
+    const navigationId = Router.currentNavigationId();
+    setCrumb("跨篇章字詞搜尋");
+    const cancelLoading = scheduleLoading("字詞搜尋", navigationId);
+    try {
+      const [curriculum] = await Promise.all([loadCurriculum(), loadUIModules(["textSearch"])]);
+      if (!Router.isCurrentNavigation(navigationId)) return;
+      TextSearch.render(curriculum, params.__query, (id) => loadUnitResource(id, "text"));
+    } catch (e) {
+      if (!Router.isCurrentNavigation(navigationId)) return;
+      renderFatalError(e.message);
+    } finally {
+      cancelLoading();
+    }
   }
 
   async function loadCrossUnitBundles() {
@@ -470,7 +492,7 @@ const App = (() => {
 
   async function pageText(params) {
     await withUnitBundle(params.unitId, { resources: ["text"], uiModules: ["contentReader"] }, (bundle) => {
-      ContentRenderer.renderTextPage(bundle, params.unitId);
+      ContentRenderer.renderTextPage(bundle, params.unitId, params.__query);
     });
   }
 
@@ -592,6 +614,7 @@ const App = (() => {
   function registerRoutes() {
     Router.register("/", pageHome);
     Router.register("/overview", pageOverview);
+    Router.register("/search", pageTextSearch);
     Router.register("/overview/retry/:ability", pageCrossUnitRetry);
     Router.register("/unit/:unitId", pageUnitHome);
     Router.register("/unit/:unitId/text", pageText);

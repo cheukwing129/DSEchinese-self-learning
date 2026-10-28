@@ -86,6 +86,8 @@ const router = fingerprint("router", "js", "js/router.js", read("js/router.js"))
 const content = fingerprint("content-renderer", "js", "js/content-renderer.js", read("js/content-renderer.js"));
 const questions = fingerprint("question-engine", "js", "js/question-engine.js", read("js/question-engine.js"));
 const memorisation = fingerprint("memorisation-engine", "js", "js/memorisation-engine.js", read("js/memorisation-engine.js"));
+const textSearch = fingerprint("text-search", "js", "js/text-search.js", read("js/text-search.js"));
+const textSearchStyle = fingerprint("text-search-style", "css", "css/text-search.css", read("css/text-search.css"));
 
 let builtApp = read("js/app.js");
 builtApp = replaceOnce(
@@ -142,9 +144,12 @@ builtApp = replaceOnce(
   `memorisation: "${memorisation.path}"`,
   "memorisation engine fingerprint injection"
 );
+// Search code and styles are downloaded only when the search route opens.
+builtApp = replaceOnce(builtApp, 'textSearch: "js/text-search.js"',
+  `textSearch: { script: "${textSearch.path}", style: "${textSearchStyle.path}" }`, "text search fingerprint injection");
 const app = fingerprint("app", "js", "js/app.js", builtApp);
 
-const assets = { style, readerStyle, studyStyle, progressStyle, questionsStyle, progress, progressAnalytics, router, app, content, questions, memorisation };
+const assets = { style, readerStyle, studyStyle, progressStyle, questionsStyle, progress, progressAnalytics, router, app, content, questions, memorisation, textSearch, textSearchStyle };
 const manifest = {
   version: 1,
   hashAlgorithm: `sha256-${HASH_LENGTH}`,
@@ -171,7 +176,9 @@ if (/\{\{[A-Z0-9_]+\}\}/.test(index)) {
   throw new Error("index.template.html contains an unresolved asset placeholder");
 }
 
-const todayReviewSource = read("js/today-review.js");
+// Home enhancements share the existing inline bootstrap, avoiding a fourth
+// startup script request while retaining their separate editable sources.
+const todayReviewSource = read("js/today-review.js") + "\n" + read("js/choice-chinese-entry.js");
 if (/<\/script/i.test(todayReviewSource)) {
   throw new Error("js/today-review.js must not contain a closing script tag when inlined");
 }
