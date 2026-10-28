@@ -290,6 +290,60 @@ try {
   await page.locator('[data-tab="cloze"]').click();
   await page.locator("#cloze-check-btn").waitFor({ state: "visible", timeout: 3000 });
 
+  // Search runs in its own page so core-route lazy-load counts stay independent.
+  const searchPage = await context.newPage();
+  searchPage.on("pageerror", (error) => fail(`search runtime error: ${error.message}`));
+  await searchPage.goto(`${baseURL}/#/search`, { waitUntil: "networkidle" });
+  await waitForTitle(searchPage, "跨篇章字詞搜尋");
+  const recordsBeforeSearch = await searchPage.evaluate(() => JSON.stringify(localStorage));
+  check(await searchPage.locator('input[name="unit"]:checked').count() === 16, "search defaults to all sixteen works");
+  check(await searchPage.evaluate(() => !performance.getEntriesByType("resource").some((r) => /\/units\/.*\/text\.json/.test(r.name))), "empty search must not preload source texts");
+  await searchPage.getByRole("button", { name: "故", exact: true }).click();
+  await searchPage.locator("#text-search-status", { hasText: "已搜尋 16 / 16 篇" }).waitFor();
+  check(await searchPage.locator(".text-search-group").count() === 8, "故 should be grouped under eight works");
+  await searchPage.getByRole("button", { name: "清除選擇", exact: true }).click();
+  check((await searchPage.locator("#text-search-status").innerText()).includes("至少勾選一篇"), "zero selected works must be explicit");
+  await searchPage.getByRole("checkbox", { name: "廉頗藺相如列傳（節錄）", exact: true }).check();
+  await searchPage.getByRole("checkbox", { name: "六國論", exact: true }).check();
+  await searchPage.locator("#text-search-status", { hasText: "已搜尋 2 / 2 篇" }).waitFor();
+  check(await searchPage.locator(".text-search-group").count() === 2, "custom scope must exclude all unselected works");
+  check((await searchPage.locator("#text-search-status").innerText()).includes("共 10 次"), "two-work occurrence count must match source texts");
+  const lianpoRows = searchPage.locator("#text-search-group-lianpo-linxiangru .text-search-row");
+  check((await lianpoRows.filter({ hasText: "一璧之故逆" }).innerText()).includes("原因、緣故"), "noun 故 keeps its own gloss");
+  check((await lianpoRows.filter({ hasText: "故臣復取璧" }).innerText()).includes("因此。"), "conjunction 故 keeps its own gloss");
+  check(await searchPage.evaluate(() => JSON.stringify(localStorage)) === recordsBeforeSearch, "search must not alter saved learning records");
+  await searchPage.reload({ waitUntil: "networkidle" });
+  await searchPage.locator("#text-search-status", { hasText: "已搜尋 2 / 2 篇" }).waitFor();
+  check(await searchPage.locator('input[name="unit"]:checked').count() === 2, "URL reload restores custom scope");
+  await searchPage.locator("#text-search-group-liuguolun .text-search-row").last().getByRole("link", { name: "查看原段" }).click();
+  await searchPage.locator("#reader-section-title", { hasText: "第5段" }).waitFor();
+  check(await searchPage.locator('#reader-tab-4[aria-selected="true"]').count() === 1, "source links open the exact paragraph");
+  await searchPage.goBack();
+  await searchPage.locator("#text-search-status", { hasText: "已搜尋 2 / 2 篇" }).waitFor();
+  await searchPage.getByRole("searchbox", { name: "搜尋字詞", exact: true }).fill("找不到的字詞");
+  await searchPage.getByRole("button", { name: "搜尋", exact: true }).click();
+  await searchPage.locator(".text-search-empty").waitFor();
+  check(await searchPage.locator(".text-search-group").count() === 0, "no matches must remove old results");
+
+  const unavailable = "**/data/units/chushibiao/text.json";
+  const failText = (route) => route.fulfill({ status: 503, body: "Temporarily unavailable" });
+  await searchPage.route(unavailable, failText);
+  await searchPage.goto(`${baseURL}/#/search?q=故&units=chushibiao,liuguolun`, { waitUntil: "networkidle" });
+  await searchPage.reload({ waitUntil: "networkidle" });
+  await searchPage.locator("#text-search-status", { hasText: "部分結果" }).waitFor();
+  check(await searchPage.locator(".text-search-warning").count() === 1, "partial source failure must not appear as complete results");
+  await searchPage.getByRole("checkbox", { name: "六國論", exact: true }).uncheck();
+  await searchPage.locator("#text-search-status", { hasText: "暫時無法完成搜尋" }).waitFor();
+  await searchPage.unroute(unavailable, failText);
+  await searchPage.getByRole("button", { name: "重試載入", exact: true }).click();
+  await searchPage.locator("#text-search-status", { hasText: "已搜尋 1 / 1 篇" }).waitFor();
+  check(await searchPage.locator(".text-search-warning").count() === 0, "retry recovers failed text requests");
+  for (const width of [320, 390, 768, 1024, 1440]) {
+    await searchPage.setViewportSize({ width, height: 844 });
+    check(await searchPage.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1), `search layout overflows at ${width}px`);
+  }
+  await searchPage.close();
+
   await page.setViewportSize({ width: 390, height: 844 });
   await page.evaluate(() => { window.location.hash = "#/"; });
   await waitForTitle(page, "篇章目錄");

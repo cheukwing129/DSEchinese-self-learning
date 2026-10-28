@@ -250,7 +250,7 @@ const ContentRenderer = (() => {
   }
 
   // ---------- 1. 文章內容 ----------
-  function renderTextPage(bundle, unitId) {
+  function renderTextPage(bundle, unitId, query = {}) {
     const { text, unit } = bundle;
     const annoMap = {};
     text.annotations.forEach((a) => (annoMap[a.id] = a));
@@ -278,7 +278,8 @@ const ContentRenderer = (() => {
       groups = text.paragraphs.map((p) => ({ label: paragraphLabel(p), paragraphs: [p] }));
     }
 
-    let activeIndex = 0;
+    let activeIndex = Math.max(0, groups.findIndex((group) =>
+      group.paragraphs.some((p) => String(p.id) === query.paragraph)));
     const totalAnnotations = text.annotations.length + (text.reader_annotations || []).length;
 
     function navHTML() {
@@ -576,6 +577,7 @@ const ContentRenderer = (() => {
               ${unit.dynasty ? `<span>${esc(unit.dynasty)}</span>` : ""}
             </div>
             <a class="btn btn-primary study-hero-action" href="#/unit/${unitId}/words/quiz">開始字詞與虛詞題庫 <span aria-hidden="true">→</span></a>
+            <a class="home-text-link" href="#/search?units=${encodeURIComponent(unitId)}">跨篇章字詞搜尋 <span aria-hidden="true">→</span></a>
           </div>
           <div class="study-hero-side" aria-hidden="true">
             <span class="study-hero-mark">字</span>

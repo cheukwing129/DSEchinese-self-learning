@@ -39,6 +39,9 @@ jobs:
       - name: Validate reader annotation locations and accessibility
         run: node scripts/validate-reader-annotations.mjs
 
+      - name: Validate cross-text search and occurrence-specific glosses
+        run: node scripts/validate-text-search.mjs
+
       - name: Validate accessibility interactions
         run: node scripts/validate-accessibility.mjs
 
